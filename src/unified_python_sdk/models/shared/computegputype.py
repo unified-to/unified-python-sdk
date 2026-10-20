@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 from .computeavailability import ComputeAvailability, ComputeAvailabilityTypedDict
+from .computemetadata import ComputeMetadata, ComputeMetadataTypedDict
 from .computeprice import ComputePrice, ComputePriceTypedDict
 from datetime import datetime
 from enum import Enum
@@ -90,6 +91,7 @@ class ComputeGputypeTypedDict(TypedDict):
     r"""Unique identifier for the GPU or instance type (vendor SKU)"""
     memory_mb: NotRequired[float]
     r"""System memory in MiB"""
+    metadata: NotRequired[List[ComputeMetadataTypedDict]]
     name: NotRequired[str]
     r"""Display name of the type"""
     prices: NotRequired[List[ComputePriceTypedDict]]
@@ -135,6 +137,8 @@ class ComputeGputype(BaseModel):
 
     memory_mb: Optional[float] = None
     r"""System memory in MiB"""
+
+    metadata: Optional[List[ComputeMetadata]] = None
 
     name: Optional[str] = None
     r"""Display name of the type"""
@@ -193,6 +197,7 @@ class ComputeGputype(BaseModel):
                 "gpu_model",
                 "id",
                 "memory_mb",
+                "metadata",
                 "name",
                 "prices",
                 "raw",

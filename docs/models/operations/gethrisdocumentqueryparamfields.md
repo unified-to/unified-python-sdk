@@ -22,4 +22,5 @@ value = GetHrisDocumentQueryParamFields.ID
 | `TYPE`          | type            |
 | `USER_ID`       | user_id         |
 | `COMPANY_ID`    | company_id      |
+| `METADATA`      | metadata        |
 | `RAW`           | raw             |

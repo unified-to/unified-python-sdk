@@ -23,4 +23,5 @@ value = CreateAdsOrganizationQueryParamFields.ID
 | `STATUS`         | status           |
 | `ACCOUNT_NUMBER` | account_number   |
 | `MANAGERS`       | managers         |
+| `METADATA`       | metadata         |
 | `RAW`            | raw              |

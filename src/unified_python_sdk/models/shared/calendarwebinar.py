@@ -6,6 +6,7 @@ from .calendareventrecurrence import (
     CalendarEventRecurrence,
     CalendarEventRecurrenceTypedDict,
 )
+from .calendarmetadata import CalendarMetadata, CalendarMetadataTypedDict
 from .calendarwebinarpanelist import (
     CalendarWebinarPanelist,
     CalendarWebinarPanelistTypedDict,
@@ -51,6 +52,7 @@ class CalendarWebinarTypedDict(TypedDict):
     is_enabled: NotRequired[bool]
     is_webcast: NotRequired[bool]
     join_url: NotRequired[str]
+    metadata: NotRequired[List[CalendarMetadataTypedDict]]
     notes: NotRequired[str]
     organizer: NotRequired[PropertyCalendarWebinarOrganizerTypedDict]
     panelist_password: NotRequired[str]
@@ -106,6 +108,8 @@ class CalendarWebinar(BaseModel):
     is_webcast: Optional[bool] = None
 
     join_url: Optional[str] = None
+
+    metadata: Optional[List[CalendarMetadata]] = None
 
     notes: Optional[str] = None
 
@@ -178,6 +182,7 @@ class CalendarWebinar(BaseModel):
                 "is_enabled",
                 "is_webcast",
                 "join_url",
+                "metadata",
                 "notes",
                 "organizer",
                 "panelist_password",

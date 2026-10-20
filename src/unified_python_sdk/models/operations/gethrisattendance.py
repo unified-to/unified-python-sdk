@@ -38,6 +38,7 @@ class GetHrisAttendanceQueryParamFields(str, Enum):
     HOURLY_RATE = "hourly_rate"
     APPROVER_USER_ID = "approver_user_id"
     APPROVED_AT = "approved_at"
+    METADATA = "metadata"
     RAW = "raw"
 
 

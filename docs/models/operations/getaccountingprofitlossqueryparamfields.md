@@ -28,4 +28,5 @@ value = GetAccountingProfitlossQueryParamFields.ID
 | `INCOME_SECTIONS`                 | income_sections                   |
 | `EXPENSES_SECTIONS`               | expenses_sections                 |
 | `COST_OF_GOODS_SOLD_SECTIONS`     | cost_of_goods_sold_sections       |
+| `METADATA`                        | metadata                          |
 | `RAW`                             | raw                               |

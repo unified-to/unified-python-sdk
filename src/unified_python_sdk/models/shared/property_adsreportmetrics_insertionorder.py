@@ -5,6 +5,7 @@ from .adsinsertionorderbudgetsegment import (
     AdsInsertionorderBudgetSegment,
     AdsInsertionorderBudgetSegmentTypedDict,
 )
+from .adsmetadata import AdsMetadata, AdsMetadataTypedDict
 from .property_adsreportmetrics_insertionorder_bid_strategy import (
     PropertyAdsReportMetricsInsertionorderBidStrategy,
     PropertyAdsReportMetricsInsertionorderBidStrategyTypedDict,
@@ -67,6 +68,7 @@ class PropertyAdsReportMetricsInsertionorderTypedDict(TypedDict):
     ]
     id: NotRequired[str]
     kpi: NotRequired[PropertyAdsReportMetricsInsertionorderKpiTypedDict]
+    metadata: NotRequired[List[AdsMetadataTypedDict]]
     name: NotRequired[str]
     organization_id: NotRequired[str]
     pacing: NotRequired[PropertyAdsReportMetricsInsertionorderPacingTypedDict]
@@ -96,6 +98,8 @@ class PropertyAdsReportMetricsInsertionorder(BaseModel):
     id: Optional[str] = None
 
     kpi: Optional[PropertyAdsReportMetricsInsertionorderKpi] = None
+
+    metadata: Optional[List[AdsMetadata]] = None
 
     name: Optional[str] = None
 
@@ -143,6 +147,7 @@ class PropertyAdsReportMetricsInsertionorder(BaseModel):
                 "frequency_cap",
                 "id",
                 "kpi",
+                "metadata",
                 "name",
                 "organization_id",
                 "pacing",

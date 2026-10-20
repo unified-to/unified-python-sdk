@@ -25,4 +25,5 @@ value = GetPaymentRefundQueryParamFields.ID
 | `REFUNDED_AT`  | refunded_at    |
 | `REASON`       | reason         |
 | `TENDER_TYPE`  | tender_type    |
+| `METADATA`     | metadata       |
 | `RAW`          | raw            |

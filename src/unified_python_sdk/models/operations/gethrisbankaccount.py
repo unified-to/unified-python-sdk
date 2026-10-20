@@ -35,6 +35,7 @@ class GetHrisBankaccountQueryParamFields(str, Enum):
     SPLIT_TYPE = "split_type"
     SPLIT_AMOUNT = "split_amount"
     PRIORITY = "priority"
+    METADATA = "metadata"
     RAW = "raw"
 
 

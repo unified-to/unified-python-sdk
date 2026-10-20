@@ -25,6 +25,7 @@ class PatchComputeDomainQueryParamFields(str, Enum):
     STATUS = "status"
     IS_PRIMARY = "is_primary"
     REDIRECT_URL = "redirect_url"
+    METADATA = "metadata"
     RAW = "raw"
 
 

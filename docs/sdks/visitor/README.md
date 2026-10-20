@@ -33,16 +33,15 @@ with UnifiedTo(
     res = unified_to.visitor.create_analytics_visitor(request={
         "analytics_visitor": {
             "created_at": parse_datetime("2020-04-16T20:29:48.281Z"),
-            "email": "Dallas_Mitchell@yahoo.com",
+            "email": "desiree.o.hara@icloud.com",
             "first_seen_at": parse_datetime("2020-04-16T20:29:48.281Z"),
-            "id": "2596b693-9269-452c-b2ed-1ce798a58753",
-            "last_seen_at": parse_datetime("2021-12-12T13:28:16.032Z"),
+            "id": "017c7a7a-6ee1-4e5d-ba12-a0c5c64cd75b",
+            "last_seen_at": parse_datetime("2025-01-10T10:19:21.620Z"),
             "metadata": {
                 "segment": {},
             },
-            "name": "Desiree O'Hara",
-            "total_events": 3639.0,
-            "updated_at": parse_datetime("2025-06-27T20:24:02.361Z"),
+            "total_events": 2916.0,
+            "updated_at": parse_datetime("2025-06-28T17:57:45.358Z"),
         },
         "connection_id": "<id>",
     })
@@ -186,16 +185,15 @@ with UnifiedTo(
     res = unified_to.visitor.patch_analytics_visitor(request={
         "analytics_visitor": {
             "created_at": parse_datetime("2020-04-16T20:29:48.281Z"),
-            "email": "Dallas_Mitchell@yahoo.com",
+            "email": "desiree.o.hara@icloud.com",
             "first_seen_at": parse_datetime("2020-04-16T20:29:48.281Z"),
-            "id": "2a7011fa-f5ad-41bd-8c1c-5c27af20576d",
-            "last_seen_at": parse_datetime("2021-12-12T13:28:16.035Z"),
+            "id": "1aa5ed2a-3c41-49e7-9e9d-043af363eecf",
+            "last_seen_at": parse_datetime("2025-01-10T10:19:21.631Z"),
             "metadata": {
                 "segment": {},
             },
-            "name": "Desiree O'Hara",
-            "total_events": 3639.0,
-            "updated_at": parse_datetime("2025-06-27T20:24:02.371Z"),
+            "total_events": 2916.0,
+            "updated_at": parse_datetime("2025-06-28T17:57:45.369Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -294,16 +292,15 @@ with UnifiedTo(
     res = unified_to.visitor.update_analytics_visitor(request={
         "analytics_visitor": {
             "created_at": parse_datetime("2020-04-16T20:29:48.281Z"),
-            "email": "Dallas_Mitchell@yahoo.com",
+            "email": "desiree.o.hara@icloud.com",
             "first_seen_at": parse_datetime("2020-04-16T20:29:48.281Z"),
-            "id": "2a7011fa-f5ad-41bd-8c1c-5c27af20576d",
-            "last_seen_at": parse_datetime("2021-12-12T13:28:16.035Z"),
+            "id": "1aa5ed2a-3c41-49e7-9e9d-043af363eecf",
+            "last_seen_at": parse_datetime("2025-01-10T10:19:21.631Z"),
             "metadata": {
                 "segment": {},
             },
-            "name": "Desiree O'Hara",
-            "total_events": 3639.0,
-            "updated_at": parse_datetime("2025-06-27T20:24:02.371Z"),
+            "total_events": 2916.0,
+            "updated_at": parse_datetime("2025-06-28T17:57:45.369Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

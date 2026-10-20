@@ -5,6 +5,7 @@ from .accountingaccounttaxonomy import (
     AccountingAccountTaxonomy,
     AccountingAccountTaxonomyTypedDict,
 )
+from .accountingmetadata import AccountingMetadata, AccountingMetadataTypedDict
 from datetime import datetime
 from enum import Enum
 from pydantic import field_serializer, model_serializer
@@ -54,6 +55,7 @@ class AccountingAccountTypedDict(TypedDict):
     r"""Identifier used by the SaaS application to uniquely identify the Account"""
     is_payable: NotRequired[bool]
     r"""True if the account is an “accounts payable” account"""
+    metadata: NotRequired[List[AccountingMetadataTypedDict]]
     name: NotRequired[str]
     r"""Account name"""
     organization_id: NotRequired[str]
@@ -93,6 +95,8 @@ class AccountingAccount(BaseModel):
 
     is_payable: Optional[bool] = None
     r"""True if the account is an “accounts payable” account"""
+
+    metadata: Optional[List[AccountingMetadata]] = None
 
     name: Optional[str] = None
     r"""Account name"""
@@ -145,6 +149,7 @@ class AccountingAccount(BaseModel):
                 "description",
                 "id",
                 "is_payable",
+                "metadata",
                 "name",
                 "organization_id",
                 "parent_id",

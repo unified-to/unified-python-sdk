@@ -22,4 +22,5 @@ value = CreateShippingRateQueryParamFields.SHIPMENT_ID
 | `CARRIER_ID`   | carrier_id     |
 | `ID`           | id             |
 | `RATES`        | rates          |
+| `METADATA`     | metadata       |
 | `RAW`          | raw            |

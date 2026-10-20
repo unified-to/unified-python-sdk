@@ -23,4 +23,5 @@ value = GetClubsLocationQueryParamFields.ID
 | `LONGITUDE`  | longitude    |
 | `TELEPHONE`  | telephone    |
 | `URL`        | url          |
+| `METADATA`   | metadata     |
 | `RAW`        | raw          |

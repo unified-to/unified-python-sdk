@@ -3,6 +3,7 @@
 from __future__ import annotations
 from .assessmentaddress import AssessmentAddress, AssessmentAddressTypedDict
 from .assessmentattribute import AssessmentAttribute, AssessmentAttributeTypedDict
+from .assessmentmetadata import AssessmentMetadata, AssessmentMetadataTypedDict
 from .assessmentparameterinput import (
     AssessmentParameterInput,
     AssessmentParameterInputTypedDict,
@@ -63,6 +64,7 @@ class AssessmentOrderTypedDict(TypedDict):
     id: NotRequired[str]
     job_id: NotRequired[str]
     r"""ATS job ID"""
+    metadata: NotRequired[List[AssessmentMetadataTypedDict]]
     package_id: NotRequired[str]
     r"""Assessment package ID"""
     parameters: NotRequired[List[AssessmentParameterInputTypedDict]]
@@ -140,6 +142,8 @@ class AssessmentOrder(BaseModel):
 
     job_id: Optional[str] = None
     r"""ATS job ID"""
+
+    metadata: Optional[List[AssessmentMetadata]] = None
 
     package_id: Optional[str] = None
     r"""Assessment package ID"""
@@ -260,6 +264,7 @@ class AssessmentOrder(BaseModel):
                 "employee_id",
                 "id",
                 "job_id",
+                "metadata",
                 "package_id",
                 "parameters",
                 "profile_addresses",

@@ -5,6 +5,7 @@ from .performancegoalmilestone import (
     PerformanceGoalMilestone,
     PerformanceGoalMilestoneTypedDict,
 )
+from .performancemetadata import PerformanceMetadata, PerformanceMetadataTypedDict
 from datetime import datetime
 from enum import Enum
 from pydantic import field_serializer, model_serializer
@@ -43,6 +44,7 @@ class PerformanceGoalTypedDict(TypedDict):
     due_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
+    metadata: NotRequired[List[PerformanceMetadataTypedDict]]
     milestones: NotRequired[List[PerformanceGoalMilestoneTypedDict]]
     r"""milestones or key results for this goal"""
     name: NotRequired[str]
@@ -81,6 +83,8 @@ class PerformanceGoal(BaseModel):
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     id: Optional[str] = None
+
+    metadata: Optional[List[PerformanceMetadata]] = None
 
     milestones: Optional[List[PerformanceGoalMilestone]] = None
     r"""milestones or key results for this goal"""
@@ -140,6 +144,7 @@ class PerformanceGoal(BaseModel):
                 "description",
                 "due_at",
                 "id",
+                "metadata",
                 "milestones",
                 "name",
                 "parent_id",

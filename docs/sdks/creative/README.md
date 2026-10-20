@@ -33,15 +33,16 @@ with UnifiedTo(
     res = unified_to.creative.create_ads_creative(request={
         "ads_creative": {
             "created_at": parse_datetime("2020-02-17T11:24:51.093Z"),
-            "id": "1c827665-daf0-4b6b-bd57-438db3564fb3",
+            "id": "c2d1ca1e-628d-4fb4-9ce1-630e71b0182f",
             "labels": [
                 "coma",
                 "accedo",
                 "termes",
             ],
+            "metadata": [],
             "name": "Brekke, Bradtke and Robel",
             "status": shared.AdsCreativeStatus.PAUSED,
-            "updated_at": parse_datetime("2021-06-27T06:51:45.683Z"),
+            "updated_at": parse_datetime("2021-06-27T12:21:28.461Z"),
         },
         "connection_id": "<id>",
     })
@@ -185,15 +186,16 @@ with UnifiedTo(
     res = unified_to.creative.patch_ads_creative(request={
         "ads_creative": {
             "created_at": parse_datetime("2020-02-17T11:24:51.093Z"),
-            "id": "692113a1-0c21-47e5-83bb-3a07b09109a8",
+            "id": "0b97a7b1-1ddd-44c9-94bc-b3f07a7e8ba7",
             "labels": [
                 "coma",
                 "accedo",
                 "termes",
             ],
+            "metadata": [],
             "name": "Brekke, Bradtke and Robel",
             "status": shared.AdsCreativeStatus.PAUSED,
-            "updated_at": parse_datetime("2021-06-27T06:51:45.686Z"),
+            "updated_at": parse_datetime("2021-06-27T12:21:28.466Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -292,15 +294,16 @@ with UnifiedTo(
     res = unified_to.creative.update_ads_creative(request={
         "ads_creative": {
             "created_at": parse_datetime("2020-02-17T11:24:51.093Z"),
-            "id": "692113a1-0c21-47e5-83bb-3a07b09109a8",
+            "id": "0b97a7b1-1ddd-44c9-94bc-b3f07a7e8ba7",
             "labels": [
                 "coma",
                 "accedo",
                 "termes",
             ],
+            "metadata": [],
             "name": "Brekke, Bradtke and Robel",
             "status": shared.AdsCreativeStatus.PAUSED,
-            "updated_at": parse_datetime("2021-06-27T06:51:45.686Z"),
+            "updated_at": parse_datetime("2021-06-27T12:21:28.466Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

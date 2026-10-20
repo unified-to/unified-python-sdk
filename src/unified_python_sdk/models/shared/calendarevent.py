@@ -8,6 +8,7 @@ from .calendareventrecurrence import (
     CalendarEventRecurrence,
     CalendarEventRecurrenceTypedDict,
 )
+from .calendarmetadata import CalendarMetadata, CalendarMetadataTypedDict
 from .property_calendarevent_organizer import (
     PropertyCalendarEventOrganizer,
     PropertyCalendarEventOrganizerTypedDict,
@@ -45,6 +46,7 @@ class CalendarEventTypedDict(TypedDict):
     location: NotRequired[str]
     matter_id: NotRequired[str]
     r"""pointer to Legal Matter"""
+    metadata: NotRequired[List[CalendarMetadataTypedDict]]
     notes: NotRequired[str]
     organizer: NotRequired[PropertyCalendarEventOrganizerTypedDict]
     raw: NotRequired[Dict[str, Any]]
@@ -92,6 +94,8 @@ class CalendarEvent(BaseModel):
 
     matter_id: Optional[str] = None
     r"""pointer to Legal Matter"""
+
+    metadata: Optional[List[CalendarMetadata]] = None
 
     notes: Optional[str] = None
 
@@ -146,6 +150,7 @@ class CalendarEvent(BaseModel):
                 "is_private",
                 "location",
                 "matter_id",
+                "metadata",
                 "notes",
                 "organizer",
                 "raw",

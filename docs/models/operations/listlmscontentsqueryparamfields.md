@@ -36,4 +36,5 @@ value = ListLmsContentsQueryParamFields.ID
 | `COLLECTION_IDS`     | collection_ids       |
 | `INSTRUCTORS`        | instructors          |
 | `PUBLISHED_AT`       | published_at         |
+| `METADATA`           | metadata             |
 | `RAW`                | raw                  |

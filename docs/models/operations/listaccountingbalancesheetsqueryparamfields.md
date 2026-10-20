@@ -24,4 +24,5 @@ value = ListAccountingBalancesheetsQueryParamFields.ID
 | `ASSETS`            | assets              |
 | `LIABILITIES`       | liabilities         |
 | `EQUITY`            | equity              |
+| `METADATA`          | metadata            |
 | `RAW`               | raw                 |

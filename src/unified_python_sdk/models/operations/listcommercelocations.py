@@ -36,6 +36,7 @@ class ListCommerceLocationsQueryParamFields(str, Enum):
     IMAGE_URL = "image_url"
     WEB_URL = "web_url"
     MEDIA = "media"
+    METADATA = "metadata"
     RAW = "raw"
     CATEGORIES = "categories"
 

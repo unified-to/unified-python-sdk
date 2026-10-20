@@ -21,6 +21,7 @@ class ListCalendarBusiesQueryParamFields(str, Enum):
     END_AT = "end_at"
     TIMEZONE = "timezone"
     DESCRIPTION = "description"
+    METADATA = "metadata"
     RAW = "raw"
 
 

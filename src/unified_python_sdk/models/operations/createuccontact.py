@@ -27,6 +27,7 @@ class CreateUcContactQueryParamFields(str, Enum):
     COMPANY = "company"
     EMAILS = "emails"
     TELEPHONES = "telephones"
+    METADATA = "metadata"
     RAW = "raw"
 
 

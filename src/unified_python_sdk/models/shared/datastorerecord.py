@@ -2,9 +2,10 @@
 
 from __future__ import annotations
 from .datastorefieldvalue import DatastoreFieldValue, DatastoreFieldValueTypedDict
+from .datastoremetadata import DatastoreMetadata, DatastoreMetadataTypedDict
 from datetime import datetime
 from pydantic import model_serializer
-from typing import Any, Dict, Optional
+from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
@@ -16,6 +17,7 @@ class DatastoreRecordTypedDict(TypedDict):
     database_id: NotRequired[str]
     r"""source Database ID"""
     id: NotRequired[str]
+    metadata: NotRequired[List[DatastoreMetadataTypedDict]]
     raw: NotRequired[Dict[str, Any]]
     row_number: NotRequired[float]
     table_id: NotRequired[str]
@@ -35,6 +37,8 @@ class DatastoreRecord(BaseModel):
 
     id: Optional[str] = None
 
+    metadata: Optional[List[DatastoreMetadata]] = None
+
     raw: Optional[Dict[str, Any]] = None
 
     row_number: Optional[float] = None
@@ -52,6 +56,7 @@ class DatastoreRecord(BaseModel):
                 "created_at",
                 "database_id",
                 "id",
+                "metadata",
                 "raw",
                 "row_number",
                 "table_id",

@@ -28,6 +28,7 @@ class ListSigningSignatoriesQueryParamFields(str, Enum):
     SIGNED_AT = "signed_at"
     DECLINE_REASON = "decline_reason"
     RAW = "raw"
+    METADATA = "metadata"
 
 
 class ListSigningSignatoriesRequestTypedDict(TypedDict):

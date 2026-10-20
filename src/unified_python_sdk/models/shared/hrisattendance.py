@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 from .hrisattendancebreak import HrisAttendanceBreak, HrisAttendanceBreakTypedDict
+from .hrismetadata import HrisMetadata, HrisMetadataTypedDict
 from .property_hrisattendance_address import (
     PropertyHrisAttendanceAddress,
     PropertyHrisAttendanceAddressTypedDict,
@@ -54,6 +55,7 @@ class HrisAttendanceTypedDict(TypedDict):
     job_name: NotRequired[str]
     location_id: NotRequired[str]
     r"""(reference to HrisLocation)"""
+    metadata: NotRequired[List[HrisMetadataTypedDict]]
     non_cash_tips_amount: NotRequired[float]
     r"""card/non-cash tips attributed to this attendance record"""
     raw: NotRequired[Dict[str, Any]]
@@ -114,6 +116,8 @@ class HrisAttendance(BaseModel):
     location_id: Optional[str] = None
     r"""(reference to HrisLocation)"""
 
+    metadata: Optional[List[HrisMetadata]] = None
+
     non_cash_tips_amount: Optional[float] = None
     r"""card/non-cash tips attributed to this attendance record"""
 
@@ -156,6 +160,7 @@ class HrisAttendance(BaseModel):
                 "id",
                 "job_name",
                 "location_id",
+                "metadata",
                 "non_cash_tips_amount",
                 "raw",
                 "status",

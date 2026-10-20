@@ -32,4 +32,5 @@ value = UpdateHrisDeductionQueryParamFields.ID
 | `MAX_AMOUNT`       | max_amount         |
 | `PAYCODE_ID`       | paycode_id         |
 | `GARNISHMENT_TYPE` | garnishment_type   |
+| `METADATA`         | metadata           |
 | `RAW`              | raw                |

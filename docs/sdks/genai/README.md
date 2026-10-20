@@ -6,27 +6,33 @@
 
 * [create_genai_agent](#create_genai_agent) - Create an agent
 * [create_genai_embedding](#create_genai_embedding) - Create an embedding
+* [create_genai_memory](#create_genai_memory) - Create a memory
 * [create_genai_organization](#create_genai_organization) - Create an organization
 * [create_genai_prompt](#create_genai_prompt) - Create a prompt
 * [create_genai_task](#create_genai_task) - Create a task
 * [get_genai_agent](#get_genai_agent) - Retrieve an agent
+* [get_genai_memory](#get_genai_memory) - Retrieve a memory
 * [get_genai_model](#get_genai_model) - Retrieve a model
 * [get_genai_organization](#get_genai_organization) - Retrieve an organization
 * [get_genai_skill](#get_genai_skill) - Retrieve a skill
 * [get_genai_task](#get_genai_task) - Retrieve a task
 * [list_genai_agents](#list_genai_agents) - List all agents
+* [list_genai_memories](#list_genai_memories) - List all memories
 * [list_genai_models](#list_genai_models) - List all models
 * [list_genai_organizations](#list_genai_organizations) - List all organizations
 * [list_genai_skills](#list_genai_skills) - List all skills
 * [list_genai_tasks](#list_genai_tasks) - List all tasks
 * [patch_genai_agent](#patch_genai_agent) - Update an agent
+* [patch_genai_memory](#patch_genai_memory) - Update a memory
 * [patch_genai_organization](#patch_genai_organization) - Update an organization
 * [patch_genai_task](#patch_genai_task) - Update a task
 * [remove_genai_agent](#remove_genai_agent) - Remove an agent
+* [remove_genai_memory](#remove_genai_memory) - Remove a memory
 * [remove_genai_organization](#remove_genai_organization) - Remove an organization
 * [remove_genai_skill](#remove_genai_skill) - Remove a skill
 * [remove_genai_task](#remove_genai_task) - Remove a task
 * [update_genai_agent](#update_genai_agent) - Update an agent
+* [update_genai_memory](#update_genai_memory) - Update a memory
 * [update_genai_organization](#update_genai_organization) - Update an organization
 * [update_genai_task](#update_genai_task) - Update a task
 
@@ -53,11 +59,11 @@ with UnifiedTo(
         "genai_agent": {
             "created_at": parse_datetime("2020-12-18T02:23:33.723Z"),
             "description": "Assentator tero sequi.",
-            "id": "9185939d-4877-4c26-9646-7ddabbfb47de",
+            "id": "b7b7b80c-71b4-4aa7-97f8-1e04e19e0f51",
             "instructions": "Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.",
             "is_active": False,
             "name": "daughter with",
-            "updated_at": parse_datetime("2025-10-13T12:24:45.184Z"),
+            "updated_at": parse_datetime("2025-10-14T10:42:48.614Z"),
         },
         "connection_id": "<id>",
     })
@@ -114,7 +120,7 @@ with UnifiedTo(
             "dimension": 423.0,
             "embeddings": "Est.",
             "enconding_format": shared.EncondingFormat.FLOAT,
-            "id": "a7b9dc71-a9c9-4d35-a11b-58806dc69227",
+            "id": "113482b3-b9c4-4264-a59f-c27c611cfd7f",
             "max_tokens": 223.0,
             "tokens_used": 836.0,
             "type": "classification",
@@ -146,6 +152,74 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## create_genai_memory
+
+Create a memory
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="createGenaiMemory" method="post" path="/genai/{connection_id}/memory" example="genai_memory" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.genai.create_genai_memory(request={
+        "genai_memory": {
+            "content": "Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.",
+            "created_at": parse_datetime("2021-10-22T04:14:41.668Z"),
+            "id": "038791ec-ae3e-4a95-b016-ae9d81752dda",
+            "metadata": [
+                {
+                    "extra_data": {
+
+                    },
+                    "format_": shared.GenaiMetadataFormat.TEXT,
+                    "id": "7a8ad62d-ba0e-4ce3-8330-56a2647b5b3e",
+                    "namespace": "memory",
+                    "slug": "cribro",
+                    "value": "aiunt",
+                },
+            ],
+            "name": "sponte.md",
+            "type": shared.GenaiMemoryType.MEMORY,
+            "updated_at": parse_datetime("2023-04-25T12:41:10.266Z"),
+            "user_identifier": "9d170613-4338-447d-bdb6-8ea96a2d7513",
+        },
+        "connection_id": "<id>",
+    })
+
+    assert res.genai_memory is not None
+
+    # Handle response
+    print(res.genai_memory)
+
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.CreateGenaiMemoryRequest](../../models/operations/creategenaimemoryrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+
+### Response
+
+**[operations.CreateGenaiMemoryResponse](../../models/operations/creategenaimemoryresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## create_genai_organization
 
 Create an organization
@@ -169,10 +243,10 @@ with UnifiedTo(
         "genai_organization": {
             "created_at": parse_datetime("2020-10-27T16:03:47.122Z"),
             "description": "Voluptates abeo subseco.",
-            "id": "242c6575-b803-403a-b504-2cefd49097ff",
+            "id": "cc595951-8203-4e6b-8557-85431a96048c",
             "is_active": False,
             "name": "officially about",
-            "updated_at": parse_datetime("2023-01-25T13:32:57.100Z"),
+            "updated_at": parse_datetime("2023-01-25T23:41:26.902Z"),
         },
         "connection_id": "<id>",
     })
@@ -342,10 +416,10 @@ with UnifiedTo(
 
     res = unified_to.genai.create_genai_task(request={
         "genai_task": {
-            "completed_at": parse_datetime("2025-09-29T08:24:52.620Z"),
+            "completed_at": parse_datetime("2025-09-30T06:39:17.368Z"),
             "created_at": parse_datetime("2020-10-25T20:19:33.247Z"),
             "files_changed": 19.0,
-            "id": "b71c1dd4-62f9-4041-bac6-232e058317ea",
+            "id": "b1c50cda-af88-4021-a969-107f319eab02",
             "instructions": "Benigne canonicus officiis solvo adsidue deleo angustus.",
             "lines_added": 244.0,
             "lines_deleted": 118.0,
@@ -360,12 +434,12 @@ with UnifiedTo(
             "pullrequest_url": "https://github.com/berenice.satterfield/joshingly-ignorance/pull/383",
             "repo_url": "https://github.com/berenice.satterfield/joshingly-ignorance",
             "source_branch_identifier": "main",
-            "started_at": parse_datetime("2024-05-20T01:01:28.012Z"),
+            "started_at": parse_datetime("2024-05-20T17:07:06.196Z"),
             "status": shared.GenaiTaskStatus.BLOCKED,
             "summary": "Cur aeternus cogito vesper.",
             "target_branch_identifier": "agent/joshingly-ignorance",
             "tokens_used": 2165.0,
-            "updated_at": parse_datetime("2023-02-25T09:20:15.992Z"),
+            "updated_at": parse_datetime("2023-02-25T19:52:27.880Z"),
             "web_url": "https://inexperienced-adrenalin.biz/",
         },
         "connection_id": "<id>",
@@ -435,6 +509,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.GetGenaiAgentResponse](../../models/operations/getgenaiagentresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_genai_memory
+
+Retrieve a memory
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getGenaiMemory" method="get" path="/genai/{connection_id}/memory/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.genai.get_genai_memory(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.genai_memory is not None
+
+    # Handle response
+    print(res.genai_memory)
+
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.GetGenaiMemoryRequest](../../models/operations/getgenaimemoryrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+
+### Response
+
+**[operations.GetGenaiMemoryResponse](../../models/operations/getgenaimemoryresponse.md)**
 
 ### Errors
 
@@ -676,6 +797,52 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## list_genai_memories
+
+List all memories
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listGenaiMemories" method="get" path="/genai/{connection_id}/memory" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.genai.list_genai_memories(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.genai_memories is not None
+
+    # Handle response
+    print(res.genai_memories)
+
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.ListGenaiMemoriesRequest](../../models/operations/listgenaimemoriesrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+
+### Response
+
+**[operations.ListGenaiMemoriesResponse](../../models/operations/listgenaimemoriesresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## list_genai_models
 
 List all models
@@ -883,11 +1050,11 @@ with UnifiedTo(
         "genai_agent": {
             "created_at": parse_datetime("2020-12-18T02:23:33.723Z"),
             "description": "Assentator tero sequi.",
-            "id": "1048ff31-d1f0-4a91-88be-6ad52bbdf2bd",
+            "id": "facb4c9c-9976-4049-9176-d29ee98361cc",
             "instructions": "Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.",
             "is_active": False,
             "name": "daughter with",
-            "updated_at": parse_datetime("2025-10-13T12:24:45.189Z"),
+            "updated_at": parse_datetime("2025-10-14T10:42:48.619Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -910,6 +1077,75 @@ with UnifiedTo(
 ### Response
 
 **[operations.PatchGenaiAgentResponse](../../models/operations/patchgenaiagentresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## patch_genai_memory
+
+Update a memory
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchGenaiMemory" method="patch" path="/genai/{connection_id}/memory/{id}" example="genai_memory" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.genai.patch_genai_memory(request={
+        "genai_memory": {
+            "content": "Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.",
+            "created_at": parse_datetime("2021-10-22T04:14:41.668Z"),
+            "id": "1ee902dd-8a16-4215-91a6-541dbde221e6",
+            "metadata": [
+                {
+                    "extra_data": {
+
+                    },
+                    "format_": shared.GenaiMetadataFormat.TEXT,
+                    "id": "7a8ad62d-ba0e-4ce3-8330-56a2647b5b3e",
+                    "namespace": "memory",
+                    "slug": "cribro",
+                    "value": "aiunt",
+                },
+            ],
+            "name": "sponte.md",
+            "type": shared.GenaiMemoryType.MEMORY,
+            "updated_at": parse_datetime("2023-04-25T12:41:10.270Z"),
+            "user_identifier": "9d170613-4338-447d-bdb6-8ea96a2d7513",
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.genai_memory is not None
+
+    # Handle response
+    print(res.genai_memory)
+
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.PatchGenaiMemoryRequest](../../models/operations/patchgenaimemoryrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+
+### Response
+
+**[operations.PatchGenaiMemoryResponse](../../models/operations/patchgenaimemoryresponse.md)**
 
 ### Errors
 
@@ -940,10 +1176,10 @@ with UnifiedTo(
         "genai_organization": {
             "created_at": parse_datetime("2020-10-27T16:03:47.122Z"),
             "description": "Voluptates abeo subseco.",
-            "id": "991c5a23-b4ae-4474-9f48-088a4058a7f4",
+            "id": "cf61d5a5-c229-4cbd-b497-280cd7c02ca3",
             "is_active": False,
             "name": "officially about",
-            "updated_at": parse_datetime("2023-01-25T13:32:57.102Z"),
+            "updated_at": parse_datetime("2023-01-25T23:41:26.904Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -994,10 +1230,10 @@ with UnifiedTo(
 
     res = unified_to.genai.patch_genai_task(request={
         "genai_task": {
-            "completed_at": parse_datetime("2025-09-29T08:24:52.637Z"),
+            "completed_at": parse_datetime("2025-09-30T06:39:17.378Z"),
             "created_at": parse_datetime("2020-10-25T20:19:33.247Z"),
             "files_changed": 19.0,
-            "id": "8bb8aa55-1673-4fdc-89bc-994d7ec020f9",
+            "id": "1e30e1c2-5d2c-40ea-92a0-8ea7dbde1f5c",
             "instructions": "Benigne canonicus officiis solvo adsidue deleo angustus.",
             "lines_added": 244.0,
             "lines_deleted": 118.0,
@@ -1012,12 +1248,12 @@ with UnifiedTo(
             "pullrequest_url": "https://github.com/berenice.satterfield/joshingly-ignorance/pull/383",
             "repo_url": "https://github.com/berenice.satterfield/joshingly-ignorance",
             "source_branch_identifier": "main",
-            "started_at": parse_datetime("2024-05-20T01:01:28.024Z"),
+            "started_at": parse_datetime("2024-05-20T17:07:06.204Z"),
             "status": shared.GenaiTaskStatus.BLOCKED,
             "summary": "Cur aeternus cogito vesper.",
             "target_branch_identifier": "agent/joshingly-ignorance",
             "tokens_used": 2165.0,
-            "updated_at": parse_datetime("2023-02-25T09:20:16.000Z"),
+            "updated_at": parse_datetime("2023-02-25T19:52:27.885Z"),
             "web_url": "https://inexperienced-adrenalin.biz/",
         },
         "connection_id": "<id>",
@@ -1088,6 +1324,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.RemoveGenaiAgentResponse](../../models/operations/removegenaiagentresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## remove_genai_memory
+
+Remove a memory
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeGenaiMemory" method="delete" path="/genai/{connection_id}/memory/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.genai.remove_genai_memory(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.RemoveGenaiMemoryRequest](../../models/operations/removegenaimemoryrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+
+### Response
+
+**[operations.RemoveGenaiMemoryResponse](../../models/operations/removegenaimemoryresponse.md)**
 
 ### Errors
 
@@ -1259,11 +1542,11 @@ with UnifiedTo(
         "genai_agent": {
             "created_at": parse_datetime("2020-12-18T02:23:33.723Z"),
             "description": "Assentator tero sequi.",
-            "id": "1048ff31-d1f0-4a91-88be-6ad52bbdf2bd",
+            "id": "facb4c9c-9976-4049-9176-d29ee98361cc",
             "instructions": "Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.",
             "is_active": False,
             "name": "daughter with",
-            "updated_at": parse_datetime("2025-10-13T12:24:45.189Z"),
+            "updated_at": parse_datetime("2025-10-14T10:42:48.619Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1286,6 +1569,75 @@ with UnifiedTo(
 ### Response
 
 **[operations.UpdateGenaiAgentResponse](../../models/operations/updategenaiagentresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## update_genai_memory
+
+Update a memory
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="updateGenaiMemory" method="put" path="/genai/{connection_id}/memory/{id}" example="genai_memory" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.genai.update_genai_memory(request={
+        "genai_memory": {
+            "content": "Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.",
+            "created_at": parse_datetime("2021-10-22T04:14:41.668Z"),
+            "id": "1ee902dd-8a16-4215-91a6-541dbde221e6",
+            "metadata": [
+                {
+                    "extra_data": {
+
+                    },
+                    "format_": shared.GenaiMetadataFormat.TEXT,
+                    "id": "7a8ad62d-ba0e-4ce3-8330-56a2647b5b3e",
+                    "namespace": "memory",
+                    "slug": "cribro",
+                    "value": "aiunt",
+                },
+            ],
+            "name": "sponte.md",
+            "type": shared.GenaiMemoryType.MEMORY,
+            "updated_at": parse_datetime("2023-04-25T12:41:10.270Z"),
+            "user_identifier": "9d170613-4338-447d-bdb6-8ea96a2d7513",
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.genai_memory is not None
+
+    # Handle response
+    print(res.genai_memory)
+
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.UpdateGenaiMemoryRequest](../../models/operations/updategenaimemoryrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+
+### Response
+
+**[operations.UpdateGenaiMemoryResponse](../../models/operations/updategenaimemoryresponse.md)**
 
 ### Errors
 
@@ -1316,10 +1668,10 @@ with UnifiedTo(
         "genai_organization": {
             "created_at": parse_datetime("2020-10-27T16:03:47.122Z"),
             "description": "Voluptates abeo subseco.",
-            "id": "991c5a23-b4ae-4474-9f48-088a4058a7f4",
+            "id": "cf61d5a5-c229-4cbd-b497-280cd7c02ca3",
             "is_active": False,
             "name": "officially about",
-            "updated_at": parse_datetime("2023-01-25T13:32:57.102Z"),
+            "updated_at": parse_datetime("2023-01-25T23:41:26.904Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1370,10 +1722,10 @@ with UnifiedTo(
 
     res = unified_to.genai.update_genai_task(request={
         "genai_task": {
-            "completed_at": parse_datetime("2025-09-29T08:24:52.637Z"),
+            "completed_at": parse_datetime("2025-09-30T06:39:17.378Z"),
             "created_at": parse_datetime("2020-10-25T20:19:33.247Z"),
             "files_changed": 19.0,
-            "id": "8bb8aa55-1673-4fdc-89bc-994d7ec020f9",
+            "id": "1e30e1c2-5d2c-40ea-92a0-8ea7dbde1f5c",
             "instructions": "Benigne canonicus officiis solvo adsidue deleo angustus.",
             "lines_added": 244.0,
             "lines_deleted": 118.0,
@@ -1388,12 +1740,12 @@ with UnifiedTo(
             "pullrequest_url": "https://github.com/berenice.satterfield/joshingly-ignorance/pull/383",
             "repo_url": "https://github.com/berenice.satterfield/joshingly-ignorance",
             "source_branch_identifier": "main",
-            "started_at": parse_datetime("2024-05-20T01:01:28.024Z"),
+            "started_at": parse_datetime("2024-05-20T17:07:06.204Z"),
             "status": shared.GenaiTaskStatus.BLOCKED,
             "summary": "Cur aeternus cogito vesper.",
             "target_branch_identifier": "agent/joshingly-ignorance",
             "tokens_used": 2165.0,
-            "updated_at": parse_datetime("2023-02-25T09:20:16.000Z"),
+            "updated_at": parse_datetime("2023-02-25T19:52:27.885Z"),
             "web_url": "https://inexperienced-adrenalin.biz/",
         },
         "connection_id": "<id>",

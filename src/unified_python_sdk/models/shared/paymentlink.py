@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 from .paymentlineitem import PaymentLineitem, PaymentLineitemTypedDict
+from .paymentmetadata import PaymentMetadata, PaymentMetadataTypedDict
 from datetime import datetime
 from pydantic import model_serializer
 from typing import Any, Dict, List, Optional
@@ -21,6 +22,7 @@ class PaymentLinkTypedDict(TypedDict):
     is_active: NotRequired[bool]
     is_chargeable_now: NotRequired[bool]
     lineitems: NotRequired[List[PaymentLineitemTypedDict]]
+    metadata: NotRequired[List[PaymentMetadataTypedDict]]
     payment_id: NotRequired[str]
     r"""(reference to PaymentPayment)"""
     raw: NotRequired[Dict[str, Any]]
@@ -52,6 +54,8 @@ class PaymentLink(BaseModel):
 
     lineitems: Optional[List[PaymentLineitem]] = None
 
+    metadata: Optional[List[PaymentMetadata]] = None
+
     payment_id: Optional[str] = None
     r"""(reference to PaymentPayment)"""
 
@@ -78,6 +82,7 @@ class PaymentLink(BaseModel):
                 "is_active",
                 "is_chargeable_now",
                 "lineitems",
+                "metadata",
                 "payment_id",
                 "raw",
                 "success_url",

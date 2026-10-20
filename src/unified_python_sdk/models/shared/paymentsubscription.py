@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 from .paymentlineitem import PaymentLineitem, PaymentLineitemTypedDict
+from .paymentmetadata import PaymentMetadata, PaymentMetadataTypedDict
 from datetime import datetime
 from enum import Enum
 from pydantic import field_serializer, model_serializer
@@ -52,6 +53,7 @@ class PaymentSubscriptionTypedDict(TypedDict):
     invoice_id: NotRequired[str]
     r"""a reference to an Accounting Invoice (reference to AccountingInvoice)"""
     lineitems: NotRequired[List[PaymentLineitemTypedDict]]
+    metadata: NotRequired[List[PaymentMetadataTypedDict]]
     month: NotRequired[float]
     r"""the month on which to charge a customer (1-12). Only applies when the interval_unit is YEAR."""
     raw: NotRequired[Dict[str, Any]]
@@ -103,6 +105,8 @@ class PaymentSubscription(BaseModel):
     r"""a reference to an Accounting Invoice (reference to AccountingInvoice)"""
 
     lineitems: Optional[List[PaymentLineitem]] = None
+
+    metadata: Optional[List[PaymentMetadata]] = None
 
     month: Optional[float] = None
     r"""the month on which to charge a customer (1-12). Only applies when the interval_unit is YEAR."""
@@ -156,6 +160,7 @@ class PaymentSubscription(BaseModel):
                 "interval_unit",
                 "invoice_id",
                 "lineitems",
+                "metadata",
                 "month",
                 "raw",
                 "start_at",

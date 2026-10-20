@@ -29,6 +29,7 @@ class GetShippingTrackingQueryParamFields(str, Enum):
     CARRIER_ID = "carrier_id"
     CARRIER_STATUS_CODE = "carrier_status_code"
     CARRIER_STATUS_DESCRIPTION = "carrier_status_description"
+    METADATA = "metadata"
     RAW = "raw"
 
 

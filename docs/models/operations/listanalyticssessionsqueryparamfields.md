@@ -35,4 +35,5 @@ value = ListAnalyticsSessionsQueryParamFields.ID
 | `CITY`             | city               |
 | `IS_BOUNCE`        | is_bounce          |
 | `IS_CONVERSION`    | is_conversion      |
+| `METADATA`         | metadata           |
 | `RAW`              | raw                |

@@ -23,4 +23,5 @@ value = PatchLmsInstructorQueryParamFields.ID
 | `TITLE`      | title        |
 | `TELEPHONES` | telephones   |
 | `IMAGE_URL`  | image_url    |
+| `METADATA`   | metadata     |
 | `RAW`        | raw          |

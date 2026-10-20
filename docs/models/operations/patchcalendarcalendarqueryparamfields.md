@@ -20,4 +20,5 @@ value = PatchCalendarCalendarQueryParamFields.ID
 | `DESCRIPTION` | description   |
 | `TIMEZONE`    | timezone      |
 | `IS_PRIMARY`  | is_primary    |
+| `METADATA`    | metadata      |
 | `RAW`         | raw           |

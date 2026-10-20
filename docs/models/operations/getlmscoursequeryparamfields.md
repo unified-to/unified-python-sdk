@@ -33,4 +33,5 @@ value = GetLmsCourseQueryParamFields.ID
 | `PROVIDER_NAME`         | provider_name           |
 | `PUBLISHED_AT`          | published_at            |
 | `TIME_ESTIMATE_MINUTES` | time_estimate_minutes   |
+| `METADATA`              | metadata                |
 | `RAW`                   | raw                     |

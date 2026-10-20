@@ -24,6 +24,7 @@ class ListAdsReportsQueryParamFields(str, Enum):
     START_AT = "start_at"
     END_AT = "end_at"
     ORGANIZATION_ID = "organization_id"
+    METADATA = "metadata"
     RAW = "raw"
 
 

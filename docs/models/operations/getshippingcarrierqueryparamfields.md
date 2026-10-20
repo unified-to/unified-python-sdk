@@ -21,4 +21,5 @@ value = GetShippingCarrierQueryParamFields.ID
 | `IS_ACTIVE`   | is_active     |
 | `LOGO_URL`    | logo_url      |
 | `WEBSITE_URL` | website_url   |
+| `METADATA`    | metadata      |
 | `RAW`         | raw           |

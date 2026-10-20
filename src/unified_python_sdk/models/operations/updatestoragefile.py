@@ -35,6 +35,7 @@ class UpdateStorageFileQueryParamFields(str, Enum):
     WEB_URL = "web_url"
     REFERENCES = "references"
     TAGS = "tags"
+    METADATA = "metadata"
     RAW = "raw"
 
 

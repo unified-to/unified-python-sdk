@@ -26,6 +26,7 @@ class CreateTicketingCustomerQueryParamFields(str, Enum):
     EMAILS = "emails"
     TELEPHONES = "telephones"
     TAGS = "tags"
+    METADATA = "metadata"
     RAW = "raw"
 
 

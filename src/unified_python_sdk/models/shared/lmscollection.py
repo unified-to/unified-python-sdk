@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 from .lmsmedia import LmsMedia, LmsMediaTypedDict
+from .lmsmetadata import LmsMetadata, LmsMetadataTypedDict
 from datetime import datetime
 from pydantic import model_serializer
 from typing import Any, Dict, List, Optional
@@ -16,6 +17,7 @@ class LmsCollectionTypedDict(TypedDict):
     id: NotRequired[str]
     is_active: NotRequired[bool]
     media: NotRequired[List[LmsMediaTypedDict]]
+    metadata: NotRequired[List[LmsMetadataTypedDict]]
     name: NotRequired[str]
     parent_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
@@ -35,6 +37,8 @@ class LmsCollection(BaseModel):
 
     media: Optional[List[LmsMedia]] = None
 
+    metadata: Optional[List[LmsMetadata]] = None
+
     name: Optional[str] = None
 
     parent_id: Optional[str] = None
@@ -53,6 +57,7 @@ class LmsCollection(BaseModel):
                 "id",
                 "is_active",
                 "media",
+                "metadata",
                 "name",
                 "parent_id",
                 "raw",

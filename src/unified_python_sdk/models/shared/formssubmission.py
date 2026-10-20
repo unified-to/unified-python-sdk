@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 from .formanswer import FormAnswer, FormAnswerTypedDict
+from .formsmetadata import FormsMetadata, FormsMetadataTypedDict
 from datetime import datetime
 from pydantic import model_serializer
 from typing import Any, Dict, List, Optional
@@ -15,6 +16,7 @@ class FormsSubmissionTypedDict(TypedDict):
     created_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
+    metadata: NotRequired[List[FormsMetadataTypedDict]]
     raw: NotRequired[Dict[str, Any]]
     respondent_email: NotRequired[str]
     respondent_name: NotRequired[str]
@@ -32,6 +34,8 @@ class FormsSubmission(BaseModel):
 
     id: Optional[str] = None
 
+    metadata: Optional[List[FormsMetadata]] = None
+
     raw: Optional[Dict[str, Any]] = None
 
     respondent_email: Optional[str] = None
@@ -47,6 +51,7 @@ class FormsSubmission(BaseModel):
             [
                 "created_at",
                 "id",
+                "metadata",
                 "raw",
                 "respondent_email",
                 "respondent_name",

@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 from .taskchangeitem import TaskChangeItem, TaskChangeItemTypedDict
+from .taskmetadata import TaskMetadata, TaskMetadataTypedDict
 from datetime import datetime
 from pydantic import model_serializer
 from typing import Any, Dict, List, Optional
@@ -14,6 +15,7 @@ class TaskChangeTypedDict(TypedDict):
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
     items: NotRequired[List[TaskChangeItemTypedDict]]
+    metadata: NotRequired[List[TaskMetadataTypedDict]]
     raw: NotRequired[Dict[str, Any]]
     task_id: NotRequired[str]
     r"""(reference to TaskTask)"""
@@ -31,6 +33,8 @@ class TaskChange(BaseModel):
 
     items: Optional[List[TaskChangeItem]] = None
 
+    metadata: Optional[List[TaskMetadata]] = None
+
     raw: Optional[Dict[str, Any]] = None
 
     task_id: Optional[str] = None
@@ -45,7 +49,16 @@ class TaskChange(BaseModel):
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):
         optional_fields = set(
-            ["created_at", "id", "items", "raw", "task_id", "updated_at", "user_id"]
+            [
+                "created_at",
+                "id",
+                "items",
+                "metadata",
+                "raw",
+                "task_id",
+                "updated_at",
+                "user_id",
+            ]
         )
         serialized = handler(self)
         m = {}

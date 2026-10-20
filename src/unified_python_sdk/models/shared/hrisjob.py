@@ -5,6 +5,7 @@ from .hriscompensation import HrisCompensation, HrisCompensationTypedDict
 from .hrisemployee import HrisEmployee, HrisEmployeeTypedDict
 from .hrisgroup import HrisGroup, HrisGroupTypedDict
 from .hrislocation import HrisLocation, HrisLocationTypedDict
+from .hrismetadata import HrisMetadata, HrisMetadataTypedDict
 from datetime import datetime
 from enum import Enum
 from pydantic import field_serializer, model_serializer
@@ -45,6 +46,7 @@ class HrisJobTypedDict(TypedDict):
     is_active: NotRequired[bool]
     locations: NotRequired[List[HrisLocationTypedDict]]
     r"""where this job is worked. May not have all of the Location fields present, but should have id and name"""
+    metadata: NotRequired[List[HrisMetadataTypedDict]]
     name: NotRequired[str]
     r"""the job or position title"""
     parent_id: NotRequired[str]
@@ -83,6 +85,8 @@ class HrisJob(BaseModel):
     locations: Optional[List[HrisLocation]] = None
     r"""where this job is worked. May not have all of the Location fields present, but should have id and name"""
 
+    metadata: Optional[List[HrisMetadata]] = None
+
     name: Optional[str] = None
     r"""the job or position title"""
 
@@ -120,6 +124,7 @@ class HrisJob(BaseModel):
                 "id",
                 "is_active",
                 "locations",
+                "metadata",
                 "name",
                 "parent_id",
                 "raw",

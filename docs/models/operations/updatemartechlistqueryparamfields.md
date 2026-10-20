@@ -29,4 +29,5 @@ value = UpdateMartechListQueryParamFields.ID
 | `LANGUAGE`       | language         |
 | `SENDER_COMPANY` | sender_company   |
 | `SENDER_PHONE`   | sender_phone     |
+| `METADATA`       | metadata         |
 | `RAW`            | raw              |

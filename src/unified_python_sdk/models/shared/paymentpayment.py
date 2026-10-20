@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 from .paymentallocation import PaymentAllocation, PaymentAllocationTypedDict
+from .paymentmetadata import PaymentMetadata, PaymentMetadataTypedDict
 from datetime import datetime
 from enum import Enum
 from pydantic import field_serializer, model_serializer
@@ -68,6 +69,7 @@ class PaymentPaymentTypedDict(TypedDict):
     link_id: NotRequired[str]
     location_id: NotRequired[str]
     r"""store/site where the payment was taken (commerce_location)"""
+    metadata: NotRequired[List[PaymentMetadataTypedDict]]
     net_amount: NotRequired[float]
     r"""total_amount minus fee_amount"""
     notes: NotRequired[str]
@@ -133,6 +135,8 @@ class PaymentPayment(BaseModel):
 
     location_id: Optional[str] = None
     r"""store/site where the payment was taken (commerce_location)"""
+
+    metadata: Optional[List[PaymentMetadata]] = None
 
     net_amount: Optional[float] = None
     r"""total_amount minus fee_amount"""
@@ -215,6 +219,7 @@ class PaymentPayment(BaseModel):
                 "invoice_id",
                 "link_id",
                 "location_id",
+                "metadata",
                 "net_amount",
                 "notes",
                 "organization_id",

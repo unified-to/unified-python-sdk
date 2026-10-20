@@ -5,9 +5,10 @@ from .property_socialreview_reply import (
     PropertySocialReviewReply,
     PropertySocialReviewReplyTypedDict,
 )
+from .socialmetadata import SocialMetadata, SocialMetadataTypedDict
 from datetime import datetime
 from pydantic import model_serializer
-from typing import Any, Dict, Optional
+from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
@@ -25,6 +26,7 @@ class SocialReviewTypedDict(TypedDict):
     r"""When the review was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
     r"""Unique identifier for the review"""
+    metadata: NotRequired[List[SocialMetadataTypedDict]]
     profile_id: NotRequired[str]
     r"""The social profile (page/handle/listing) being reviewed"""
     rating: NotRequired[float]
@@ -60,6 +62,8 @@ class SocialReview(BaseModel):
     id: Optional[str] = None
     r"""Unique identifier for the review"""
 
+    metadata: Optional[List[SocialMetadata]] = None
+
     profile_id: Optional[str] = None
     r"""The social profile (page/handle/listing) being reviewed"""
 
@@ -91,6 +95,7 @@ class SocialReview(BaseModel):
                 "content",
                 "created_at",
                 "id",
+                "metadata",
                 "profile_id",
                 "rating",
                 "raw",

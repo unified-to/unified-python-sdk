@@ -38,6 +38,7 @@ class ListAnalyticsSessionsQueryParamFields(str, Enum):
     CITY = "city"
     IS_BOUNCE = "is_bounce"
     IS_CONVERSION = "is_conversion"
+    METADATA = "metadata"
     RAW = "raw"
 
 

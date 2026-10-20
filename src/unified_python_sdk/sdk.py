@@ -130,6 +130,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.matter import Matter
     from unified_python_sdk.medication import Medication
     from unified_python_sdk.member import Member
+    from unified_python_sdk.memory import Memory
     from unified_python_sdk.message import Message
     from unified_python_sdk.messaging import Messaging
     from unified_python_sdk.metadata import Metadata
@@ -344,6 +345,7 @@ class UnifiedTo(BaseSDK):
     genai: "Genai"
     agent: "Agent"
     embedding: "Embedding"
+    memory: "Memory"
     model: "Model"
     prompt: "Prompt"
     skill: "Skill"
@@ -561,6 +563,7 @@ class UnifiedTo(BaseSDK):
         "genai": ("unified_python_sdk.genai", "Genai"),
         "agent": ("unified_python_sdk.agent", "Agent"),
         "embedding": ("unified_python_sdk.embedding", "Embedding"),
+        "memory": ("unified_python_sdk.memory", "Memory"),
         "model": ("unified_python_sdk.model", "Model"),
         "prompt": ("unified_python_sdk.prompt", "Prompt"),
         "skill": ("unified_python_sdk.skill", "Skill"),

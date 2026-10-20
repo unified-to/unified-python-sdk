@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 from .commerceitemmedia import CommerceItemMedia, CommerceItemMediaTypedDict
+from .commercemetadata import CommerceMetadata, CommerceMetadataTypedDict
 from .commercetelephone import CommerceTelephone, CommerceTelephoneTypedDict
 from .property_commercelocation_address import (
     PropertyCommerceLocationAddress,
@@ -40,6 +41,7 @@ class CommerceLocationTypedDict(TypedDict):
     location_type: NotRequired[LocationType]
     longitude: NotRequired[float]
     media: NotRequired[List[CommerceItemMediaTypedDict]]
+    metadata: NotRequired[List[CommerceMetadataTypedDict]]
     name: NotRequired[str]
     parent_id: NotRequired[str]
     price_level: NotRequired[str]
@@ -79,6 +81,8 @@ class CommerceLocation(BaseModel):
     longitude: Optional[float] = None
 
     media: Optional[List[CommerceItemMedia]] = None
+
+    metadata: Optional[List[CommerceMetadata]] = None
 
     name: Optional[str] = None
 
@@ -125,6 +129,7 @@ class CommerceLocation(BaseModel):
                 "location_type",
                 "longitude",
                 "media",
+                "metadata",
                 "name",
                 "parent_id",
                 "price_level",

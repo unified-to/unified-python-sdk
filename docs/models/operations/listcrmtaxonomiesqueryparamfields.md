@@ -11,10 +11,11 @@ value = ListCrmTaxonomiesQueryParamFields.ID
 
 ## Values
 
-| Name    | Value   |
-| ------- | ------- |
-| `ID`    | id      |
-| `NAME`  | name    |
-| `LABEL` | label   |
-| `TYPE`  | type    |
-| `RAW`   | raw     |
+| Name       | Value      |
+| ---------- | ---------- |
+| `ID`       | id         |
+| `NAME`     | name       |
+| `LABEL`    | label      |
+| `TYPE`     | type       |
+| `METADATA` | metadata   |
+| `RAW`      | raw        |

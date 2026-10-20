@@ -5,6 +5,7 @@ from .accountingbalancesheetitem import (
     AccountingBalancesheetItem,
     AccountingBalancesheetItemTypedDict,
 )
+from .accountingmetadata import AccountingMetadata, AccountingMetadataTypedDict
 from datetime import datetime
 from pydantic import model_serializer
 from typing import Any, Dict, List, Optional
@@ -22,6 +23,7 @@ class AccountingBalancesheetTypedDict(TypedDict):
     equity: NotRequired[List[AccountingBalancesheetItemTypedDict]]
     id: NotRequired[str]
     liabilities: NotRequired[List[AccountingBalancesheetItemTypedDict]]
+    metadata: NotRequired[List[AccountingMetadataTypedDict]]
     name: NotRequired[str]
     net_assets_amount: NotRequired[float]
     raw: NotRequired[Dict[str, Any]]
@@ -48,6 +50,8 @@ class AccountingBalancesheet(BaseModel):
 
     liabilities: Optional[List[AccountingBalancesheetItem]] = None
 
+    metadata: Optional[List[AccountingMetadata]] = None
+
     name: Optional[str] = None
 
     net_assets_amount: Optional[float] = None
@@ -71,6 +75,7 @@ class AccountingBalancesheet(BaseModel):
                 "equity",
                 "id",
                 "liabilities",
+                "metadata",
                 "name",
                 "net_assets_amount",
                 "raw",

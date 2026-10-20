@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 from .datastorefield import DatastoreField, DatastoreFieldTypedDict
+from .datastoremetadata import DatastoreMetadata, DatastoreMetadataTypedDict
 from .datastorerelationship import DatastoreRelationship, DatastoreRelationshipTypedDict
 from datetime import datetime
 from pydantic import model_serializer
@@ -18,6 +19,7 @@ class DatastoreTableTypedDict(TypedDict):
     description: NotRequired[str]
     fields: NotRequired[List[DatastoreFieldTypedDict]]
     id: NotRequired[str]
+    metadata: NotRequired[List[DatastoreMetadataTypedDict]]
     name: NotRequired[str]
     parent_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
@@ -39,6 +41,8 @@ class DatastoreTable(BaseModel):
     fields: Optional[List[DatastoreField]] = None
 
     id: Optional[str] = None
+
+    metadata: Optional[List[DatastoreMetadata]] = None
 
     name: Optional[str] = None
 
@@ -62,6 +66,7 @@ class DatastoreTable(BaseModel):
                 "description",
                 "fields",
                 "id",
+                "metadata",
                 "name",
                 "parent_id",
                 "raw",

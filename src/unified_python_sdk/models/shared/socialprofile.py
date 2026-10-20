@@ -9,9 +9,10 @@ from .property_socialprofile_metrics import (
     PropertySocialProfileMetrics,
     PropertySocialProfileMetricsTypedDict,
 )
+from .socialmetadata import SocialMetadata, SocialMetadataTypedDict
 from datetime import datetime
 from pydantic import model_serializer
-from typing import Any, Dict, Optional
+from typing import Any, Dict, List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
@@ -35,6 +36,7 @@ class SocialProfileTypedDict(TypedDict):
     r"""Whether the profile is verified"""
     location: NotRequired[str]
     r"""Free-text location/locale string"""
+    metadata: NotRequired[List[SocialMetadataTypedDict]]
     metrics: NotRequired[PropertySocialProfileMetricsTypedDict]
     r"""Audience metrics for the profile"""
     name: NotRequired[str]
@@ -83,6 +85,8 @@ class SocialProfile(BaseModel):
     location: Optional[str] = None
     r"""Free-text location/locale string"""
 
+    metadata: Optional[List[SocialMetadata]] = None
+
     metrics: Optional[PropertySocialProfileMetrics] = None
     r"""Audience metrics for the profile"""
 
@@ -123,6 +127,7 @@ class SocialProfile(BaseModel):
                 "is_private",
                 "is_verified",
                 "location",
+                "metadata",
                 "metrics",
                 "name",
                 "parent_id",

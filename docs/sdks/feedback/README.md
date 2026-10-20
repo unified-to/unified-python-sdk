@@ -30,15 +30,16 @@ with UnifiedTo(
     res = unified_to.feedback.create_performance_feedback(request={
         "performance_feedback": {
             "created_at": parse_datetime("2023-04-11T16:21:53.862Z"),
-            "id": "e1fe0014-2bf1-4ca4-a3db-55b1d5cafc81",
+            "id": "daae710f-3a6d-49f6-853d-116dc89b72d6",
             "is_visible": True,
             "message": "Tabernus corpus voluptate aestus.",
+            "metadata": [],
             "tags": [
                 "well-to-do",
                 "hexagon",
             ],
             "type": shared.PerformanceFeedbackType.PRAISE,
-            "updated_at": parse_datetime("2025-09-02T12:16:41.178Z"),
+            "updated_at": parse_datetime("2025-09-03T06:38:20.723Z"),
             "user_id": "<id>",
         },
         "connection_id": "<id>",

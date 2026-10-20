@@ -40,6 +40,7 @@ class GetClubsEventQueryParamFields(str, Enum):
     SCORE_AGAINST = "score_against"
     IS_HOME = "is_home"
     URL = "url"
+    METADATA = "metadata"
     RAW = "raw"
 
 

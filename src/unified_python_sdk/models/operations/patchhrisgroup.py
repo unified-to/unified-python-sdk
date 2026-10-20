@@ -30,6 +30,7 @@ class PatchHrisGroupQueryParamFields(str, Enum):
     COMPANY_ID = "company_id"
     PAY_FREQUENCY = "pay_frequency"
     NEXT_PAID_AT = "next_paid_at"
+    METADATA = "metadata"
     RAW = "raw"
 
 

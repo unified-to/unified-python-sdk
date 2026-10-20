@@ -23,6 +23,7 @@ class UpdateUcCommentQueryParamFields(str, Enum):
     CONTENT = "content"
     USER_ID = "user_id"
     CALL_ID = "call_id"
+    METADATA = "metadata"
     RAW = "raw"
 
 

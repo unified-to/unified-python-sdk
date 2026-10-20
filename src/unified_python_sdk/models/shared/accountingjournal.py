@@ -6,6 +6,7 @@ from .accountingjournallineitem import (
     AccountingJournalLineitem,
     AccountingJournalLineitemTypedDict,
 )
+from .accountingmetadata import AccountingMetadata, AccountingMetadataTypedDict
 from datetime import datetime
 from enum import Enum
 from pydantic import field_serializer, model_serializer
@@ -39,6 +40,7 @@ class AccountingJournalTypedDict(TypedDict):
     r"""True when the line amounts already include tax"""
     lineitems: NotRequired[List[AccountingJournalLineitemTypedDict]]
     r"""new field name"""
+    metadata: NotRequired[List[AccountingMetadataTypedDict]]
     organization_id: NotRequired[str]
     posted_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
@@ -79,6 +81,8 @@ class AccountingJournal(BaseModel):
 
     lineitems: Optional[List[AccountingJournalLineitem]] = None
     r"""new field name"""
+
+    metadata: Optional[List[AccountingMetadata]] = None
 
     organization_id: Optional[str] = None
 
@@ -129,6 +133,7 @@ class AccountingJournal(BaseModel):
                 "id",
                 "is_inclusive_of_tax",
                 "lineitems",
+                "metadata",
                 "organization_id",
                 "posted_at",
                 "project_id",

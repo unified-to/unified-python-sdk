@@ -29,6 +29,7 @@ class GetAccountingBalancesheetQueryParamFields(str, Enum):
     ASSETS = "assets"
     LIABILITIES = "liabilities"
     EQUITY = "equity"
+    METADATA = "metadata"
     RAW = "raw"
 
 

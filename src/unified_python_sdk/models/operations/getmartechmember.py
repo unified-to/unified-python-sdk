@@ -27,6 +27,7 @@ class GetMartechMemberQueryParamFields(str, Enum):
     LIST_IDS = "list_ids"
     TAGS = "tags"
     STATUS = "status"
+    METADATA = "metadata"
     RAW = "raw"
 
 

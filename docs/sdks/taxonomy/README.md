@@ -30,20 +30,21 @@ with UnifiedTo(
 
     res = unified_to.taxonomy.create_hris_taxonomy(request={
         "hris_taxonomy": {
-            "created_at": parse_datetime("2022-06-23T02:10:00.789Z"),
-            "description": "Apto demonstro audacia adstringo cursim tristis solio careo.",
-            "domain": "Electronics",
-            "id": "ede085db-5709-4d53-a490-746f3de5be17",
-            "is_active": False,
-            "name": "International Functionality Architect",
-            "parent_id": "6524b2a7-6520-4e15-8c4e-1aa6793db837",
-            "role_ids": [
-                "2b1ef757-eb4c-4207-8af1-929afe49cd65",
+            "alternative_names": [
+                "Facilitator",
+                "National",
             ],
-            "subcategory": "Bamboo",
+            "created_at": parse_datetime("2022-06-23T02:10:00.789Z"),
+            "description": "Uterque vespillo adnuo ea commodo turbo suscipio condico.",
+            "domain": "Health",
+            "id": "850b63ec-634d-41eb-bab1-532ac5fb89a4",
+            "is_active": False,
+            "metadata": [],
+            "name": "International Functionality Architect",
+            "subcategory": "Marble",
             "type": shared.HrisTaxonomyType.KNOWLEDGE,
-            "updated_at": parse_datetime("2023-05-28T19:20:12.117Z"),
-            "url": "https://our-polarisation.name",
+            "updated_at": parse_datetime("2023-05-29T01:08:42.082Z"),
+            "url": "https://fixed-membership.biz/",
         },
         "connection_id": "<id>",
     })

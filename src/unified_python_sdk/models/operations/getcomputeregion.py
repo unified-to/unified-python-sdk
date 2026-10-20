@@ -23,6 +23,7 @@ class GetComputeRegionQueryParamFields(str, Enum):
     LOCATION = "location"
     COUNTRY = "country"
     GPU_MODELS = "gpu_models"
+    METADATA = "metadata"
     RAW = "raw"
 
 

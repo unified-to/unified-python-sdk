@@ -21,3 +21,4 @@ value = ListSigningTemplatesQueryParamFields.ID
 | `IS_ACTIVE`   | is_active     |
 | `CREATOR_ID`  | creator_id    |
 | `RAW`         | raw           |
+| `METADATA`    | metadata      |

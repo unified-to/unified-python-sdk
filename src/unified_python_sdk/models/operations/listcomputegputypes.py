@@ -31,6 +31,7 @@ class ListComputeGputypesQueryParamFields(str, Enum):
     ARCHITECTURE = "architecture"
     PRICES = "prices"
     AVAILABILITY = "availability"
+    METADATA = "metadata"
     RAW = "raw"
 
 

@@ -24,6 +24,7 @@ class PatchDatastoreRecordQueryParamFields(str, Enum):
     TABLE_ID = "table_id"
     FIELDS = "fields"
     ROW_NUMBER = "row_number"
+    METADATA = "metadata"
     RAW = "raw"
 
 

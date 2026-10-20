@@ -208,6 +208,8 @@ value = PropertyConnectionPermissions.ACCOUNTING_ACCOUNT_READ
 | `GENAI_ORGANIZATION_WRITE`             | genai_organization_write               |
 | `GENAI_SKILL_READ`                     | genai_skill_read                       |
 | `GENAI_SKILL_WRITE`                    | genai_skill_write                      |
+| `GENAI_MEMORY_READ`                    | genai_memory_read                      |
+| `GENAI_MEMORY_WRITE`                   | genai_memory_write                     |
 | `MESSAGING_MESSAGE_READ`               | messaging_message_read                 |
 | `MESSAGING_MESSAGE_WRITE`              | messaging_message_write                |
 | `MESSAGING_CHANNEL_READ`               | messaging_channel_read                 |

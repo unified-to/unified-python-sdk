@@ -21,6 +21,7 @@ class CreateDatastoreQueryQueryParamFields(str, Enum):
     DATABASE_ID = "database_id"
     QUERY = "query"
     RESPONSE = "response"
+    METADATA = "metadata"
     RAW = "raw"
 
 

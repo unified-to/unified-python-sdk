@@ -21,6 +21,7 @@ class ListAtsApplicationstatusesQueryParamFields(str, Enum):
     STATUS = "status"
     ORIGINAL_STATUS = "original_status"
     DESCRIPTION = "description"
+    METADATA = "metadata"
     RAW = "raw"
 
 

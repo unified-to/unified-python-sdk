@@ -24,4 +24,5 @@ value = ListAtsScorecardsQueryParamFields.ID
 | `RECOMMENDATION` | recommendation   |
 | `COMMENT`        | comment          |
 | `QUESTIONS`      | questions        |
+| `METADATA`       | metadata         |
 | `RAW`            | raw              |

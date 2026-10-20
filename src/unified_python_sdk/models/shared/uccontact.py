@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 from .ucemail import UcEmail, UcEmailTypedDict
+from .ucmetadata import UcMetadata, UcMetadataTypedDict
 from .uctelephone import UcTelephone, UcTelephoneTypedDict
 from datetime import datetime
 from pydantic import model_serializer
@@ -23,6 +24,7 @@ class UcContactTypedDict(TypedDict):
     id: NotRequired[str]
     r"""Unique identifier for this contact object"""
     last_name: NotRequired[str]
+    metadata: NotRequired[List[UcMetadataTypedDict]]
     name: NotRequired[str]
     r"""The name of the contact"""
     raw: NotRequired[Dict[str, Any]]
@@ -54,6 +56,8 @@ class UcContact(BaseModel):
 
     last_name: Optional[str] = None
 
+    metadata: Optional[List[UcMetadata]] = None
+
     name: Optional[str] = None
     r"""The name of the contact"""
 
@@ -79,6 +83,7 @@ class UcContact(BaseModel):
                 "first_name",
                 "id",
                 "last_name",
+                "metadata",
                 "name",
                 "raw",
                 "telephones",

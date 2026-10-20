@@ -34,8 +34,9 @@ with UnifiedTo(
         "ticketing_note": {
             "created_at": parse_datetime("2019-07-23T15:05:03.241Z"),
             "description": "Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.",
-            "id": "fdd5c2ec-73fe-4282-9eb2-45ea6dcc5410",
-            "updated_at": parse_datetime("2024-09-27T14:31:54.515Z"),
+            "id": "b7f4dd80-2457-45cf-83f5-96fec0537f70",
+            "metadata": [],
+            "updated_at": parse_datetime("2024-09-28T09:51:17.183Z"),
         },
         "connection_id": "<id>",
     })
@@ -180,8 +181,9 @@ with UnifiedTo(
         "ticketing_note": {
             "created_at": parse_datetime("2019-07-23T15:05:03.241Z"),
             "description": "Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.",
-            "id": "e9fdfba7-a607-4781-af45-f066994cc39b",
-            "updated_at": parse_datetime("2024-09-27T14:31:54.518Z"),
+            "id": "c1476405-3ecd-4c00-9d8a-800813552c59",
+            "metadata": [],
+            "updated_at": parse_datetime("2024-09-28T09:51:17.188Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -281,8 +283,9 @@ with UnifiedTo(
         "ticketing_note": {
             "created_at": parse_datetime("2019-07-23T15:05:03.241Z"),
             "description": "Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.",
-            "id": "e9fdfba7-a607-4781-af45-f066994cc39b",
-            "updated_at": parse_datetime("2024-09-27T14:31:54.518Z"),
+            "id": "c1476405-3ecd-4c00-9d8a-800813552c59",
+            "metadata": [],
+            "updated_at": parse_datetime("2024-09-28T09:51:17.188Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

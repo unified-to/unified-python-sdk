@@ -20,4 +20,5 @@ value = GetFormsSubmissionQueryParamFields.ID
 | `RESPONDENT_EMAIL` | respondent_email   |
 | `RESPONDENT_NAME`  | respondent_name    |
 | `ANSWERS`          | answers            |
+| `METADATA`         | metadata           |
 | `RAW`              | raw                |

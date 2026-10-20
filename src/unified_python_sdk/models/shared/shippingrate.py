@@ -9,6 +9,7 @@ from .property_shippingrate_to_address import (
     PropertyShippingRateToAddress,
     PropertyShippingRateToAddressTypedDict,
 )
+from .shippingmetadata import ShippingMetadata, ShippingMetadataTypedDict
 from .shippingpackage import ShippingPackage, ShippingPackageTypedDict
 from .shippingraterate import ShippingRateRate, ShippingRateRateTypedDict
 from datetime import datetime
@@ -26,6 +27,7 @@ class ShippingRateTypedDict(TypedDict):
     r"""Origin address"""
     id: NotRequired[str]
     r"""Unique identifier for this rate object"""
+    metadata: NotRequired[List[ShippingMetadataTypedDict]]
     packages: NotRequired[List[ShippingPackageTypedDict]]
     r"""Multiple packages (alternative to package)"""
     rates: NotRequired[List[ShippingRateRateTypedDict]]
@@ -49,6 +51,8 @@ class ShippingRate(BaseModel):
 
     id: Optional[str] = None
     r"""Unique identifier for this rate object"""
+
+    metadata: Optional[List[ShippingMetadata]] = None
 
     packages: Optional[List[ShippingPackage]] = None
     r"""Multiple packages (alternative to package)"""
@@ -74,6 +78,7 @@ class ShippingRate(BaseModel):
                 "currency",
                 "from_address",
                 "id",
+                "metadata",
                 "packages",
                 "rates",
                 "raw",

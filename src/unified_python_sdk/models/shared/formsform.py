@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 from .formfield import FormField, FormFieldTypedDict
+from .formsmetadata import FormsMetadata, FormsMetadataTypedDict
 from datetime import datetime
 from pydantic import model_serializer
 from typing import Any, Dict, List, Optional
@@ -21,6 +22,7 @@ class FormsFormTypedDict(TypedDict):
     has_shuffle_questions: NotRequired[bool]
     id: NotRequired[str]
     is_active: NotRequired[bool]
+    metadata: NotRequired[List[FormsMetadataTypedDict]]
     name: NotRequired[str]
     published_url: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
@@ -51,6 +53,8 @@ class FormsForm(BaseModel):
 
     is_active: Optional[bool] = None
 
+    metadata: Optional[List[FormsMetadata]] = None
+
     name: Optional[str] = None
 
     published_url: Optional[str] = None
@@ -76,6 +80,7 @@ class FormsForm(BaseModel):
                 "has_shuffle_questions",
                 "id",
                 "is_active",
+                "metadata",
                 "name",
                 "published_url",
                 "raw",

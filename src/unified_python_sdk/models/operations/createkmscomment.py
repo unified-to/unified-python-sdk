@@ -26,6 +26,7 @@ class CreateKmsCommentQueryParamFields(str, Enum):
     USER_ID = "user_id"
     PAGE_ID = "page_id"
     PARENT_ID = "parent_id"
+    METADATA = "metadata"
     RAW = "raw"
 
 

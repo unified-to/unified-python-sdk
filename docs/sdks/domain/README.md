@@ -33,11 +33,12 @@ with UnifiedTo(
     res = unified_to.domain.create_compute_domain(request={
         "compute_domain": {
             "created_at": parse_datetime("2019-11-22T16:38:26.009Z"),
-            "id": "81df76b8-1dab-43c9-b0fc-c817cca4a57c",
+            "id": "a49a8ba5-0d93-4399-a35f-9f49f01b9a8b",
             "is_primary": False,
+            "metadata": [],
             "name": "mysterious-republican.usable-section.info",
             "status": shared.ComputeDomainStatus.PENDING,
-            "updated_at": parse_datetime("2023-11-02T07:07:49.695Z"),
+            "updated_at": parse_datetime("2023-11-02T22:32:52.104Z"),
         },
         "connection_id": "<id>",
     })
@@ -181,11 +182,12 @@ with UnifiedTo(
     res = unified_to.domain.patch_compute_domain(request={
         "compute_domain": {
             "created_at": parse_datetime("2019-11-22T16:38:26.009Z"),
-            "id": "e686a838-00bb-40bb-a0d1-a68f563aad41",
+            "id": "c78ad1ca-9a25-4162-a3a8-cd0936135b12",
             "is_primary": False,
+            "metadata": [],
             "name": "mysterious-republican.usable-section.info",
             "status": shared.ComputeDomainStatus.PENDING,
-            "updated_at": parse_datetime("2023-11-02T07:07:49.699Z"),
+            "updated_at": parse_datetime("2023-11-02T22:32:52.111Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -284,11 +286,12 @@ with UnifiedTo(
     res = unified_to.domain.update_compute_domain(request={
         "compute_domain": {
             "created_at": parse_datetime("2019-11-22T16:38:26.009Z"),
-            "id": "e686a838-00bb-40bb-a0d1-a68f563aad41",
+            "id": "c78ad1ca-9a25-4162-a3a8-cd0936135b12",
             "is_primary": False,
+            "metadata": [],
             "name": "mysterious-republican.usable-section.info",
             "status": shared.ComputeDomainStatus.PENDING,
-            "updated_at": parse_datetime("2023-11-02T07:07:49.699Z"),
+            "updated_at": parse_datetime("2023-11-02T22:32:52.111Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

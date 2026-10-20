@@ -23,4 +23,5 @@ value = CreateLmsClassQueryParamFields.ID
 | `LANGUAGES`   | languages     |
 | `INSTRUCTORS` | instructors   |
 | `STUDENTS`    | students      |
+| `METADATA`    | metadata      |
 | `RAW`         | raw           |

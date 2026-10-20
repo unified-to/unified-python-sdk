@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 from .accountingagedperiod import AccountingAgedPeriod, AccountingAgedPeriodTypedDict
+from .accountingmetadata import AccountingMetadata, AccountingMetadataTypedDict
 from datetime import datetime
 from pydantic import model_serializer
 from typing import Any, Dict, List, Optional
@@ -18,6 +19,7 @@ class AccountingAgedreceivableTypedDict(TypedDict):
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
     r"""synthetic, one row per currency / date window"""
+    metadata: NotRequired[List[AccountingMetadataTypedDict]]
     organization_id: NotRequired[str]
     periods: NotRequired[List[AccountingAgedPeriodTypedDict]]
     raw: NotRequired[Dict[str, Any]]
@@ -44,6 +46,8 @@ class AccountingAgedreceivable(BaseModel):
 
     id: Optional[str] = None
     r"""synthetic, one row per currency / date window"""
+
+    metadata: Optional[List[AccountingMetadata]] = None
 
     organization_id: Optional[str] = None
 
@@ -73,6 +77,7 @@ class AccountingAgedreceivable(BaseModel):
                 "currency",
                 "end_at",
                 "id",
+                "metadata",
                 "organization_id",
                 "periods",
                 "raw",

@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 from .verificationaddress import VerificationAddress, VerificationAddressTypedDict
+from .verificationmetadata import VerificationMetadata, VerificationMetadataTypedDict
 from .verificationparameterinput import (
     VerificationParameterInput,
     VerificationParameterInputTypedDict,
@@ -43,6 +44,7 @@ class VerificationRequestTypedDict(TypedDict):
     created_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
+    metadata: NotRequired[List[VerificationMetadataTypedDict]]
     package_id: NotRequired[str]
     parameters: NotRequired[List[VerificationParameterInputTypedDict]]
     profile_addresses: NotRequired[List[VerificationAddressTypedDict]]
@@ -85,6 +87,8 @@ class VerificationRequest(BaseModel):
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     id: Optional[str] = None
+
+    metadata: Optional[List[VerificationMetadata]] = None
 
     package_id: Optional[str] = None
 
@@ -165,6 +169,7 @@ class VerificationRequest(BaseModel):
                 "candidate_id",
                 "created_at",
                 "id",
+                "metadata",
                 "package_id",
                 "parameters",
                 "profile_addresses",

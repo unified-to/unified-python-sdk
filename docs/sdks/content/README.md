@@ -39,14 +39,8 @@ with UnifiedTo(
             "description": "Usque laboriosam ventosus adflicto.",
             "difficulty": "Beginner",
             "duration_minutes": 19.0,
-            "external_reference": "0d230e31-a9c4-4a35-a5b9-9168e91ffff5",
-            "id": "9b672da9-93fb-4506-824f-896a6119c252",
-            "instructors": [
-                {
-                    "id": "91a23b20-a7a3-4323-9548-0897c09eb49e",
-                    "name": "Winston Ferry",
-                },
-            ],
+            "id": "35aef03d-c088-46eb-bd39-c4c8e07344e0",
+            "instructors": [],
             "is_active": True,
             "languages": [
                 "despecto",
@@ -54,14 +48,14 @@ with UnifiedTo(
             ],
             "localizations": [
                 {
-                    "description": "Numquam.",
+                    "description": "Acervus.",
                     "language": "es",
-                    "name": "validus",
+                    "name": "talis",
                 },
                 {
-                    "description": "Callide.",
-                    "language": "fr",
-                    "name": "crux",
+                    "description": "Ratione.",
+                    "language": "es",
+                    "name": "sint",
                 },
             ],
             "media": [
@@ -102,10 +96,11 @@ with UnifiedTo(
                     "url": "https://loremflickr.com/3927/2086?lock=5199784913821481",
                 },
             ],
+            "metadata": [],
             "name": "ut",
-            "provider_name": "Berge LLC",
-            "published_at": parse_datetime("2023-11-08T11:32:09.080Z"),
-            "short_description": "Commemoro.",
+            "provider_name": "Bins LLC",
+            "published_at": parse_datetime("2022-09-02T21:15:04.034Z"),
+            "short_description": "Caritas.",
             "skills": [
                 "trucido",
             ],
@@ -119,7 +114,7 @@ with UnifiedTo(
             "tags": [
                 "dens",
             ],
-            "updated_at": parse_datetime("2022-10-03T10:20:30.942Z"),
+            "updated_at": parse_datetime("2022-10-03T19:06:40.663Z"),
         },
         "connection_id": "<id>",
     })
@@ -269,14 +264,8 @@ with UnifiedTo(
             "description": "Usque laboriosam ventosus adflicto.",
             "difficulty": "Beginner",
             "duration_minutes": 19.0,
-            "external_reference": "0d230e31-a9c4-4a35-a5b9-9168e91ffff5",
-            "id": "b104e256-3002-4d7d-831a-d91716393e38",
-            "instructors": [
-                {
-                    "id": "91a23b20-a7a3-4323-9548-0897c09eb49e",
-                    "name": "Winston Ferry",
-                },
-            ],
+            "id": "7d82d051-c431-44dd-bda9-e36dec98b1b3",
+            "instructors": [],
             "is_active": True,
             "languages": [
                 "despecto",
@@ -284,14 +273,14 @@ with UnifiedTo(
             ],
             "localizations": [
                 {
-                    "description": "Numquam.",
+                    "description": "Acervus.",
                     "language": "es",
-                    "name": "validus",
+                    "name": "talis",
                 },
                 {
-                    "description": "Callide.",
-                    "language": "fr",
-                    "name": "crux",
+                    "description": "Ratione.",
+                    "language": "es",
+                    "name": "sint",
                 },
             ],
             "media": [
@@ -332,10 +321,11 @@ with UnifiedTo(
                     "url": "https://loremflickr.com/3927/2086?lock=5199784913821481",
                 },
             ],
+            "metadata": [],
             "name": "ut",
-            "provider_name": "Berge LLC",
-            "published_at": parse_datetime("2023-11-08T11:32:09.080Z"),
-            "short_description": "Commemoro.",
+            "provider_name": "Bins LLC",
+            "published_at": parse_datetime("2022-09-02T21:15:04.040Z"),
+            "short_description": "Caritas.",
             "skills": [
                 "trucido",
             ],
@@ -349,7 +339,7 @@ with UnifiedTo(
             "tags": [
                 "dens",
             ],
-            "updated_at": parse_datetime("2022-10-03T10:20:30.948Z"),
+            "updated_at": parse_datetime("2022-10-03T19:06:40.670Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -454,14 +444,8 @@ with UnifiedTo(
             "description": "Usque laboriosam ventosus adflicto.",
             "difficulty": "Beginner",
             "duration_minutes": 19.0,
-            "external_reference": "0d230e31-a9c4-4a35-a5b9-9168e91ffff5",
-            "id": "b104e256-3002-4d7d-831a-d91716393e38",
-            "instructors": [
-                {
-                    "id": "91a23b20-a7a3-4323-9548-0897c09eb49e",
-                    "name": "Winston Ferry",
-                },
-            ],
+            "id": "7d82d051-c431-44dd-bda9-e36dec98b1b3",
+            "instructors": [],
             "is_active": True,
             "languages": [
                 "despecto",
@@ -469,14 +453,14 @@ with UnifiedTo(
             ],
             "localizations": [
                 {
-                    "description": "Numquam.",
+                    "description": "Acervus.",
                     "language": "es",
-                    "name": "validus",
+                    "name": "talis",
                 },
                 {
-                    "description": "Callide.",
-                    "language": "fr",
-                    "name": "crux",
+                    "description": "Ratione.",
+                    "language": "es",
+                    "name": "sint",
                 },
             ],
             "media": [
@@ -517,10 +501,11 @@ with UnifiedTo(
                     "url": "https://loremflickr.com/3927/2086?lock=5199784913821481",
                 },
             ],
+            "metadata": [],
             "name": "ut",
-            "provider_name": "Berge LLC",
-            "published_at": parse_datetime("2023-11-08T11:32:09.080Z"),
-            "short_description": "Commemoro.",
+            "provider_name": "Bins LLC",
+            "published_at": parse_datetime("2022-09-02T21:15:04.040Z"),
+            "short_description": "Caritas.",
             "skills": [
                 "trucido",
             ],
@@ -534,7 +519,7 @@ with UnifiedTo(
             "tags": [
                 "dens",
             ],
-            "updated_at": parse_datetime("2022-10-03T10:20:30.948Z"),
+            "updated_at": parse_datetime("2022-10-03T19:06:40.670Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

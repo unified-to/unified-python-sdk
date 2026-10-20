@@ -46,6 +46,7 @@ class PatchAccountingContactQueryParamFields(str, Enum):
     BALANCE_AMOUNT = "balance_amount"
     WEBSITE = "website"
     NOTES = "notes"
+    METADATA = "metadata"
     RAW = "raw"
 
 

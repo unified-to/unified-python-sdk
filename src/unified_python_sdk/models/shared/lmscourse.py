@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 from .lmsmedia import LmsMedia, LmsMediaTypedDict
+from .lmsmetadata import LmsMetadata, LmsMetadataTypedDict
 from .lmsreference import LmsReference, LmsReferenceTypedDict
 from datetime import datetime
 from pydantic import model_serializer
@@ -25,6 +26,7 @@ class LmsCourseTypedDict(TypedDict):
     is_private: NotRequired[bool]
     languages: NotRequired[List[str]]
     media: NotRequired[List[LmsMediaTypedDict]]
+    metadata: NotRequired[List[LmsMetadataTypedDict]]
     name: NotRequired[str]
     price_amount: NotRequired[float]
     r"""How much the course costs"""
@@ -66,6 +68,8 @@ class LmsCourse(BaseModel):
 
     media: Optional[List[LmsMedia]] = None
 
+    metadata: Optional[List[LmsMetadata]] = None
+
     name: Optional[str] = None
 
     price_amount: Optional[float] = None
@@ -103,6 +107,7 @@ class LmsCourse(BaseModel):
                 "is_private",
                 "languages",
                 "media",
+                "metadata",
                 "name",
                 "price_amount",
                 "provider_name",

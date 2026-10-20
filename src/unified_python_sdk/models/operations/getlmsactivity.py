@@ -28,6 +28,7 @@ class GetLmsActivityQueryParamFields(str, Enum):
     PROGRESS_PERCENTAGE = "progress_percentage"
     STARTED_AT = "started_at"
     COMPLETED_AT = "completed_at"
+    METADATA = "metadata"
     RAW = "raw"
 
 

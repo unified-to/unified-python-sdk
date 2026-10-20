@@ -33,6 +33,7 @@ class CreateAdsInsertionorderQueryParamFields(str, Enum):
     BUDGET_SEGMENTS = "budget_segments"
     BID_STRATEGY = "bid_strategy"
     REFERENCE = "reference"
+    METADATA = "metadata"
     RAW = "raw"
 
 

@@ -4,6 +4,7 @@ from __future__ import annotations
 from .messagingattachment import MessagingAttachment, MessagingAttachmentTypedDict
 from .messagingbutton import MessagingButton, MessagingButtonTypedDict
 from .messagingmember import MessagingMember, MessagingMemberTypedDict
+from .messagingmetadata import MessagingMetadata, MessagingMetadataTypedDict
 from .messagingreaction import MessagingReaction, MessagingReactionTypedDict
 from .messagingreference import MessagingReference, MessagingReferenceTypedDict
 from .property_messagingmessage_author_member import (
@@ -40,6 +41,7 @@ class MessagingMessageTypedDict(TypedDict):
     message_markdown: NotRequired[str]
     message_thread_identifier: NotRequired[str]
     r"""the opaque identifier for the first message in a thread"""
+    metadata: NotRequired[List[MessagingMetadataTypedDict]]
     parent_id: NotRequired[str]
     r"""Represents the ID of the immediate predecessor message in the thread. Identifies a specific message to which the current message directly replies."""
     raw: NotRequired[Dict[str, Any]]
@@ -90,6 +92,8 @@ class MessagingMessage(BaseModel):
     message_thread_identifier: Optional[str] = None
     r"""the opaque identifier for the first message in a thread"""
 
+    metadata: Optional[List[MessagingMetadata]] = None
+
     parent_id: Optional[str] = None
     r"""Represents the ID of the immediate predecessor message in the thread. Identifies a specific message to which the current message directly replies."""
 
@@ -126,6 +130,7 @@ class MessagingMessage(BaseModel):
                 "message_html",
                 "message_markdown",
                 "message_thread_identifier",
+                "metadata",
                 "parent_id",
                 "raw",
                 "reactions",

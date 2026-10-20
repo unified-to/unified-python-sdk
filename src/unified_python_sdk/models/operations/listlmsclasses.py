@@ -26,6 +26,7 @@ class ListLmsClassesQueryParamFields(str, Enum):
     LANGUAGES = "languages"
     INSTRUCTORS = "instructors"
     STUDENTS = "students"
+    METADATA = "metadata"
     RAW = "raw"
 
 

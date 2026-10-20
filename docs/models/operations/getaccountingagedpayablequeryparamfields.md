@@ -24,4 +24,5 @@ value = GetAccountingAgedpayableQueryParamFields.ID
 | `TOTAL_AMOUNT`         | total_amount           |
 | `PERIODS`              | periods                |
 | `ORGANIZATION_ID`      | organization_id        |
+| `METADATA`             | metadata               |
 | `RAW`                  | raw                    |

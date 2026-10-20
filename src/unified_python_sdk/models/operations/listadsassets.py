@@ -28,6 +28,7 @@ class ListAdsAssetsQueryParamFields(str, Enum):
     WIDTH = "width"
     HEIGHT = "height"
     FILE_SIZE = "file_size"
+    METADATA = "metadata"
     RAW = "raw"
 
 

@@ -29,6 +29,7 @@ class GetAccountingAgedreceivableQueryParamFields(str, Enum):
     TOTAL_AMOUNT = "total_amount"
     PERIODS = "periods"
     ORGANIZATION_ID = "organization_id"
+    METADATA = "metadata"
     RAW = "raw"
 
 

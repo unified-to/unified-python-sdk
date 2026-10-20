@@ -21,6 +21,7 @@ from .property_shippingshipment_to_address import (
     PropertyShippingShipmentToAddress,
     PropertyShippingShipmentToAddressTypedDict,
 )
+from .shippingmetadata import ShippingMetadata, ShippingMetadataTypedDict
 from .shippingpackage import ShippingPackage, ShippingPackageTypedDict
 from .shippingshipmentlineitem import (
     ShippingShipmentLineitem,
@@ -94,6 +95,7 @@ class ShippingShipmentTypedDict(TypedDict):
     r"""Optional reference to the shipping label"""
     lineitems: NotRequired[List[ShippingShipmentLineitemTypedDict]]
     r"""Item-level fulfillment lines (what shipped); used by commerce-platform fulfillments"""
+    metadata: NotRequired[List[ShippingMetadataTypedDict]]
     order_id: NotRequired[str]
     r"""Reference to commerce_order or accounting_order"""
     organization_id: NotRequired[str]
@@ -190,6 +192,8 @@ class ShippingShipment(BaseModel):
 
     lineitems: Optional[List[ShippingShipmentLineitem]] = None
     r"""Item-level fulfillment lines (what shipped); used by commerce-platform fulfillments"""
+
+    metadata: Optional[List[ShippingMetadata]] = None
 
     order_id: Optional[str] = None
     r"""Reference to commerce_order or accounting_order"""
@@ -305,6 +309,7 @@ class ShippingShipment(BaseModel):
                 "is_signature_required",
                 "label_id",
                 "lineitems",
+                "metadata",
                 "order_id",
                 "organization_id",
                 "original_shipment_id",

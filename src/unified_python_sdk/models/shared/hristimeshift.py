@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 from .hriscompensation import HrisCompensation, HrisCompensationTypedDict
+from .hrismetadata import HrisMetadata, HrisMetadataTypedDict
 from datetime import datetime
 from pydantic import model_serializer
 from typing import Any, Dict, List, Optional
@@ -30,6 +31,7 @@ class HrisTimeshiftTypedDict(TypedDict):
     is_approved: NotRequired[bool]
     location_id: NotRequired[str]
     r"""(reference to HrisLocation)"""
+    metadata: NotRequired[List[HrisMetadataTypedDict]]
     raw: NotRequired[Dict[str, Any]]
     start_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
@@ -70,6 +72,8 @@ class HrisTimeshift(BaseModel):
     location_id: Optional[str] = None
     r"""(reference to HrisLocation)"""
 
+    metadata: Optional[List[HrisMetadata]] = None
+
     raw: Optional[Dict[str, Any]] = None
 
     start_at: Optional[datetime] = None
@@ -93,6 +97,7 @@ class HrisTimeshift(BaseModel):
                 "id",
                 "is_approved",
                 "location_id",
+                "metadata",
                 "raw",
                 "start_at",
                 "updated_at",

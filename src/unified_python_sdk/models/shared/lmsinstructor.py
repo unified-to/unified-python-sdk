@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 from .lmsemail import LmsEmail, LmsEmailTypedDict
+from .lmsmetadata import LmsMetadata, LmsMetadataTypedDict
 from .lmstelephone import LmsTelephone, LmsTelephoneTypedDict
 from datetime import datetime
 from pydantic import model_serializer
@@ -18,6 +19,7 @@ class LmsInstructorTypedDict(TypedDict):
     id: NotRequired[str]
     image_url: NotRequired[str]
     last_name: NotRequired[str]
+    metadata: NotRequired[List[LmsMetadataTypedDict]]
     name: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     telephones: NotRequired[List[LmsTelephoneTypedDict]]
@@ -40,6 +42,8 @@ class LmsInstructor(BaseModel):
 
     last_name: Optional[str] = None
 
+    metadata: Optional[List[LmsMetadata]] = None
+
     name: Optional[str] = None
 
     raw: Optional[Dict[str, Any]] = None
@@ -61,6 +65,7 @@ class LmsInstructor(BaseModel):
                 "id",
                 "image_url",
                 "last_name",
+                "metadata",
                 "name",
                 "raw",
                 "telephones",

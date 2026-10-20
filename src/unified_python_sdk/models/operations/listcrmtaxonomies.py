@@ -20,6 +20,7 @@ class ListCrmTaxonomiesQueryParamFields(str, Enum):
     NAME = "name"
     LABEL = "label"
     TYPE = "type"
+    METADATA = "metadata"
     RAW = "raw"
 
 

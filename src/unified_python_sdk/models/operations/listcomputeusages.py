@@ -27,6 +27,7 @@ class ListComputeUsagesQueryParamFields(str, Enum):
     UNIT = "unit"
     COST_AMOUNT = "cost_amount"
     CURRENCY = "currency"
+    METADATA = "metadata"
     RAW = "raw"
 
 

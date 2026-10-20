@@ -26,6 +26,7 @@ class ListClubsLocationsQueryParamFields(str, Enum):
     LONGITUDE = "longitude"
     TELEPHONE = "telephone"
     URL = "url"
+    METADATA = "metadata"
     RAW = "raw"
 
 

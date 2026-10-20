@@ -5,6 +5,7 @@ from .accountingcashflowsection import (
     AccountingCashflowSection,
     AccountingCashflowSectionTypedDict,
 )
+from .accountingmetadata import AccountingMetadata, AccountingMetadataTypedDict
 from datetime import datetime
 from pydantic import model_serializer
 from typing import Any, Dict, List, Optional
@@ -31,6 +32,7 @@ class AccountingCashflowTypedDict(TypedDict):
     financing_sections: NotRequired[List[AccountingCashflowSectionTypedDict]]
     id: NotRequired[str]
     investing_sections: NotRequired[List[AccountingCashflowSectionTypedDict]]
+    metadata: NotRequired[List[AccountingMetadataTypedDict]]
     name: NotRequired[str]
     r"""e.g. \"Cash Flow Statement Q1 2020\" """
     net_change_in_cash_amount: NotRequired[float]
@@ -73,6 +75,8 @@ class AccountingCashflow(BaseModel):
 
     investing_sections: Optional[List[AccountingCashflowSection]] = None
 
+    metadata: Optional[List[AccountingMetadata]] = None
+
     name: Optional[str] = None
     r"""e.g. \"Cash Flow Statement Q1 2020\" """
 
@@ -104,6 +108,7 @@ class AccountingCashflow(BaseModel):
                 "financing_sections",
                 "id",
                 "investing_sections",
+                "metadata",
                 "name",
                 "net_change_in_cash_amount",
                 "operating_sections",

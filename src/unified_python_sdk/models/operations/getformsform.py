@@ -30,6 +30,7 @@ class GetFormsFormQueryParamFields(str, Enum):
     HAS_SHUFFLE_QUESTIONS = "has_shuffle_questions"
     CONFIRMATION_MESSAGE = "confirmation_message"
     CONFIRMATION_REDIRECT_URL = "confirmation_redirect_url"
+    METADATA = "metadata"
     RAW = "raw"
 
 

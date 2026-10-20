@@ -10,6 +10,7 @@ from .property_socialpost_metrics import (
     PropertySocialPostMetricsTypedDict,
 )
 from .socialmedia import SocialMedia, SocialMediaTypedDict
+from .socialmetadata import SocialMetadata, SocialMetadataTypedDict
 from datetime import datetime
 from enum import Enum
 from pydantic import field_serializer, model_serializer
@@ -59,6 +60,7 @@ class SocialPostTypedDict(TypedDict):
     r"""Language code of the post content"""
     media: NotRequired[List[SocialMediaTypedDict]]
     r"""Media assets attached to the post"""
+    metadata: NotRequired[List[SocialMetadataTypedDict]]
     metrics: NotRequired[PropertySocialPostMetricsTypedDict]
     r"""Engagement metrics for the post"""
     parent_post_id: NotRequired[str]
@@ -99,6 +101,8 @@ class SocialPost(BaseModel):
 
     media: Optional[List[SocialMedia]] = None
     r"""Media assets attached to the post"""
+
+    metadata: Optional[List[SocialMetadata]] = None
 
     metrics: Optional[PropertySocialPostMetrics] = None
     r"""Engagement metrics for the post"""
@@ -158,6 +162,7 @@ class SocialPost(BaseModel):
                 "id",
                 "language",
                 "media",
+                "metadata",
                 "metrics",
                 "parent_post_id",
                 "profile_id",

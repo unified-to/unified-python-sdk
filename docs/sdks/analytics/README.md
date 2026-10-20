@@ -46,12 +46,13 @@ with UnifiedTo(
         "analytics_event": {
             "created_at": parse_datetime("2023-06-21T03:13:22.954Z"),
             "event_type": shared.EventType.SCREEN_VIEW,
-            "id": "c03aa7cf-79e9-42ae-8bad-881e89048a18",
+            "id": "89996b20-17f6-4368-b841-ae9bef4fae41",
             "metadata": {
                 "key": {},
             },
-            "name": "Xk707ttsb51v",
-            "updated_at": parse_datetime("2023-09-24T11:58:48.234Z"),
+            "name": "page_view",
+            "page_url": "https://golden-carboxyl.biz",
+            "updated_at": parse_datetime("2023-09-24T14:05:51.351Z"),
         },
         "connection_id": "<id>",
     })
@@ -103,10 +104,10 @@ with UnifiedTo(
         "analytics_property": {
             "created_at": parse_datetime("2021-09-05T19:04:58.430Z"),
             "currency": "USD",
-            "id": "f17355a8-f25f-4309-a227-e6e9c5db545f",
+            "id": "02d6611a-4b8b-4ead-9081-04cd0153f091",
             "name": "Daniel, Goldner and Dickinson",
             "timezone": "UTC",
-            "updated_at": parse_datetime("2021-09-14T20:10:00.185Z"),
+            "updated_at": parse_datetime("2021-09-14T20:17:50.453Z"),
         },
         "connection_id": "<id>",
     })
@@ -157,16 +158,15 @@ with UnifiedTo(
     res = unified_to.analytics.create_analytics_visitor(request={
         "analytics_visitor": {
             "created_at": parse_datetime("2020-04-16T20:29:48.281Z"),
-            "email": "Dallas_Mitchell@yahoo.com",
+            "email": "desiree.o.hara@icloud.com",
             "first_seen_at": parse_datetime("2020-04-16T20:29:48.281Z"),
-            "id": "2596b693-9269-452c-b2ed-1ce798a58753",
-            "last_seen_at": parse_datetime("2021-12-12T13:28:16.032Z"),
+            "id": "017c7a7a-6ee1-4e5d-ba12-a0c5c64cd75b",
+            "last_seen_at": parse_datetime("2025-01-10T10:19:21.620Z"),
             "metadata": {
                 "segment": {},
             },
-            "name": "Desiree O'Hara",
-            "total_events": 3639.0,
-            "updated_at": parse_datetime("2025-06-27T20:24:02.361Z"),
+            "total_events": 2916.0,
+            "updated_at": parse_datetime("2025-06-28T17:57:45.358Z"),
         },
         "connection_id": "<id>",
     })
@@ -636,10 +636,10 @@ with UnifiedTo(
         "analytics_property": {
             "created_at": parse_datetime("2021-09-05T19:04:58.430Z"),
             "currency": "USD",
-            "id": "ae54c9e9-fa2e-4514-9224-66ed4a0f07e7",
+            "id": "93a95bdb-982b-4659-b6b1-dc4de328d3f7",
             "name": "Daniel, Goldner and Dickinson",
             "timezone": "UTC",
-            "updated_at": parse_datetime("2021-09-14T20:10:00.185Z"),
+            "updated_at": parse_datetime("2021-09-14T20:17:50.453Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -691,16 +691,15 @@ with UnifiedTo(
     res = unified_to.analytics.patch_analytics_visitor(request={
         "analytics_visitor": {
             "created_at": parse_datetime("2020-04-16T20:29:48.281Z"),
-            "email": "Dallas_Mitchell@yahoo.com",
+            "email": "desiree.o.hara@icloud.com",
             "first_seen_at": parse_datetime("2020-04-16T20:29:48.281Z"),
-            "id": "2a7011fa-f5ad-41bd-8c1c-5c27af20576d",
-            "last_seen_at": parse_datetime("2021-12-12T13:28:16.035Z"),
+            "id": "1aa5ed2a-3c41-49e7-9e9d-043af363eecf",
+            "last_seen_at": parse_datetime("2025-01-10T10:19:21.631Z"),
             "metadata": {
                 "segment": {},
             },
-            "name": "Desiree O'Hara",
-            "total_events": 3639.0,
-            "updated_at": parse_datetime("2025-06-27T20:24:02.371Z"),
+            "total_events": 2916.0,
+            "updated_at": parse_datetime("2025-06-28T17:57:45.369Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -847,10 +846,10 @@ with UnifiedTo(
         "analytics_property": {
             "created_at": parse_datetime("2021-09-05T19:04:58.430Z"),
             "currency": "USD",
-            "id": "ae54c9e9-fa2e-4514-9224-66ed4a0f07e7",
+            "id": "93a95bdb-982b-4659-b6b1-dc4de328d3f7",
             "name": "Daniel, Goldner and Dickinson",
             "timezone": "UTC",
-            "updated_at": parse_datetime("2021-09-14T20:10:00.185Z"),
+            "updated_at": parse_datetime("2021-09-14T20:17:50.453Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -902,16 +901,15 @@ with UnifiedTo(
     res = unified_to.analytics.update_analytics_visitor(request={
         "analytics_visitor": {
             "created_at": parse_datetime("2020-04-16T20:29:48.281Z"),
-            "email": "Dallas_Mitchell@yahoo.com",
+            "email": "desiree.o.hara@icloud.com",
             "first_seen_at": parse_datetime("2020-04-16T20:29:48.281Z"),
-            "id": "2a7011fa-f5ad-41bd-8c1c-5c27af20576d",
-            "last_seen_at": parse_datetime("2021-12-12T13:28:16.035Z"),
+            "id": "1aa5ed2a-3c41-49e7-9e9d-043af363eecf",
+            "last_seen_at": parse_datetime("2025-01-10T10:19:21.631Z"),
             "metadata": {
                 "segment": {},
             },
-            "name": "Desiree O'Hara",
-            "total_events": 3639.0,
-            "updated_at": parse_datetime("2025-06-27T20:24:02.371Z"),
+            "total_events": 2916.0,
+            "updated_at": parse_datetime("2025-06-28T17:57:45.369Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

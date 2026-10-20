@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 from .ticketingemail import TicketingEmail, TicketingEmailTypedDict
+from .ticketingmetadata import TicketingMetadata, TicketingMetadataTypedDict
 from .ticketingtelephone import TicketingTelephone, TicketingTelephoneTypedDict
 from datetime import datetime
 from pydantic import model_serializer
@@ -15,6 +16,7 @@ class TicketingCustomerTypedDict(TypedDict):
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     emails: NotRequired[List[TicketingEmailTypedDict]]
     id: NotRequired[str]
+    metadata: NotRequired[List[TicketingMetadataTypedDict]]
     name: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     tags: NotRequired[List[str]]
@@ -30,6 +32,8 @@ class TicketingCustomer(BaseModel):
     emails: Optional[List[TicketingEmail]] = None
 
     id: Optional[str] = None
+
+    metadata: Optional[List[TicketingMetadata]] = None
 
     name: Optional[str] = None
 
@@ -49,6 +53,7 @@ class TicketingCustomer(BaseModel):
                 "created_at",
                 "emails",
                 "id",
+                "metadata",
                 "name",
                 "raw",
                 "tags",

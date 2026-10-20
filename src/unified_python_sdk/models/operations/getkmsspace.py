@@ -25,6 +25,7 @@ class GetKmsSpaceQueryParamFields(str, Enum):
     IS_ACTIVE = "is_active"
     USER_ID = "user_id"
     PARENT_PAGE_ID = "parent_page_id"
+    METADATA = "metadata"
     RAW = "raw"
 
 

@@ -26,6 +26,7 @@ with UnifiedTo(
 
     res = unified_to.query.create_datastore_query(request={
         "datastore_query": {
+            "metadata": [],
             "query": {
                 "filter_": {
                     "type": shared.PropertyDatastoreQueryQueryFilterType.OR,

@@ -32,4 +32,5 @@ value = PatchHrisBankaccountQueryParamFields.ID
 | `SPLIT_TYPE`           | split_type             |
 | `SPLIT_AMOUNT`         | split_amount           |
 | `PRIORITY`             | priority               |
+| `METADATA`             | metadata               |
 | `RAW`                  | raw                    |

@@ -17,4 +17,5 @@ value = CreateDatastoreQueryQueryParamFields.TABLE_ID
 | `DATABASE_ID` | database_id   |
 | `QUERY`       | query         |
 | `RESPONSE`    | response      |
+| `METADATA`    | metadata      |
 | `RAW`         | raw           |

@@ -6,6 +6,7 @@ from .lmscontentlocalization import (
     LmsContentLocalizationTypedDict,
 )
 from .lmsmedia import LmsMedia, LmsMediaTypedDict
+from .lmsmetadata import LmsMetadata, LmsMetadataTypedDict
 from .lmsreference import LmsReference, LmsReferenceTypedDict
 from .lmssubject import LmsSubject, LmsSubjectTypedDict
 from datetime import datetime
@@ -32,6 +33,7 @@ class LmsContentTypedDict(TypedDict):
     languages: NotRequired[List[str]]
     localizations: NotRequired[List[LmsContentLocalizationTypedDict]]
     media: NotRequired[List[LmsMediaTypedDict]]
+    metadata: NotRequired[List[LmsMetadataTypedDict]]
     name: NotRequired[str]
     provider_name: NotRequired[str]
     published_at: NotRequired[datetime]
@@ -78,6 +80,8 @@ class LmsContent(BaseModel):
 
     media: Optional[List[LmsMedia]] = None
 
+    metadata: Optional[List[LmsMetadata]] = None
+
     name: Optional[str] = None
 
     provider_name: Optional[str] = None
@@ -119,6 +123,7 @@ class LmsContent(BaseModel):
                 "languages",
                 "localizations",
                 "media",
+                "metadata",
                 "name",
                 "provider_name",
                 "published_at",

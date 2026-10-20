@@ -25,6 +25,7 @@ class GetTaskCommentQueryParamFields(str, Enum):
     TASK_ID = "task_id"
     PARENT_ID = "parent_id"
     HAS_CHILDREN = "has_children"
+    METADATA = "metadata"
     RAW = "raw"
 
 

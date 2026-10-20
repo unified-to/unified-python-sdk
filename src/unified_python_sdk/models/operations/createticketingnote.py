@@ -24,6 +24,7 @@ class CreateTicketingNoteQueryParamFields(str, Enum):
     DESCRIPTION = "description"
     TICKET_ID = "ticket_id"
     USER_ID = "user_id"
+    METADATA = "metadata"
     RAW = "raw"
 
 

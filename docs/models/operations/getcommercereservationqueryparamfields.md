@@ -30,4 +30,5 @@ value = GetCommerceReservationQueryParamFields.ID
 | `CREATED_AT`    | created_at      |
 | `UPDATED_AT`    | updated_at      |
 | `URL`           | url             |
+| `METADATA`      | metadata        |
 | `RAW`           | raw             |

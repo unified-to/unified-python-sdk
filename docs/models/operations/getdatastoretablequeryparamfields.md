@@ -23,4 +23,5 @@ value = GetDatastoreTableQueryParamFields.ID
 | `RELATIONSHIPS` | relationships   |
 | `WEB_URL`       | web_url         |
 | `PARENT_ID`     | parent_id       |
+| `METADATA`      | metadata        |
 | `RAW`           | raw             |

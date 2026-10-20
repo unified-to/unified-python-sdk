@@ -19,4 +19,5 @@ value = GetTaskChangeQueryParamFields.ID
 | `TASK_ID`    | task_id      |
 | `USER_ID`    | user_id      |
 | `ITEMS`      | items        |
+| `METADATA`   | metadata     |
 | `RAW`        | raw          |

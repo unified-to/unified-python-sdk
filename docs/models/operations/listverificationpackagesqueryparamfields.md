@@ -31,4 +31,5 @@ value = ListVerificationPackagesQueryParamFields.ID
 | `MAX_SCORE`                | max_score                  |
 | `INFO_URL`                 | info_url                   |
 | `VALID_REGIONS`            | valid_regions              |
+| `METADATA`                 | metadata                   |
 | `RAW`                      | raw                        |

@@ -27,6 +27,7 @@ class ListCdpActivationsQueryParamFields(str, Enum):
     STATUS = "status"
     LAST_RUN_AT = "last_run_at"
     IS_ENABLED = "is_enabled"
+    METADATA = "metadata"
     RAW = "raw"
 
 

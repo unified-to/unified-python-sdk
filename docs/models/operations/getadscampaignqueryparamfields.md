@@ -37,4 +37,5 @@ value = GetAdsCampaignQueryParamFields.ID
 | `HAS_EU_POLITICAL_ADS`       | has_eu_political_ads         |
 | `LABELS`                     | labels                       |
 | `KPI`                        | kpi                          |
+| `METADATA`                   | metadata                     |
 | `RAW`                        | raw                          |

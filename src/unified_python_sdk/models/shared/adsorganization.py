@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 from .adsmanager import AdsManager, AdsManagerTypedDict
+from .adsmetadata import AdsMetadata, AdsMetadataTypedDict
 from datetime import datetime
 from enum import Enum
 from pydantic import field_serializer, model_serializer
@@ -32,6 +33,7 @@ class AdsOrganizationTypedDict(TypedDict):
     id: NotRequired[str]
     managers: NotRequired[List[AdsManagerTypedDict]]
     r"""Manager/agency chain, top-most manager first, closest manager last (SA360 manager/sub_manager)"""
+    metadata: NotRequired[List[AdsMetadataTypedDict]]
     name: NotRequired[str]
     parent_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
@@ -54,6 +56,8 @@ class AdsOrganization(BaseModel):
 
     managers: Optional[List[AdsManager]] = None
     r"""Manager/agency chain, top-most manager first, closest manager last (SA360 manager/sub_manager)"""
+
+    metadata: Optional[List[AdsMetadata]] = None
 
     name: Optional[str] = None
 
@@ -86,6 +90,7 @@ class AdsOrganization(BaseModel):
                 "currency",
                 "id",
                 "managers",
+                "metadata",
                 "name",
                 "parent_id",
                 "raw",

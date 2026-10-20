@@ -33,48 +33,32 @@ with UnifiedTo(
     res = unified_to.deal.create_crm_deal(request={
         "crm_deal": {
             "amount": 98162.0,
-            "closed_at": parse_datetime("2024-03-09T22:27:48.301Z"),
-            "closing_at": parse_datetime("2025-08-29T23:51:32.247Z"),
+            "closed_at": parse_datetime("2024-03-10T04:03:46.414Z"),
+            "closing_at": parse_datetime("2025-08-30T17:32:19.320Z"),
             "created_at": parse_datetime("2023-07-04T12:48:48.470Z"),
-            "currency": "IQD",
-            "description": "Tabula cicuta sophismata comis tepidus sit cavus.",
-            "id": "544f2731-fef1-41a7-bba3-0ba3592f8d46",
+            "currency": "USD",
+            "description": "Comis tepidus sit cavus crustulum trans tubineus adfectus.",
+            "id": "3b741ebb-8988-4030-906d-753b933e7967",
             "metadata": [
                 {
                     "extra_data": {
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CrmMetadataFormat.TEXT,
-                    "id": "f992045b-1870-404d-a996-71b8f90a2e9b",
+                    "id": "c66c850b-ba6a-4064-af4a-6db5f25e2956",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "conatus",
                 },
             ],
-            "name": "Frozen Silk Chicken",
-            "pipelines": [
-                {
-                    "id": "87b51212-5c09-4f4d-927c-5c2b867501a2",
-                    "name": "trans",
-                },
-            ],
-            "probability": 65.0,
+            "name": "Stoltenberg - Funk - Luxurious Rubber Chicken",
+            "probability": 42.0,
             "source": "cubo",
-            "stages": [
-                {
-                    "id": "6ca39210-b9a4-4a48-b4ef-99eebc7ed4ba",
-                    "name": "tubineus",
-                },
-                {
-                    "id": "2c33eb64-05f7-4097-904f-98b42b6669c1",
-                    "name": "adfectus",
-                },
-            ],
             "tags": [
                 "causa",
                 "suus",
             ],
-            "updated_at": parse_datetime("2024-10-10T23:31:39.461Z"),
+            "updated_at": parse_datetime("2024-10-11T09:57:18.697Z"),
             "won_reason": "Usque libero soleo.",
         },
         "connection_id": "<id>",
@@ -219,48 +203,32 @@ with UnifiedTo(
     res = unified_to.deal.patch_crm_deal(request={
         "crm_deal": {
             "amount": 98162.0,
-            "closed_at": parse_datetime("2024-03-09T22:27:48.304Z"),
-            "closing_at": parse_datetime("2025-08-29T23:51:32.257Z"),
+            "closed_at": parse_datetime("2024-03-10T04:03:46.417Z"),
+            "closing_at": parse_datetime("2025-08-30T17:32:19.330Z"),
             "created_at": parse_datetime("2023-07-04T12:48:48.470Z"),
-            "currency": "IQD",
-            "description": "Tabula cicuta sophismata comis tepidus sit cavus.",
-            "id": "eed5e1cc-e23e-43fd-b093-462df691f391",
+            "currency": "USD",
+            "description": "Comis tepidus sit cavus crustulum trans tubineus adfectus.",
+            "id": "2fd29b72-0aca-43db-a533-c0e36b804d2d",
             "metadata": [
                 {
                     "extra_data": {
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CrmMetadataFormat.TEXT,
-                    "id": "0586d6d2-149a-4c8a-b240-6affdd025b22",
+                    "id": "67ff2717-aa28-49ec-ba3f-fc6eb8870d46",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "conatus",
                 },
             ],
-            "name": "Frozen Silk Chicken",
-            "pipelines": [
-                {
-                    "id": "08023128-b934-4c10-801a-82261796eaa4",
-                    "name": "trans",
-                },
-            ],
-            "probability": 65.0,
+            "name": "Stoltenberg - Funk - Luxurious Rubber Chicken",
+            "probability": 42.0,
             "source": "cubo",
-            "stages": [
-                {
-                    "id": "d99b52a9-bb38-4673-a308-563dcb556344",
-                    "name": "tubineus",
-                },
-                {
-                    "id": "ca87aedc-f486-493f-969f-75e1424b249d",
-                    "name": "adfectus",
-                },
-            ],
             "tags": [
                 "causa",
                 "suus",
             ],
-            "updated_at": parse_datetime("2024-10-10T23:31:39.467Z"),
+            "updated_at": parse_datetime("2024-10-11T09:57:18.703Z"),
             "won_reason": "Usque libero soleo.",
         },
         "connection_id": "<id>",
@@ -360,48 +328,32 @@ with UnifiedTo(
     res = unified_to.deal.update_crm_deal(request={
         "crm_deal": {
             "amount": 98162.0,
-            "closed_at": parse_datetime("2024-03-09T22:27:48.304Z"),
-            "closing_at": parse_datetime("2025-08-29T23:51:32.257Z"),
+            "closed_at": parse_datetime("2024-03-10T04:03:46.417Z"),
+            "closing_at": parse_datetime("2025-08-30T17:32:19.330Z"),
             "created_at": parse_datetime("2023-07-04T12:48:48.470Z"),
-            "currency": "IQD",
-            "description": "Tabula cicuta sophismata comis tepidus sit cavus.",
-            "id": "eed5e1cc-e23e-43fd-b093-462df691f391",
+            "currency": "USD",
+            "description": "Comis tepidus sit cavus crustulum trans tubineus adfectus.",
+            "id": "2fd29b72-0aca-43db-a533-c0e36b804d2d",
             "metadata": [
                 {
                     "extra_data": {
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CrmMetadataFormat.TEXT,
-                    "id": "0586d6d2-149a-4c8a-b240-6affdd025b22",
+                    "id": "67ff2717-aa28-49ec-ba3f-fc6eb8870d46",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "conatus",
                 },
             ],
-            "name": "Frozen Silk Chicken",
-            "pipelines": [
-                {
-                    "id": "08023128-b934-4c10-801a-82261796eaa4",
-                    "name": "trans",
-                },
-            ],
-            "probability": 65.0,
+            "name": "Stoltenberg - Funk - Luxurious Rubber Chicken",
+            "probability": 42.0,
             "source": "cubo",
-            "stages": [
-                {
-                    "id": "d99b52a9-bb38-4673-a308-563dcb556344",
-                    "name": "tubineus",
-                },
-                {
-                    "id": "ca87aedc-f486-493f-969f-75e1424b249d",
-                    "name": "adfectus",
-                },
-            ],
             "tags": [
                 "causa",
                 "suus",
             ],
-            "updated_at": parse_datetime("2024-10-10T23:31:39.467Z"),
+            "updated_at": parse_datetime("2024-10-11T09:57:18.703Z"),
             "won_reason": "Usque libero soleo.",
         },
         "connection_id": "<id>",

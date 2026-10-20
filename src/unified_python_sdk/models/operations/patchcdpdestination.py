@@ -25,6 +25,7 @@ class PatchCdpDestinationQueryParamFields(str, Enum):
     TYPE = "type"
     DIRECTION = "direction"
     IS_ENABLED = "is_enabled"
+    METADATA = "metadata"
     RAW = "raw"
 
 

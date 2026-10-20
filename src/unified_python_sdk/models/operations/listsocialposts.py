@@ -31,6 +31,7 @@ class ListSocialPostsQueryParamFields(str, Enum):
     SCHEDULED_AT = "scheduled_at"
     CALL_TO_ACTION = "call_to_action"
     METRICS = "metrics"
+    METADATA = "metadata"
     RAW = "raw"
 
 

@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 from .messagingmember import MessagingMember, MessagingMemberTypedDict
+from .messagingmetadata import MessagingMetadata, MessagingMetadataTypedDict
 from datetime import datetime
 from pydantic import model_serializer
 from typing import Any, Dict, List, Optional
@@ -18,6 +19,7 @@ class MessagingChannelTypedDict(TypedDict):
     is_active: NotRequired[bool]
     is_private: NotRequired[bool]
     members: NotRequired[List[MessagingMemberTypedDict]]
+    metadata: NotRequired[List[MessagingMetadataTypedDict]]
     name: NotRequired[str]
     parent_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
@@ -42,6 +44,8 @@ class MessagingChannel(BaseModel):
 
     members: Optional[List[MessagingMember]] = None
 
+    metadata: Optional[List[MessagingMetadata]] = None
+
     name: Optional[str] = None
 
     parent_id: Optional[str] = None
@@ -64,6 +68,7 @@ class MessagingChannel(BaseModel):
                 "is_active",
                 "is_private",
                 "members",
+                "metadata",
                 "name",
                 "parent_id",
                 "raw",

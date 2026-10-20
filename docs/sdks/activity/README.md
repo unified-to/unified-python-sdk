@@ -40,43 +40,9 @@ with UnifiedTo(
 
     res = unified_to.activity.create_ats_activity(request={
         "ats_activity": {
-            "bcc": [
-                {
-                    "email": "Mabel_Schuppe-Schowalter42@hotmail.com",
-                    "name": "Rochelle Franey-Bechtelar",
-                    "type": shared.AtsEmailType.HOME,
-                },
-            ],
-            "cc": [
-                {
-                    "email": "Sasha24@hotmail.com",
-                    "name": "Dr. Elbert Kuvalis",
-                    "type": shared.AtsEmailType.HOME,
-                },
-                {
-                    "email": "Rosetta_Donnelly@gmail.com",
-                    "name": "Ramon Daniel",
-                    "type": shared.AtsEmailType.OTHER,
-                },
-                {
-                    "email": "Kathryne_Jast@yahoo.com",
-                    "name": "Christian Jacobson",
-                    "type": shared.AtsEmailType.OTHER,
-                },
-                {
-                    "email": "Eldred95@yahoo.com",
-                    "name": "Edna Bogan",
-                    "type": shared.AtsEmailType.OTHER,
-                },
-            ],
             "created_at": parse_datetime("2022-08-07T03:16:43.865Z"),
-            "description": "Amplus.",
-            "from_": {
-                "email": "Norwood.Wiza47@yahoo.com",
-                "name": "Toby Grant",
-                "type": shared.PropertyAtsActivityFromType.OTHER,
-            },
-            "id": "7486bd9a-93db-4c19-a920-2d65a848a4e1",
+            "description": "Sapiente.",
+            "id": "e1db9a02-ef94-4862-8d19-e2a4397a6a2e",
             "is_private": False,
             "metadata": [
                 {
@@ -84,33 +50,16 @@ with UnifiedTo(
 
                     },
                     "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "72fc2d2d-f1a7-4cc0-886f-e1c57be7a50b",
+                    "id": "dd7e1f14-c74b-4f58-b191-a9fc72989819",
                     "namespace": "activity",
-                    "slug": "acer",
-                    "value": "Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo.",
-                },
-                {
-                    "extra_data": {
-
-                    },
-                    "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "791516c0-56f8-48c9-8db2-be3aff5fb9fe",
-                    "namespace": "activity",
-                    "slug": "tremo",
-                    "value": "Amita delectus dicta temptatio utroque ex.",
+                    "slug": "cimentarius",
+                    "value": "Reprehenderit verto.",
                 },
             ],
             "sub_type": "TASK",
-            "title": "Senior Interactions Manager",
-            "to": [
-                {
-                    "email": "Sister91@hotmail.com",
-                    "name": "Eddie Nienow PhD",
-                    "type": shared.AtsEmailType.WORK,
-                },
-            ],
+            "title": "Venio blandior aureus.",
             "type": shared.AtsActivityType.TASK,
-            "updated_at": parse_datetime("2026-04-02T05:48:02.350Z"),
+            "updated_at": parse_datetime("2026-04-03T05:16:50.040Z"),
         },
         "connection_id": "<id>",
     })
@@ -161,14 +110,15 @@ with UnifiedTo(
     res = unified_to.activity.create_lms_activity(request={
         "lms_activity": {
             "assigned_grade": "summopere",
-            "completed_at": parse_datetime("2025-04-27T11:37:55.567Z"),
+            "completed_at": parse_datetime("2023-12-05T08:28:26.998Z"),
             "created_at": parse_datetime("2020-10-17T01:25:21.745Z"),
             "duration_minutes": 55.0,
-            "id": "31e0cbbc-33be-4a5a-94df-875278b858b1",
+            "id": "4a011a17-50ff-4bc8-839b-23a7ab272d70",
             "is_completed": True,
+            "metadata": [],
             "progress_percentage": 100.0,
-            "started_at": parse_datetime("2023-12-24T04:54:05.825Z"),
-            "updated_at": parse_datetime("2022-01-30T11:38:41.737Z"),
+            "started_at": parse_datetime("2021-04-25T01:52:03.845Z"),
+            "updated_at": parse_datetime("2022-01-30T17:26:08.393Z"),
         },
         "connection_id": "<id>",
     })
@@ -497,43 +447,9 @@ with UnifiedTo(
 
     res = unified_to.activity.patch_ats_activity(request={
         "ats_activity": {
-            "bcc": [
-                {
-                    "email": "Mabel_Schuppe-Schowalter42@hotmail.com",
-                    "name": "Rochelle Franey-Bechtelar",
-                    "type": shared.AtsEmailType.HOME,
-                },
-            ],
-            "cc": [
-                {
-                    "email": "Sasha24@hotmail.com",
-                    "name": "Dr. Elbert Kuvalis",
-                    "type": shared.AtsEmailType.HOME,
-                },
-                {
-                    "email": "Rosetta_Donnelly@gmail.com",
-                    "name": "Ramon Daniel",
-                    "type": shared.AtsEmailType.OTHER,
-                },
-                {
-                    "email": "Kathryne_Jast@yahoo.com",
-                    "name": "Christian Jacobson",
-                    "type": shared.AtsEmailType.OTHER,
-                },
-                {
-                    "email": "Eldred95@yahoo.com",
-                    "name": "Edna Bogan",
-                    "type": shared.AtsEmailType.OTHER,
-                },
-            ],
             "created_at": parse_datetime("2022-08-07T03:16:43.865Z"),
-            "description": "Amplus.",
-            "from_": {
-                "email": "Norwood.Wiza47@yahoo.com",
-                "name": "Toby Grant",
-                "type": shared.PropertyAtsActivityFromType.OTHER,
-            },
-            "id": "e7aeb64c-3746-4d42-ab56-27463fc93000",
+            "description": "Sapiente.",
+            "id": "c64a3b91-bcc4-4d53-8c9a-2cb976fa7c45",
             "is_private": False,
             "metadata": [
                 {
@@ -541,33 +457,16 @@ with UnifiedTo(
 
                     },
                     "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "397f710c-9224-4f74-8ac2-9e8e73db56a8",
+                    "id": "b3b7e8d4-59b0-4141-85ec-25de202661e0",
                     "namespace": "activity",
-                    "slug": "acer",
-                    "value": "Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo.",
-                },
-                {
-                    "extra_data": {
-
-                    },
-                    "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "88269c67-b473-41f3-9e82-e3faeefa686a",
-                    "namespace": "activity",
-                    "slug": "tremo",
-                    "value": "Amita delectus dicta temptatio utroque ex.",
+                    "slug": "cimentarius",
+                    "value": "Reprehenderit verto.",
                 },
             ],
             "sub_type": "TASK",
-            "title": "Senior Interactions Manager",
-            "to": [
-                {
-                    "email": "Sister91@hotmail.com",
-                    "name": "Eddie Nienow PhD",
-                    "type": shared.AtsEmailType.WORK,
-                },
-            ],
+            "title": "Venio blandior aureus.",
             "type": shared.AtsActivityType.TASK,
-            "updated_at": parse_datetime("2026-04-02T05:48:02.366Z"),
+            "updated_at": parse_datetime("2026-04-03T05:16:50.068Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -619,14 +518,15 @@ with UnifiedTo(
     res = unified_to.activity.patch_lms_activity(request={
         "lms_activity": {
             "assigned_grade": "summopere",
-            "completed_at": parse_datetime("2025-04-27T11:37:55.570Z"),
+            "completed_at": parse_datetime("2023-12-05T08:28:27.006Z"),
             "created_at": parse_datetime("2020-10-17T01:25:21.745Z"),
             "duration_minutes": 55.0,
-            "id": "5856b54b-a964-489c-b9bc-72d5bc0a3ccc",
+            "id": "a77e52b9-23d7-4ff8-9732-9a57f09786e8",
             "is_completed": True,
+            "metadata": [],
             "progress_percentage": 100.0,
-            "started_at": parse_datetime("2023-12-24T04:54:05.825Z"),
-            "updated_at": parse_datetime("2022-01-30T11:38:41.738Z"),
+            "started_at": parse_datetime("2021-04-25T01:52:03.847Z"),
+            "updated_at": parse_datetime("2022-01-30T17:26:08.396Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -771,43 +671,9 @@ with UnifiedTo(
 
     res = unified_to.activity.update_ats_activity(request={
         "ats_activity": {
-            "bcc": [
-                {
-                    "email": "Mabel_Schuppe-Schowalter42@hotmail.com",
-                    "name": "Rochelle Franey-Bechtelar",
-                    "type": shared.AtsEmailType.HOME,
-                },
-            ],
-            "cc": [
-                {
-                    "email": "Sasha24@hotmail.com",
-                    "name": "Dr. Elbert Kuvalis",
-                    "type": shared.AtsEmailType.HOME,
-                },
-                {
-                    "email": "Rosetta_Donnelly@gmail.com",
-                    "name": "Ramon Daniel",
-                    "type": shared.AtsEmailType.OTHER,
-                },
-                {
-                    "email": "Kathryne_Jast@yahoo.com",
-                    "name": "Christian Jacobson",
-                    "type": shared.AtsEmailType.OTHER,
-                },
-                {
-                    "email": "Eldred95@yahoo.com",
-                    "name": "Edna Bogan",
-                    "type": shared.AtsEmailType.OTHER,
-                },
-            ],
             "created_at": parse_datetime("2022-08-07T03:16:43.865Z"),
-            "description": "Amplus.",
-            "from_": {
-                "email": "Norwood.Wiza47@yahoo.com",
-                "name": "Toby Grant",
-                "type": shared.PropertyAtsActivityFromType.OTHER,
-            },
-            "id": "e7aeb64c-3746-4d42-ab56-27463fc93000",
+            "description": "Sapiente.",
+            "id": "c64a3b91-bcc4-4d53-8c9a-2cb976fa7c45",
             "is_private": False,
             "metadata": [
                 {
@@ -815,33 +681,16 @@ with UnifiedTo(
 
                     },
                     "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "397f710c-9224-4f74-8ac2-9e8e73db56a8",
+                    "id": "b3b7e8d4-59b0-4141-85ec-25de202661e0",
                     "namespace": "activity",
-                    "slug": "acer",
-                    "value": "Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo.",
-                },
-                {
-                    "extra_data": {
-
-                    },
-                    "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "88269c67-b473-41f3-9e82-e3faeefa686a",
-                    "namespace": "activity",
-                    "slug": "tremo",
-                    "value": "Amita delectus dicta temptatio utroque ex.",
+                    "slug": "cimentarius",
+                    "value": "Reprehenderit verto.",
                 },
             ],
             "sub_type": "TASK",
-            "title": "Senior Interactions Manager",
-            "to": [
-                {
-                    "email": "Sister91@hotmail.com",
-                    "name": "Eddie Nienow PhD",
-                    "type": shared.AtsEmailType.WORK,
-                },
-            ],
+            "title": "Venio blandior aureus.",
             "type": shared.AtsActivityType.TASK,
-            "updated_at": parse_datetime("2026-04-02T05:48:02.366Z"),
+            "updated_at": parse_datetime("2026-04-03T05:16:50.068Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -893,14 +742,15 @@ with UnifiedTo(
     res = unified_to.activity.update_lms_activity(request={
         "lms_activity": {
             "assigned_grade": "summopere",
-            "completed_at": parse_datetime("2025-04-27T11:37:55.570Z"),
+            "completed_at": parse_datetime("2023-12-05T08:28:27.006Z"),
             "created_at": parse_datetime("2020-10-17T01:25:21.745Z"),
             "duration_minutes": 55.0,
-            "id": "5856b54b-a964-489c-b9bc-72d5bc0a3ccc",
+            "id": "a77e52b9-23d7-4ff8-9732-9a57f09786e8",
             "is_completed": True,
+            "metadata": [],
             "progress_percentage": 100.0,
-            "started_at": parse_datetime("2023-12-24T04:54:05.825Z"),
-            "updated_at": parse_datetime("2022-01-30T11:38:41.738Z"),
+            "started_at": parse_datetime("2021-04-25T01:52:03.847Z"),
+            "updated_at": parse_datetime("2022-01-30T17:26:08.396Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

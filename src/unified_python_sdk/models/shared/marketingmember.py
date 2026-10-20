@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 from .marketingemail import MarketingEmail, MarketingEmailTypedDict
+from .marketingmetadata import MarketingMetadata, MarketingMetadataTypedDict
 from datetime import datetime
 from enum import Enum
 from pydantic import field_serializer, model_serializer
@@ -35,6 +36,7 @@ class MarketingMemberTypedDict(TypedDict):
     last_name: NotRequired[str]
     list_ids: NotRequired[List[str]]
     r"""An array of list IDs associated with this member"""
+    metadata: NotRequired[List[MarketingMetadataTypedDict]]
     name: NotRequired[str]
     r"""The name of the member"""
     raw: NotRequired[Dict[str, Any]]
@@ -67,6 +69,8 @@ class MarketingMember(BaseModel):
 
     list_ids: Optional[List[str]] = None
     r"""An array of list IDs associated with this member"""
+
+    metadata: Optional[List[MarketingMetadata]] = None
 
     name: Optional[str] = None
     r"""The name of the member"""
@@ -102,6 +106,7 @@ class MarketingMember(BaseModel):
                 "id",
                 "last_name",
                 "list_ids",
+                "metadata",
                 "name",
                 "raw",
                 "status",

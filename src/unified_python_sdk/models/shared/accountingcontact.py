@@ -10,6 +10,7 @@ from .accountingcontactpaymentmethod import (
     AccountingContactPaymentMethodTypedDict,
 )
 from .accountingemail import AccountingEmail, AccountingEmailTypedDict
+from .accountingmetadata import AccountingMetadata, AccountingMetadataTypedDict
 from .accountingtelephone import AccountingTelephone, AccountingTelephoneTypedDict
 from .property_accountingcontact_billing_address import (
     PropertyAccountingContactBillingAddress,
@@ -75,6 +76,7 @@ class AccountingContactTypedDict(TypedDict):
     is_customer: NotRequired[bool]
     is_supplier: NotRequired[bool]
     last_name: NotRequired[str]
+    metadata: NotRequired[List[AccountingMetadataTypedDict]]
     name: NotRequired[str]
     notes: NotRequired[str]
     organization_id: NotRequired[str]
@@ -125,6 +127,8 @@ class AccountingContact(BaseModel):
     is_supplier: Optional[bool] = None
 
     last_name: Optional[str] = None
+
+    metadata: Optional[List[AccountingMetadata]] = None
 
     name: Optional[str] = None
 
@@ -193,6 +197,7 @@ class AccountingContact(BaseModel):
                 "is_customer",
                 "is_supplier",
                 "last_name",
+                "metadata",
                 "name",
                 "notes",
                 "organization_id",

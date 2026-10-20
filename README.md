@@ -128,27 +128,23 @@ with UnifiedTo(
         "accounting_account": {
             "balance": 12092.0,
             "created_at": parse_datetime("2022-07-03T17:57:07.391Z"),
-            "currency": "BOB",
-            "customer_defined_code": "quo",
-            "description": "Spoliatio comedo vilitas harum cupiditate.",
-            "id": "f3bdec78-0630-4007-88ce-21fdabd525f0",
-            "is_payable": True,
-            "name": "Electronic Aluminum Tuna",
+            "currency": "CAD",
+            "customer_defined_code": "6170",
+            "description": "Voluptatibus valde spoliatio.",
+            "id": "71a0c5e2-8579-4ed0-9615-d3a139f92492",
+            "is_payable": False,
+            "metadata": [],
+            "name": "Auto Loan Account",
             "status": shared.Status.ARCHIVED,
             "taxonomy": [
                 {
-                    "original_type": "vesper",
+                    "original_type": "vilitas",
                     "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
-                    "value": "iste",
-                },
-                {
-                    "original_type": "adamo",
-                    "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
-                    "value": "peccatus",
+                    "value": "comedo",
                 },
             ],
-            "type": shared.Type.BANK,
-            "updated_at": parse_datetime("2023-01-06T18:58:57.020Z"),
+            "type": shared.Type.ACCOUNTS_RECEIVABLE,
+            "updated_at": parse_datetime("2023-08-06T14:16:21.001Z"),
         },
         "connection_id": "<id>",
     })
@@ -182,27 +178,23 @@ async def main():
             "accounting_account": {
                 "balance": 12092.0,
                 "created_at": parse_datetime("2022-07-03T17:57:07.391Z"),
-                "currency": "BOB",
-                "customer_defined_code": "quo",
-                "description": "Spoliatio comedo vilitas harum cupiditate.",
-                "id": "f3bdec78-0630-4007-88ce-21fdabd525f0",
-                "is_payable": True,
-                "name": "Electronic Aluminum Tuna",
+                "currency": "CAD",
+                "customer_defined_code": "6170",
+                "description": "Voluptatibus valde spoliatio.",
+                "id": "71a0c5e2-8579-4ed0-9615-d3a139f92492",
+                "is_payable": False,
+                "metadata": [],
+                "name": "Auto Loan Account",
                 "status": shared.Status.ARCHIVED,
                 "taxonomy": [
                     {
-                        "original_type": "vesper",
+                        "original_type": "vilitas",
                         "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
-                        "value": "iste",
-                    },
-                    {
-                        "original_type": "adamo",
-                        "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
-                        "value": "peccatus",
+                        "value": "comedo",
                     },
                 ],
-                "type": shared.Type.BANK,
-                "updated_at": parse_datetime("2023-01-06T18:58:57.020Z"),
+                "type": shared.Type.ACCOUNTS_RECEIVABLE,
+                "updated_at": parse_datetime("2023-08-06T14:16:21.001Z"),
             },
             "connection_id": "<id>",
         })
@@ -1389,27 +1381,33 @@ asyncio.run(main())
 
 * [create_genai_agent](docs/sdks/genai/README.md#create_genai_agent) - Create an agent
 * [create_genai_embedding](docs/sdks/genai/README.md#create_genai_embedding) - Create an embedding
+* [create_genai_memory](docs/sdks/genai/README.md#create_genai_memory) - Create a memory
 * [create_genai_organization](docs/sdks/genai/README.md#create_genai_organization) - Create an organization
 * [create_genai_prompt](docs/sdks/genai/README.md#create_genai_prompt) - Create a prompt
 * [create_genai_task](docs/sdks/genai/README.md#create_genai_task) - Create a task
 * [get_genai_agent](docs/sdks/genai/README.md#get_genai_agent) - Retrieve an agent
+* [get_genai_memory](docs/sdks/genai/README.md#get_genai_memory) - Retrieve a memory
 * [get_genai_model](docs/sdks/genai/README.md#get_genai_model) - Retrieve a model
 * [get_genai_organization](docs/sdks/genai/README.md#get_genai_organization) - Retrieve an organization
 * [get_genai_skill](docs/sdks/genai/README.md#get_genai_skill) - Retrieve a skill
 * [get_genai_task](docs/sdks/genai/README.md#get_genai_task) - Retrieve a task
 * [list_genai_agents](docs/sdks/genai/README.md#list_genai_agents) - List all agents
+* [list_genai_memories](docs/sdks/genai/README.md#list_genai_memories) - List all memories
 * [list_genai_models](docs/sdks/genai/README.md#list_genai_models) - List all models
 * [list_genai_organizations](docs/sdks/genai/README.md#list_genai_organizations) - List all organizations
 * [list_genai_skills](docs/sdks/genai/README.md#list_genai_skills) - List all skills
 * [list_genai_tasks](docs/sdks/genai/README.md#list_genai_tasks) - List all tasks
 * [patch_genai_agent](docs/sdks/genai/README.md#patch_genai_agent) - Update an agent
+* [patch_genai_memory](docs/sdks/genai/README.md#patch_genai_memory) - Update a memory
 * [patch_genai_organization](docs/sdks/genai/README.md#patch_genai_organization) - Update an organization
 * [patch_genai_task](docs/sdks/genai/README.md#patch_genai_task) - Update a task
 * [remove_genai_agent](docs/sdks/genai/README.md#remove_genai_agent) - Remove an agent
+* [remove_genai_memory](docs/sdks/genai/README.md#remove_genai_memory) - Remove a memory
 * [remove_genai_organization](docs/sdks/genai/README.md#remove_genai_organization) - Remove an organization
 * [remove_genai_skill](docs/sdks/genai/README.md#remove_genai_skill) - Remove a skill
 * [remove_genai_task](docs/sdks/genai/README.md#remove_genai_task) - Remove a task
 * [update_genai_agent](docs/sdks/genai/README.md#update_genai_agent) - Update an agent
+* [update_genai_memory](docs/sdks/genai/README.md#update_genai_memory) - Update a memory
 * [update_genai_organization](docs/sdks/genai/README.md#update_genai_organization) - Update an organization
 * [update_genai_task](docs/sdks/genai/README.md#update_genai_task) - Update a task
 
@@ -1909,6 +1907,15 @@ asyncio.run(main())
 * [patch_martech_member](docs/sdks/member/README.md#patch_martech_member) - Update a member
 * [remove_martech_member](docs/sdks/member/README.md#remove_martech_member) - Remove a member
 * [update_martech_member](docs/sdks/member/README.md#update_martech_member) - Update a member
+
+### [Memory](docs/sdks/memory/README.md)
+
+* [create_genai_memory](docs/sdks/memory/README.md#create_genai_memory) - Create a memory
+* [get_genai_memory](docs/sdks/memory/README.md#get_genai_memory) - Retrieve a memory
+* [list_genai_memories](docs/sdks/memory/README.md#list_genai_memories) - List all memories
+* [patch_genai_memory](docs/sdks/memory/README.md#patch_genai_memory) - Update a memory
+* [remove_genai_memory](docs/sdks/memory/README.md#remove_genai_memory) - Remove a memory
+* [update_genai_memory](docs/sdks/memory/README.md#update_genai_memory) - Update a memory
 
 ### [Message](docs/sdks/message/README.md)
 
@@ -2930,27 +2937,23 @@ with UnifiedTo(
         "accounting_account": {
             "balance": 12092.0,
             "created_at": parse_datetime("2022-07-03T17:57:07.391Z"),
-            "currency": "BOB",
-            "customer_defined_code": "quo",
-            "description": "Spoliatio comedo vilitas harum cupiditate.",
-            "id": "f3bdec78-0630-4007-88ce-21fdabd525f0",
-            "is_payable": True,
-            "name": "Electronic Aluminum Tuna",
+            "currency": "CAD",
+            "customer_defined_code": "6170",
+            "description": "Voluptatibus valde spoliatio.",
+            "id": "71a0c5e2-8579-4ed0-9615-d3a139f92492",
+            "is_payable": False,
+            "metadata": [],
+            "name": "Auto Loan Account",
             "status": shared.Status.ARCHIVED,
             "taxonomy": [
                 {
-                    "original_type": "vesper",
+                    "original_type": "vilitas",
                     "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
-                    "value": "iste",
-                },
-                {
-                    "original_type": "adamo",
-                    "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
-                    "value": "peccatus",
+                    "value": "comedo",
                 },
             ],
-            "type": shared.Type.BANK,
-            "updated_at": parse_datetime("2023-01-06T18:58:57.020Z"),
+            "type": shared.Type.ACCOUNTS_RECEIVABLE,
+            "updated_at": parse_datetime("2023-08-06T14:16:21.001Z"),
         },
         "connection_id": "<id>",
     },
@@ -2981,27 +2984,23 @@ with UnifiedTo(
         "accounting_account": {
             "balance": 12092.0,
             "created_at": parse_datetime("2022-07-03T17:57:07.391Z"),
-            "currency": "BOB",
-            "customer_defined_code": "quo",
-            "description": "Spoliatio comedo vilitas harum cupiditate.",
-            "id": "f3bdec78-0630-4007-88ce-21fdabd525f0",
-            "is_payable": True,
-            "name": "Electronic Aluminum Tuna",
+            "currency": "CAD",
+            "customer_defined_code": "6170",
+            "description": "Voluptatibus valde spoliatio.",
+            "id": "71a0c5e2-8579-4ed0-9615-d3a139f92492",
+            "is_payable": False,
+            "metadata": [],
+            "name": "Auto Loan Account",
             "status": shared.Status.ARCHIVED,
             "taxonomy": [
                 {
-                    "original_type": "vesper",
+                    "original_type": "vilitas",
                     "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
-                    "value": "iste",
-                },
-                {
-                    "original_type": "adamo",
-                    "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
-                    "value": "peccatus",
+                    "value": "comedo",
                 },
             ],
-            "type": shared.Type.BANK,
-            "updated_at": parse_datetime("2023-01-06T18:58:57.020Z"),
+            "type": shared.Type.ACCOUNTS_RECEIVABLE,
+            "updated_at": parse_datetime("2023-08-06T14:16:21.001Z"),
         },
         "connection_id": "<id>",
     })
@@ -3046,27 +3045,23 @@ with UnifiedTo(
             "accounting_account": {
                 "balance": 12092.0,
                 "created_at": parse_datetime("2022-07-03T17:57:07.391Z"),
-                "currency": "BOB",
-                "customer_defined_code": "quo",
-                "description": "Spoliatio comedo vilitas harum cupiditate.",
-                "id": "f3bdec78-0630-4007-88ce-21fdabd525f0",
-                "is_payable": True,
-                "name": "Electronic Aluminum Tuna",
+                "currency": "CAD",
+                "customer_defined_code": "6170",
+                "description": "Voluptatibus valde spoliatio.",
+                "id": "71a0c5e2-8579-4ed0-9615-d3a139f92492",
+                "is_payable": False,
+                "metadata": [],
+                "name": "Auto Loan Account",
                 "status": shared.Status.ARCHIVED,
                 "taxonomy": [
                     {
-                        "original_type": "vesper",
+                        "original_type": "vilitas",
                         "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
-                        "value": "iste",
-                    },
-                    {
-                        "original_type": "adamo",
-                        "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
-                        "value": "peccatus",
+                        "value": "comedo",
                     },
                 ],
-                "type": shared.Type.BANK,
-                "updated_at": parse_datetime("2023-01-06T18:58:57.020Z"),
+                "type": shared.Type.ACCOUNTS_RECEIVABLE,
+                "updated_at": parse_datetime("2023-08-06T14:16:21.001Z"),
             },
             "connection_id": "<id>",
         })
@@ -3141,27 +3136,23 @@ with UnifiedTo(
         "accounting_account": {
             "balance": 12092.0,
             "created_at": parse_datetime("2022-07-03T17:57:07.391Z"),
-            "currency": "BOB",
-            "customer_defined_code": "quo",
-            "description": "Spoliatio comedo vilitas harum cupiditate.",
-            "id": "f3bdec78-0630-4007-88ce-21fdabd525f0",
-            "is_payable": True,
-            "name": "Electronic Aluminum Tuna",
+            "currency": "CAD",
+            "customer_defined_code": "6170",
+            "description": "Voluptatibus valde spoliatio.",
+            "id": "71a0c5e2-8579-4ed0-9615-d3a139f92492",
+            "is_payable": False,
+            "metadata": [],
+            "name": "Auto Loan Account",
             "status": shared.Status.ARCHIVED,
             "taxonomy": [
                 {
-                    "original_type": "vesper",
+                    "original_type": "vilitas",
                     "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
-                    "value": "iste",
-                },
-                {
-                    "original_type": "adamo",
-                    "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
-                    "value": "peccatus",
+                    "value": "comedo",
                 },
             ],
-            "type": shared.Type.BANK,
-            "updated_at": parse_datetime("2023-01-06T18:58:57.020Z"),
+            "type": shared.Type.ACCOUNTS_RECEIVABLE,
+            "updated_at": parse_datetime("2023-08-06T14:16:21.001Z"),
         },
         "connection_id": "<id>",
     })
@@ -3193,27 +3184,23 @@ with UnifiedTo(
         "accounting_account": {
             "balance": 12092.0,
             "created_at": parse_datetime("2022-07-03T17:57:07.391Z"),
-            "currency": "BOB",
-            "customer_defined_code": "quo",
-            "description": "Spoliatio comedo vilitas harum cupiditate.",
-            "id": "f3bdec78-0630-4007-88ce-21fdabd525f0",
-            "is_payable": True,
-            "name": "Electronic Aluminum Tuna",
+            "currency": "CAD",
+            "customer_defined_code": "6170",
+            "description": "Voluptatibus valde spoliatio.",
+            "id": "71a0c5e2-8579-4ed0-9615-d3a139f92492",
+            "is_payable": False,
+            "metadata": [],
+            "name": "Auto Loan Account",
             "status": shared.Status.ARCHIVED,
             "taxonomy": [
                 {
-                    "original_type": "vesper",
+                    "original_type": "vilitas",
                     "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
-                    "value": "iste",
-                },
-                {
-                    "original_type": "adamo",
-                    "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
-                    "value": "peccatus",
+                    "value": "comedo",
                 },
             ],
-            "type": shared.Type.BANK,
-            "updated_at": parse_datetime("2023-01-06T18:58:57.020Z"),
+            "type": shared.Type.ACCOUNTS_RECEIVABLE,
+            "updated_at": parse_datetime("2023-08-06T14:16:21.001Z"),
         },
         "connection_id": "<id>",
     })
@@ -3353,27 +3340,23 @@ with UnifiedTo(
         "accounting_account": {
             "balance": 12092.0,
             "created_at": parse_datetime("2022-07-03T17:57:07.391Z"),
-            "currency": "BOB",
-            "customer_defined_code": "quo",
-            "description": "Spoliatio comedo vilitas harum cupiditate.",
-            "id": "f3bdec78-0630-4007-88ce-21fdabd525f0",
-            "is_payable": True,
-            "name": "Electronic Aluminum Tuna",
+            "currency": "CAD",
+            "customer_defined_code": "6170",
+            "description": "Voluptatibus valde spoliatio.",
+            "id": "71a0c5e2-8579-4ed0-9615-d3a139f92492",
+            "is_payable": False,
+            "metadata": [],
+            "name": "Auto Loan Account",
             "status": shared.Status.ARCHIVED,
             "taxonomy": [
                 {
-                    "original_type": "vesper",
+                    "original_type": "vilitas",
                     "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
-                    "value": "iste",
-                },
-                {
-                    "original_type": "adamo",
-                    "type": shared.AccountingAccountTaxonomyType.SUBGROUP,
-                    "value": "peccatus",
+                    "value": "comedo",
                 },
             ],
-            "type": shared.Type.BANK,
-            "updated_at": parse_datetime("2023-01-06T18:58:57.020Z"),
+            "type": shared.Type.ACCOUNTS_RECEIVABLE,
+            "updated_at": parse_datetime("2023-08-06T14:16:21.001Z"),
         },
         "connection_id": "<id>",
     })

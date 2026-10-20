@@ -25,6 +25,7 @@ class PatchLmsCollectionQueryParamFields(str, Enum):
     MEDIA = "media"
     IS_ACTIVE = "is_active"
     PARENT_ID = "parent_id"
+    METADATA = "metadata"
     RAW = "raw"
 
 

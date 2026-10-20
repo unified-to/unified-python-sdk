@@ -27,6 +27,7 @@ class ListAtsDocumentsQueryParamFields(str, Enum):
     APPLICATION_ID = "application_id"
     JOB_ID = "job_id"
     USER_ID = "user_id"
+    METADATA = "metadata"
     RAW = "raw"
 
 

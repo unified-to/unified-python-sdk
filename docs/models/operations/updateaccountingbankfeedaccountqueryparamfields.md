@@ -28,4 +28,5 @@ value = UpdateAccountingBankfeedaccountQueryParamFields.ID
 | `BALANCE`              | balance                |
 | `FEED_START_AT`        | feed_start_at          |
 | `STATUS`               | status                 |
+| `METADATA`             | metadata               |
 | `RAW`                  | raw                    |

@@ -26,4 +26,5 @@ value = GetComputeKeyQueryParamFields.ID
 | `SECRET`       | secret         |
 | `INSTANCE_ID`  | instance_id    |
 | `EXPIRES_AT`   | expires_at     |
+| `METADATA`     | metadata       |
 | `RAW`          | raw            |

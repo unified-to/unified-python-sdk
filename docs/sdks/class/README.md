@@ -34,7 +34,7 @@ with UnifiedTo(
         "lms_class": {
             "created_at": parse_datetime("2020-02-20T14:48:51.845Z"),
             "description": "Anser sperno decerno.",
-            "id": "158f1b31-25a1-4fd7-be23-49f5a55d4a68",
+            "id": "7fadb9e5-51e7-4e8a-90e6-c5fac8c6a3e0",
             "instructors": [],
             "languages": [
                 "in",
@@ -53,9 +53,10 @@ with UnifiedTo(
                     "url": "https://loremflickr.com/487/921?lock=5127962071241632",
                 },
             ],
+            "metadata": [],
             "name": "virtus",
             "students": [],
-            "updated_at": parse_datetime("2025-08-01T23:35:35.665Z"),
+            "updated_at": parse_datetime("2025-08-02T21:40:13.799Z"),
         },
         "connection_id": "<id>",
     })
@@ -200,7 +201,7 @@ with UnifiedTo(
         "lms_class": {
             "created_at": parse_datetime("2020-02-20T14:48:51.845Z"),
             "description": "Anser sperno decerno.",
-            "id": "3c3af1dd-76cc-4d0e-bd92-609835988bd3",
+            "id": "4fa077c2-6ed7-4c3e-951f-cce7b333d6f5",
             "instructors": [],
             "languages": [
                 "in",
@@ -219,9 +220,10 @@ with UnifiedTo(
                     "url": "https://loremflickr.com/487/921?lock=5127962071241632",
                 },
             ],
+            "metadata": [],
             "name": "virtus",
             "students": [],
-            "updated_at": parse_datetime("2025-08-01T23:35:35.674Z"),
+            "updated_at": parse_datetime("2025-08-02T21:40:13.811Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -321,7 +323,7 @@ with UnifiedTo(
         "lms_class": {
             "created_at": parse_datetime("2020-02-20T14:48:51.845Z"),
             "description": "Anser sperno decerno.",
-            "id": "3c3af1dd-76cc-4d0e-bd92-609835988bd3",
+            "id": "4fa077c2-6ed7-4c3e-951f-cce7b333d6f5",
             "instructors": [],
             "languages": [
                 "in",
@@ -340,9 +342,10 @@ with UnifiedTo(
                     "url": "https://loremflickr.com/487/921?lock=5127962071241632",
                 },
             ],
+            "metadata": [],
             "name": "virtus",
             "students": [],
-            "updated_at": parse_datetime("2025-08-01T23:35:35.674Z"),
+            "updated_at": parse_datetime("2025-08-02T21:40:13.811Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

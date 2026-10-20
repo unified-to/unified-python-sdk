@@ -33,6 +33,7 @@ class PatchAccountingAccountQueryParamFields(str, Enum):
     PARENT_ID = "parent_id"
     TAXONOMY = "taxonomy"
     ORGANIZATION_ID = "organization_id"
+    METADATA = "metadata"
     RAW = "raw"
 
 

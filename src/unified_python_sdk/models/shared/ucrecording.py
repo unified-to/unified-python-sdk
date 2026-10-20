@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 from .uccontact import UcContact, UcContactTypedDict
+from .ucmetadata import UcMetadata, UcMetadataTypedDict
 from .ucrecordingmedia import UcRecordingMedia, UcRecordingMediaTypedDict
 from datetime import datetime
 from enum import Enum
@@ -31,6 +32,7 @@ class UcRecordingTypedDict(TypedDict):
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
     media: NotRequired[List[UcRecordingMediaTypedDict]]
+    metadata: NotRequired[List[UcMetadataTypedDict]]
     raw: NotRequired[Dict[str, Any]]
     start_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
@@ -64,6 +66,8 @@ class UcRecording(BaseModel):
     id: Optional[str] = None
 
     media: Optional[List[UcRecordingMedia]] = None
+
+    metadata: Optional[List[UcMetadata]] = None
 
     raw: Optional[Dict[str, Any]] = None
 
@@ -105,6 +109,7 @@ class UcRecording(BaseModel):
                 "expires_at",
                 "id",
                 "media",
+                "metadata",
                 "raw",
                 "start_at",
                 "type",

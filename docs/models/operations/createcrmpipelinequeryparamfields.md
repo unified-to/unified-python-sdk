@@ -21,4 +21,5 @@ value = CreateCrmPipelineQueryParamFields.ID
 | `DEAL_PROBABILITY` | deal_probability   |
 | `DISPLAY_ORDER`    | display_order      |
 | `STAGES`           | stages             |
+| `METADATA`         | metadata           |
 | `RAW`              | raw                |

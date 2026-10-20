@@ -26,4 +26,5 @@ value = ListShippingLabelsQueryParamFields.ID
 | `LABEL_COST_CURRENCY` | label_cost_currency   |
 | `RATE_ID`             | rate_id               |
 | `SERVICE_CODE`        | service_code          |
+| `METADATA`            | metadata              |
 | `RAW`                 | raw                   |

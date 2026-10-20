@@ -26,4 +26,5 @@ value = PatchPaymentLinkQueryParamFields.ID
 | `DESCRIPTION`       | description         |
 | `IS_CHARGEABLE_NOW` | is_chargeable_now   |
 | `SUCCESS_URL`       | success_url         |
+| `METADATA`          | metadata            |
 | `RAW`               | raw                 |

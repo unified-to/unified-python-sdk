@@ -23,6 +23,7 @@ class ListAnalyticsReportsQueryParamFields(str, Enum):
     START_AT = "start_at"
     END_AT = "end_at"
     METRICS = "metrics"
+    METADATA = "metadata"
     RAW = "raw"
 
 

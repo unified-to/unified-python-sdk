@@ -25,4 +25,5 @@ value = ListCdpSegmentsQueryParamFields.ID
 | `SIZE`         | size           |
 | `IS_ACTIVE`    | is_active      |
 | `SOURCE_ID`    | source_id      |
+| `METADATA`     | metadata       |
 | `RAW`          | raw            |
