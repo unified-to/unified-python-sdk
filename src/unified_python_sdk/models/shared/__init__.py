@@ -290,6 +290,7 @@ if TYPE_CHECKING:
         CreativeType,
         HostingSource,
     )
+    from .adscreativecard import AdsCreativeCard, AdsCreativeCardTypedDict
     from .adsgroup import (
         AdsGroup,
         AdsGroupBudgetPeriod,
@@ -3018,6 +3019,8 @@ __all__ = [
     "AdsCampaignStatus",
     "AdsCampaignTypedDict",
     "AdsCreative",
+    "AdsCreativeCard",
+    "AdsCreativeCardTypedDict",
     "AdsCreativeStatus",
     "AdsCreativeTypedDict",
     "AdsGroup",
@@ -5319,6 +5322,8 @@ _dynamic_imports: dict[str, str] = {
     "AdsCreativeTypedDict": ".adscreative",
     "CreativeType": ".adscreative",
     "HostingSource": ".adscreative",
+    "AdsCreativeCard": ".adscreativecard",
+    "AdsCreativeCardTypedDict": ".adscreativecard",
     "AdsGroup": ".adsgroup",
     "AdsGroupBudgetPeriod": ".adsgroup",
     "AdsGroupBudgetUnit": ".adsgroup",

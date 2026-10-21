@@ -23,6 +23,8 @@ class UpdateAnalyticsVisitorQueryParamFields(str, Enum):
     PROPERTY_ID = "property_id"
     EMAIL = "email"
     NAME = "name"
+    FIRST_NAME = "first_name"
+    LAST_NAME = "last_name"
     AGE = "age"
     GENDER = "gender"
     COUNTRY = "country"

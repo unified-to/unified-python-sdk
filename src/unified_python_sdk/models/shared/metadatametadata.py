@@ -31,13 +31,14 @@ class MetadataMetadataFormat(str, Enum, metaclass=utils.OpenEnumMeta):
 class MetadataMetadataTypedDict(TypedDict):
     name: str
     object_type: str
-    r"""This is the unified object type that this metadata is associated with. eg. crm_contact or coomerce_item"""
+    r"""This is the unified object type that this metadata is associated with. eg. crm_contact or commerce_item"""
     created_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     format_: NotRequired[MetadataMetadataFormat]
     id: NotRequired[str]
     is_required: NotRequired[bool]
-    objects: NotRequired[Dict[str, Any]]
+    r"""When true, this metadata slug is required for create for this integration."""
+    objects: NotRequired[Dict[str, str]]
     options: NotRequired[List[str]]
     original_format: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
@@ -50,7 +51,7 @@ class MetadataMetadata(BaseModel):
     name: str
 
     object_type: str
-    r"""This is the unified object type that this metadata is associated with. eg. crm_contact or coomerce_item"""
+    r"""This is the unified object type that this metadata is associated with. eg. crm_contact or commerce_item"""
 
     created_at: Optional[datetime] = None
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
@@ -62,8 +63,9 @@ class MetadataMetadata(BaseModel):
     id: Optional[str] = None
 
     is_required: Optional[bool] = None
+    r"""When true, this metadata slug is required for create for this integration."""
 
-    objects: Optional[Dict[str, Any]] = None
+    objects: Optional[Dict[str, str]] = None
 
     options: Optional[List[str]] = None
 

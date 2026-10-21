@@ -31,11 +31,13 @@ class AnalyticsVisitorTypedDict(TypedDict):
     created_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     email: NotRequired[str]
+    first_name: NotRequired[str]
     first_seen_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     gender: NotRequired[Gender]
     id: NotRequired[str]
     language: NotRequired[str]
+    last_name: NotRequired[str]
     last_seen_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     metadata: NotRequired[Dict[str, PropertyAnalyticsVisitorMetadataTypedDict]]
@@ -65,6 +67,8 @@ class AnalyticsVisitor(BaseModel):
 
     email: Optional[str] = None
 
+    first_name: Optional[str] = None
+
     first_seen_at: Optional[datetime] = None
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
@@ -73,6 +77,8 @@ class AnalyticsVisitor(BaseModel):
     id: Optional[str] = None
 
     language: Optional[str] = None
+
+    last_name: Optional[str] = None
 
     last_seen_at: Optional[datetime] = None
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
@@ -116,10 +122,12 @@ class AnalyticsVisitor(BaseModel):
                 "country_code",
                 "created_at",
                 "email",
+                "first_name",
                 "first_seen_at",
                 "gender",
                 "id",
                 "language",
+                "last_name",
                 "last_seen_at",
                 "metadata",
                 "name",
