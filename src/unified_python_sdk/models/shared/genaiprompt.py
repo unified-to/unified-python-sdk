@@ -21,7 +21,9 @@ class GenaiPromptTypedDict(TypedDict):
     mcp_url: NotRequired[str]
     r"""Supply a remote MCP URL to send to the LLM API for it to call its tools.  Note: Some LLM APIs do not yet support remote MCP URLs."""
     messages: NotRequired[List[GenaiContentTypedDict]]
+    r"""The conversation to send to the model, in order; each message has a role and its content"""
     model_id: NotRequired[str]
+    r"""The ID of the model to use (a GenaiModel ID)"""
     questions: NotRequired[List[GenaiQuestionTypedDict]]
     r"""Typed questions to evaluate against the messages (for decision models such as TypeSafe Jev)."""
     raw: NotRequired[Dict[str, Any]]
@@ -49,8 +51,10 @@ class GenaiPrompt(BaseModel):
     r"""Supply a remote MCP URL to send to the LLM API for it to call its tools.  Note: Some LLM APIs do not yet support remote MCP URLs."""
 
     messages: Optional[List[GenaiContent]] = None
+    r"""The conversation to send to the model, in order; each message has a role and its content"""
 
     model_id: Optional[str] = None
+    r"""The ID of the model to use (a GenaiModel ID)"""
 
     questions: Optional[List[GenaiQuestion]] = None
     r"""Typed questions to evaluate against the messages (for decision models such as TypeSafe Jev)."""

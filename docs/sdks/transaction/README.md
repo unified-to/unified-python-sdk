@@ -13,7 +13,7 @@
 
 ## create_accounting_transaction
 
-Create a transaction
+Creates a AccountingTransaction. Provide the unified AccountingTransaction fields in the request body; they are mapped to the provider's API. Returns the created AccountingTransaction.
 
 ### Example Usage
 
@@ -33,12 +33,12 @@ with UnifiedTo(
     res = unified_to.transaction.create_accounting_transaction(request={
         "accounting_transaction": {
             "created_at": parse_datetime("2019-09-25T11:40:42.574Z"),
-            "id": "251a49f7-c871-44c9-ae34-9ae0138b1f8d",
+            "id": "52dd8af7-7cd7-4625-ab77-a9d341b24d4c",
             "lineitems": [
                 {
                     "category_ids": [],
                     "description": "The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability",
-                    "id": "76027784-fd4c-4d97-84c3-34037ee14b43",
+                    "id": "d314aa8e-2877-4e1f-8e2d-e1854503d98a",
                     "name": "Shirt",
                     "total_amount": 10184.0,
                     "unit_amount": 536.0,
@@ -50,7 +50,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "total_amount": 10184.0,
             "transaction_at": parse_datetime("2019-09-25T11:40:42.574Z"),
-            "updated_at": parse_datetime("2019-10-14T06:08:27.202Z"),
+            "updated_at": parse_datetime("2019-10-14T06:18:51.360Z"),
         },
         "connection_id": "<id>",
     })
@@ -81,7 +81,7 @@ with UnifiedTo(
 
 ## get_accounting_transaction
 
-Retrieve a transaction
+Retrieves a single AccountingTransaction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -128,7 +128,7 @@ with UnifiedTo(
 
 ## list_accounting_transactions
 
-List all transactions
+Returns a list of AccountingTransactions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -174,7 +174,7 @@ with UnifiedTo(
 
 ## patch_accounting_transaction
 
-Update a transaction
+Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction fields to change in the request body.
 
 ### Example Usage
 
@@ -194,12 +194,12 @@ with UnifiedTo(
     res = unified_to.transaction.patch_accounting_transaction(request={
         "accounting_transaction": {
             "created_at": parse_datetime("2019-09-25T11:40:42.574Z"),
-            "id": "653c6524-7f22-4944-81c8-880be085e034",
+            "id": "22225963-66fb-48f2-9300-11e70830bb12",
             "lineitems": [
                 {
                     "category_ids": [],
                     "description": "The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability",
-                    "id": "4587fa53-e4f7-4468-b0ff-7c8d83fb147b",
+                    "id": "577033d5-6fa9-46c2-938e-3831528b30c8",
                     "name": "Shirt",
                     "total_amount": 10184.0,
                     "unit_amount": 536.0,
@@ -211,7 +211,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "total_amount": 10184.0,
             "transaction_at": parse_datetime("2019-09-25T11:40:42.574Z"),
-            "updated_at": parse_datetime("2019-10-14T06:08:27.202Z"),
+            "updated_at": parse_datetime("2019-10-14T06:18:51.360Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -243,7 +243,7 @@ with UnifiedTo(
 
 ## remove_accounting_transaction
 
-Remove a transaction
+Deletes the AccountingTransaction identified by `id`.
 
 ### Example Usage
 
@@ -290,7 +290,7 @@ with UnifiedTo(
 
 ## update_accounting_transaction
 
-Update a transaction
+Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction fields to change in the request body.
 
 ### Example Usage
 
@@ -310,12 +310,12 @@ with UnifiedTo(
     res = unified_to.transaction.update_accounting_transaction(request={
         "accounting_transaction": {
             "created_at": parse_datetime("2019-09-25T11:40:42.574Z"),
-            "id": "653c6524-7f22-4944-81c8-880be085e034",
+            "id": "22225963-66fb-48f2-9300-11e70830bb12",
             "lineitems": [
                 {
                     "category_ids": [],
                     "description": "The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability",
-                    "id": "4587fa53-e4f7-4468-b0ff-7c8d83fb147b",
+                    "id": "577033d5-6fa9-46c2-938e-3831528b30c8",
                     "name": "Shirt",
                     "total_amount": 10184.0,
                     "unit_amount": 536.0,
@@ -327,7 +327,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "total_amount": 10184.0,
             "transaction_at": parse_datetime("2019-09-25T11:40:42.574Z"),
-            "updated_at": parse_datetime("2019-10-14T06:08:27.202Z"),
+            "updated_at": parse_datetime("2019-10-14T06:18:51.360Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

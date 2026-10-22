@@ -24,6 +24,8 @@ class Practicearea(BaseSDK):
     ) -> operations.CreateLegalPracticeareaResponse:
         r"""Create a practicearea
 
+        Creates a LegalPracticearea. Provide the unified LegalPracticearea fields in the request body; they are mapped to the provider's API. Returns the created LegalPracticearea.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -124,6 +126,8 @@ class Practicearea(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateLegalPracticeareaResponse:
         r"""Create a practicearea
+
+        Creates a LegalPracticearea. Provide the unified LegalPracticearea fields in the request body; they are mapped to the provider's API. Returns the created LegalPracticearea.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -226,6 +230,8 @@ class Practicearea(BaseSDK):
     ) -> operations.GetLegalPracticeareaResponse:
         r"""Retrieve a practicearea
 
+        Retrieves a single LegalPracticearea by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -317,6 +323,8 @@ class Practicearea(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetLegalPracticeareaResponse:
         r"""Retrieve a practicearea
+
+        Retrieves a single LegalPracticearea by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -410,6 +418,8 @@ class Practicearea(BaseSDK):
     ) -> operations.ListLegalPracticeareasResponse:
         r"""List all practiceareas
 
+        Returns a list of LegalPracticeareas. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -502,6 +512,8 @@ class Practicearea(BaseSDK):
     ) -> operations.ListLegalPracticeareasResponse:
         r"""List all practiceareas
 
+        Returns a list of LegalPracticeareas. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -593,6 +605,8 @@ class Practicearea(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchLegalPracticeareaResponse:
         r"""Update a practicearea
+
+        Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -693,6 +707,8 @@ class Practicearea(BaseSDK):
     ) -> operations.PatchLegalPracticeareaResponse:
         r"""Update a practicearea
 
+        Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -791,6 +807,8 @@ class Practicearea(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveLegalPracticeareaResponse:
         r"""Remove a practicearea
+
+        Deletes the LegalPracticearea identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -891,6 +909,8 @@ class Practicearea(BaseSDK):
     ) -> operations.RemoveLegalPracticeareaResponse:
         r"""Remove a practicearea
 
+        Deletes the LegalPracticearea identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -989,6 +1009,8 @@ class Practicearea(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateLegalPracticeareaResponse:
         r"""Update a practicearea
+
+        Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1090,6 +1112,8 @@ class Practicearea(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateLegalPracticeareaResponse:
         r"""Update a practicearea
+
+        Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

@@ -24,6 +24,8 @@ class Calendar(BaseSDK):
     ) -> operations.CreateCalendarCalendarResponse:
         r"""Create a calendar
 
+        Creates a CalendarCalendar. Provide the unified CalendarCalendar fields in the request body; they are mapped to the provider's API. Returns the created CalendarCalendar.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -118,6 +120,8 @@ class Calendar(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateCalendarCalendarResponse:
         r"""Create a calendar
+
+        Creates a CalendarCalendar. Provide the unified CalendarCalendar fields in the request body; they are mapped to the provider's API. Returns the created CalendarCalendar.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -214,6 +218,8 @@ class Calendar(BaseSDK):
     ) -> operations.CreateCalendarEventResponse:
         r"""Create an event
 
+        Creates a CalendarEvent. Provide the unified CalendarEvent fields in the request body; they are mapped to the provider's API. Returns the created CalendarEvent.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -308,6 +314,8 @@ class Calendar(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateCalendarEventResponse:
         r"""Create an event
+
+        Creates a CalendarEvent. Provide the unified CalendarEvent fields in the request body; they are mapped to the provider's API. Returns the created CalendarEvent.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -404,6 +412,8 @@ class Calendar(BaseSDK):
     ) -> operations.CreateCalendarLinkResponse:
         r"""Create a link
 
+        Creates a CalendarLink. Provide the unified CalendarLink fields in the request body; they are mapped to the provider's API. Returns the created CalendarLink.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -498,6 +508,8 @@ class Calendar(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateCalendarLinkResponse:
         r"""Create a link
+
+        Creates a CalendarLink. Provide the unified CalendarLink fields in the request body; they are mapped to the provider's API. Returns the created CalendarLink.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -594,6 +606,8 @@ class Calendar(BaseSDK):
     ) -> operations.CreateCalendarWebinarResponse:
         r"""Create a webinar
 
+        Creates a CalendarWebinar. Provide the unified CalendarWebinar fields in the request body; they are mapped to the provider's API. Returns the created CalendarWebinar.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -688,6 +702,8 @@ class Calendar(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateCalendarWebinarResponse:
         r"""Create a webinar
+
+        Creates a CalendarWebinar. Provide the unified CalendarWebinar fields in the request body; they are mapped to the provider's API. Returns the created CalendarWebinar.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -784,6 +800,8 @@ class Calendar(BaseSDK):
     ) -> operations.GetCalendarCalendarResponse:
         r"""Retrieve a calendar
 
+        Retrieves a single CalendarCalendar by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -875,6 +893,8 @@ class Calendar(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetCalendarCalendarResponse:
         r"""Retrieve a calendar
+
+        Retrieves a single CalendarCalendar by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -968,6 +988,8 @@ class Calendar(BaseSDK):
     ) -> operations.GetCalendarEventResponse:
         r"""Retrieve an event
 
+        Retrieves a single CalendarEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1059,6 +1081,8 @@ class Calendar(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetCalendarEventResponse:
         r"""Retrieve an event
+
+        Retrieves a single CalendarEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1152,6 +1176,8 @@ class Calendar(BaseSDK):
     ) -> operations.GetCalendarLinkResponse:
         r"""Retrieve a link
 
+        Retrieves a single CalendarLink by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1243,6 +1269,8 @@ class Calendar(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetCalendarLinkResponse:
         r"""Retrieve a link
+
+        Retrieves a single CalendarLink by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1336,6 +1364,8 @@ class Calendar(BaseSDK):
     ) -> operations.GetCalendarRecordingResponse:
         r"""Retrieve a recording
 
+        Retrieves a single CalendarRecording by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1427,6 +1457,8 @@ class Calendar(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetCalendarRecordingResponse:
         r"""Retrieve a recording
+
+        Retrieves a single CalendarRecording by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1520,6 +1552,8 @@ class Calendar(BaseSDK):
     ) -> operations.GetCalendarWebinarResponse:
         r"""Retrieve a webinar
 
+        Retrieves a single CalendarWebinar by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1611,6 +1645,8 @@ class Calendar(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetCalendarWebinarResponse:
         r"""Retrieve a webinar
+
+        Retrieves a single CalendarWebinar by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1704,6 +1740,8 @@ class Calendar(BaseSDK):
     ) -> operations.ListCalendarBusiesResponse:
         r"""List all busies
 
+        Returns a list of CalendarBusies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1795,6 +1833,8 @@ class Calendar(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListCalendarBusiesResponse:
         r"""List all busies
+
+        Returns a list of CalendarBusies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1888,6 +1928,8 @@ class Calendar(BaseSDK):
     ) -> operations.ListCalendarCalendarsResponse:
         r"""List all calendars
 
+        Returns a list of CalendarCalendars. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1979,6 +2021,8 @@ class Calendar(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListCalendarCalendarsResponse:
         r"""List all calendars
+
+        Returns a list of CalendarCalendars. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2072,6 +2116,8 @@ class Calendar(BaseSDK):
     ) -> operations.ListCalendarEventsResponse:
         r"""List all events
 
+        Returns a list of CalendarEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2163,6 +2209,8 @@ class Calendar(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListCalendarEventsResponse:
         r"""List all events
+
+        Returns a list of CalendarEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2256,6 +2304,8 @@ class Calendar(BaseSDK):
     ) -> operations.ListCalendarLinksResponse:
         r"""List all links
 
+        Returns a list of CalendarLinks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2347,6 +2397,8 @@ class Calendar(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListCalendarLinksResponse:
         r"""List all links
+
+        Returns a list of CalendarLinks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2440,6 +2492,8 @@ class Calendar(BaseSDK):
     ) -> operations.ListCalendarRecordingsResponse:
         r"""List all recordings
 
+        Returns a list of CalendarRecordings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2531,6 +2585,8 @@ class Calendar(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListCalendarRecordingsResponse:
         r"""List all recordings
+
+        Returns a list of CalendarRecordings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2624,6 +2680,8 @@ class Calendar(BaseSDK):
     ) -> operations.ListCalendarWebinarsResponse:
         r"""List all webinars
 
+        Returns a list of CalendarWebinars. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2716,6 +2774,8 @@ class Calendar(BaseSDK):
     ) -> operations.ListCalendarWebinarsResponse:
         r"""List all webinars
 
+        Returns a list of CalendarWebinars. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2807,6 +2867,8 @@ class Calendar(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchCalendarCalendarResponse:
         r"""Update a calendar
+
+        Updates the CalendarCalendar identified by `id`. Provide the unified CalendarCalendar fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2903,6 +2965,8 @@ class Calendar(BaseSDK):
     ) -> operations.PatchCalendarCalendarResponse:
         r"""Update a calendar
 
+        Updates the CalendarCalendar identified by `id`. Provide the unified CalendarCalendar fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2997,6 +3061,8 @@ class Calendar(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchCalendarEventResponse:
         r"""Update an event
+
+        Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3093,6 +3159,8 @@ class Calendar(BaseSDK):
     ) -> operations.PatchCalendarEventResponse:
         r"""Update an event
 
+        Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3187,6 +3255,8 @@ class Calendar(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchCalendarLinkResponse:
         r"""Update a link
+
+        Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3283,6 +3353,8 @@ class Calendar(BaseSDK):
     ) -> operations.PatchCalendarLinkResponse:
         r"""Update a link
 
+        Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3377,6 +3449,8 @@ class Calendar(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchCalendarWebinarResponse:
         r"""Update a webinar
+
+        Updates the CalendarWebinar identified by `id`. Provide the unified CalendarWebinar fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3473,6 +3547,8 @@ class Calendar(BaseSDK):
     ) -> operations.PatchCalendarWebinarResponse:
         r"""Update a webinar
 
+        Updates the CalendarWebinar identified by `id`. Provide the unified CalendarWebinar fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3567,6 +3643,8 @@ class Calendar(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveCalendarCalendarResponse:
         r"""Remove a calendar
+
+        Deletes the CalendarCalendar identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3665,6 +3743,8 @@ class Calendar(BaseSDK):
     ) -> operations.RemoveCalendarCalendarResponse:
         r"""Remove a calendar
 
+        Deletes the CalendarCalendar identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3761,6 +3841,8 @@ class Calendar(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveCalendarEventResponse:
         r"""Remove an event
+
+        Deletes the CalendarEvent identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3859,6 +3941,8 @@ class Calendar(BaseSDK):
     ) -> operations.RemoveCalendarEventResponse:
         r"""Remove an event
 
+        Deletes the CalendarEvent identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3955,6 +4039,8 @@ class Calendar(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveCalendarLinkResponse:
         r"""Remove a link
+
+        Deletes the CalendarLink identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4053,6 +4139,8 @@ class Calendar(BaseSDK):
     ) -> operations.RemoveCalendarLinkResponse:
         r"""Remove a link
 
+        Deletes the CalendarLink identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4149,6 +4237,8 @@ class Calendar(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveCalendarWebinarResponse:
         r"""Remove a webinar
+
+        Deletes the CalendarWebinar identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4247,6 +4337,8 @@ class Calendar(BaseSDK):
     ) -> operations.RemoveCalendarWebinarResponse:
         r"""Remove a webinar
 
+        Deletes the CalendarWebinar identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4344,6 +4436,8 @@ class Calendar(BaseSDK):
     ) -> operations.UpdateCalendarCalendarResponse:
         r"""Update a calendar
 
+        Updates the CalendarCalendar identified by `id`. Provide the unified CalendarCalendar fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4438,6 +4532,8 @@ class Calendar(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateCalendarCalendarResponse:
         r"""Update a calendar
+
+        Updates the CalendarCalendar identified by `id`. Provide the unified CalendarCalendar fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4534,6 +4630,8 @@ class Calendar(BaseSDK):
     ) -> operations.UpdateCalendarEventResponse:
         r"""Update an event
 
+        Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4628,6 +4726,8 @@ class Calendar(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateCalendarEventResponse:
         r"""Update an event
+
+        Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4724,6 +4824,8 @@ class Calendar(BaseSDK):
     ) -> operations.UpdateCalendarLinkResponse:
         r"""Update a link
 
+        Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4818,6 +4920,8 @@ class Calendar(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateCalendarLinkResponse:
         r"""Update a link
+
+        Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4914,6 +5018,8 @@ class Calendar(BaseSDK):
     ) -> operations.UpdateCalendarWebinarResponse:
         r"""Update a webinar
 
+        Updates the CalendarWebinar identified by `id`. Provide the unified CalendarWebinar fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5008,6 +5114,8 @@ class Calendar(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateCalendarWebinarResponse:
         r"""Update a webinar
+
+        Updates the CalendarWebinar identified by `id`. Provide the unified CalendarWebinar fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

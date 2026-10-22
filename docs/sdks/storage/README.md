@@ -13,7 +13,7 @@
 
 ## create_storage_file
 
-Create a file
+Creates a StorageFile. Provide the unified StorageFile fields in the request body; they are mapped to the provider's API. Returns the created StorageFile.
 
 ### Example Usage
 
@@ -36,7 +36,7 @@ with UnifiedTo(
             "description": "Deprimo crastinus cupiditate debilito cimentarius virgo acidus.",
             "download_url": "https://clueless-laughter.biz",
             "hash": "d9d88dda7bc0acaa8472fdef2307f94a1fc355ce",
-            "id": "2d3fe602-18ea-4944-850d-72c582336ce5",
+            "id": "0d1cd6f6-0356-40db-aa64-5bd641156fd9",
             "metadata": [],
             "mime_type": "application/pdf",
             "name": "softly.pdf",
@@ -45,7 +45,7 @@ with UnifiedTo(
                 "suasoria",
             ],
             "type": shared.StorageFileType.FOLDER,
-            "updated_at": parse_datetime("2023-02-05T12:58:56.024Z"),
+            "updated_at": parse_datetime("2023-02-05T19:31:07.733Z"),
             "version": "1",
             "web_url": "https://faraway-inspection.org",
         },
@@ -78,7 +78,7 @@ with UnifiedTo(
 
 ## get_storage_file
 
-Retrieve a file
+Retrieves a single StorageFile by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -125,7 +125,7 @@ with UnifiedTo(
 
 ## list_storage_files
 
-List all files
+Returns a list of StorageFiles. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -171,7 +171,7 @@ with UnifiedTo(
 
 ## patch_storage_file
 
-Update a file
+Updates the StorageFile identified by `id`. Provide the unified StorageFile fields to change in the request body.
 
 ### Example Usage
 
@@ -194,7 +194,7 @@ with UnifiedTo(
             "description": "Deprimo crastinus cupiditate debilito cimentarius virgo acidus.",
             "download_url": "https://clueless-laughter.biz",
             "hash": "d9d88dda7bc0acaa8472fdef2307f94a1fc355ce",
-            "id": "4ed4d0d4-637e-4c3b-87d1-8b1842aacf7c",
+            "id": "73931f2f-2719-461f-bde3-d18f871c1ec2",
             "metadata": [],
             "mime_type": "application/pdf",
             "name": "softly.pdf",
@@ -203,7 +203,7 @@ with UnifiedTo(
                 "suasoria",
             ],
             "type": shared.StorageFileType.FOLDER,
-            "updated_at": parse_datetime("2023-02-05T12:58:56.050Z"),
+            "updated_at": parse_datetime("2023-02-05T19:31:07.740Z"),
             "version": "1",
             "web_url": "https://faraway-inspection.org",
         },
@@ -237,7 +237,7 @@ with UnifiedTo(
 
 ## remove_storage_file
 
-Remove a file
+Deletes the StorageFile identified by `id`.
 
 ### Example Usage
 
@@ -284,7 +284,7 @@ with UnifiedTo(
 
 ## update_storage_file
 
-Update a file
+Updates the StorageFile identified by `id`. Provide the unified StorageFile fields to change in the request body.
 
 ### Example Usage
 
@@ -307,7 +307,7 @@ with UnifiedTo(
             "description": "Deprimo crastinus cupiditate debilito cimentarius virgo acidus.",
             "download_url": "https://clueless-laughter.biz",
             "hash": "d9d88dda7bc0acaa8472fdef2307f94a1fc355ce",
-            "id": "4ed4d0d4-637e-4c3b-87d1-8b1842aacf7c",
+            "id": "73931f2f-2719-461f-bde3-d18f871c1ec2",
             "metadata": [],
             "mime_type": "application/pdf",
             "name": "softly.pdf",
@@ -316,7 +316,7 @@ with UnifiedTo(
                 "suasoria",
             ],
             "type": shared.StorageFileType.FOLDER,
-            "updated_at": parse_datetime("2023-02-05T12:58:56.050Z"),
+            "updated_at": parse_datetime("2023-02-05T19:31:07.740Z"),
             "version": "1",
             "web_url": "https://faraway-inspection.org",
         },

@@ -19,7 +19,7 @@
 
 ## create_commerce_review
 
-Create a review
+Creates a CommerceReview. Provide the unified CommerceReview fields in the request body; they are mapped to the provider's API. Returns the created CommerceReview.
 
 ### Example Usage
 
@@ -46,7 +46,7 @@ with UnifiedTo(
             "content": "Taedium thymum adipiscor amicitia cui.",
             "created_at": parse_datetime("2019-12-12T18:10:22.988Z"),
             "helpful_votes": 66.0,
-            "id": "c2da663a-21b5-4ea4-a446-610757c27c56",
+            "id": "5511e647-c88b-49ec-a719-ff9102b72c8a",
             "is_featured": False,
             "is_public": True,
             "is_verified": False,
@@ -54,10 +54,10 @@ with UnifiedTo(
                 {
                     "alt": "Desipio carpo sol laudantium colo.",
                     "height": 749.0,
-                    "id": "1e3fd32a-4610-432e-9851-0d3804aaa2ea",
+                    "id": "655ee5a2-586f-49e6-b928-af0c396e311b",
                     "metadata": [
                         {
-                            "id": "5fcb2b44-de9f-4391-a383-ed870bb521e9",
+                            "id": "f431de97-875f-45bb-b368-5a2124680506",
                             "slug": "textor",
                             "value": "quos",
                         },
@@ -70,10 +70,10 @@ with UnifiedTo(
                 {
                     "alt": "Adopto teneo numquam.",
                     "height": 957.0,
-                    "id": "2aa6532b-3d54-4948-bca4-7157b1e37850",
+                    "id": "8ab75126-17bf-45c6-b025-20689efa94a0",
                     "metadata": [
                         {
-                            "id": "f2edfd61-8808-420d-9762-b42c1be5af75",
+                            "id": "37f21345-4a56-42ee-bdba-e3331ac2b3a7",
                             "slug": "bos",
                             "value": "casso",
                         },
@@ -89,7 +89,7 @@ with UnifiedTo(
             "status": shared.CommerceReviewStatus.APPROVED,
             "title": "Coepi adamo amicitia auxilium toties.",
             "unhelpful_votes": 88.0,
-            "updated_at": parse_datetime("2025-08-21T08:38:25.737Z"),
+            "updated_at": parse_datetime("2025-08-22T04:26:27.338Z"),
             "url": "https://diligent-bandwidth.biz",
             "verified_purchase": True,
         },
@@ -122,7 +122,7 @@ with UnifiedTo(
 
 ## get_commerce_review
 
-Retrieve a review
+Retrieves a single CommerceReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -169,7 +169,7 @@ with UnifiedTo(
 
 ## get_performance_review
 
-Retrieve a review
+Retrieves a single PerformanceReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -216,7 +216,7 @@ with UnifiedTo(
 
 ## get_social_review
 
-Retrieve a review
+Retrieves a single SocialReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -263,7 +263,7 @@ with UnifiedTo(
 
 ## list_commerce_reviews
 
-List all reviews
+Returns a list of CommerceReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -309,7 +309,7 @@ with UnifiedTo(
 
 ## list_performance_reviews
 
-List all reviews
+Returns a list of PerformanceReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -355,7 +355,7 @@ with UnifiedTo(
 
 ## list_social_reviews
 
-List all reviews
+Returns a list of SocialReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -401,7 +401,7 @@ with UnifiedTo(
 
 ## patch_commerce_review
 
-Update a review
+Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change in the request body.
 
 ### Example Usage
 
@@ -428,7 +428,7 @@ with UnifiedTo(
             "content": "Taedium thymum adipiscor amicitia cui.",
             "created_at": parse_datetime("2019-12-12T18:10:22.988Z"),
             "helpful_votes": 66.0,
-            "id": "3042d3f8-9fbc-46b0-b868-af20ff44ed39",
+            "id": "68f33a18-c78b-4069-a9b5-44e7f13e5a51",
             "is_featured": False,
             "is_public": True,
             "is_verified": False,
@@ -436,10 +436,10 @@ with UnifiedTo(
                 {
                     "alt": "Desipio carpo sol laudantium colo.",
                     "height": 749.0,
-                    "id": "ce1beb97-f91c-41ec-b53f-fea949768d8a",
+                    "id": "34369488-7bac-478b-9dcd-1a33de100275",
                     "metadata": [
                         {
-                            "id": "77a98416-9dac-4170-bd7d-9086f6cb758c",
+                            "id": "54ecfb50-7895-4f9d-87d5-db6f71068c76",
                             "slug": "textor",
                             "value": "quos",
                         },
@@ -452,10 +452,10 @@ with UnifiedTo(
                 {
                     "alt": "Adopto teneo numquam.",
                     "height": 957.0,
-                    "id": "9c8f5a51-1fe5-447f-b2e4-d222e57e27f2",
+                    "id": "1e8a1d76-307a-42fa-aa87-d954fe49d115",
                     "metadata": [
                         {
-                            "id": "70d7c585-1287-45dc-950c-352a0b0acb5d",
+                            "id": "0cbc7a59-778a-4ad9-9e52-3788fb32cc25",
                             "slug": "bos",
                             "value": "casso",
                         },
@@ -471,7 +471,7 @@ with UnifiedTo(
             "status": shared.CommerceReviewStatus.APPROVED,
             "title": "Coepi adamo amicitia auxilium toties.",
             "unhelpful_votes": 88.0,
-            "updated_at": parse_datetime("2025-08-21T08:38:25.775Z"),
+            "updated_at": parse_datetime("2025-08-22T04:26:27.383Z"),
             "url": "https://diligent-bandwidth.biz",
             "verified_purchase": True,
         },
@@ -505,7 +505,7 @@ with UnifiedTo(
 
 ## patch_social_review
 
-Update a review
+Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in the request body.
 
 ### Example Usage
 
@@ -553,7 +553,7 @@ with UnifiedTo(
 
 ## remove_commerce_review
 
-Remove a review
+Deletes the CommerceReview identified by `id`.
 
 ### Example Usage
 
@@ -600,7 +600,7 @@ with UnifiedTo(
 
 ## update_commerce_review
 
-Update a review
+Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change in the request body.
 
 ### Example Usage
 
@@ -627,7 +627,7 @@ with UnifiedTo(
             "content": "Taedium thymum adipiscor amicitia cui.",
             "created_at": parse_datetime("2019-12-12T18:10:22.988Z"),
             "helpful_votes": 66.0,
-            "id": "3042d3f8-9fbc-46b0-b868-af20ff44ed39",
+            "id": "68f33a18-c78b-4069-a9b5-44e7f13e5a51",
             "is_featured": False,
             "is_public": True,
             "is_verified": False,
@@ -635,10 +635,10 @@ with UnifiedTo(
                 {
                     "alt": "Desipio carpo sol laudantium colo.",
                     "height": 749.0,
-                    "id": "ce1beb97-f91c-41ec-b53f-fea949768d8a",
+                    "id": "34369488-7bac-478b-9dcd-1a33de100275",
                     "metadata": [
                         {
-                            "id": "77a98416-9dac-4170-bd7d-9086f6cb758c",
+                            "id": "54ecfb50-7895-4f9d-87d5-db6f71068c76",
                             "slug": "textor",
                             "value": "quos",
                         },
@@ -651,10 +651,10 @@ with UnifiedTo(
                 {
                     "alt": "Adopto teneo numquam.",
                     "height": 957.0,
-                    "id": "9c8f5a51-1fe5-447f-b2e4-d222e57e27f2",
+                    "id": "1e8a1d76-307a-42fa-aa87-d954fe49d115",
                     "metadata": [
                         {
-                            "id": "70d7c585-1287-45dc-950c-352a0b0acb5d",
+                            "id": "0cbc7a59-778a-4ad9-9e52-3788fb32cc25",
                             "slug": "bos",
                             "value": "casso",
                         },
@@ -670,7 +670,7 @@ with UnifiedTo(
             "status": shared.CommerceReviewStatus.APPROVED,
             "title": "Coepi adamo amicitia auxilium toties.",
             "unhelpful_votes": 88.0,
-            "updated_at": parse_datetime("2025-08-21T08:38:25.775Z"),
+            "updated_at": parse_datetime("2025-08-22T04:26:27.383Z"),
             "url": "https://diligent-bandwidth.biz",
             "verified_purchase": True,
         },
@@ -704,7 +704,7 @@ with UnifiedTo(
 
 ## update_social_review
 
-Update a review
+Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in the request body.
 
 ### Example Usage
 

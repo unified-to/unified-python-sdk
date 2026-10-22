@@ -24,6 +24,8 @@ class Collection(BaseSDK):
     ) -> operations.CreateCommerceCollectionResponse:
         r"""Create a collection
 
+        Creates a CommerceCollection. Provide the unified CommerceCollection fields in the request body; they are mapped to the provider's API. Returns the created CommerceCollection.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -124,6 +126,8 @@ class Collection(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateCommerceCollectionResponse:
         r"""Create a collection
+
+        Creates a CommerceCollection. Provide the unified CommerceCollection fields in the request body; they are mapped to the provider's API. Returns the created CommerceCollection.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -226,6 +230,8 @@ class Collection(BaseSDK):
     ) -> operations.CreateLmsCollectionResponse:
         r"""Create a collection
 
+        Creates a LmsCollection. Provide the unified LmsCollection fields in the request body; they are mapped to the provider's API. Returns the created LmsCollection.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -320,6 +326,8 @@ class Collection(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateLmsCollectionResponse:
         r"""Create a collection
+
+        Creates a LmsCollection. Provide the unified LmsCollection fields in the request body; they are mapped to the provider's API. Returns the created LmsCollection.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -416,6 +424,8 @@ class Collection(BaseSDK):
     ) -> operations.GetCommerceCollectionResponse:
         r"""Retrieve a collection
 
+        Retrieves a single CommerceCollection by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -507,6 +517,8 @@ class Collection(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetCommerceCollectionResponse:
         r"""Retrieve a collection
+
+        Retrieves a single CommerceCollection by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -600,6 +612,8 @@ class Collection(BaseSDK):
     ) -> operations.GetLmsCollectionResponse:
         r"""Retrieve a collection
 
+        Retrieves a single LmsCollection by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -692,6 +706,8 @@ class Collection(BaseSDK):
     ) -> operations.GetLmsCollectionResponse:
         r"""Retrieve a collection
 
+        Retrieves a single LmsCollection by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -783,6 +799,8 @@ class Collection(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListCommerceCollectionsResponse:
         r"""List all collections
+
+        Returns a list of CommerceCollections. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -878,6 +896,8 @@ class Collection(BaseSDK):
     ) -> operations.ListCommerceCollectionsResponse:
         r"""List all collections
 
+        Returns a list of CommerceCollections. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -972,6 +992,8 @@ class Collection(BaseSDK):
     ) -> operations.ListLmsCollectionsResponse:
         r"""List all collections
 
+        Returns a list of LmsCollections. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1064,6 +1086,8 @@ class Collection(BaseSDK):
     ) -> operations.ListLmsCollectionsResponse:
         r"""List all collections
 
+        Returns a list of LmsCollections. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1155,6 +1179,8 @@ class Collection(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchCommerceCollectionResponse:
         r"""Update a collection
+
+        Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1257,6 +1283,8 @@ class Collection(BaseSDK):
     ) -> operations.PatchCommerceCollectionResponse:
         r"""Update a collection
 
+        Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1358,6 +1386,8 @@ class Collection(BaseSDK):
     ) -> operations.PatchLmsCollectionResponse:
         r"""Update a collection
 
+        Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1453,6 +1483,8 @@ class Collection(BaseSDK):
     ) -> operations.PatchLmsCollectionResponse:
         r"""Update a collection
 
+        Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1547,6 +1579,8 @@ class Collection(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveCommerceCollectionResponse:
         r"""Remove a collection
+
+        Deletes the CommerceCollection identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1647,6 +1681,8 @@ class Collection(BaseSDK):
     ) -> operations.RemoveCommerceCollectionResponse:
         r"""Remove a collection
 
+        Deletes the CommerceCollection identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1746,6 +1782,8 @@ class Collection(BaseSDK):
     ) -> operations.RemoveLmsCollectionResponse:
         r"""Remove a collection
 
+        Deletes the LmsCollection identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1843,6 +1881,8 @@ class Collection(BaseSDK):
     ) -> operations.RemoveLmsCollectionResponse:
         r"""Remove a collection
 
+        Deletes the LmsCollection identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1939,6 +1979,8 @@ class Collection(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateCommerceCollectionResponse:
         r"""Update a collection
+
+        Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2041,6 +2083,8 @@ class Collection(BaseSDK):
     ) -> operations.UpdateCommerceCollectionResponse:
         r"""Update a collection
 
+        Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2142,6 +2186,8 @@ class Collection(BaseSDK):
     ) -> operations.UpdateLmsCollectionResponse:
         r"""Update a collection
 
+        Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2236,6 +2282,8 @@ class Collection(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateLmsCollectionResponse:
         r"""Update a collection
+
+        Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

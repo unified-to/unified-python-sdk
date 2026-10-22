@@ -13,7 +13,7 @@
 
 ## create_payment_subscription
 
-Create a subscription
+Creates a PaymentSubscription. Provide the unified PaymentSubscription fields in the request body; they are mapped to the provider's API. Returns the created PaymentSubscription.
 
 ### Example Usage
 
@@ -38,7 +38,7 @@ with UnifiedTo(
             "current_period_start_at": parse_datetime("2023-05-08T10:11:03.414Z"),
             "day_of_month": 8.0,
             "description": "Innovative Mouse featuring important technology and Bamboo construction",
-            "id": "cd1547b7-5292-4f71-af9d-d046946a7fcf",
+            "id": "ec15d0db-8265-4e03-93fb-6af020431b8f",
             "interval": 1.0,
             "interval_unit": shared.IntervalUnit.YEAR,
             "lineitems": [],
@@ -47,7 +47,7 @@ with UnifiedTo(
             "start_at": parse_datetime("2023-05-08T10:11:03.414Z"),
             "status": shared.PaymentSubscriptionStatus.ACTIVE,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2023-10-04T12:52:17.662Z"),
+            "updated_at": parse_datetime("2023-10-04T15:41:28.097Z"),
         },
         "connection_id": "<id>",
     })
@@ -78,7 +78,7 @@ with UnifiedTo(
 
 ## get_payment_subscription
 
-Retrieve a subscription
+Retrieves a single PaymentSubscription by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -125,7 +125,7 @@ with UnifiedTo(
 
 ## list_payment_subscriptions
 
-List all subscriptions
+Returns a list of PaymentSubscriptions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -171,7 +171,7 @@ with UnifiedTo(
 
 ## patch_payment_subscription
 
-Update a subscription
+Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields to change in the request body.
 
 ### Example Usage
 
@@ -196,7 +196,7 @@ with UnifiedTo(
             "current_period_start_at": parse_datetime("2023-05-08T10:11:03.414Z"),
             "day_of_month": 8.0,
             "description": "Innovative Mouse featuring important technology and Bamboo construction",
-            "id": "6b1072e3-79fc-4a84-af1b-e01794f9334a",
+            "id": "d45db3c0-8446-4d27-878e-56e3b0022611",
             "interval": 1.0,
             "interval_unit": shared.IntervalUnit.YEAR,
             "lineitems": [],
@@ -205,7 +205,7 @@ with UnifiedTo(
             "start_at": parse_datetime("2023-05-08T10:11:03.414Z"),
             "status": shared.PaymentSubscriptionStatus.ACTIVE,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2023-10-04T12:52:17.667Z"),
+            "updated_at": parse_datetime("2023-10-04T15:41:28.101Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -237,7 +237,7 @@ with UnifiedTo(
 
 ## remove_payment_subscription
 
-Remove a subscription
+Deletes the PaymentSubscription identified by `id`.
 
 ### Example Usage
 
@@ -284,7 +284,7 @@ with UnifiedTo(
 
 ## update_payment_subscription
 
-Update a subscription
+Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields to change in the request body.
 
 ### Example Usage
 
@@ -309,7 +309,7 @@ with UnifiedTo(
             "current_period_start_at": parse_datetime("2023-05-08T10:11:03.414Z"),
             "day_of_month": 8.0,
             "description": "Innovative Mouse featuring important technology and Bamboo construction",
-            "id": "6b1072e3-79fc-4a84-af1b-e01794f9334a",
+            "id": "d45db3c0-8446-4d27-878e-56e3b0022611",
             "interval": 1.0,
             "interval_unit": shared.IntervalUnit.YEAR,
             "lineitems": [],
@@ -318,7 +318,7 @@ with UnifiedTo(
             "start_at": parse_datetime("2023-05-08T10:11:03.414Z"),
             "status": shared.PaymentSubscriptionStatus.ACTIVE,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2023-10-04T12:52:17.667Z"),
+            "updated_at": parse_datetime("2023-10-04T15:41:28.101Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

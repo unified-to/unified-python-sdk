@@ -13,7 +13,7 @@
 
 ## create_crm_lead
 
-Create a lead
+Creates a CrmLead. Provide the unified CrmLead fields in the request body; they are mapped to the provider's API. Returns the created CrmLead.
 
 ### Example Usage
 
@@ -49,7 +49,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Velda",
-            "id": "5d292300-797b-4000-b1ca-2012860106d7",
+            "id": "a5ff2dbc-ac11-4d68-87c6-e797c08278bb",
             "is_active": True,
             "last_name": "Sporer",
             "link_urls": [
@@ -61,7 +61,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CrmMetadataFormat.TEXT,
-                    "id": "8192ee89-602e-4056-a9d3-f6bff42b1a8b",
+                    "id": "8a6b03f1-da64-4cf4-869c-768a877990b1",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "vitiosus",
@@ -85,7 +85,7 @@ with UnifiedTo(
                 },
             ],
             "title": "International Factors Administrator",
-            "updated_at": parse_datetime("2020-05-17T21:34:24.238Z"),
+            "updated_at": parse_datetime("2020-05-17T23:36:15.811Z"),
         },
         "connection_id": "<id>",
     })
@@ -116,7 +116,7 @@ with UnifiedTo(
 
 ## get_crm_lead
 
-Retrieve a lead
+Retrieves a single CrmLead by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -163,7 +163,7 @@ with UnifiedTo(
 
 ## list_crm_leads
 
-List all leads
+Returns a list of CrmLeads. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -209,7 +209,7 @@ with UnifiedTo(
 
 ## patch_crm_lead
 
-Update a lead
+Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request body.
 
 ### Example Usage
 
@@ -245,7 +245,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Velda",
-            "id": "486acb6f-bf72-469b-83d6-d6d3bdce740f",
+            "id": "52f44fbc-4a77-45dc-94c8-577758fff89f",
             "is_active": True,
             "last_name": "Sporer",
             "link_urls": [
@@ -257,7 +257,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CrmMetadataFormat.TEXT,
-                    "id": "03fe51ec-f800-4a12-885f-f1f6de8f1320",
+                    "id": "7d5aa530-b73a-44e0-93ca-7e6fa6eabd74",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "vitiosus",
@@ -281,7 +281,7 @@ with UnifiedTo(
                 },
             ],
             "title": "International Factors Administrator",
-            "updated_at": parse_datetime("2020-05-17T21:34:24.241Z"),
+            "updated_at": parse_datetime("2020-05-17T23:36:15.815Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -313,7 +313,7 @@ with UnifiedTo(
 
 ## remove_crm_lead
 
-Remove a lead
+Deletes the CrmLead identified by `id`.
 
 ### Example Usage
 
@@ -360,7 +360,7 @@ with UnifiedTo(
 
 ## update_crm_lead
 
-Update a lead
+Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request body.
 
 ### Example Usage
 
@@ -396,7 +396,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Velda",
-            "id": "486acb6f-bf72-469b-83d6-d6d3bdce740f",
+            "id": "52f44fbc-4a77-45dc-94c8-577758fff89f",
             "is_active": True,
             "last_name": "Sporer",
             "link_urls": [
@@ -408,7 +408,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CrmMetadataFormat.TEXT,
-                    "id": "03fe51ec-f800-4a12-885f-f1f6de8f1320",
+                    "id": "7d5aa530-b73a-44e0-93ca-7e6fa6eabd74",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "vitiosus",
@@ -432,7 +432,7 @@ with UnifiedTo(
                 },
             ],
             "title": "International Factors Administrator",
-            "updated_at": parse_datetime("2020-05-17T21:34:24.241Z"),
+            "updated_at": parse_datetime("2020-05-17T23:36:15.815Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

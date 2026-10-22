@@ -46,15 +46,18 @@ class VerificationRequestTypedDict(TypedDict):
     id: NotRequired[str]
     metadata: NotRequired[List[VerificationMetadataTypedDict]]
     package_id: NotRequired[str]
+    r"""The ID of the verification package (the check) to run (a VerificationPackage ID)"""
     parameters: NotRequired[List[VerificationParameterInputTypedDict]]
     profile_addresses: NotRequired[List[VerificationAddressTypedDict]]
     profile_date_of_birth: NotRequired[str]
     r"""YYYY-MM-DD"""
     profile_emails: NotRequired[List[str]]
+    r"""The email addresses of the person being verified"""
     profile_gender: NotRequired[VerificationRequestProfileGender]
     profile_ip_address: NotRequired[str]
     r"""XXX.XXX.XXX.XXX"""
     profile_name: NotRequired[str]
+    r"""The full name of the person being verified"""
     profile_national_identifier: NotRequired[str]
     profile_telephones: NotRequired[List[str]]
     raw: NotRequired[Dict[str, Any]]
@@ -91,6 +94,7 @@ class VerificationRequest(BaseModel):
     metadata: Optional[List[VerificationMetadata]] = None
 
     package_id: Optional[str] = None
+    r"""The ID of the verification package (the check) to run (a VerificationPackage ID)"""
 
     parameters: Optional[List[VerificationParameterInput]] = None
 
@@ -100,6 +104,7 @@ class VerificationRequest(BaseModel):
     r"""YYYY-MM-DD"""
 
     profile_emails: Optional[List[str]] = None
+    r"""The email addresses of the person being verified"""
 
     profile_gender: Optional[VerificationRequestProfileGender] = None
 
@@ -107,6 +112,7 @@ class VerificationRequest(BaseModel):
     r"""XXX.XXX.XXX.XXX"""
 
     profile_name: Optional[str] = None
+    r"""The full name of the person being verified"""
 
     profile_national_identifier: Optional[str] = None
 

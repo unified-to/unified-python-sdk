@@ -13,7 +13,7 @@
 
 ## create_ads_insertionorder
 
-Create an insertionorder
+Creates a AdsInsertionorder. Provide the unified AdsInsertionorder fields in the request body; they are mapped to the provider's API. Returns the created AdsInsertionorder.
 
 ### Example Usage
 
@@ -33,11 +33,11 @@ with UnifiedTo(
     res = unified_to.insertionorder.create_ads_insertionorder(request={
         "ads_insertionorder": {
             "created_at": parse_datetime("2021-04-10T06:57:36.611Z"),
-            "id": "bdd0da08-c915-4875-be3a-063e7fb64d4c",
+            "id": "d9d82f2b-7a23-44c2-85d8-f8c463819d02",
             "metadata": [],
             "name": "Kunde, Smith and Reinger",
             "status": shared.AdsInsertionorderStatus.UNSPECIFIED,
-            "updated_at": parse_datetime("2021-04-28T19:47:26.861Z"),
+            "updated_at": parse_datetime("2021-04-28T20:00:34.954Z"),
         },
         "connection_id": "<id>",
     })
@@ -68,7 +68,7 @@ with UnifiedTo(
 
 ## get_ads_insertionorder
 
-Retrieve an insertionorder
+Retrieves a single AdsInsertionorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -115,7 +115,7 @@ with UnifiedTo(
 
 ## list_ads_insertionorders
 
-List all insertionorders
+Returns a list of AdsInsertionorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -161,7 +161,7 @@ with UnifiedTo(
 
 ## patch_ads_insertionorder
 
-Update an insertionorder
+Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to change in the request body.
 
 ### Example Usage
 
@@ -181,11 +181,11 @@ with UnifiedTo(
     res = unified_to.insertionorder.patch_ads_insertionorder(request={
         "ads_insertionorder": {
             "created_at": parse_datetime("2021-04-10T06:57:36.611Z"),
-            "id": "af783ba9-9dd7-4097-a3cc-009924b3063e",
+            "id": "d8e61816-9b36-4ba0-a417-2c6160c1d42a",
             "metadata": [],
             "name": "Kunde, Smith and Reinger",
             "status": shared.AdsInsertionorderStatus.UNSPECIFIED,
-            "updated_at": parse_datetime("2021-04-28T19:47:26.861Z"),
+            "updated_at": parse_datetime("2021-04-28T20:00:34.954Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -217,7 +217,7 @@ with UnifiedTo(
 
 ## remove_ads_insertionorder
 
-Remove an insertionorder
+Deletes the AdsInsertionorder identified by `id`.
 
 ### Example Usage
 
@@ -264,7 +264,7 @@ with UnifiedTo(
 
 ## update_ads_insertionorder
 
-Update an insertionorder
+Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to change in the request body.
 
 ### Example Usage
 
@@ -284,11 +284,11 @@ with UnifiedTo(
     res = unified_to.insertionorder.update_ads_insertionorder(request={
         "ads_insertionorder": {
             "created_at": parse_datetime("2021-04-10T06:57:36.611Z"),
-            "id": "af783ba9-9dd7-4097-a3cc-009924b3063e",
+            "id": "d8e61816-9b36-4ba0-a417-2c6160c1d42a",
             "metadata": [],
             "name": "Kunde, Smith and Reinger",
             "status": shared.AdsInsertionorderStatus.UNSPECIFIED,
-            "updated_at": parse_datetime("2021-04-28T19:47:26.861Z"),
+            "updated_at": parse_datetime("2021-04-28T20:00:34.954Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

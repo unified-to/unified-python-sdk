@@ -13,7 +13,7 @@
 
 ## create_accounting_bankfeedaccount
 
-Create a bankfeedaccount
+Creates a AccountingBankfeedaccount. Provide the unified AccountingBankfeedaccount fields in the request body; they are mapped to the provider's API. Returns the created AccountingBankfeedaccount.
 
 ### Example Usage
 
@@ -40,12 +40,12 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-10-31T16:42:19.277Z"),
             "currency": "AUD",
             "feed_start_at": parse_datetime("2022-10-31T16:42:19.277Z"),
-            "id": "da22f4c9-c9fc-4ee9-8788-43e54ea5aada",
+            "id": "329766c9-e779-4893-a2d5-4ea17f4c2e0f",
             "metadata": [],
             "name": "Corwin, Donnelly and Connelly Checking",
             "routing_number": "694667752",
             "status": shared.AccountingBankfeedaccountStatus.ACTIVE,
-            "updated_at": parse_datetime("2024-04-23T19:54:29.623Z"),
+            "updated_at": parse_datetime("2024-04-24T04:47:33.222Z"),
         },
         "connection_id": "<id>",
     })
@@ -76,7 +76,7 @@ with UnifiedTo(
 
 ## get_accounting_bankfeedaccount
 
-Retrieve a bankfeedaccount
+Retrieves a single AccountingBankfeedaccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -123,7 +123,7 @@ with UnifiedTo(
 
 ## list_accounting_bankfeedaccounts
 
-List all bankfeedaccounts
+Returns a list of AccountingBankfeedaccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -169,7 +169,7 @@ with UnifiedTo(
 
 ## patch_accounting_bankfeedaccount
 
-Update a bankfeedaccount
+Updates the AccountingBankfeedaccount identified by `id`. Provide the unified AccountingBankfeedaccount fields to change in the request body.
 
 ### Example Usage
 
@@ -196,12 +196,12 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-10-31T16:42:19.277Z"),
             "currency": "AUD",
             "feed_start_at": parse_datetime("2022-10-31T16:42:19.277Z"),
-            "id": "d423cdc2-464f-4d8a-8d72-aa5a223a0968",
+            "id": "8ec2518c-6f9b-4290-93cb-17782db67db4",
             "metadata": [],
             "name": "Corwin, Donnelly and Connelly Checking",
             "routing_number": "694667752",
             "status": shared.AccountingBankfeedaccountStatus.ACTIVE,
-            "updated_at": parse_datetime("2024-04-23T19:54:29.631Z"),
+            "updated_at": parse_datetime("2024-04-24T04:47:33.229Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -233,7 +233,7 @@ with UnifiedTo(
 
 ## remove_accounting_bankfeedaccount
 
-Remove a bankfeedaccount
+Deletes the AccountingBankfeedaccount identified by `id`.
 
 ### Example Usage
 
@@ -280,7 +280,7 @@ with UnifiedTo(
 
 ## update_accounting_bankfeedaccount
 
-Update a bankfeedaccount
+Updates the AccountingBankfeedaccount identified by `id`. Provide the unified AccountingBankfeedaccount fields to change in the request body.
 
 ### Example Usage
 
@@ -307,12 +307,12 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-10-31T16:42:19.277Z"),
             "currency": "AUD",
             "feed_start_at": parse_datetime("2022-10-31T16:42:19.277Z"),
-            "id": "d423cdc2-464f-4d8a-8d72-aa5a223a0968",
+            "id": "8ec2518c-6f9b-4290-93cb-17782db67db4",
             "metadata": [],
             "name": "Corwin, Donnelly and Connelly Checking",
             "routing_number": "694667752",
             "status": shared.AccountingBankfeedaccountStatus.ACTIVE,
-            "updated_at": parse_datetime("2024-04-23T19:54:29.631Z"),
+            "updated_at": parse_datetime("2024-04-24T04:47:33.229Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

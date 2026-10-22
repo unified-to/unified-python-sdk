@@ -4,20 +4,22 @@
 
 ### Available Operations
 
-* [create_accounting_order](#create_accounting_order) - Create an order
+* [~~create_accounting_order~~](#create_accounting_order) - Create an order :warning: **Deprecated**
 * [create_assessment_order](#create_assessment_order) - Create an order
-* [get_accounting_order](#get_accounting_order) - Retrieve an order
+* [~~get_accounting_order~~](#get_accounting_order) - Retrieve an order :warning: **Deprecated**
 * [get_assessment_order](#get_assessment_order) - Retrieve an order
-* [list_accounting_orders](#list_accounting_orders) - List all orders
-* [patch_accounting_order](#patch_accounting_order) - Update an order
+* [~~list_accounting_orders~~](#list_accounting_orders) - List all orders :warning: **Deprecated**
+* [~~patch_accounting_order~~](#patch_accounting_order) - Update an order :warning: **Deprecated**
 * [patch_assessment_order](#patch_assessment_order) - Update an order
-* [remove_accounting_order](#remove_accounting_order) - Remove an order
-* [update_accounting_order](#update_accounting_order) - Update an order
+* [~~remove_accounting_order~~](#remove_accounting_order) - Remove an order :warning: **Deprecated**
+* [~~update_accounting_order~~](#update_accounting_order) - Update an order :warning: **Deprecated**
 * [update_assessment_order](#update_assessment_order) - Update an order
 
-## create_accounting_order
+## ~~create_accounting_order~~
 
-Create an order
+Creates a AccountingOrder. Provide the unified AccountingOrder fields in the request body; they are mapped to the provider's API. Returns the created AccountingOrder.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -46,7 +48,7 @@ with UnifiedTo(
             },
             "created_at": parse_datetime("2020-11-20T03:46:49.837Z"),
             "currency": "GBP",
-            "id": "cb1d4dac-549f-44d8-9055-7d4fb9ceab04",
+            "id": "28d3b89f-0446-43dd-9b12-88dae6df1211",
             "lineitems": [],
             "metadata": [],
             "posted_at": parse_datetime("2020-11-20T03:46:49.837Z"),
@@ -61,7 +63,7 @@ with UnifiedTo(
             "status": shared.AccountingOrderStatus.AUTHORIZED,
             "total_amount": 0.0,
             "type": shared.AccountingOrderType.SALES,
-            "updated_at": parse_datetime("2022-02-08T07:17:50.334Z"),
+            "updated_at": parse_datetime("2022-02-08T12:12:41.888Z"),
         },
         "connection_id": "<id>",
     })
@@ -92,7 +94,7 @@ with UnifiedTo(
 
 ## create_assessment_order
 
-Create an order
+Creates a AssessmentOrder. Provide the unified AssessmentOrder fields in the request body; they are mapped to the provider's API. Returns the created AssessmentOrder.
 
 ### Example Usage
 
@@ -113,7 +115,7 @@ with UnifiedTo(
         "assessment_order": {
             "connection_id": "<id>",
             "created_at": parse_datetime("2021-09-18T10:33:57.803Z"),
-            "id": "08ba5e73-7f11-4535-953e-86a11aa4ee05",
+            "id": "8f2ded2a-b22c-42ae-a1c7-7dffc14e2cc3",
             "metadata": [],
             "parameters": [],
             "profile_addresses": [],
@@ -140,7 +142,7 @@ with UnifiedTo(
             "response_url": "https://rowdy-fisherman.biz/",
             "status": shared.AssessmentOrderStatus.REJECTED,
             "target_url": "https://cautious-turret.info",
-            "updated_at": parse_datetime("2023-01-25T20:33:25.021Z"),
+            "updated_at": parse_datetime("2023-01-26T02:54:10.939Z"),
             "workspace_id": "<id>",
         },
         "connection_id": "<id>",
@@ -170,9 +172,11 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_accounting_order
+## ~~get_accounting_order~~
 
-Retrieve an order
+Retrieves a single AccountingOrder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -219,7 +223,7 @@ with UnifiedTo(
 
 ## get_assessment_order
 
-Retrieve an order
+Retrieves a single AssessmentOrder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -264,9 +268,11 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_accounting_orders
+## ~~list_accounting_orders~~
 
-List all orders
+Returns a list of AccountingOrders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -310,9 +316,11 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_accounting_order
+## ~~patch_accounting_order~~
 
-Update an order
+Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change in the request body.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -341,7 +349,7 @@ with UnifiedTo(
             },
             "created_at": parse_datetime("2020-11-20T03:46:49.837Z"),
             "currency": "GBP",
-            "id": "f413b6fd-062c-426c-b63b-3a8e57117196",
+            "id": "a2722865-e3c2-4eb8-9c96-bde5f90cfaf2",
             "lineitems": [],
             "metadata": [],
             "posted_at": parse_datetime("2020-11-20T03:46:49.837Z"),
@@ -356,7 +364,7 @@ with UnifiedTo(
             "status": shared.AccountingOrderStatus.AUTHORIZED,
             "total_amount": 0.0,
             "type": shared.AccountingOrderType.SALES,
-            "updated_at": parse_datetime("2022-02-08T07:17:50.358Z"),
+            "updated_at": parse_datetime("2022-02-08T12:12:41.895Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -388,7 +396,7 @@ with UnifiedTo(
 
 ## patch_assessment_order
 
-Update an order
+Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change in the request body.
 
 ### Example Usage
 
@@ -409,7 +417,7 @@ with UnifiedTo(
         "assessment_order": {
             "connection_id": "<id>",
             "created_at": parse_datetime("2021-09-18T10:33:57.803Z"),
-            "id": "ca9fd85b-8a8b-4cfd-bf43-d21b769905a9",
+            "id": "a89a5324-7724-4a6a-a3f2-52534dfbbf5a",
             "metadata": [],
             "parameters": [],
             "profile_addresses": [],
@@ -436,7 +444,7 @@ with UnifiedTo(
             "response_url": "https://rowdy-fisherman.biz/",
             "status": shared.AssessmentOrderStatus.REJECTED,
             "target_url": "https://cautious-turret.info",
-            "updated_at": parse_datetime("2023-01-25T20:33:25.034Z"),
+            "updated_at": parse_datetime("2023-01-26T02:54:10.953Z"),
             "workspace_id": "<id>",
         },
         "connection_id": "<id>",
@@ -467,9 +475,11 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## remove_accounting_order
+## ~~remove_accounting_order~~
 
-Remove an order
+Deletes the AccountingOrder identified by `id`.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -514,9 +524,11 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## update_accounting_order
+## ~~update_accounting_order~~
 
-Update an order
+Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change in the request body.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -545,7 +557,7 @@ with UnifiedTo(
             },
             "created_at": parse_datetime("2020-11-20T03:46:49.837Z"),
             "currency": "GBP",
-            "id": "f413b6fd-062c-426c-b63b-3a8e57117196",
+            "id": "a2722865-e3c2-4eb8-9c96-bde5f90cfaf2",
             "lineitems": [],
             "metadata": [],
             "posted_at": parse_datetime("2020-11-20T03:46:49.837Z"),
@@ -560,7 +572,7 @@ with UnifiedTo(
             "status": shared.AccountingOrderStatus.AUTHORIZED,
             "total_amount": 0.0,
             "type": shared.AccountingOrderType.SALES,
-            "updated_at": parse_datetime("2022-02-08T07:17:50.358Z"),
+            "updated_at": parse_datetime("2022-02-08T12:12:41.895Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -592,7 +604,7 @@ with UnifiedTo(
 
 ## update_assessment_order
 
-Update an order
+Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change in the request body.
 
 ### Example Usage
 
@@ -613,7 +625,7 @@ with UnifiedTo(
         "assessment_order": {
             "connection_id": "<id>",
             "created_at": parse_datetime("2021-09-18T10:33:57.803Z"),
-            "id": "ca9fd85b-8a8b-4cfd-bf43-d21b769905a9",
+            "id": "a89a5324-7724-4a6a-a3f2-52534dfbbf5a",
             "metadata": [],
             "parameters": [],
             "profile_addresses": [],
@@ -640,7 +652,7 @@ with UnifiedTo(
             "response_url": "https://rowdy-fisherman.biz/",
             "status": shared.AssessmentOrderStatus.REJECTED,
             "target_url": "https://cautious-turret.info",
-            "updated_at": parse_datetime("2023-01-25T20:33:25.034Z"),
+            "updated_at": parse_datetime("2023-01-26T02:54:10.953Z"),
             "workspace_id": "<id>",
         },
         "connection_id": "<id>",

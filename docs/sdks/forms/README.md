@@ -15,7 +15,7 @@
 
 ## create_forms_form
 
-Create a form
+Creates a FormsForm. Provide the unified FormsForm fields in the request body; they are mapped to the provider's API. Returns the created FormsForm.
 
 ### Example Usage
 
@@ -40,24 +40,24 @@ with UnifiedTo(
             "fields": [
                 {
                     "created_at": parse_datetime("2023-10-05T21:34:29.094Z"),
-                    "id": "3c284563-d8da-4bd4-a933-e081e4d435ce",
+                    "id": "d7d1f512-00af-41ae-8848-a81b9fdd7ef7",
                     "is_active": True,
                     "is_required": True,
                     "max_length": 146.0,
                     "name": "cornu creta confugo",
                     "order": 0.0,
                     "type": shared.FormFieldType.TEXTAREA,
-                    "updated_at": parse_datetime("2025-04-28T16:08:12.399Z"),
+                    "updated_at": parse_datetime("2025-04-29T04:23:28.408Z"),
                 },
                 {
                     "created_at": parse_datetime("2023-10-05T21:34:29.094Z"),
-                    "id": "a2067358-1049-4b88-bbb0-d19a434808aa",
+                    "id": "b9e35f9d-0745-43bf-976d-54b8d47bd449",
                     "is_active": True,
                     "is_required": False,
                     "name": "tracto nostrum desidero",
                     "order": 1.0,
                     "type": shared.FormFieldType.TEXTAREA,
-                    "updated_at": parse_datetime("2024-09-02T04:00:34.954Z"),
+                    "updated_at": parse_datetime("2024-09-02T11:08:36.500Z"),
                 },
                 {
                     "choices": [
@@ -69,36 +69,36 @@ with UnifiedTo(
                     ],
                     "created_at": parse_datetime("2023-10-05T21:34:29.094Z"),
                     "default_value": "somniculosus",
-                    "id": "a71ef406-c236-4ce2-8b19-ed1b1a94b098",
+                    "id": "2115df7c-e0eb-4d99-bc29-1d93831f1680",
                     "is_active": True,
                     "is_required": False,
                     "name": "officia supra consequatur",
                     "order": 2.0,
                     "type": shared.FormFieldType.MULTIPLE_SELECT,
-                    "updated_at": parse_datetime("2024-02-26T08:29:46.836Z"),
+                    "updated_at": parse_datetime("2024-02-26T11:34:34.712Z"),
                 },
                 {
                     "created_at": parse_datetime("2023-10-05T21:34:29.094Z"),
                     "description": "Antepono cursim aurum voluptatum placeat audax tripudio amo.",
-                    "id": "5d4c3222-c205-4cf8-994a-9858eca10a4b",
+                    "id": "a35e7b54-0286-4976-bb95-adfa8f35479c",
                     "is_active": True,
                     "is_required": False,
                     "name": "curtus fugiat audentia",
                     "order": 3.0,
                     "type": shared.FormFieldType.TEXTAREA,
-                    "updated_at": parse_datetime("2024-11-27T10:02:38.995Z"),
+                    "updated_at": parse_datetime("2024-11-27T19:01:47.055Z"),
                 },
             ],
             "has_multiple_submissions": False,
             "has_progress_bar": False,
             "has_shuffle_questions": True,
-            "id": "f68e4022-92be-4354-8dbc-b05406f7a649",
+            "id": "52e84c28-f204-46e5-9464-a3715c87ccc5",
             "is_active": False,
             "metadata": [],
             "name": "tandem tracto vivo Form",
             "published_url": "https://massive-blowgun.info",
             "response_count": 423.0,
-            "updated_at": parse_datetime("2024-08-24T19:16:16.179Z"),
+            "updated_at": parse_datetime("2024-08-25T02:13:31.249Z"),
         },
         "connection_id": "<id>",
     })
@@ -129,7 +129,7 @@ with UnifiedTo(
 
 ## get_forms_form
 
-Retrieve a form
+Retrieves a single FormsForm by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -176,7 +176,7 @@ with UnifiedTo(
 
 ## get_forms_submission
 
-Retrieve a submission
+Retrieves a single FormsSubmission by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -223,7 +223,7 @@ with UnifiedTo(
 
 ## list_forms_forms
 
-List all forms
+Returns a list of FormsForms. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -269,7 +269,7 @@ with UnifiedTo(
 
 ## list_forms_submissions
 
-List all submissions
+Returns a list of FormsSubmissions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -315,7 +315,7 @@ with UnifiedTo(
 
 ## patch_forms_form
 
-Update a form
+Updates the FormsForm identified by `id`. Provide the unified FormsForm fields to change in the request body.
 
 ### Example Usage
 
@@ -340,24 +340,24 @@ with UnifiedTo(
             "fields": [
                 {
                     "created_at": parse_datetime("2023-10-05T21:34:29.094Z"),
-                    "id": "7336453e-5041-43b4-939b-734ad367173c",
+                    "id": "088e5958-3a96-4c0d-902c-75f6c5a156db",
                     "is_active": True,
                     "is_required": True,
                     "max_length": 146.0,
                     "name": "cornu creta confugo",
                     "order": 0.0,
                     "type": shared.FormFieldType.TEXTAREA,
-                    "updated_at": parse_datetime("2025-04-28T16:08:12.418Z"),
+                    "updated_at": parse_datetime("2025-04-29T04:23:28.423Z"),
                 },
                 {
                     "created_at": parse_datetime("2023-10-05T21:34:29.094Z"),
-                    "id": "c0b3f256-c239-4887-808e-d7ef74b30e53",
+                    "id": "bb7e7ca5-ca1d-456e-b914-599b6cc213d1",
                     "is_active": True,
                     "is_required": False,
                     "name": "tracto nostrum desidero",
                     "order": 1.0,
                     "type": shared.FormFieldType.TEXTAREA,
-                    "updated_at": parse_datetime("2024-09-02T04:00:34.965Z"),
+                    "updated_at": parse_datetime("2024-09-02T11:08:36.508Z"),
                 },
                 {
                     "choices": [
@@ -369,36 +369,36 @@ with UnifiedTo(
                     ],
                     "created_at": parse_datetime("2023-10-05T21:34:29.094Z"),
                     "default_value": "somniculosus",
-                    "id": "8bda398d-5679-4429-8149-fc5d3f347b7f",
+                    "id": "2acb1e27-8d73-4728-978c-d812a931dcef",
                     "is_active": True,
                     "is_required": False,
                     "name": "officia supra consequatur",
                     "order": 2.0,
                     "type": shared.FormFieldType.MULTIPLE_SELECT,
-                    "updated_at": parse_datetime("2024-02-26T08:29:46.841Z"),
+                    "updated_at": parse_datetime("2024-02-26T11:34:34.716Z"),
                 },
                 {
                     "created_at": parse_datetime("2023-10-05T21:34:29.094Z"),
                     "description": "Antepono cursim aurum voluptatum placeat audax tripudio amo.",
-                    "id": "5f23a0e1-b964-4a69-be07-53a1dd9d8a78",
+                    "id": "6d2d6426-b9b2-4538-a528-751d00512c2b",
                     "is_active": True,
                     "is_required": False,
                     "name": "curtus fugiat audentia",
                     "order": 3.0,
                     "type": shared.FormFieldType.TEXTAREA,
-                    "updated_at": parse_datetime("2024-11-27T10:02:39.009Z"),
+                    "updated_at": parse_datetime("2024-11-27T19:01:47.066Z"),
                 },
             ],
             "has_multiple_submissions": False,
             "has_progress_bar": False,
             "has_shuffle_questions": True,
-            "id": "a1ee0ed0-09c9-436c-aa0d-12ff4961fd13",
+            "id": "508b1418-fc70-4deb-b5b8-6067c7b9e915",
             "is_active": False,
             "metadata": [],
             "name": "tandem tracto vivo Form",
             "published_url": "https://massive-blowgun.info",
             "response_count": 423.0,
-            "updated_at": parse_datetime("2024-08-24T19:16:16.190Z"),
+            "updated_at": parse_datetime("2024-08-25T02:13:31.257Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -430,7 +430,7 @@ with UnifiedTo(
 
 ## remove_forms_form
 
-Remove a form
+Deletes the FormsForm identified by `id`.
 
 ### Example Usage
 
@@ -477,7 +477,7 @@ with UnifiedTo(
 
 ## update_forms_form
 
-Update a form
+Updates the FormsForm identified by `id`. Provide the unified FormsForm fields to change in the request body.
 
 ### Example Usage
 
@@ -502,24 +502,24 @@ with UnifiedTo(
             "fields": [
                 {
                     "created_at": parse_datetime("2023-10-05T21:34:29.094Z"),
-                    "id": "7336453e-5041-43b4-939b-734ad367173c",
+                    "id": "088e5958-3a96-4c0d-902c-75f6c5a156db",
                     "is_active": True,
                     "is_required": True,
                     "max_length": 146.0,
                     "name": "cornu creta confugo",
                     "order": 0.0,
                     "type": shared.FormFieldType.TEXTAREA,
-                    "updated_at": parse_datetime("2025-04-28T16:08:12.418Z"),
+                    "updated_at": parse_datetime("2025-04-29T04:23:28.423Z"),
                 },
                 {
                     "created_at": parse_datetime("2023-10-05T21:34:29.094Z"),
-                    "id": "c0b3f256-c239-4887-808e-d7ef74b30e53",
+                    "id": "bb7e7ca5-ca1d-456e-b914-599b6cc213d1",
                     "is_active": True,
                     "is_required": False,
                     "name": "tracto nostrum desidero",
                     "order": 1.0,
                     "type": shared.FormFieldType.TEXTAREA,
-                    "updated_at": parse_datetime("2024-09-02T04:00:34.965Z"),
+                    "updated_at": parse_datetime("2024-09-02T11:08:36.508Z"),
                 },
                 {
                     "choices": [
@@ -531,36 +531,36 @@ with UnifiedTo(
                     ],
                     "created_at": parse_datetime("2023-10-05T21:34:29.094Z"),
                     "default_value": "somniculosus",
-                    "id": "8bda398d-5679-4429-8149-fc5d3f347b7f",
+                    "id": "2acb1e27-8d73-4728-978c-d812a931dcef",
                     "is_active": True,
                     "is_required": False,
                     "name": "officia supra consequatur",
                     "order": 2.0,
                     "type": shared.FormFieldType.MULTIPLE_SELECT,
-                    "updated_at": parse_datetime("2024-02-26T08:29:46.841Z"),
+                    "updated_at": parse_datetime("2024-02-26T11:34:34.716Z"),
                 },
                 {
                     "created_at": parse_datetime("2023-10-05T21:34:29.094Z"),
                     "description": "Antepono cursim aurum voluptatum placeat audax tripudio amo.",
-                    "id": "5f23a0e1-b964-4a69-be07-53a1dd9d8a78",
+                    "id": "6d2d6426-b9b2-4538-a528-751d00512c2b",
                     "is_active": True,
                     "is_required": False,
                     "name": "curtus fugiat audentia",
                     "order": 3.0,
                     "type": shared.FormFieldType.TEXTAREA,
-                    "updated_at": parse_datetime("2024-11-27T10:02:39.009Z"),
+                    "updated_at": parse_datetime("2024-11-27T19:01:47.066Z"),
                 },
             ],
             "has_multiple_submissions": False,
             "has_progress_bar": False,
             "has_shuffle_questions": True,
-            "id": "a1ee0ed0-09c9-436c-aa0d-12ff4961fd13",
+            "id": "508b1418-fc70-4deb-b5b8-6067c7b9e915",
             "is_active": False,
             "metadata": [],
             "name": "tandem tracto vivo Form",
             "published_url": "https://massive-blowgun.info",
             "response_count": 423.0,
-            "updated_at": parse_datetime("2024-08-24T19:16:16.190Z"),
+            "updated_at": parse_datetime("2024-08-25T02:13:31.257Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

@@ -21,7 +21,7 @@
 
 ## create_ats_activity
 
-Create an activity
+Creates a AtsActivity. Provide the unified AtsActivity fields in the request body; they are mapped to the provider's API. Returns the created AtsActivity.
 
 ### Example Usage
 
@@ -42,7 +42,7 @@ with UnifiedTo(
         "ats_activity": {
             "created_at": parse_datetime("2022-08-07T03:16:43.865Z"),
             "description": "Sapiente.",
-            "id": "cc456114-11b4-4454-b2c6-674da4151680",
+            "id": "f31f8ba6-5c20-4ce8-91ff-b36db9861837",
             "is_private": False,
             "metadata": [
                 {
@@ -50,7 +50,7 @@ with UnifiedTo(
 
                     },
                     "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "bc322752-5cd3-4a7f-91a8-4b2d8e660b4d",
+                    "id": "ecf256cf-449b-41d7-93b4-7fe6a1aeff92",
                     "namespace": "activity",
                     "slug": "cimentarius",
                     "value": "Reprehenderit verto.",
@@ -59,7 +59,7 @@ with UnifiedTo(
             "sub_type": "TASK",
             "title": "Venio blandior aureus.",
             "type": shared.AtsActivityType.TASK,
-            "updated_at": parse_datetime("2026-04-04T06:33:50.655Z"),
+            "updated_at": parse_datetime("2026-04-05T03:19:02.969Z"),
         },
         "connection_id": "<id>",
     })
@@ -90,7 +90,7 @@ with UnifiedTo(
 
 ## create_lms_activity
 
-Create an activity
+Creates a LmsActivity. Provide the unified LmsActivity fields in the request body; they are mapped to the provider's API. Returns the created LmsActivity.
 
 ### Example Usage
 
@@ -110,15 +110,15 @@ with UnifiedTo(
     res = unified_to.activity.create_lms_activity(request={
         "lms_activity": {
             "assigned_grade": "summopere",
-            "completed_at": parse_datetime("2023-12-05T23:38:03.448Z"),
+            "completed_at": parse_datetime("2023-12-06T12:04:39.234Z"),
             "created_at": parse_datetime("2020-10-17T01:25:21.745Z"),
             "duration_minutes": 55.0,
-            "id": "5cd62e9b-a4e0-44bb-91d5-190f71d542fd",
+            "id": "0a87f169-efad-4aba-b463-b08da0add2bd",
             "is_completed": True,
             "metadata": [],
             "progress_percentage": 100.0,
-            "started_at": parse_datetime("2021-04-25T04:23:06.673Z"),
-            "updated_at": parse_datetime("2022-01-30T23:40:16.601Z"),
+            "started_at": parse_datetime("2021-04-25T06:27:05.348Z"),
+            "updated_at": parse_datetime("2022-01-31T04:47:21.858Z"),
         },
         "connection_id": "<id>",
     })
@@ -149,7 +149,7 @@ with UnifiedTo(
 
 ## get_ats_activity
 
-Retrieve an activity
+Retrieves a single AtsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -196,7 +196,7 @@ with UnifiedTo(
 
 ## get_clubs_activity
 
-Retrieve an activity
+Retrieves a single ClubsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -243,7 +243,7 @@ with UnifiedTo(
 
 ## get_lms_activity
 
-Retrieve an activity
+Retrieves a single LmsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -290,7 +290,7 @@ with UnifiedTo(
 
 ## list_ats_activities
 
-List all activities
+Returns a list of AtsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -336,7 +336,7 @@ with UnifiedTo(
 
 ## list_clubs_activities
 
-List all activities
+Returns a list of ClubsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -382,7 +382,7 @@ with UnifiedTo(
 
 ## list_lms_activities
 
-List all activities
+Returns a list of LmsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -428,7 +428,7 @@ with UnifiedTo(
 
 ## patch_ats_activity
 
-Update an activity
+Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the request body.
 
 ### Example Usage
 
@@ -449,7 +449,7 @@ with UnifiedTo(
         "ats_activity": {
             "created_at": parse_datetime("2022-08-07T03:16:43.865Z"),
             "description": "Sapiente.",
-            "id": "63e5469f-6bde-4fc0-aa25-9df6dd1ed565",
+            "id": "36bdb311-6067-41a5-ab75-6998e9b203d4",
             "is_private": False,
             "metadata": [
                 {
@@ -457,7 +457,7 @@ with UnifiedTo(
 
                     },
                     "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "91cf4e1f-d934-4511-9c1e-930e4e9d1404",
+                    "id": "578f731c-d74a-4d7c-a885-88f5ca8458ed",
                     "namespace": "activity",
                     "slug": "cimentarius",
                     "value": "Reprehenderit verto.",
@@ -466,7 +466,7 @@ with UnifiedTo(
             "sub_type": "TASK",
             "title": "Venio blandior aureus.",
             "type": shared.AtsActivityType.TASK,
-            "updated_at": parse_datetime("2026-04-04T06:33:50.681Z"),
+            "updated_at": parse_datetime("2026-04-05T03:19:02.987Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -498,7 +498,7 @@ with UnifiedTo(
 
 ## patch_lms_activity
 
-Update an activity
+Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the request body.
 
 ### Example Usage
 
@@ -518,15 +518,15 @@ with UnifiedTo(
     res = unified_to.activity.patch_lms_activity(request={
         "lms_activity": {
             "assigned_grade": "summopere",
-            "completed_at": parse_datetime("2023-12-05T23:38:03.460Z"),
+            "completed_at": parse_datetime("2023-12-06T12:04:39.243Z"),
             "created_at": parse_datetime("2020-10-17T01:25:21.745Z"),
             "duration_minutes": 55.0,
-            "id": "eabaa2c0-642f-4b71-a133-55eea5a8ceab",
+            "id": "5e21e9ae-106a-48db-8731-1534e0864f1f",
             "is_completed": True,
             "metadata": [],
             "progress_percentage": 100.0,
-            "started_at": parse_datetime("2021-04-25T04:23:06.675Z"),
-            "updated_at": parse_datetime("2022-01-30T23:40:16.606Z"),
+            "started_at": parse_datetime("2021-04-25T06:27:05.350Z"),
+            "updated_at": parse_datetime("2022-01-31T04:47:21.861Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -558,7 +558,7 @@ with UnifiedTo(
 
 ## remove_ats_activity
 
-Remove an activity
+Deletes the AtsActivity identified by `id`.
 
 ### Example Usage
 
@@ -605,7 +605,7 @@ with UnifiedTo(
 
 ## remove_lms_activity
 
-Remove an activity
+Deletes the LmsActivity identified by `id`.
 
 ### Example Usage
 
@@ -652,7 +652,7 @@ with UnifiedTo(
 
 ## update_ats_activity
 
-Update an activity
+Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the request body.
 
 ### Example Usage
 
@@ -673,7 +673,7 @@ with UnifiedTo(
         "ats_activity": {
             "created_at": parse_datetime("2022-08-07T03:16:43.865Z"),
             "description": "Sapiente.",
-            "id": "63e5469f-6bde-4fc0-aa25-9df6dd1ed565",
+            "id": "36bdb311-6067-41a5-ab75-6998e9b203d4",
             "is_private": False,
             "metadata": [
                 {
@@ -681,7 +681,7 @@ with UnifiedTo(
 
                     },
                     "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "91cf4e1f-d934-4511-9c1e-930e4e9d1404",
+                    "id": "578f731c-d74a-4d7c-a885-88f5ca8458ed",
                     "namespace": "activity",
                     "slug": "cimentarius",
                     "value": "Reprehenderit verto.",
@@ -690,7 +690,7 @@ with UnifiedTo(
             "sub_type": "TASK",
             "title": "Venio blandior aureus.",
             "type": shared.AtsActivityType.TASK,
-            "updated_at": parse_datetime("2026-04-04T06:33:50.681Z"),
+            "updated_at": parse_datetime("2026-04-05T03:19:02.987Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -722,7 +722,7 @@ with UnifiedTo(
 
 ## update_lms_activity
 
-Update an activity
+Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the request body.
 
 ### Example Usage
 
@@ -742,15 +742,15 @@ with UnifiedTo(
     res = unified_to.activity.update_lms_activity(request={
         "lms_activity": {
             "assigned_grade": "summopere",
-            "completed_at": parse_datetime("2023-12-05T23:38:03.460Z"),
+            "completed_at": parse_datetime("2023-12-06T12:04:39.243Z"),
             "created_at": parse_datetime("2020-10-17T01:25:21.745Z"),
             "duration_minutes": 55.0,
-            "id": "eabaa2c0-642f-4b71-a133-55eea5a8ceab",
+            "id": "5e21e9ae-106a-48db-8731-1534e0864f1f",
             "is_completed": True,
             "metadata": [],
             "progress_percentage": 100.0,
-            "started_at": parse_datetime("2021-04-25T04:23:06.675Z"),
-            "updated_at": parse_datetime("2022-01-30T23:40:16.606Z"),
+            "started_at": parse_datetime("2021-04-25T06:27:05.350Z"),
+            "updated_at": parse_datetime("2022-01-31T04:47:21.861Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

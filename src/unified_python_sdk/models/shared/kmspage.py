@@ -33,6 +33,7 @@ class KmsPageTypedDict(TypedDict):
     space_id: NotRequired[str]
     r"""(reference to KmsSpace)"""
     title: NotRequired[str]
+    r"""The page's title"""
     updated_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
@@ -64,6 +65,7 @@ class KmsPage(BaseModel):
     r"""(reference to KmsSpace)"""
 
     title: Optional[str] = None
+    r"""The page's title"""
 
     updated_at: Optional[datetime] = None
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""

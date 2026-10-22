@@ -159,6 +159,7 @@ class PropertyAdsReportMetricsGroupTypedDict(TypedDict):
     budget_period: NotRequired[PropertyAdsReportMetricsGroupBudgetPeriod]
     budget_unit: NotRequired[PropertyAdsReportMetricsGroupBudgetUnit]
     campaign_id: NotRequired[str]
+    r"""The ID of the campaign the ad group belongs to (an AdsCampaign ID)"""
     created_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     creative_ids: NotRequired[List[str]]
@@ -176,6 +177,7 @@ class PropertyAdsReportMetricsGroupTypedDict(TypedDict):
     r"""Language + region, ISO 639-1 with region (e.g. en-US); LinkedIn locale"""
     metadata: NotRequired[List[AdsMetadataTypedDict]]
     name: NotRequired[str]
+    r"""The ad group's name"""
     optimization_goal: NotRequired[PropertyAdsReportMetricsGroupOptimizationGoal]
     r"""Optimization goals for ads_group (cross-platform; platform-specific values allowed as pass-through)"""
     organization_id: NotRequired[str]
@@ -214,6 +216,7 @@ class PropertyAdsReportMetricsGroup(BaseModel):
     budget_unit: Optional[PropertyAdsReportMetricsGroupBudgetUnit] = None
 
     campaign_id: Optional[str] = None
+    r"""The ID of the campaign the ad group belongs to (an AdsCampaign ID)"""
 
     created_at: Optional[datetime] = None
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
@@ -244,6 +247,7 @@ class PropertyAdsReportMetricsGroup(BaseModel):
     metadata: Optional[List[AdsMetadata]] = None
 
     name: Optional[str] = None
+    r"""The ad group's name"""
 
     optimization_goal: Optional[PropertyAdsReportMetricsGroupOptimizationGoal] = None
     r"""Optimization goals for ads_group (cross-platform; platform-specific values allowed as pass-through)"""

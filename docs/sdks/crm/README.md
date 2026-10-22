@@ -44,7 +44,7 @@
 
 ## create_crm_company
 
-Create a company
+Creates a CrmCompany. Provide the unified CrmCompany fields in the request body; they are mapped to the provider's API. Returns the created CrmCompany.
 
 ### Example Usage
 
@@ -92,7 +92,7 @@ with UnifiedTo(
                 },
             ],
             "employees": 4177.0,
-            "id": "e59e2366-70e5-4e6e-a25a-5650778b39d9",
+            "id": "45430102-9d60-4dcb-95de-6b3395a6edf2",
             "industry": "Metrics",
             "is_active": True,
             "link_urls": [
@@ -104,7 +104,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CrmMetadataFormat.TEXT,
-                    "id": "e3cac440-3fea-4034-b28e-5a92904d60dd",
+                    "id": "7d810a72-f45b-4353-9559-e181734fb9bd",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "unde",
@@ -123,7 +123,7 @@ with UnifiedTo(
                 },
             ],
             "timezone": "Atlantic/Azores",
-            "updated_at": parse_datetime("2025-03-03T03:40:38.960Z"),
+            "updated_at": parse_datetime("2025-03-03T21:28:57.322Z"),
             "websites": [
                 "https://www.goodwinsons.com",
             ],
@@ -157,7 +157,7 @@ with UnifiedTo(
 
 ## create_crm_contact
 
-Create a contact
+Creates a CrmContact. Provide the unified CrmContact fields in the request body; they are mapped to the provider's API. Returns the created CrmContact.
 
 ### Example Usage
 
@@ -194,7 +194,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Mohammad",
-            "id": "739ce1b5-555e-43f0-8d48-ef496726adb2",
+            "id": "6be397fd-fb29-4e99-a32c-895bf4fc4e3a",
             "image_url": "https://avatars.githubusercontent.com/u/26803724",
             "last_name": "Bartell",
             "link_urls": [
@@ -206,7 +206,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CrmMetadataFormat.TEXT,
-                    "id": "61bee087-b03b-416d-9a99-40e30b15d0bb",
+                    "id": "c1ac2149-70d3-459b-b9d2-79bef51441d7",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "antiquus",
@@ -224,7 +224,7 @@ with UnifiedTo(
                 },
             ],
             "title": "National Tactics Analyst",
-            "updated_at": parse_datetime("2021-02-24T05:06:24.613Z"),
+            "updated_at": parse_datetime("2021-02-24T05:42:21.126Z"),
         },
         "connection_id": "<id>",
     })
@@ -255,7 +255,7 @@ with UnifiedTo(
 
 ## create_crm_deal
 
-Create a deal
+Creates a CrmDeal. Provide the unified CrmDeal fields in the request body; they are mapped to the provider's API. Returns the created CrmDeal.
 
 ### Example Usage
 
@@ -275,19 +275,19 @@ with UnifiedTo(
     res = unified_to.crm.create_crm_deal(request={
         "crm_deal": {
             "amount": 98162.0,
-            "closed_at": parse_datetime("2024-03-10T10:05:32.936Z"),
-            "closing_at": parse_datetime("2025-08-31T12:34:35.326Z"),
+            "closed_at": parse_datetime("2024-03-10T15:02:30.290Z"),
+            "closing_at": parse_datetime("2025-09-01T04:12:11.705Z"),
             "created_at": parse_datetime("2023-07-04T12:48:48.470Z"),
             "currency": "USD",
             "description": "Comis tepidus sit cavus crustulum trans tubineus adfectus.",
-            "id": "d8a93100-6862-4009-a9e2-452e5976a617",
+            "id": "14ef397c-6011-4e50-90b6-053bbdfd46aa",
             "metadata": [
                 {
                     "extra_data": {
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CrmMetadataFormat.TEXT,
-                    "id": "02819c29-ddff-4a57-99fc-4264e853b2aa",
+                    "id": "f71d3c5e-3680-4811-8ccf-9761d634c9a0",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "conatus",
@@ -300,7 +300,7 @@ with UnifiedTo(
                 "causa",
                 "suus",
             ],
-            "updated_at": parse_datetime("2024-10-11T21:11:01.441Z"),
+            "updated_at": parse_datetime("2024-10-12T06:24:01.623Z"),
             "won_reason": "Usque libero soleo.",
         },
         "connection_id": "<id>",
@@ -332,7 +332,7 @@ with UnifiedTo(
 
 ## create_crm_event
 
-Create an event
+Creates a CrmEvent. Provide the unified CrmEvent fields in the request body; they are mapped to the provider's API. Returns the created CrmEvent.
 
 ### Example Usage
 
@@ -354,13 +354,13 @@ with UnifiedTo(
             "call": {
                 "description": "Arbitro aptus.",
                 "duration": 64.0,
-                "start_at": parse_datetime("2024-12-11T00:44:46.970Z"),
+                "start_at": parse_datetime("2024-12-11T17:31:41.901Z"),
             },
             "created_at": parse_datetime("2020-07-14T04:53:23.784Z"),
-            "id": "9398fe29-3988-44ce-b5dc-2b2767c9445f",
+            "id": "cb6a3ace-0074-470f-a9c3-3bd2cee96a09",
             "metadata": [],
             "type": shared.CrmEventType.CALL,
-            "updated_at": parse_datetime("2026-10-11T12:50:42.303Z"),
+            "updated_at": parse_datetime("2026-10-12T12:36:07.340Z"),
         },
         "connection_id": "<id>",
     })
@@ -391,7 +391,7 @@ with UnifiedTo(
 
 ## create_crm_lead
 
-Create a lead
+Creates a CrmLead. Provide the unified CrmLead fields in the request body; they are mapped to the provider's API. Returns the created CrmLead.
 
 ### Example Usage
 
@@ -427,7 +427,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Velda",
-            "id": "5d292300-797b-4000-b1ca-2012860106d7",
+            "id": "a5ff2dbc-ac11-4d68-87c6-e797c08278bb",
             "is_active": True,
             "last_name": "Sporer",
             "link_urls": [
@@ -439,7 +439,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CrmMetadataFormat.TEXT,
-                    "id": "8192ee89-602e-4056-a9d3-f6bff42b1a8b",
+                    "id": "8a6b03f1-da64-4cf4-869c-768a877990b1",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "vitiosus",
@@ -463,7 +463,7 @@ with UnifiedTo(
                 },
             ],
             "title": "International Factors Administrator",
-            "updated_at": parse_datetime("2020-05-17T21:34:24.238Z"),
+            "updated_at": parse_datetime("2020-05-17T23:36:15.811Z"),
         },
         "connection_id": "<id>",
     })
@@ -494,7 +494,7 @@ with UnifiedTo(
 
 ## create_crm_pipeline
 
-Create a pipeline
+Creates a CrmPipeline. Provide the unified CrmPipeline fields in the request body; they are mapped to the provider's API. Returns the created CrmPipeline.
 
 ### Example Usage
 
@@ -516,7 +516,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-12-28T13:45:38.446Z"),
             "deal_probability": 99.0,
             "display_order": 8.0,
-            "id": "d0123b5e-6e85-46b1-a76f-30daf7ed4d05",
+            "id": "314b38fc-3392-4486-9232-bf4854c6611c",
             "is_active": True,
             "metadata": [],
             "name": "Small Steel Bacon",
@@ -526,13 +526,13 @@ with UnifiedTo(
                     "created_at": parse_datetime("2022-12-28T13:45:38.446Z"),
                     "deal_probability": 84.0,
                     "display_order": 72.0,
-                    "id": "ee9654fd-afff-4826-a69d-fd916916542d",
+                    "id": "38d5c0fb-d5a7-4980-8b1b-6cc7ad149ac7",
                     "is_closed": True,
                     "name": "Veniam.",
-                    "updated_at": parse_datetime("2025-10-10T12:24:50.707Z"),
+                    "updated_at": parse_datetime("2025-10-11T05:50:12.601Z"),
                 },
             ],
-            "updated_at": parse_datetime("2025-11-01T05:51:05.610Z"),
+            "updated_at": parse_datetime("2025-11-01T23:38:47.531Z"),
         },
         "connection_id": "<id>",
     })
@@ -563,7 +563,7 @@ with UnifiedTo(
 
 ## get_crm_company
 
-Retrieve a company
+Retrieves a single CrmCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -610,7 +610,7 @@ with UnifiedTo(
 
 ## get_crm_contact
 
-Retrieve a contact
+Retrieves a single CrmContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -657,7 +657,7 @@ with UnifiedTo(
 
 ## get_crm_deal
 
-Retrieve a deal
+Retrieves a single CrmDeal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -704,7 +704,7 @@ with UnifiedTo(
 
 ## get_crm_event
 
-Retrieve an event
+Retrieves a single CrmEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -751,7 +751,7 @@ with UnifiedTo(
 
 ## get_crm_lead
 
-Retrieve a lead
+Retrieves a single CrmLead by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -798,7 +798,7 @@ with UnifiedTo(
 
 ## get_crm_pipeline
 
-Retrieve a pipeline
+Retrieves a single CrmPipeline by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -845,7 +845,7 @@ with UnifiedTo(
 
 ## list_crm_companies
 
-List all companies
+Returns a list of CrmCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -891,7 +891,7 @@ with UnifiedTo(
 
 ## list_crm_contacts
 
-List all contacts
+Returns a list of CrmContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -937,7 +937,7 @@ with UnifiedTo(
 
 ## list_crm_deals
 
-List all deals
+Returns a list of CrmDeals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -983,7 +983,7 @@ with UnifiedTo(
 
 ## list_crm_events
 
-List all events
+Returns a list of CrmEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1029,7 +1029,7 @@ with UnifiedTo(
 
 ## list_crm_leads
 
-List all leads
+Returns a list of CrmLeads. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1075,7 +1075,7 @@ with UnifiedTo(
 
 ## list_crm_pipelines
 
-List all pipelines
+Returns a list of CrmPipelines. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1121,7 +1121,7 @@ with UnifiedTo(
 
 ## list_crm_taxonomies
 
-List all taxonomies
+Returns a list of CrmTaxonomies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1167,7 +1167,7 @@ with UnifiedTo(
 
 ## patch_crm_company
 
-Update a company
+Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -1215,7 +1215,7 @@ with UnifiedTo(
                 },
             ],
             "employees": 4177.0,
-            "id": "57af47d8-b577-4f38-ac58-5d8ef38cbef4",
+            "id": "f6118c33-c025-4e57-8713-96353decbba9",
             "industry": "Metrics",
             "is_active": True,
             "link_urls": [
@@ -1227,7 +1227,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CrmMetadataFormat.TEXT,
-                    "id": "431bf807-6d6e-4bba-bf48-22307df458ed",
+                    "id": "eb7e0ab1-617c-42aa-9140-805dc92181d9",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "unde",
@@ -1246,7 +1246,7 @@ with UnifiedTo(
                 },
             ],
             "timezone": "Atlantic/Azores",
-            "updated_at": parse_datetime("2025-03-03T03:40:38.979Z"),
+            "updated_at": parse_datetime("2025-03-03T21:28:57.348Z"),
             "websites": [
                 "https://www.goodwinsons.com",
             ],
@@ -1281,7 +1281,7 @@ with UnifiedTo(
 
 ## patch_crm_contact
 
-Update a contact
+Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the request body.
 
 ### Example Usage
 
@@ -1318,7 +1318,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Mohammad",
-            "id": "5755d189-87e9-4fad-9745-135da57f80dc",
+            "id": "86854558-d801-4b6a-8b08-c5c9087fc5c5",
             "image_url": "https://avatars.githubusercontent.com/u/26803724",
             "last_name": "Bartell",
             "link_urls": [
@@ -1330,7 +1330,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CrmMetadataFormat.TEXT,
-                    "id": "76fee8e1-4c33-4429-9dc6-3e428eb31ba6",
+                    "id": "e061d87c-c4a7-4741-8734-8aca32ffae2c",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "antiquus",
@@ -1348,7 +1348,7 @@ with UnifiedTo(
                 },
             ],
             "title": "National Tactics Analyst",
-            "updated_at": parse_datetime("2021-02-24T05:06:24.614Z"),
+            "updated_at": parse_datetime("2021-02-24T05:42:21.127Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1380,7 +1380,7 @@ with UnifiedTo(
 
 ## patch_crm_deal
 
-Update a deal
+Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request body.
 
 ### Example Usage
 
@@ -1400,19 +1400,19 @@ with UnifiedTo(
     res = unified_to.crm.patch_crm_deal(request={
         "crm_deal": {
             "amount": 98162.0,
-            "closed_at": parse_datetime("2024-03-10T10:05:32.939Z"),
-            "closing_at": parse_datetime("2025-08-31T12:34:35.337Z"),
+            "closed_at": parse_datetime("2024-03-10T15:02:30.296Z"),
+            "closing_at": parse_datetime("2025-09-01T04:12:11.724Z"),
             "created_at": parse_datetime("2023-07-04T12:48:48.470Z"),
             "currency": "USD",
             "description": "Comis tepidus sit cavus crustulum trans tubineus adfectus.",
-            "id": "2f87abfb-7cab-4105-8835-3504a8954792",
+            "id": "7b95c55d-c096-4489-9655-08807542832c",
             "metadata": [
                 {
                     "extra_data": {
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CrmMetadataFormat.TEXT,
-                    "id": "83983b53-507a-41e7-aae2-dc4809f4474a",
+                    "id": "68c0b75f-f90f-4795-916c-ea0dc7f99352",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "conatus",
@@ -1425,7 +1425,7 @@ with UnifiedTo(
                 "causa",
                 "suus",
             ],
-            "updated_at": parse_datetime("2024-10-11T21:11:01.447Z"),
+            "updated_at": parse_datetime("2024-10-12T06:24:01.634Z"),
             "won_reason": "Usque libero soleo.",
         },
         "connection_id": "<id>",
@@ -1458,7 +1458,7 @@ with UnifiedTo(
 
 ## patch_crm_event
 
-Update an event
+Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -1480,13 +1480,13 @@ with UnifiedTo(
             "call": {
                 "description": "Arbitro aptus.",
                 "duration": 64.0,
-                "start_at": parse_datetime("2024-12-11T00:44:47.004Z"),
+                "start_at": parse_datetime("2024-12-11T17:31:41.949Z"),
             },
             "created_at": parse_datetime("2020-07-14T04:53:23.784Z"),
-            "id": "c0be1b9e-c952-494e-9e1e-9f7b757c2075",
+            "id": "6ee8337c-85b4-45ae-8759-aaa2e283bb04",
             "metadata": [],
             "type": shared.CrmEventType.CALL,
-            "updated_at": parse_datetime("2026-10-11T12:50:42.351Z"),
+            "updated_at": parse_datetime("2026-10-12T12:36:07.407Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1518,7 +1518,7 @@ with UnifiedTo(
 
 ## patch_crm_lead
 
-Update a lead
+Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request body.
 
 ### Example Usage
 
@@ -1554,7 +1554,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Velda",
-            "id": "486acb6f-bf72-469b-83d6-d6d3bdce740f",
+            "id": "52f44fbc-4a77-45dc-94c8-577758fff89f",
             "is_active": True,
             "last_name": "Sporer",
             "link_urls": [
@@ -1566,7 +1566,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CrmMetadataFormat.TEXT,
-                    "id": "03fe51ec-f800-4a12-885f-f1f6de8f1320",
+                    "id": "7d5aa530-b73a-44e0-93ca-7e6fa6eabd74",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "vitiosus",
@@ -1590,7 +1590,7 @@ with UnifiedTo(
                 },
             ],
             "title": "International Factors Administrator",
-            "updated_at": parse_datetime("2020-05-17T21:34:24.241Z"),
+            "updated_at": parse_datetime("2020-05-17T23:36:15.815Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1622,7 +1622,7 @@ with UnifiedTo(
 
 ## patch_crm_pipeline
 
-Update a pipeline
+Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the request body.
 
 ### Example Usage
 
@@ -1644,7 +1644,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-12-28T13:45:38.446Z"),
             "deal_probability": 99.0,
             "display_order": 8.0,
-            "id": "ca408faa-6d21-4cac-b0c8-6d85e2e18aea",
+            "id": "1241cfda-16af-44f0-9452-228e4c096473",
             "is_active": True,
             "metadata": [],
             "name": "Small Steel Bacon",
@@ -1654,13 +1654,13 @@ with UnifiedTo(
                     "created_at": parse_datetime("2022-12-28T13:45:38.446Z"),
                     "deal_probability": 84.0,
                     "display_order": 72.0,
-                    "id": "3a27a710-8f08-4c86-8b84-6126f2473c6f",
+                    "id": "142fac8b-ac6e-4b8d-927c-ec9f5b6b87da",
                     "is_closed": True,
                     "name": "Veniam.",
-                    "updated_at": parse_datetime("2025-10-10T12:24:50.717Z"),
+                    "updated_at": parse_datetime("2025-10-11T05:50:12.613Z"),
                 },
             ],
-            "updated_at": parse_datetime("2025-11-01T05:51:05.620Z"),
+            "updated_at": parse_datetime("2025-11-01T23:38:47.543Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1692,7 +1692,7 @@ with UnifiedTo(
 
 ## remove_crm_company
 
-Remove a company
+Deletes the CrmCompany identified by `id`.
 
 ### Example Usage
 
@@ -1739,7 +1739,7 @@ with UnifiedTo(
 
 ## remove_crm_contact
 
-Remove a contact
+Deletes the CrmContact identified by `id`.
 
 ### Example Usage
 
@@ -1786,7 +1786,7 @@ with UnifiedTo(
 
 ## remove_crm_deal
 
-Remove a deal
+Deletes the CrmDeal identified by `id`.
 
 ### Example Usage
 
@@ -1833,7 +1833,7 @@ with UnifiedTo(
 
 ## remove_crm_event
 
-Remove an event
+Deletes the CrmEvent identified by `id`.
 
 ### Example Usage
 
@@ -1880,7 +1880,7 @@ with UnifiedTo(
 
 ## remove_crm_lead
 
-Remove a lead
+Deletes the CrmLead identified by `id`.
 
 ### Example Usage
 
@@ -1927,7 +1927,7 @@ with UnifiedTo(
 
 ## remove_crm_pipeline
 
-Remove a pipeline
+Deletes the CrmPipeline identified by `id`.
 
 ### Example Usage
 
@@ -1974,7 +1974,7 @@ with UnifiedTo(
 
 ## update_crm_company
 
-Update a company
+Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -2022,7 +2022,7 @@ with UnifiedTo(
                 },
             ],
             "employees": 4177.0,
-            "id": "57af47d8-b577-4f38-ac58-5d8ef38cbef4",
+            "id": "f6118c33-c025-4e57-8713-96353decbba9",
             "industry": "Metrics",
             "is_active": True,
             "link_urls": [
@@ -2034,7 +2034,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CrmMetadataFormat.TEXT,
-                    "id": "431bf807-6d6e-4bba-bf48-22307df458ed",
+                    "id": "eb7e0ab1-617c-42aa-9140-805dc92181d9",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "unde",
@@ -2053,7 +2053,7 @@ with UnifiedTo(
                 },
             ],
             "timezone": "Atlantic/Azores",
-            "updated_at": parse_datetime("2025-03-03T03:40:38.979Z"),
+            "updated_at": parse_datetime("2025-03-03T21:28:57.348Z"),
             "websites": [
                 "https://www.goodwinsons.com",
             ],
@@ -2088,7 +2088,7 @@ with UnifiedTo(
 
 ## update_crm_contact
 
-Update a contact
+Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the request body.
 
 ### Example Usage
 
@@ -2125,7 +2125,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Mohammad",
-            "id": "5755d189-87e9-4fad-9745-135da57f80dc",
+            "id": "86854558-d801-4b6a-8b08-c5c9087fc5c5",
             "image_url": "https://avatars.githubusercontent.com/u/26803724",
             "last_name": "Bartell",
             "link_urls": [
@@ -2137,7 +2137,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CrmMetadataFormat.TEXT,
-                    "id": "76fee8e1-4c33-4429-9dc6-3e428eb31ba6",
+                    "id": "e061d87c-c4a7-4741-8734-8aca32ffae2c",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "antiquus",
@@ -2155,7 +2155,7 @@ with UnifiedTo(
                 },
             ],
             "title": "National Tactics Analyst",
-            "updated_at": parse_datetime("2021-02-24T05:06:24.614Z"),
+            "updated_at": parse_datetime("2021-02-24T05:42:21.127Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2187,7 +2187,7 @@ with UnifiedTo(
 
 ## update_crm_deal
 
-Update a deal
+Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request body.
 
 ### Example Usage
 
@@ -2207,19 +2207,19 @@ with UnifiedTo(
     res = unified_to.crm.update_crm_deal(request={
         "crm_deal": {
             "amount": 98162.0,
-            "closed_at": parse_datetime("2024-03-10T10:05:32.939Z"),
-            "closing_at": parse_datetime("2025-08-31T12:34:35.337Z"),
+            "closed_at": parse_datetime("2024-03-10T15:02:30.296Z"),
+            "closing_at": parse_datetime("2025-09-01T04:12:11.724Z"),
             "created_at": parse_datetime("2023-07-04T12:48:48.470Z"),
             "currency": "USD",
             "description": "Comis tepidus sit cavus crustulum trans tubineus adfectus.",
-            "id": "2f87abfb-7cab-4105-8835-3504a8954792",
+            "id": "7b95c55d-c096-4489-9655-08807542832c",
             "metadata": [
                 {
                     "extra_data": {
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CrmMetadataFormat.TEXT,
-                    "id": "83983b53-507a-41e7-aae2-dc4809f4474a",
+                    "id": "68c0b75f-f90f-4795-916c-ea0dc7f99352",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "conatus",
@@ -2232,7 +2232,7 @@ with UnifiedTo(
                 "causa",
                 "suus",
             ],
-            "updated_at": parse_datetime("2024-10-11T21:11:01.447Z"),
+            "updated_at": parse_datetime("2024-10-12T06:24:01.634Z"),
             "won_reason": "Usque libero soleo.",
         },
         "connection_id": "<id>",
@@ -2265,7 +2265,7 @@ with UnifiedTo(
 
 ## update_crm_event
 
-Update an event
+Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -2287,13 +2287,13 @@ with UnifiedTo(
             "call": {
                 "description": "Arbitro aptus.",
                 "duration": 64.0,
-                "start_at": parse_datetime("2024-12-11T00:44:47.004Z"),
+                "start_at": parse_datetime("2024-12-11T17:31:41.949Z"),
             },
             "created_at": parse_datetime("2020-07-14T04:53:23.784Z"),
-            "id": "c0be1b9e-c952-494e-9e1e-9f7b757c2075",
+            "id": "6ee8337c-85b4-45ae-8759-aaa2e283bb04",
             "metadata": [],
             "type": shared.CrmEventType.CALL,
-            "updated_at": parse_datetime("2026-10-11T12:50:42.351Z"),
+            "updated_at": parse_datetime("2026-10-12T12:36:07.407Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2325,7 +2325,7 @@ with UnifiedTo(
 
 ## update_crm_lead
 
-Update a lead
+Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request body.
 
 ### Example Usage
 
@@ -2361,7 +2361,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Velda",
-            "id": "486acb6f-bf72-469b-83d6-d6d3bdce740f",
+            "id": "52f44fbc-4a77-45dc-94c8-577758fff89f",
             "is_active": True,
             "last_name": "Sporer",
             "link_urls": [
@@ -2373,7 +2373,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CrmMetadataFormat.TEXT,
-                    "id": "03fe51ec-f800-4a12-885f-f1f6de8f1320",
+                    "id": "7d5aa530-b73a-44e0-93ca-7e6fa6eabd74",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "vitiosus",
@@ -2397,7 +2397,7 @@ with UnifiedTo(
                 },
             ],
             "title": "International Factors Administrator",
-            "updated_at": parse_datetime("2020-05-17T21:34:24.241Z"),
+            "updated_at": parse_datetime("2020-05-17T23:36:15.815Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2429,7 +2429,7 @@ with UnifiedTo(
 
 ## update_crm_pipeline
 
-Update a pipeline
+Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the request body.
 
 ### Example Usage
 
@@ -2451,7 +2451,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-12-28T13:45:38.446Z"),
             "deal_probability": 99.0,
             "display_order": 8.0,
-            "id": "ca408faa-6d21-4cac-b0c8-6d85e2e18aea",
+            "id": "1241cfda-16af-44f0-9452-228e4c096473",
             "is_active": True,
             "metadata": [],
             "name": "Small Steel Bacon",
@@ -2461,13 +2461,13 @@ with UnifiedTo(
                     "created_at": parse_datetime("2022-12-28T13:45:38.446Z"),
                     "deal_probability": 84.0,
                     "display_order": 72.0,
-                    "id": "3a27a710-8f08-4c86-8b84-6126f2473c6f",
+                    "id": "142fac8b-ac6e-4b8d-927c-ec9f5b6b87da",
                     "is_closed": True,
                     "name": "Veniam.",
-                    "updated_at": parse_datetime("2025-10-10T12:24:50.717Z"),
+                    "updated_at": parse_datetime("2025-10-11T05:50:12.613Z"),
                 },
             ],
-            "updated_at": parse_datetime("2025-11-01T05:51:05.620Z"),
+            "updated_at": parse_datetime("2025-11-01T23:38:47.543Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

@@ -19,7 +19,7 @@
 
 ## create_accounting_expense
 
-Create an expense
+Creates a AccountingExpense. Provide the unified AccountingExpense fields in the request body; they are mapped to the provider's API. Returns the created AccountingExpense.
 
 ### Example Usage
 
@@ -41,13 +41,13 @@ with UnifiedTo(
             "attachments": [
                 {
                     "download_url": "https://rubbery-couch.biz/",
-                    "id": "6217a4bb-48a6-4d40-920e-b75fc1cf90e7",
+                    "id": "9aabf60d-0097-4632-aaf4-994d747eae41",
                     "mime_type": "application/pdf",
                     "name": "receipt-9696.pdf",
                 },
                 {
                     "download_url": "https://appropriate-smog.biz/",
-                    "id": "246cd982-ffac-4258-9b31-78ef29344c07",
+                    "id": "e86d99a2-10c8-4f17-9bad-f9d328ac4f39",
                     "mime_type": "application/pdf",
                     "name": "receipt-9696-1.pdf",
                 },
@@ -56,10 +56,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-06-11T03:39:37.305Z"),
             "currency": "GBP",
             "external_number": "EXP-38303",
-            "id": "2f637aa3-2358-4201-93ba-7a22b51db902",
+            "id": "fc5b3f57-18bd-4021-a137-4246201f6077",
             "lineitems": [
                 {
-                    "id": "1d667263-a363-48c9-96ce-83531baecff2",
+                    "id": "d2e7ed56-b5e3-45c7-9fa6-e0e7a5a555a3",
                     "item_name": "Client dinner",
                     "tax_amount": 0.0,
                     "total_amount": 364.74,
@@ -67,7 +67,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "b76da731-6c4b-4689-b083-928acbe2cb76",
+                    "id": "a74ba4b7-02a3-4d2c-aec0-9ae6bb4ec6cf",
                     "item_name": "Client dinner",
                     "tax_amount": 0.0,
                     "total_amount": 258.35,
@@ -75,7 +75,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "601c4d71-09c5-4b8b-bb4f-0beff5cb752a",
+                    "id": "04917fce-3562-48b4-b20b-868a6fefebf3",
                     "item_name": "Conference ticket",
                     "notes": "Casus umquam conicio cinis demitto sint.",
                     "tax_amount": 0.0,
@@ -84,7 +84,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "fae1bec1-afa6-4618-91e8-d0ac582a7b36",
+                    "id": "3219eb0f-659b-491e-bc64-9d497ef1055d",
                     "item_name": "Hotel",
                     "tax_amount": 0.0,
                     "total_amount": 157.04,
@@ -92,7 +92,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "1cf0c727-1317-4c7d-989d-cbad2a437a83",
+                    "id": "217d79c7-ec0c-4226-9351-944aa1f6ef6f",
                     "item_name": "Hotel",
                     "tax_amount": 0.0,
                     "total_amount": 164.02,
@@ -108,7 +108,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "total_amount": 972.29,
             "type": shared.AccountingExpenseType.COMPANY,
-            "updated_at": parse_datetime("2020-09-02T07:17:01.299Z"),
+            "updated_at": parse_datetime("2020-09-02T08:08:15.486Z"),
         },
         "connection_id": "<id>",
     })
@@ -139,7 +139,7 @@ with UnifiedTo(
 
 ## create_legal_expense
 
-Create an expense
+Creates a LegalExpense. Provide the unified LegalExpense fields in the request body; they are mapped to the provider's API. Returns the created LegalExpense.
 
 ### Example Usage
 
@@ -162,7 +162,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-11-08T00:41:42.356Z"),
             "currency": "MVR",
             "description": "Temporibus agnitio sui.",
-            "id": "dcb76de8-c8d7-4a11-8670-0124109233eb",
+            "id": "21864e35-8eca-4e7f-81cc-e81c04f58bf5",
             "incurred_at": parse_datetime("2020-11-08T00:41:42.356Z"),
             "is_billed": False,
             "metadata": [],
@@ -170,7 +170,7 @@ with UnifiedTo(
             "quantity": 3.0,
             "total_amount": 300.0,
             "type": shared.LegalExpenseType.OTHER,
-            "updated_at": parse_datetime("2024-03-30T23:18:21.146Z"),
+            "updated_at": parse_datetime("2024-03-31T12:54:25.595Z"),
         },
         "connection_id": "<id>",
     })
@@ -201,7 +201,7 @@ with UnifiedTo(
 
 ## get_accounting_expense
 
-Retrieve an expense
+Retrieves a single AccountingExpense by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -248,7 +248,7 @@ with UnifiedTo(
 
 ## get_legal_expense
 
-Retrieve an expense
+Retrieves a single LegalExpense by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -295,7 +295,7 @@ with UnifiedTo(
 
 ## list_accounting_expenses
 
-List all expenses
+Returns a list of AccountingExpenses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -341,7 +341,7 @@ with UnifiedTo(
 
 ## list_legal_expenses
 
-List all expenses
+Returns a list of LegalExpenses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -387,7 +387,7 @@ with UnifiedTo(
 
 ## patch_accounting_expense
 
-Update an expense
+Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to change in the request body.
 
 ### Example Usage
 
@@ -409,13 +409,13 @@ with UnifiedTo(
             "attachments": [
                 {
                     "download_url": "https://rubbery-couch.biz/",
-                    "id": "7f5e8f6d-5b67-4bdc-b3a6-795a979a7cc5",
+                    "id": "d58b40c5-3bab-4eb8-8953-45045eb60e9f",
                     "mime_type": "application/pdf",
                     "name": "receipt-9696.pdf",
                 },
                 {
                     "download_url": "https://appropriate-smog.biz/",
-                    "id": "ab8c8763-5658-4312-a40a-af59795cc07d",
+                    "id": "77647132-cdbd-485d-a2c5-c2ea5ce89131",
                     "mime_type": "application/pdf",
                     "name": "receipt-9696-1.pdf",
                 },
@@ -424,10 +424,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-06-11T03:39:37.305Z"),
             "currency": "GBP",
             "external_number": "EXP-38303",
-            "id": "78c59949-bd64-4224-8a44-3fa8c82c9203",
+            "id": "542e253e-9be2-4769-9e7b-513144533652",
             "lineitems": [
                 {
-                    "id": "e92b05c0-da82-47b3-ad05-9d94ca454984",
+                    "id": "077d67ff-ee2e-4c5f-ac4f-bb6481113a38",
                     "item_name": "Client dinner",
                     "tax_amount": 0.0,
                     "total_amount": 364.74,
@@ -435,7 +435,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "ca6e2f57-3d8f-4ac3-bcca-8c430730ff96",
+                    "id": "0906ed39-7dae-456f-9c82-077543591acd",
                     "item_name": "Client dinner",
                     "tax_amount": 0.0,
                     "total_amount": 258.35,
@@ -443,7 +443,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "08ef5c05-24c7-4be6-b6c5-0d630ff7d3d4",
+                    "id": "f4ae5862-e96c-4dbc-a116-2f9d71403708",
                     "item_name": "Conference ticket",
                     "notes": "Casus umquam conicio cinis demitto sint.",
                     "tax_amount": 0.0,
@@ -452,7 +452,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "5de53bde-a8d8-4377-8512-14e14c509d2d",
+                    "id": "9ad8a271-29b8-4c2f-a966-e56e1d5fa671",
                     "item_name": "Hotel",
                     "tax_amount": 0.0,
                     "total_amount": 157.04,
@@ -460,7 +460,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "15520258-90ea-47af-95e0-9a053f927ecd",
+                    "id": "e783cbf5-5d97-4777-8798-596b0362a0c4",
                     "item_name": "Hotel",
                     "tax_amount": 0.0,
                     "total_amount": 164.02,
@@ -476,7 +476,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "total_amount": 972.29,
             "type": shared.AccountingExpenseType.COMPANY,
-            "updated_at": parse_datetime("2020-09-02T07:17:01.301Z"),
+            "updated_at": parse_datetime("2020-09-02T08:08:15.489Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -508,7 +508,7 @@ with UnifiedTo(
 
 ## patch_legal_expense
 
-Update an expense
+Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in the request body.
 
 ### Example Usage
 
@@ -531,7 +531,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-11-08T00:41:42.356Z"),
             "currency": "MVR",
             "description": "Temporibus agnitio sui.",
-            "id": "747f484d-e6fe-4cb6-bb93-5cfffff2ef2a",
+            "id": "5b3cb8a3-5737-4b18-b126-5266526343a7",
             "incurred_at": parse_datetime("2020-11-08T00:41:42.356Z"),
             "is_billed": False,
             "metadata": [],
@@ -539,7 +539,7 @@ with UnifiedTo(
             "quantity": 3.0,
             "total_amount": 300.0,
             "type": shared.LegalExpenseType.OTHER,
-            "updated_at": parse_datetime("2024-03-30T23:18:21.155Z"),
+            "updated_at": parse_datetime("2024-03-31T12:54:25.603Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -571,7 +571,7 @@ with UnifiedTo(
 
 ## remove_accounting_expense
 
-Remove an expense
+Deletes the AccountingExpense identified by `id`.
 
 ### Example Usage
 
@@ -618,7 +618,7 @@ with UnifiedTo(
 
 ## remove_legal_expense
 
-Remove an expense
+Deletes the LegalExpense identified by `id`.
 
 ### Example Usage
 
@@ -665,7 +665,7 @@ with UnifiedTo(
 
 ## update_accounting_expense
 
-Update an expense
+Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to change in the request body.
 
 ### Example Usage
 
@@ -687,13 +687,13 @@ with UnifiedTo(
             "attachments": [
                 {
                     "download_url": "https://rubbery-couch.biz/",
-                    "id": "7f5e8f6d-5b67-4bdc-b3a6-795a979a7cc5",
+                    "id": "d58b40c5-3bab-4eb8-8953-45045eb60e9f",
                     "mime_type": "application/pdf",
                     "name": "receipt-9696.pdf",
                 },
                 {
                     "download_url": "https://appropriate-smog.biz/",
-                    "id": "ab8c8763-5658-4312-a40a-af59795cc07d",
+                    "id": "77647132-cdbd-485d-a2c5-c2ea5ce89131",
                     "mime_type": "application/pdf",
                     "name": "receipt-9696-1.pdf",
                 },
@@ -702,10 +702,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-06-11T03:39:37.305Z"),
             "currency": "GBP",
             "external_number": "EXP-38303",
-            "id": "78c59949-bd64-4224-8a44-3fa8c82c9203",
+            "id": "542e253e-9be2-4769-9e7b-513144533652",
             "lineitems": [
                 {
-                    "id": "e92b05c0-da82-47b3-ad05-9d94ca454984",
+                    "id": "077d67ff-ee2e-4c5f-ac4f-bb6481113a38",
                     "item_name": "Client dinner",
                     "tax_amount": 0.0,
                     "total_amount": 364.74,
@@ -713,7 +713,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "ca6e2f57-3d8f-4ac3-bcca-8c430730ff96",
+                    "id": "0906ed39-7dae-456f-9c82-077543591acd",
                     "item_name": "Client dinner",
                     "tax_amount": 0.0,
                     "total_amount": 258.35,
@@ -721,7 +721,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "08ef5c05-24c7-4be6-b6c5-0d630ff7d3d4",
+                    "id": "f4ae5862-e96c-4dbc-a116-2f9d71403708",
                     "item_name": "Conference ticket",
                     "notes": "Casus umquam conicio cinis demitto sint.",
                     "tax_amount": 0.0,
@@ -730,7 +730,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "5de53bde-a8d8-4377-8512-14e14c509d2d",
+                    "id": "9ad8a271-29b8-4c2f-a966-e56e1d5fa671",
                     "item_name": "Hotel",
                     "tax_amount": 0.0,
                     "total_amount": 157.04,
@@ -738,7 +738,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "15520258-90ea-47af-95e0-9a053f927ecd",
+                    "id": "e783cbf5-5d97-4777-8798-596b0362a0c4",
                     "item_name": "Hotel",
                     "tax_amount": 0.0,
                     "total_amount": 164.02,
@@ -754,7 +754,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "total_amount": 972.29,
             "type": shared.AccountingExpenseType.COMPANY,
-            "updated_at": parse_datetime("2020-09-02T07:17:01.301Z"),
+            "updated_at": parse_datetime("2020-09-02T08:08:15.489Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -786,7 +786,7 @@ with UnifiedTo(
 
 ## update_legal_expense
 
-Update an expense
+Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in the request body.
 
 ### Example Usage
 
@@ -809,7 +809,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-11-08T00:41:42.356Z"),
             "currency": "MVR",
             "description": "Temporibus agnitio sui.",
-            "id": "747f484d-e6fe-4cb6-bb93-5cfffff2ef2a",
+            "id": "5b3cb8a3-5737-4b18-b126-5266526343a7",
             "incurred_at": parse_datetime("2020-11-08T00:41:42.356Z"),
             "is_billed": False,
             "metadata": [],
@@ -817,7 +817,7 @@ with UnifiedTo(
             "quantity": 3.0,
             "total_amount": 300.0,
             "type": shared.LegalExpenseType.OTHER,
-            "updated_at": parse_datetime("2024-03-30T23:18:21.155Z"),
+            "updated_at": parse_datetime("2024-03-31T12:54:25.603Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

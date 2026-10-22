@@ -13,7 +13,7 @@
 
 ## create_accounting_account
 
-Create an account
+Creates a AccountingAccount. Provide the unified AccountingAccount fields in the request body; they are mapped to the provider's API. Returns the created AccountingAccount.
 
 ### Example Usage
 
@@ -37,7 +37,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "ecf5b11c-7793-4217-adb9-73064cb6d664",
+            "id": "cf355b43-f7e4-4200-abd9-da8905ac9789",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -50,7 +50,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-06T21:39:36.829Z"),
+            "updated_at": parse_datetime("2023-08-07T03:43:27.331Z"),
         },
         "connection_id": "<id>",
     })
@@ -81,7 +81,7 @@ with UnifiedTo(
 
 ## get_accounting_account
 
-Retrieve an account
+Retrieves a single AccountingAccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -128,7 +128,7 @@ with UnifiedTo(
 
 ## list_accounting_accounts
 
-List all accounts
+Returns a list of AccountingAccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -174,7 +174,7 @@ with UnifiedTo(
 
 ## patch_accounting_account
 
-Update an account
+Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to change in the request body.
 
 ### Example Usage
 
@@ -198,7 +198,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "3304d74d-5b42-45cd-824f-cf4c4b71e09d",
+            "id": "b074017e-1dd1-4e9c-9a9a-ba6ae9afe0cc",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -211,7 +211,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-06T21:39:36.834Z"),
+            "updated_at": parse_datetime("2023-08-07T03:43:27.336Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -243,7 +243,7 @@ with UnifiedTo(
 
 ## remove_accounting_account
 
-Remove an account
+Deletes the AccountingAccount identified by `id`.
 
 ### Example Usage
 
@@ -290,7 +290,7 @@ with UnifiedTo(
 
 ## update_accounting_account
 
-Update an account
+Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to change in the request body.
 
 ### Example Usage
 
@@ -314,7 +314,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "3304d74d-5b42-45cd-824f-cf4c4b71e09d",
+            "id": "b074017e-1dd1-4e9c-9a9a-ba6ae9afe0cc",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -327,7 +327,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-06T21:39:36.834Z"),
+            "updated_at": parse_datetime("2023-08-07T03:43:27.336Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

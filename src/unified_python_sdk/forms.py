@@ -24,6 +24,8 @@ class Forms(BaseSDK):
     ) -> operations.CreateFormsFormResponse:
         r"""Create a form
 
+        Creates a FormsForm. Provide the unified FormsForm fields in the request body; they are mapped to the provider's API. Returns the created FormsForm.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -119,6 +121,8 @@ class Forms(BaseSDK):
     ) -> operations.CreateFormsFormResponse:
         r"""Create a form
 
+        Creates a FormsForm. Provide the unified FormsForm fields in the request body; they are mapped to the provider's API. Returns the created FormsForm.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -213,6 +217,8 @@ class Forms(BaseSDK):
     ) -> operations.GetFormsFormResponse:
         r"""Retrieve a form
 
+        Retrieves a single FormsForm by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -303,6 +309,8 @@ class Forms(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetFormsFormResponse:
         r"""Retrieve a form
+
+        Retrieves a single FormsForm by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -396,6 +404,8 @@ class Forms(BaseSDK):
     ) -> operations.GetFormsSubmissionResponse:
         r"""Retrieve a submission
 
+        Retrieves a single FormsSubmission by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -488,6 +498,8 @@ class Forms(BaseSDK):
     ) -> operations.GetFormsSubmissionResponse:
         r"""Retrieve a submission
 
+        Retrieves a single FormsSubmission by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -579,6 +591,8 @@ class Forms(BaseSDK):
     ) -> operations.ListFormsFormsResponse:
         r"""List all forms
 
+        Returns a list of FormsForms. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -669,6 +683,8 @@ class Forms(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListFormsFormsResponse:
         r"""List all forms
+
+        Returns a list of FormsForms. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -762,6 +778,8 @@ class Forms(BaseSDK):
     ) -> operations.ListFormsSubmissionsResponse:
         r"""List all submissions
 
+        Returns a list of FormsSubmissions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -854,6 +872,8 @@ class Forms(BaseSDK):
     ) -> operations.ListFormsSubmissionsResponse:
         r"""List all submissions
 
+        Returns a list of FormsSubmissions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -944,6 +964,8 @@ class Forms(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchFormsFormResponse:
         r"""Update a form
+
+        Updates the FormsForm identified by `id`. Provide the unified FormsForm fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1039,6 +1061,8 @@ class Forms(BaseSDK):
     ) -> operations.PatchFormsFormResponse:
         r"""Update a form
 
+        Updates the FormsForm identified by `id`. Provide the unified FormsForm fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1133,6 +1157,8 @@ class Forms(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveFormsFormResponse:
         r"""Remove a form
+
+        Deletes the FormsForm identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1231,6 +1257,8 @@ class Forms(BaseSDK):
     ) -> operations.RemoveFormsFormResponse:
         r"""Remove a form
 
+        Deletes the FormsForm identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1328,6 +1356,8 @@ class Forms(BaseSDK):
     ) -> operations.UpdateFormsFormResponse:
         r"""Update a form
 
+        Updates the FormsForm identified by `id`. Provide the unified FormsForm fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1422,6 +1452,8 @@ class Forms(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateFormsFormResponse:
         r"""Update a form
+
+        Updates the FormsForm identified by `id`. Provide the unified FormsForm fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

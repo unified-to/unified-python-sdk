@@ -10,7 +10,7 @@
 
 ## create_performance_feedback
 
-Create a feedback
+Creates a PerformanceFeedback. Provide the unified PerformanceFeedback fields in the request body; they are mapped to the provider's API. Returns the created PerformanceFeedback.
 
 ### Example Usage
 
@@ -30,7 +30,7 @@ with UnifiedTo(
     res = unified_to.feedback.create_performance_feedback(request={
         "performance_feedback": {
             "created_at": parse_datetime("2023-04-11T16:21:53.862Z"),
-            "id": "1f532bc0-6079-4413-aa87-e2465669291a",
+            "id": "1925adda-3dcf-4de2-aaf7-90b30474314a",
             "is_visible": True,
             "message": "Tabernus corpus voluptate aestus.",
             "metadata": [],
@@ -39,7 +39,7 @@ with UnifiedTo(
                 "hexagon",
             ],
             "type": shared.PerformanceFeedbackType.PRAISE,
-            "updated_at": parse_datetime("2025-09-04T02:24:38.117Z"),
+            "updated_at": parse_datetime("2025-09-04T18:38:19.853Z"),
             "user_id": "<id>",
         },
         "connection_id": "<id>",
@@ -71,7 +71,7 @@ with UnifiedTo(
 
 ## get_performance_feedback
 
-Retrieve a feedback
+Retrieves a single PerformanceFeedback by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -118,7 +118,7 @@ with UnifiedTo(
 
 ## list_performance_feedbacks
 
-List all feedbacks
+Returns a list of PerformanceFeedbacks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 

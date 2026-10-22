@@ -19,7 +19,7 @@
 
 ## create_commerce_collection
 
-Create a collection
+Creates a CommerceCollection. Provide the unified CommerceCollection fields in the request body; they are mapped to the provider's API. Returns the created CommerceCollection.
 
 ### Example Usage
 
@@ -40,7 +40,7 @@ with UnifiedTo(
         "commerce_collection": {
             "created_at": parse_datetime("2023-07-14T00:42:54.742Z"),
             "description": "The Integrated leading edge website Cheese offers reliable performance and productive design",
-            "id": "ec8c04f2-3e00-420b-ba9a-e3d205f8ce88",
+            "id": "560e3cd0-8477-4d34-8817-5267ee4dd2e8",
             "is_active": True,
             "is_featured": False,
             "is_visible": False,
@@ -49,10 +49,10 @@ with UnifiedTo(
                 {
                     "alt": "Defungo adopto thorax.",
                     "height": 759.0,
-                    "id": "205d23e3-4520-48ef-bb91-b3d8b8d89654",
+                    "id": "ccbbc897-00c8-45af-8cfe-3f86deb56e50",
                     "metadata": [
                         {
-                            "id": "b716751f-0cca-4e40-b849-ceb32f3255d6",
+                            "id": "ddc27840-37e5-4eb7-8548-ea2dce367895",
                             "slug": "censura",
                             "value": "toties",
                         },
@@ -65,7 +65,7 @@ with UnifiedTo(
             ],
             "metadata": [
                 {
-                    "id": "f1254843-0015-40c2-8928-3b66a53c6471",
+                    "id": "ae39db6a-f878-4ab2-8db7-5b7a0d697d3e",
                     "slug": "aetas",
                     "value": "consuasor",
                 },
@@ -79,7 +79,7 @@ with UnifiedTo(
                 "contego",
             ],
             "type": shared.CommerceCollectionType.COLLECTION,
-            "updated_at": parse_datetime("2025-03-15T01:15:47.099Z"),
+            "updated_at": parse_datetime("2025-03-15T13:26:27.513Z"),
         },
         "connection_id": "<id>",
     })
@@ -110,7 +110,7 @@ with UnifiedTo(
 
 ## create_lms_collection
 
-Create a collection
+Creates a LmsCollection. Provide the unified LmsCollection fields in the request body; they are mapped to the provider's API. Returns the created LmsCollection.
 
 ### Example Usage
 
@@ -131,7 +131,7 @@ with UnifiedTo(
         "lms_collection": {
             "created_at": parse_datetime("2019-08-19T14:40:29.227Z"),
             "description": "Ab.",
-            "id": "0dd076bb-7ba5-43a1-bf57-e82971b0475d",
+            "id": "0eef2f70-ca9e-44d8-9319-214f259637da",
             "is_active": True,
             "media": [
                 {
@@ -148,7 +148,7 @@ with UnifiedTo(
             ],
             "metadata": [],
             "name": "ara",
-            "updated_at": parse_datetime("2026-07-30T07:00:06.040Z"),
+            "updated_at": parse_datetime("2026-07-31T06:06:12.452Z"),
         },
         "connection_id": "<id>",
     })
@@ -179,7 +179,7 @@ with UnifiedTo(
 
 ## get_commerce_collection
 
-Retrieve a collection
+Retrieves a single CommerceCollection by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -226,7 +226,7 @@ with UnifiedTo(
 
 ## get_lms_collection
 
-Retrieve a collection
+Retrieves a single LmsCollection by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -273,7 +273,7 @@ with UnifiedTo(
 
 ## list_commerce_collections
 
-List all collections
+Returns a list of CommerceCollections. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -319,7 +319,7 @@ with UnifiedTo(
 
 ## list_lms_collections
 
-List all collections
+Returns a list of LmsCollections. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -365,7 +365,7 @@ with UnifiedTo(
 
 ## patch_commerce_collection
 
-Update a collection
+Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to change in the request body.
 
 ### Example Usage
 
@@ -386,7 +386,7 @@ with UnifiedTo(
         "commerce_collection": {
             "created_at": parse_datetime("2023-07-14T00:42:54.742Z"),
             "description": "The Integrated leading edge website Cheese offers reliable performance and productive design",
-            "id": "610a035a-c254-4ac1-9b1d-5f81dac7b86f",
+            "id": "6661f3a1-7c4f-405f-b3a5-1163410c2d96",
             "is_active": True,
             "is_featured": False,
             "is_visible": False,
@@ -395,10 +395,10 @@ with UnifiedTo(
                 {
                     "alt": "Defungo adopto thorax.",
                     "height": 759.0,
-                    "id": "682eaeaf-21bd-43ca-858d-9f9822849173",
+                    "id": "bea5d4e2-18f3-4900-a6c6-8002a365d0d3",
                     "metadata": [
                         {
-                            "id": "2f6df4ba-91a8-46a7-a69a-332fee42fc9c",
+                            "id": "1b01c6f9-cebf-4586-b996-c6351c02781a",
                             "slug": "censura",
                             "value": "toties",
                         },
@@ -411,7 +411,7 @@ with UnifiedTo(
             ],
             "metadata": [
                 {
-                    "id": "004e3784-91c6-4314-baa6-7da6292dda05",
+                    "id": "05eecd1d-72a1-4c34-b80c-a9b9fc79cd03",
                     "slug": "aetas",
                     "value": "consuasor",
                 },
@@ -425,7 +425,7 @@ with UnifiedTo(
                 "contego",
             ],
             "type": shared.CommerceCollectionType.COLLECTION,
-            "updated_at": parse_datetime("2025-03-15T01:15:47.115Z"),
+            "updated_at": parse_datetime("2025-03-15T13:26:27.534Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -457,7 +457,7 @@ with UnifiedTo(
 
 ## patch_lms_collection
 
-Update a collection
+Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in the request body.
 
 ### Example Usage
 
@@ -478,7 +478,7 @@ with UnifiedTo(
         "lms_collection": {
             "created_at": parse_datetime("2019-08-19T14:40:29.227Z"),
             "description": "Ab.",
-            "id": "cdb6703c-8edd-4256-9aab-2d20a7391bc9",
+            "id": "935b9a6d-4c66-441d-a9cb-34b4e9e56c7f",
             "is_active": True,
             "media": [
                 {
@@ -495,7 +495,7 @@ with UnifiedTo(
             ],
             "metadata": [],
             "name": "ara",
-            "updated_at": parse_datetime("2026-07-30T07:00:06.059Z"),
+            "updated_at": parse_datetime("2026-07-31T06:06:12.473Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -527,7 +527,7 @@ with UnifiedTo(
 
 ## remove_commerce_collection
 
-Remove a collection
+Deletes the CommerceCollection identified by `id`.
 
 ### Example Usage
 
@@ -574,7 +574,7 @@ with UnifiedTo(
 
 ## remove_lms_collection
 
-Remove a collection
+Deletes the LmsCollection identified by `id`.
 
 ### Example Usage
 
@@ -621,7 +621,7 @@ with UnifiedTo(
 
 ## update_commerce_collection
 
-Update a collection
+Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to change in the request body.
 
 ### Example Usage
 
@@ -642,7 +642,7 @@ with UnifiedTo(
         "commerce_collection": {
             "created_at": parse_datetime("2023-07-14T00:42:54.742Z"),
             "description": "The Integrated leading edge website Cheese offers reliable performance and productive design",
-            "id": "610a035a-c254-4ac1-9b1d-5f81dac7b86f",
+            "id": "6661f3a1-7c4f-405f-b3a5-1163410c2d96",
             "is_active": True,
             "is_featured": False,
             "is_visible": False,
@@ -651,10 +651,10 @@ with UnifiedTo(
                 {
                     "alt": "Defungo adopto thorax.",
                     "height": 759.0,
-                    "id": "682eaeaf-21bd-43ca-858d-9f9822849173",
+                    "id": "bea5d4e2-18f3-4900-a6c6-8002a365d0d3",
                     "metadata": [
                         {
-                            "id": "2f6df4ba-91a8-46a7-a69a-332fee42fc9c",
+                            "id": "1b01c6f9-cebf-4586-b996-c6351c02781a",
                             "slug": "censura",
                             "value": "toties",
                         },
@@ -667,7 +667,7 @@ with UnifiedTo(
             ],
             "metadata": [
                 {
-                    "id": "004e3784-91c6-4314-baa6-7da6292dda05",
+                    "id": "05eecd1d-72a1-4c34-b80c-a9b9fc79cd03",
                     "slug": "aetas",
                     "value": "consuasor",
                 },
@@ -681,7 +681,7 @@ with UnifiedTo(
                 "contego",
             ],
             "type": shared.CommerceCollectionType.COLLECTION,
-            "updated_at": parse_datetime("2025-03-15T01:15:47.115Z"),
+            "updated_at": parse_datetime("2025-03-15T13:26:27.534Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -713,7 +713,7 @@ with UnifiedTo(
 
 ## update_lms_collection
 
-Update a collection
+Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in the request body.
 
 ### Example Usage
 
@@ -734,7 +734,7 @@ with UnifiedTo(
         "lms_collection": {
             "created_at": parse_datetime("2019-08-19T14:40:29.227Z"),
             "description": "Ab.",
-            "id": "cdb6703c-8edd-4256-9aab-2d20a7391bc9",
+            "id": "935b9a6d-4c66-441d-a9cb-34b4e9e56c7f",
             "is_active": True,
             "media": [
                 {
@@ -751,7 +751,7 @@ with UnifiedTo(
             ],
             "metadata": [],
             "name": "ara",
-            "updated_at": parse_datetime("2026-07-30T07:00:06.059Z"),
+            "updated_at": parse_datetime("2026-07-31T06:06:12.473Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

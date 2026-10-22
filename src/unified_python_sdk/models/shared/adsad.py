@@ -64,6 +64,7 @@ class AdsAdTypedDict(TypedDict):
     logo_creative_id: NotRequired[str]
     metadata: NotRequired[List[AdsMetadataTypedDict]]
     name: NotRequired[str]
+    r"""The ad's name"""
     organization_id: NotRequired[str]
     path1: NotRequired[str]
     path2: NotRequired[str]
@@ -110,6 +111,7 @@ class AdsAd(BaseModel):
     metadata: Optional[List[AdsMetadata]] = None
 
     name: Optional[str] = None
+    r"""The ad's name"""
 
     organization_id: Optional[str] = None
 

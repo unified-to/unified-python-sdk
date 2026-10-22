@@ -24,6 +24,8 @@ class Ticketing(BaseSDK):
     ) -> operations.CreateTicketingCategoryResponse:
         r"""Create a category
 
+        Creates a TicketingCategory. Provide the unified TicketingCategory fields in the request body; they are mapped to the provider's API. Returns the created TicketingCategory.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -124,6 +126,8 @@ class Ticketing(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateTicketingCategoryResponse:
         r"""Create a category
+
+        Creates a TicketingCategory. Provide the unified TicketingCategory fields in the request body; they are mapped to the provider's API. Returns the created TicketingCategory.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -226,6 +230,8 @@ class Ticketing(BaseSDK):
     ) -> operations.CreateTicketingCustomerResponse:
         r"""Create a customer
 
+        Creates a TicketingCustomer. Provide the unified TicketingCustomer fields in the request body; they are mapped to the provider's API. Returns the created TicketingCustomer.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -326,6 +332,8 @@ class Ticketing(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateTicketingCustomerResponse:
         r"""Create a customer
+
+        Creates a TicketingCustomer. Provide the unified TicketingCustomer fields in the request body; they are mapped to the provider's API. Returns the created TicketingCustomer.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -428,6 +436,8 @@ class Ticketing(BaseSDK):
     ) -> operations.CreateTicketingNoteResponse:
         r"""Create a note
 
+        Creates a TicketingNote. Provide the unified TicketingNote fields in the request body; they are mapped to the provider's API. Returns the created TicketingNote.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -522,6 +532,8 @@ class Ticketing(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateTicketingNoteResponse:
         r"""Create a note
+
+        Creates a TicketingNote. Provide the unified TicketingNote fields in the request body; they are mapped to the provider's API. Returns the created TicketingNote.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -618,6 +630,8 @@ class Ticketing(BaseSDK):
     ) -> operations.CreateTicketingTicketResponse:
         r"""Create a ticket
 
+        Creates a TicketingTicket. Provide the unified TicketingTicket fields in the request body; they are mapped to the provider's API. Returns the created TicketingTicket.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -712,6 +726,8 @@ class Ticketing(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateTicketingTicketResponse:
         r"""Create a ticket
+
+        Creates a TicketingTicket. Provide the unified TicketingTicket fields in the request body; they are mapped to the provider's API. Returns the created TicketingTicket.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -808,6 +824,8 @@ class Ticketing(BaseSDK):
     ) -> operations.GetTicketingCategoryResponse:
         r"""Retrieve a category
 
+        Retrieves a single TicketingCategory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -899,6 +917,8 @@ class Ticketing(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetTicketingCategoryResponse:
         r"""Retrieve a category
+
+        Retrieves a single TicketingCategory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -992,6 +1012,8 @@ class Ticketing(BaseSDK):
     ) -> operations.GetTicketingCustomerResponse:
         r"""Retrieve a customer
 
+        Retrieves a single TicketingCustomer by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1083,6 +1105,8 @@ class Ticketing(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetTicketingCustomerResponse:
         r"""Retrieve a customer
+
+        Retrieves a single TicketingCustomer by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1176,6 +1200,8 @@ class Ticketing(BaseSDK):
     ) -> operations.GetTicketingNoteResponse:
         r"""Retrieve a note
 
+        Retrieves a single TicketingNote by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1267,6 +1293,8 @@ class Ticketing(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetTicketingNoteResponse:
         r"""Retrieve a note
+
+        Retrieves a single TicketingNote by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1360,6 +1388,8 @@ class Ticketing(BaseSDK):
     ) -> operations.GetTicketingTicketResponse:
         r"""Retrieve a ticket
 
+        Retrieves a single TicketingTicket by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1452,6 +1482,8 @@ class Ticketing(BaseSDK):
     ) -> operations.GetTicketingTicketResponse:
         r"""Retrieve a ticket
 
+        Retrieves a single TicketingTicket by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1543,6 +1575,8 @@ class Ticketing(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListTicketingCategoriesResponse:
         r"""List all categories
+
+        Returns a list of TicketingCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1638,6 +1672,8 @@ class Ticketing(BaseSDK):
     ) -> operations.ListTicketingCategoriesResponse:
         r"""List all categories
 
+        Returns a list of TicketingCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1732,6 +1768,8 @@ class Ticketing(BaseSDK):
     ) -> operations.ListTicketingCustomersResponse:
         r"""List all customers
 
+        Returns a list of TicketingCustomers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1823,6 +1861,8 @@ class Ticketing(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListTicketingCustomersResponse:
         r"""List all customers
+
+        Returns a list of TicketingCustomers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1916,6 +1956,8 @@ class Ticketing(BaseSDK):
     ) -> operations.ListTicketingNotesResponse:
         r"""List all notes
 
+        Returns a list of TicketingNotes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2007,6 +2049,8 @@ class Ticketing(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListTicketingNotesResponse:
         r"""List all notes
+
+        Returns a list of TicketingNotes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2100,6 +2144,8 @@ class Ticketing(BaseSDK):
     ) -> operations.ListTicketingTicketsResponse:
         r"""List all tickets
 
+        Returns a list of TicketingTickets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2192,6 +2238,8 @@ class Ticketing(BaseSDK):
     ) -> operations.ListTicketingTicketsResponse:
         r"""List all tickets
 
+        Returns a list of TicketingTickets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2283,6 +2331,8 @@ class Ticketing(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchTicketingCategoryResponse:
         r"""Update a category
+
+        Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2383,6 +2433,8 @@ class Ticketing(BaseSDK):
     ) -> operations.PatchTicketingCategoryResponse:
         r"""Update a category
 
+        Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2481,6 +2533,8 @@ class Ticketing(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchTicketingCustomerResponse:
         r"""Update a customer
+
+        Updates the TicketingCustomer identified by `id`. Provide the unified TicketingCustomer fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2581,6 +2635,8 @@ class Ticketing(BaseSDK):
     ) -> operations.PatchTicketingCustomerResponse:
         r"""Update a customer
 
+        Updates the TicketingCustomer identified by `id`. Provide the unified TicketingCustomer fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2680,6 +2736,8 @@ class Ticketing(BaseSDK):
     ) -> operations.PatchTicketingNoteResponse:
         r"""Update a note
 
+        Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2774,6 +2832,8 @@ class Ticketing(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchTicketingNoteResponse:
         r"""Update a note
+
+        Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2870,6 +2930,8 @@ class Ticketing(BaseSDK):
     ) -> operations.PatchTicketingTicketResponse:
         r"""Update a ticket
 
+        Updates the TicketingTicket identified by `id`. Provide the unified TicketingTicket fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2965,6 +3027,8 @@ class Ticketing(BaseSDK):
     ) -> operations.PatchTicketingTicketResponse:
         r"""Update a ticket
 
+        Updates the TicketingTicket identified by `id`. Provide the unified TicketingTicket fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3059,6 +3123,8 @@ class Ticketing(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveTicketingCategoryResponse:
         r"""Remove a category
+
+        Deletes the TicketingCategory identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3159,6 +3225,8 @@ class Ticketing(BaseSDK):
     ) -> operations.RemoveTicketingCategoryResponse:
         r"""Remove a category
 
+        Deletes the TicketingCategory identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3257,6 +3325,8 @@ class Ticketing(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveTicketingCustomerResponse:
         r"""Remove a customer
+
+        Deletes the TicketingCustomer identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3357,6 +3427,8 @@ class Ticketing(BaseSDK):
     ) -> operations.RemoveTicketingCustomerResponse:
         r"""Remove a customer
 
+        Deletes the TicketingCustomer identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3456,6 +3528,8 @@ class Ticketing(BaseSDK):
     ) -> operations.RemoveTicketingNoteResponse:
         r"""Remove a note
 
+        Deletes the TicketingNote identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3552,6 +3626,8 @@ class Ticketing(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveTicketingNoteResponse:
         r"""Remove a note
+
+        Deletes the TicketingNote identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3650,6 +3726,8 @@ class Ticketing(BaseSDK):
     ) -> operations.RemoveTicketingTicketResponse:
         r"""Remove a ticket
 
+        Deletes the TicketingTicket identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3747,6 +3825,8 @@ class Ticketing(BaseSDK):
     ) -> operations.RemoveTicketingTicketResponse:
         r"""Remove a ticket
 
+        Deletes the TicketingTicket identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3843,6 +3923,8 @@ class Ticketing(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateTicketingCategoryResponse:
         r"""Update a category
+
+        Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3945,6 +4027,8 @@ class Ticketing(BaseSDK):
     ) -> operations.UpdateTicketingCategoryResponse:
         r"""Update a category
 
+        Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4045,6 +4129,8 @@ class Ticketing(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateTicketingCustomerResponse:
         r"""Update a customer
+
+        Updates the TicketingCustomer identified by `id`. Provide the unified TicketingCustomer fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4147,6 +4233,8 @@ class Ticketing(BaseSDK):
     ) -> operations.UpdateTicketingCustomerResponse:
         r"""Update a customer
 
+        Updates the TicketingCustomer identified by `id`. Provide the unified TicketingCustomer fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4248,6 +4336,8 @@ class Ticketing(BaseSDK):
     ) -> operations.UpdateTicketingNoteResponse:
         r"""Update a note
 
+        Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4342,6 +4432,8 @@ class Ticketing(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateTicketingNoteResponse:
         r"""Update a note
+
+        Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4438,6 +4530,8 @@ class Ticketing(BaseSDK):
     ) -> operations.UpdateTicketingTicketResponse:
         r"""Update a ticket
 
+        Updates the TicketingTicket identified by `id`. Provide the unified TicketingTicket fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4532,6 +4626,8 @@ class Ticketing(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateTicketingTicketResponse:
         r"""Update a ticket
+
+        Updates the TicketingTicket identified by `id`. Provide the unified TicketingTicket fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

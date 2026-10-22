@@ -33,7 +33,7 @@
 
 ## create_genai_task
 
-Create a task
+Creates a GenaiTask. Provide the unified GenaiTask fields in the request body; they are mapped to the provider's API. Returns the created GenaiTask.
 
 ### Example Usage
 
@@ -52,10 +52,10 @@ with UnifiedTo(
 
     res = unified_to.task.create_genai_task(request={
         "genai_task": {
-            "completed_at": parse_datetime("2025-10-01T06:36:12.546Z"),
+            "completed_at": parse_datetime("2025-10-02T02:15:37.668Z"),
             "created_at": parse_datetime("2020-10-25T20:19:33.247Z"),
             "files_changed": 19.0,
-            "id": "d04c1891-f0c6-4ee2-80ac-73218de3aaeb",
+            "id": "442fcbae-d067-4f9c-9db3-a70e9c393a98",
             "instructions": "Benigne canonicus officiis solvo adsidue deleo angustus.",
             "lines_added": 244.0,
             "lines_deleted": 118.0,
@@ -70,12 +70,12 @@ with UnifiedTo(
             "pullrequest_url": "https://github.com/berenice.satterfield/joshingly-ignorance/pull/383",
             "repo_url": "https://github.com/berenice.satterfield/joshingly-ignorance",
             "source_branch_identifier": "main",
-            "started_at": parse_datetime("2024-05-21T10:26:55.088Z"),
+            "started_at": parse_datetime("2024-05-22T00:40:23.675Z"),
             "status": shared.GenaiTaskStatus.BLOCKED,
             "summary": "Cur aeternus cogito vesper.",
             "target_branch_identifier": "agent/joshingly-ignorance",
             "tokens_used": 2165.0,
-            "updated_at": parse_datetime("2023-02-26T07:13:13.628Z"),
+            "updated_at": parse_datetime("2023-02-26T16:31:59.677Z"),
             "web_url": "https://inexperienced-adrenalin.biz/",
         },
         "connection_id": "<id>",
@@ -107,7 +107,7 @@ with UnifiedTo(
 
 ## create_task_comment
 
-Create a comment
+Creates a TaskComment. Provide the unified TaskComment fields in the request body; they are mapped to the provider's API. Returns the created TaskComment.
 
 ### Example Usage
 
@@ -128,10 +128,10 @@ with UnifiedTo(
         "task_comment": {
             "created_at": parse_datetime("2019-10-12T20:33:37.879Z"),
             "has_children": True,
-            "id": "89584d93-287c-4a9b-b003-a4df2cd44beb",
+            "id": "0443a83e-d435-44b8-887a-9cbb133ec389",
             "metadata": [],
             "text": "Colo ulciscor sublime tabernus.",
-            "updated_at": parse_datetime("2021-10-03T07:58:10.614Z"),
+            "updated_at": parse_datetime("2021-10-03T14:40:44.794Z"),
         },
         "connection_id": "<id>",
     })
@@ -162,7 +162,7 @@ with UnifiedTo(
 
 ## create_task_project
 
-Create a project
+Creates a TaskProject. Provide the unified TaskProject fields in the request body; they are mapped to the provider's API. Returns the created TaskProject.
 
 ### Example Usage
 
@@ -185,14 +185,14 @@ with UnifiedTo(
             "description": "Valetudo aggredior accommodo curiositas vox.",
             "has_children": False,
             "has_tasks": False,
-            "id": "58860c38-43c5-4d54-9d59-b6b343f23654",
+            "id": "586e2b04-721f-4fb4-b1c9-ff0295b8f983",
             "metadata": [
                 {
                     "extra_data": {
 
                     },
                     "format_": shared.TaskMetadataFormat.TEXT,
-                    "id": "e05c0b76-22e9-470a-abdc-5a6cc1c93300",
+                    "id": "ac6d7296-95fc-4c6c-b2b1-b41a06651184",
                     "namespace": "custom",
                     "slug": "decens",
                     "value": "uterque",
@@ -202,14 +202,14 @@ with UnifiedTo(
 
                     },
                     "format_": shared.TaskMetadataFormat.TEXT,
-                    "id": "b195583e-2f69-4f45-ae8e-c02acdbfe72d",
+                    "id": "9bfa2064-4758-497f-942c-b3cc0ea19dfd",
                     "namespace": "custom",
                     "slug": "benevolentia",
                     "value": "pariatur",
                 },
             ],
             "name": "Garden",
-            "updated_at": parse_datetime("2023-10-11T14:30:05.844Z"),
+            "updated_at": parse_datetime("2023-10-11T16:39:32.559Z"),
         },
         "connection_id": "<id>",
     })
@@ -240,7 +240,7 @@ with UnifiedTo(
 
 ## create_task_task
 
-Create a task
+Creates a TaskTask. Provide the unified TaskTask fields in the request body; they are mapped to the provider's API. Returns the created TaskTask.
 
 ### Example Usage
 
@@ -261,15 +261,15 @@ with UnifiedTo(
         "task_task": {
             "attachment_ids": [],
             "created_at": parse_datetime("2019-01-31T08:34:55.626Z"),
-            "due_at": parse_datetime("2025-09-11T18:03:32.923Z"),
+            "due_at": parse_datetime("2025-09-12T14:15:13.461Z"),
             "has_children": True,
-            "id": "3cc79324-6a62-4a3a-8f02-e2f1f181697f",
+            "id": "6f667320-6d4d-44b6-b6db-61853b30438f",
             "metadata": [],
             "name": "I'll compress the optical IB interface, that should capacitor the JBOD system!",
             "notes": "Argentum ventosus rem talis neque thymbra. Absconditus peccatus crustulum tollo cometes volva vacuus eos cedo. Somnus utpote coadunatio denuncio adopto autus sono atrocitas. Concido rerum cura aveho torqueo tempore tubineus vomer tempore suscipit. Clibanus valetudo vulnero pauper caput absorbeo correptius vir deduco.",
             "priority": "MEDIUM",
             "progress": 33.0,
-            "start_at": parse_datetime("2025-08-14T08:12:03.961Z"),
+            "start_at": parse_datetime("2025-08-15T04:23:44.499Z"),
             "status": shared.TaskTaskStatus.OPENED,
             "story_points": 0.0,
             "tags": [
@@ -279,7 +279,7 @@ with UnifiedTo(
             "time_spent": 5359.0,
             "time_spent_unit": "SECONDS",
             "type": "magni",
-            "updated_at": parse_datetime("2022-04-07T02:09:54.175Z"),
+            "updated_at": parse_datetime("2022-04-07T11:59:37.144Z"),
             "url": "https://elementary-utilization.net/",
         },
         "connection_id": "<id>",
@@ -311,7 +311,7 @@ with UnifiedTo(
 
 ## get_genai_task
 
-Retrieve a task
+Retrieves a single GenaiTask by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -358,7 +358,7 @@ with UnifiedTo(
 
 ## get_task_change
 
-Retrieve a change
+Retrieves a single TaskChange by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -405,7 +405,7 @@ with UnifiedTo(
 
 ## get_task_comment
 
-Retrieve a comment
+Retrieves a single TaskComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -452,7 +452,7 @@ with UnifiedTo(
 
 ## get_task_project
 
-Retrieve a project
+Retrieves a single TaskProject by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -499,7 +499,7 @@ with UnifiedTo(
 
 ## get_task_task
 
-Retrieve a task
+Retrieves a single TaskTask by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -546,7 +546,7 @@ with UnifiedTo(
 
 ## list_genai_tasks
 
-List all tasks
+Returns a list of GenaiTasks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -592,7 +592,7 @@ with UnifiedTo(
 
 ## list_task_changes
 
-List all changes
+Returns a list of TaskChanges. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -638,7 +638,7 @@ with UnifiedTo(
 
 ## list_task_comments
 
-List all comments
+Returns a list of TaskComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -684,7 +684,7 @@ with UnifiedTo(
 
 ## list_task_projects
 
-List all projects
+Returns a list of TaskProjects. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -730,7 +730,7 @@ with UnifiedTo(
 
 ## list_task_tasks
 
-List all tasks
+Returns a list of TaskTasks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -776,7 +776,7 @@ with UnifiedTo(
 
 ## patch_genai_task
 
-Update a task
+Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the request body.
 
 ### Example Usage
 
@@ -795,10 +795,10 @@ with UnifiedTo(
 
     res = unified_to.task.patch_genai_task(request={
         "genai_task": {
-            "completed_at": parse_datetime("2025-10-01T06:36:12.563Z"),
+            "completed_at": parse_datetime("2025-10-02T02:15:37.686Z"),
             "created_at": parse_datetime("2020-10-25T20:19:33.247Z"),
             "files_changed": 19.0,
-            "id": "7b8631d6-ac88-4ed9-bd1e-6950bd18a8ef",
+            "id": "4013dc78-f8cd-401f-8553-cc0548fc6a44",
             "instructions": "Benigne canonicus officiis solvo adsidue deleo angustus.",
             "lines_added": 244.0,
             "lines_deleted": 118.0,
@@ -813,12 +813,12 @@ with UnifiedTo(
             "pullrequest_url": "https://github.com/berenice.satterfield/joshingly-ignorance/pull/383",
             "repo_url": "https://github.com/berenice.satterfield/joshingly-ignorance",
             "source_branch_identifier": "main",
-            "started_at": parse_datetime("2024-05-21T10:26:55.100Z"),
+            "started_at": parse_datetime("2024-05-22T00:40:23.688Z"),
             "status": shared.GenaiTaskStatus.BLOCKED,
             "summary": "Cur aeternus cogito vesper.",
             "target_branch_identifier": "agent/joshingly-ignorance",
             "tokens_used": 2165.0,
-            "updated_at": parse_datetime("2023-02-26T07:13:13.636Z"),
+            "updated_at": parse_datetime("2023-02-26T16:31:59.686Z"),
             "web_url": "https://inexperienced-adrenalin.biz/",
         },
         "connection_id": "<id>",
@@ -851,7 +851,7 @@ with UnifiedTo(
 
 ## patch_task_comment
 
-Update a comment
+Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the request body.
 
 ### Example Usage
 
@@ -872,10 +872,10 @@ with UnifiedTo(
         "task_comment": {
             "created_at": parse_datetime("2019-10-12T20:33:37.879Z"),
             "has_children": True,
-            "id": "84d2145b-4d40-42b5-b9bd-1b6ab578fefe",
+            "id": "7327dfbd-4c0c-4c6c-b2f8-f9a1b36b2677",
             "metadata": [],
             "text": "Colo ulciscor sublime tabernus.",
-            "updated_at": parse_datetime("2021-10-03T07:58:10.619Z"),
+            "updated_at": parse_datetime("2021-10-03T14:40:44.798Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -907,7 +907,7 @@ with UnifiedTo(
 
 ## patch_task_project
 
-Update a project
+Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the request body.
 
 ### Example Usage
 
@@ -930,14 +930,14 @@ with UnifiedTo(
             "description": "Valetudo aggredior accommodo curiositas vox.",
             "has_children": False,
             "has_tasks": False,
-            "id": "93101195-8daf-4dec-af0e-224992f61ee1",
+            "id": "4b217ca0-ecb9-4c4b-ae3d-75b658e307e7",
             "metadata": [
                 {
                     "extra_data": {
 
                     },
                     "format_": shared.TaskMetadataFormat.TEXT,
-                    "id": "4cb37b5f-57b7-499c-8550-07474797dad3",
+                    "id": "b7b73d5c-f1ff-48b2-8a4c-101025b18919",
                     "namespace": "custom",
                     "slug": "decens",
                     "value": "uterque",
@@ -947,14 +947,14 @@ with UnifiedTo(
 
                     },
                     "format_": shared.TaskMetadataFormat.TEXT,
-                    "id": "b9101958-c810-4c3d-b9cb-cdd75d056e5a",
+                    "id": "279643ea-8251-402f-bc4c-eeb7f28d150a",
                     "namespace": "custom",
                     "slug": "benevolentia",
                     "value": "pariatur",
                 },
             ],
             "name": "Garden",
-            "updated_at": parse_datetime("2023-10-11T14:30:05.846Z"),
+            "updated_at": parse_datetime("2023-10-11T16:39:32.560Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -986,7 +986,7 @@ with UnifiedTo(
 
 ## patch_task_task
 
-Update a task
+Updates the TaskTask identified by `id`. Provide the unified TaskTask fields to change in the request body.
 
 ### Example Usage
 
@@ -1007,15 +1007,15 @@ with UnifiedTo(
         "task_task": {
             "attachment_ids": [],
             "created_at": parse_datetime("2019-01-31T08:34:55.626Z"),
-            "due_at": parse_datetime("2025-09-11T18:03:32.942Z"),
+            "due_at": parse_datetime("2025-09-12T14:15:13.482Z"),
             "has_children": True,
-            "id": "c97cb5e5-6559-4c3a-a6f0-40990c00f88f",
+            "id": "3ea49707-d19b-40c7-82b3-7a5159a1cfea",
             "metadata": [],
             "name": "I'll compress the optical IB interface, that should capacitor the JBOD system!",
             "notes": "Argentum ventosus rem talis neque thymbra. Absconditus peccatus crustulum tollo cometes volva vacuus eos cedo. Somnus utpote coadunatio denuncio adopto autus sono atrocitas. Concido rerum cura aveho torqueo tempore tubineus vomer tempore suscipit. Clibanus valetudo vulnero pauper caput absorbeo correptius vir deduco.",
             "priority": "MEDIUM",
             "progress": 33.0,
-            "start_at": parse_datetime("2025-08-14T08:12:03.980Z"),
+            "start_at": parse_datetime("2025-08-15T04:23:44.520Z"),
             "status": shared.TaskTaskStatus.OPENED,
             "story_points": 0.0,
             "tags": [
@@ -1025,7 +1025,7 @@ with UnifiedTo(
             "time_spent": 5359.0,
             "time_spent_unit": "SECONDS",
             "type": "magni",
-            "updated_at": parse_datetime("2022-04-07T02:09:54.184Z"),
+            "updated_at": parse_datetime("2022-04-07T11:59:37.154Z"),
             "url": "https://elementary-utilization.net/",
         },
         "connection_id": "<id>",
@@ -1058,7 +1058,7 @@ with UnifiedTo(
 
 ## remove_genai_task
 
-Remove a task
+Deletes the GenaiTask identified by `id`.
 
 ### Example Usage
 
@@ -1105,7 +1105,7 @@ with UnifiedTo(
 
 ## remove_task_comment
 
-Remove a comment
+Deletes the TaskComment identified by `id`.
 
 ### Example Usage
 
@@ -1152,7 +1152,7 @@ with UnifiedTo(
 
 ## remove_task_project
 
-Remove a project
+Deletes the TaskProject identified by `id`.
 
 ### Example Usage
 
@@ -1199,7 +1199,7 @@ with UnifiedTo(
 
 ## remove_task_task
 
-Remove a task
+Deletes the TaskTask identified by `id`.
 
 ### Example Usage
 
@@ -1246,7 +1246,7 @@ with UnifiedTo(
 
 ## update_genai_task
 
-Update a task
+Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the request body.
 
 ### Example Usage
 
@@ -1265,10 +1265,10 @@ with UnifiedTo(
 
     res = unified_to.task.update_genai_task(request={
         "genai_task": {
-            "completed_at": parse_datetime("2025-10-01T06:36:12.563Z"),
+            "completed_at": parse_datetime("2025-10-02T02:15:37.686Z"),
             "created_at": parse_datetime("2020-10-25T20:19:33.247Z"),
             "files_changed": 19.0,
-            "id": "7b8631d6-ac88-4ed9-bd1e-6950bd18a8ef",
+            "id": "4013dc78-f8cd-401f-8553-cc0548fc6a44",
             "instructions": "Benigne canonicus officiis solvo adsidue deleo angustus.",
             "lines_added": 244.0,
             "lines_deleted": 118.0,
@@ -1283,12 +1283,12 @@ with UnifiedTo(
             "pullrequest_url": "https://github.com/berenice.satterfield/joshingly-ignorance/pull/383",
             "repo_url": "https://github.com/berenice.satterfield/joshingly-ignorance",
             "source_branch_identifier": "main",
-            "started_at": parse_datetime("2024-05-21T10:26:55.100Z"),
+            "started_at": parse_datetime("2024-05-22T00:40:23.688Z"),
             "status": shared.GenaiTaskStatus.BLOCKED,
             "summary": "Cur aeternus cogito vesper.",
             "target_branch_identifier": "agent/joshingly-ignorance",
             "tokens_used": 2165.0,
-            "updated_at": parse_datetime("2023-02-26T07:13:13.636Z"),
+            "updated_at": parse_datetime("2023-02-26T16:31:59.686Z"),
             "web_url": "https://inexperienced-adrenalin.biz/",
         },
         "connection_id": "<id>",
@@ -1321,7 +1321,7 @@ with UnifiedTo(
 
 ## update_task_comment
 
-Update a comment
+Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the request body.
 
 ### Example Usage
 
@@ -1342,10 +1342,10 @@ with UnifiedTo(
         "task_comment": {
             "created_at": parse_datetime("2019-10-12T20:33:37.879Z"),
             "has_children": True,
-            "id": "84d2145b-4d40-42b5-b9bd-1b6ab578fefe",
+            "id": "7327dfbd-4c0c-4c6c-b2f8-f9a1b36b2677",
             "metadata": [],
             "text": "Colo ulciscor sublime tabernus.",
-            "updated_at": parse_datetime("2021-10-03T07:58:10.619Z"),
+            "updated_at": parse_datetime("2021-10-03T14:40:44.798Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1377,7 +1377,7 @@ with UnifiedTo(
 
 ## update_task_project
 
-Update a project
+Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the request body.
 
 ### Example Usage
 
@@ -1400,14 +1400,14 @@ with UnifiedTo(
             "description": "Valetudo aggredior accommodo curiositas vox.",
             "has_children": False,
             "has_tasks": False,
-            "id": "93101195-8daf-4dec-af0e-224992f61ee1",
+            "id": "4b217ca0-ecb9-4c4b-ae3d-75b658e307e7",
             "metadata": [
                 {
                     "extra_data": {
 
                     },
                     "format_": shared.TaskMetadataFormat.TEXT,
-                    "id": "4cb37b5f-57b7-499c-8550-07474797dad3",
+                    "id": "b7b73d5c-f1ff-48b2-8a4c-101025b18919",
                     "namespace": "custom",
                     "slug": "decens",
                     "value": "uterque",
@@ -1417,14 +1417,14 @@ with UnifiedTo(
 
                     },
                     "format_": shared.TaskMetadataFormat.TEXT,
-                    "id": "b9101958-c810-4c3d-b9cb-cdd75d056e5a",
+                    "id": "279643ea-8251-402f-bc4c-eeb7f28d150a",
                     "namespace": "custom",
                     "slug": "benevolentia",
                     "value": "pariatur",
                 },
             ],
             "name": "Garden",
-            "updated_at": parse_datetime("2023-10-11T14:30:05.846Z"),
+            "updated_at": parse_datetime("2023-10-11T16:39:32.560Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1456,7 +1456,7 @@ with UnifiedTo(
 
 ## update_task_task
 
-Update a task
+Updates the TaskTask identified by `id`. Provide the unified TaskTask fields to change in the request body.
 
 ### Example Usage
 
@@ -1477,15 +1477,15 @@ with UnifiedTo(
         "task_task": {
             "attachment_ids": [],
             "created_at": parse_datetime("2019-01-31T08:34:55.626Z"),
-            "due_at": parse_datetime("2025-09-11T18:03:32.942Z"),
+            "due_at": parse_datetime("2025-09-12T14:15:13.482Z"),
             "has_children": True,
-            "id": "c97cb5e5-6559-4c3a-a6f0-40990c00f88f",
+            "id": "3ea49707-d19b-40c7-82b3-7a5159a1cfea",
             "metadata": [],
             "name": "I'll compress the optical IB interface, that should capacitor the JBOD system!",
             "notes": "Argentum ventosus rem talis neque thymbra. Absconditus peccatus crustulum tollo cometes volva vacuus eos cedo. Somnus utpote coadunatio denuncio adopto autus sono atrocitas. Concido rerum cura aveho torqueo tempore tubineus vomer tempore suscipit. Clibanus valetudo vulnero pauper caput absorbeo correptius vir deduco.",
             "priority": "MEDIUM",
             "progress": 33.0,
-            "start_at": parse_datetime("2025-08-14T08:12:03.980Z"),
+            "start_at": parse_datetime("2025-08-15T04:23:44.520Z"),
             "status": shared.TaskTaskStatus.OPENED,
             "story_points": 0.0,
             "tags": [
@@ -1495,7 +1495,7 @@ with UnifiedTo(
             "time_spent": 5359.0,
             "time_spent_unit": "SECONDS",
             "type": "magni",
-            "updated_at": parse_datetime("2022-04-07T02:09:54.184Z"),
+            "updated_at": parse_datetime("2022-04-07T11:59:37.154Z"),
             "url": "https://elementary-utilization.net/",
         },
         "connection_id": "<id>",

@@ -24,6 +24,8 @@ class Saleschannel(BaseSDK):
     ) -> operations.CreateCommerceSaleschannelResponse:
         r"""Create a saleschannel
 
+        Creates a CommerceSaleschannel. Provide the unified CommerceSaleschannel fields in the request body; they are mapped to the provider's API. Returns the created CommerceSaleschannel.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -124,6 +126,8 @@ class Saleschannel(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateCommerceSaleschannelResponse:
         r"""Create a saleschannel
+
+        Creates a CommerceSaleschannel. Provide the unified CommerceSaleschannel fields in the request body; they are mapped to the provider's API. Returns the created CommerceSaleschannel.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -226,6 +230,8 @@ class Saleschannel(BaseSDK):
     ) -> operations.GetCommerceSaleschannelResponse:
         r"""Retrieve a saleschannel
 
+        Retrieves a single CommerceSaleschannel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -319,6 +325,8 @@ class Saleschannel(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetCommerceSaleschannelResponse:
         r"""Retrieve a saleschannel
+
+        Retrieves a single CommerceSaleschannel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -414,6 +422,8 @@ class Saleschannel(BaseSDK):
     ) -> operations.ListCommerceSaleschannelsResponse:
         r"""List all saleschannels
 
+        Returns a list of CommerceSaleschannels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -508,6 +518,8 @@ class Saleschannel(BaseSDK):
     ) -> operations.ListCommerceSaleschannelsResponse:
         r"""List all saleschannels
 
+        Returns a list of CommerceSaleschannels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -601,6 +613,8 @@ class Saleschannel(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchCommerceSaleschannelResponse:
         r"""Update a saleschannel
+
+        Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -703,6 +717,8 @@ class Saleschannel(BaseSDK):
     ) -> operations.PatchCommerceSaleschannelResponse:
         r"""Update a saleschannel
 
+        Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -804,6 +820,8 @@ class Saleschannel(BaseSDK):
     ) -> operations.RemoveCommerceSaleschannelResponse:
         r"""Remove a saleschannel
 
+        Deletes the CommerceSaleschannel identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -903,6 +921,8 @@ class Saleschannel(BaseSDK):
     ) -> operations.RemoveCommerceSaleschannelResponse:
         r"""Remove a saleschannel
 
+        Deletes the CommerceSaleschannel identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1001,6 +1021,8 @@ class Saleschannel(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateCommerceSaleschannelResponse:
         r"""Update a saleschannel
+
+        Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1102,6 +1124,8 @@ class Saleschannel(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateCommerceSaleschannelResponse:
         r"""Update a saleschannel
+
+        Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

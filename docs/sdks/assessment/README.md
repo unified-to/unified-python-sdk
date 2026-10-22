@@ -17,7 +17,7 @@
 
 ## create_assessment_order
 
-Create an order
+Creates a AssessmentOrder. Provide the unified AssessmentOrder fields in the request body; they are mapped to the provider's API. Returns the created AssessmentOrder.
 
 ### Example Usage
 
@@ -38,7 +38,7 @@ with UnifiedTo(
         "assessment_order": {
             "connection_id": "<id>",
             "created_at": parse_datetime("2021-09-18T10:33:57.803Z"),
-            "id": "08ba5e73-7f11-4535-953e-86a11aa4ee05",
+            "id": "8f2ded2a-b22c-42ae-a1c7-7dffc14e2cc3",
             "metadata": [],
             "parameters": [],
             "profile_addresses": [],
@@ -65,7 +65,7 @@ with UnifiedTo(
             "response_url": "https://rowdy-fisherman.biz/",
             "status": shared.AssessmentOrderStatus.REJECTED,
             "target_url": "https://cautious-turret.info",
-            "updated_at": parse_datetime("2023-01-25T20:33:25.021Z"),
+            "updated_at": parse_datetime("2023-01-26T02:54:10.939Z"),
             "workspace_id": "<id>",
         },
         "connection_id": "<id>",
@@ -123,7 +123,7 @@ with UnifiedTo(
             "description": "Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.",
             "has_redirect_url": True,
             "has_target_url": False,
-            "id": "8e871dd0-2380-4647-b220-feb21455f4a1",
+            "id": "eb4d661b-ca91-4c5c-a007-2e86a0271834",
             "info_url": "https://ugly-instance.biz/",
             "integration_types": [
                 "viridis",
@@ -138,7 +138,7 @@ with UnifiedTo(
                 "clamo",
             ],
             "type": shared.AssessmentPackageType.VIDEO_INTERVIEW,
-            "updated_at": parse_datetime("2023-09-25T09:13:27.793Z"),
+            "updated_at": parse_datetime("2023-09-25T14:23:50.448Z"),
         },
         "connection_id": "<id>",
     })
@@ -169,7 +169,7 @@ with UnifiedTo(
 
 ## get_assessment_order
 
-Retrieve an order
+Retrieves a single AssessmentOrder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -309,7 +309,7 @@ with UnifiedTo(
 
 ## patch_assessment_order
 
-Update an order
+Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change in the request body.
 
 ### Example Usage
 
@@ -330,7 +330,7 @@ with UnifiedTo(
         "assessment_order": {
             "connection_id": "<id>",
             "created_at": parse_datetime("2021-09-18T10:33:57.803Z"),
-            "id": "ca9fd85b-8a8b-4cfd-bf43-d21b769905a9",
+            "id": "a89a5324-7724-4a6a-a3f2-52534dfbbf5a",
             "metadata": [],
             "parameters": [],
             "profile_addresses": [],
@@ -357,7 +357,7 @@ with UnifiedTo(
             "response_url": "https://rowdy-fisherman.biz/",
             "status": shared.AssessmentOrderStatus.REJECTED,
             "target_url": "https://cautious-turret.info",
-            "updated_at": parse_datetime("2023-01-25T20:33:25.034Z"),
+            "updated_at": parse_datetime("2023-01-26T02:54:10.953Z"),
             "workspace_id": "<id>",
         },
         "connection_id": "<id>",
@@ -416,7 +416,7 @@ with UnifiedTo(
             "description": "Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.",
             "has_redirect_url": True,
             "has_target_url": False,
-            "id": "40733399-bd9d-41fe-97ba-c6be8d21dca5",
+            "id": "0c12b87f-9455-4a8a-926b-cea0e8c84d25",
             "info_url": "https://ugly-instance.biz/",
             "integration_types": [
                 "viridis",
@@ -431,7 +431,7 @@ with UnifiedTo(
                 "clamo",
             ],
             "type": shared.AssessmentPackageType.VIDEO_INTERVIEW,
-            "updated_at": parse_datetime("2023-09-25T09:13:27.798Z"),
+            "updated_at": parse_datetime("2023-09-25T14:23:50.454Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -510,7 +510,7 @@ with UnifiedTo(
 
 ## update_assessment_order
 
-Update an order
+Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change in the request body.
 
 ### Example Usage
 
@@ -531,7 +531,7 @@ with UnifiedTo(
         "assessment_order": {
             "connection_id": "<id>",
             "created_at": parse_datetime("2021-09-18T10:33:57.803Z"),
-            "id": "ca9fd85b-8a8b-4cfd-bf43-d21b769905a9",
+            "id": "a89a5324-7724-4a6a-a3f2-52534dfbbf5a",
             "metadata": [],
             "parameters": [],
             "profile_addresses": [],
@@ -558,7 +558,7 @@ with UnifiedTo(
             "response_url": "https://rowdy-fisherman.biz/",
             "status": shared.AssessmentOrderStatus.REJECTED,
             "target_url": "https://cautious-turret.info",
-            "updated_at": parse_datetime("2023-01-25T20:33:25.034Z"),
+            "updated_at": parse_datetime("2023-01-26T02:54:10.953Z"),
             "workspace_id": "<id>",
         },
         "connection_id": "<id>",
@@ -617,7 +617,7 @@ with UnifiedTo(
             "description": "Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.",
             "has_redirect_url": True,
             "has_target_url": False,
-            "id": "40733399-bd9d-41fe-97ba-c6be8d21dca5",
+            "id": "0c12b87f-9455-4a8a-926b-cea0e8c84d25",
             "info_url": "https://ugly-instance.biz/",
             "integration_types": [
                 "viridis",
@@ -632,7 +632,7 @@ with UnifiedTo(
                 "clamo",
             ],
             "type": shared.AssessmentPackageType.VIDEO_INTERVIEW,
-            "updated_at": parse_datetime("2023-09-25T09:13:27.798Z"),
+            "updated_at": parse_datetime("2023-09-25T14:23:50.454Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

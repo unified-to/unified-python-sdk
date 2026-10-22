@@ -24,6 +24,8 @@ class Prompt(BaseSDK):
     ) -> operations.CreateGenaiPromptResponse:
         r"""Create a prompt
 
+        Creates a GenaiPrompt. Provide the unified GenaiPrompt fields in the request body; they are mapped to the provider's API. Returns the created GenaiPrompt.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -118,6 +120,8 @@ class Prompt(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateGenaiPromptResponse:
         r"""Create a prompt
+
+        Creates a GenaiPrompt. Provide the unified GenaiPrompt fields in the request body; they are mapped to the provider's API. Returns the created GenaiPrompt.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

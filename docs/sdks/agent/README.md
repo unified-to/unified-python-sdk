@@ -13,7 +13,7 @@
 
 ## create_genai_agent
 
-Create an agent
+Creates a GenaiAgent. Provide the unified GenaiAgent fields in the request body; they are mapped to the provider's API. Returns the created GenaiAgent.
 
 ### Example Usage
 
@@ -34,11 +34,11 @@ with UnifiedTo(
         "genai_agent": {
             "created_at": parse_datetime("2020-12-18T02:23:33.723Z"),
             "description": "Assentator tero sequi.",
-            "id": "3a998df9-cfa8-485e-b450-36bd04489918",
+            "id": "e6383f2d-b4d2-489e-9384-0cca840ad6f3",
             "instructions": "Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.",
             "is_active": False,
             "name": "daughter with",
-            "updated_at": parse_datetime("2025-10-15T10:43:39.292Z"),
+            "updated_at": parse_datetime("2025-10-16T06:26:17.706Z"),
         },
         "connection_id": "<id>",
     })
@@ -69,7 +69,7 @@ with UnifiedTo(
 
 ## get_genai_agent
 
-Retrieve an agent
+Retrieves a single GenaiAgent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -116,7 +116,7 @@ with UnifiedTo(
 
 ## list_genai_agents
 
-List all agents
+Returns a list of GenaiAgents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -162,7 +162,7 @@ with UnifiedTo(
 
 ## patch_genai_agent
 
-Update an agent
+Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields to change in the request body.
 
 ### Example Usage
 
@@ -183,11 +183,11 @@ with UnifiedTo(
         "genai_agent": {
             "created_at": parse_datetime("2020-12-18T02:23:33.723Z"),
             "description": "Assentator tero sequi.",
-            "id": "24582fd0-446d-4c0a-80f5-014e5bcff7ce",
+            "id": "691117f4-f6f3-456b-90b6-e5ab838c6c45",
             "instructions": "Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.",
             "is_active": False,
             "name": "daughter with",
-            "updated_at": parse_datetime("2025-10-15T10:43:39.297Z"),
+            "updated_at": parse_datetime("2025-10-16T06:26:17.713Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -219,7 +219,7 @@ with UnifiedTo(
 
 ## remove_genai_agent
 
-Remove an agent
+Deletes the GenaiAgent identified by `id`.
 
 ### Example Usage
 
@@ -266,7 +266,7 @@ with UnifiedTo(
 
 ## update_genai_agent
 
-Update an agent
+Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields to change in the request body.
 
 ### Example Usage
 
@@ -287,11 +287,11 @@ with UnifiedTo(
         "genai_agent": {
             "created_at": parse_datetime("2020-12-18T02:23:33.723Z"),
             "description": "Assentator tero sequi.",
-            "id": "24582fd0-446d-4c0a-80f5-014e5bcff7ce",
+            "id": "691117f4-f6f3-456b-90b6-e5ab838c6c45",
             "instructions": "Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.",
             "is_active": False,
             "name": "daughter with",
-            "updated_at": parse_datetime("2025-10-15T10:43:39.297Z"),
+            "updated_at": parse_datetime("2025-10-16T06:26:17.713Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

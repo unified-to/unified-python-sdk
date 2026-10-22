@@ -21,7 +21,7 @@
 
 ## create_signing_document
 
-Create a document
+Creates a SigningDocument. Provide the unified SigningDocument fields in the request body; they are mapped to the provider's API. Returns the created SigningDocument.
 
 ### Example Usage
 
@@ -43,12 +43,12 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-05-02T09:35:23.679Z"),
             "description": "Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.",
             "expires_at": parse_datetime("2021-06-04T01:21:34.949Z"),
-            "id": "a1b52799-848b-4bd7-88fc-f66cf62300ad",
+            "id": "aa295198-6095-4850-b56a-e9c7ab1f7094",
             "metadata": [],
             "name": "Denesik Group NDA",
-            "sent_at": parse_datetime("2022-06-29T12:04:54.658Z"),
+            "sent_at": parse_datetime("2022-06-29T17:08:04.191Z"),
             "status": shared.SigningDocumentStatus.DRAFT,
-            "updated_at": parse_datetime("2025-09-02T22:24:49.198Z"),
+            "updated_at": parse_datetime("2025-09-03T17:20:09.450Z"),
         },
         "connection_id": "<id>",
     })
@@ -79,7 +79,7 @@ with UnifiedTo(
 
 ## create_signing_signatory
 
-Create a signatory
+Creates a SigningSignatory. Provide the unified SigningSignatory fields in the request body; they are mapped to the provider's API. Returns the created SigningSignatory.
 
 ### Example Usage
 
@@ -100,12 +100,12 @@ with UnifiedTo(
         "signing_signatory": {
             "created_at": parse_datetime("2022-04-16T19:25:01.966Z"),
             "email": "anais.lakin@icloud.com",
-            "id": "6e242587-3643-46a8-be21-def051b8cdaa",
+            "id": "4d4cb049-4282-4114-a32b-b585df2822e4",
             "metadata": [],
             "name": "Anais Lakin",
             "role": shared.SigningSignatoryRole.SIGNER,
             "status": shared.SigningSignatoryStatus.ERROR,
-            "updated_at": parse_datetime("2024-05-17T19:55:29.739Z"),
+            "updated_at": parse_datetime("2024-05-18T06:57:14.587Z"),
         },
         "connection_id": "<id>",
     })
@@ -136,7 +136,7 @@ with UnifiedTo(
 
 ## get_signing_document
 
-Retrieve a document
+Retrieves a single SigningDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -183,7 +183,7 @@ with UnifiedTo(
 
 ## get_signing_signatory
 
-Retrieve a signatory
+Retrieves a single SigningSignatory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -230,7 +230,7 @@ with UnifiedTo(
 
 ## get_signing_template
 
-Retrieve a template
+Retrieves a single SigningTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -277,7 +277,7 @@ with UnifiedTo(
 
 ## list_signing_documents
 
-List all documents
+Returns a list of SigningDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -323,7 +323,7 @@ with UnifiedTo(
 
 ## list_signing_signatories
 
-List all signatories
+Returns a list of SigningSignatories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -369,7 +369,7 @@ with UnifiedTo(
 
 ## list_signing_templates
 
-List all templates
+Returns a list of SigningTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -415,7 +415,7 @@ with UnifiedTo(
 
 ## patch_signing_document
 
-Update a document
+Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -437,12 +437,12 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-05-02T09:35:23.679Z"),
             "description": "Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.",
             "expires_at": parse_datetime("2021-06-04T01:21:34.949Z"),
-            "id": "b0ff04ad-b7b8-4532-b0a1-9da274cd49c1",
+            "id": "07d3ae8f-b654-491c-a076-475c4af2897e",
             "metadata": [],
             "name": "Denesik Group NDA",
-            "sent_at": parse_datetime("2022-06-29T12:04:54.661Z"),
+            "sent_at": parse_datetime("2022-06-29T17:08:04.197Z"),
             "status": shared.SigningDocumentStatus.DRAFT,
-            "updated_at": parse_datetime("2025-09-02T22:24:49.211Z"),
+            "updated_at": parse_datetime("2025-09-03T17:20:09.472Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -474,7 +474,7 @@ with UnifiedTo(
 
 ## patch_signing_signatory
 
-Update a signatory
+Updates the SigningSignatory identified by `id`. Provide the unified SigningSignatory fields to change in the request body.
 
 ### Example Usage
 
@@ -495,12 +495,12 @@ with UnifiedTo(
         "signing_signatory": {
             "created_at": parse_datetime("2022-04-16T19:25:01.966Z"),
             "email": "anais.lakin@icloud.com",
-            "id": "6a826d85-6e1d-42a4-8e1e-1b7cacbf6689",
+            "id": "ac443cc0-b46c-48ba-9e3c-83ac067492cf",
             "metadata": [],
             "name": "Anais Lakin",
             "role": shared.SigningSignatoryRole.SIGNER,
             "status": shared.SigningSignatoryStatus.ERROR,
-            "updated_at": parse_datetime("2024-05-17T19:55:29.746Z"),
+            "updated_at": parse_datetime("2024-05-18T06:57:14.594Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -532,7 +532,7 @@ with UnifiedTo(
 
 ## remove_signing_document
 
-Remove a document
+Deletes the SigningDocument identified by `id`.
 
 ### Example Usage
 
@@ -579,7 +579,7 @@ with UnifiedTo(
 
 ## remove_signing_signatory
 
-Remove a signatory
+Deletes the SigningSignatory identified by `id`.
 
 ### Example Usage
 
@@ -626,7 +626,7 @@ with UnifiedTo(
 
 ## update_signing_document
 
-Update a document
+Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -648,12 +648,12 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-05-02T09:35:23.679Z"),
             "description": "Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.",
             "expires_at": parse_datetime("2021-06-04T01:21:34.949Z"),
-            "id": "b0ff04ad-b7b8-4532-b0a1-9da274cd49c1",
+            "id": "07d3ae8f-b654-491c-a076-475c4af2897e",
             "metadata": [],
             "name": "Denesik Group NDA",
-            "sent_at": parse_datetime("2022-06-29T12:04:54.661Z"),
+            "sent_at": parse_datetime("2022-06-29T17:08:04.197Z"),
             "status": shared.SigningDocumentStatus.DRAFT,
-            "updated_at": parse_datetime("2025-09-02T22:24:49.211Z"),
+            "updated_at": parse_datetime("2025-09-03T17:20:09.472Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -685,7 +685,7 @@ with UnifiedTo(
 
 ## update_signing_signatory
 
-Update a signatory
+Updates the SigningSignatory identified by `id`. Provide the unified SigningSignatory fields to change in the request body.
 
 ### Example Usage
 
@@ -706,12 +706,12 @@ with UnifiedTo(
         "signing_signatory": {
             "created_at": parse_datetime("2022-04-16T19:25:01.966Z"),
             "email": "anais.lakin@icloud.com",
-            "id": "6a826d85-6e1d-42a4-8e1e-1b7cacbf6689",
+            "id": "ac443cc0-b46c-48ba-9e3c-83ac067492cf",
             "metadata": [],
             "name": "Anais Lakin",
             "role": shared.SigningSignatoryRole.SIGNER,
             "status": shared.SigningSignatoryStatus.ERROR,
-            "updated_at": parse_datetime("2024-05-17T19:55:29.746Z"),
+            "updated_at": parse_datetime("2024-05-18T06:57:14.594Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

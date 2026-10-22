@@ -12,6 +12,7 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 class DatastoreRecordTypedDict(TypedDict):
     fields: Dict[str, DatastoreFieldValueTypedDict]
+    r"""The record's values, keyed by the table's field (column) names; each value is a typed value object (e.g. { \"string\": \"Acme\" } or { \"number\": 3 })"""
     created_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     database_id: NotRequired[str]
@@ -28,6 +29,7 @@ class DatastoreRecordTypedDict(TypedDict):
 
 class DatastoreRecord(BaseModel):
     fields: Dict[str, DatastoreFieldValue]
+    r"""The record's values, keyed by the table's field (column) names; each value is a typed value object (e.g. { \"string\": \"Acme\" } or { \"number\": 3 })"""
 
     created_at: Optional[datetime] = None
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""

@@ -26,7 +26,7 @@
 
 ## create_datastore_database
 
-Create a database
+Creates a DatastoreDatabase. Provide the unified DatastoreDatabase fields in the request body; they are mapped to the provider's API. Returns the created DatastoreDatabase.
 
 ### Example Usage
 
@@ -47,13 +47,13 @@ with UnifiedTo(
         "datastore_database": {
             "created_at": parse_datetime("2019-03-05T14:31:00.223Z"),
             "description": "Substantia tantillus coniuratio repellat coerceo amet vito vorago.",
-            "id": "29e216db-464b-4483-9377-f5e3d951f094",
+            "id": "e0c9ce0f-0e14-4fd1-9f47-76bf5a07a674",
             "is_active": True,
             "metadata": [],
             "name": "Rau - O'Reilly",
             "password": "iYLhYwOHm0NLDvI",
             "region": "France",
-            "updated_at": parse_datetime("2023-06-30T19:45:54.105Z"),
+            "updated_at": parse_datetime("2023-07-01T09:16:35.545Z"),
             "web_url": "https://optimal-signature.name",
         },
         "connection_id": "<id>",
@@ -85,7 +85,7 @@ with UnifiedTo(
 
 ## create_datastore_query
 
-Create a query
+Creates a DatastoreQuery. Provide the unified DatastoreQuery fields in the request body; they are mapped to the provider's API. Returns the created DatastoreQuery.
 
 ### Example Usage
 
@@ -143,7 +143,7 @@ with UnifiedTo(
 
 ## create_datastore_record
 
-Create a record
+Creates a DatastoreRecord. Provide the unified DatastoreRecord fields in the request body; they are mapped to the provider's API. Returns the created DatastoreRecord.
 
 ### Example Usage
 
@@ -166,10 +166,10 @@ with UnifiedTo(
             "fields": {
 
             },
-            "id": "e9fbf74c-d5e9-4be6-bdb9-288267c4d56b",
+            "id": "6e2ea78d-c347-472e-9b7d-fd7b2425fec5",
             "metadata": [],
             "row_number": 33.0,
-            "updated_at": parse_datetime("2025-03-05T03:07:19.552Z"),
+            "updated_at": parse_datetime("2025-03-05T17:54:09.893Z"),
         },
         "connection_id": "<id>",
     })
@@ -200,7 +200,7 @@ with UnifiedTo(
 
 ## create_datastore_table
 
-Create a table
+Creates a DatastoreTable. Provide the unified DatastoreTable fields in the request body; they are mapped to the provider's API. Returns the created DatastoreTable.
 
 ### Example Usage
 
@@ -224,7 +224,7 @@ with UnifiedTo(
             "fields": [
                 {
                     "description": "Antea soluta itaque clamo despecto basium accendo.",
-                    "id": "e4b965bf-0942-4f13-927a-fd56c9548ef2",
+                    "id": "da378333-7f58-4188-afce-fbac74a3c8ed",
                     "is_indexed": True,
                     "is_unique": True,
                     "name": "Ferry LLC",
@@ -234,7 +234,7 @@ with UnifiedTo(
                 },
                 {
                     "description": "Nulla cattus aequus sumo neque alter cauda subseco.",
-                    "id": "daf87e11-55ab-4894-812d-f6f2e04023c7",
+                    "id": "7345be56-0f74-472d-a3f1-5c6b238c9ae3",
                     "is_nullable": True,
                     "is_unique": True,
                     "name": "Hand - Nader",
@@ -244,7 +244,7 @@ with UnifiedTo(
                 },
                 {
                     "description": "Utilis callide adhuc verumtamen doloremque ceno sui sint.",
-                    "id": "399d901e-12e8-412b-8782-2f5da657fffa",
+                    "id": "880921f3-dc83-4535-b01d-f7e12e5792a0",
                     "is_indexed": True,
                     "is_nullable": True,
                     "is_unique": True,
@@ -256,7 +256,7 @@ with UnifiedTo(
                 },
                 {
                     "description": "Audax articulus triumphus tametsi cura tenetur colligo arcesso bestia.",
-                    "id": "8954c8fa-4d4c-442a-9992-1402df9e69e2",
+                    "id": "eb7a10a4-39e6-417c-858c-9c50cadf9e24",
                     "name": "Gislason, Gorczany and Hegmann",
                     "original_type": "tego",
                     "precision": 94.0,
@@ -265,7 +265,7 @@ with UnifiedTo(
                 },
                 {
                     "description": "Communis coma cura audio aduro acer canis expedita.",
-                    "id": "6c39bd32-e9a8-4857-b8f3-e2d8df34f5c2",
+                    "id": "f971dc77-d676-4ded-a3a3-fcaada734127",
                     "is_indexed": True,
                     "is_primary_key": True,
                     "is_required": True,
@@ -275,18 +275,18 @@ with UnifiedTo(
                     "type": shared.DatastoreFieldType.EMAIL,
                 },
             ],
-            "id": "7ab1b562-d625-4483-a36e-e6c9df21049d",
+            "id": "30210c70-e6b1-4be4-88cb-672e9f7f2f15",
             "metadata": [],
             "name": "Rogahn, Lowe and Heller",
             "relationships": [
                 {
                     "field": "Macejkovic - Shields",
                     "name": "Hyatt, Ryan and Nienow",
-                    "table_id": "7ab1b562-d625-4483-a36e-e6c9df21049d",
+                    "table_id": "30210c70-e6b1-4be4-88cb-672e9f7f2f15",
                     "type": shared.DatastoreRelationshipType.MANY,
                 },
             ],
-            "updated_at": parse_datetime("2022-08-12T20:25:34.458Z"),
+            "updated_at": parse_datetime("2022-08-12T21:38:55.429Z"),
             "web_url": "https://nervous-deck.com",
         },
         "connection_id": "<id>",
@@ -318,7 +318,7 @@ with UnifiedTo(
 
 ## get_datastore_database
 
-Retrieve a database
+Retrieves a single DatastoreDatabase by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -365,7 +365,7 @@ with UnifiedTo(
 
 ## get_datastore_record
 
-Retrieve a record
+Retrieves a single DatastoreRecord by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -412,7 +412,7 @@ with UnifiedTo(
 
 ## get_datastore_table
 
-Retrieve a table
+Retrieves a single DatastoreTable by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -459,7 +459,7 @@ with UnifiedTo(
 
 ## list_datastore_databases
 
-List all databases
+Returns a list of DatastoreDatabases. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -505,7 +505,7 @@ with UnifiedTo(
 
 ## list_datastore_records
 
-List all records
+Returns a list of DatastoreRecords. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -551,7 +551,7 @@ with UnifiedTo(
 
 ## list_datastore_tables
 
-List all tables
+Returns a list of DatastoreTables. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -597,7 +597,7 @@ with UnifiedTo(
 
 ## patch_datastore_database
 
-Update a database
+Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to change in the request body.
 
 ### Example Usage
 
@@ -618,13 +618,13 @@ with UnifiedTo(
         "datastore_database": {
             "created_at": parse_datetime("2019-03-05T14:31:00.223Z"),
             "description": "Substantia tantillus coniuratio repellat coerceo amet vito vorago.",
-            "id": "a4e7acbd-0b40-400a-bd28-1ff619134ccd",
+            "id": "529d7040-cf1a-419f-bc0a-2f829d09d216",
             "is_active": True,
             "metadata": [],
             "name": "Rau - O'Reilly",
             "password": "iYLhYwOHm0NLDvI",
             "region": "France",
-            "updated_at": parse_datetime("2023-06-30T19:45:54.113Z"),
+            "updated_at": parse_datetime("2023-07-01T09:16:35.553Z"),
             "web_url": "https://optimal-signature.name",
         },
         "connection_id": "<id>",
@@ -657,7 +657,7 @@ with UnifiedTo(
 
 ## patch_datastore_record
 
-Update a record
+Updates the DatastoreRecord identified by `id`. Provide the unified DatastoreRecord fields to change in the request body.
 
 ### Example Usage
 
@@ -680,10 +680,10 @@ with UnifiedTo(
             "fields": {
 
             },
-            "id": "abf31abf-6def-4623-852b-a7a33a773ab6",
+            "id": "d93d5bfd-375d-4bed-a8a9-51f442ee8942",
             "metadata": [],
             "row_number": 33.0,
-            "updated_at": parse_datetime("2025-03-05T03:07:19.561Z"),
+            "updated_at": parse_datetime("2025-03-05T17:54:09.904Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -715,7 +715,7 @@ with UnifiedTo(
 
 ## patch_datastore_table
 
-Update a table
+Updates the DatastoreTable identified by `id`. Provide the unified DatastoreTable fields to change in the request body.
 
 ### Example Usage
 
@@ -739,7 +739,7 @@ with UnifiedTo(
             "fields": [
                 {
                     "description": "Antea soluta itaque clamo despecto basium accendo.",
-                    "id": "720d3faa-2b33-4e8e-9d30-9cb9c32e7acf",
+                    "id": "feed4d6d-f9de-45a6-83d1-953e9599a757",
                     "is_indexed": True,
                     "is_unique": True,
                     "name": "Ferry LLC",
@@ -749,7 +749,7 @@ with UnifiedTo(
                 },
                 {
                     "description": "Nulla cattus aequus sumo neque alter cauda subseco.",
-                    "id": "30cba803-967b-4ec3-8781-ad4a5098dd7e",
+                    "id": "c7483079-4f51-426e-9cd9-0f11e8ad27f9",
                     "is_nullable": True,
                     "is_unique": True,
                     "name": "Hand - Nader",
@@ -759,7 +759,7 @@ with UnifiedTo(
                 },
                 {
                     "description": "Utilis callide adhuc verumtamen doloremque ceno sui sint.",
-                    "id": "ba5d6b90-1d6e-4673-81bc-47b44a06fb2f",
+                    "id": "f800139f-605f-469f-beae-6e4e85b86916",
                     "is_indexed": True,
                     "is_nullable": True,
                     "is_unique": True,
@@ -771,7 +771,7 @@ with UnifiedTo(
                 },
                 {
                     "description": "Audax articulus triumphus tametsi cura tenetur colligo arcesso bestia.",
-                    "id": "6785e446-071e-4784-9bf6-85347a37788b",
+                    "id": "6d8a4ea2-724e-4b2e-903f-bf03e95862e2",
                     "name": "Gislason, Gorczany and Hegmann",
                     "original_type": "tego",
                     "precision": 94.0,
@@ -780,7 +780,7 @@ with UnifiedTo(
                 },
                 {
                     "description": "Communis coma cura audio aduro acer canis expedita.",
-                    "id": "99fb0ead-e5f1-4126-8f8f-30c8aaaa65db",
+                    "id": "732a09b3-c878-4372-98cd-bb6cc56e1c58",
                     "is_indexed": True,
                     "is_primary_key": True,
                     "is_required": True,
@@ -790,18 +790,18 @@ with UnifiedTo(
                     "type": shared.DatastoreFieldType.EMAIL,
                 },
             ],
-            "id": "0d394844-3ff0-484f-a0b9-780bbc15dc39",
+            "id": "d139f5e7-5eec-4ea3-b19a-db0aba770a17",
             "metadata": [],
             "name": "Rogahn, Lowe and Heller",
             "relationships": [
                 {
                     "field": "Macejkovic - Shields",
                     "name": "Hyatt, Ryan and Nienow",
-                    "table_id": "0d394844-3ff0-484f-a0b9-780bbc15dc39",
+                    "table_id": "d139f5e7-5eec-4ea3-b19a-db0aba770a17",
                     "type": shared.DatastoreRelationshipType.MANY,
                 },
             ],
-            "updated_at": parse_datetime("2022-08-12T20:25:34.460Z"),
+            "updated_at": parse_datetime("2022-08-12T21:38:55.431Z"),
             "web_url": "https://nervous-deck.com",
         },
         "connection_id": "<id>",
@@ -834,7 +834,7 @@ with UnifiedTo(
 
 ## remove_datastore_database
 
-Remove a database
+Deletes the DatastoreDatabase identified by `id`.
 
 ### Example Usage
 
@@ -881,7 +881,7 @@ with UnifiedTo(
 
 ## remove_datastore_record
 
-Remove a record
+Deletes the DatastoreRecord identified by `id`.
 
 ### Example Usage
 
@@ -928,7 +928,7 @@ with UnifiedTo(
 
 ## remove_datastore_table
 
-Remove a table
+Deletes the DatastoreTable identified by `id`.
 
 ### Example Usage
 
@@ -975,7 +975,7 @@ with UnifiedTo(
 
 ## update_datastore_database
 
-Update a database
+Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to change in the request body.
 
 ### Example Usage
 
@@ -996,13 +996,13 @@ with UnifiedTo(
         "datastore_database": {
             "created_at": parse_datetime("2019-03-05T14:31:00.223Z"),
             "description": "Substantia tantillus coniuratio repellat coerceo amet vito vorago.",
-            "id": "a4e7acbd-0b40-400a-bd28-1ff619134ccd",
+            "id": "529d7040-cf1a-419f-bc0a-2f829d09d216",
             "is_active": True,
             "metadata": [],
             "name": "Rau - O'Reilly",
             "password": "iYLhYwOHm0NLDvI",
             "region": "France",
-            "updated_at": parse_datetime("2023-06-30T19:45:54.113Z"),
+            "updated_at": parse_datetime("2023-07-01T09:16:35.553Z"),
             "web_url": "https://optimal-signature.name",
         },
         "connection_id": "<id>",
@@ -1035,7 +1035,7 @@ with UnifiedTo(
 
 ## update_datastore_record
 
-Update a record
+Updates the DatastoreRecord identified by `id`. Provide the unified DatastoreRecord fields to change in the request body.
 
 ### Example Usage
 
@@ -1058,10 +1058,10 @@ with UnifiedTo(
             "fields": {
 
             },
-            "id": "abf31abf-6def-4623-852b-a7a33a773ab6",
+            "id": "d93d5bfd-375d-4bed-a8a9-51f442ee8942",
             "metadata": [],
             "row_number": 33.0,
-            "updated_at": parse_datetime("2025-03-05T03:07:19.561Z"),
+            "updated_at": parse_datetime("2025-03-05T17:54:09.904Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1093,7 +1093,7 @@ with UnifiedTo(
 
 ## update_datastore_table
 
-Update a table
+Updates the DatastoreTable identified by `id`. Provide the unified DatastoreTable fields to change in the request body.
 
 ### Example Usage
 
@@ -1117,7 +1117,7 @@ with UnifiedTo(
             "fields": [
                 {
                     "description": "Antea soluta itaque clamo despecto basium accendo.",
-                    "id": "720d3faa-2b33-4e8e-9d30-9cb9c32e7acf",
+                    "id": "feed4d6d-f9de-45a6-83d1-953e9599a757",
                     "is_indexed": True,
                     "is_unique": True,
                     "name": "Ferry LLC",
@@ -1127,7 +1127,7 @@ with UnifiedTo(
                 },
                 {
                     "description": "Nulla cattus aequus sumo neque alter cauda subseco.",
-                    "id": "30cba803-967b-4ec3-8781-ad4a5098dd7e",
+                    "id": "c7483079-4f51-426e-9cd9-0f11e8ad27f9",
                     "is_nullable": True,
                     "is_unique": True,
                     "name": "Hand - Nader",
@@ -1137,7 +1137,7 @@ with UnifiedTo(
                 },
                 {
                     "description": "Utilis callide adhuc verumtamen doloremque ceno sui sint.",
-                    "id": "ba5d6b90-1d6e-4673-81bc-47b44a06fb2f",
+                    "id": "f800139f-605f-469f-beae-6e4e85b86916",
                     "is_indexed": True,
                     "is_nullable": True,
                     "is_unique": True,
@@ -1149,7 +1149,7 @@ with UnifiedTo(
                 },
                 {
                     "description": "Audax articulus triumphus tametsi cura tenetur colligo arcesso bestia.",
-                    "id": "6785e446-071e-4784-9bf6-85347a37788b",
+                    "id": "6d8a4ea2-724e-4b2e-903f-bf03e95862e2",
                     "name": "Gislason, Gorczany and Hegmann",
                     "original_type": "tego",
                     "precision": 94.0,
@@ -1158,7 +1158,7 @@ with UnifiedTo(
                 },
                 {
                     "description": "Communis coma cura audio aduro acer canis expedita.",
-                    "id": "99fb0ead-e5f1-4126-8f8f-30c8aaaa65db",
+                    "id": "732a09b3-c878-4372-98cd-bb6cc56e1c58",
                     "is_indexed": True,
                     "is_primary_key": True,
                     "is_required": True,
@@ -1168,18 +1168,18 @@ with UnifiedTo(
                     "type": shared.DatastoreFieldType.EMAIL,
                 },
             ],
-            "id": "0d394844-3ff0-484f-a0b9-780bbc15dc39",
+            "id": "d139f5e7-5eec-4ea3-b19a-db0aba770a17",
             "metadata": [],
             "name": "Rogahn, Lowe and Heller",
             "relationships": [
                 {
                     "field": "Macejkovic - Shields",
                     "name": "Hyatt, Ryan and Nienow",
-                    "table_id": "0d394844-3ff0-484f-a0b9-780bbc15dc39",
+                    "table_id": "d139f5e7-5eec-4ea3-b19a-db0aba770a17",
                     "type": shared.DatastoreRelationshipType.MANY,
                 },
             ],
-            "updated_at": parse_datetime("2022-08-12T20:25:34.460Z"),
+            "updated_at": parse_datetime("2022-08-12T21:38:55.431Z"),
             "web_url": "https://nervous-deck.com",
         },
         "connection_id": "<id>",

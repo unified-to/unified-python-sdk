@@ -13,7 +13,7 @@
 
 ## create_datastore_record
 
-Create a record
+Creates a DatastoreRecord. Provide the unified DatastoreRecord fields in the request body; they are mapped to the provider's API. Returns the created DatastoreRecord.
 
 ### Example Usage
 
@@ -36,10 +36,10 @@ with UnifiedTo(
             "fields": {
 
             },
-            "id": "e9fbf74c-d5e9-4be6-bdb9-288267c4d56b",
+            "id": "6e2ea78d-c347-472e-9b7d-fd7b2425fec5",
             "metadata": [],
             "row_number": 33.0,
-            "updated_at": parse_datetime("2025-03-05T03:07:19.552Z"),
+            "updated_at": parse_datetime("2025-03-05T17:54:09.893Z"),
         },
         "connection_id": "<id>",
     })
@@ -70,7 +70,7 @@ with UnifiedTo(
 
 ## get_datastore_record
 
-Retrieve a record
+Retrieves a single DatastoreRecord by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -117,7 +117,7 @@ with UnifiedTo(
 
 ## list_datastore_records
 
-List all records
+Returns a list of DatastoreRecords. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -163,7 +163,7 @@ with UnifiedTo(
 
 ## patch_datastore_record
 
-Update a record
+Updates the DatastoreRecord identified by `id`. Provide the unified DatastoreRecord fields to change in the request body.
 
 ### Example Usage
 
@@ -186,10 +186,10 @@ with UnifiedTo(
             "fields": {
 
             },
-            "id": "abf31abf-6def-4623-852b-a7a33a773ab6",
+            "id": "d93d5bfd-375d-4bed-a8a9-51f442ee8942",
             "metadata": [],
             "row_number": 33.0,
-            "updated_at": parse_datetime("2025-03-05T03:07:19.561Z"),
+            "updated_at": parse_datetime("2025-03-05T17:54:09.904Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -221,7 +221,7 @@ with UnifiedTo(
 
 ## remove_datastore_record
 
-Remove a record
+Deletes the DatastoreRecord identified by `id`.
 
 ### Example Usage
 
@@ -268,7 +268,7 @@ with UnifiedTo(
 
 ## update_datastore_record
 
-Update a record
+Updates the DatastoreRecord identified by `id`. Provide the unified DatastoreRecord fields to change in the request body.
 
 ### Example Usage
 
@@ -291,10 +291,10 @@ with UnifiedTo(
             "fields": {
 
             },
-            "id": "abf31abf-6def-4623-852b-a7a33a773ab6",
+            "id": "d93d5bfd-375d-4bed-a8a9-51f442ee8942",
             "metadata": [],
             "row_number": 33.0,
-            "updated_at": parse_datetime("2025-03-05T03:07:19.561Z"),
+            "updated_at": parse_datetime("2025-03-05T17:54:09.904Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

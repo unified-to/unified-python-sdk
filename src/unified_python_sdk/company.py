@@ -24,6 +24,8 @@ class Company(BaseSDK):
     ) -> operations.CreateAtsCompanyResponse:
         r"""Create a company
 
+        Creates a AtsCompany. Provide the unified AtsCompany fields in the request body; they are mapped to the provider's API. Returns the created AtsCompany.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -118,6 +120,8 @@ class Company(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAtsCompanyResponse:
         r"""Create a company
+
+        Creates a AtsCompany. Provide the unified AtsCompany fields in the request body; they are mapped to the provider's API. Returns the created AtsCompany.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -214,6 +218,8 @@ class Company(BaseSDK):
     ) -> operations.CreateCrmCompanyResponse:
         r"""Create a company
 
+        Creates a CrmCompany. Provide the unified CrmCompany fields in the request body; they are mapped to the provider's API. Returns the created CrmCompany.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -308,6 +314,8 @@ class Company(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateCrmCompanyResponse:
         r"""Create a company
+
+        Creates a CrmCompany. Provide the unified CrmCompany fields in the request body; they are mapped to the provider's API. Returns the created CrmCompany.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -404,6 +412,8 @@ class Company(BaseSDK):
     ) -> operations.CreateHrisCompanyResponse:
         r"""Create a company
 
+        Creates a HrisCompany. Provide the unified HrisCompany fields in the request body; they are mapped to the provider's API. Returns the created HrisCompany.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -499,6 +509,8 @@ class Company(BaseSDK):
     ) -> operations.CreateHrisCompanyResponse:
         r"""Create a company
 
+        Creates a HrisCompany. Provide the unified HrisCompany fields in the request body; they are mapped to the provider's API. Returns the created HrisCompany.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -593,6 +605,8 @@ class Company(BaseSDK):
     ) -> operations.GetAtsCompanyResponse:
         r"""Retrieve a company
 
+        Retrieves a single AtsCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -683,6 +697,8 @@ class Company(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAtsCompanyResponse:
         r"""Retrieve a company
+
+        Retrieves a single AtsCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -775,6 +791,8 @@ class Company(BaseSDK):
     ) -> operations.GetCrmCompanyResponse:
         r"""Retrieve a company
 
+        Retrieves a single CrmCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -865,6 +883,8 @@ class Company(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetCrmCompanyResponse:
         r"""Retrieve a company
+
+        Retrieves a single CrmCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -957,6 +977,8 @@ class Company(BaseSDK):
     ) -> operations.GetHrisCompanyResponse:
         r"""Retrieve a company
 
+        Retrieves a single HrisCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1047,6 +1069,8 @@ class Company(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetHrisCompanyResponse:
         r"""Retrieve a company
+
+        Retrieves a single HrisCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1140,6 +1164,8 @@ class Company(BaseSDK):
     ) -> operations.ListAtsCompaniesResponse:
         r"""List all companies
 
+        Returns a list of AtsCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1231,6 +1257,8 @@ class Company(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAtsCompaniesResponse:
         r"""List all companies
+
+        Returns a list of AtsCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1324,6 +1352,8 @@ class Company(BaseSDK):
     ) -> operations.ListCrmCompaniesResponse:
         r"""List all companies
 
+        Returns a list of CrmCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1415,6 +1445,8 @@ class Company(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListCrmCompaniesResponse:
         r"""List all companies
+
+        Returns a list of CrmCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1692,6 +1724,8 @@ class Company(BaseSDK):
     ) -> operations.ListHrisCompaniesResponse:
         r"""List all companies
 
+        Returns a list of HrisCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1784,6 +1818,8 @@ class Company(BaseSDK):
     ) -> operations.ListHrisCompaniesResponse:
         r"""List all companies
 
+        Returns a list of HrisCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1875,6 +1911,8 @@ class Company(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAtsCompanyResponse:
         r"""Update a company
+
+        Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1971,6 +2009,8 @@ class Company(BaseSDK):
     ) -> operations.PatchAtsCompanyResponse:
         r"""Update a company
 
+        Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2065,6 +2105,8 @@ class Company(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchCrmCompanyResponse:
         r"""Update a company
+
+        Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2161,6 +2203,8 @@ class Company(BaseSDK):
     ) -> operations.PatchCrmCompanyResponse:
         r"""Update a company
 
+        Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2255,6 +2299,8 @@ class Company(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchHrisCompanyResponse:
         r"""Update a company
+
+        Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2351,6 +2397,8 @@ class Company(BaseSDK):
     ) -> operations.PatchHrisCompanyResponse:
         r"""Update a company
 
+        Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2445,6 +2493,8 @@ class Company(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAtsCompanyResponse:
         r"""Remove a company
+
+        Deletes the AtsCompany identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2543,6 +2593,8 @@ class Company(BaseSDK):
     ) -> operations.RemoveAtsCompanyResponse:
         r"""Remove a company
 
+        Deletes the AtsCompany identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2639,6 +2691,8 @@ class Company(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveCrmCompanyResponse:
         r"""Remove a company
+
+        Deletes the CrmCompany identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2737,6 +2791,8 @@ class Company(BaseSDK):
     ) -> operations.RemoveCrmCompanyResponse:
         r"""Remove a company
 
+        Deletes the CrmCompany identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2833,6 +2889,8 @@ class Company(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveHrisCompanyResponse:
         r"""Remove a company
+
+        Deletes the HrisCompany identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2931,6 +2989,8 @@ class Company(BaseSDK):
     ) -> operations.RemoveHrisCompanyResponse:
         r"""Remove a company
 
+        Deletes the HrisCompany identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3028,6 +3088,8 @@ class Company(BaseSDK):
     ) -> operations.UpdateAtsCompanyResponse:
         r"""Update a company
 
+        Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3122,6 +3184,8 @@ class Company(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAtsCompanyResponse:
         r"""Update a company
+
+        Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3218,6 +3282,8 @@ class Company(BaseSDK):
     ) -> operations.UpdateCrmCompanyResponse:
         r"""Update a company
 
+        Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3312,6 +3378,8 @@ class Company(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateCrmCompanyResponse:
         r"""Update a company
+
+        Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3408,6 +3476,8 @@ class Company(BaseSDK):
     ) -> operations.UpdateHrisCompanyResponse:
         r"""Update a company
 
+        Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3502,6 +3572,8 @@ class Company(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateHrisCompanyResponse:
         r"""Update a company
+
+        Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

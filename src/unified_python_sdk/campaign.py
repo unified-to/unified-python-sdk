@@ -24,6 +24,8 @@ class Campaign(BaseSDK):
     ) -> operations.CreateAdsCampaignResponse:
         r"""Create a campaign
 
+        Creates a AdsCampaign. Provide the unified AdsCampaign fields in the request body; they are mapped to the provider's API. Returns the created AdsCampaign.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -119,6 +121,8 @@ class Campaign(BaseSDK):
     ) -> operations.CreateAdsCampaignResponse:
         r"""Create a campaign
 
+        Creates a AdsCampaign. Provide the unified AdsCampaign fields in the request body; they are mapped to the provider's API. Returns the created AdsCampaign.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -213,6 +217,8 @@ class Campaign(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateMartechCampaignResponse:
         r"""Create a campaign
+
+        Creates a MarketingCampaign. Provide the unified MarketingCampaign fields in the request body; they are mapped to the provider's API. Returns the created MarketingCampaign.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -313,6 +319,8 @@ class Campaign(BaseSDK):
     ) -> operations.CreateMartechCampaignResponse:
         r"""Create a campaign
 
+        Creates a MarketingCampaign. Provide the unified MarketingCampaign fields in the request body; they are mapped to the provider's API. Returns the created MarketingCampaign.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -411,6 +419,8 @@ class Campaign(BaseSDK):
     ) -> operations.GetAdsCampaignResponse:
         r"""Retrieve a campaign
 
+        Retrieves a single AdsCampaign by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -501,6 +511,8 @@ class Campaign(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAdsCampaignResponse:
         r"""Retrieve a campaign
+
+        Retrieves a single AdsCampaign by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -594,6 +606,8 @@ class Campaign(BaseSDK):
     ) -> operations.GetMartechCampaignResponse:
         r"""Retrieve a campaign
 
+        Retrieves a single MarketingCampaign by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -685,6 +699,8 @@ class Campaign(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetMartechCampaignResponse:
         r"""Retrieve a campaign
+
+        Retrieves a single MarketingCampaign by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -778,6 +794,8 @@ class Campaign(BaseSDK):
     ) -> operations.ListAdsCampaignsResponse:
         r"""List all campaigns
 
+        Returns a list of AdsCampaigns. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -869,6 +887,8 @@ class Campaign(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAdsCampaignsResponse:
         r"""List all campaigns
+
+        Returns a list of AdsCampaigns. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -962,6 +982,8 @@ class Campaign(BaseSDK):
     ) -> operations.ListMartechCampaignsResponse:
         r"""List all campaigns
 
+        Returns a list of MarketingCampaigns. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1054,6 +1076,8 @@ class Campaign(BaseSDK):
     ) -> operations.ListMartechCampaignsResponse:
         r"""List all campaigns
 
+        Returns a list of MarketingCampaigns. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1145,6 +1169,8 @@ class Campaign(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAdsCampaignResponse:
         r"""Update a campaign
+
+        Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1241,6 +1267,8 @@ class Campaign(BaseSDK):
     ) -> operations.PatchAdsCampaignResponse:
         r"""Update a campaign
 
+        Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1335,6 +1363,8 @@ class Campaign(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchMartechCampaignResponse:
         r"""Update a campaign
+
+        Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1435,6 +1465,8 @@ class Campaign(BaseSDK):
     ) -> operations.PatchMartechCampaignResponse:
         r"""Update a campaign
 
+        Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1534,6 +1566,8 @@ class Campaign(BaseSDK):
     ) -> operations.RemoveAdsCampaignResponse:
         r"""Remove a campaign
 
+        Deletes the AdsCampaign identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1630,6 +1664,8 @@ class Campaign(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAdsCampaignResponse:
         r"""Remove a campaign
+
+        Deletes the AdsCampaign identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1728,6 +1764,8 @@ class Campaign(BaseSDK):
     ) -> operations.RemoveMartechCampaignResponse:
         r"""Remove a campaign
 
+        Deletes the MarketingCampaign identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1824,6 +1862,8 @@ class Campaign(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveMartechCampaignResponse:
         r"""Remove a campaign
+
+        Deletes the MarketingCampaign identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1922,6 +1962,8 @@ class Campaign(BaseSDK):
     ) -> operations.UpdateAdsCampaignResponse:
         r"""Update a campaign
 
+        Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2017,6 +2059,8 @@ class Campaign(BaseSDK):
     ) -> operations.UpdateAdsCampaignResponse:
         r"""Update a campaign
 
+        Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2111,6 +2155,8 @@ class Campaign(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateMartechCampaignResponse:
         r"""Update a campaign
+
+        Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2210,6 +2256,8 @@ class Campaign(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateMartechCampaignResponse:
         r"""Update a campaign
+
+        Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

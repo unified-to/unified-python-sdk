@@ -21,7 +21,7 @@
 
 ## create_messaging_channel
 
-Create a channel
+Creates a MessagingChannel. Provide the unified MessagingChannel fields in the request body; they are mapped to the provider's API. Returns the created MessagingChannel.
 
 ### Example Usage
 
@@ -43,13 +43,13 @@ with UnifiedTo(
             "created_at": parse_datetime("2023-10-05T02:09:22.795Z"),
             "description": "Dolores tutis.",
             "has_subchannels": True,
-            "id": "93d263b8-e7b1-4d67-832d-191c3f6595b2",
+            "id": "cee1e969-9044-4ce5-9796-0f9998ee811e",
             "is_active": False,
             "is_private": True,
             "members": [],
             "metadata": [],
             "name": "tego",
-            "updated_at": parse_datetime("2026-05-21T13:49:13.979Z"),
+            "updated_at": parse_datetime("2026-05-22T10:24:21.806Z"),
             "web_url": "https://svelte-rule.name/",
         },
         "connection_id": "<id>",
@@ -81,7 +81,7 @@ with UnifiedTo(
 
 ## create_messaging_message
 
-Create a message
+Creates a MessagingMessage. Provide the unified MessagingMessage fields in the request body; they are mapped to the provider's API. Returns the created MessagingMessage.
 
 ### Example Usage
 
@@ -102,17 +102,17 @@ with UnifiedTo(
         "messaging_message": {
             "attachments": [
                 {
-                    "content_identifier": "a9c87fd6-3637-45ce-bffd-46ad000ee871",
+                    "content_identifier": "71251831-efff-4acd-bff0-718ffdb5592f",
                     "content_type": "coaegresco",
                     "download_url": "https://rotating-advertisement.org",
                     "filename": "super",
-                    "message_id": "5e6aa43e-ed7b-4ea0-b32b-4d38644564f4",
+                    "message_id": "b51a6699-62e4-45fb-a069-aeed40d3b31a",
                     "size": 327.0,
                 },
             ],
             "buttons": [
                 {
-                    "id": "e6dd85c3-55af-4f17-845b-4a4b3535dc5d",
+                    "id": "f5b39dff-6d90-4a5f-8c44-ac3141fe15f4",
                     "text": "comparo",
                 },
             ],
@@ -120,7 +120,7 @@ with UnifiedTo(
             "destination_members": [],
             "has_children": True,
             "hidden_members": [],
-            "id": "5e6aa43e-ed7b-4ea0-b32b-4d38644564f4",
+            "id": "b51a6699-62e4-45fb-a069-aeed40d3b31a",
             "is_unread": False,
             "mentioned_members": [],
             "message": "Sum utique aliquid.",
@@ -129,7 +129,7 @@ with UnifiedTo(
             "metadata": [],
             "reactions": [],
             "subject": "Cernuus optio cohaero summisse in.",
-            "updated_at": parse_datetime("2023-07-17T11:54:53.528Z"),
+            "updated_at": parse_datetime("2023-07-17T19:53:15.452Z"),
             "web_url": "https://grumpy-kit.net",
         },
         "connection_id": "<id>",
@@ -161,7 +161,7 @@ with UnifiedTo(
 
 ## get_messaging_channel
 
-Retrieve a channel
+Retrieves a single MessagingChannel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -208,7 +208,7 @@ with UnifiedTo(
 
 ## get_messaging_message
 
-Retrieve a message
+Retrieves a single MessagingMessage by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -255,7 +255,7 @@ with UnifiedTo(
 
 ## list_messaging_channels
 
-List all channels
+Returns a list of MessagingChannels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -301,7 +301,7 @@ with UnifiedTo(
 
 ## list_messaging_messages
 
-List all messages
+Returns a list of MessagingMessages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -347,7 +347,7 @@ with UnifiedTo(
 
 ## patch_messaging_channel
 
-Update a channel
+Updates the MessagingChannel identified by `id`. Provide the unified MessagingChannel fields to change in the request body.
 
 ### Example Usage
 
@@ -369,13 +369,13 @@ with UnifiedTo(
             "created_at": parse_datetime("2023-10-05T02:09:22.795Z"),
             "description": "Dolores tutis.",
             "has_subchannels": True,
-            "id": "0b23a4d7-7783-4b6a-8928-f36fd0b6511d",
+            "id": "e830d3e5-6cca-4ac1-bc1a-19992f36ecd6",
             "is_active": False,
             "is_private": True,
             "members": [],
             "metadata": [],
             "name": "tego",
-            "updated_at": parse_datetime("2026-05-21T13:49:13.992Z"),
+            "updated_at": parse_datetime("2026-05-22T10:24:21.821Z"),
             "web_url": "https://svelte-rule.name/",
         },
         "connection_id": "<id>",
@@ -408,7 +408,7 @@ with UnifiedTo(
 
 ## patch_messaging_event
 
-Update an event
+Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -432,7 +432,7 @@ with UnifiedTo(
                 "name": "",
             },
             "created_at": parse_datetime("2019-05-30T19:44:46.461Z"),
-            "id": "39795b93-1847-437f-8ed7-ff3b0d53169f",
+            "id": "21655438-a41c-4f8c-9a2e-cb9cb2a996fd",
             "is_replacing_original": False,
             "metadata": [],
             "type": shared.MessagingEventType.BUTTON_CLICK,
@@ -467,7 +467,7 @@ with UnifiedTo(
 
 ## patch_messaging_message
 
-Update a message
+Updates the MessagingMessage identified by `id`. Provide the unified MessagingMessage fields to change in the request body.
 
 ### Example Usage
 
@@ -488,17 +488,17 @@ with UnifiedTo(
         "messaging_message": {
             "attachments": [
                 {
-                    "content_identifier": "76a36288-5902-476e-8e3e-b3b117fe420a",
+                    "content_identifier": "0a5154eb-de68-4b49-973a-c4e8a350541d",
                     "content_type": "coaegresco",
                     "download_url": "https://rotating-advertisement.org",
                     "filename": "super",
-                    "message_id": "63fb66c2-ee29-4666-ac38-ebb80ce529bf",
+                    "message_id": "bba941bf-1847-47d8-8710-5260ff885ba9",
                     "size": 327.0,
                 },
             ],
             "buttons": [
                 {
-                    "id": "58ac7b2b-73b0-4311-b256-37ae5f142457",
+                    "id": "f96c3b6c-285f-4940-8c09-cf254d959c10",
                     "text": "comparo",
                 },
             ],
@@ -506,7 +506,7 @@ with UnifiedTo(
             "destination_members": [],
             "has_children": True,
             "hidden_members": [],
-            "id": "63fb66c2-ee29-4666-ac38-ebb80ce529bf",
+            "id": "bba941bf-1847-47d8-8710-5260ff885ba9",
             "is_unread": False,
             "mentioned_members": [],
             "message": "Sum utique aliquid.",
@@ -515,7 +515,7 @@ with UnifiedTo(
             "metadata": [],
             "reactions": [],
             "subject": "Cernuus optio cohaero summisse in.",
-            "updated_at": parse_datetime("2023-07-17T11:54:53.541Z"),
+            "updated_at": parse_datetime("2023-07-17T19:53:15.467Z"),
             "web_url": "https://grumpy-kit.net",
         },
         "connection_id": "<id>",
@@ -548,7 +548,7 @@ with UnifiedTo(
 
 ## remove_messaging_channel
 
-Remove a channel
+Deletes the MessagingChannel identified by `id`.
 
 ### Example Usage
 
@@ -595,7 +595,7 @@ with UnifiedTo(
 
 ## remove_messaging_message
 
-Remove a message
+Deletes the MessagingMessage identified by `id`.
 
 ### Example Usage
 
@@ -642,7 +642,7 @@ with UnifiedTo(
 
 ## update_messaging_channel
 
-Update a channel
+Updates the MessagingChannel identified by `id`. Provide the unified MessagingChannel fields to change in the request body.
 
 ### Example Usage
 
@@ -664,13 +664,13 @@ with UnifiedTo(
             "created_at": parse_datetime("2023-10-05T02:09:22.795Z"),
             "description": "Dolores tutis.",
             "has_subchannels": True,
-            "id": "0b23a4d7-7783-4b6a-8928-f36fd0b6511d",
+            "id": "e830d3e5-6cca-4ac1-bc1a-19992f36ecd6",
             "is_active": False,
             "is_private": True,
             "members": [],
             "metadata": [],
             "name": "tego",
-            "updated_at": parse_datetime("2026-05-21T13:49:13.992Z"),
+            "updated_at": parse_datetime("2026-05-22T10:24:21.821Z"),
             "web_url": "https://svelte-rule.name/",
         },
         "connection_id": "<id>",
@@ -703,7 +703,7 @@ with UnifiedTo(
 
 ## update_messaging_event
 
-Update an event
+Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -727,7 +727,7 @@ with UnifiedTo(
                 "name": "",
             },
             "created_at": parse_datetime("2019-05-30T19:44:46.461Z"),
-            "id": "39795b93-1847-437f-8ed7-ff3b0d53169f",
+            "id": "21655438-a41c-4f8c-9a2e-cb9cb2a996fd",
             "is_replacing_original": False,
             "metadata": [],
             "type": shared.MessagingEventType.BUTTON_CLICK,
@@ -762,7 +762,7 @@ with UnifiedTo(
 
 ## update_messaging_message
 
-Update a message
+Updates the MessagingMessage identified by `id`. Provide the unified MessagingMessage fields to change in the request body.
 
 ### Example Usage
 
@@ -783,17 +783,17 @@ with UnifiedTo(
         "messaging_message": {
             "attachments": [
                 {
-                    "content_identifier": "76a36288-5902-476e-8e3e-b3b117fe420a",
+                    "content_identifier": "0a5154eb-de68-4b49-973a-c4e8a350541d",
                     "content_type": "coaegresco",
                     "download_url": "https://rotating-advertisement.org",
                     "filename": "super",
-                    "message_id": "63fb66c2-ee29-4666-ac38-ebb80ce529bf",
+                    "message_id": "bba941bf-1847-47d8-8710-5260ff885ba9",
                     "size": 327.0,
                 },
             ],
             "buttons": [
                 {
-                    "id": "58ac7b2b-73b0-4311-b256-37ae5f142457",
+                    "id": "f96c3b6c-285f-4940-8c09-cf254d959c10",
                     "text": "comparo",
                 },
             ],
@@ -801,7 +801,7 @@ with UnifiedTo(
             "destination_members": [],
             "has_children": True,
             "hidden_members": [],
-            "id": "63fb66c2-ee29-4666-ac38-ebb80ce529bf",
+            "id": "bba941bf-1847-47d8-8710-5260ff885ba9",
             "is_unread": False,
             "mentioned_members": [],
             "message": "Sum utique aliquid.",
@@ -810,7 +810,7 @@ with UnifiedTo(
             "metadata": [],
             "reactions": [],
             "subject": "Cernuus optio cohaero summisse in.",
-            "updated_at": parse_datetime("2023-07-17T11:54:53.541Z"),
+            "updated_at": parse_datetime("2023-07-17T19:53:15.467Z"),
             "web_url": "https://grumpy-kit.net",
         },
         "connection_id": "<id>",

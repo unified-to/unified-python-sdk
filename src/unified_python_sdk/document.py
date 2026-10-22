@@ -24,6 +24,8 @@ class Document(BaseSDK):
     ) -> operations.CreateAtsDocumentResponse:
         r"""Create a document
 
+        Creates a AtsDocument. Provide the unified AtsDocument fields in the request body; they are mapped to the provider's API. Returns the created AtsDocument.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -118,6 +120,8 @@ class Document(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAtsDocumentResponse:
         r"""Create a document
+
+        Creates a AtsDocument. Provide the unified AtsDocument fields in the request body; they are mapped to the provider's API. Returns the created AtsDocument.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -214,6 +218,8 @@ class Document(BaseSDK):
     ) -> operations.CreateHrisDocumentResponse:
         r"""Create a document
 
+        Creates a HrisDocument. Provide the unified HrisDocument fields in the request body; they are mapped to the provider's API. Returns the created HrisDocument.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -308,6 +314,8 @@ class Document(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateHrisDocumentResponse:
         r"""Create a document
+
+        Creates a HrisDocument. Provide the unified HrisDocument fields in the request body; they are mapped to the provider's API. Returns the created HrisDocument.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -404,6 +412,8 @@ class Document(BaseSDK):
     ) -> operations.CreateSigningDocumentResponse:
         r"""Create a document
 
+        Creates a SigningDocument. Provide the unified SigningDocument fields in the request body; they are mapped to the provider's API. Returns the created SigningDocument.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -499,6 +509,8 @@ class Document(BaseSDK):
     ) -> operations.CreateSigningDocumentResponse:
         r"""Create a document
 
+        Creates a SigningDocument. Provide the unified SigningDocument fields in the request body; they are mapped to the provider's API. Returns the created SigningDocument.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -593,6 +605,8 @@ class Document(BaseSDK):
     ) -> operations.GetAtsDocumentResponse:
         r"""Retrieve a document
 
+        Retrieves a single AtsDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -683,6 +697,8 @@ class Document(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAtsDocumentResponse:
         r"""Retrieve a document
+
+        Retrieves a single AtsDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -776,6 +792,8 @@ class Document(BaseSDK):
     ) -> operations.GetHrisDocumentResponse:
         r"""Retrieve a document
 
+        Retrieves a single HrisDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -867,6 +885,8 @@ class Document(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetHrisDocumentResponse:
         r"""Retrieve a document
+
+        Retrieves a single HrisDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -960,6 +980,8 @@ class Document(BaseSDK):
     ) -> operations.GetSigningDocumentResponse:
         r"""Retrieve a document
 
+        Retrieves a single SigningDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1051,6 +1073,8 @@ class Document(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetSigningDocumentResponse:
         r"""Retrieve a document
+
+        Retrieves a single SigningDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1144,6 +1168,8 @@ class Document(BaseSDK):
     ) -> operations.ListAtsDocumentsResponse:
         r"""List all documents
 
+        Returns a list of AtsDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1235,6 +1261,8 @@ class Document(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAtsDocumentsResponse:
         r"""List all documents
+
+        Returns a list of AtsDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1328,6 +1356,8 @@ class Document(BaseSDK):
     ) -> operations.ListHrisDocumentsResponse:
         r"""List all documents
 
+        Returns a list of HrisDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1419,6 +1449,8 @@ class Document(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListHrisDocumentsResponse:
         r"""List all documents
+
+        Returns a list of HrisDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1512,6 +1544,8 @@ class Document(BaseSDK):
     ) -> operations.ListSigningDocumentsResponse:
         r"""List all documents
 
+        Returns a list of SigningDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1604,6 +1638,8 @@ class Document(BaseSDK):
     ) -> operations.ListSigningDocumentsResponse:
         r"""List all documents
 
+        Returns a list of SigningDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1695,6 +1731,8 @@ class Document(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAtsDocumentResponse:
         r"""Update a document
+
+        Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1791,6 +1829,8 @@ class Document(BaseSDK):
     ) -> operations.PatchAtsDocumentResponse:
         r"""Update a document
 
+        Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1885,6 +1925,8 @@ class Document(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchHrisDocumentResponse:
         r"""Update a document
+
+        Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1981,6 +2023,8 @@ class Document(BaseSDK):
     ) -> operations.PatchHrisDocumentResponse:
         r"""Update a document
 
+        Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2075,6 +2119,8 @@ class Document(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchSigningDocumentResponse:
         r"""Update a document
+
+        Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2171,6 +2217,8 @@ class Document(BaseSDK):
     ) -> operations.PatchSigningDocumentResponse:
         r"""Update a document
 
+        Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2265,6 +2313,8 @@ class Document(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAtsDocumentResponse:
         r"""Remove a document
+
+        Deletes the AtsDocument identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2363,6 +2413,8 @@ class Document(BaseSDK):
     ) -> operations.RemoveAtsDocumentResponse:
         r"""Remove a document
 
+        Deletes the AtsDocument identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2459,6 +2511,8 @@ class Document(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveHrisDocumentResponse:
         r"""Remove a document
+
+        Deletes the HrisDocument identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2557,6 +2611,8 @@ class Document(BaseSDK):
     ) -> operations.RemoveHrisDocumentResponse:
         r"""Remove a document
 
+        Deletes the HrisDocument identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2653,6 +2709,8 @@ class Document(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveSigningDocumentResponse:
         r"""Remove a document
+
+        Deletes the SigningDocument identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2751,6 +2809,8 @@ class Document(BaseSDK):
     ) -> operations.RemoveSigningDocumentResponse:
         r"""Remove a document
 
+        Deletes the SigningDocument identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2848,6 +2908,8 @@ class Document(BaseSDK):
     ) -> operations.UpdateAtsDocumentResponse:
         r"""Update a document
 
+        Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2942,6 +3004,8 @@ class Document(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAtsDocumentResponse:
         r"""Update a document
+
+        Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3038,6 +3102,8 @@ class Document(BaseSDK):
     ) -> operations.UpdateHrisDocumentResponse:
         r"""Update a document
 
+        Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3132,6 +3198,8 @@ class Document(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateHrisDocumentResponse:
         r"""Update a document
+
+        Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3228,6 +3296,8 @@ class Document(BaseSDK):
     ) -> operations.UpdateSigningDocumentResponse:
         r"""Update a document
 
+        Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3322,6 +3392,8 @@ class Document(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateSigningDocumentResponse:
         r"""Update a document
+
+        Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

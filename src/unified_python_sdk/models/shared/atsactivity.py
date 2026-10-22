@@ -28,12 +28,14 @@ class AtsActivityTypedDict(TypedDict):
     application_id: NotRequired[str]
     bcc: NotRequired[List[AtsEmailTypedDict]]
     candidate_id: NotRequired[str]
+    r"""The ID of the candidate the activity is about (an AtsCandidate ID)"""
     cc: NotRequired[List[AtsEmailTypedDict]]
     company_id: NotRequired[str]
     r"""(reference to AtsCompany)"""
     created_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     description: NotRequired[str]
+    r"""The activity's content, such as the text of a note or the body of an email"""
     document_ids: NotRequired[List[str]]
     r"""IDs for AtsDocument.get"""
     from_: NotRequired[PropertyAtsActivityFromTypedDict]
@@ -59,6 +61,7 @@ class AtsActivity(BaseModel):
     bcc: Optional[List[AtsEmail]] = None
 
     candidate_id: Optional[str] = None
+    r"""The ID of the candidate the activity is about (an AtsCandidate ID)"""
 
     cc: Optional[List[AtsEmail]] = None
 
@@ -69,6 +72,7 @@ class AtsActivity(BaseModel):
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     description: Optional[str] = None
+    r"""The activity's content, such as the text of a note or the body of an email"""
 
     document_ids: Optional[List[str]] = None
     r"""IDs for AtsDocument.get"""

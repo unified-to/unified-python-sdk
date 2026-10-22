@@ -13,7 +13,7 @@
 
 ## create_lms_course
 
-Create a course
+Creates a LmsCourse. Provide the unified LmsCourse fields in the request body; they are mapped to the provider's API. Returns the created LmsCourse.
 
 ### Example Usage
 
@@ -40,7 +40,7 @@ with UnifiedTo(
             "currency": "FJD",
             "description": "Vinco alias aut capitulus.",
             "duration_minutes": 148.0,
-            "id": "d7f8ee11-fb3c-4191-9946-89d66832d77c",
+            "id": "cdaaee30-a874-4db8-8776-f21dd9b770e4",
             "instructors": [],
             "is_active": True,
             "is_private": False,
@@ -67,14 +67,14 @@ with UnifiedTo(
             "name": "comptus",
             "price_amount": 84.0,
             "provider_name": "Homenick - Wunsch",
-            "published_at": parse_datetime("2022-11-05T18:10:59.957Z"),
+            "published_at": parse_datetime("2022-11-05T18:40:25.835Z"),
             "skills": [
                 "adiuvo",
                 "tam",
             ],
             "students": [],
             "time_estimate_minutes": 100.0,
-            "updated_at": parse_datetime("2023-02-09T18:19:42.895Z"),
+            "updated_at": parse_datetime("2023-02-09T20:22:16.292Z"),
         },
         "connection_id": "<id>",
     })
@@ -105,7 +105,7 @@ with UnifiedTo(
 
 ## get_lms_course
 
-Retrieve a course
+Retrieves a single LmsCourse by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -152,7 +152,7 @@ with UnifiedTo(
 
 ## list_lms_courses
 
-List all courses
+Returns a list of LmsCourses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -198,7 +198,7 @@ with UnifiedTo(
 
 ## patch_lms_course
 
-Update a course
+Updates the LmsCourse identified by `id`. Provide the unified LmsCourse fields to change in the request body.
 
 ### Example Usage
 
@@ -225,7 +225,7 @@ with UnifiedTo(
             "currency": "FJD",
             "description": "Vinco alias aut capitulus.",
             "duration_minutes": 148.0,
-            "id": "2cfd31ab-b9a0-4ed4-a49a-65a8f4160efc",
+            "id": "bc14f3a8-fe41-4546-8e4e-4e48882fa65d",
             "instructors": [],
             "is_active": True,
             "is_private": False,
@@ -252,14 +252,14 @@ with UnifiedTo(
             "name": "comptus",
             "price_amount": 84.0,
             "provider_name": "Homenick - Wunsch",
-            "published_at": parse_datetime("2022-11-05T18:10:59.957Z"),
+            "published_at": parse_datetime("2022-11-05T18:40:25.836Z"),
             "skills": [
                 "adiuvo",
                 "tam",
             ],
             "students": [],
             "time_estimate_minutes": 100.0,
-            "updated_at": parse_datetime("2023-02-09T18:19:42.897Z"),
+            "updated_at": parse_datetime("2023-02-09T20:22:16.294Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -291,7 +291,7 @@ with UnifiedTo(
 
 ## remove_lms_course
 
-Remove a course
+Deletes the LmsCourse identified by `id`.
 
 ### Example Usage
 
@@ -338,7 +338,7 @@ with UnifiedTo(
 
 ## update_lms_course
 
-Update a course
+Updates the LmsCourse identified by `id`. Provide the unified LmsCourse fields to change in the request body.
 
 ### Example Usage
 
@@ -365,7 +365,7 @@ with UnifiedTo(
             "currency": "FJD",
             "description": "Vinco alias aut capitulus.",
             "duration_minutes": 148.0,
-            "id": "2cfd31ab-b9a0-4ed4-a49a-65a8f4160efc",
+            "id": "bc14f3a8-fe41-4546-8e4e-4e48882fa65d",
             "instructors": [],
             "is_active": True,
             "is_private": False,
@@ -392,14 +392,14 @@ with UnifiedTo(
             "name": "comptus",
             "price_amount": 84.0,
             "provider_name": "Homenick - Wunsch",
-            "published_at": parse_datetime("2022-11-05T18:10:59.957Z"),
+            "published_at": parse_datetime("2022-11-05T18:40:25.836Z"),
             "skills": [
                 "adiuvo",
                 "tam",
             ],
             "students": [],
             "time_estimate_minutes": 100.0,
-            "updated_at": parse_datetime("2023-02-09T18:19:42.897Z"),
+            "updated_at": parse_datetime("2023-02-09T20:22:16.294Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

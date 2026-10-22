@@ -13,7 +13,7 @@
 
 ## create_lms_content
 
-Create a content
+Creates a LmsContent. Provide the unified LmsContent fields in the request body; they are mapped to the provider's API. Returns the created LmsContent.
 
 ### Example Usage
 
@@ -39,7 +39,7 @@ with UnifiedTo(
             "description": "Usque laboriosam ventosus adflicto.",
             "difficulty": "Beginner",
             "duration_minutes": 19.0,
-            "id": "2afde838-ca85-404c-be9b-9ded2f21065b",
+            "id": "c1a50c5f-3b8d-4e1a-89d7-24e8071225bc",
             "instructors": [],
             "is_active": True,
             "languages": [
@@ -99,7 +99,7 @@ with UnifiedTo(
             "metadata": [],
             "name": "ut",
             "provider_name": "Bins LLC",
-            "published_at": parse_datetime("2022-09-03T06:17:00.873Z"),
+            "published_at": parse_datetime("2022-09-03T13:41:50.364Z"),
             "short_description": "Caritas.",
             "skills": [
                 "trucido",
@@ -114,7 +114,7 @@ with UnifiedTo(
             "tags": [
                 "dens",
             ],
-            "updated_at": parse_datetime("2022-10-04T04:33:15.738Z"),
+            "updated_at": parse_datetime("2022-10-04T12:18:18.550Z"),
         },
         "connection_id": "<id>",
     })
@@ -145,7 +145,7 @@ with UnifiedTo(
 
 ## get_lms_content
 
-Retrieve a content
+Retrieves a single LmsContent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -192,7 +192,7 @@ with UnifiedTo(
 
 ## list_lms_contents
 
-List all contents
+Returns a list of LmsContents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -238,7 +238,7 @@ with UnifiedTo(
 
 ## patch_lms_content
 
-Update a content
+Updates the LmsContent identified by `id`. Provide the unified LmsContent fields to change in the request body.
 
 ### Example Usage
 
@@ -264,7 +264,7 @@ with UnifiedTo(
             "description": "Usque laboriosam ventosus adflicto.",
             "difficulty": "Beginner",
             "duration_minutes": 19.0,
-            "id": "4e8c5bbe-2ff4-4560-88e9-015e3911f7e1",
+            "id": "47939b71-9963-4c72-adb3-0c27c660cd9d",
             "instructors": [],
             "is_active": True,
             "languages": [
@@ -324,7 +324,7 @@ with UnifiedTo(
             "metadata": [],
             "name": "ut",
             "provider_name": "Bins LLC",
-            "published_at": parse_datetime("2022-09-03T06:17:00.885Z"),
+            "published_at": parse_datetime("2022-09-03T13:41:50.375Z"),
             "short_description": "Caritas.",
             "skills": [
                 "trucido",
@@ -339,7 +339,7 @@ with UnifiedTo(
             "tags": [
                 "dens",
             ],
-            "updated_at": parse_datetime("2022-10-04T04:33:15.751Z"),
+            "updated_at": parse_datetime("2022-10-04T12:18:18.562Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -371,7 +371,7 @@ with UnifiedTo(
 
 ## remove_lms_content
 
-Remove a content
+Deletes the LmsContent identified by `id`.
 
 ### Example Usage
 
@@ -418,7 +418,7 @@ with UnifiedTo(
 
 ## update_lms_content
 
-Update a content
+Updates the LmsContent identified by `id`. Provide the unified LmsContent fields to change in the request body.
 
 ### Example Usage
 
@@ -444,7 +444,7 @@ with UnifiedTo(
             "description": "Usque laboriosam ventosus adflicto.",
             "difficulty": "Beginner",
             "duration_minutes": 19.0,
-            "id": "4e8c5bbe-2ff4-4560-88e9-015e3911f7e1",
+            "id": "47939b71-9963-4c72-adb3-0c27c660cd9d",
             "instructors": [],
             "is_active": True,
             "languages": [
@@ -504,7 +504,7 @@ with UnifiedTo(
             "metadata": [],
             "name": "ut",
             "provider_name": "Bins LLC",
-            "published_at": parse_datetime("2022-09-03T06:17:00.885Z"),
+            "published_at": parse_datetime("2022-09-03T13:41:50.375Z"),
             "short_description": "Caritas.",
             "skills": [
                 "trucido",
@@ -519,7 +519,7 @@ with UnifiedTo(
             "tags": [
                 "dens",
             ],
-            "updated_at": parse_datetime("2022-10-04T04:33:15.751Z"),
+            "updated_at": parse_datetime("2022-10-04T12:18:18.562Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

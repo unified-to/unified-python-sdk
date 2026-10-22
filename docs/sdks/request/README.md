@@ -13,7 +13,7 @@
 
 ## create_verification_request
 
-Create a request
+Creates a VerificationRequest. Provide the unified VerificationRequest fields in the request body; they are mapped to the provider's API. Returns the created VerificationRequest.
 
 ### Example Usage
 
@@ -33,7 +33,7 @@ with UnifiedTo(
     res = unified_to.request.create_verification_request(request={
         "verification_request": {
             "created_at": parse_datetime("2023-11-20T08:17:29.950Z"),
-            "id": "23c8d425-03b5-4080-a135-fbda7981f2ca",
+            "id": "c14f6a36-7d13-4ae6-9bfe-07855cae3d9b",
             "metadata": [],
             "parameters": [],
             "profile_addresses": [],
@@ -43,7 +43,7 @@ with UnifiedTo(
             "response_download_urls": [],
             "response_source": "Implemented regional protocol",
             "response_status": shared.VerificationRequestResponseStatus.PENDING,
-            "updated_at": parse_datetime("2023-12-27T07:00:57.666Z"),
+            "updated_at": parse_datetime("2023-12-27T07:50:35.190Z"),
         },
         "connection_id": "<id>",
     })
@@ -74,7 +74,7 @@ with UnifiedTo(
 
 ## get_verification_request
 
-Retrieve a request
+Retrieves a single VerificationRequest by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -121,7 +121,7 @@ with UnifiedTo(
 
 ## list_verification_requests
 
-List all requests
+Returns a list of VerificationRequests. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -167,7 +167,7 @@ with UnifiedTo(
 
 ## patch_verification_request
 
-Update a request
+Updates the VerificationRequest identified by `id`. Provide the unified VerificationRequest fields to change in the request body.
 
 ### Example Usage
 
@@ -187,7 +187,7 @@ with UnifiedTo(
     res = unified_to.request.patch_verification_request(request={
         "verification_request": {
             "created_at": parse_datetime("2023-11-20T08:17:29.950Z"),
-            "id": "9ac49303-c26e-4990-a888-b1940db9a03b",
+            "id": "91a8b308-2168-487f-9993-9e68ed2309ca",
             "metadata": [],
             "parameters": [],
             "profile_addresses": [],
@@ -197,7 +197,7 @@ with UnifiedTo(
             "response_download_urls": [],
             "response_source": "Implemented regional protocol",
             "response_status": shared.VerificationRequestResponseStatus.PENDING,
-            "updated_at": parse_datetime("2023-12-27T07:00:57.667Z"),
+            "updated_at": parse_datetime("2023-12-27T07:50:35.191Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -229,7 +229,7 @@ with UnifiedTo(
 
 ## remove_verification_request
 
-Remove a request
+Deletes the VerificationRequest identified by `id`.
 
 ### Example Usage
 
@@ -276,7 +276,7 @@ with UnifiedTo(
 
 ## update_verification_request
 
-Update a request
+Updates the VerificationRequest identified by `id`. Provide the unified VerificationRequest fields to change in the request body.
 
 ### Example Usage
 
@@ -296,7 +296,7 @@ with UnifiedTo(
     res = unified_to.request.update_verification_request(request={
         "verification_request": {
             "created_at": parse_datetime("2023-11-20T08:17:29.950Z"),
-            "id": "9ac49303-c26e-4990-a888-b1940db9a03b",
+            "id": "91a8b308-2168-487f-9993-9e68ed2309ca",
             "metadata": [],
             "parameters": [],
             "profile_addresses": [],
@@ -306,7 +306,7 @@ with UnifiedTo(
             "response_download_urls": [],
             "response_source": "Implemented regional protocol",
             "response_status": shared.VerificationRequestResponseStatus.PENDING,
-            "updated_at": parse_datetime("2023-12-27T07:00:57.667Z"),
+            "updated_at": parse_datetime("2023-12-27T07:50:35.191Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

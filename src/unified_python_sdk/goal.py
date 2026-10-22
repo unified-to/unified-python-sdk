@@ -24,6 +24,8 @@ class Goal(BaseSDK):
     ) -> operations.CreatePerformanceGoalResponse:
         r"""Create a goal
 
+        Creates a PerformanceGoal. Provide the unified PerformanceGoal fields in the request body; they are mapped to the provider's API. Returns the created PerformanceGoal.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -118,6 +120,8 @@ class Goal(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreatePerformanceGoalResponse:
         r"""Create a goal
+
+        Creates a PerformanceGoal. Provide the unified PerformanceGoal fields in the request body; they are mapped to the provider's API. Returns the created PerformanceGoal.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -214,6 +218,8 @@ class Goal(BaseSDK):
     ) -> operations.GetPerformanceGoalResponse:
         r"""Retrieve a goal
 
+        Retrieves a single PerformanceGoal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -305,6 +311,8 @@ class Goal(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetPerformanceGoalResponse:
         r"""Retrieve a goal
+
+        Retrieves a single PerformanceGoal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -398,6 +406,8 @@ class Goal(BaseSDK):
     ) -> operations.ListPerformanceGoalsResponse:
         r"""List all goals
 
+        Returns a list of PerformanceGoals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -490,6 +500,8 @@ class Goal(BaseSDK):
     ) -> operations.ListPerformanceGoalsResponse:
         r"""List all goals
 
+        Returns a list of PerformanceGoals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -581,6 +593,8 @@ class Goal(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchPerformanceGoalResponse:
         r"""Update a goal
+
+        Updates the PerformanceGoal identified by `id`. Provide the unified PerformanceGoal fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -677,6 +691,8 @@ class Goal(BaseSDK):
     ) -> operations.PatchPerformanceGoalResponse:
         r"""Update a goal
 
+        Updates the PerformanceGoal identified by `id`. Provide the unified PerformanceGoal fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -771,6 +787,8 @@ class Goal(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemovePerformanceGoalResponse:
         r"""Remove a goal
+
+        Deletes the PerformanceGoal identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -869,6 +887,8 @@ class Goal(BaseSDK):
     ) -> operations.RemovePerformanceGoalResponse:
         r"""Remove a goal
 
+        Deletes the PerformanceGoal identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -966,6 +986,8 @@ class Goal(BaseSDK):
     ) -> operations.UpdatePerformanceGoalResponse:
         r"""Update a goal
 
+        Updates the PerformanceGoal identified by `id`. Provide the unified PerformanceGoal fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1060,6 +1082,8 @@ class Goal(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdatePerformanceGoalResponse:
         r"""Update a goal
+
+        Updates the PerformanceGoal identified by `id`. Provide the unified PerformanceGoal fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

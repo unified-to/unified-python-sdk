@@ -13,7 +13,7 @@
 
 ## create_compute_instance
 
-Create an instance
+Creates a ComputeInstance. Provide the unified ComputeInstance fields in the request body; they are mapped to the provider's API. Returns the created ComputeInstance.
 
 ### Example Usage
 
@@ -50,7 +50,7 @@ with UnifiedTo(
             ],
             "gpu_count": 0.0,
             "has_internet_access": True,
-            "id": "2fa38d57-975a-48f9-bb0f-a33d7ca6df1c",
+            "id": "468756b5-e6c9-4689-8e98-6b4bd5f7940d",
             "image": "ubuntu:24.04",
             "market": shared.Market.SPOT,
             "memory_mb": 2048.0,
@@ -65,11 +65,11 @@ with UnifiedTo(
                 "port": 22.0,
                 "username": "root",
             },
-            "started_at": parse_datetime("2025-03-23T23:15:07.360Z"),
+            "started_at": parse_datetime("2025-03-24T13:47:14.312Z"),
             "status": shared.ComputeInstanceStatus.ERROR,
             "status_reason": "Sponte quasi adversus alioqui reiciendis arca carmen canis.",
             "type": shared.ComputeInstanceType.BAREMETAL,
-            "updated_at": parse_datetime("2025-06-16T04:47:23.794Z"),
+            "updated_at": parse_datetime("2025-06-16T20:41:16.883Z"),
         },
         "connection_id": "<id>",
     })
@@ -100,7 +100,7 @@ with UnifiedTo(
 
 ## get_compute_instance
 
-Retrieve an instance
+Retrieves a single ComputeInstance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -147,7 +147,7 @@ with UnifiedTo(
 
 ## list_compute_instances
 
-List all instances
+Returns a list of ComputeInstances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -193,7 +193,7 @@ with UnifiedTo(
 
 ## patch_compute_instance
 
-Update an instance
+Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change in the request body.
 
 ### Example Usage
 
@@ -230,7 +230,7 @@ with UnifiedTo(
             ],
             "gpu_count": 0.0,
             "has_internet_access": True,
-            "id": "5516476d-5b91-46df-8c5d-01dd7135dab6",
+            "id": "e8839c42-59e6-46ea-b661-3ffe8d9568e5",
             "image": "ubuntu:24.04",
             "market": shared.Market.SPOT,
             "memory_mb": 2048.0,
@@ -245,11 +245,11 @@ with UnifiedTo(
                 "port": 22.0,
                 "username": "root",
             },
-            "started_at": parse_datetime("2025-03-23T23:15:07.391Z"),
+            "started_at": parse_datetime("2025-03-24T13:47:14.341Z"),
             "status": shared.ComputeInstanceStatus.ERROR,
             "status_reason": "Sponte quasi adversus alioqui reiciendis arca carmen canis.",
             "type": shared.ComputeInstanceType.BAREMETAL,
-            "updated_at": parse_datetime("2025-06-16T04:47:23.828Z"),
+            "updated_at": parse_datetime("2025-06-16T20:41:16.915Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -281,7 +281,7 @@ with UnifiedTo(
 
 ## remove_compute_instance
 
-Remove an instance
+Deletes the ComputeInstance identified by `id`.
 
 ### Example Usage
 
@@ -328,7 +328,7 @@ with UnifiedTo(
 
 ## update_compute_instance
 
-Update an instance
+Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change in the request body.
 
 ### Example Usage
 
@@ -365,7 +365,7 @@ with UnifiedTo(
             ],
             "gpu_count": 0.0,
             "has_internet_access": True,
-            "id": "5516476d-5b91-46df-8c5d-01dd7135dab6",
+            "id": "e8839c42-59e6-46ea-b661-3ffe8d9568e5",
             "image": "ubuntu:24.04",
             "market": shared.Market.SPOT,
             "memory_mb": 2048.0,
@@ -380,11 +380,11 @@ with UnifiedTo(
                 "port": 22.0,
                 "username": "root",
             },
-            "started_at": parse_datetime("2025-03-23T23:15:07.391Z"),
+            "started_at": parse_datetime("2025-03-24T13:47:14.341Z"),
             "status": shared.ComputeInstanceStatus.ERROR,
             "status_reason": "Sponte quasi adversus alioqui reiciendis arca carmen canis.",
             "type": shared.ComputeInstanceType.BAREMETAL,
-            "updated_at": parse_datetime("2025-06-16T04:47:23.828Z"),
+            "updated_at": parse_datetime("2025-06-16T20:41:16.915Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

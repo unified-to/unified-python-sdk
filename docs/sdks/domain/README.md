@@ -13,7 +13,7 @@
 
 ## create_compute_domain
 
-Create a domain
+Creates a ComputeDomain. Provide the unified ComputeDomain fields in the request body; they are mapped to the provider's API. Returns the created ComputeDomain.
 
 ### Example Usage
 
@@ -33,12 +33,12 @@ with UnifiedTo(
     res = unified_to.domain.create_compute_domain(request={
         "compute_domain": {
             "created_at": parse_datetime("2019-11-22T16:38:26.009Z"),
-            "id": "dd6ba3b4-11fc-4d67-aa64-f3aef835838e",
+            "id": "551bfdc5-f3f9-4bec-b4ac-aebb4840484d",
             "is_primary": False,
             "metadata": [],
             "name": "mysterious-republican.usable-section.info",
             "status": shared.ComputeDomainStatus.PENDING,
-            "updated_at": parse_datetime("2023-11-03T15:08:58.319Z"),
+            "updated_at": parse_datetime("2023-11-04T04:46:33.831Z"),
         },
         "connection_id": "<id>",
     })
@@ -69,7 +69,7 @@ with UnifiedTo(
 
 ## get_compute_domain
 
-Retrieve a domain
+Retrieves a single ComputeDomain by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -116,7 +116,7 @@ with UnifiedTo(
 
 ## list_compute_domains
 
-List all domains
+Returns a list of ComputeDomains. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -162,7 +162,7 @@ with UnifiedTo(
 
 ## patch_compute_domain
 
-Update a domain
+Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in the request body.
 
 ### Example Usage
 
@@ -182,12 +182,12 @@ with UnifiedTo(
     res = unified_to.domain.patch_compute_domain(request={
         "compute_domain": {
             "created_at": parse_datetime("2019-11-22T16:38:26.009Z"),
-            "id": "433bf6e8-1a86-4d5d-8cad-3353c77e233e",
+            "id": "0654d12c-42c7-4802-974c-08c6d4f0f544",
             "is_primary": False,
             "metadata": [],
             "name": "mysterious-republican.usable-section.info",
             "status": shared.ComputeDomainStatus.PENDING,
-            "updated_at": parse_datetime("2023-11-03T15:08:58.330Z"),
+            "updated_at": parse_datetime("2023-11-04T04:46:33.838Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -219,7 +219,7 @@ with UnifiedTo(
 
 ## remove_compute_domain
 
-Remove a domain
+Deletes the ComputeDomain identified by `id`.
 
 ### Example Usage
 
@@ -266,7 +266,7 @@ with UnifiedTo(
 
 ## update_compute_domain
 
-Update a domain
+Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in the request body.
 
 ### Example Usage
 
@@ -286,12 +286,12 @@ with UnifiedTo(
     res = unified_to.domain.update_compute_domain(request={
         "compute_domain": {
             "created_at": parse_datetime("2019-11-22T16:38:26.009Z"),
-            "id": "433bf6e8-1a86-4d5d-8cad-3353c77e233e",
+            "id": "0654d12c-42c7-4802-974c-08c6d4f0f544",
             "is_primary": False,
             "metadata": [],
             "name": "mysterious-republican.usable-section.info",
             "status": shared.ComputeDomainStatus.PENDING,
-            "updated_at": parse_datetime("2023-11-03T15:08:58.330Z"),
+            "updated_at": parse_datetime("2023-11-04T04:46:33.838Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

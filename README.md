@@ -131,7 +131,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "ecf5b11c-7793-4217-adb9-73064cb6d664",
+            "id": "cf355b43-f7e4-4200-abd9-da8905ac9789",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -144,7 +144,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-06T21:39:36.829Z"),
+            "updated_at": parse_datetime("2023-08-07T03:43:27.331Z"),
         },
         "connection_id": "<id>",
     })
@@ -181,7 +181,7 @@ async def main():
                 "currency": "CAD",
                 "customer_defined_code": "6170",
                 "description": "Voluptatibus valde spoliatio.",
-                "id": "ecf5b11c-7793-4217-adb9-73064cb6d664",
+                "id": "cf355b43-f7e4-4200-abd9-da8905ac9789",
                 "is_payable": False,
                 "metadata": [],
                 "name": "Auto Loan Account",
@@ -194,7 +194,7 @@ async def main():
                     },
                 ],
                 "type": shared.Type.ACCOUNTS_RECEIVABLE,
-                "updated_at": parse_datetime("2023-08-06T21:39:36.829Z"),
+                "updated_at": parse_datetime("2023-08-07T03:43:27.331Z"),
             },
             "connection_id": "<id>",
         })
@@ -236,7 +236,7 @@ asyncio.run(main())
 * [create_accounting_expensereport](docs/sdks/accounting/README.md#create_accounting_expensereport) - Create an expensereport
 * [create_accounting_invoice](docs/sdks/accounting/README.md#create_accounting_invoice) - Create an invoice
 * [create_accounting_journal](docs/sdks/accounting/README.md#create_accounting_journal) - Create a journal
-* [create_accounting_order](docs/sdks/accounting/README.md#create_accounting_order) - Create an order
+* [~~create_accounting_order~~](docs/sdks/accounting/README.md#create_accounting_order) - Create an order :warning: **Deprecated**
 * [create_accounting_paymentterm](docs/sdks/accounting/README.md#create_accounting_paymentterm) - Create a paymentterm
 * [create_accounting_project](docs/sdks/accounting/README.md#create_accounting_project) - Create a project
 * [create_accounting_purchaseorder](docs/sdks/accounting/README.md#create_accounting_purchaseorder) - Create a purchaseorder
@@ -260,7 +260,7 @@ asyncio.run(main())
 * [get_accounting_expensereport](docs/sdks/accounting/README.md#get_accounting_expensereport) - Retrieve an expensereport
 * [get_accounting_invoice](docs/sdks/accounting/README.md#get_accounting_invoice) - Retrieve an invoice
 * [get_accounting_journal](docs/sdks/accounting/README.md#get_accounting_journal) - Retrieve a journal
-* [get_accounting_order](docs/sdks/accounting/README.md#get_accounting_order) - Retrieve an order
+* [~~get_accounting_order~~](docs/sdks/accounting/README.md#get_accounting_order) - Retrieve an order :warning: **Deprecated**
 * [get_accounting_organization](docs/sdks/accounting/README.md#get_accounting_organization) - Retrieve an organization
 * [get_accounting_paymentterm](docs/sdks/accounting/README.md#get_accounting_paymentterm) - Retrieve a paymentterm
 * [get_accounting_profitloss](docs/sdks/accounting/README.md#get_accounting_profitloss) - Retrieve a profitloss
@@ -289,7 +289,7 @@ asyncio.run(main())
 * [list_accounting_expenses](docs/sdks/accounting/README.md#list_accounting_expenses) - List all expenses
 * [list_accounting_invoices](docs/sdks/accounting/README.md#list_accounting_invoices) - List all invoices
 * [list_accounting_journals](docs/sdks/accounting/README.md#list_accounting_journals) - List all journals
-* [list_accounting_orders](docs/sdks/accounting/README.md#list_accounting_orders) - List all orders
+* [~~list_accounting_orders~~](docs/sdks/accounting/README.md#list_accounting_orders) - List all orders :warning: **Deprecated**
 * [list_accounting_organizations](docs/sdks/accounting/README.md#list_accounting_organizations) - List all organizations
 * [list_accounting_paymentterms](docs/sdks/accounting/README.md#list_accounting_paymentterms) - List all paymentterms
 * [list_accounting_profitlosses](docs/sdks/accounting/README.md#list_accounting_profitlosses) - List all profitlosses
@@ -314,7 +314,7 @@ asyncio.run(main())
 * [patch_accounting_expensereport](docs/sdks/accounting/README.md#patch_accounting_expensereport) - Update an expensereport
 * [patch_accounting_invoice](docs/sdks/accounting/README.md#patch_accounting_invoice) - Update an invoice
 * [patch_accounting_journal](docs/sdks/accounting/README.md#patch_accounting_journal) - Update a journal
-* [patch_accounting_order](docs/sdks/accounting/README.md#patch_accounting_order) - Update an order
+* [~~patch_accounting_order~~](docs/sdks/accounting/README.md#patch_accounting_order) - Update an order :warning: **Deprecated**
 * [patch_accounting_paymentterm](docs/sdks/accounting/README.md#patch_accounting_paymentterm) - Update a paymentterm
 * [patch_accounting_project](docs/sdks/accounting/README.md#patch_accounting_project) - Update a project
 * [patch_accounting_purchaseorder](docs/sdks/accounting/README.md#patch_accounting_purchaseorder) - Update a purchaseorder
@@ -334,7 +334,7 @@ asyncio.run(main())
 * [remove_accounting_expensereport](docs/sdks/accounting/README.md#remove_accounting_expensereport) - Remove an expensereport
 * [remove_accounting_invoice](docs/sdks/accounting/README.md#remove_accounting_invoice) - Remove an invoice
 * [remove_accounting_journal](docs/sdks/accounting/README.md#remove_accounting_journal) - Remove a journal
-* [remove_accounting_order](docs/sdks/accounting/README.md#remove_accounting_order) - Remove an order
+* [~~remove_accounting_order~~](docs/sdks/accounting/README.md#remove_accounting_order) - Remove an order :warning: **Deprecated**
 * [remove_accounting_paymentterm](docs/sdks/accounting/README.md#remove_accounting_paymentterm) - Remove a paymentterm
 * [remove_accounting_project](docs/sdks/accounting/README.md#remove_accounting_project) - Remove a project
 * [remove_accounting_purchaseorder](docs/sdks/accounting/README.md#remove_accounting_purchaseorder) - Remove a purchaseorder
@@ -354,7 +354,7 @@ asyncio.run(main())
 * [update_accounting_expensereport](docs/sdks/accounting/README.md#update_accounting_expensereport) - Update an expensereport
 * [update_accounting_invoice](docs/sdks/accounting/README.md#update_accounting_invoice) - Update an invoice
 * [update_accounting_journal](docs/sdks/accounting/README.md#update_accounting_journal) - Update a journal
-* [update_accounting_order](docs/sdks/accounting/README.md#update_accounting_order) - Update an order
+* [~~update_accounting_order~~](docs/sdks/accounting/README.md#update_accounting_order) - Update an order :warning: **Deprecated**
 * [update_accounting_paymentterm](docs/sdks/accounting/README.md#update_accounting_paymentterm) - Update a paymentterm
 * [update_accounting_project](docs/sdks/accounting/README.md#update_accounting_project) - Update a project
 * [update_accounting_purchaseorder](docs/sdks/accounting/README.md#update_accounting_purchaseorder) - Update a purchaseorder
@@ -1978,15 +1978,15 @@ asyncio.run(main())
 
 ### [Order](docs/sdks/order/README.md)
 
-* [create_accounting_order](docs/sdks/order/README.md#create_accounting_order) - Create an order
+* [~~create_accounting_order~~](docs/sdks/order/README.md#create_accounting_order) - Create an order :warning: **Deprecated**
 * [create_assessment_order](docs/sdks/order/README.md#create_assessment_order) - Create an order
-* [get_accounting_order](docs/sdks/order/README.md#get_accounting_order) - Retrieve an order
+* [~~get_accounting_order~~](docs/sdks/order/README.md#get_accounting_order) - Retrieve an order :warning: **Deprecated**
 * [get_assessment_order](docs/sdks/order/README.md#get_assessment_order) - Retrieve an order
-* [list_accounting_orders](docs/sdks/order/README.md#list_accounting_orders) - List all orders
-* [patch_accounting_order](docs/sdks/order/README.md#patch_accounting_order) - Update an order
+* [~~list_accounting_orders~~](docs/sdks/order/README.md#list_accounting_orders) - List all orders :warning: **Deprecated**
+* [~~patch_accounting_order~~](docs/sdks/order/README.md#patch_accounting_order) - Update an order :warning: **Deprecated**
 * [patch_assessment_order](docs/sdks/order/README.md#patch_assessment_order) - Update an order
-* [remove_accounting_order](docs/sdks/order/README.md#remove_accounting_order) - Remove an order
-* [update_accounting_order](docs/sdks/order/README.md#update_accounting_order) - Update an order
+* [~~remove_accounting_order~~](docs/sdks/order/README.md#remove_accounting_order) - Remove an order :warning: **Deprecated**
+* [~~update_accounting_order~~](docs/sdks/order/README.md#update_accounting_order) - Update an order :warning: **Deprecated**
 * [update_assessment_order](docs/sdks/order/README.md#update_assessment_order) - Update an order
 
 ### [Organization](docs/sdks/organization/README.md)
@@ -2940,7 +2940,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "ecf5b11c-7793-4217-adb9-73064cb6d664",
+            "id": "cf355b43-f7e4-4200-abd9-da8905ac9789",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -2953,7 +2953,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-06T21:39:36.829Z"),
+            "updated_at": parse_datetime("2023-08-07T03:43:27.331Z"),
         },
         "connection_id": "<id>",
     },
@@ -2987,7 +2987,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "ecf5b11c-7793-4217-adb9-73064cb6d664",
+            "id": "cf355b43-f7e4-4200-abd9-da8905ac9789",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3000,7 +3000,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-06T21:39:36.829Z"),
+            "updated_at": parse_datetime("2023-08-07T03:43:27.331Z"),
         },
         "connection_id": "<id>",
     })
@@ -3048,7 +3048,7 @@ with UnifiedTo(
                 "currency": "CAD",
                 "customer_defined_code": "6170",
                 "description": "Voluptatibus valde spoliatio.",
-                "id": "ecf5b11c-7793-4217-adb9-73064cb6d664",
+                "id": "cf355b43-f7e4-4200-abd9-da8905ac9789",
                 "is_payable": False,
                 "metadata": [],
                 "name": "Auto Loan Account",
@@ -3061,7 +3061,7 @@ with UnifiedTo(
                     },
                 ],
                 "type": shared.Type.ACCOUNTS_RECEIVABLE,
-                "updated_at": parse_datetime("2023-08-06T21:39:36.829Z"),
+                "updated_at": parse_datetime("2023-08-07T03:43:27.331Z"),
             },
             "connection_id": "<id>",
         })
@@ -3139,7 +3139,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "ecf5b11c-7793-4217-adb9-73064cb6d664",
+            "id": "cf355b43-f7e4-4200-abd9-da8905ac9789",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3152,7 +3152,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-06T21:39:36.829Z"),
+            "updated_at": parse_datetime("2023-08-07T03:43:27.331Z"),
         },
         "connection_id": "<id>",
     })
@@ -3187,7 +3187,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "ecf5b11c-7793-4217-adb9-73064cb6d664",
+            "id": "cf355b43-f7e4-4200-abd9-da8905ac9789",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3200,7 +3200,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-06T21:39:36.829Z"),
+            "updated_at": parse_datetime("2023-08-07T03:43:27.331Z"),
         },
         "connection_id": "<id>",
     })
@@ -3343,7 +3343,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "ecf5b11c-7793-4217-adb9-73064cb6d664",
+            "id": "cf355b43-f7e4-4200-abd9-da8905ac9789",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3356,7 +3356,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-06T21:39:36.829Z"),
+            "updated_at": parse_datetime("2023-08-07T03:43:27.331Z"),
         },
         "connection_id": "<id>",
     })

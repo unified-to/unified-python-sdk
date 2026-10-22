@@ -24,6 +24,8 @@ class Payment(BaseSDK):
     ) -> operations.CreatePaymentLinkResponse:
         r"""Create a link
 
+        Creates a PaymentLink. Provide the unified PaymentLink fields in the request body; they are mapped to the provider's API. Returns the created PaymentLink.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -118,6 +120,8 @@ class Payment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreatePaymentLinkResponse:
         r"""Create a link
+
+        Creates a PaymentLink. Provide the unified PaymentLink fields in the request body; they are mapped to the provider's API. Returns the created PaymentLink.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -214,6 +218,8 @@ class Payment(BaseSDK):
     ) -> operations.CreatePaymentPaymentResponse:
         r"""Create a payment
 
+        Creates a PaymentPayment. Provide the unified PaymentPayment fields in the request body; they are mapped to the provider's API. Returns the created PaymentPayment.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -309,6 +315,8 @@ class Payment(BaseSDK):
     ) -> operations.CreatePaymentPaymentResponse:
         r"""Create a payment
 
+        Creates a PaymentPayment. Provide the unified PaymentPayment fields in the request body; they are mapped to the provider's API. Returns the created PaymentPayment.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -403,6 +411,8 @@ class Payment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreatePaymentSubscriptionResponse:
         r"""Create a subscription
+
+        Creates a PaymentSubscription. Provide the unified PaymentSubscription fields in the request body; they are mapped to the provider's API. Returns the created PaymentSubscription.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -505,6 +515,8 @@ class Payment(BaseSDK):
     ) -> operations.CreatePaymentSubscriptionResponse:
         r"""Create a subscription
 
+        Creates a PaymentSubscription. Provide the unified PaymentSubscription fields in the request body; they are mapped to the provider's API. Returns the created PaymentSubscription.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -605,6 +617,8 @@ class Payment(BaseSDK):
     ) -> operations.GetPaymentLinkResponse:
         r"""Retrieve a link
 
+        Retrieves a single PaymentLink by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -695,6 +709,8 @@ class Payment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetPaymentLinkResponse:
         r"""Retrieve a link
+
+        Retrieves a single PaymentLink by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -788,6 +804,8 @@ class Payment(BaseSDK):
     ) -> operations.GetPaymentPaymentResponse:
         r"""Retrieve a payment
 
+        Retrieves a single PaymentPayment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -879,6 +897,8 @@ class Payment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetPaymentPaymentResponse:
         r"""Retrieve a payment
+
+        Retrieves a single PaymentPayment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -972,6 +992,8 @@ class Payment(BaseSDK):
     ) -> operations.GetPaymentPayoutResponse:
         r"""Retrieve a payout
 
+        Retrieves a single PaymentPayout by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1063,6 +1085,8 @@ class Payment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetPaymentPayoutResponse:
         r"""Retrieve a payout
+
+        Retrieves a single PaymentPayout by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1156,6 +1180,8 @@ class Payment(BaseSDK):
     ) -> operations.GetPaymentRefundResponse:
         r"""Retrieve a refund
 
+        Retrieves a single PaymentRefund by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1247,6 +1273,8 @@ class Payment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetPaymentRefundResponse:
         r"""Retrieve a refund
+
+        Retrieves a single PaymentRefund by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1340,6 +1368,8 @@ class Payment(BaseSDK):
     ) -> operations.GetPaymentSubscriptionResponse:
         r"""Retrieve a subscription
 
+        Retrieves a single PaymentSubscription by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1431,6 +1461,8 @@ class Payment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetPaymentSubscriptionResponse:
         r"""Retrieve a subscription
+
+        Retrieves a single PaymentSubscription by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1524,6 +1556,8 @@ class Payment(BaseSDK):
     ) -> operations.ListPaymentLinksResponse:
         r"""List all links
 
+        Returns a list of PaymentLinks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1615,6 +1649,8 @@ class Payment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListPaymentLinksResponse:
         r"""List all links
+
+        Returns a list of PaymentLinks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1708,6 +1744,8 @@ class Payment(BaseSDK):
     ) -> operations.ListPaymentPaymentsResponse:
         r"""List all payments
 
+        Returns a list of PaymentPayments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1799,6 +1837,8 @@ class Payment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListPaymentPaymentsResponse:
         r"""List all payments
+
+        Returns a list of PaymentPayments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1892,6 +1932,8 @@ class Payment(BaseSDK):
     ) -> operations.ListPaymentPayoutsResponse:
         r"""List all payouts
 
+        Returns a list of PaymentPayouts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1983,6 +2025,8 @@ class Payment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListPaymentPayoutsResponse:
         r"""List all payouts
+
+        Returns a list of PaymentPayouts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2076,6 +2120,8 @@ class Payment(BaseSDK):
     ) -> operations.ListPaymentRefundsResponse:
         r"""List all refunds
 
+        Returns a list of PaymentRefunds. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2168,6 +2214,8 @@ class Payment(BaseSDK):
     ) -> operations.ListPaymentRefundsResponse:
         r"""List all refunds
 
+        Returns a list of PaymentRefunds. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2259,6 +2307,8 @@ class Payment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListPaymentSubscriptionsResponse:
         r"""List all subscriptions
+
+        Returns a list of PaymentSubscriptions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2354,6 +2404,8 @@ class Payment(BaseSDK):
     ) -> operations.ListPaymentSubscriptionsResponse:
         r"""List all subscriptions
 
+        Returns a list of PaymentSubscriptions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2447,6 +2499,8 @@ class Payment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchPaymentLinkResponse:
         r"""Update a link
+
+        Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2543,6 +2597,8 @@ class Payment(BaseSDK):
     ) -> operations.PatchPaymentLinkResponse:
         r"""Update a link
 
+        Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2637,6 +2693,8 @@ class Payment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchPaymentPaymentResponse:
         r"""Update a payment
+
+        Updates the PaymentPayment identified by `id`. Provide the unified PaymentPayment fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2733,6 +2791,8 @@ class Payment(BaseSDK):
     ) -> operations.PatchPaymentPaymentResponse:
         r"""Update a payment
 
+        Updates the PaymentPayment identified by `id`. Provide the unified PaymentPayment fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2827,6 +2887,8 @@ class Payment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchPaymentSubscriptionResponse:
         r"""Update a subscription
+
+        Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2929,6 +2991,8 @@ class Payment(BaseSDK):
     ) -> operations.PatchPaymentSubscriptionResponse:
         r"""Update a subscription
 
+        Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3030,6 +3094,8 @@ class Payment(BaseSDK):
     ) -> operations.RemovePaymentLinkResponse:
         r"""Remove a link
 
+        Deletes the PaymentLink identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3126,6 +3192,8 @@ class Payment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemovePaymentLinkResponse:
         r"""Remove a link
+
+        Deletes the PaymentLink identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3224,6 +3292,8 @@ class Payment(BaseSDK):
     ) -> operations.RemovePaymentPaymentResponse:
         r"""Remove a payment
 
+        Deletes the PaymentPayment identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3321,6 +3391,8 @@ class Payment(BaseSDK):
     ) -> operations.RemovePaymentPaymentResponse:
         r"""Remove a payment
 
+        Deletes the PaymentPayment identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3417,6 +3489,8 @@ class Payment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemovePaymentSubscriptionResponse:
         r"""Remove a subscription
+
+        Deletes the PaymentSubscription identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3517,6 +3591,8 @@ class Payment(BaseSDK):
     ) -> operations.RemovePaymentSubscriptionResponse:
         r"""Remove a subscription
 
+        Deletes the PaymentSubscription identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3616,6 +3692,8 @@ class Payment(BaseSDK):
     ) -> operations.UpdatePaymentLinkResponse:
         r"""Update a link
 
+        Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3710,6 +3788,8 @@ class Payment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdatePaymentLinkResponse:
         r"""Update a link
+
+        Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3806,6 +3886,8 @@ class Payment(BaseSDK):
     ) -> operations.UpdatePaymentPaymentResponse:
         r"""Update a payment
 
+        Updates the PaymentPayment identified by `id`. Provide the unified PaymentPayment fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3901,6 +3983,8 @@ class Payment(BaseSDK):
     ) -> operations.UpdatePaymentPaymentResponse:
         r"""Update a payment
 
+        Updates the PaymentPayment identified by `id`. Provide the unified PaymentPayment fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3995,6 +4079,8 @@ class Payment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdatePaymentSubscriptionResponse:
         r"""Update a subscription
+
+        Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4096,6 +4182,8 @@ class Payment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdatePaymentSubscriptionResponse:
         r"""Update a subscription
+
+        Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

@@ -30,6 +30,7 @@ class HrisLocationTypedDict(TypedDict):
     language_locale: NotRequired[str]
     metadata: NotRequired[List[HrisMetadataTypedDict]]
     name: NotRequired[str]
+    r"""The name of the location"""
     parent_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     telephones: NotRequired[List[HrisTelephoneTypedDict]]
@@ -65,6 +66,7 @@ class HrisLocation(BaseModel):
     metadata: Optional[List[HrisMetadata]] = None
 
     name: Optional[str] = None
+    r"""The name of the location"""
 
     parent_id: Optional[str] = None
 

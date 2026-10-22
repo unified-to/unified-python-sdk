@@ -23,6 +23,8 @@ class Group(BaseSDK):
     ) -> operations.CreateAdsGroupResponse:
         r"""Create a group
 
+        Creates a AdsGroup. Provide the unified AdsGroup fields in the request body; they are mapped to the provider's API. Returns the created AdsGroup.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -114,6 +116,8 @@ class Group(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAdsGroupResponse:
         r"""Create a group
+
+        Creates a AdsGroup. Provide the unified AdsGroup fields in the request body; they are mapped to the provider's API. Returns the created AdsGroup.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -207,6 +211,8 @@ class Group(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateHrisGroupResponse:
         r"""Create a group
+
+        Creates a HrisGroup. Provide the unified HrisGroup fields in the request body; they are mapped to the provider's API. Returns the created HrisGroup.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -302,6 +308,8 @@ class Group(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateHrisGroupResponse:
         r"""Create a group
+
+        Creates a HrisGroup. Provide the unified HrisGroup fields in the request body; they are mapped to the provider's API. Returns the created HrisGroup.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -587,6 +595,8 @@ class Group(BaseSDK):
     ) -> operations.GetAdsGroupResponse:
         r"""Retrieve a group
 
+        Retrieves a single AdsGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -676,6 +686,8 @@ class Group(BaseSDK):
     ) -> operations.GetAdsGroupResponse:
         r"""Retrieve a group
 
+        Retrieves a single AdsGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -764,6 +776,8 @@ class Group(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetClubsGroupResponse:
         r"""Retrieve a group
+
+        Retrieves a single ClubsGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -856,6 +870,8 @@ class Group(BaseSDK):
     ) -> operations.GetClubsGroupResponse:
         r"""Retrieve a group
 
+        Retrieves a single ClubsGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -947,6 +963,8 @@ class Group(BaseSDK):
     ) -> operations.GetHrisGroupResponse:
         r"""Retrieve a group
 
+        Retrieves a single HrisGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1037,6 +1055,8 @@ class Group(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetHrisGroupResponse:
         r"""Retrieve a group
+
+        Retrieves a single HrisGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1311,6 +1331,8 @@ class Group(BaseSDK):
     ) -> operations.ListAdsGroupsResponse:
         r"""List all groups
 
+        Returns a list of AdsGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1401,6 +1423,8 @@ class Group(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAdsGroupsResponse:
         r"""List all groups
+
+        Returns a list of AdsGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1494,6 +1518,8 @@ class Group(BaseSDK):
     ) -> operations.ListClubsGroupsResponse:
         r"""List all groups
 
+        Returns a list of ClubsGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1586,6 +1612,8 @@ class Group(BaseSDK):
     ) -> operations.ListClubsGroupsResponse:
         r"""List all groups
 
+        Returns a list of ClubsGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1677,6 +1705,8 @@ class Group(BaseSDK):
     ) -> operations.ListHrisGroupsResponse:
         r"""List all groups
 
+        Returns a list of HrisGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1767,6 +1797,8 @@ class Group(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListHrisGroupsResponse:
         r"""List all groups
+
+        Returns a list of HrisGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2041,6 +2073,8 @@ class Group(BaseSDK):
     ) -> operations.PatchAdsGroupResponse:
         r"""Update a group
 
+        Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2133,6 +2167,8 @@ class Group(BaseSDK):
     ) -> operations.PatchAdsGroupResponse:
         r"""Update a group
 
+        Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2224,6 +2260,8 @@ class Group(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchHrisGroupResponse:
         r"""Update a group
+
+        Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2318,6 +2356,8 @@ class Group(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchHrisGroupResponse:
         r"""Update a group
+
+        Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2603,6 +2643,8 @@ class Group(BaseSDK):
     ) -> operations.RemoveAdsGroupResponse:
         r"""Remove a group
 
+        Deletes the AdsGroup identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2698,6 +2740,8 @@ class Group(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAdsGroupResponse:
         r"""Remove a group
+
+        Deletes the AdsGroup identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2796,6 +2840,8 @@ class Group(BaseSDK):
     ) -> operations.RemoveHrisGroupResponse:
         r"""Remove a group
 
+        Deletes the HrisGroup identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2892,6 +2938,8 @@ class Group(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveHrisGroupResponse:
         r"""Remove a group
+
+        Deletes the HrisGroup identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3183,6 +3231,8 @@ class Group(BaseSDK):
     ) -> operations.UpdateAdsGroupResponse:
         r"""Update a group
 
+        Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3274,6 +3324,8 @@ class Group(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAdsGroupResponse:
         r"""Update a group
+
+        Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3367,6 +3419,8 @@ class Group(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateHrisGroupResponse:
         r"""Update a group
+
+        Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3462,6 +3516,8 @@ class Group(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateHrisGroupResponse:
         r"""Update a group
+
+        Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

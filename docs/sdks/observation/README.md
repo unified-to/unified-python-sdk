@@ -10,7 +10,7 @@
 
 ## create_healthcare_observation
 
-Create an observation
+Creates a HealthcareObservation. Provide the unified HealthcareObservation fields in the request body; they are mapped to the provider's API. Returns the created HealthcareObservation.
 
 ### Example Usage
 
@@ -61,15 +61,15 @@ with UnifiedTo(
                 },
             ],
             "created_at": parse_datetime("2022-12-06T21:34:04.293Z"),
-            "id": "878c4fbe-c6da-4f1c-8b2b-3415da6a3e0e",
+            "id": "3d95939a-fd15-4205-a9a7-8996dcd8717c",
             "interpretation": shared.Interpretation.CRITICAL_HIGH,
-            "issued_at": parse_datetime("2025-05-11T10:26:23.241Z"),
+            "issued_at": parse_datetime("2025-05-12T01:23:42.793Z"),
             "metadata": [],
             "name": "Blood pressure panel",
-            "observed_at": parse_datetime("2025-01-20T03:57:34.624Z"),
+            "observed_at": parse_datetime("2025-01-20T17:02:16.723Z"),
             "status": shared.HealthcareObservationStatus.CORRECTED,
             "type": shared.HealthcareObservationType.VITAL_SIGNS,
-            "updated_at": parse_datetime("2026-03-24T06:20:26.478Z"),
+            "updated_at": parse_datetime("2026-03-25T02:38:27.139Z"),
         },
         "connection_id": "<id>",
     })
@@ -100,7 +100,7 @@ with UnifiedTo(
 
 ## get_healthcare_observation
 
-Retrieve an observation
+Retrieves a single HealthcareObservation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -147,7 +147,7 @@ with UnifiedTo(
 
 ## list_healthcare_observations
 
-List all observations
+Returns a list of HealthcareObservations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 

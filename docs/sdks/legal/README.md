@@ -31,7 +31,7 @@
 
 ## create_legal_expense
 
-Create an expense
+Creates a LegalExpense. Provide the unified LegalExpense fields in the request body; they are mapped to the provider's API. Returns the created LegalExpense.
 
 ### Example Usage
 
@@ -54,7 +54,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-11-08T00:41:42.356Z"),
             "currency": "MVR",
             "description": "Temporibus agnitio sui.",
-            "id": "dcb76de8-c8d7-4a11-8670-0124109233eb",
+            "id": "21864e35-8eca-4e7f-81cc-e81c04f58bf5",
             "incurred_at": parse_datetime("2020-11-08T00:41:42.356Z"),
             "is_billed": False,
             "metadata": [],
@@ -62,7 +62,7 @@ with UnifiedTo(
             "quantity": 3.0,
             "total_amount": 300.0,
             "type": shared.LegalExpenseType.OTHER,
-            "updated_at": parse_datetime("2024-03-30T23:18:21.146Z"),
+            "updated_at": parse_datetime("2024-03-31T12:54:25.595Z"),
         },
         "connection_id": "<id>",
     })
@@ -93,7 +93,7 @@ with UnifiedTo(
 
 ## create_legal_matter
 
-Create a matter
+Creates a LegalMatter. Provide the unified LegalMatter fields in the request body; they are mapped to the provider's API. Returns the created LegalMatter.
 
 ### Example Usage
 
@@ -119,11 +119,11 @@ with UnifiedTo(
             "created_at": parse_datetime("2023-05-28T04:10:42.375Z"),
             "currency": "BOB",
             "description": "Speciosus cresco aut cotidie temeritas arma.",
-            "id": "a301cea9-d6f5-4f6a-b414-07531d07acb4",
+            "id": "0a3fcc05-e27a-4b82-949f-badc14cd9a55",
             "metadata": [],
             "name": "Walter v. Franecki - Spinka",
             "number": "2023-3062",
-            "opened_at": parse_datetime("2023-07-05T06:18:34.368Z"),
+            "opened_at": parse_datetime("2023-07-05T07:02:28.411Z"),
             "parties": [
                 {
                     "description": "Urban Walter",
@@ -132,8 +132,8 @@ with UnifiedTo(
             ],
             "stage": "currus",
             "status": shared.LegalMatterStatus.OPEN,
-            "statute_of_limitations_at": parse_datetime("2027-06-28T21:07:04.795Z"),
-            "updated_at": parse_datetime("2023-07-17T10:05:12.081Z"),
+            "statute_of_limitations_at": parse_datetime("2027-06-29T20:58:22.479Z"),
+            "updated_at": parse_datetime("2023-07-17T11:03:06.872Z"),
         },
         "connection_id": "<id>",
     })
@@ -164,7 +164,7 @@ with UnifiedTo(
 
 ## create_legal_practicearea
 
-Create a practicearea
+Creates a LegalPracticearea. Provide the unified LegalPracticearea fields in the request body; they are mapped to the provider's API. Returns the created LegalPracticearea.
 
 ### Example Usage
 
@@ -185,11 +185,11 @@ with UnifiedTo(
         "legal_practicearea": {
             "code": "QCA",
             "created_at": parse_datetime("2023-01-28T21:00:26.264Z"),
-            "id": "8c5d487c-ae65-43f1-ae17-fa940de17a44",
+            "id": "14c1b0ec-9925-4ac1-a8ac-f6491f0df2a0",
             "metadata": [],
             "name": "witty Law",
             "type": shared.LegalPracticeareaType.EDUCATION,
-            "updated_at": parse_datetime("2025-08-27T17:05:14.922Z"),
+            "updated_at": parse_datetime("2025-08-28T09:35:39.147Z"),
         },
         "connection_id": "<id>",
     })
@@ -220,7 +220,7 @@ with UnifiedTo(
 
 ## create_legal_timeentry
 
-Create a timeentry
+Creates a LegalTimeentry. Provide the unified LegalTimeentry fields in the request body; they are mapped to the provider's API. Returns the created LegalTimeentry.
 
 ### Example Usage
 
@@ -243,13 +243,13 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-05-06T03:26:03.756Z"),
             "currency": "ZAR",
             "description": "Ea derideo adulatio torrens.",
-            "id": "56d400b9-8dbf-431c-a3a0-f225c4f7dd60",
+            "id": "ae2c0d52-8cb7-4a6b-9d3d-ae3ff9f57b82",
             "is_billable": True,
             "metadata": [],
             "minutes": 390.0,
             "rate_amount": 637.0,
             "total_amount": 4140.5,
-            "updated_at": parse_datetime("2022-06-30T01:49:16.410Z"),
+            "updated_at": parse_datetime("2022-06-30T02:37:32.644Z"),
             "worked_at": parse_datetime("2022-05-06T03:26:03.756Z"),
         },
         "connection_id": "<id>",
@@ -281,7 +281,7 @@ with UnifiedTo(
 
 ## get_legal_expense
 
-Retrieve an expense
+Retrieves a single LegalExpense by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -328,7 +328,7 @@ with UnifiedTo(
 
 ## get_legal_matter
 
-Retrieve a matter
+Retrieves a single LegalMatter by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -375,7 +375,7 @@ with UnifiedTo(
 
 ## get_legal_practicearea
 
-Retrieve a practicearea
+Retrieves a single LegalPracticearea by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -422,7 +422,7 @@ with UnifiedTo(
 
 ## get_legal_timeentry
 
-Retrieve a timeentry
+Retrieves a single LegalTimeentry by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -469,7 +469,7 @@ with UnifiedTo(
 
 ## list_legal_expenses
 
-List all expenses
+Returns a list of LegalExpenses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -515,7 +515,7 @@ with UnifiedTo(
 
 ## list_legal_matters
 
-List all matters
+Returns a list of LegalMatters. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -561,7 +561,7 @@ with UnifiedTo(
 
 ## list_legal_practiceareas
 
-List all practiceareas
+Returns a list of LegalPracticeareas. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -607,7 +607,7 @@ with UnifiedTo(
 
 ## list_legal_timeentries
 
-List all timeentries
+Returns a list of LegalTimeentries. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -653,7 +653,7 @@ with UnifiedTo(
 
 ## patch_legal_expense
 
-Update an expense
+Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in the request body.
 
 ### Example Usage
 
@@ -676,7 +676,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-11-08T00:41:42.356Z"),
             "currency": "MVR",
             "description": "Temporibus agnitio sui.",
-            "id": "747f484d-e6fe-4cb6-bb93-5cfffff2ef2a",
+            "id": "5b3cb8a3-5737-4b18-b126-5266526343a7",
             "incurred_at": parse_datetime("2020-11-08T00:41:42.356Z"),
             "is_billed": False,
             "metadata": [],
@@ -684,7 +684,7 @@ with UnifiedTo(
             "quantity": 3.0,
             "total_amount": 300.0,
             "type": shared.LegalExpenseType.OTHER,
-            "updated_at": parse_datetime("2024-03-30T23:18:21.155Z"),
+            "updated_at": parse_datetime("2024-03-31T12:54:25.603Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -716,7 +716,7 @@ with UnifiedTo(
 
 ## patch_legal_matter
 
-Update a matter
+Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the request body.
 
 ### Example Usage
 
@@ -742,11 +742,11 @@ with UnifiedTo(
             "created_at": parse_datetime("2023-05-28T04:10:42.375Z"),
             "currency": "BOB",
             "description": "Speciosus cresco aut cotidie temeritas arma.",
-            "id": "c5aa26ca-60f6-4d46-82e2-d1847c6a522c",
+            "id": "0b6277a1-c527-4b4f-be63-395f7b3ff9b0",
             "metadata": [],
             "name": "Walter v. Franecki - Spinka",
             "number": "2023-3062",
-            "opened_at": parse_datetime("2023-07-05T06:18:34.369Z"),
+            "opened_at": parse_datetime("2023-07-05T07:02:28.412Z"),
             "parties": [
                 {
                     "description": "Urban Walter",
@@ -755,8 +755,8 @@ with UnifiedTo(
             ],
             "stage": "currus",
             "status": shared.LegalMatterStatus.OPEN,
-            "statute_of_limitations_at": parse_datetime("2027-06-28T21:07:04.824Z"),
-            "updated_at": parse_datetime("2023-07-17T10:05:12.082Z"),
+            "statute_of_limitations_at": parse_datetime("2027-06-29T20:58:22.506Z"),
+            "updated_at": parse_datetime("2023-07-17T11:03:06.873Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -788,7 +788,7 @@ with UnifiedTo(
 
 ## patch_legal_practicearea
 
-Update a practicearea
+Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to change in the request body.
 
 ### Example Usage
 
@@ -809,11 +809,11 @@ with UnifiedTo(
         "legal_practicearea": {
             "code": "QCA",
             "created_at": parse_datetime("2023-01-28T21:00:26.264Z"),
-            "id": "5b420f1d-9628-40f6-a231-46ead3aa27f8",
+            "id": "592d6358-4956-42ee-8be7-964244924972",
             "metadata": [],
             "name": "witty Law",
             "type": shared.LegalPracticeareaType.EDUCATION,
-            "updated_at": parse_datetime("2025-08-27T17:05:14.934Z"),
+            "updated_at": parse_datetime("2025-08-28T09:35:39.162Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -845,7 +845,7 @@ with UnifiedTo(
 
 ## patch_legal_timeentry
 
-Update a timeentry
+Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change in the request body.
 
 ### Example Usage
 
@@ -868,13 +868,13 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-05-06T03:26:03.756Z"),
             "currency": "ZAR",
             "description": "Ea derideo adulatio torrens.",
-            "id": "4bbc89ed-a3dc-447a-96f1-2314b7b324dd",
+            "id": "4e531b0d-4ddd-4eee-9a69-1e4583eca5bc",
             "is_billable": True,
             "metadata": [],
             "minutes": 390.0,
             "rate_amount": 637.0,
             "total_amount": 4140.5,
-            "updated_at": parse_datetime("2022-06-30T01:49:16.411Z"),
+            "updated_at": parse_datetime("2022-06-30T02:37:32.645Z"),
             "worked_at": parse_datetime("2022-05-06T03:26:03.756Z"),
         },
         "connection_id": "<id>",
@@ -907,7 +907,7 @@ with UnifiedTo(
 
 ## remove_legal_expense
 
-Remove an expense
+Deletes the LegalExpense identified by `id`.
 
 ### Example Usage
 
@@ -954,7 +954,7 @@ with UnifiedTo(
 
 ## remove_legal_matter
 
-Remove a matter
+Deletes the LegalMatter identified by `id`.
 
 ### Example Usage
 
@@ -1001,7 +1001,7 @@ with UnifiedTo(
 
 ## remove_legal_practicearea
 
-Remove a practicearea
+Deletes the LegalPracticearea identified by `id`.
 
 ### Example Usage
 
@@ -1048,7 +1048,7 @@ with UnifiedTo(
 
 ## remove_legal_timeentry
 
-Remove a timeentry
+Deletes the LegalTimeentry identified by `id`.
 
 ### Example Usage
 
@@ -1095,7 +1095,7 @@ with UnifiedTo(
 
 ## update_legal_expense
 
-Update an expense
+Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in the request body.
 
 ### Example Usage
 
@@ -1118,7 +1118,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-11-08T00:41:42.356Z"),
             "currency": "MVR",
             "description": "Temporibus agnitio sui.",
-            "id": "747f484d-e6fe-4cb6-bb93-5cfffff2ef2a",
+            "id": "5b3cb8a3-5737-4b18-b126-5266526343a7",
             "incurred_at": parse_datetime("2020-11-08T00:41:42.356Z"),
             "is_billed": False,
             "metadata": [],
@@ -1126,7 +1126,7 @@ with UnifiedTo(
             "quantity": 3.0,
             "total_amount": 300.0,
             "type": shared.LegalExpenseType.OTHER,
-            "updated_at": parse_datetime("2024-03-30T23:18:21.155Z"),
+            "updated_at": parse_datetime("2024-03-31T12:54:25.603Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1158,7 +1158,7 @@ with UnifiedTo(
 
 ## update_legal_matter
 
-Update a matter
+Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the request body.
 
 ### Example Usage
 
@@ -1184,11 +1184,11 @@ with UnifiedTo(
             "created_at": parse_datetime("2023-05-28T04:10:42.375Z"),
             "currency": "BOB",
             "description": "Speciosus cresco aut cotidie temeritas arma.",
-            "id": "c5aa26ca-60f6-4d46-82e2-d1847c6a522c",
+            "id": "0b6277a1-c527-4b4f-be63-395f7b3ff9b0",
             "metadata": [],
             "name": "Walter v. Franecki - Spinka",
             "number": "2023-3062",
-            "opened_at": parse_datetime("2023-07-05T06:18:34.369Z"),
+            "opened_at": parse_datetime("2023-07-05T07:02:28.412Z"),
             "parties": [
                 {
                     "description": "Urban Walter",
@@ -1197,8 +1197,8 @@ with UnifiedTo(
             ],
             "stage": "currus",
             "status": shared.LegalMatterStatus.OPEN,
-            "statute_of_limitations_at": parse_datetime("2027-06-28T21:07:04.824Z"),
-            "updated_at": parse_datetime("2023-07-17T10:05:12.082Z"),
+            "statute_of_limitations_at": parse_datetime("2027-06-29T20:58:22.506Z"),
+            "updated_at": parse_datetime("2023-07-17T11:03:06.873Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1230,7 +1230,7 @@ with UnifiedTo(
 
 ## update_legal_practicearea
 
-Update a practicearea
+Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to change in the request body.
 
 ### Example Usage
 
@@ -1251,11 +1251,11 @@ with UnifiedTo(
         "legal_practicearea": {
             "code": "QCA",
             "created_at": parse_datetime("2023-01-28T21:00:26.264Z"),
-            "id": "5b420f1d-9628-40f6-a231-46ead3aa27f8",
+            "id": "592d6358-4956-42ee-8be7-964244924972",
             "metadata": [],
             "name": "witty Law",
             "type": shared.LegalPracticeareaType.EDUCATION,
-            "updated_at": parse_datetime("2025-08-27T17:05:14.934Z"),
+            "updated_at": parse_datetime("2025-08-28T09:35:39.162Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1287,7 +1287,7 @@ with UnifiedTo(
 
 ## update_legal_timeentry
 
-Update a timeentry
+Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change in the request body.
 
 ### Example Usage
 
@@ -1310,13 +1310,13 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-05-06T03:26:03.756Z"),
             "currency": "ZAR",
             "description": "Ea derideo adulatio torrens.",
-            "id": "4bbc89ed-a3dc-447a-96f1-2314b7b324dd",
+            "id": "4e531b0d-4ddd-4eee-9a69-1e4583eca5bc",
             "is_billable": True,
             "metadata": [],
             "minutes": 390.0,
             "rate_amount": 637.0,
             "total_amount": 4140.5,
-            "updated_at": parse_datetime("2022-06-30T01:49:16.411Z"),
+            "updated_at": parse_datetime("2022-06-30T02:37:32.645Z"),
             "worked_at": parse_datetime("2022-05-06T03:26:03.756Z"),
         },
         "connection_id": "<id>",

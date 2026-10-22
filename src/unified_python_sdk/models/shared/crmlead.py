@@ -20,6 +20,7 @@ class CrmLeadTypedDict(TypedDict):
     company_id: NotRequired[str]
     r"""(reference to CrmCompany)"""
     company_name: NotRequired[str]
+    r"""The name of the company the lead works for"""
     contact_id: NotRequired[str]
     r"""(reference to CrmContact)"""
     created_at: NotRequired[datetime]
@@ -33,7 +34,9 @@ class CrmLeadTypedDict(TypedDict):
     last_name: NotRequired[str]
     link_urls: NotRequired[List[str]]
     metadata: NotRequired[List[CrmMetadataTypedDict]]
+    r"""Custom field values. Include only existing custom fields and only the ones being set; omit to leave them unchanged."""
     name: NotRequired[str]
+    r"""The lead's full name"""
     raw: NotRequired[Dict[str, Any]]
     source: NotRequired[str]
     status: NotRequired[str]
@@ -53,6 +56,7 @@ class CrmLead(BaseModel):
     r"""(reference to CrmCompany)"""
 
     company_name: Optional[str] = None
+    r"""The name of the company the lead works for"""
 
     contact_id: Optional[str] = None
     r"""(reference to CrmContact)"""
@@ -76,8 +80,10 @@ class CrmLead(BaseModel):
     link_urls: Optional[List[str]] = None
 
     metadata: Optional[List[CrmMetadata]] = None
+    r"""Custom field values. Include only existing custom fields and only the ones being set; omit to leave them unchanged."""
 
     name: Optional[str] = None
+    r"""The lead's full name"""
 
     raw: Optional[Dict[str, Any]] = None
 

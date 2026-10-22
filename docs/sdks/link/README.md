@@ -19,7 +19,7 @@
 
 ## create_calendar_link
 
-Create a link
+Creates a CalendarLink. Provide the unified CalendarLink fields in the request body; they are mapped to the provider's API. Returns the created CalendarLink.
 
 ### Example Usage
 
@@ -40,13 +40,13 @@ with UnifiedTo(
             "created_at": "2023-03-07T13:34:11.959Z",
             "description": "Vitium clibanus laboriosam uxor denuncio.",
             "duration": 74.0,
-            "id": "a0594e03-9254-408a-85bd-18efd183d321",
+            "id": "bd90d587-d2a9-4c4e-ac90-3966a5ceec25",
             "is_active": True,
             "metadata": [],
             "name": "Sopor sopor ancilla animus anser dignissimos vito confero utilis.",
             "price_amount": 44.0,
             "price_currency": "USD",
-            "updated_at": "2024-03-15T13:00:32.317Z",
+            "updated_at": "2024-03-15T19:44:59.931Z",
             "url": "https://annual-apricot.info/",
         },
         "connection_id": "<id>",
@@ -78,7 +78,7 @@ with UnifiedTo(
 
 ## create_payment_link
 
-Create a link
+Creates a PaymentLink. Provide the unified PaymentLink fields in the request body; they are mapped to the provider's API. Returns the created PaymentLink.
 
 ### Example Usage
 
@@ -101,13 +101,13 @@ with UnifiedTo(
             "created_at": parse_datetime("2023-06-04T16:11:45.685Z"),
             "currency": "CAD",
             "description": "Savor the tender essence in our Ball, designed for dim culinary adventures",
-            "id": "b78627ec-3001-412f-a577-0630fd5e9512",
+            "id": "fc515664-3d8a-4056-95ed-aaf2662aefd8",
             "is_active": True,
             "is_chargeable_now": True,
             "lineitems": [
                 {
                     "created_at": parse_datetime("2023-06-04T16:11:45.685Z"),
-                    "id": "958fa847-7deb-4984-a216-0ae8479df9f1",
+                    "id": "77b51887-c151-4811-aff1-67b93542f04a",
                     "item_description": "Discover the worst new Computer with an exciting mix of Steel ingredients",
                     "item_name": "Soft Marble Cheese",
                     "tax_amount": 0.0,
@@ -119,7 +119,7 @@ with UnifiedTo(
                 {
                     "created_at": parse_datetime("2023-06-04T16:11:45.685Z"),
                     "discount_amount": 424.32,
-                    "id": "e67c0838-50ab-4933-a381-32a177bb0f83",
+                    "id": "4a10838e-ed44-472c-b4ef-88a6d0b75590",
                     "item_description": "Innovative Shoes featuring utilized technology and Cotton construction",
                     "item_name": "Sleek Aluminum Shoes",
                     "notes": "Cervus decretum viridis doloremque.",
@@ -131,7 +131,7 @@ with UnifiedTo(
                 },
                 {
                     "created_at": parse_datetime("2023-06-04T16:11:45.685Z"),
-                    "id": "02a3155b-193e-4f22-8e39-7e057e75fc79",
+                    "id": "b19062d1-03db-4538-8b1a-d279ccaa2c70",
                     "item_description": "Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance",
                     "item_name": "Elegant Concrete Gloves",
                     "notes": "Desipio usque vacuus currus cetera testimonium.",
@@ -144,8 +144,8 @@ with UnifiedTo(
             ],
             "metadata": [],
             "success_url": "https://tinted-jet.info",
-            "updated_at": parse_datetime("2024-04-13T09:30:09.988Z"),
-            "url": "https://pay.example.com/b78627ec-3001-412f-a577-0630fd5e9512",
+            "updated_at": parse_datetime("2024-04-13T15:33:57.274Z"),
+            "url": "https://pay.example.com/fc515664-3d8a-4056-95ed-aaf2662aefd8",
         },
         "connection_id": "<id>",
     })
@@ -176,7 +176,7 @@ with UnifiedTo(
 
 ## get_calendar_link
 
-Retrieve a link
+Retrieves a single CalendarLink by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -223,7 +223,7 @@ with UnifiedTo(
 
 ## get_payment_link
 
-Retrieve a link
+Retrieves a single PaymentLink by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -270,7 +270,7 @@ with UnifiedTo(
 
 ## list_calendar_links
 
-List all links
+Returns a list of CalendarLinks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -316,7 +316,7 @@ with UnifiedTo(
 
 ## list_payment_links
 
-List all links
+Returns a list of PaymentLinks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -362,7 +362,7 @@ with UnifiedTo(
 
 ## patch_calendar_link
 
-Update a link
+Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in the request body.
 
 ### Example Usage
 
@@ -383,13 +383,13 @@ with UnifiedTo(
             "created_at": "2023-03-07T13:34:11.959Z",
             "description": "Vitium clibanus laboriosam uxor denuncio.",
             "duration": 74.0,
-            "id": "90dbcdc3-0e37-4df5-8f47-98f71e2aeb87",
+            "id": "4f70f5c3-d6f9-4560-b50f-04fb279a483e",
             "is_active": True,
             "metadata": [],
             "name": "Sopor sopor ancilla animus anser dignissimos vito confero utilis.",
             "price_amount": 44.0,
             "price_currency": "USD",
-            "updated_at": "2024-03-15T13:00:32.321Z",
+            "updated_at": "2024-03-15T19:44:59.936Z",
             "url": "https://annual-apricot.info/",
         },
         "connection_id": "<id>",
@@ -422,7 +422,7 @@ with UnifiedTo(
 
 ## patch_payment_link
 
-Update a link
+Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the request body.
 
 ### Example Usage
 
@@ -445,13 +445,13 @@ with UnifiedTo(
             "created_at": parse_datetime("2023-06-04T16:11:45.685Z"),
             "currency": "CAD",
             "description": "Savor the tender essence in our Ball, designed for dim culinary adventures",
-            "id": "0c4720a8-7e94-4f22-bb38-adae3c25b5d0",
+            "id": "08f916f2-a958-486e-9292-d7529bd8ccba",
             "is_active": True,
             "is_chargeable_now": True,
             "lineitems": [
                 {
                     "created_at": parse_datetime("2023-06-04T16:11:45.685Z"),
-                    "id": "5c02f8fb-c6e9-4e59-a24c-c1b9ce61745b",
+                    "id": "3530b134-abde-4de0-ac67-e0478bf02437",
                     "item_description": "Discover the worst new Computer with an exciting mix of Steel ingredients",
                     "item_name": "Soft Marble Cheese",
                     "tax_amount": 0.0,
@@ -463,7 +463,7 @@ with UnifiedTo(
                 {
                     "created_at": parse_datetime("2023-06-04T16:11:45.685Z"),
                     "discount_amount": 424.32,
-                    "id": "c54b9cb5-b822-4429-9e14-888d068fbfe6",
+                    "id": "37245c21-0f1d-4cb1-95ee-fdffdda2bc73",
                     "item_description": "Innovative Shoes featuring utilized technology and Cotton construction",
                     "item_name": "Sleek Aluminum Shoes",
                     "notes": "Cervus decretum viridis doloremque.",
@@ -475,7 +475,7 @@ with UnifiedTo(
                 },
                 {
                     "created_at": parse_datetime("2023-06-04T16:11:45.685Z"),
-                    "id": "5db96022-15e7-4c95-8ea5-0fc69f6de9e6",
+                    "id": "b60c42d8-7654-4944-b7a1-a96966847949",
                     "item_description": "Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance",
                     "item_name": "Elegant Concrete Gloves",
                     "notes": "Desipio usque vacuus currus cetera testimonium.",
@@ -488,8 +488,8 @@ with UnifiedTo(
             ],
             "metadata": [],
             "success_url": "https://tinted-jet.info",
-            "updated_at": parse_datetime("2024-04-13T09:30:09.994Z"),
-            "url": "https://pay.example.com/0c4720a8-7e94-4f22-bb38-adae3c25b5d0",
+            "updated_at": parse_datetime("2024-04-13T15:33:57.282Z"),
+            "url": "https://pay.example.com/08f916f2-a958-486e-9292-d7529bd8ccba",
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -521,7 +521,7 @@ with UnifiedTo(
 
 ## remove_calendar_link
 
-Remove a link
+Deletes the CalendarLink identified by `id`.
 
 ### Example Usage
 
@@ -568,7 +568,7 @@ with UnifiedTo(
 
 ## remove_payment_link
 
-Remove a link
+Deletes the PaymentLink identified by `id`.
 
 ### Example Usage
 
@@ -615,7 +615,7 @@ with UnifiedTo(
 
 ## update_calendar_link
 
-Update a link
+Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in the request body.
 
 ### Example Usage
 
@@ -636,13 +636,13 @@ with UnifiedTo(
             "created_at": "2023-03-07T13:34:11.959Z",
             "description": "Vitium clibanus laboriosam uxor denuncio.",
             "duration": 74.0,
-            "id": "90dbcdc3-0e37-4df5-8f47-98f71e2aeb87",
+            "id": "4f70f5c3-d6f9-4560-b50f-04fb279a483e",
             "is_active": True,
             "metadata": [],
             "name": "Sopor sopor ancilla animus anser dignissimos vito confero utilis.",
             "price_amount": 44.0,
             "price_currency": "USD",
-            "updated_at": "2024-03-15T13:00:32.321Z",
+            "updated_at": "2024-03-15T19:44:59.936Z",
             "url": "https://annual-apricot.info/",
         },
         "connection_id": "<id>",
@@ -675,7 +675,7 @@ with UnifiedTo(
 
 ## update_payment_link
 
-Update a link
+Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the request body.
 
 ### Example Usage
 
@@ -698,13 +698,13 @@ with UnifiedTo(
             "created_at": parse_datetime("2023-06-04T16:11:45.685Z"),
             "currency": "CAD",
             "description": "Savor the tender essence in our Ball, designed for dim culinary adventures",
-            "id": "0c4720a8-7e94-4f22-bb38-adae3c25b5d0",
+            "id": "08f916f2-a958-486e-9292-d7529bd8ccba",
             "is_active": True,
             "is_chargeable_now": True,
             "lineitems": [
                 {
                     "created_at": parse_datetime("2023-06-04T16:11:45.685Z"),
-                    "id": "5c02f8fb-c6e9-4e59-a24c-c1b9ce61745b",
+                    "id": "3530b134-abde-4de0-ac67-e0478bf02437",
                     "item_description": "Discover the worst new Computer with an exciting mix of Steel ingredients",
                     "item_name": "Soft Marble Cheese",
                     "tax_amount": 0.0,
@@ -716,7 +716,7 @@ with UnifiedTo(
                 {
                     "created_at": parse_datetime("2023-06-04T16:11:45.685Z"),
                     "discount_amount": 424.32,
-                    "id": "c54b9cb5-b822-4429-9e14-888d068fbfe6",
+                    "id": "37245c21-0f1d-4cb1-95ee-fdffdda2bc73",
                     "item_description": "Innovative Shoes featuring utilized technology and Cotton construction",
                     "item_name": "Sleek Aluminum Shoes",
                     "notes": "Cervus decretum viridis doloremque.",
@@ -728,7 +728,7 @@ with UnifiedTo(
                 },
                 {
                     "created_at": parse_datetime("2023-06-04T16:11:45.685Z"),
-                    "id": "5db96022-15e7-4c95-8ea5-0fc69f6de9e6",
+                    "id": "b60c42d8-7654-4944-b7a1-a96966847949",
                     "item_description": "Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance",
                     "item_name": "Elegant Concrete Gloves",
                     "notes": "Desipio usque vacuus currus cetera testimonium.",
@@ -741,8 +741,8 @@ with UnifiedTo(
             ],
             "metadata": [],
             "success_url": "https://tinted-jet.info",
-            "updated_at": parse_datetime("2024-04-13T09:30:09.994Z"),
-            "url": "https://pay.example.com/0c4720a8-7e94-4f22-bb38-adae3c25b5d0",
+            "updated_at": parse_datetime("2024-04-13T15:33:57.282Z"),
+            "url": "https://pay.example.com/08f916f2-a958-486e-9292-d7529bd8ccba",
         },
         "connection_id": "<id>",
         "id": "<id>",

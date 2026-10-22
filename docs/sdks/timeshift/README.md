@@ -13,7 +13,7 @@
 
 ## create_hris_timeshift
 
-Create a timeshift
+Creates a HrisTimeshift. Provide the unified HrisTimeshift fields in the request body; they are mapped to the provider's API. Returns the created HrisTimeshift.
 
 ### Example Usage
 
@@ -32,7 +32,7 @@ with UnifiedTo(
 
     res = unified_to.timeshift.create_hris_timeshift(request={
         "hris_timeshift": {
-            "approved_at": parse_datetime("2022-07-18T01:48:59.737Z"),
+            "approved_at": parse_datetime("2022-07-18T11:45:36.212Z"),
             "compensation": [
                 {
                     "amount": 76761.0,
@@ -44,13 +44,13 @@ with UnifiedTo(
             ],
             "created_at": parse_datetime("2019-07-01T23:53:15.738Z"),
             "employee_user_id": "<id>",
-            "end_at": parse_datetime("2026-09-27T01:21:46.639Z"),
+            "end_at": parse_datetime("2026-09-28T01:00:15.668Z"),
             "hours": 6.0,
-            "id": "a76ea2d5-0bb7-45c9-b83d-0991d8193825",
+            "id": "92b01fd8-ed4d-4643-95ba-0d8a8b541854",
             "is_approved": False,
             "metadata": [],
-            "start_at": parse_datetime("2023-07-13T00:27:48.547Z"),
-            "updated_at": parse_datetime("2021-07-01T21:51:37.823Z"),
+            "start_at": parse_datetime("2023-07-13T13:37:31.157Z"),
+            "updated_at": parse_datetime("2021-07-02T04:23:45.080Z"),
         },
         "connection_id": "<id>",
     })
@@ -81,7 +81,7 @@ with UnifiedTo(
 
 ## get_hris_timeshift
 
-Retrieve a timeshift
+Retrieves a single HrisTimeshift by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -128,7 +128,7 @@ with UnifiedTo(
 
 ## list_hris_timeshifts
 
-List all timeshifts
+Returns a list of HrisTimeshifts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -174,7 +174,7 @@ with UnifiedTo(
 
 ## patch_hris_timeshift
 
-Update a timeshift
+Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in the request body.
 
 ### Example Usage
 
@@ -193,7 +193,7 @@ with UnifiedTo(
 
     res = unified_to.timeshift.patch_hris_timeshift(request={
         "hris_timeshift": {
-            "approved_at": parse_datetime("2022-07-18T01:48:59.749Z"),
+            "approved_at": parse_datetime("2022-07-18T11:45:36.221Z"),
             "compensation": [
                 {
                     "amount": 76761.0,
@@ -205,13 +205,13 @@ with UnifiedTo(
             ],
             "created_at": parse_datetime("2019-07-01T23:53:15.738Z"),
             "employee_user_id": "<id>",
-            "end_at": parse_datetime("2026-09-27T01:21:46.668Z"),
+            "end_at": parse_datetime("2026-09-28T01:00:15.689Z"),
             "hours": 6.0,
-            "id": "24fc0ed3-259f-4322-8161-e5e25c20c4b5",
+            "id": "be8b2098-4454-4b17-a20f-c3f23a1d0e71",
             "is_approved": False,
             "metadata": [],
-            "start_at": parse_datetime("2023-07-13T00:27:48.563Z"),
-            "updated_at": parse_datetime("2021-07-01T21:51:37.831Z"),
+            "start_at": parse_datetime("2023-07-13T13:37:31.169Z"),
+            "updated_at": parse_datetime("2021-07-02T04:23:45.085Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -243,7 +243,7 @@ with UnifiedTo(
 
 ## remove_hris_timeshift
 
-Remove a timeshift
+Deletes the HrisTimeshift identified by `id`.
 
 ### Example Usage
 
@@ -290,7 +290,7 @@ with UnifiedTo(
 
 ## update_hris_timeshift
 
-Update a timeshift
+Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in the request body.
 
 ### Example Usage
 
@@ -309,7 +309,7 @@ with UnifiedTo(
 
     res = unified_to.timeshift.update_hris_timeshift(request={
         "hris_timeshift": {
-            "approved_at": parse_datetime("2022-07-18T01:48:59.749Z"),
+            "approved_at": parse_datetime("2022-07-18T11:45:36.221Z"),
             "compensation": [
                 {
                     "amount": 76761.0,
@@ -321,13 +321,13 @@ with UnifiedTo(
             ],
             "created_at": parse_datetime("2019-07-01T23:53:15.738Z"),
             "employee_user_id": "<id>",
-            "end_at": parse_datetime("2026-09-27T01:21:46.668Z"),
+            "end_at": parse_datetime("2026-09-28T01:00:15.689Z"),
             "hours": 6.0,
-            "id": "24fc0ed3-259f-4322-8161-e5e25c20c4b5",
+            "id": "be8b2098-4454-4b17-a20f-c3f23a1d0e71",
             "is_approved": False,
             "metadata": [],
-            "start_at": parse_datetime("2023-07-13T00:27:48.563Z"),
-            "updated_at": parse_datetime("2021-07-01T21:51:37.831Z"),
+            "start_at": parse_datetime("2023-07-13T13:37:31.169Z"),
+            "updated_at": parse_datetime("2021-07-02T04:23:45.085Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

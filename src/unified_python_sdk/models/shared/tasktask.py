@@ -38,6 +38,7 @@ class TaskTaskTypedDict(TypedDict):
     id: NotRequired[str]
     metadata: NotRequired[List[TaskMetadataTypedDict]]
     name: NotRequired[str]
+    r"""The task's title"""
     notes: NotRequired[str]
     parent_id: NotRequired[str]
     priority: NotRequired[str]
@@ -92,6 +93,7 @@ class TaskTask(BaseModel):
     metadata: Optional[List[TaskMetadata]] = None
 
     name: Optional[str] = None
+    r"""The task's title"""
 
     notes: Optional[str] = None
 

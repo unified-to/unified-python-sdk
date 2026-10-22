@@ -15,6 +15,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class StorageFileType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""Whether this is a file or a folder"""
+
     FILE = "FILE"
     FOLDER = "FOLDER"
 
@@ -32,14 +34,17 @@ class StorageFileTypedDict(TypedDict):
     metadata: NotRequired[List[StorageMetadataTypedDict]]
     mime_type: NotRequired[str]
     name: NotRequired[str]
+    r"""The file or folder name, including the file's extension"""
     parent_id: NotRequired[str]
     permissions: NotRequired[List[StoragePermissionTypedDict]]
     raw: NotRequired[Dict[str, Any]]
     references: NotRequired[List[StorageReferenceTypedDict]]
+    r"""The records the file is attached to (e.g. an invoice or a candidate), each by its id and type"""
     size: NotRequired[float]
     tags: NotRequired[List[str]]
     r"""labels"""
     type: NotRequired[StorageFileType]
+    r"""Whether this is a file or a folder"""
     updated_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
@@ -69,6 +74,7 @@ class StorageFile(BaseModel):
     mime_type: Optional[str] = None
 
     name: Optional[str] = None
+    r"""The file or folder name, including the file's extension"""
 
     parent_id: Optional[str] = None
 
@@ -77,6 +83,7 @@ class StorageFile(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     references: Optional[List[StorageReference]] = None
+    r"""The records the file is attached to (e.g. an invoice or a candidate), each by its id and type"""
 
     size: Optional[float] = None
 
@@ -84,6 +91,7 @@ class StorageFile(BaseModel):
     r"""labels"""
 
     type: Optional[StorageFileType] = None
+    r"""Whether this is a file or a folder"""
 
     updated_at: Optional[datetime] = None
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""

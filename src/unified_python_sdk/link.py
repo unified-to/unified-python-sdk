@@ -24,6 +24,8 @@ class Link(BaseSDK):
     ) -> operations.CreateCalendarLinkResponse:
         r"""Create a link
 
+        Creates a CalendarLink. Provide the unified CalendarLink fields in the request body; they are mapped to the provider's API. Returns the created CalendarLink.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -118,6 +120,8 @@ class Link(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateCalendarLinkResponse:
         r"""Create a link
+
+        Creates a CalendarLink. Provide the unified CalendarLink fields in the request body; they are mapped to the provider's API. Returns the created CalendarLink.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -214,6 +218,8 @@ class Link(BaseSDK):
     ) -> operations.CreatePaymentLinkResponse:
         r"""Create a link
 
+        Creates a PaymentLink. Provide the unified PaymentLink fields in the request body; they are mapped to the provider's API. Returns the created PaymentLink.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -308,6 +314,8 @@ class Link(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreatePaymentLinkResponse:
         r"""Create a link
+
+        Creates a PaymentLink. Provide the unified PaymentLink fields in the request body; they are mapped to the provider's API. Returns the created PaymentLink.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -404,6 +412,8 @@ class Link(BaseSDK):
     ) -> operations.GetCalendarLinkResponse:
         r"""Retrieve a link
 
+        Retrieves a single CalendarLink by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -496,6 +506,8 @@ class Link(BaseSDK):
     ) -> operations.GetCalendarLinkResponse:
         r"""Retrieve a link
 
+        Retrieves a single CalendarLink by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -587,6 +599,8 @@ class Link(BaseSDK):
     ) -> operations.GetPaymentLinkResponse:
         r"""Retrieve a link
 
+        Retrieves a single PaymentLink by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -677,6 +691,8 @@ class Link(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetPaymentLinkResponse:
         r"""Retrieve a link
+
+        Retrieves a single PaymentLink by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -770,6 +786,8 @@ class Link(BaseSDK):
     ) -> operations.ListCalendarLinksResponse:
         r"""List all links
 
+        Returns a list of CalendarLinks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -861,6 +879,8 @@ class Link(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListCalendarLinksResponse:
         r"""List all links
+
+        Returns a list of CalendarLinks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -954,6 +974,8 @@ class Link(BaseSDK):
     ) -> operations.ListPaymentLinksResponse:
         r"""List all links
 
+        Returns a list of PaymentLinks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1046,6 +1068,8 @@ class Link(BaseSDK):
     ) -> operations.ListPaymentLinksResponse:
         r"""List all links
 
+        Returns a list of PaymentLinks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1137,6 +1161,8 @@ class Link(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchCalendarLinkResponse:
         r"""Update a link
+
+        Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1233,6 +1259,8 @@ class Link(BaseSDK):
     ) -> operations.PatchCalendarLinkResponse:
         r"""Update a link
 
+        Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1327,6 +1355,8 @@ class Link(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchPaymentLinkResponse:
         r"""Update a link
+
+        Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1423,6 +1453,8 @@ class Link(BaseSDK):
     ) -> operations.PatchPaymentLinkResponse:
         r"""Update a link
 
+        Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1517,6 +1549,8 @@ class Link(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveCalendarLinkResponse:
         r"""Remove a link
+
+        Deletes the CalendarLink identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1615,6 +1649,8 @@ class Link(BaseSDK):
     ) -> operations.RemoveCalendarLinkResponse:
         r"""Remove a link
 
+        Deletes the CalendarLink identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1711,6 +1747,8 @@ class Link(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemovePaymentLinkResponse:
         r"""Remove a link
+
+        Deletes the PaymentLink identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1809,6 +1847,8 @@ class Link(BaseSDK):
     ) -> operations.RemovePaymentLinkResponse:
         r"""Remove a link
 
+        Deletes the PaymentLink identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1906,6 +1946,8 @@ class Link(BaseSDK):
     ) -> operations.UpdateCalendarLinkResponse:
         r"""Update a link
 
+        Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2000,6 +2042,8 @@ class Link(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateCalendarLinkResponse:
         r"""Update a link
+
+        Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2096,6 +2140,8 @@ class Link(BaseSDK):
     ) -> operations.UpdatePaymentLinkResponse:
         r"""Update a link
 
+        Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2190,6 +2236,8 @@ class Link(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdatePaymentLinkResponse:
         r"""Update a link
+
+        Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

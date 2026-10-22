@@ -75,6 +75,7 @@ class AdsCreativeTypedDict(TypedDict):
     r"""Destination URL for creatives with links"""
     metadata: NotRequired[List[AdsMetadataTypedDict]]
     name: NotRequired[str]
+    r"""The creative's name"""
     organization_id: NotRequired[str]
     path1: NotRequired[str]
     r"""Display URL path 1 (Microsoft RSA Path1)"""
@@ -139,6 +140,7 @@ class AdsCreative(BaseModel):
     metadata: Optional[List[AdsMetadata]] = None
 
     name: Optional[str] = None
+    r"""The creative's name"""
 
     organization_id: Optional[str] = None
 

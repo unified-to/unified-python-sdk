@@ -13,7 +13,7 @@
 
 ## create_compute_deployment
 
-Create a deployment
+Creates a ComputeDeployment. Provide the unified ComputeDeployment fields in the request body; they are mapped to the provider's API. Returns the created ComputeDeployment.
 
 ### Example Usage
 
@@ -37,13 +37,13 @@ with UnifiedTo(
             "commit_message": "copy primary pixel",
             "created_at": parse_datetime("2022-06-07T03:52:04.613Z"),
             "environment": shared.Environment.PREVIEW,
-            "finished_at": parse_datetime("2025-08-29T15:02:09.011Z"),
-            "id": "118c4a0f-6a4c-450b-bc1e-f02f918c6784",
+            "finished_at": parse_datetime("2025-08-30T08:39:21.131Z"),
+            "id": "25ba96fd-fe07-48cd-b826-6741970cfc4f",
             "metadata": [],
-            "started_at": parse_datetime("2025-04-10T07:26:56.632Z"),
+            "started_at": parse_datetime("2025-04-10T22:57:28.715Z"),
             "status": shared.ComputeDeploymentStatus.LIVE,
             "trigger": shared.Trigger.API,
-            "updated_at": parse_datetime("2026-02-28T17:58:56.230Z"),
+            "updated_at": parse_datetime("2026-03-01T14:20:16.768Z"),
             "url": "https://comfortable-petal.name",
         },
         "connection_id": "<id>",
@@ -75,7 +75,7 @@ with UnifiedTo(
 
 ## get_compute_deployment
 
-Retrieve a deployment
+Retrieves a single ComputeDeployment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -122,7 +122,7 @@ with UnifiedTo(
 
 ## list_compute_deployments
 
-List all deployments
+Returns a list of ComputeDeployments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -168,7 +168,7 @@ with UnifiedTo(
 
 ## patch_compute_deployment
 
-Update a deployment
+Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to change in the request body.
 
 ### Example Usage
 
@@ -192,13 +192,13 @@ with UnifiedTo(
             "commit_message": "copy primary pixel",
             "created_at": parse_datetime("2022-06-07T03:52:04.613Z"),
             "environment": shared.Environment.PREVIEW,
-            "finished_at": parse_datetime("2025-08-29T15:02:09.033Z"),
-            "id": "11ca298f-9892-459f-b75e-da09783febd8",
+            "finished_at": parse_datetime("2025-08-30T08:39:21.145Z"),
+            "id": "d3cda7e1-1d2a-4128-8ecf-16721fcf731a",
             "metadata": [],
-            "started_at": parse_datetime("2025-04-10T07:26:56.652Z"),
+            "started_at": parse_datetime("2025-04-10T22:57:28.727Z"),
             "status": shared.ComputeDeploymentStatus.LIVE,
             "trigger": shared.Trigger.API,
-            "updated_at": parse_datetime("2026-02-28T17:58:56.257Z"),
+            "updated_at": parse_datetime("2026-03-01T14:20:16.783Z"),
             "url": "https://comfortable-petal.name",
         },
         "connection_id": "<id>",
@@ -231,7 +231,7 @@ with UnifiedTo(
 
 ## remove_compute_deployment
 
-Remove a deployment
+Deletes the ComputeDeployment identified by `id`.
 
 ### Example Usage
 
@@ -278,7 +278,7 @@ with UnifiedTo(
 
 ## update_compute_deployment
 
-Update a deployment
+Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to change in the request body.
 
 ### Example Usage
 
@@ -302,13 +302,13 @@ with UnifiedTo(
             "commit_message": "copy primary pixel",
             "created_at": parse_datetime("2022-06-07T03:52:04.613Z"),
             "environment": shared.Environment.PREVIEW,
-            "finished_at": parse_datetime("2025-08-29T15:02:09.033Z"),
-            "id": "11ca298f-9892-459f-b75e-da09783febd8",
+            "finished_at": parse_datetime("2025-08-30T08:39:21.145Z"),
+            "id": "d3cda7e1-1d2a-4128-8ecf-16721fcf731a",
             "metadata": [],
-            "started_at": parse_datetime("2025-04-10T07:26:56.652Z"),
+            "started_at": parse_datetime("2025-04-10T22:57:28.727Z"),
             "status": shared.ComputeDeploymentStatus.LIVE,
             "trigger": shared.Trigger.API,
-            "updated_at": parse_datetime("2026-02-28T17:58:56.257Z"),
+            "updated_at": parse_datetime("2026-03-01T14:20:16.783Z"),
             "url": "https://comfortable-petal.name",
         },
         "connection_id": "<id>",

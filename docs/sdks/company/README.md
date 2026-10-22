@@ -26,7 +26,7 @@
 
 ## create_ats_company
 
-Create a company
+Creates a AtsCompany. Provide the unified AtsCompany fields in the request body; they are mapped to the provider's API. Returns the created AtsCompany.
 
 ### Example Usage
 
@@ -46,10 +46,10 @@ with UnifiedTo(
     res = unified_to.company.create_ats_company(request={
         "ats_company": {
             "created_at": parse_datetime("2019-04-22T03:50:02.920Z"),
-            "id": "798fe2f6-ae0a-4d17-aa92-734c80c4a4b9",
+            "id": "fc717eb1-789d-4f47-8cb9-f011b597131a",
             "name": "Gulgowski, Dibbert and Wilderman",
             "phone": "1-882-360-2010",
-            "updated_at": parse_datetime("2020-10-01T04:11:25.065Z"),
+            "updated_at": parse_datetime("2020-10-01T08:47:21.666Z"),
             "website_url": "https://www.gulgowskidibbert.com",
         },
         "connection_id": "<id>",
@@ -81,7 +81,7 @@ with UnifiedTo(
 
 ## create_crm_company
 
-Create a company
+Creates a CrmCompany. Provide the unified CrmCompany fields in the request body; they are mapped to the provider's API. Returns the created CrmCompany.
 
 ### Example Usage
 
@@ -129,7 +129,7 @@ with UnifiedTo(
                 },
             ],
             "employees": 4177.0,
-            "id": "e59e2366-70e5-4e6e-a25a-5650778b39d9",
+            "id": "45430102-9d60-4dcb-95de-6b3395a6edf2",
             "industry": "Metrics",
             "is_active": True,
             "link_urls": [
@@ -141,7 +141,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CrmMetadataFormat.TEXT,
-                    "id": "e3cac440-3fea-4034-b28e-5a92904d60dd",
+                    "id": "7d810a72-f45b-4353-9559-e181734fb9bd",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "unde",
@@ -160,7 +160,7 @@ with UnifiedTo(
                 },
             ],
             "timezone": "Atlantic/Azores",
-            "updated_at": parse_datetime("2025-03-03T03:40:38.960Z"),
+            "updated_at": parse_datetime("2025-03-03T21:28:57.322Z"),
             "websites": [
                 "https://www.goodwinsons.com",
             ],
@@ -194,7 +194,7 @@ with UnifiedTo(
 
 ## create_hris_company
 
-Create a company
+Creates a HrisCompany. Provide the unified HrisCompany fields in the request body; they are mapped to the provider's API. Returns the created HrisCompany.
 
 ### Example Usage
 
@@ -222,11 +222,11 @@ with UnifiedTo(
                 "region_code": "MO",
             },
             "created_at": parse_datetime("2021-05-02T22:27:38.970Z"),
-            "id": "be564c23-7348-4c21-a4d9-2b1e4fef730b",
+            "id": "1e4e818e-c91c-4ce8-bb9f-87c290b58f50",
             "legal_name": "Gottlieb Group LLC",
             "metadata": [],
             "name": "Gottlieb Group",
-            "updated_at": parse_datetime("2026-10-08T16:17:54.047Z"),
+            "updated_at": parse_datetime("2026-10-09T16:00:24.278Z"),
         },
         "connection_id": "<id>",
     })
@@ -257,7 +257,7 @@ with UnifiedTo(
 
 ## get_ats_company
 
-Retrieve a company
+Retrieves a single AtsCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -304,7 +304,7 @@ with UnifiedTo(
 
 ## get_crm_company
 
-Retrieve a company
+Retrieves a single CrmCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -351,7 +351,7 @@ with UnifiedTo(
 
 ## get_hris_company
 
-Retrieve a company
+Retrieves a single HrisCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -398,7 +398,7 @@ with UnifiedTo(
 
 ## list_ats_companies
 
-List all companies
+Returns a list of AtsCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -444,7 +444,7 @@ with UnifiedTo(
 
 ## list_crm_companies
 
-List all companies
+Returns a list of CrmCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -536,7 +536,7 @@ with UnifiedTo(
 
 ## list_hris_companies
 
-List all companies
+Returns a list of HrisCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -582,7 +582,7 @@ with UnifiedTo(
 
 ## patch_ats_company
 
-Update a company
+Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -602,10 +602,10 @@ with UnifiedTo(
     res = unified_to.company.patch_ats_company(request={
         "ats_company": {
             "created_at": parse_datetime("2019-04-22T03:50:02.920Z"),
-            "id": "ddb9cba7-1919-4a13-b0ba-b3bd702d1efd",
+            "id": "9919fbbc-af06-4156-8ed3-2d8d682ca7e2",
             "name": "Gulgowski, Dibbert and Wilderman",
             "phone": "1-882-360-2010",
-            "updated_at": parse_datetime("2020-10-01T04:11:25.070Z"),
+            "updated_at": parse_datetime("2020-10-01T08:47:21.669Z"),
             "website_url": "https://www.gulgowskidibbert.com",
         },
         "connection_id": "<id>",
@@ -638,7 +638,7 @@ with UnifiedTo(
 
 ## patch_crm_company
 
-Update a company
+Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -686,7 +686,7 @@ with UnifiedTo(
                 },
             ],
             "employees": 4177.0,
-            "id": "57af47d8-b577-4f38-ac58-5d8ef38cbef4",
+            "id": "f6118c33-c025-4e57-8713-96353decbba9",
             "industry": "Metrics",
             "is_active": True,
             "link_urls": [
@@ -698,7 +698,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CrmMetadataFormat.TEXT,
-                    "id": "431bf807-6d6e-4bba-bf48-22307df458ed",
+                    "id": "eb7e0ab1-617c-42aa-9140-805dc92181d9",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "unde",
@@ -717,7 +717,7 @@ with UnifiedTo(
                 },
             ],
             "timezone": "Atlantic/Azores",
-            "updated_at": parse_datetime("2025-03-03T03:40:38.979Z"),
+            "updated_at": parse_datetime("2025-03-03T21:28:57.348Z"),
             "websites": [
                 "https://www.goodwinsons.com",
             ],
@@ -752,7 +752,7 @@ with UnifiedTo(
 
 ## patch_hris_company
 
-Update a company
+Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -780,11 +780,11 @@ with UnifiedTo(
                 "region_code": "MO",
             },
             "created_at": parse_datetime("2021-05-02T22:27:38.970Z"),
-            "id": "b682175d-26ba-4348-9515-d2b644e87ddb",
+            "id": "614c60e7-805a-4ebe-9b04-71aabf2ea7b8",
             "legal_name": "Gottlieb Group LLC",
             "metadata": [],
             "name": "Gottlieb Group",
-            "updated_at": parse_datetime("2026-10-08T16:17:54.068Z"),
+            "updated_at": parse_datetime("2026-10-09T16:00:24.302Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -816,7 +816,7 @@ with UnifiedTo(
 
 ## remove_ats_company
 
-Remove a company
+Deletes the AtsCompany identified by `id`.
 
 ### Example Usage
 
@@ -863,7 +863,7 @@ with UnifiedTo(
 
 ## remove_crm_company
 
-Remove a company
+Deletes the CrmCompany identified by `id`.
 
 ### Example Usage
 
@@ -910,7 +910,7 @@ with UnifiedTo(
 
 ## remove_hris_company
 
-Remove a company
+Deletes the HrisCompany identified by `id`.
 
 ### Example Usage
 
@@ -957,7 +957,7 @@ with UnifiedTo(
 
 ## update_ats_company
 
-Update a company
+Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -977,10 +977,10 @@ with UnifiedTo(
     res = unified_to.company.update_ats_company(request={
         "ats_company": {
             "created_at": parse_datetime("2019-04-22T03:50:02.920Z"),
-            "id": "ddb9cba7-1919-4a13-b0ba-b3bd702d1efd",
+            "id": "9919fbbc-af06-4156-8ed3-2d8d682ca7e2",
             "name": "Gulgowski, Dibbert and Wilderman",
             "phone": "1-882-360-2010",
-            "updated_at": parse_datetime("2020-10-01T04:11:25.070Z"),
+            "updated_at": parse_datetime("2020-10-01T08:47:21.669Z"),
             "website_url": "https://www.gulgowskidibbert.com",
         },
         "connection_id": "<id>",
@@ -1013,7 +1013,7 @@ with UnifiedTo(
 
 ## update_crm_company
 
-Update a company
+Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -1061,7 +1061,7 @@ with UnifiedTo(
                 },
             ],
             "employees": 4177.0,
-            "id": "57af47d8-b577-4f38-ac58-5d8ef38cbef4",
+            "id": "f6118c33-c025-4e57-8713-96353decbba9",
             "industry": "Metrics",
             "is_active": True,
             "link_urls": [
@@ -1073,7 +1073,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CrmMetadataFormat.TEXT,
-                    "id": "431bf807-6d6e-4bba-bf48-22307df458ed",
+                    "id": "eb7e0ab1-617c-42aa-9140-805dc92181d9",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "unde",
@@ -1092,7 +1092,7 @@ with UnifiedTo(
                 },
             ],
             "timezone": "Atlantic/Azores",
-            "updated_at": parse_datetime("2025-03-03T03:40:38.979Z"),
+            "updated_at": parse_datetime("2025-03-03T21:28:57.348Z"),
             "websites": [
                 "https://www.goodwinsons.com",
             ],
@@ -1127,7 +1127,7 @@ with UnifiedTo(
 
 ## update_hris_company
 
-Update a company
+Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -1155,11 +1155,11 @@ with UnifiedTo(
                 "region_code": "MO",
             },
             "created_at": parse_datetime("2021-05-02T22:27:38.970Z"),
-            "id": "b682175d-26ba-4348-9515-d2b644e87ddb",
+            "id": "614c60e7-805a-4ebe-9b04-71aabf2ea7b8",
             "legal_name": "Gottlieb Group LLC",
             "metadata": [],
             "name": "Gottlieb Group",
-            "updated_at": parse_datetime("2026-10-08T16:17:54.068Z"),
+            "updated_at": parse_datetime("2026-10-09T16:00:24.302Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

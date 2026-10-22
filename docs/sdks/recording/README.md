@@ -15,7 +15,7 @@
 
 ## create_uc_recording
 
-Create a recording
+Creates a UcRecording. Provide the unified UcRecording fields in the request body; they are mapped to the provider's API. Returns the created UcRecording.
 
 ### Example Usage
 
@@ -35,36 +35,36 @@ with UnifiedTo(
     res = unified_to.recording.create_uc_recording(request={
         "uc_recording": {
             "contacts": [],
-            "conversation_identifier": "dd9901cd-2211-4de3-9db8-244d042e231e",
+            "conversation_identifier": "ce79efe1-cc1c-4c2c-acec-02afbbdf5310",
             "created_at": parse_datetime("2022-09-17T19:41:46.956Z"),
-            "end_at": parse_datetime("2024-05-04T23:53:45.904Z"),
-            "expires_at": parse_datetime("2026-04-26T18:24:22.783Z"),
-            "id": "dd9901cd-2211-4de3-9db8-244d042e231e",
+            "end_at": parse_datetime("2024-05-05T09:23:54.557Z"),
+            "expires_at": parse_datetime("2026-04-27T15:25:56.416Z"),
+            "id": "ce79efe1-cc1c-4c2c-acec-02afbbdf5310",
             "media": [
                 {
-                    "end_at": parse_datetime("2024-04-01T19:33:58.491Z"),
+                    "end_at": parse_datetime("2024-04-02T04:32:20.046Z"),
                     "language": "en",
                     "recording_download_url": "https://parched-wasabi.com/",
-                    "start_at": parse_datetime("2026-05-15T10:28:13.245Z"),
+                    "start_at": parse_datetime("2026-05-16T07:47:39.929Z"),
                     "transcript_download_url": "https://colossal-cuckoo.name",
                     "transcripts": [
                         {
-                            "end_at": parse_datetime("2026-02-24T12:13:55.566Z"),
-                            "start_at": parse_datetime("2024-06-02T06:02:13.402Z"),
+                            "end_at": parse_datetime("2026-02-25T08:16:48.339Z"),
+                            "start_at": parse_datetime("2024-06-02T15:59:26.107Z"),
                             "text": "Turpis maiores ducimus tero speculum.",
                         },
                         {
-                            "end_at": parse_datetime("2024-10-12T13:10:00.179Z"),
-                            "start_at": parse_datetime("2026-08-02T21:02:42.197Z"),
+                            "end_at": parse_datetime("2024-10-13T01:13:56.875Z"),
+                            "start_at": parse_datetime("2026-08-03T19:38:14.859Z"),
                             "text": "Magnam consuasor uxor tergiversatio subseco.",
                         },
                     ],
                 },
             ],
             "metadata": [],
-            "start_at": parse_datetime("2023-04-27T18:03:33.062Z"),
+            "start_at": parse_datetime("2023-04-27T21:36:08.953Z"),
             "type": shared.UcRecordingType.OUTBOUND,
-            "updated_at": parse_datetime("2025-03-16T11:05:14.449Z"),
+            "updated_at": parse_datetime("2025-03-17T01:37:35.043Z"),
             "user_phone": "1-915-327-0429 x509",
             "web_url": "https://spherical-comparison.org",
         },
@@ -97,7 +97,7 @@ with UnifiedTo(
 
 ## get_calendar_recording
 
-Retrieve a recording
+Retrieves a single CalendarRecording by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -144,7 +144,7 @@ with UnifiedTo(
 
 ## get_uc_recording
 
-Retrieve a recording
+Retrieves a single UcRecording by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -191,7 +191,7 @@ with UnifiedTo(
 
 ## list_calendar_recordings
 
-List all recordings
+Returns a list of CalendarRecordings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -237,7 +237,7 @@ with UnifiedTo(
 
 ## list_uc_recordings
 
-List all recordings
+Returns a list of UcRecordings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -283,7 +283,7 @@ with UnifiedTo(
 
 ## patch_uc_recording
 
-Update a recording
+Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the request body.
 
 ### Example Usage
 
@@ -303,36 +303,36 @@ with UnifiedTo(
     res = unified_to.recording.patch_uc_recording(request={
         "uc_recording": {
             "contacts": [],
-            "conversation_identifier": "a9bbdf61-65bb-4277-b7e2-1af174837916",
+            "conversation_identifier": "12f12c15-a763-464e-b713-8b7b1c4b7c11",
             "created_at": parse_datetime("2022-09-17T19:41:46.956Z"),
-            "end_at": parse_datetime("2024-05-04T23:53:45.917Z"),
-            "expires_at": parse_datetime("2026-04-26T18:24:22.813Z"),
-            "id": "a9bbdf61-65bb-4277-b7e2-1af174837916",
+            "end_at": parse_datetime("2024-05-05T09:23:54.571Z"),
+            "expires_at": parse_datetime("2026-04-27T15:25:56.447Z"),
+            "id": "12f12c15-a763-464e-b713-8b7b1c4b7c11",
             "media": [
                 {
-                    "end_at": parse_datetime("2024-04-01T19:33:58.504Z"),
+                    "end_at": parse_datetime("2024-04-02T04:32:20.059Z"),
                     "language": "en",
                     "recording_download_url": "https://parched-wasabi.com/",
-                    "start_at": parse_datetime("2026-05-15T10:28:13.275Z"),
+                    "start_at": parse_datetime("2026-05-16T07:47:39.960Z"),
                     "transcript_download_url": "https://colossal-cuckoo.name",
                     "transcripts": [
                         {
-                            "end_at": parse_datetime("2026-02-24T12:13:55.594Z"),
-                            "start_at": parse_datetime("2024-06-02T06:02:13.416Z"),
+                            "end_at": parse_datetime("2026-02-25T08:16:48.368Z"),
+                            "start_at": parse_datetime("2024-06-02T15:59:26.122Z"),
                             "text": "Turpis maiores ducimus tero speculum.",
                         },
                         {
-                            "end_at": parse_datetime("2024-10-12T13:10:00.196Z"),
-                            "start_at": parse_datetime("2026-08-02T21:02:42.228Z"),
+                            "end_at": parse_datetime("2024-10-13T01:13:56.892Z"),
+                            "start_at": parse_datetime("2026-08-03T19:38:14.893Z"),
                             "text": "Magnam consuasor uxor tergiversatio subseco.",
                         },
                     ],
                 },
             ],
             "metadata": [],
-            "start_at": parse_datetime("2023-04-27T18:03:33.067Z"),
+            "start_at": parse_datetime("2023-04-27T21:36:08.958Z"),
             "type": shared.UcRecordingType.OUTBOUND,
-            "updated_at": parse_datetime("2025-03-16T11:05:14.469Z"),
+            "updated_at": parse_datetime("2025-03-17T01:37:35.064Z"),
             "user_phone": "1-915-327-0429 x509",
             "web_url": "https://spherical-comparison.org",
         },
@@ -366,7 +366,7 @@ with UnifiedTo(
 
 ## remove_uc_recording
 
-Remove a recording
+Deletes the UcRecording identified by `id`.
 
 ### Example Usage
 
@@ -413,7 +413,7 @@ with UnifiedTo(
 
 ## update_uc_recording
 
-Update a recording
+Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the request body.
 
 ### Example Usage
 
@@ -433,36 +433,36 @@ with UnifiedTo(
     res = unified_to.recording.update_uc_recording(request={
         "uc_recording": {
             "contacts": [],
-            "conversation_identifier": "a9bbdf61-65bb-4277-b7e2-1af174837916",
+            "conversation_identifier": "12f12c15-a763-464e-b713-8b7b1c4b7c11",
             "created_at": parse_datetime("2022-09-17T19:41:46.956Z"),
-            "end_at": parse_datetime("2024-05-04T23:53:45.917Z"),
-            "expires_at": parse_datetime("2026-04-26T18:24:22.813Z"),
-            "id": "a9bbdf61-65bb-4277-b7e2-1af174837916",
+            "end_at": parse_datetime("2024-05-05T09:23:54.571Z"),
+            "expires_at": parse_datetime("2026-04-27T15:25:56.447Z"),
+            "id": "12f12c15-a763-464e-b713-8b7b1c4b7c11",
             "media": [
                 {
-                    "end_at": parse_datetime("2024-04-01T19:33:58.504Z"),
+                    "end_at": parse_datetime("2024-04-02T04:32:20.059Z"),
                     "language": "en",
                     "recording_download_url": "https://parched-wasabi.com/",
-                    "start_at": parse_datetime("2026-05-15T10:28:13.275Z"),
+                    "start_at": parse_datetime("2026-05-16T07:47:39.960Z"),
                     "transcript_download_url": "https://colossal-cuckoo.name",
                     "transcripts": [
                         {
-                            "end_at": parse_datetime("2026-02-24T12:13:55.594Z"),
-                            "start_at": parse_datetime("2024-06-02T06:02:13.416Z"),
+                            "end_at": parse_datetime("2026-02-25T08:16:48.368Z"),
+                            "start_at": parse_datetime("2024-06-02T15:59:26.122Z"),
                             "text": "Turpis maiores ducimus tero speculum.",
                         },
                         {
-                            "end_at": parse_datetime("2024-10-12T13:10:00.196Z"),
-                            "start_at": parse_datetime("2026-08-02T21:02:42.228Z"),
+                            "end_at": parse_datetime("2024-10-13T01:13:56.892Z"),
+                            "start_at": parse_datetime("2026-08-03T19:38:14.893Z"),
                             "text": "Magnam consuasor uxor tergiversatio subseco.",
                         },
                     ],
                 },
             ],
             "metadata": [],
-            "start_at": parse_datetime("2023-04-27T18:03:33.067Z"),
+            "start_at": parse_datetime("2023-04-27T21:36:08.958Z"),
             "type": shared.UcRecordingType.OUTBOUND,
-            "updated_at": parse_datetime("2025-03-16T11:05:14.469Z"),
+            "updated_at": parse_datetime("2025-03-17T01:37:35.064Z"),
             "user_phone": "1-915-327-0429 x509",
             "web_url": "https://spherical-comparison.org",
         },

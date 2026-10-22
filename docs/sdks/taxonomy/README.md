@@ -11,7 +11,7 @@
 
 ## create_hris_taxonomy
 
-Create a taxonomy
+Creates a HrisTaxonomy. Provide the unified HrisTaxonomy fields in the request body; they are mapped to the provider's API. Returns the created HrisTaxonomy.
 
 ### Example Usage
 
@@ -37,13 +37,13 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-06-23T02:10:00.789Z"),
             "description": "Uterque vespillo adnuo ea commodo turbo suscipio condico.",
             "domain": "Health",
-            "id": "06a39723-89b4-4d2c-8707-bbc34fea8b75",
+            "id": "563a331c-0d6e-47dc-9fe1-fbd0303dc9fa",
             "is_active": False,
             "metadata": [],
             "name": "International Functionality Architect",
             "subcategory": "Marble",
             "type": shared.HrisTaxonomyType.KNOWLEDGE,
-            "updated_at": parse_datetime("2023-05-29T07:23:58.119Z"),
+            "updated_at": parse_datetime("2023-05-29T12:31:59.841Z"),
             "url": "https://fixed-membership.biz/",
         },
         "connection_id": "<id>",
@@ -75,7 +75,7 @@ with UnifiedTo(
 
 ## get_hris_taxonomy
 
-Retrieve a taxonomy
+Retrieves a single HrisTaxonomy by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -122,7 +122,7 @@ with UnifiedTo(
 
 ## list_crm_taxonomies
 
-List all taxonomies
+Returns a list of CrmTaxonomies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -168,7 +168,7 @@ with UnifiedTo(
 
 ## list_hris_taxonomies
 
-List all taxonomies
+Returns a list of HrisTaxonomies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 

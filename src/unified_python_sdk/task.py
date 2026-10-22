@@ -24,6 +24,8 @@ class Task(BaseSDK):
     ) -> operations.CreateGenaiTaskResponse:
         r"""Create a task
 
+        Creates a GenaiTask. Provide the unified GenaiTask fields in the request body; they are mapped to the provider's API. Returns the created GenaiTask.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -118,6 +120,8 @@ class Task(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateGenaiTaskResponse:
         r"""Create a task
+
+        Creates a GenaiTask. Provide the unified GenaiTask fields in the request body; they are mapped to the provider's API. Returns the created GenaiTask.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -214,6 +218,8 @@ class Task(BaseSDK):
     ) -> operations.CreateTaskCommentResponse:
         r"""Create a comment
 
+        Creates a TaskComment. Provide the unified TaskComment fields in the request body; they are mapped to the provider's API. Returns the created TaskComment.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -308,6 +314,8 @@ class Task(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateTaskCommentResponse:
         r"""Create a comment
+
+        Creates a TaskComment. Provide the unified TaskComment fields in the request body; they are mapped to the provider's API. Returns the created TaskComment.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -404,6 +412,8 @@ class Task(BaseSDK):
     ) -> operations.CreateTaskProjectResponse:
         r"""Create a project
 
+        Creates a TaskProject. Provide the unified TaskProject fields in the request body; they are mapped to the provider's API. Returns the created TaskProject.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -499,6 +509,8 @@ class Task(BaseSDK):
     ) -> operations.CreateTaskProjectResponse:
         r"""Create a project
 
+        Creates a TaskProject. Provide the unified TaskProject fields in the request body; they are mapped to the provider's API. Returns the created TaskProject.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -593,6 +605,8 @@ class Task(BaseSDK):
     ) -> operations.CreateTaskTaskResponse:
         r"""Create a task
 
+        Creates a TaskTask. Provide the unified TaskTask fields in the request body; they are mapped to the provider's API. Returns the created TaskTask.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -684,6 +698,8 @@ class Task(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateTaskTaskResponse:
         r"""Create a task
+
+        Creates a TaskTask. Provide the unified TaskTask fields in the request body; they are mapped to the provider's API. Returns the created TaskTask.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -777,6 +793,8 @@ class Task(BaseSDK):
     ) -> operations.GetGenaiTaskResponse:
         r"""Retrieve a task
 
+        Retrieves a single GenaiTask by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -867,6 +885,8 @@ class Task(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetGenaiTaskResponse:
         r"""Retrieve a task
+
+        Retrieves a single GenaiTask by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -959,6 +979,8 @@ class Task(BaseSDK):
     ) -> operations.GetTaskChangeResponse:
         r"""Retrieve a change
 
+        Retrieves a single TaskChange by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1049,6 +1071,8 @@ class Task(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetTaskChangeResponse:
         r"""Retrieve a change
+
+        Retrieves a single TaskChange by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1141,6 +1165,8 @@ class Task(BaseSDK):
     ) -> operations.GetTaskCommentResponse:
         r"""Retrieve a comment
 
+        Retrieves a single TaskComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1231,6 +1257,8 @@ class Task(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetTaskCommentResponse:
         r"""Retrieve a comment
+
+        Retrieves a single TaskComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1323,6 +1351,8 @@ class Task(BaseSDK):
     ) -> operations.GetTaskProjectResponse:
         r"""Retrieve a project
 
+        Retrieves a single TaskProject by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1413,6 +1443,8 @@ class Task(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetTaskProjectResponse:
         r"""Retrieve a project
+
+        Retrieves a single TaskProject by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1505,6 +1537,8 @@ class Task(BaseSDK):
     ) -> operations.GetTaskTaskResponse:
         r"""Retrieve a task
 
+        Retrieves a single TaskTask by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1594,6 +1628,8 @@ class Task(BaseSDK):
     ) -> operations.GetTaskTaskResponse:
         r"""Retrieve a task
 
+        Retrieves a single TaskTask by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1682,6 +1718,8 @@ class Task(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListGenaiTasksResponse:
         r"""List all tasks
+
+        Returns a list of GenaiTasks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1773,6 +1811,8 @@ class Task(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListGenaiTasksResponse:
         r"""List all tasks
+
+        Returns a list of GenaiTasks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1866,6 +1906,8 @@ class Task(BaseSDK):
     ) -> operations.ListTaskChangesResponse:
         r"""List all changes
 
+        Returns a list of TaskChanges. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1957,6 +1999,8 @@ class Task(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListTaskChangesResponse:
         r"""List all changes
+
+        Returns a list of TaskChanges. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2050,6 +2094,8 @@ class Task(BaseSDK):
     ) -> operations.ListTaskCommentsResponse:
         r"""List all comments
 
+        Returns a list of TaskComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2141,6 +2187,8 @@ class Task(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListTaskCommentsResponse:
         r"""List all comments
+
+        Returns a list of TaskComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2234,6 +2282,8 @@ class Task(BaseSDK):
     ) -> operations.ListTaskProjectsResponse:
         r"""List all projects
 
+        Returns a list of TaskProjects. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2326,6 +2376,8 @@ class Task(BaseSDK):
     ) -> operations.ListTaskProjectsResponse:
         r"""List all projects
 
+        Returns a list of TaskProjects. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2416,6 +2468,8 @@ class Task(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListTaskTasksResponse:
         r"""List all tasks
+
+        Returns a list of TaskTasks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2508,6 +2562,8 @@ class Task(BaseSDK):
     ) -> operations.ListTaskTasksResponse:
         r"""List all tasks
 
+        Returns a list of TaskTasks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2598,6 +2654,8 @@ class Task(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchGenaiTaskResponse:
         r"""Update a task
+
+        Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2692,6 +2750,8 @@ class Task(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchGenaiTaskResponse:
         r"""Update a task
+
+        Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2788,6 +2848,8 @@ class Task(BaseSDK):
     ) -> operations.PatchTaskCommentResponse:
         r"""Update a comment
 
+        Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2882,6 +2944,8 @@ class Task(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchTaskCommentResponse:
         r"""Update a comment
+
+        Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2978,6 +3042,8 @@ class Task(BaseSDK):
     ) -> operations.PatchTaskProjectResponse:
         r"""Update a project
 
+        Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3073,6 +3139,8 @@ class Task(BaseSDK):
     ) -> operations.PatchTaskProjectResponse:
         r"""Update a project
 
+        Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3167,6 +3235,8 @@ class Task(BaseSDK):
     ) -> operations.PatchTaskTaskResponse:
         r"""Update a task
 
+        Updates the TaskTask identified by `id`. Provide the unified TaskTask fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3258,6 +3328,8 @@ class Task(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchTaskTaskResponse:
         r"""Update a task
+
+        Updates the TaskTask identified by `id`. Provide the unified TaskTask fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3351,6 +3423,8 @@ class Task(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveGenaiTaskResponse:
         r"""Remove a task
+
+        Deletes the GenaiTask identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3449,6 +3523,8 @@ class Task(BaseSDK):
     ) -> operations.RemoveGenaiTaskResponse:
         r"""Remove a task
 
+        Deletes the GenaiTask identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3545,6 +3621,8 @@ class Task(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveTaskCommentResponse:
         r"""Remove a comment
+
+        Deletes the TaskComment identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3643,6 +3721,8 @@ class Task(BaseSDK):
     ) -> operations.RemoveTaskCommentResponse:
         r"""Remove a comment
 
+        Deletes the TaskComment identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3739,6 +3819,8 @@ class Task(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveTaskProjectResponse:
         r"""Remove a project
+
+        Deletes the TaskProject identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3837,6 +3919,8 @@ class Task(BaseSDK):
     ) -> operations.RemoveTaskProjectResponse:
         r"""Remove a project
 
+        Deletes the TaskProject identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3933,6 +4017,8 @@ class Task(BaseSDK):
     ) -> operations.RemoveTaskTaskResponse:
         r"""Remove a task
 
+        Deletes the TaskTask identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4028,6 +4114,8 @@ class Task(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveTaskTaskResponse:
         r"""Remove a task
+
+        Deletes the TaskTask identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4126,6 +4214,8 @@ class Task(BaseSDK):
     ) -> operations.UpdateGenaiTaskResponse:
         r"""Update a task
 
+        Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4220,6 +4310,8 @@ class Task(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateGenaiTaskResponse:
         r"""Update a task
+
+        Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4316,6 +4408,8 @@ class Task(BaseSDK):
     ) -> operations.UpdateTaskCommentResponse:
         r"""Update a comment
 
+        Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4410,6 +4504,8 @@ class Task(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateTaskCommentResponse:
         r"""Update a comment
+
+        Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4506,6 +4602,8 @@ class Task(BaseSDK):
     ) -> operations.UpdateTaskProjectResponse:
         r"""Update a project
 
+        Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4601,6 +4699,8 @@ class Task(BaseSDK):
     ) -> operations.UpdateTaskProjectResponse:
         r"""Update a project
 
+        Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4695,6 +4795,8 @@ class Task(BaseSDK):
     ) -> operations.UpdateTaskTaskResponse:
         r"""Update a task
 
+        Updates the TaskTask identified by `id`. Provide the unified TaskTask fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4786,6 +4888,8 @@ class Task(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateTaskTaskResponse:
         r"""Update a task
+
+        Updates the TaskTask identified by `id`. Provide the unified TaskTask fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

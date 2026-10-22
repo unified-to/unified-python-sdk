@@ -12,7 +12,7 @@
 
 ## create_healthcare_patient
 
-Create a patient
+Creates a HealthcarePatient. Provide the unified HealthcarePatient fields in the request body; they are mapped to the provider's API. Returns the created HealthcarePatient.
 
 ### Example Usage
 
@@ -38,7 +38,7 @@ with UnifiedTo(
                 "postal_code": "54031",
                 "region": "Nebraska",
             },
-            "birthdate": "2025-02-12",
+            "birthdate": "2025-02-13",
             "created_at": parse_datetime("2021-06-05T21:08:04.917Z"),
             "emails": [
                 {
@@ -48,7 +48,7 @@ with UnifiedTo(
             ],
             "first_name": "Alejandrin",
             "gender": shared.HealthcarePatientGender.FEMALE,
-            "id": "345c3b07-8ea6-4168-9475-bfe6f301545f",
+            "id": "bff90549-5920-4a01-933d-a669aa5b05f7",
             "identifiers": [
                 {
                     "type": shared.HealthcareIdentifierType.MRN,
@@ -68,7 +68,7 @@ with UnifiedTo(
                     "type": shared.HealthcareTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2026-06-22T20:13:50.798Z"),
+            "updated_at": parse_datetime("2026-06-23T18:37:32.861Z"),
         },
         "connection_id": "<id>",
     })
@@ -99,7 +99,7 @@ with UnifiedTo(
 
 ## get_healthcare_patient
 
-Retrieve a patient
+Retrieves a single HealthcarePatient by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -146,7 +146,7 @@ with UnifiedTo(
 
 ## list_healthcare_patients
 
-List all patients
+Returns a list of HealthcarePatients. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -192,7 +192,7 @@ with UnifiedTo(
 
 ## patch_healthcare_patient
 
-Update a patient
+Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to change in the request body.
 
 ### Example Usage
 
@@ -218,7 +218,7 @@ with UnifiedTo(
                 "postal_code": "54031",
                 "region": "Nebraska",
             },
-            "birthdate": "2025-02-12",
+            "birthdate": "2025-02-13",
             "created_at": parse_datetime("2021-06-05T21:08:04.917Z"),
             "emails": [
                 {
@@ -228,7 +228,7 @@ with UnifiedTo(
             ],
             "first_name": "Alejandrin",
             "gender": shared.HealthcarePatientGender.FEMALE,
-            "id": "52690fb3-4b8c-47df-b212-a82439f0afef",
+            "id": "e0aa04a2-ee2c-4f84-963b-2cb8213f03bb",
             "identifiers": [
                 {
                     "type": shared.HealthcareIdentifierType.MRN,
@@ -248,7 +248,7 @@ with UnifiedTo(
                     "type": shared.HealthcareTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2026-06-22T20:13:50.834Z"),
+            "updated_at": parse_datetime("2026-06-23T18:37:32.888Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -280,7 +280,7 @@ with UnifiedTo(
 
 ## update_healthcare_patient
 
-Update a patient
+Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to change in the request body.
 
 ### Example Usage
 
@@ -306,7 +306,7 @@ with UnifiedTo(
                 "postal_code": "54031",
                 "region": "Nebraska",
             },
-            "birthdate": "2025-02-12",
+            "birthdate": "2025-02-13",
             "created_at": parse_datetime("2021-06-05T21:08:04.917Z"),
             "emails": [
                 {
@@ -316,7 +316,7 @@ with UnifiedTo(
             ],
             "first_name": "Alejandrin",
             "gender": shared.HealthcarePatientGender.FEMALE,
-            "id": "52690fb3-4b8c-47df-b212-a82439f0afef",
+            "id": "e0aa04a2-ee2c-4f84-963b-2cb8213f03bb",
             "identifiers": [
                 {
                     "type": shared.HealthcareIdentifierType.MRN,
@@ -336,7 +336,7 @@ with UnifiedTo(
                     "type": shared.HealthcareTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2026-06-22T20:13:50.834Z"),
+            "updated_at": parse_datetime("2026-06-23T18:37:32.888Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

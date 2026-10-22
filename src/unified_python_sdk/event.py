@@ -24,6 +24,8 @@ class Event(BaseSDK):
     ) -> operations.CreateAnalyticsEventResponse:
         r"""Create an event
 
+        Creates a AnalyticsEvent. Provide the unified AnalyticsEvent fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsEvent.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -118,6 +120,8 @@ class Event(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAnalyticsEventResponse:
         r"""Create an event
+
+        Creates a AnalyticsEvent. Provide the unified AnalyticsEvent fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsEvent.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -214,6 +218,8 @@ class Event(BaseSDK):
     ) -> operations.CreateCalendarEventResponse:
         r"""Create an event
 
+        Creates a CalendarEvent. Provide the unified CalendarEvent fields in the request body; they are mapped to the provider's API. Returns the created CalendarEvent.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -309,6 +315,8 @@ class Event(BaseSDK):
     ) -> operations.CreateCalendarEventResponse:
         r"""Create an event
 
+        Creates a CalendarEvent. Provide the unified CalendarEvent fields in the request body; they are mapped to the provider's API. Returns the created CalendarEvent.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -403,6 +411,8 @@ class Event(BaseSDK):
     ) -> operations.CreateCdpEventResponse:
         r"""Create an event
 
+        Creates a CdpEvent. Provide the unified CdpEvent fields in the request body; they are mapped to the provider's API. Returns the created CdpEvent.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -494,6 +504,8 @@ class Event(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateCdpEventResponse:
         r"""Create an event
+
+        Creates a CdpEvent. Provide the unified CdpEvent fields in the request body; they are mapped to the provider's API. Returns the created CdpEvent.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -587,6 +599,8 @@ class Event(BaseSDK):
     ) -> operations.CreateCrmEventResponse:
         r"""Create an event
 
+        Creates a CrmEvent. Provide the unified CrmEvent fields in the request body; they are mapped to the provider's API. Returns the created CrmEvent.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -678,6 +692,8 @@ class Event(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateCrmEventResponse:
         r"""Create an event
+
+        Creates a CrmEvent. Provide the unified CrmEvent fields in the request body; they are mapped to the provider's API. Returns the created CrmEvent.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -772,6 +788,8 @@ class Event(BaseSDK):
     ) -> operations.GetAnalyticsEventResponse:
         r"""Retrieve an event
 
+        Retrieves a single AnalyticsEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -863,6 +881,8 @@ class Event(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAnalyticsEventResponse:
         r"""Retrieve an event
+
+        Retrieves a single AnalyticsEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -956,6 +976,8 @@ class Event(BaseSDK):
     ) -> operations.GetCalendarEventResponse:
         r"""Retrieve an event
 
+        Retrieves a single CalendarEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1048,6 +1070,8 @@ class Event(BaseSDK):
     ) -> operations.GetCalendarEventResponse:
         r"""Retrieve an event
 
+        Retrieves a single CalendarEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1139,6 +1163,8 @@ class Event(BaseSDK):
     ) -> operations.GetCdpEventResponse:
         r"""Retrieve an event
 
+        Retrieves a single CdpEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1228,6 +1254,8 @@ class Event(BaseSDK):
     ) -> operations.GetCdpEventResponse:
         r"""Retrieve an event
 
+        Retrieves a single CdpEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1316,6 +1344,8 @@ class Event(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetClubsEventResponse:
         r"""Retrieve an event
+
+        Retrieves a single ClubsEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1408,6 +1438,8 @@ class Event(BaseSDK):
     ) -> operations.GetClubsEventResponse:
         r"""Retrieve an event
 
+        Retrieves a single ClubsEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1499,6 +1531,8 @@ class Event(BaseSDK):
     ) -> operations.GetCrmEventResponse:
         r"""Retrieve an event
 
+        Retrieves a single CrmEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1587,6 +1621,8 @@ class Event(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetCrmEventResponse:
         r"""Retrieve an event
+
+        Retrieves a single CrmEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1677,6 +1713,8 @@ class Event(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAnalyticsEventsResponse:
         r"""List all events
+
+        Returns a list of AnalyticsEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1770,6 +1808,8 @@ class Event(BaseSDK):
     ) -> operations.ListAnalyticsEventsResponse:
         r"""List all events
 
+        Returns a list of AnalyticsEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1861,6 +1901,8 @@ class Event(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListCalendarEventsResponse:
         r"""List all events
+
+        Returns a list of CalendarEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1954,6 +1996,8 @@ class Event(BaseSDK):
     ) -> operations.ListCalendarEventsResponse:
         r"""List all events
 
+        Returns a list of CalendarEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2045,6 +2089,8 @@ class Event(BaseSDK):
     ) -> operations.ListCdpEventsResponse:
         r"""List all events
 
+        Returns a list of CdpEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2135,6 +2181,8 @@ class Event(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListCdpEventsResponse:
         r"""List all events
+
+        Returns a list of CdpEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2228,6 +2276,8 @@ class Event(BaseSDK):
     ) -> operations.ListClubsEventsResponse:
         r"""List all events
 
+        Returns a list of ClubsEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2320,6 +2370,8 @@ class Event(BaseSDK):
     ) -> operations.ListClubsEventsResponse:
         r"""List all events
 
+        Returns a list of ClubsEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2410,6 +2462,8 @@ class Event(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListCrmEventsResponse:
         r"""List all events
+
+        Returns a list of CrmEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2502,6 +2556,8 @@ class Event(BaseSDK):
     ) -> operations.ListCrmEventsResponse:
         r"""List all events
 
+        Returns a list of CrmEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2593,6 +2649,8 @@ class Event(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchCalendarEventResponse:
         r"""Update an event
+
+        Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2689,6 +2747,8 @@ class Event(BaseSDK):
     ) -> operations.PatchCalendarEventResponse:
         r"""Update an event
 
+        Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2783,6 +2843,8 @@ class Event(BaseSDK):
     ) -> operations.PatchCdpEventResponse:
         r"""Update an event
 
+        Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2874,6 +2936,8 @@ class Event(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchCdpEventResponse:
         r"""Update an event
+
+        Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2967,6 +3031,8 @@ class Event(BaseSDK):
     ) -> operations.PatchCrmEventResponse:
         r"""Update an event
 
+        Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3058,6 +3124,8 @@ class Event(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchCrmEventResponse:
         r"""Update an event
+
+        Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3151,6 +3219,8 @@ class Event(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchMessagingEventResponse:
         r"""Update an event
+
+        Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3247,6 +3317,8 @@ class Event(BaseSDK):
     ) -> operations.PatchMessagingEventResponse:
         r"""Update an event
 
+        Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3341,6 +3413,8 @@ class Event(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveCalendarEventResponse:
         r"""Remove an event
+
+        Deletes the CalendarEvent identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3439,6 +3513,8 @@ class Event(BaseSDK):
     ) -> operations.RemoveCalendarEventResponse:
         r"""Remove an event
 
+        Deletes the CalendarEvent identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3534,6 +3610,8 @@ class Event(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveCdpEventResponse:
         r"""Remove an event
+
+        Deletes the CdpEvent identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3631,6 +3709,8 @@ class Event(BaseSDK):
     ) -> operations.RemoveCdpEventResponse:
         r"""Remove an event
 
+        Deletes the CdpEvent identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3727,6 +3807,8 @@ class Event(BaseSDK):
     ) -> operations.RemoveCrmEventResponse:
         r"""Remove an event
 
+        Deletes the CrmEvent identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3822,6 +3904,8 @@ class Event(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveCrmEventResponse:
         r"""Remove an event
+
+        Deletes the CrmEvent identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3920,6 +4004,8 @@ class Event(BaseSDK):
     ) -> operations.UpdateCalendarEventResponse:
         r"""Update an event
 
+        Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4015,6 +4101,8 @@ class Event(BaseSDK):
     ) -> operations.UpdateCalendarEventResponse:
         r"""Update an event
 
+        Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4109,6 +4197,8 @@ class Event(BaseSDK):
     ) -> operations.UpdateCdpEventResponse:
         r"""Update an event
 
+        Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4200,6 +4290,8 @@ class Event(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateCdpEventResponse:
         r"""Update an event
+
+        Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4293,6 +4385,8 @@ class Event(BaseSDK):
     ) -> operations.UpdateCrmEventResponse:
         r"""Update an event
 
+        Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4384,6 +4478,8 @@ class Event(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateCrmEventResponse:
         r"""Update an event
+
+        Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4477,6 +4573,8 @@ class Event(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateMessagingEventResponse:
         r"""Update an event
+
+        Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4572,6 +4670,8 @@ class Event(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateMessagingEventResponse:
         r"""Update an event
+
+        Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

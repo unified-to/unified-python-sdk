@@ -24,6 +24,8 @@ class Agent(BaseSDK):
     ) -> operations.CreateGenaiAgentResponse:
         r"""Create an agent
 
+        Creates a GenaiAgent. Provide the unified GenaiAgent fields in the request body; they are mapped to the provider's API. Returns the created GenaiAgent.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -119,6 +121,8 @@ class Agent(BaseSDK):
     ) -> operations.CreateGenaiAgentResponse:
         r"""Create an agent
 
+        Creates a GenaiAgent. Provide the unified GenaiAgent fields in the request body; they are mapped to the provider's API. Returns the created GenaiAgent.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -213,6 +217,8 @@ class Agent(BaseSDK):
     ) -> operations.GetGenaiAgentResponse:
         r"""Retrieve an agent
 
+        Retrieves a single GenaiAgent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -303,6 +309,8 @@ class Agent(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetGenaiAgentResponse:
         r"""Retrieve an agent
+
+        Retrieves a single GenaiAgent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -396,6 +404,8 @@ class Agent(BaseSDK):
     ) -> operations.ListGenaiAgentsResponse:
         r"""List all agents
 
+        Returns a list of GenaiAgents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -488,6 +498,8 @@ class Agent(BaseSDK):
     ) -> operations.ListGenaiAgentsResponse:
         r"""List all agents
 
+        Returns a list of GenaiAgents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -579,6 +591,8 @@ class Agent(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchGenaiAgentResponse:
         r"""Update an agent
+
+        Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -675,6 +689,8 @@ class Agent(BaseSDK):
     ) -> operations.PatchGenaiAgentResponse:
         r"""Update an agent
 
+        Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -769,6 +785,8 @@ class Agent(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveGenaiAgentResponse:
         r"""Remove an agent
+
+        Deletes the GenaiAgent identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -867,6 +885,8 @@ class Agent(BaseSDK):
     ) -> operations.RemoveGenaiAgentResponse:
         r"""Remove an agent
 
+        Deletes the GenaiAgent identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -964,6 +984,8 @@ class Agent(BaseSDK):
     ) -> operations.UpdateGenaiAgentResponse:
         r"""Update an agent
 
+        Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1058,6 +1080,8 @@ class Agent(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateGenaiAgentResponse:
         r"""Update an agent
+
+        Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

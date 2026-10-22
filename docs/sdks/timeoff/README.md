@@ -13,7 +13,7 @@
 
 ## create_hris_timeoff
 
-Create a timeoff
+Creates a HrisTimeoff. Provide the unified HrisTimeoff fields in the request body; they are mapped to the provider's API. Returns the created HrisTimeoff.
 
 ### Example Usage
 
@@ -32,21 +32,21 @@ with UnifiedTo(
 
     res = unified_to.timeoff.create_hris_timeoff(request={
         "hris_timeoff": {
-            "approved_at": parse_datetime("2022-02-23T09:08:15.669Z"),
+            "approved_at": parse_datetime("2022-02-23T10:56:51.892Z"),
             "comments": "Blandior ventus curiositas amplitudo.",
             "created_at": parse_datetime("2021-10-06T18:00:20.615Z"),
             "duration": 4.0,
             "duration_type": shared.DurationType.DAY,
-            "end_at": parse_datetime("2024-12-28T17:15:02.704Z"),
-            "id": "ba1cbe19-8de1-447b-b048-56b84c6bd552",
+            "end_at": parse_datetime("2024-12-29T08:32:02.355Z"),
+            "id": "9cb84118-4f94-475f-9ce1-f629fe9fdc82",
             "is_paid": True,
             "metadata": [],
             "original_type": "acerbitas ut",
             "reason": "verto",
-            "start_at": parse_datetime("2023-09-04T19:22:26.701Z"),
+            "start_at": parse_datetime("2023-09-05T04:25:23.358Z"),
             "status": shared.HrisTimeoffStatus.DENIED,
             "type": shared.HrisTimeoffType.IN_LIEU,
-            "updated_at": parse_datetime("2022-07-12T19:41:14.378Z"),
+            "updated_at": parse_datetime("2022-07-12T23:18:17.913Z"),
             "user_id": "<id>",
         },
         "connection_id": "<id>",
@@ -78,7 +78,7 @@ with UnifiedTo(
 
 ## get_hris_timeoff
 
-Retrieve a timeoff
+Retrieves a single HrisTimeoff by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -125,7 +125,7 @@ with UnifiedTo(
 
 ## list_hris_timeoffs
 
-List all timeoffs
+Returns a list of HrisTimeoffs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -171,7 +171,7 @@ with UnifiedTo(
 
 ## patch_hris_timeoff
 
-Update a timeoff
+Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the request body.
 
 ### Example Usage
 
@@ -190,21 +190,21 @@ with UnifiedTo(
 
     res = unified_to.timeoff.patch_hris_timeoff(request={
         "hris_timeoff": {
-            "approved_at": parse_datetime("2022-02-23T09:08:15.671Z"),
+            "approved_at": parse_datetime("2022-02-23T10:56:51.893Z"),
             "comments": "Blandior ventus curiositas amplitudo.",
             "created_at": parse_datetime("2021-10-06T18:00:20.615Z"),
             "duration": 4.0,
             "duration_type": shared.DurationType.DAY,
-            "end_at": parse_datetime("2024-12-28T17:15:02.718Z"),
-            "id": "2d726330-39ac-4f24-acdb-c8bde00a5e6c",
+            "end_at": parse_datetime("2024-12-29T08:32:02.364Z"),
+            "id": "9453aff1-d935-4270-a1e8-4e535ec124e9",
             "is_paid": True,
             "metadata": [],
             "original_type": "acerbitas ut",
             "reason": "verto",
-            "start_at": parse_datetime("2023-09-04T19:22:26.709Z"),
+            "start_at": parse_datetime("2023-09-05T04:25:23.363Z"),
             "status": shared.HrisTimeoffStatus.DENIED,
             "type": shared.HrisTimeoffType.IN_LIEU,
-            "updated_at": parse_datetime("2022-07-12T19:41:14.381Z"),
+            "updated_at": parse_datetime("2022-07-12T23:18:17.915Z"),
             "user_id": "<id>",
         },
         "connection_id": "<id>",
@@ -237,7 +237,7 @@ with UnifiedTo(
 
 ## remove_hris_timeoff
 
-Remove a timeoff
+Deletes the HrisTimeoff identified by `id`.
 
 ### Example Usage
 
@@ -284,7 +284,7 @@ with UnifiedTo(
 
 ## update_hris_timeoff
 
-Update a timeoff
+Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the request body.
 
 ### Example Usage
 
@@ -303,21 +303,21 @@ with UnifiedTo(
 
     res = unified_to.timeoff.update_hris_timeoff(request={
         "hris_timeoff": {
-            "approved_at": parse_datetime("2022-02-23T09:08:15.671Z"),
+            "approved_at": parse_datetime("2022-02-23T10:56:51.893Z"),
             "comments": "Blandior ventus curiositas amplitudo.",
             "created_at": parse_datetime("2021-10-06T18:00:20.615Z"),
             "duration": 4.0,
             "duration_type": shared.DurationType.DAY,
-            "end_at": parse_datetime("2024-12-28T17:15:02.718Z"),
-            "id": "2d726330-39ac-4f24-acdb-c8bde00a5e6c",
+            "end_at": parse_datetime("2024-12-29T08:32:02.364Z"),
+            "id": "9453aff1-d935-4270-a1e8-4e535ec124e9",
             "is_paid": True,
             "metadata": [],
             "original_type": "acerbitas ut",
             "reason": "verto",
-            "start_at": parse_datetime("2023-09-04T19:22:26.709Z"),
+            "start_at": parse_datetime("2023-09-05T04:25:23.363Z"),
             "status": shared.HrisTimeoffStatus.DENIED,
             "type": shared.HrisTimeoffType.IN_LIEU,
-            "updated_at": parse_datetime("2022-07-12T19:41:14.381Z"),
+            "updated_at": parse_datetime("2022-07-12T23:18:17.915Z"),
             "user_id": "<id>",
         },
         "connection_id": "<id>",

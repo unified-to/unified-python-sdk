@@ -93,6 +93,7 @@ class AccountingBillTypedDict(TypedDict):
     extended_notes: NotRequired[List[AccountingExtendedNoteTypedDict]]
     id: NotRequired[str]
     lineitems: NotRequired[List[AccountingLineitemTypedDict]]
+    r"""The bill's line items: what is billed, with the quantity, price and amount of each"""
     metadata: NotRequired[List[AccountingMetadataTypedDict]]
     notes: NotRequired[str]
     organization_id: NotRequired[str]
@@ -164,6 +165,7 @@ class AccountingBill(BaseModel):
     id: Optional[str] = None
 
     lineitems: Optional[List[AccountingLineitem]] = None
+    r"""The bill's line items: what is billed, with the quantity, price and amount of each"""
 
     metadata: Optional[List[AccountingMetadata]] = None
 

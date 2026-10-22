@@ -24,6 +24,8 @@ class Repo(BaseSDK):
     ) -> operations.CreateRepoBranchResponse:
         r"""Create a branch
 
+        Creates a RepoBranch. Provide the unified RepoBranch fields in the request body; they are mapped to the provider's API. Returns the created RepoBranch.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -118,6 +120,8 @@ class Repo(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateRepoBranchResponse:
         r"""Create a branch
+
+        Creates a RepoBranch. Provide the unified RepoBranch fields in the request body; they are mapped to the provider's API. Returns the created RepoBranch.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -214,6 +218,8 @@ class Repo(BaseSDK):
     ) -> operations.CreateRepoCommitResponse:
         r"""Create a commit
 
+        Creates a RepoCommit. Provide the unified RepoCommit fields in the request body; they are mapped to the provider's API. Returns the created RepoCommit.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -308,6 +314,8 @@ class Repo(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateRepoCommitResponse:
         r"""Create a commit
+
+        Creates a RepoCommit. Provide the unified RepoCommit fields in the request body; they are mapped to the provider's API. Returns the created RepoCommit.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -404,6 +412,8 @@ class Repo(BaseSDK):
     ) -> operations.CreateRepoOrganizationResponse:
         r"""Create an organization
 
+        Creates a RepoOrganization. Provide the unified RepoOrganization fields in the request body; they are mapped to the provider's API. Returns the created RepoOrganization.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -498,6 +508,8 @@ class Repo(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateRepoOrganizationResponse:
         r"""Create an organization
+
+        Creates a RepoOrganization. Provide the unified RepoOrganization fields in the request body; they are mapped to the provider's API. Returns the created RepoOrganization.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -594,6 +606,8 @@ class Repo(BaseSDK):
     ) -> operations.CreateRepoPullrequestResponse:
         r"""Create a pullrequest
 
+        Creates a RepoPullrequest. Provide the unified RepoPullrequest fields in the request body; they are mapped to the provider's API. Returns the created RepoPullrequest.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -688,6 +702,8 @@ class Repo(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateRepoPullrequestResponse:
         r"""Create a pullrequest
+
+        Creates a RepoPullrequest. Provide the unified RepoPullrequest fields in the request body; they are mapped to the provider's API. Returns the created RepoPullrequest.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -784,6 +800,8 @@ class Repo(BaseSDK):
     ) -> operations.CreateRepoRepositoryResponse:
         r"""Create a repository
 
+        Creates a RepoRepository. Provide the unified RepoRepository fields in the request body; they are mapped to the provider's API. Returns the created RepoRepository.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -879,6 +897,8 @@ class Repo(BaseSDK):
     ) -> operations.CreateRepoRepositoryResponse:
         r"""Create a repository
 
+        Creates a RepoRepository. Provide the unified RepoRepository fields in the request body; they are mapped to the provider's API. Returns the created RepoRepository.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -973,6 +993,8 @@ class Repo(BaseSDK):
     ) -> operations.GetRepoBranchResponse:
         r"""Retrieve a branch
 
+        Retrieves a single RepoBranch by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1063,6 +1085,8 @@ class Repo(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetRepoBranchResponse:
         r"""Retrieve a branch
+
+        Retrieves a single RepoBranch by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1155,6 +1179,8 @@ class Repo(BaseSDK):
     ) -> operations.GetRepoCommitResponse:
         r"""Retrieve a commit
 
+        Retrieves a single RepoCommit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1245,6 +1271,8 @@ class Repo(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetRepoCommitResponse:
         r"""Retrieve a commit
+
+        Retrieves a single RepoCommit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1338,6 +1366,8 @@ class Repo(BaseSDK):
     ) -> operations.GetRepoOrganizationResponse:
         r"""Retrieve an organization
 
+        Retrieves a single RepoOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1429,6 +1459,8 @@ class Repo(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetRepoOrganizationResponse:
         r"""Retrieve an organization
+
+        Retrieves a single RepoOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1522,6 +1554,8 @@ class Repo(BaseSDK):
     ) -> operations.GetRepoPullrequestResponse:
         r"""Retrieve a pullrequest
 
+        Retrieves a single RepoPullrequest by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1613,6 +1647,8 @@ class Repo(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetRepoPullrequestResponse:
         r"""Retrieve a pullrequest
+
+        Retrieves a single RepoPullrequest by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1706,6 +1742,8 @@ class Repo(BaseSDK):
     ) -> operations.GetRepoRepositoryResponse:
         r"""Retrieve a repository
 
+        Retrieves a single RepoRepository by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1797,6 +1835,8 @@ class Repo(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetRepoRepositoryResponse:
         r"""Retrieve a repository
+
+        Retrieves a single RepoRepository by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1890,6 +1930,8 @@ class Repo(BaseSDK):
     ) -> operations.ListRepoBranchesResponse:
         r"""List all branches
 
+        Returns a list of RepoBranches. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1981,6 +2023,8 @@ class Repo(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListRepoBranchesResponse:
         r"""List all branches
+
+        Returns a list of RepoBranches. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2074,6 +2118,8 @@ class Repo(BaseSDK):
     ) -> operations.ListRepoCommitsResponse:
         r"""List all commits
 
+        Returns a list of RepoCommits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2165,6 +2211,8 @@ class Repo(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListRepoCommitsResponse:
         r"""List all commits
+
+        Returns a list of RepoCommits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2258,6 +2306,8 @@ class Repo(BaseSDK):
     ) -> operations.ListRepoOrganizationsResponse:
         r"""List all organizations
 
+        Returns a list of RepoOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2349,6 +2399,8 @@ class Repo(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListRepoOrganizationsResponse:
         r"""List all organizations
+
+        Returns a list of RepoOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2442,6 +2494,8 @@ class Repo(BaseSDK):
     ) -> operations.ListRepoPullrequestsResponse:
         r"""List all pullrequests
 
+        Returns a list of RepoPullrequests. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2533,6 +2587,8 @@ class Repo(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListRepoPullrequestsResponse:
         r"""List all pullrequests
+
+        Returns a list of RepoPullrequests. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2626,6 +2682,8 @@ class Repo(BaseSDK):
     ) -> operations.ListRepoRepositoriesResponse:
         r"""List all repositories
 
+        Returns a list of RepoRepositories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2718,6 +2776,8 @@ class Repo(BaseSDK):
     ) -> operations.ListRepoRepositoriesResponse:
         r"""List all repositories
 
+        Returns a list of RepoRepositories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2809,6 +2869,8 @@ class Repo(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchRepoBranchResponse:
         r"""Update a branch
+
+        Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2905,6 +2967,8 @@ class Repo(BaseSDK):
     ) -> operations.PatchRepoBranchResponse:
         r"""Update a branch
 
+        Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2999,6 +3063,8 @@ class Repo(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchRepoCommitResponse:
         r"""Update a commit
+
+        Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3095,6 +3161,8 @@ class Repo(BaseSDK):
     ) -> operations.PatchRepoCommitResponse:
         r"""Update a commit
 
+        Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3189,6 +3257,8 @@ class Repo(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchRepoOrganizationResponse:
         r"""Update an organization
+
+        Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3285,6 +3355,8 @@ class Repo(BaseSDK):
     ) -> operations.PatchRepoOrganizationResponse:
         r"""Update an organization
 
+        Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3379,6 +3451,8 @@ class Repo(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchRepoPullrequestResponse:
         r"""Update a pullrequest
+
+        Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3475,6 +3549,8 @@ class Repo(BaseSDK):
     ) -> operations.PatchRepoPullrequestResponse:
         r"""Update a pullrequest
 
+        Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3569,6 +3645,8 @@ class Repo(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchRepoRepositoryResponse:
         r"""Update a repository
+
+        Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3665,6 +3743,8 @@ class Repo(BaseSDK):
     ) -> operations.PatchRepoRepositoryResponse:
         r"""Update a repository
 
+        Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3759,6 +3839,8 @@ class Repo(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveRepoBranchResponse:
         r"""Remove a branch
+
+        Deletes the RepoBranch identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3857,6 +3939,8 @@ class Repo(BaseSDK):
     ) -> operations.RemoveRepoBranchResponse:
         r"""Remove a branch
 
+        Deletes the RepoBranch identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3953,6 +4037,8 @@ class Repo(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveRepoCommitResponse:
         r"""Remove a commit
+
+        Deletes the RepoCommit identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4051,6 +4137,8 @@ class Repo(BaseSDK):
     ) -> operations.RemoveRepoCommitResponse:
         r"""Remove a commit
 
+        Deletes the RepoCommit identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4147,6 +4235,8 @@ class Repo(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveRepoOrganizationResponse:
         r"""Remove an organization
+
+        Deletes the RepoOrganization identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4245,6 +4335,8 @@ class Repo(BaseSDK):
     ) -> operations.RemoveRepoOrganizationResponse:
         r"""Remove an organization
 
+        Deletes the RepoOrganization identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4341,6 +4433,8 @@ class Repo(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveRepoPullrequestResponse:
         r"""Remove a pullrequest
+
+        Deletes the RepoPullrequest identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4439,6 +4533,8 @@ class Repo(BaseSDK):
     ) -> operations.RemoveRepoPullrequestResponse:
         r"""Remove a pullrequest
 
+        Deletes the RepoPullrequest identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4535,6 +4631,8 @@ class Repo(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveRepoRepositoryResponse:
         r"""Remove a repository
+
+        Deletes the RepoRepository identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4633,6 +4731,8 @@ class Repo(BaseSDK):
     ) -> operations.RemoveRepoRepositoryResponse:
         r"""Remove a repository
 
+        Deletes the RepoRepository identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4730,6 +4830,8 @@ class Repo(BaseSDK):
     ) -> operations.UpdateRepoBranchResponse:
         r"""Update a branch
 
+        Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4824,6 +4926,8 @@ class Repo(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateRepoBranchResponse:
         r"""Update a branch
+
+        Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4920,6 +5024,8 @@ class Repo(BaseSDK):
     ) -> operations.UpdateRepoCommitResponse:
         r"""Update a commit
 
+        Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5014,6 +5120,8 @@ class Repo(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateRepoCommitResponse:
         r"""Update a commit
+
+        Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -5110,6 +5218,8 @@ class Repo(BaseSDK):
     ) -> operations.UpdateRepoOrganizationResponse:
         r"""Update an organization
 
+        Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5204,6 +5314,8 @@ class Repo(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateRepoOrganizationResponse:
         r"""Update an organization
+
+        Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -5300,6 +5412,8 @@ class Repo(BaseSDK):
     ) -> operations.UpdateRepoPullrequestResponse:
         r"""Update a pullrequest
 
+        Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5394,6 +5508,8 @@ class Repo(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateRepoPullrequestResponse:
         r"""Update a pullrequest
+
+        Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -5490,6 +5606,8 @@ class Repo(BaseSDK):
     ) -> operations.UpdateRepoRepositoryResponse:
         r"""Update a repository
 
+        Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5584,6 +5702,8 @@ class Repo(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateRepoRepositoryResponse:
         r"""Update a repository
+
+        Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

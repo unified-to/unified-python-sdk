@@ -21,6 +21,7 @@ class TaskProjectTypedDict(TypedDict):
     id: NotRequired[str]
     metadata: NotRequired[List[TaskMetadataTypedDict]]
     name: NotRequired[str]
+    r"""The project's name"""
     parent_id: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     updated_at: NotRequired[datetime]
@@ -47,6 +48,7 @@ class TaskProject(BaseModel):
     metadata: Optional[List[TaskMetadata]] = None
 
     name: Optional[str] = None
+    r"""The project's name"""
 
     parent_id: Optional[str] = None
 

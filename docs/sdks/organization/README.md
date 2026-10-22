@@ -27,7 +27,7 @@
 
 ## create_ads_organization
 
-Create an organization
+Creates a AdsOrganization. Provide the unified AdsOrganization fields in the request body; they are mapped to the provider's API. Returns the created AdsOrganization.
 
 ### Example Usage
 
@@ -49,13 +49,13 @@ with UnifiedTo(
             "account_number": "LQUJx8zQBW",
             "created_at": parse_datetime("2020-07-23T21:47:11.440Z"),
             "currency": "USD",
-            "id": "be11298c-1287-4575-897d-c5494f4853ec",
+            "id": "f5896d7a-b8b5-4867-832d-d97788717610",
             "managers": [],
             "metadata": [],
             "name": "Ankunding Inc",
             "status": shared.AdsOrganizationStatus.PROCESSING,
             "timezone": "Europe/Chisinau",
-            "updated_at": parse_datetime("2026-03-29T03:00:12.447Z"),
+            "updated_at": parse_datetime("2026-03-30T00:42:16.467Z"),
         },
         "connection_id": "<id>",
     })
@@ -86,7 +86,7 @@ with UnifiedTo(
 
 ## create_genai_organization
 
-Create an organization
+Creates a GenaiOrganization. Provide the unified GenaiOrganization fields in the request body; they are mapped to the provider's API. Returns the created GenaiOrganization.
 
 ### Example Usage
 
@@ -107,10 +107,10 @@ with UnifiedTo(
         "genai_organization": {
             "created_at": parse_datetime("2020-10-27T16:03:47.122Z"),
             "description": "Voluptates abeo subseco.",
-            "id": "0e9dda18-145f-4694-81a5-9026b1443d0e",
+            "id": "979ae74f-14ff-48a7-ad20-609831f3425d",
             "is_active": False,
             "name": "officially about",
-            "updated_at": parse_datetime("2023-01-26T10:36:41.332Z"),
+            "updated_at": parse_datetime("2023-01-26T19:34:30.479Z"),
         },
         "connection_id": "<id>",
     })
@@ -141,7 +141,7 @@ with UnifiedTo(
 
 ## create_repo_organization
 
-Create an organization
+Creates a RepoOrganization. Provide the unified RepoOrganization fields in the request body; they are mapped to the provider's API. Returns the created RepoOrganization.
 
 ### Example Usage
 
@@ -163,10 +163,10 @@ with UnifiedTo(
             "avatar_url": "https://picsum.photos/seed/fGl6Lb/3157/3173",
             "created_at": parse_datetime("2022-07-07T00:18:40.748Z"),
             "description": "Trepide defendo supra testimonium ager.",
-            "id": "80e8a6fd-a1fe-49b5-9218-70e0019ddd60",
+            "id": "933e206a-d0b9-4551-b0a1-48ec334aa3f3",
             "metadata": [],
             "name": "Denesik - Lemke",
-            "updated_at": parse_datetime("2023-08-21T15:07:00.136Z"),
+            "updated_at": parse_datetime("2023-08-21T21:22:03.917Z"),
             "web_url": "https://turbulent-overheard.biz",
         },
         "connection_id": "<id>",
@@ -198,7 +198,7 @@ with UnifiedTo(
 
 ## get_accounting_organization
 
-Retrieve an organization
+Retrieves a single AccountingOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -245,7 +245,7 @@ with UnifiedTo(
 
 ## get_ads_organization
 
-Retrieve an organization
+Retrieves a single AdsOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -292,7 +292,7 @@ with UnifiedTo(
 
 ## get_genai_organization
 
-Retrieve an organization
+Retrieves a single GenaiOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -339,7 +339,7 @@ with UnifiedTo(
 
 ## get_repo_organization
 
-Retrieve an organization
+Retrieves a single RepoOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -386,7 +386,7 @@ with UnifiedTo(
 
 ## list_accounting_organizations
 
-List all organizations
+Returns a list of AccountingOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -432,7 +432,7 @@ with UnifiedTo(
 
 ## list_ads_organizations
 
-List all organizations
+Returns a list of AdsOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -478,7 +478,7 @@ with UnifiedTo(
 
 ## list_genai_organizations
 
-List all organizations
+Returns a list of GenaiOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -524,7 +524,7 @@ with UnifiedTo(
 
 ## list_repo_organizations
 
-List all organizations
+Returns a list of RepoOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -570,7 +570,7 @@ with UnifiedTo(
 
 ## patch_ads_organization
 
-Update an organization
+Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -592,13 +592,13 @@ with UnifiedTo(
             "account_number": "LQUJx8zQBW",
             "created_at": parse_datetime("2020-07-23T21:47:11.440Z"),
             "currency": "USD",
-            "id": "5e7876c5-d3fe-480b-a4ac-b7e50905f03d",
+            "id": "d88adc9e-4dfa-4add-881f-5451e79f73a9",
             "managers": [],
             "metadata": [],
             "name": "Ankunding Inc",
             "status": shared.AdsOrganizationStatus.PROCESSING,
             "timezone": "Europe/Chisinau",
-            "updated_at": parse_datetime("2026-03-29T03:00:12.463Z"),
+            "updated_at": parse_datetime("2026-03-30T00:42:16.483Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -630,7 +630,7 @@ with UnifiedTo(
 
 ## patch_genai_organization
 
-Update an organization
+Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -651,10 +651,10 @@ with UnifiedTo(
         "genai_organization": {
             "created_at": parse_datetime("2020-10-27T16:03:47.122Z"),
             "description": "Voluptates abeo subseco.",
-            "id": "f87a73b9-edbc-4cbc-9662-ddb11d3381e9",
+            "id": "f8be95c0-9ebe-4e98-8012-81311a8cd9b5",
             "is_active": False,
             "name": "officially about",
-            "updated_at": parse_datetime("2023-01-26T10:36:41.334Z"),
+            "updated_at": parse_datetime("2023-01-26T19:34:30.483Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -686,7 +686,7 @@ with UnifiedTo(
 
 ## patch_repo_organization
 
-Update an organization
+Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -708,10 +708,10 @@ with UnifiedTo(
             "avatar_url": "https://picsum.photos/seed/fGl6Lb/3157/3173",
             "created_at": parse_datetime("2022-07-07T00:18:40.748Z"),
             "description": "Trepide defendo supra testimonium ager.",
-            "id": "ad9a058b-873e-4876-a837-1b47d35c0e0e",
+            "id": "85be66a9-5510-4ada-ac47-f32a603fd07c",
             "metadata": [],
             "name": "Denesik - Lemke",
-            "updated_at": parse_datetime("2023-08-21T15:07:00.140Z"),
+            "updated_at": parse_datetime("2023-08-21T21:22:03.920Z"),
             "web_url": "https://turbulent-overheard.biz",
         },
         "connection_id": "<id>",
@@ -744,7 +744,7 @@ with UnifiedTo(
 
 ## remove_ads_organization
 
-Remove an organization
+Deletes the AdsOrganization identified by `id`.
 
 ### Example Usage
 
@@ -791,7 +791,7 @@ with UnifiedTo(
 
 ## remove_genai_organization
 
-Remove an organization
+Deletes the GenaiOrganization identified by `id`.
 
 ### Example Usage
 
@@ -838,7 +838,7 @@ with UnifiedTo(
 
 ## remove_repo_organization
 
-Remove an organization
+Deletes the RepoOrganization identified by `id`.
 
 ### Example Usage
 
@@ -885,7 +885,7 @@ with UnifiedTo(
 
 ## update_ads_organization
 
-Update an organization
+Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -907,13 +907,13 @@ with UnifiedTo(
             "account_number": "LQUJx8zQBW",
             "created_at": parse_datetime("2020-07-23T21:47:11.440Z"),
             "currency": "USD",
-            "id": "5e7876c5-d3fe-480b-a4ac-b7e50905f03d",
+            "id": "d88adc9e-4dfa-4add-881f-5451e79f73a9",
             "managers": [],
             "metadata": [],
             "name": "Ankunding Inc",
             "status": shared.AdsOrganizationStatus.PROCESSING,
             "timezone": "Europe/Chisinau",
-            "updated_at": parse_datetime("2026-03-29T03:00:12.463Z"),
+            "updated_at": parse_datetime("2026-03-30T00:42:16.483Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -945,7 +945,7 @@ with UnifiedTo(
 
 ## update_genai_organization
 
-Update an organization
+Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -966,10 +966,10 @@ with UnifiedTo(
         "genai_organization": {
             "created_at": parse_datetime("2020-10-27T16:03:47.122Z"),
             "description": "Voluptates abeo subseco.",
-            "id": "f87a73b9-edbc-4cbc-9662-ddb11d3381e9",
+            "id": "f8be95c0-9ebe-4e98-8012-81311a8cd9b5",
             "is_active": False,
             "name": "officially about",
-            "updated_at": parse_datetime("2023-01-26T10:36:41.334Z"),
+            "updated_at": parse_datetime("2023-01-26T19:34:30.483Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1001,7 +1001,7 @@ with UnifiedTo(
 
 ## update_repo_organization
 
-Update an organization
+Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -1023,10 +1023,10 @@ with UnifiedTo(
             "avatar_url": "https://picsum.photos/seed/fGl6Lb/3157/3173",
             "created_at": parse_datetime("2022-07-07T00:18:40.748Z"),
             "description": "Trepide defendo supra testimonium ager.",
-            "id": "ad9a058b-873e-4876-a837-1b47d35c0e0e",
+            "id": "85be66a9-5510-4ada-ac47-f32a603fd07c",
             "metadata": [],
             "name": "Denesik - Lemke",
-            "updated_at": parse_datetime("2023-08-21T15:07:00.140Z"),
+            "updated_at": parse_datetime("2023-08-21T21:22:03.920Z"),
             "web_url": "https://turbulent-overheard.biz",
         },
         "connection_id": "<id>",

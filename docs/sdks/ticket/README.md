@@ -13,7 +13,7 @@
 
 ## create_ticketing_ticket
 
-Create a ticket
+Creates a TicketingTicket. Provide the unified TicketingTicket fields in the request body; they are mapped to the provider's API. Returns the created TicketingTicket.
 
 ### Example Usage
 
@@ -36,7 +36,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-06-25T19:19:31.279Z"),
             "description": "Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.",
             "due_at": parse_datetime("2021-07-07T17:39:49.813Z"),
-            "id": "42803612-eebf-4ad2-ae2d-2ed944f6e3ca",
+            "id": "62d86b9c-a84d-4a19-a0eb-83fe1be551e3",
             "metadata": [],
             "priority": "MEDIUM",
             "source": "email",
@@ -45,7 +45,7 @@ with UnifiedTo(
             "tags": [
                 "vilicus",
             ],
-            "updated_at": parse_datetime("2021-07-03T18:28:55.511Z"),
+            "updated_at": parse_datetime("2021-07-03T18:34:47.521Z"),
             "url": "https://similar-velocity.net/",
         },
         "connection_id": "<id>",
@@ -77,7 +77,7 @@ with UnifiedTo(
 
 ## get_ticketing_ticket
 
-Retrieve a ticket
+Retrieves a single TicketingTicket by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -124,7 +124,7 @@ with UnifiedTo(
 
 ## list_ticketing_tickets
 
-List all tickets
+Returns a list of TicketingTickets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -170,7 +170,7 @@ with UnifiedTo(
 
 ## patch_ticketing_ticket
 
-Update a ticket
+Updates the TicketingTicket identified by `id`. Provide the unified TicketingTicket fields to change in the request body.
 
 ### Example Usage
 
@@ -193,7 +193,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-06-25T19:19:31.279Z"),
             "description": "Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.",
             "due_at": parse_datetime("2021-07-07T17:39:49.813Z"),
-            "id": "b1cd37f5-7ee7-4bed-a17b-e25643a57e1f",
+            "id": "60b58c10-795c-4a62-be1b-a56385a1a24c",
             "metadata": [],
             "priority": "MEDIUM",
             "source": "email",
@@ -202,7 +202,7 @@ with UnifiedTo(
             "tags": [
                 "vilicus",
             ],
-            "updated_at": parse_datetime("2021-07-03T18:28:55.511Z"),
+            "updated_at": parse_datetime("2021-07-03T18:34:47.521Z"),
             "url": "https://similar-velocity.net/",
         },
         "connection_id": "<id>",
@@ -235,7 +235,7 @@ with UnifiedTo(
 
 ## remove_ticketing_ticket
 
-Remove a ticket
+Deletes the TicketingTicket identified by `id`.
 
 ### Example Usage
 
@@ -282,7 +282,7 @@ with UnifiedTo(
 
 ## update_ticketing_ticket
 
-Update a ticket
+Updates the TicketingTicket identified by `id`. Provide the unified TicketingTicket fields to change in the request body.
 
 ### Example Usage
 
@@ -305,7 +305,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-06-25T19:19:31.279Z"),
             "description": "Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.",
             "due_at": parse_datetime("2021-07-07T17:39:49.813Z"),
-            "id": "b1cd37f5-7ee7-4bed-a17b-e25643a57e1f",
+            "id": "60b58c10-795c-4a62-be1b-a56385a1a24c",
             "metadata": [],
             "priority": "MEDIUM",
             "source": "email",
@@ -314,7 +314,7 @@ with UnifiedTo(
             "tags": [
                 "vilicus",
             ],
-            "updated_at": parse_datetime("2021-07-03T18:28:55.511Z"),
+            "updated_at": parse_datetime("2021-07-03T18:34:47.521Z"),
             "url": "https://similar-velocity.net/",
         },
         "connection_id": "<id>",

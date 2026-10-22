@@ -13,7 +13,7 @@
 
 ## create_hris_benefit
 
-Create a benefit
+Creates a HrisBenefit. Provide the unified HrisBenefit fields in the request body; they are mapped to the provider's API. Returns the created HrisBenefit.
 
 ### Example Usage
 
@@ -40,13 +40,13 @@ with UnifiedTo(
             "employer_contribution_max_amount": 179093.0,
             "employer_contribution_type": shared.EmployerContributionType.PERCENTAGE,
             "frequency": shared.HrisBenefitFrequency.MONTH,
-            "id": "0423c67b-125c-48f2-9625-52879be2b816",
+            "id": "100e64a1-48f0-479c-90df-02d8e4b037cc",
             "is_active": False,
             "metadata": [],
             "name": "Frozen Wooden Ball",
             "tax": shared.Tax.PRE_TAX,
             "type": shared.HrisBenefitType.OTHER,
-            "updated_at": parse_datetime("2023-03-20T20:18:48.762Z"),
+            "updated_at": parse_datetime("2023-03-21T06:42:51.802Z"),
         },
         "connection_id": "<id>",
     })
@@ -77,7 +77,7 @@ with UnifiedTo(
 
 ## get_hris_benefit
 
-Retrieve a benefit
+Retrieves a single HrisBenefit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -124,7 +124,7 @@ with UnifiedTo(
 
 ## list_hris_benefits
 
-List all benefits
+Returns a list of HrisBenefits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -170,7 +170,7 @@ with UnifiedTo(
 
 ## patch_hris_benefit
 
-Update a benefit
+Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the request body.
 
 ### Example Usage
 
@@ -197,13 +197,13 @@ with UnifiedTo(
             "employer_contribution_max_amount": 179093.0,
             "employer_contribution_type": shared.EmployerContributionType.PERCENTAGE,
             "frequency": shared.HrisBenefitFrequency.MONTH,
-            "id": "eabe641c-582b-4b1c-bff3-08ddc615c9dd",
+            "id": "b36c4fbf-0ca7-4e3c-8e02-7d201f16ca93",
             "is_active": False,
             "metadata": [],
             "name": "Frozen Wooden Ball",
             "tax": shared.Tax.PRE_TAX,
             "type": shared.HrisBenefitType.OTHER,
-            "updated_at": parse_datetime("2023-03-20T20:18:48.773Z"),
+            "updated_at": parse_datetime("2023-03-21T06:42:51.811Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -235,7 +235,7 @@ with UnifiedTo(
 
 ## remove_hris_benefit
 
-Remove a benefit
+Deletes the HrisBenefit identified by `id`.
 
 ### Example Usage
 
@@ -282,7 +282,7 @@ with UnifiedTo(
 
 ## update_hris_benefit
 
-Update a benefit
+Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the request body.
 
 ### Example Usage
 
@@ -309,13 +309,13 @@ with UnifiedTo(
             "employer_contribution_max_amount": 179093.0,
             "employer_contribution_type": shared.EmployerContributionType.PERCENTAGE,
             "frequency": shared.HrisBenefitFrequency.MONTH,
-            "id": "eabe641c-582b-4b1c-bff3-08ddc615c9dd",
+            "id": "b36c4fbf-0ca7-4e3c-8e02-7d201f16ca93",
             "is_active": False,
             "metadata": [],
             "name": "Frozen Wooden Ball",
             "tax": shared.Tax.PRE_TAX,
             "type": shared.HrisBenefitType.OTHER,
-            "updated_at": parse_datetime("2023-03-20T20:18:48.773Z"),
+            "updated_at": parse_datetime("2023-03-21T06:42:51.811Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

@@ -24,6 +24,8 @@ class Journal(BaseSDK):
     ) -> operations.CreateAccountingJournalResponse:
         r"""Create a journal
 
+        Creates a AccountingJournal. Provide the unified AccountingJournal fields in the request body; they are mapped to the provider's API. Returns the created AccountingJournal.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -124,6 +126,8 @@ class Journal(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAccountingJournalResponse:
         r"""Create a journal
+
+        Creates a AccountingJournal. Provide the unified AccountingJournal fields in the request body; they are mapped to the provider's API. Returns the created AccountingJournal.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -226,6 +230,8 @@ class Journal(BaseSDK):
     ) -> operations.GetAccountingJournalResponse:
         r"""Retrieve a journal
 
+        Retrieves a single AccountingJournal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -317,6 +323,8 @@ class Journal(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAccountingJournalResponse:
         r"""Retrieve a journal
+
+        Retrieves a single AccountingJournal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -410,6 +418,8 @@ class Journal(BaseSDK):
     ) -> operations.ListAccountingJournalsResponse:
         r"""List all journals
 
+        Returns a list of AccountingJournals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -502,6 +512,8 @@ class Journal(BaseSDK):
     ) -> operations.ListAccountingJournalsResponse:
         r"""List all journals
 
+        Returns a list of AccountingJournals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -593,6 +605,8 @@ class Journal(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAccountingJournalResponse:
         r"""Update a journal
+
+        Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -693,6 +707,8 @@ class Journal(BaseSDK):
     ) -> operations.PatchAccountingJournalResponse:
         r"""Update a journal
 
+        Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -791,6 +807,8 @@ class Journal(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAccountingJournalResponse:
         r"""Remove a journal
+
+        Deletes the AccountingJournal identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -891,6 +909,8 @@ class Journal(BaseSDK):
     ) -> operations.RemoveAccountingJournalResponse:
         r"""Remove a journal
 
+        Deletes the AccountingJournal identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -989,6 +1009,8 @@ class Journal(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAccountingJournalResponse:
         r"""Update a journal
+
+        Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1090,6 +1112,8 @@ class Journal(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAccountingJournalResponse:
         r"""Update a journal
+
+        Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

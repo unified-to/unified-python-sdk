@@ -68,6 +68,7 @@ class AccountingContactTypedDict(TypedDict):
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     currency: NotRequired[str]
     emails: NotRequired[List[AccountingEmailTypedDict]]
+    r"""The contact's email addresses"""
     first_name: NotRequired[str]
     id: NotRequired[str]
     identification: NotRequired[str]
@@ -78,6 +79,7 @@ class AccountingContactTypedDict(TypedDict):
     last_name: NotRequired[str]
     metadata: NotRequired[List[AccountingMetadataTypedDict]]
     name: NotRequired[str]
+    r"""The contact's display name: the company name for a business, or the person's full name"""
     notes: NotRequired[str]
     organization_id: NotRequired[str]
     payment_methods: NotRequired[List[AccountingContactPaymentMethodTypedDict]]
@@ -112,6 +114,7 @@ class AccountingContact(BaseModel):
     currency: Optional[str] = "USD"
 
     emails: Optional[List[AccountingEmail]] = None
+    r"""The contact's email addresses"""
 
     first_name: Optional[str] = None
 
@@ -131,6 +134,7 @@ class AccountingContact(BaseModel):
     metadata: Optional[List[AccountingMetadata]] = None
 
     name: Optional[str] = None
+    r"""The contact's display name: the company name for a business, or the person's full name"""
 
     notes: Optional[str] = None
 

@@ -24,6 +24,8 @@ class Clubs(BaseSDK):
     ) -> operations.GetClubsActivityResponse:
         r"""Retrieve an activity
 
+        Retrieves a single ClubsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -116,6 +118,8 @@ class Clubs(BaseSDK):
     ) -> operations.GetClubsActivityResponse:
         r"""Retrieve an activity
 
+        Retrieves a single ClubsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -206,6 +210,8 @@ class Clubs(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetClubsEventResponse:
         r"""Retrieve an event
+
+        Retrieves a single ClubsEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -298,6 +304,8 @@ class Clubs(BaseSDK):
     ) -> operations.GetClubsEventResponse:
         r"""Retrieve an event
 
+        Retrieves a single ClubsEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -389,6 +397,8 @@ class Clubs(BaseSDK):
     ) -> operations.GetClubsGroupResponse:
         r"""Retrieve a group
 
+        Retrieves a single ClubsGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -479,6 +489,8 @@ class Clubs(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetClubsGroupResponse:
         r"""Retrieve a group
+
+        Retrieves a single ClubsGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -572,6 +584,8 @@ class Clubs(BaseSDK):
     ) -> operations.GetClubsLocationResponse:
         r"""Retrieve a location
 
+        Retrieves a single ClubsLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -664,6 +678,8 @@ class Clubs(BaseSDK):
     ) -> operations.GetClubsLocationResponse:
         r"""Retrieve a location
 
+        Retrieves a single ClubsLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -755,6 +771,8 @@ class Clubs(BaseSDK):
     ) -> operations.GetClubsMemberResponse:
         r"""Retrieve a member
 
+        Retrieves a single ClubsMember by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -845,6 +863,8 @@ class Clubs(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetClubsMemberResponse:
         r"""Retrieve a member
+
+        Retrieves a single ClubsMember by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -938,6 +958,8 @@ class Clubs(BaseSDK):
     ) -> operations.ListClubsActivitiesResponse:
         r"""List all activities
 
+        Returns a list of ClubsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1029,6 +1051,8 @@ class Clubs(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListClubsActivitiesResponse:
         r"""List all activities
+
+        Returns a list of ClubsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1122,6 +1146,8 @@ class Clubs(BaseSDK):
     ) -> operations.ListClubsEventsResponse:
         r"""List all events
 
+        Returns a list of ClubsEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1213,6 +1239,8 @@ class Clubs(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListClubsEventsResponse:
         r"""List all events
+
+        Returns a list of ClubsEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1306,6 +1334,8 @@ class Clubs(BaseSDK):
     ) -> operations.ListClubsGroupsResponse:
         r"""List all groups
 
+        Returns a list of ClubsGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1397,6 +1427,8 @@ class Clubs(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListClubsGroupsResponse:
         r"""List all groups
+
+        Returns a list of ClubsGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1490,6 +1522,8 @@ class Clubs(BaseSDK):
     ) -> operations.ListClubsLocationsResponse:
         r"""List all locations
 
+        Returns a list of ClubsLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1581,6 +1615,8 @@ class Clubs(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListClubsLocationsResponse:
         r"""List all locations
+
+        Returns a list of ClubsLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1674,6 +1710,8 @@ class Clubs(BaseSDK):
     ) -> operations.ListClubsMembersResponse:
         r"""List all members
 
+        Returns a list of ClubsMembers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1765,6 +1803,8 @@ class Clubs(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListClubsMembersResponse:
         r"""List all members
+
+        Returns a list of ClubsMembers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

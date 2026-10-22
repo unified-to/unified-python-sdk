@@ -24,6 +24,8 @@ class Message(BaseSDK):
     ) -> operations.CreateMessagingMessageResponse:
         r"""Create a message
 
+        Creates a MessagingMessage. Provide the unified MessagingMessage fields in the request body; they are mapped to the provider's API. Returns the created MessagingMessage.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -118,6 +120,8 @@ class Message(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateMessagingMessageResponse:
         r"""Create a message
+
+        Creates a MessagingMessage. Provide the unified MessagingMessage fields in the request body; they are mapped to the provider's API. Returns the created MessagingMessage.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -214,6 +218,8 @@ class Message(BaseSDK):
     ) -> operations.GetMessagingMessageResponse:
         r"""Retrieve a message
 
+        Retrieves a single MessagingMessage by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -305,6 +311,8 @@ class Message(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetMessagingMessageResponse:
         r"""Retrieve a message
+
+        Retrieves a single MessagingMessage by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -398,6 +406,8 @@ class Message(BaseSDK):
     ) -> operations.ListMessagingMessagesResponse:
         r"""List all messages
 
+        Returns a list of MessagingMessages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -490,6 +500,8 @@ class Message(BaseSDK):
     ) -> operations.ListMessagingMessagesResponse:
         r"""List all messages
 
+        Returns a list of MessagingMessages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -581,6 +593,8 @@ class Message(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchMessagingMessageResponse:
         r"""Update a message
+
+        Updates the MessagingMessage identified by `id`. Provide the unified MessagingMessage fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -677,6 +691,8 @@ class Message(BaseSDK):
     ) -> operations.PatchMessagingMessageResponse:
         r"""Update a message
 
+        Updates the MessagingMessage identified by `id`. Provide the unified MessagingMessage fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -771,6 +787,8 @@ class Message(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveMessagingMessageResponse:
         r"""Remove a message
+
+        Deletes the MessagingMessage identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -869,6 +887,8 @@ class Message(BaseSDK):
     ) -> operations.RemoveMessagingMessageResponse:
         r"""Remove a message
 
+        Deletes the MessagingMessage identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -966,6 +986,8 @@ class Message(BaseSDK):
     ) -> operations.UpdateMessagingMessageResponse:
         r"""Update a message
 
+        Updates the MessagingMessage identified by `id`. Provide the unified MessagingMessage fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1060,6 +1082,8 @@ class Message(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateMessagingMessageResponse:
         r"""Update a message
+
+        Updates the MessagingMessage identified by `id`. Provide the unified MessagingMessage fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

@@ -24,6 +24,8 @@ class Shipment(BaseSDK):
     ) -> operations.CreateShippingShipmentResponse:
         r"""Create a shipment
 
+        Creates a ShippingShipment. Provide the unified ShippingShipment fields in the request body; they are mapped to the provider's API. Returns the created ShippingShipment.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -118,6 +120,8 @@ class Shipment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateShippingShipmentResponse:
         r"""Create a shipment
+
+        Creates a ShippingShipment. Provide the unified ShippingShipment fields in the request body; they are mapped to the provider's API. Returns the created ShippingShipment.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -214,6 +218,8 @@ class Shipment(BaseSDK):
     ) -> operations.GetShippingShipmentResponse:
         r"""Retrieve a shipment
 
+        Retrieves a single ShippingShipment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -305,6 +311,8 @@ class Shipment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetShippingShipmentResponse:
         r"""Retrieve a shipment
+
+        Retrieves a single ShippingShipment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -398,6 +406,8 @@ class Shipment(BaseSDK):
     ) -> operations.ListShippingShipmentsResponse:
         r"""List all shipments
 
+        Returns a list of ShippingShipments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -490,6 +500,8 @@ class Shipment(BaseSDK):
     ) -> operations.ListShippingShipmentsResponse:
         r"""List all shipments
 
+        Returns a list of ShippingShipments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -581,6 +593,8 @@ class Shipment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchShippingShipmentResponse:
         r"""Update a shipment
+
+        Updates the ShippingShipment identified by `id`. Provide the unified ShippingShipment fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -677,6 +691,8 @@ class Shipment(BaseSDK):
     ) -> operations.PatchShippingShipmentResponse:
         r"""Update a shipment
 
+        Updates the ShippingShipment identified by `id`. Provide the unified ShippingShipment fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -771,6 +787,8 @@ class Shipment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveShippingShipmentResponse:
         r"""Remove a shipment
+
+        Deletes the ShippingShipment identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -869,6 +887,8 @@ class Shipment(BaseSDK):
     ) -> operations.RemoveShippingShipmentResponse:
         r"""Remove a shipment
 
+        Deletes the ShippingShipment identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -966,6 +986,8 @@ class Shipment(BaseSDK):
     ) -> operations.UpdateShippingShipmentResponse:
         r"""Update a shipment
 
+        Updates the ShippingShipment identified by `id`. Provide the unified ShippingShipment fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1060,6 +1082,8 @@ class Shipment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateShippingShipmentResponse:
         r"""Update a shipment
+
+        Updates the ShippingShipment identified by `id`. Provide the unified ShippingShipment fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

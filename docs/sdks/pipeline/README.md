@@ -13,7 +13,7 @@
 
 ## create_crm_pipeline
 
-Create a pipeline
+Creates a CrmPipeline. Provide the unified CrmPipeline fields in the request body; they are mapped to the provider's API. Returns the created CrmPipeline.
 
 ### Example Usage
 
@@ -35,7 +35,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-12-28T13:45:38.446Z"),
             "deal_probability": 99.0,
             "display_order": 8.0,
-            "id": "d0123b5e-6e85-46b1-a76f-30daf7ed4d05",
+            "id": "314b38fc-3392-4486-9232-bf4854c6611c",
             "is_active": True,
             "metadata": [],
             "name": "Small Steel Bacon",
@@ -45,13 +45,13 @@ with UnifiedTo(
                     "created_at": parse_datetime("2022-12-28T13:45:38.446Z"),
                     "deal_probability": 84.0,
                     "display_order": 72.0,
-                    "id": "ee9654fd-afff-4826-a69d-fd916916542d",
+                    "id": "38d5c0fb-d5a7-4980-8b1b-6cc7ad149ac7",
                     "is_closed": True,
                     "name": "Veniam.",
-                    "updated_at": parse_datetime("2025-10-10T12:24:50.707Z"),
+                    "updated_at": parse_datetime("2025-10-11T05:50:12.601Z"),
                 },
             ],
-            "updated_at": parse_datetime("2025-11-01T05:51:05.610Z"),
+            "updated_at": parse_datetime("2025-11-01T23:38:47.531Z"),
         },
         "connection_id": "<id>",
     })
@@ -82,7 +82,7 @@ with UnifiedTo(
 
 ## get_crm_pipeline
 
-Retrieve a pipeline
+Retrieves a single CrmPipeline by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -129,7 +129,7 @@ with UnifiedTo(
 
 ## list_crm_pipelines
 
-List all pipelines
+Returns a list of CrmPipelines. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -175,7 +175,7 @@ with UnifiedTo(
 
 ## patch_crm_pipeline
 
-Update a pipeline
+Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the request body.
 
 ### Example Usage
 
@@ -197,7 +197,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-12-28T13:45:38.446Z"),
             "deal_probability": 99.0,
             "display_order": 8.0,
-            "id": "ca408faa-6d21-4cac-b0c8-6d85e2e18aea",
+            "id": "1241cfda-16af-44f0-9452-228e4c096473",
             "is_active": True,
             "metadata": [],
             "name": "Small Steel Bacon",
@@ -207,13 +207,13 @@ with UnifiedTo(
                     "created_at": parse_datetime("2022-12-28T13:45:38.446Z"),
                     "deal_probability": 84.0,
                     "display_order": 72.0,
-                    "id": "3a27a710-8f08-4c86-8b84-6126f2473c6f",
+                    "id": "142fac8b-ac6e-4b8d-927c-ec9f5b6b87da",
                     "is_closed": True,
                     "name": "Veniam.",
-                    "updated_at": parse_datetime("2025-10-10T12:24:50.717Z"),
+                    "updated_at": parse_datetime("2025-10-11T05:50:12.613Z"),
                 },
             ],
-            "updated_at": parse_datetime("2025-11-01T05:51:05.620Z"),
+            "updated_at": parse_datetime("2025-11-01T23:38:47.543Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -245,7 +245,7 @@ with UnifiedTo(
 
 ## remove_crm_pipeline
 
-Remove a pipeline
+Deletes the CrmPipeline identified by `id`.
 
 ### Example Usage
 
@@ -292,7 +292,7 @@ with UnifiedTo(
 
 ## update_crm_pipeline
 
-Update a pipeline
+Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the request body.
 
 ### Example Usage
 
@@ -314,7 +314,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-12-28T13:45:38.446Z"),
             "deal_probability": 99.0,
             "display_order": 8.0,
-            "id": "ca408faa-6d21-4cac-b0c8-6d85e2e18aea",
+            "id": "1241cfda-16af-44f0-9452-228e4c096473",
             "is_active": True,
             "metadata": [],
             "name": "Small Steel Bacon",
@@ -324,13 +324,13 @@ with UnifiedTo(
                     "created_at": parse_datetime("2022-12-28T13:45:38.446Z"),
                     "deal_probability": 84.0,
                     "display_order": 72.0,
-                    "id": "3a27a710-8f08-4c86-8b84-6126f2473c6f",
+                    "id": "142fac8b-ac6e-4b8d-927c-ec9f5b6b87da",
                     "is_closed": True,
                     "name": "Veniam.",
-                    "updated_at": parse_datetime("2025-10-10T12:24:50.717Z"),
+                    "updated_at": parse_datetime("2025-10-11T05:50:12.613Z"),
                 },
             ],
-            "updated_at": parse_datetime("2025-11-01T05:51:05.620Z"),
+            "updated_at": parse_datetime("2025-11-01T23:38:47.543Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

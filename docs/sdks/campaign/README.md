@@ -19,7 +19,7 @@
 
 ## create_ads_campaign
 
-Create a campaign
+Creates a AdsCampaign. Provide the unified AdsCampaign fields in the request body; they are mapped to the provider's API. Returns the created AdsCampaign.
 
 ### Example Usage
 
@@ -44,18 +44,18 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-05-21T08:51:41.868Z"),
             "currency": "USD",
             "effective_status": shared.EffectiveStatus.NOT_ELIGIBLE,
-            "end_at": parse_datetime("2025-05-31T23:26:56.615Z"),
-            "id": "4d2fc8a6-0125-4929-8012-2e17b706b5bd",
+            "end_at": parse_datetime("2025-06-01T15:48:30.968Z"),
+            "id": "8c38d467-ea17-49ad-b3b4-14d14a2dd364",
             "labels": [
                 "comedo",
             ],
             "metadata": [],
             "name": "Emard Inc",
-            "start_at": parse_datetime("2022-07-21T10:50:09.909Z"),
+            "start_at": parse_datetime("2022-07-21T11:44:20.746Z"),
             "status": shared.AdsCampaignStatus.PROCESSING_FAILED,
             "targeting": {},
             "total_spend_amount": 2349.8642875347286,
-            "updated_at": parse_datetime("2026-01-01T14:03:42.719Z"),
+            "updated_at": parse_datetime("2026-01-02T09:35:38.689Z"),
         },
         "connection_id": "<id>",
     })
@@ -86,7 +86,7 @@ with UnifiedTo(
 
 ## create_martech_campaign
 
-Create a campaign
+Creates a MarketingCampaign. Provide the unified MarketingCampaign fields in the request body; they are mapped to the provider's API. Returns the created MarketingCampaign.
 
 ### Example Usage
 
@@ -108,7 +108,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2019-05-19T11:18:15.589Z"),
             "from_email": "graham.mertz@gmail.com",
             "from_name": "Graham Mertz",
-            "id": "f70a1360-e5df-471c-83ac-71222f0ab7c2",
+            "id": "a591e56d-25b4-4c99-a14f-1f4797173d84",
             "metadata": [],
             "name": "Consequatur atqui sustineo.",
             "preview_text": "Auctus votum ver umbra corroboro turpis spoliatio tamen strues auxilium benigne tempus error eaque suasoria.",
@@ -117,7 +117,7 @@ with UnifiedTo(
             "status": shared.MarketingCampaignStatus.SCHEDULED,
             "subject_line": "Trepide utpote conculco tibi solio supplanto peior tibi.",
             "type": "absplit",
-            "updated_at": parse_datetime("2022-06-22T02:48:16.946Z"),
+            "updated_at": parse_datetime("2022-06-22T12:44:35.270Z"),
         },
         "connection_id": "<id>",
     })
@@ -148,7 +148,7 @@ with UnifiedTo(
 
 ## get_ads_campaign
 
-Retrieve a campaign
+Retrieves a single AdsCampaign by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -195,7 +195,7 @@ with UnifiedTo(
 
 ## get_martech_campaign
 
-Retrieve a campaign
+Retrieves a single MarketingCampaign by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -242,7 +242,7 @@ with UnifiedTo(
 
 ## list_ads_campaigns
 
-List all campaigns
+Returns a list of AdsCampaigns. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -288,7 +288,7 @@ with UnifiedTo(
 
 ## list_martech_campaigns
 
-List all campaigns
+Returns a list of MarketingCampaigns. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -334,7 +334,7 @@ with UnifiedTo(
 
 ## patch_ads_campaign
 
-Update a campaign
+Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the request body.
 
 ### Example Usage
 
@@ -359,18 +359,18 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-05-21T08:51:41.868Z"),
             "currency": "USD",
             "effective_status": shared.EffectiveStatus.NOT_ELIGIBLE,
-            "end_at": parse_datetime("2025-05-31T23:26:56.734Z"),
-            "id": "15dd6daf-7978-40b5-b066-11670d6a948b",
+            "end_at": parse_datetime("2025-06-01T15:48:31.080Z"),
+            "id": "6667bcc3-55d9-4772-a024-397885a1f44d",
             "labels": [
                 "comedo",
             ],
             "metadata": [],
             "name": "Emard Inc",
-            "start_at": parse_datetime("2022-07-21T10:50:09.916Z"),
+            "start_at": parse_datetime("2022-07-21T11:44:20.752Z"),
             "status": shared.AdsCampaignStatus.PROCESSING_FAILED,
             "targeting": {},
             "total_spend_amount": 2349.8642875347286,
-            "updated_at": parse_datetime("2026-01-01T14:03:42.861Z"),
+            "updated_at": parse_datetime("2026-01-02T09:35:38.822Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -402,7 +402,7 @@ with UnifiedTo(
 
 ## patch_martech_campaign
 
-Update a campaign
+Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to change in the request body.
 
 ### Example Usage
 
@@ -424,7 +424,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2019-05-19T11:18:15.589Z"),
             "from_email": "graham.mertz@gmail.com",
             "from_name": "Graham Mertz",
-            "id": "56b0a145-4a67-48a0-a319-0aa1c1bc69b0",
+            "id": "ec8cb37b-3c54-4034-9030-b192f698c29d",
             "metadata": [],
             "name": "Consequatur atqui sustineo.",
             "preview_text": "Auctus votum ver umbra corroboro turpis spoliatio tamen strues auxilium benigne tempus error eaque suasoria.",
@@ -433,7 +433,7 @@ with UnifiedTo(
             "status": shared.MarketingCampaignStatus.SCHEDULED,
             "subject_line": "Trepide utpote conculco tibi solio supplanto peior tibi.",
             "type": "absplit",
-            "updated_at": parse_datetime("2022-06-22T02:48:16.953Z"),
+            "updated_at": parse_datetime("2022-06-22T12:44:35.278Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -465,7 +465,7 @@ with UnifiedTo(
 
 ## remove_ads_campaign
 
-Remove a campaign
+Deletes the AdsCampaign identified by `id`.
 
 ### Example Usage
 
@@ -512,7 +512,7 @@ with UnifiedTo(
 
 ## remove_martech_campaign
 
-Remove a campaign
+Deletes the MarketingCampaign identified by `id`.
 
 ### Example Usage
 
@@ -559,7 +559,7 @@ with UnifiedTo(
 
 ## update_ads_campaign
 
-Update a campaign
+Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the request body.
 
 ### Example Usage
 
@@ -584,18 +584,18 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-05-21T08:51:41.868Z"),
             "currency": "USD",
             "effective_status": shared.EffectiveStatus.NOT_ELIGIBLE,
-            "end_at": parse_datetime("2025-05-31T23:26:56.734Z"),
-            "id": "15dd6daf-7978-40b5-b066-11670d6a948b",
+            "end_at": parse_datetime("2025-06-01T15:48:31.080Z"),
+            "id": "6667bcc3-55d9-4772-a024-397885a1f44d",
             "labels": [
                 "comedo",
             ],
             "metadata": [],
             "name": "Emard Inc",
-            "start_at": parse_datetime("2022-07-21T10:50:09.916Z"),
+            "start_at": parse_datetime("2022-07-21T11:44:20.752Z"),
             "status": shared.AdsCampaignStatus.PROCESSING_FAILED,
             "targeting": {},
             "total_spend_amount": 2349.8642875347286,
-            "updated_at": parse_datetime("2026-01-01T14:03:42.861Z"),
+            "updated_at": parse_datetime("2026-01-02T09:35:38.822Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -627,7 +627,7 @@ with UnifiedTo(
 
 ## update_martech_campaign
 
-Update a campaign
+Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to change in the request body.
 
 ### Example Usage
 
@@ -649,7 +649,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2019-05-19T11:18:15.589Z"),
             "from_email": "graham.mertz@gmail.com",
             "from_name": "Graham Mertz",
-            "id": "56b0a145-4a67-48a0-a319-0aa1c1bc69b0",
+            "id": "ec8cb37b-3c54-4034-9030-b192f698c29d",
             "metadata": [],
             "name": "Consequatur atqui sustineo.",
             "preview_text": "Auctus votum ver umbra corroboro turpis spoliatio tamen strues auxilium benigne tempus error eaque suasoria.",
@@ -658,7 +658,7 @@ with UnifiedTo(
             "status": shared.MarketingCampaignStatus.SCHEDULED,
             "subject_line": "Trepide utpote conculco tibi solio supplanto peior tibi.",
             "type": "absplit",
-            "updated_at": parse_datetime("2022-06-22T02:48:16.953Z"),
+            "updated_at": parse_datetime("2022-06-22T12:44:35.278Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

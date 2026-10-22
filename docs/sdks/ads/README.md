@@ -51,7 +51,7 @@
 
 ## create_ads_ad
 
-Create an ad
+Creates a AdsAd. Provide the unified AdsAd fields in the request body; they are mapped to the provider's API. Returns the created AdsAd.
 
 ### Example Usage
 
@@ -77,11 +77,11 @@ with UnifiedTo(
             "creative_asset_url": "https://picsum.photos/seed/LwOzrpr9/948/2793",
             "description": "Accedo vespillo carpo dolor decet stillicidium comptus tenuis.",
             "final_url": "https://improbable-sanity.com",
-            "id": "1e2dbb3b-2885-4c1f-b2f2-875b8645436d",
+            "id": "79efa2ba-b89a-4321-9695-db7067961ed4",
             "metadata": [],
             "name": "Hermiston Group",
             "status": shared.AdsAdStatus.ARCHIVED,
-            "updated_at": parse_datetime("2024-06-18T13:37:34.408Z"),
+            "updated_at": parse_datetime("2024-06-18T23:21:17.005Z"),
         },
         "connection_id": "<id>",
     })
@@ -112,7 +112,7 @@ with UnifiedTo(
 
 ## create_ads_asset
 
-Create an asset
+Creates a AdsAsset. Provide the unified AdsAsset fields in the request body; they are mapped to the provider's API. Returns the created AdsAsset.
 
 ### Example Usage
 
@@ -133,12 +133,12 @@ with UnifiedTo(
         "ads_asset": {
             "created_at": parse_datetime("2020-03-27T20:14:38.603Z"),
             "height": 400.0,
-            "id": "c0ff480e-0ed4-450b-8572-2c76f7f34ef3",
+            "id": "e4b861f2-f87e-490d-bc8f-298724c180d9",
             "metadata": [],
             "mime_type": "IMAGE_PNG",
             "name": "Lockman - DuBuque",
             "type": shared.AdsAssetType.IMAGE,
-            "updated_at": parse_datetime("2022-03-25T04:37:32.453Z"),
+            "updated_at": parse_datetime("2022-03-25T11:51:38.865Z"),
             "url": "https://informal-perfection.com/",
             "width": 600.0,
         },
@@ -171,7 +171,7 @@ with UnifiedTo(
 
 ## create_ads_campaign
 
-Create a campaign
+Creates a AdsCampaign. Provide the unified AdsCampaign fields in the request body; they are mapped to the provider's API. Returns the created AdsCampaign.
 
 ### Example Usage
 
@@ -196,18 +196,18 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-05-21T08:51:41.868Z"),
             "currency": "USD",
             "effective_status": shared.EffectiveStatus.NOT_ELIGIBLE,
-            "end_at": parse_datetime("2025-05-31T23:26:56.615Z"),
-            "id": "4d2fc8a6-0125-4929-8012-2e17b706b5bd",
+            "end_at": parse_datetime("2025-06-01T15:48:30.968Z"),
+            "id": "8c38d467-ea17-49ad-b3b4-14d14a2dd364",
             "labels": [
                 "comedo",
             ],
             "metadata": [],
             "name": "Emard Inc",
-            "start_at": parse_datetime("2022-07-21T10:50:09.909Z"),
+            "start_at": parse_datetime("2022-07-21T11:44:20.746Z"),
             "status": shared.AdsCampaignStatus.PROCESSING_FAILED,
             "targeting": {},
             "total_spend_amount": 2349.8642875347286,
-            "updated_at": parse_datetime("2026-01-01T14:03:42.719Z"),
+            "updated_at": parse_datetime("2026-01-02T09:35:38.689Z"),
         },
         "connection_id": "<id>",
     })
@@ -238,7 +238,7 @@ with UnifiedTo(
 
 ## create_ads_creative
 
-Create a creative
+Creates a AdsCreative. Provide the unified AdsCreative fields in the request body; they are mapped to the provider's API. Returns the created AdsCreative.
 
 ### Example Usage
 
@@ -258,7 +258,7 @@ with UnifiedTo(
     res = unified_to.ads.create_ads_creative(request={
         "ads_creative": {
             "created_at": parse_datetime("2020-02-17T11:24:51.093Z"),
-            "id": "b96751f3-a235-43f1-93ce-f92f643448b4",
+            "id": "ac28e829-d356-4981-a84e-754e20ddac77",
             "labels": [
                 "coma",
                 "accedo",
@@ -267,7 +267,7 @@ with UnifiedTo(
             "metadata": [],
             "name": "Brekke, Bradtke and Robel",
             "status": shared.AdsCreativeStatus.PAUSED,
-            "updated_at": parse_datetime("2021-06-27T18:16:31.013Z"),
+            "updated_at": parse_datetime("2021-06-27T23:07:56.004Z"),
         },
         "connection_id": "<id>",
     })
@@ -298,7 +298,7 @@ with UnifiedTo(
 
 ## create_ads_group
 
-Create a group
+Creates a AdsGroup. Provide the unified AdsGroup fields in the request body; they are mapped to the provider's API. Returns the created AdsGroup.
 
 ### Example Usage
 
@@ -323,15 +323,15 @@ with UnifiedTo(
             "created_at": parse_datetime("2019-08-29T17:59:41.045Z"),
             "currency": "USD",
             "effective_status": shared.AdsGroupEffectiveStatus.PAUSED,
-            "end_at": parse_datetime("2026-06-25T01:30:03.970Z"),
-            "id": "51a41afa-b2f8-4593-a572-515dd447b314",
+            "end_at": parse_datetime("2026-06-26T00:16:40.347Z"),
+            "id": "12560f3e-69eb-4197-9710-683515cc09a8",
             "language_locale": "fr-FR",
             "metadata": [],
             "name": "Stark - Baumbach",
-            "start_at": parse_datetime("2026-01-09T06:44:42.612Z"),
+            "start_at": parse_datetime("2026-01-10T03:59:49.722Z"),
             "status": shared.AdsGroupStatus.PROCESSING,
             "targeting": {},
-            "updated_at": parse_datetime("2022-01-13T16:12:20.767Z"),
+            "updated_at": parse_datetime("2022-01-14T00:08:26.728Z"),
         },
         "connection_id": "<id>",
     })
@@ -362,7 +362,7 @@ with UnifiedTo(
 
 ## create_ads_insertionorder
 
-Create an insertionorder
+Creates a AdsInsertionorder. Provide the unified AdsInsertionorder fields in the request body; they are mapped to the provider's API. Returns the created AdsInsertionorder.
 
 ### Example Usage
 
@@ -382,11 +382,11 @@ with UnifiedTo(
     res = unified_to.ads.create_ads_insertionorder(request={
         "ads_insertionorder": {
             "created_at": parse_datetime("2021-04-10T06:57:36.611Z"),
-            "id": "bdd0da08-c915-4875-be3a-063e7fb64d4c",
+            "id": "d9d82f2b-7a23-44c2-85d8-f8c463819d02",
             "metadata": [],
             "name": "Kunde, Smith and Reinger",
             "status": shared.AdsInsertionorderStatus.UNSPECIFIED,
-            "updated_at": parse_datetime("2021-04-28T19:47:26.861Z"),
+            "updated_at": parse_datetime("2021-04-28T20:00:34.954Z"),
         },
         "connection_id": "<id>",
     })
@@ -417,7 +417,7 @@ with UnifiedTo(
 
 ## create_ads_organization
 
-Create an organization
+Creates a AdsOrganization. Provide the unified AdsOrganization fields in the request body; they are mapped to the provider's API. Returns the created AdsOrganization.
 
 ### Example Usage
 
@@ -439,13 +439,13 @@ with UnifiedTo(
             "account_number": "LQUJx8zQBW",
             "created_at": parse_datetime("2020-07-23T21:47:11.440Z"),
             "currency": "USD",
-            "id": "be11298c-1287-4575-897d-c5494f4853ec",
+            "id": "f5896d7a-b8b5-4867-832d-d97788717610",
             "managers": [],
             "metadata": [],
             "name": "Ankunding Inc",
             "status": shared.AdsOrganizationStatus.PROCESSING,
             "timezone": "Europe/Chisinau",
-            "updated_at": parse_datetime("2026-03-29T03:00:12.447Z"),
+            "updated_at": parse_datetime("2026-03-30T00:42:16.467Z"),
         },
         "connection_id": "<id>",
     })
@@ -476,7 +476,7 @@ with UnifiedTo(
 
 ## get_ads_ad
 
-Retrieve an ad
+Retrieves a single AdsAd by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -523,7 +523,7 @@ with UnifiedTo(
 
 ## get_ads_asset
 
-Retrieve an asset
+Retrieves a single AdsAsset by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -570,7 +570,7 @@ with UnifiedTo(
 
 ## get_ads_campaign
 
-Retrieve a campaign
+Retrieves a single AdsCampaign by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -617,7 +617,7 @@ with UnifiedTo(
 
 ## get_ads_creative
 
-Retrieve a creative
+Retrieves a single AdsCreative by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -664,7 +664,7 @@ with UnifiedTo(
 
 ## get_ads_group
 
-Retrieve a group
+Retrieves a single AdsGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -711,7 +711,7 @@ with UnifiedTo(
 
 ## get_ads_insertionorder
 
-Retrieve an insertionorder
+Retrieves a single AdsInsertionorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -758,7 +758,7 @@ with UnifiedTo(
 
 ## get_ads_organization
 
-Retrieve an organization
+Retrieves a single AdsOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -805,7 +805,7 @@ with UnifiedTo(
 
 ## get_ads_promoted
 
-Retrieve a promoted
+Retrieves a single AdsPromoted by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -852,7 +852,7 @@ with UnifiedTo(
 
 ## get_ads_target
 
-Retrieve a target
+Retrieves a single AdsTarget by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -899,7 +899,7 @@ with UnifiedTo(
 
 ## list_ads_ads
 
-List all ads
+Returns a list of AdsAds. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -945,7 +945,7 @@ with UnifiedTo(
 
 ## list_ads_assets
 
-List all assets
+Returns a list of AdsAssets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -991,7 +991,7 @@ with UnifiedTo(
 
 ## list_ads_campaigns
 
-List all campaigns
+Returns a list of AdsCampaigns. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1037,7 +1037,7 @@ with UnifiedTo(
 
 ## list_ads_creatives
 
-List all creatives
+Returns a list of AdsCreatives. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1083,7 +1083,7 @@ with UnifiedTo(
 
 ## list_ads_groups
 
-List all groups
+Returns a list of AdsGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1129,7 +1129,7 @@ with UnifiedTo(
 
 ## list_ads_insertionorders
 
-List all insertionorders
+Returns a list of AdsInsertionorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1175,7 +1175,7 @@ with UnifiedTo(
 
 ## list_ads_organizations
 
-List all organizations
+Returns a list of AdsOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1221,7 +1221,7 @@ with UnifiedTo(
 
 ## list_ads_promoteds
 
-List all promoteds
+Returns a list of AdsPromoteds. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1267,7 +1267,7 @@ with UnifiedTo(
 
 ## list_ads_reports
 
-List all reports
+Returns a list of AdsReports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1313,7 +1313,7 @@ with UnifiedTo(
 
 ## list_ads_targets
 
-List all targets
+Returns a list of AdsTargets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1359,7 +1359,7 @@ with UnifiedTo(
 
 ## patch_ads_ad
 
-Update an ad
+Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request body.
 
 ### Example Usage
 
@@ -1385,11 +1385,11 @@ with UnifiedTo(
             "creative_asset_url": "https://picsum.photos/seed/LwOzrpr9/948/2793",
             "description": "Accedo vespillo carpo dolor decet stillicidium comptus tenuis.",
             "final_url": "https://improbable-sanity.com",
-            "id": "540b17ff-e6d6-41d8-909a-d7c4e9ac40c2",
+            "id": "e492fe18-8c3c-4017-9124-e101e5326ca6",
             "metadata": [],
             "name": "Hermiston Group",
             "status": shared.AdsAdStatus.ARCHIVED,
-            "updated_at": parse_datetime("2024-06-18T13:37:34.425Z"),
+            "updated_at": parse_datetime("2024-06-18T23:21:17.023Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1421,7 +1421,7 @@ with UnifiedTo(
 
 ## patch_ads_campaign
 
-Update a campaign
+Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the request body.
 
 ### Example Usage
 
@@ -1446,18 +1446,18 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-05-21T08:51:41.868Z"),
             "currency": "USD",
             "effective_status": shared.EffectiveStatus.NOT_ELIGIBLE,
-            "end_at": parse_datetime("2025-05-31T23:26:56.734Z"),
-            "id": "15dd6daf-7978-40b5-b066-11670d6a948b",
+            "end_at": parse_datetime("2025-06-01T15:48:31.080Z"),
+            "id": "6667bcc3-55d9-4772-a024-397885a1f44d",
             "labels": [
                 "comedo",
             ],
             "metadata": [],
             "name": "Emard Inc",
-            "start_at": parse_datetime("2022-07-21T10:50:09.916Z"),
+            "start_at": parse_datetime("2022-07-21T11:44:20.752Z"),
             "status": shared.AdsCampaignStatus.PROCESSING_FAILED,
             "targeting": {},
             "total_spend_amount": 2349.8642875347286,
-            "updated_at": parse_datetime("2026-01-01T14:03:42.861Z"),
+            "updated_at": parse_datetime("2026-01-02T09:35:38.822Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1489,7 +1489,7 @@ with UnifiedTo(
 
 ## patch_ads_creative
 
-Update a creative
+Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the request body.
 
 ### Example Usage
 
@@ -1509,7 +1509,7 @@ with UnifiedTo(
     res = unified_to.ads.patch_ads_creative(request={
         "ads_creative": {
             "created_at": parse_datetime("2020-02-17T11:24:51.093Z"),
-            "id": "5bbfc8ac-1890-4e76-814e-e13241aa2283",
+            "id": "1c96b97d-6841-4fe2-8d1b-0daa7ddf2854",
             "labels": [
                 "coma",
                 "accedo",
@@ -1518,7 +1518,7 @@ with UnifiedTo(
             "metadata": [],
             "name": "Brekke, Bradtke and Robel",
             "status": shared.AdsCreativeStatus.PAUSED,
-            "updated_at": parse_datetime("2021-06-27T18:16:31.024Z"),
+            "updated_at": parse_datetime("2021-06-27T23:07:56.013Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1550,7 +1550,7 @@ with UnifiedTo(
 
 ## patch_ads_group
 
-Update a group
+Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the request body.
 
 ### Example Usage
 
@@ -1575,15 +1575,15 @@ with UnifiedTo(
             "created_at": parse_datetime("2019-08-29T17:59:41.045Z"),
             "currency": "USD",
             "effective_status": shared.AdsGroupEffectiveStatus.PAUSED,
-            "end_at": parse_datetime("2026-06-25T01:30:04.152Z"),
-            "id": "763174b7-0ab1-468c-8286-197f2310e707",
+            "end_at": parse_datetime("2026-06-26T00:16:40.530Z"),
+            "id": "2bc07cae-346a-45af-9571-099f47cdbe81",
             "language_locale": "fr-FR",
             "metadata": [],
             "name": "Stark - Baumbach",
-            "start_at": parse_datetime("2026-01-09T06:44:42.781Z"),
+            "start_at": parse_datetime("2026-01-10T03:59:49.894Z"),
             "status": shared.AdsGroupStatus.PROCESSING,
             "targeting": {},
-            "updated_at": parse_datetime("2022-01-13T16:12:20.830Z"),
+            "updated_at": parse_datetime("2022-01-14T00:08:26.792Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1615,7 +1615,7 @@ with UnifiedTo(
 
 ## patch_ads_insertionorder
 
-Update an insertionorder
+Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to change in the request body.
 
 ### Example Usage
 
@@ -1635,11 +1635,11 @@ with UnifiedTo(
     res = unified_to.ads.patch_ads_insertionorder(request={
         "ads_insertionorder": {
             "created_at": parse_datetime("2021-04-10T06:57:36.611Z"),
-            "id": "af783ba9-9dd7-4097-a3cc-009924b3063e",
+            "id": "d8e61816-9b36-4ba0-a417-2c6160c1d42a",
             "metadata": [],
             "name": "Kunde, Smith and Reinger",
             "status": shared.AdsInsertionorderStatus.UNSPECIFIED,
-            "updated_at": parse_datetime("2021-04-28T19:47:26.861Z"),
+            "updated_at": parse_datetime("2021-04-28T20:00:34.954Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1671,7 +1671,7 @@ with UnifiedTo(
 
 ## patch_ads_organization
 
-Update an organization
+Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -1693,13 +1693,13 @@ with UnifiedTo(
             "account_number": "LQUJx8zQBW",
             "created_at": parse_datetime("2020-07-23T21:47:11.440Z"),
             "currency": "USD",
-            "id": "5e7876c5-d3fe-480b-a4ac-b7e50905f03d",
+            "id": "d88adc9e-4dfa-4add-881f-5451e79f73a9",
             "managers": [],
             "metadata": [],
             "name": "Ankunding Inc",
             "status": shared.AdsOrganizationStatus.PROCESSING,
             "timezone": "Europe/Chisinau",
-            "updated_at": parse_datetime("2026-03-29T03:00:12.463Z"),
+            "updated_at": parse_datetime("2026-03-30T00:42:16.483Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1731,7 +1731,7 @@ with UnifiedTo(
 
 ## remove_ads_ad
 
-Remove an ad
+Deletes the AdsAd identified by `id`.
 
 ### Example Usage
 
@@ -1778,7 +1778,7 @@ with UnifiedTo(
 
 ## remove_ads_campaign
 
-Remove a campaign
+Deletes the AdsCampaign identified by `id`.
 
 ### Example Usage
 
@@ -1825,7 +1825,7 @@ with UnifiedTo(
 
 ## remove_ads_creative
 
-Remove a creative
+Deletes the AdsCreative identified by `id`.
 
 ### Example Usage
 
@@ -1872,7 +1872,7 @@ with UnifiedTo(
 
 ## remove_ads_group
 
-Remove a group
+Deletes the AdsGroup identified by `id`.
 
 ### Example Usage
 
@@ -1919,7 +1919,7 @@ with UnifiedTo(
 
 ## remove_ads_insertionorder
 
-Remove an insertionorder
+Deletes the AdsInsertionorder identified by `id`.
 
 ### Example Usage
 
@@ -1966,7 +1966,7 @@ with UnifiedTo(
 
 ## remove_ads_organization
 
-Remove an organization
+Deletes the AdsOrganization identified by `id`.
 
 ### Example Usage
 
@@ -2013,7 +2013,7 @@ with UnifiedTo(
 
 ## update_ads_ad
 
-Update an ad
+Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request body.
 
 ### Example Usage
 
@@ -2039,11 +2039,11 @@ with UnifiedTo(
             "creative_asset_url": "https://picsum.photos/seed/LwOzrpr9/948/2793",
             "description": "Accedo vespillo carpo dolor decet stillicidium comptus tenuis.",
             "final_url": "https://improbable-sanity.com",
-            "id": "540b17ff-e6d6-41d8-909a-d7c4e9ac40c2",
+            "id": "e492fe18-8c3c-4017-9124-e101e5326ca6",
             "metadata": [],
             "name": "Hermiston Group",
             "status": shared.AdsAdStatus.ARCHIVED,
-            "updated_at": parse_datetime("2024-06-18T13:37:34.425Z"),
+            "updated_at": parse_datetime("2024-06-18T23:21:17.023Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2075,7 +2075,7 @@ with UnifiedTo(
 
 ## update_ads_campaign
 
-Update a campaign
+Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the request body.
 
 ### Example Usage
 
@@ -2100,18 +2100,18 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-05-21T08:51:41.868Z"),
             "currency": "USD",
             "effective_status": shared.EffectiveStatus.NOT_ELIGIBLE,
-            "end_at": parse_datetime("2025-05-31T23:26:56.734Z"),
-            "id": "15dd6daf-7978-40b5-b066-11670d6a948b",
+            "end_at": parse_datetime("2025-06-01T15:48:31.080Z"),
+            "id": "6667bcc3-55d9-4772-a024-397885a1f44d",
             "labels": [
                 "comedo",
             ],
             "metadata": [],
             "name": "Emard Inc",
-            "start_at": parse_datetime("2022-07-21T10:50:09.916Z"),
+            "start_at": parse_datetime("2022-07-21T11:44:20.752Z"),
             "status": shared.AdsCampaignStatus.PROCESSING_FAILED,
             "targeting": {},
             "total_spend_amount": 2349.8642875347286,
-            "updated_at": parse_datetime("2026-01-01T14:03:42.861Z"),
+            "updated_at": parse_datetime("2026-01-02T09:35:38.822Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2143,7 +2143,7 @@ with UnifiedTo(
 
 ## update_ads_creative
 
-Update a creative
+Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the request body.
 
 ### Example Usage
 
@@ -2163,7 +2163,7 @@ with UnifiedTo(
     res = unified_to.ads.update_ads_creative(request={
         "ads_creative": {
             "created_at": parse_datetime("2020-02-17T11:24:51.093Z"),
-            "id": "5bbfc8ac-1890-4e76-814e-e13241aa2283",
+            "id": "1c96b97d-6841-4fe2-8d1b-0daa7ddf2854",
             "labels": [
                 "coma",
                 "accedo",
@@ -2172,7 +2172,7 @@ with UnifiedTo(
             "metadata": [],
             "name": "Brekke, Bradtke and Robel",
             "status": shared.AdsCreativeStatus.PAUSED,
-            "updated_at": parse_datetime("2021-06-27T18:16:31.024Z"),
+            "updated_at": parse_datetime("2021-06-27T23:07:56.013Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2204,7 +2204,7 @@ with UnifiedTo(
 
 ## update_ads_group
 
-Update a group
+Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the request body.
 
 ### Example Usage
 
@@ -2229,15 +2229,15 @@ with UnifiedTo(
             "created_at": parse_datetime("2019-08-29T17:59:41.045Z"),
             "currency": "USD",
             "effective_status": shared.AdsGroupEffectiveStatus.PAUSED,
-            "end_at": parse_datetime("2026-06-25T01:30:04.152Z"),
-            "id": "763174b7-0ab1-468c-8286-197f2310e707",
+            "end_at": parse_datetime("2026-06-26T00:16:40.530Z"),
+            "id": "2bc07cae-346a-45af-9571-099f47cdbe81",
             "language_locale": "fr-FR",
             "metadata": [],
             "name": "Stark - Baumbach",
-            "start_at": parse_datetime("2026-01-09T06:44:42.781Z"),
+            "start_at": parse_datetime("2026-01-10T03:59:49.894Z"),
             "status": shared.AdsGroupStatus.PROCESSING,
             "targeting": {},
-            "updated_at": parse_datetime("2022-01-13T16:12:20.830Z"),
+            "updated_at": parse_datetime("2022-01-14T00:08:26.792Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2269,7 +2269,7 @@ with UnifiedTo(
 
 ## update_ads_insertionorder
 
-Update an insertionorder
+Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to change in the request body.
 
 ### Example Usage
 
@@ -2289,11 +2289,11 @@ with UnifiedTo(
     res = unified_to.ads.update_ads_insertionorder(request={
         "ads_insertionorder": {
             "created_at": parse_datetime("2021-04-10T06:57:36.611Z"),
-            "id": "af783ba9-9dd7-4097-a3cc-009924b3063e",
+            "id": "d8e61816-9b36-4ba0-a417-2c6160c1d42a",
             "metadata": [],
             "name": "Kunde, Smith and Reinger",
             "status": shared.AdsInsertionorderStatus.UNSPECIFIED,
-            "updated_at": parse_datetime("2021-04-28T19:47:26.861Z"),
+            "updated_at": parse_datetime("2021-04-28T20:00:34.954Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2325,7 +2325,7 @@ with UnifiedTo(
 
 ## update_ads_organization
 
-Update an organization
+Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -2347,13 +2347,13 @@ with UnifiedTo(
             "account_number": "LQUJx8zQBW",
             "created_at": parse_datetime("2020-07-23T21:47:11.440Z"),
             "currency": "USD",
-            "id": "5e7876c5-d3fe-480b-a4ac-b7e50905f03d",
+            "id": "d88adc9e-4dfa-4add-881f-5451e79f73a9",
             "managers": [],
             "metadata": [],
             "name": "Ankunding Inc",
             "status": shared.AdsOrganizationStatus.PROCESSING,
             "timezone": "Europe/Chisinau",
-            "updated_at": parse_datetime("2026-03-29T03:00:12.463Z"),
+            "updated_at": parse_datetime("2026-03-30T00:42:16.483Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

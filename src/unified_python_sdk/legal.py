@@ -24,6 +24,8 @@ class Legal(BaseSDK):
     ) -> operations.CreateLegalExpenseResponse:
         r"""Create an expense
 
+        Creates a LegalExpense. Provide the unified LegalExpense fields in the request body; they are mapped to the provider's API. Returns the created LegalExpense.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -118,6 +120,8 @@ class Legal(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateLegalExpenseResponse:
         r"""Create an expense
+
+        Creates a LegalExpense. Provide the unified LegalExpense fields in the request body; they are mapped to the provider's API. Returns the created LegalExpense.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -214,6 +218,8 @@ class Legal(BaseSDK):
     ) -> operations.CreateLegalMatterResponse:
         r"""Create a matter
 
+        Creates a LegalMatter. Provide the unified LegalMatter fields in the request body; they are mapped to the provider's API. Returns the created LegalMatter.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -309,6 +315,8 @@ class Legal(BaseSDK):
     ) -> operations.CreateLegalMatterResponse:
         r"""Create a matter
 
+        Creates a LegalMatter. Provide the unified LegalMatter fields in the request body; they are mapped to the provider's API. Returns the created LegalMatter.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -403,6 +411,8 @@ class Legal(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateLegalPracticeareaResponse:
         r"""Create a practicearea
+
+        Creates a LegalPracticearea. Provide the unified LegalPracticearea fields in the request body; they are mapped to the provider's API. Returns the created LegalPracticearea.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -505,6 +515,8 @@ class Legal(BaseSDK):
     ) -> operations.CreateLegalPracticeareaResponse:
         r"""Create a practicearea
 
+        Creates a LegalPracticearea. Provide the unified LegalPracticearea fields in the request body; they are mapped to the provider's API. Returns the created LegalPracticearea.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -606,6 +618,8 @@ class Legal(BaseSDK):
     ) -> operations.CreateLegalTimeentryResponse:
         r"""Create a timeentry
 
+        Creates a LegalTimeentry. Provide the unified LegalTimeentry fields in the request body; they are mapped to the provider's API. Returns the created LegalTimeentry.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -700,6 +714,8 @@ class Legal(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateLegalTimeentryResponse:
         r"""Create a timeentry
+
+        Creates a LegalTimeentry. Provide the unified LegalTimeentry fields in the request body; they are mapped to the provider's API. Returns the created LegalTimeentry.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -796,6 +812,8 @@ class Legal(BaseSDK):
     ) -> operations.GetLegalExpenseResponse:
         r"""Retrieve an expense
 
+        Retrieves a single LegalExpense by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -888,6 +906,8 @@ class Legal(BaseSDK):
     ) -> operations.GetLegalExpenseResponse:
         r"""Retrieve an expense
 
+        Retrieves a single LegalExpense by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -979,6 +999,8 @@ class Legal(BaseSDK):
     ) -> operations.GetLegalMatterResponse:
         r"""Retrieve a matter
 
+        Retrieves a single LegalMatter by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1069,6 +1091,8 @@ class Legal(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetLegalMatterResponse:
         r"""Retrieve a matter
+
+        Retrieves a single LegalMatter by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1162,6 +1186,8 @@ class Legal(BaseSDK):
     ) -> operations.GetLegalPracticeareaResponse:
         r"""Retrieve a practicearea
 
+        Retrieves a single LegalPracticearea by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1253,6 +1279,8 @@ class Legal(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetLegalPracticeareaResponse:
         r"""Retrieve a practicearea
+
+        Retrieves a single LegalPracticearea by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1346,6 +1374,8 @@ class Legal(BaseSDK):
     ) -> operations.GetLegalTimeentryResponse:
         r"""Retrieve a timeentry
 
+        Retrieves a single LegalTimeentry by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1437,6 +1467,8 @@ class Legal(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetLegalTimeentryResponse:
         r"""Retrieve a timeentry
+
+        Retrieves a single LegalTimeentry by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1530,6 +1562,8 @@ class Legal(BaseSDK):
     ) -> operations.ListLegalExpensesResponse:
         r"""List all expenses
 
+        Returns a list of LegalExpenses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1621,6 +1655,8 @@ class Legal(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListLegalExpensesResponse:
         r"""List all expenses
+
+        Returns a list of LegalExpenses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1714,6 +1750,8 @@ class Legal(BaseSDK):
     ) -> operations.ListLegalMattersResponse:
         r"""List all matters
 
+        Returns a list of LegalMatters. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1805,6 +1843,8 @@ class Legal(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListLegalMattersResponse:
         r"""List all matters
+
+        Returns a list of LegalMatters. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1898,6 +1938,8 @@ class Legal(BaseSDK):
     ) -> operations.ListLegalPracticeareasResponse:
         r"""List all practiceareas
 
+        Returns a list of LegalPracticeareas. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1989,6 +2031,8 @@ class Legal(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListLegalPracticeareasResponse:
         r"""List all practiceareas
+
+        Returns a list of LegalPracticeareas. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2082,6 +2126,8 @@ class Legal(BaseSDK):
     ) -> operations.ListLegalTimeentriesResponse:
         r"""List all timeentries
 
+        Returns a list of LegalTimeentries. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2174,6 +2220,8 @@ class Legal(BaseSDK):
     ) -> operations.ListLegalTimeentriesResponse:
         r"""List all timeentries
 
+        Returns a list of LegalTimeentries. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2265,6 +2313,8 @@ class Legal(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchLegalExpenseResponse:
         r"""Update an expense
+
+        Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2361,6 +2411,8 @@ class Legal(BaseSDK):
     ) -> operations.PatchLegalExpenseResponse:
         r"""Update an expense
 
+        Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2455,6 +2507,8 @@ class Legal(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchLegalMatterResponse:
         r"""Update a matter
+
+        Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2551,6 +2605,8 @@ class Legal(BaseSDK):
     ) -> operations.PatchLegalMatterResponse:
         r"""Update a matter
 
+        Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2645,6 +2701,8 @@ class Legal(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchLegalPracticeareaResponse:
         r"""Update a practicearea
+
+        Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2745,6 +2803,8 @@ class Legal(BaseSDK):
     ) -> operations.PatchLegalPracticeareaResponse:
         r"""Update a practicearea
 
+        Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2844,6 +2904,8 @@ class Legal(BaseSDK):
     ) -> operations.PatchLegalTimeentryResponse:
         r"""Update a timeentry
 
+        Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2939,6 +3001,8 @@ class Legal(BaseSDK):
     ) -> operations.PatchLegalTimeentryResponse:
         r"""Update a timeentry
 
+        Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3033,6 +3097,8 @@ class Legal(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveLegalExpenseResponse:
         r"""Remove an expense
+
+        Deletes the LegalExpense identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3131,6 +3197,8 @@ class Legal(BaseSDK):
     ) -> operations.RemoveLegalExpenseResponse:
         r"""Remove an expense
 
+        Deletes the LegalExpense identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3227,6 +3295,8 @@ class Legal(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveLegalMatterResponse:
         r"""Remove a matter
+
+        Deletes the LegalMatter identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3325,6 +3395,8 @@ class Legal(BaseSDK):
     ) -> operations.RemoveLegalMatterResponse:
         r"""Remove a matter
 
+        Deletes the LegalMatter identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3421,6 +3493,8 @@ class Legal(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveLegalPracticeareaResponse:
         r"""Remove a practicearea
+
+        Deletes the LegalPracticearea identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3521,6 +3595,8 @@ class Legal(BaseSDK):
     ) -> operations.RemoveLegalPracticeareaResponse:
         r"""Remove a practicearea
 
+        Deletes the LegalPracticearea identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3620,6 +3696,8 @@ class Legal(BaseSDK):
     ) -> operations.RemoveLegalTimeentryResponse:
         r"""Remove a timeentry
 
+        Deletes the LegalTimeentry identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3716,6 +3794,8 @@ class Legal(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveLegalTimeentryResponse:
         r"""Remove a timeentry
+
+        Deletes the LegalTimeentry identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3814,6 +3894,8 @@ class Legal(BaseSDK):
     ) -> operations.UpdateLegalExpenseResponse:
         r"""Update an expense
 
+        Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3908,6 +3990,8 @@ class Legal(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateLegalExpenseResponse:
         r"""Update an expense
+
+        Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4004,6 +4088,8 @@ class Legal(BaseSDK):
     ) -> operations.UpdateLegalMatterResponse:
         r"""Update a matter
 
+        Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4099,6 +4185,8 @@ class Legal(BaseSDK):
     ) -> operations.UpdateLegalMatterResponse:
         r"""Update a matter
 
+        Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4193,6 +4281,8 @@ class Legal(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateLegalPracticeareaResponse:
         r"""Update a practicearea
+
+        Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4295,6 +4385,8 @@ class Legal(BaseSDK):
     ) -> operations.UpdateLegalPracticeareaResponse:
         r"""Update a practicearea
 
+        Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4396,6 +4488,8 @@ class Legal(BaseSDK):
     ) -> operations.UpdateLegalTimeentryResponse:
         r"""Update a timeentry
 
+        Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4490,6 +4584,8 @@ class Legal(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateLegalTimeentryResponse:
         r"""Update a timeentry
+
+        Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

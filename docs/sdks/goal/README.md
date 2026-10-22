@@ -13,7 +13,7 @@
 
 ## create_performance_goal
 
-Create a goal
+Creates a PerformanceGoal. Provide the unified PerformanceGoal fields in the request body; they are mapped to the provider's API. Returns the created PerformanceGoal.
 
 ### Example Usage
 
@@ -34,14 +34,14 @@ with UnifiedTo(
         "performance_goal": {
             "created_at": parse_datetime("2020-01-09T20:43:07.380Z"),
             "description": "Suscipit suspendo vulnero vel facere valeo vallum degero.",
-            "due_at": parse_datetime("2026-07-29T18:19:55.873Z"),
-            "id": "4cb5406f-cb55-45d4-b66d-c89760b28afb",
+            "due_at": parse_datetime("2026-07-30T17:23:07.289Z"),
+            "id": "2af9ac23-5de2-4a56-9530-1e0cd5867ad9",
             "metadata": [],
             "milestones": [
                 {
                     "current_value": 10.0,
-                    "due_at": parse_datetime("2026-06-03T21:01:53.184Z"),
-                    "id": "fef70ee5-5f88-441b-bd57-c2e070cd665a",
+                    "due_at": parse_datetime("2026-06-04T19:32:46.289Z"),
+                    "id": "b0e89a29-773a-4b00-bf37-835e0da3250e",
                     "is_completed": True,
                     "name": "Team-oriented secondary matrix",
                     "target_value": 32.0,
@@ -50,8 +50,8 @@ with UnifiedTo(
                 },
                 {
                     "current_value": 0.0,
-                    "due_at": parse_datetime("2026-08-08T11:10:42.948Z"),
-                    "id": "a49900cb-4722-47ad-8c66-99e6b4557005",
+                    "due_at": parse_datetime("2026-08-09T10:19:30.851Z"),
+                    "id": "2fafc757-3e25-4370-9b17-0dae0f996db8",
                     "is_completed": True,
                     "name": "Exclusive client-server conglomeration",
                     "target_value": 32.0,
@@ -60,8 +60,8 @@ with UnifiedTo(
                 {
                     "current_value": 31.0,
                     "description": "Hic explicabo odit.",
-                    "due_at": parse_datetime("2026-10-10T10:00:35.461Z"),
-                    "id": "7fc533a2-6bc2-40d0-91ce-c6e6ceab0b08",
+                    "due_at": parse_datetime("2026-10-11T09:45:46.663Z"),
+                    "id": "caca93b8-8244-486e-a5f5-464bf85d5f66",
                     "is_completed": True,
                     "name": "Synchronised immersive success",
                     "target_value": 32.0,
@@ -70,10 +70,10 @@ with UnifiedTo(
             ],
             "name": "Proactive national protocol",
             "progress": 3.0,
-            "start_at": parse_datetime("2025-07-23T09:07:47.890Z"),
+            "start_at": parse_datetime("2025-07-24T04:36:18.857Z"),
             "status": shared.PerformanceGoalStatus.CLOSED,
             "type": shared.PerformanceGoalSchemasType.COMPANY,
-            "updated_at": parse_datetime("2022-09-13T01:27:06.648Z"),
+            "updated_at": parse_datetime("2022-09-13T10:51:58.145Z"),
             "weight": 5.0,
         },
         "connection_id": "<id>",
@@ -105,7 +105,7 @@ with UnifiedTo(
 
 ## get_performance_goal
 
-Retrieve a goal
+Retrieves a single PerformanceGoal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -152,7 +152,7 @@ with UnifiedTo(
 
 ## list_performance_goals
 
-List all goals
+Returns a list of PerformanceGoals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -198,7 +198,7 @@ with UnifiedTo(
 
 ## patch_performance_goal
 
-Update a goal
+Updates the PerformanceGoal identified by `id`. Provide the unified PerformanceGoal fields to change in the request body.
 
 ### Example Usage
 
@@ -219,14 +219,14 @@ with UnifiedTo(
         "performance_goal": {
             "created_at": parse_datetime("2020-01-09T20:43:07.380Z"),
             "description": "Suscipit suspendo vulnero vel facere valeo vallum degero.",
-            "due_at": parse_datetime("2026-07-29T18:19:55.896Z"),
-            "id": "53840be8-441c-4f7a-a4a3-91e9ede540ea",
+            "due_at": parse_datetime("2026-07-30T17:23:07.323Z"),
+            "id": "0e3120ea-cef1-4683-a066-891e77bff314",
             "metadata": [],
             "milestones": [
                 {
                     "current_value": 10.0,
-                    "due_at": parse_datetime("2026-06-03T21:01:53.207Z"),
-                    "id": "d6b8ec78-7892-484f-998c-22906e03185c",
+                    "due_at": parse_datetime("2026-06-04T19:32:46.322Z"),
+                    "id": "5806bb07-8f07-4de2-82ed-696f039bd333",
                     "is_completed": True,
                     "name": "Team-oriented secondary matrix",
                     "target_value": 32.0,
@@ -235,8 +235,8 @@ with UnifiedTo(
                 },
                 {
                     "current_value": 0.0,
-                    "due_at": parse_datetime("2026-08-08T11:10:42.971Z"),
-                    "id": "30a52245-467c-40a2-8344-2be4fb8ae756",
+                    "due_at": parse_datetime("2026-08-09T10:19:30.884Z"),
+                    "id": "af7cdbf3-3076-498c-8cd5-64936f755cc9",
                     "is_completed": True,
                     "name": "Exclusive client-server conglomeration",
                     "target_value": 32.0,
@@ -245,8 +245,8 @@ with UnifiedTo(
                 {
                     "current_value": 31.0,
                     "description": "Hic explicabo odit.",
-                    "due_at": parse_datetime("2026-10-10T10:00:35.485Z"),
-                    "id": "9e346e90-5d3c-439b-b932-4830de0da729",
+                    "due_at": parse_datetime("2026-10-11T09:45:46.697Z"),
+                    "id": "d01d1dcf-1edb-4339-b4d8-06d3be264e16",
                     "is_completed": True,
                     "name": "Synchronised immersive success",
                     "target_value": 32.0,
@@ -255,10 +255,10 @@ with UnifiedTo(
             ],
             "name": "Proactive national protocol",
             "progress": 3.0,
-            "start_at": parse_datetime("2025-07-23T09:07:47.910Z"),
+            "start_at": parse_datetime("2025-07-24T04:36:18.885Z"),
             "status": shared.PerformanceGoalStatus.CLOSED,
             "type": shared.PerformanceGoalSchemasType.COMPANY,
-            "updated_at": parse_datetime("2022-09-13T01:27:06.658Z"),
+            "updated_at": parse_datetime("2022-09-13T10:51:58.159Z"),
             "weight": 5.0,
         },
         "connection_id": "<id>",
@@ -291,7 +291,7 @@ with UnifiedTo(
 
 ## remove_performance_goal
 
-Remove a goal
+Deletes the PerformanceGoal identified by `id`.
 
 ### Example Usage
 
@@ -338,7 +338,7 @@ with UnifiedTo(
 
 ## update_performance_goal
 
-Update a goal
+Updates the PerformanceGoal identified by `id`. Provide the unified PerformanceGoal fields to change in the request body.
 
 ### Example Usage
 
@@ -359,14 +359,14 @@ with UnifiedTo(
         "performance_goal": {
             "created_at": parse_datetime("2020-01-09T20:43:07.380Z"),
             "description": "Suscipit suspendo vulnero vel facere valeo vallum degero.",
-            "due_at": parse_datetime("2026-07-29T18:19:55.896Z"),
-            "id": "53840be8-441c-4f7a-a4a3-91e9ede540ea",
+            "due_at": parse_datetime("2026-07-30T17:23:07.323Z"),
+            "id": "0e3120ea-cef1-4683-a066-891e77bff314",
             "metadata": [],
             "milestones": [
                 {
                     "current_value": 10.0,
-                    "due_at": parse_datetime("2026-06-03T21:01:53.207Z"),
-                    "id": "d6b8ec78-7892-484f-998c-22906e03185c",
+                    "due_at": parse_datetime("2026-06-04T19:32:46.322Z"),
+                    "id": "5806bb07-8f07-4de2-82ed-696f039bd333",
                     "is_completed": True,
                     "name": "Team-oriented secondary matrix",
                     "target_value": 32.0,
@@ -375,8 +375,8 @@ with UnifiedTo(
                 },
                 {
                     "current_value": 0.0,
-                    "due_at": parse_datetime("2026-08-08T11:10:42.971Z"),
-                    "id": "30a52245-467c-40a2-8344-2be4fb8ae756",
+                    "due_at": parse_datetime("2026-08-09T10:19:30.884Z"),
+                    "id": "af7cdbf3-3076-498c-8cd5-64936f755cc9",
                     "is_completed": True,
                     "name": "Exclusive client-server conglomeration",
                     "target_value": 32.0,
@@ -385,8 +385,8 @@ with UnifiedTo(
                 {
                     "current_value": 31.0,
                     "description": "Hic explicabo odit.",
-                    "due_at": parse_datetime("2026-10-10T10:00:35.485Z"),
-                    "id": "9e346e90-5d3c-439b-b932-4830de0da729",
+                    "due_at": parse_datetime("2026-10-11T09:45:46.697Z"),
+                    "id": "d01d1dcf-1edb-4339-b4d8-06d3be264e16",
                     "is_completed": True,
                     "name": "Synchronised immersive success",
                     "target_value": 32.0,
@@ -395,10 +395,10 @@ with UnifiedTo(
             ],
             "name": "Proactive national protocol",
             "progress": 3.0,
-            "start_at": parse_datetime("2025-07-23T09:07:47.910Z"),
+            "start_at": parse_datetime("2025-07-24T04:36:18.885Z"),
             "status": shared.PerformanceGoalStatus.CLOSED,
             "type": shared.PerformanceGoalSchemasType.COMPANY,
-            "updated_at": parse_datetime("2022-09-13T01:27:06.658Z"),
+            "updated_at": parse_datetime("2022-09-13T10:51:58.159Z"),
             "weight": 5.0,
         },
         "connection_id": "<id>",

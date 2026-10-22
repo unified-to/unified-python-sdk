@@ -25,7 +25,7 @@
 
 ## create_ats_document
 
-Create a document
+Creates a AtsDocument. Provide the unified AtsDocument fields in the request body; they are mapped to the provider's API. Returns the created AtsDocument.
 
 ### Example Usage
 
@@ -47,10 +47,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-08-20T08:00:27.437Z"),
             "document_url": "https://vengeful-lashes.biz",
             "filename": "lonzo_schowalter_resume.pdf",
-            "id": "1bb55c59-99ba-4c6a-be78-a8f1155ed818",
+            "id": "53b6fefe-210f-464d-a3c2-ceb0cc0e755d",
             "metadata": [],
             "type": shared.AtsDocumentType.COVER_LETTER,
-            "updated_at": parse_datetime("2022-12-07T04:58:38.769Z"),
+            "updated_at": parse_datetime("2022-12-07T10:57:57.857Z"),
         },
         "connection_id": "<id>",
     })
@@ -81,7 +81,7 @@ with UnifiedTo(
 
 ## create_hris_document
 
-Create a document
+Creates a HrisDocument. Provide the unified HrisDocument fields in the request body; they are mapped to the provider's API. Returns the created HrisDocument.
 
 ### Example Usage
 
@@ -103,10 +103,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-10-27T11:47:26.086Z"),
             "document_url": "https://sore-decision.biz/",
             "filename": "ridge_forager.xsl",
-            "id": "13731479-d0c5-42c1-a5fe-d45efda6525f",
+            "id": "4fcc4bf2-5c06-437d-8c9c-cb0f58e4ac41",
             "metadata": [],
             "type": shared.HrisDocumentType.POLICY,
-            "updated_at": parse_datetime("2025-10-11T14:02:19.836Z"),
+            "updated_at": parse_datetime("2025-10-12T07:45:12.953Z"),
         },
         "connection_id": "<id>",
     })
@@ -137,7 +137,7 @@ with UnifiedTo(
 
 ## create_signing_document
 
-Create a document
+Creates a SigningDocument. Provide the unified SigningDocument fields in the request body; they are mapped to the provider's API. Returns the created SigningDocument.
 
 ### Example Usage
 
@@ -159,12 +159,12 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-05-02T09:35:23.679Z"),
             "description": "Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.",
             "expires_at": parse_datetime("2021-06-04T01:21:34.949Z"),
-            "id": "a1b52799-848b-4bd7-88fc-f66cf62300ad",
+            "id": "aa295198-6095-4850-b56a-e9c7ab1f7094",
             "metadata": [],
             "name": "Denesik Group NDA",
-            "sent_at": parse_datetime("2022-06-29T12:04:54.658Z"),
+            "sent_at": parse_datetime("2022-06-29T17:08:04.191Z"),
             "status": shared.SigningDocumentStatus.DRAFT,
-            "updated_at": parse_datetime("2025-09-02T22:24:49.198Z"),
+            "updated_at": parse_datetime("2025-09-03T17:20:09.450Z"),
         },
         "connection_id": "<id>",
     })
@@ -195,7 +195,7 @@ with UnifiedTo(
 
 ## get_ats_document
 
-Retrieve a document
+Retrieves a single AtsDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -242,7 +242,7 @@ with UnifiedTo(
 
 ## get_hris_document
 
-Retrieve a document
+Retrieves a single HrisDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -289,7 +289,7 @@ with UnifiedTo(
 
 ## get_signing_document
 
-Retrieve a document
+Retrieves a single SigningDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -336,7 +336,7 @@ with UnifiedTo(
 
 ## list_ats_documents
 
-List all documents
+Returns a list of AtsDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -382,7 +382,7 @@ with UnifiedTo(
 
 ## list_hris_documents
 
-List all documents
+Returns a list of HrisDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -428,7 +428,7 @@ with UnifiedTo(
 
 ## list_signing_documents
 
-List all documents
+Returns a list of SigningDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -474,7 +474,7 @@ with UnifiedTo(
 
 ## patch_ats_document
 
-Update a document
+Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -496,10 +496,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-08-20T08:00:27.437Z"),
             "document_url": "https://vengeful-lashes.biz",
             "filename": "lonzo_schowalter_resume.pdf",
-            "id": "bb7df27b-3a46-431f-a4d7-5f8398e0e9a6",
+            "id": "5631ea6c-256d-485c-af43-f26a1cbf1216",
             "metadata": [],
             "type": shared.AtsDocumentType.COVER_LETTER,
-            "updated_at": parse_datetime("2022-12-07T04:58:38.774Z"),
+            "updated_at": parse_datetime("2022-12-07T10:57:57.861Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -531,7 +531,7 @@ with UnifiedTo(
 
 ## patch_hris_document
 
-Update a document
+Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -553,10 +553,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-10-27T11:47:26.086Z"),
             "document_url": "https://sore-decision.biz/",
             "filename": "ridge_forager.xsl",
-            "id": "ddb29192-c79e-4a0d-bf27-de63fd798327",
+            "id": "7d80c112-dc78-40ac-9983-b4e0e520055f",
             "metadata": [],
             "type": shared.HrisDocumentType.POLICY,
-            "updated_at": parse_datetime("2025-10-11T14:02:19.845Z"),
+            "updated_at": parse_datetime("2025-10-12T07:45:12.961Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -588,7 +588,7 @@ with UnifiedTo(
 
 ## patch_signing_document
 
-Update a document
+Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -610,12 +610,12 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-05-02T09:35:23.679Z"),
             "description": "Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.",
             "expires_at": parse_datetime("2021-06-04T01:21:34.949Z"),
-            "id": "b0ff04ad-b7b8-4532-b0a1-9da274cd49c1",
+            "id": "07d3ae8f-b654-491c-a076-475c4af2897e",
             "metadata": [],
             "name": "Denesik Group NDA",
-            "sent_at": parse_datetime("2022-06-29T12:04:54.661Z"),
+            "sent_at": parse_datetime("2022-06-29T17:08:04.197Z"),
             "status": shared.SigningDocumentStatus.DRAFT,
-            "updated_at": parse_datetime("2025-09-02T22:24:49.211Z"),
+            "updated_at": parse_datetime("2025-09-03T17:20:09.472Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -647,7 +647,7 @@ with UnifiedTo(
 
 ## remove_ats_document
 
-Remove a document
+Deletes the AtsDocument identified by `id`.
 
 ### Example Usage
 
@@ -694,7 +694,7 @@ with UnifiedTo(
 
 ## remove_hris_document
 
-Remove a document
+Deletes the HrisDocument identified by `id`.
 
 ### Example Usage
 
@@ -741,7 +741,7 @@ with UnifiedTo(
 
 ## remove_signing_document
 
-Remove a document
+Deletes the SigningDocument identified by `id`.
 
 ### Example Usage
 
@@ -788,7 +788,7 @@ with UnifiedTo(
 
 ## update_ats_document
 
-Update a document
+Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -810,10 +810,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-08-20T08:00:27.437Z"),
             "document_url": "https://vengeful-lashes.biz",
             "filename": "lonzo_schowalter_resume.pdf",
-            "id": "bb7df27b-3a46-431f-a4d7-5f8398e0e9a6",
+            "id": "5631ea6c-256d-485c-af43-f26a1cbf1216",
             "metadata": [],
             "type": shared.AtsDocumentType.COVER_LETTER,
-            "updated_at": parse_datetime("2022-12-07T04:58:38.774Z"),
+            "updated_at": parse_datetime("2022-12-07T10:57:57.861Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -845,7 +845,7 @@ with UnifiedTo(
 
 ## update_hris_document
 
-Update a document
+Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -867,10 +867,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-10-27T11:47:26.086Z"),
             "document_url": "https://sore-decision.biz/",
             "filename": "ridge_forager.xsl",
-            "id": "ddb29192-c79e-4a0d-bf27-de63fd798327",
+            "id": "7d80c112-dc78-40ac-9983-b4e0e520055f",
             "metadata": [],
             "type": shared.HrisDocumentType.POLICY,
-            "updated_at": parse_datetime("2025-10-11T14:02:19.845Z"),
+            "updated_at": parse_datetime("2025-10-12T07:45:12.961Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -902,7 +902,7 @@ with UnifiedTo(
 
 ## update_signing_document
 
-Update a document
+Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -924,12 +924,12 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-05-02T09:35:23.679Z"),
             "description": "Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.",
             "expires_at": parse_datetime("2021-06-04T01:21:34.949Z"),
-            "id": "b0ff04ad-b7b8-4532-b0a1-9da274cd49c1",
+            "id": "07d3ae8f-b654-491c-a076-475c4af2897e",
             "metadata": [],
             "name": "Denesik Group NDA",
-            "sent_at": parse_datetime("2022-06-29T12:04:54.661Z"),
+            "sent_at": parse_datetime("2022-06-29T17:08:04.197Z"),
             "status": shared.SigningDocumentStatus.DRAFT,
-            "updated_at": parse_datetime("2025-09-02T22:24:49.211Z"),
+            "updated_at": parse_datetime("2025-09-03T17:20:09.472Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

@@ -13,6 +13,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class AtsDocumentType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""The kind of document"""
+
     RESUME = "RESUME"
     COVER_LETTER = "COVER_LETTER"
     OFFER_PACKET = "OFFER_PACKET"
@@ -24,6 +26,7 @@ class AtsDocumentType(str, Enum, metaclass=utils.OpenEnumMeta):
 class AtsDocumentTypedDict(TypedDict):
     application_id: NotRequired[str]
     candidate_id: NotRequired[str]
+    r"""The ID of the candidate the document belongs to (an AtsCandidate ID)"""
     created_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     document_data: NotRequired[str]
@@ -31,11 +34,13 @@ class AtsDocumentTypedDict(TypedDict):
     document_url: NotRequired[str]
     r"""This link expires after 1 hour."""
     filename: NotRequired[str]
+    r"""The document's file name, including its extension (e.g. resume.pdf)"""
     id: NotRequired[str]
     job_id: NotRequired[str]
     metadata: NotRequired[List[AtsMetadataTypedDict]]
     raw: NotRequired[Dict[str, Any]]
     type: NotRequired[AtsDocumentType]
+    r"""The kind of document"""
     updated_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
@@ -46,6 +51,7 @@ class AtsDocument(BaseModel):
     application_id: Optional[str] = None
 
     candidate_id: Optional[str] = None
+    r"""The ID of the candidate the document belongs to (an AtsCandidate ID)"""
 
     created_at: Optional[datetime] = None
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
@@ -57,6 +63,7 @@ class AtsDocument(BaseModel):
     r"""This link expires after 1 hour."""
 
     filename: Optional[str] = None
+    r"""The document's file name, including its extension (e.g. resume.pdf)"""
 
     id: Optional[str] = None
 
@@ -67,6 +74,7 @@ class AtsDocument(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     type: Optional[AtsDocumentType] = None
+    r"""The kind of document"""
 
     updated_at: Optional[datetime] = None
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""

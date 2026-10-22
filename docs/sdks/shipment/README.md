@@ -13,7 +13,7 @@
 
 ## create_shipping_shipment
 
-Create a shipment
+Creates a ShippingShipment. Provide the unified ShippingShipment fields in the request body; they are mapped to the provider's API. Returns the created ShippingShipment.
 
 ### Example Usage
 
@@ -33,7 +33,7 @@ with UnifiedTo(
     res = unified_to.shipment.create_shipping_shipment(request={
         "shipping_shipment": {
             "created_at": parse_datetime("2022-09-12T03:11:28.960Z"),
-            "id": "b2318947-9282-4a84-9085-ba1a71974235",
+            "id": "0a5cf88a-9ecb-4aef-8699-32f07ffa8215",
             "is_return": False,
             "lineitems": [],
             "metadata": [],
@@ -43,7 +43,7 @@ with UnifiedTo(
             "service_code": "OVERNIGHT",
             "shipped_at": parse_datetime("2022-09-12T07:26:48.479Z"),
             "status": shared.ShippingShipmentStatus.DELIVERED,
-            "updated_at": parse_datetime("2022-11-15T06:46:07.981Z"),
+            "updated_at": parse_datetime("2022-11-15T07:47:20.988Z"),
         },
         "connection_id": "<id>",
     })
@@ -74,7 +74,7 @@ with UnifiedTo(
 
 ## get_shipping_shipment
 
-Retrieve a shipment
+Retrieves a single ShippingShipment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -121,7 +121,7 @@ with UnifiedTo(
 
 ## list_shipping_shipments
 
-List all shipments
+Returns a list of ShippingShipments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -167,7 +167,7 @@ with UnifiedTo(
 
 ## patch_shipping_shipment
 
-Update a shipment
+Updates the ShippingShipment identified by `id`. Provide the unified ShippingShipment fields to change in the request body.
 
 ### Example Usage
 
@@ -187,7 +187,7 @@ with UnifiedTo(
     res = unified_to.shipment.patch_shipping_shipment(request={
         "shipping_shipment": {
             "created_at": parse_datetime("2022-09-12T03:11:28.960Z"),
-            "id": "e49a235a-10e2-41a1-9a49-c9707bbcce4e",
+            "id": "d29b9c53-a7f2-4b7c-a271-5ac5254ed575",
             "is_return": False,
             "lineitems": [],
             "metadata": [],
@@ -197,7 +197,7 @@ with UnifiedTo(
             "service_code": "OVERNIGHT",
             "shipped_at": parse_datetime("2022-09-12T07:26:48.479Z"),
             "status": shared.ShippingShipmentStatus.DELIVERED,
-            "updated_at": parse_datetime("2022-11-15T06:46:07.986Z"),
+            "updated_at": parse_datetime("2022-11-15T07:47:20.993Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -229,7 +229,7 @@ with UnifiedTo(
 
 ## remove_shipping_shipment
 
-Remove a shipment
+Deletes the ShippingShipment identified by `id`.
 
 ### Example Usage
 
@@ -276,7 +276,7 @@ with UnifiedTo(
 
 ## update_shipping_shipment
 
-Update a shipment
+Updates the ShippingShipment identified by `id`. Provide the unified ShippingShipment fields to change in the request body.
 
 ### Example Usage
 
@@ -296,7 +296,7 @@ with UnifiedTo(
     res = unified_to.shipment.update_shipping_shipment(request={
         "shipping_shipment": {
             "created_at": parse_datetime("2022-09-12T03:11:28.960Z"),
-            "id": "e49a235a-10e2-41a1-9a49-c9707bbcce4e",
+            "id": "d29b9c53-a7f2-4b7c-a271-5ac5254ed575",
             "is_return": False,
             "lineitems": [],
             "metadata": [],
@@ -306,7 +306,7 @@ with UnifiedTo(
             "service_code": "OVERNIGHT",
             "shipped_at": parse_datetime("2022-09-12T07:26:48.479Z"),
             "status": shared.ShippingShipmentStatus.DELIVERED,
-            "updated_at": parse_datetime("2022-11-15T06:46:07.986Z"),
+            "updated_at": parse_datetime("2022-11-15T07:47:20.993Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

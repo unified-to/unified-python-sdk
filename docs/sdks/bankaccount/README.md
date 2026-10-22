@@ -13,7 +13,7 @@
 
 ## create_hris_bankaccount
 
-Create a bankaccount
+Creates a HrisBankaccount. Provide the unified HrisBankaccount fields in the request body; they are mapped to the provider's API. Returns the created HrisBankaccount.
 
 ### Example Usage
 
@@ -39,7 +39,7 @@ with UnifiedTo(
             "country_code": "US",
             "created_at": parse_datetime("2019-11-16T16:43:45.976Z"),
             "currency": "USD",
-            "id": "e2038892-394d-4cd3-8268-d4e49767b3c2",
+            "id": "3468ebd9-250e-4abe-9b97-508bf2361433",
             "is_primary": True,
             "metadata": [],
             "name": "Granville Schumm - Checking",
@@ -47,7 +47,7 @@ with UnifiedTo(
             "routing_number": "448650724",
             "split_amount": 98.0,
             "split_type": shared.SplitType.PERCENTAGE,
-            "updated_at": parse_datetime("2025-07-01T06:17:13.672Z"),
+            "updated_at": parse_datetime("2025-07-02T01:38:52.642Z"),
         },
         "connection_id": "<id>",
     })
@@ -78,7 +78,7 @@ with UnifiedTo(
 
 ## get_hris_bankaccount
 
-Retrieve a bankaccount
+Retrieves a single HrisBankaccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -125,7 +125,7 @@ with UnifiedTo(
 
 ## list_hris_bankaccounts
 
-List all bankaccounts
+Returns a list of HrisBankaccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -171,7 +171,7 @@ with UnifiedTo(
 
 ## patch_hris_bankaccount
 
-Update a bankaccount
+Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change in the request body.
 
 ### Example Usage
 
@@ -197,7 +197,7 @@ with UnifiedTo(
             "country_code": "US",
             "created_at": parse_datetime("2019-11-16T16:43:45.976Z"),
             "currency": "USD",
-            "id": "dc2e9a22-22a0-49ce-8a10-395e043bec6c",
+            "id": "b83bd056-9674-4f6e-a525-95182b7b0bd0",
             "is_primary": True,
             "metadata": [],
             "name": "Granville Schumm - Checking",
@@ -205,7 +205,7 @@ with UnifiedTo(
             "routing_number": "448650724",
             "split_amount": 98.0,
             "split_type": shared.SplitType.PERCENTAGE,
-            "updated_at": parse_datetime("2025-07-01T06:17:13.689Z"),
+            "updated_at": parse_datetime("2025-07-02T01:38:52.658Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -237,7 +237,7 @@ with UnifiedTo(
 
 ## remove_hris_bankaccount
 
-Remove a bankaccount
+Deletes the HrisBankaccount identified by `id`.
 
 ### Example Usage
 
@@ -284,7 +284,7 @@ with UnifiedTo(
 
 ## update_hris_bankaccount
 
-Update a bankaccount
+Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change in the request body.
 
 ### Example Usage
 
@@ -310,7 +310,7 @@ with UnifiedTo(
             "country_code": "US",
             "created_at": parse_datetime("2019-11-16T16:43:45.976Z"),
             "currency": "USD",
-            "id": "dc2e9a22-22a0-49ce-8a10-395e043bec6c",
+            "id": "b83bd056-9674-4f6e-a525-95182b7b0bd0",
             "is_primary": True,
             "metadata": [],
             "name": "Granville Schumm - Checking",
@@ -318,7 +318,7 @@ with UnifiedTo(
             "routing_number": "448650724",
             "split_amount": 98.0,
             "split_type": shared.SplitType.PERCENTAGE,
-            "updated_at": parse_datetime("2025-07-01T06:17:13.689Z"),
+            "updated_at": parse_datetime("2025-07-02T01:38:52.658Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

@@ -13,7 +13,7 @@
 
 ## create_hris_deduction
 
-Create a deduction
+Creates a HrisDeduction. Provide the unified HrisDeduction fields in the request body; they are mapped to the provider's API. Returns the created HrisDeduction.
 
 ### Example Usage
 
@@ -39,14 +39,14 @@ with UnifiedTo(
             "employer_type": shared.EmployerType.PERCENTAGE,
             "frequency": shared.HrisDeductionFrequency.ONE_TIME,
             "garnishment_type": shared.GarnishmentType.CHILD_SUPPORT,
-            "id": "617803ec-d9a2-4733-805c-8f1cd4a18958",
+            "id": "a86ffc16-9876-48ec-aaf3-43e7a64c206d",
             "is_active": True,
             "max_amount": 21794.0,
             "metadata": [],
             "notes": "Carmen desidero.",
-            "start_at": parse_datetime("2025-03-15T07:36:56.023Z"),
+            "start_at": parse_datetime("2025-03-16T01:46:40.270Z"),
             "type": shared.HrisDeductionType.FIXED,
-            "updated_at": parse_datetime("2024-03-22T06:56:26.083Z"),
+            "updated_at": parse_datetime("2024-03-22T21:37:00.011Z"),
         },
         "connection_id": "<id>",
     })
@@ -77,7 +77,7 @@ with UnifiedTo(
 
 ## get_hris_deduction
 
-Retrieve a deduction
+Retrieves a single HrisDeduction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -124,7 +124,7 @@ with UnifiedTo(
 
 ## list_hris_deductions
 
-List all deductions
+Returns a list of HrisDeductions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -170,7 +170,7 @@ with UnifiedTo(
 
 ## patch_hris_deduction
 
-Update a deduction
+Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in the request body.
 
 ### Example Usage
 
@@ -196,14 +196,14 @@ with UnifiedTo(
             "employer_type": shared.EmployerType.PERCENTAGE,
             "frequency": shared.HrisDeductionFrequency.ONE_TIME,
             "garnishment_type": shared.GarnishmentType.CHILD_SUPPORT,
-            "id": "d01383a7-87c1-493e-b3b3-164ba724d0ba",
+            "id": "2b0eecf4-4ef5-4c58-952b-20761e9d8c04",
             "is_active": True,
             "max_amount": 21794.0,
             "metadata": [],
             "notes": "Carmen desidero.",
-            "start_at": parse_datetime("2025-03-15T07:36:56.039Z"),
+            "start_at": parse_datetime("2025-03-16T01:46:40.283Z"),
             "type": shared.HrisDeductionType.FIXED,
-            "updated_at": parse_datetime("2024-03-22T06:56:26.096Z"),
+            "updated_at": parse_datetime("2024-03-22T21:37:00.022Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -235,7 +235,7 @@ with UnifiedTo(
 
 ## remove_hris_deduction
 
-Remove a deduction
+Deletes the HrisDeduction identified by `id`.
 
 ### Example Usage
 
@@ -282,7 +282,7 @@ with UnifiedTo(
 
 ## update_hris_deduction
 
-Update a deduction
+Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in the request body.
 
 ### Example Usage
 
@@ -308,14 +308,14 @@ with UnifiedTo(
             "employer_type": shared.EmployerType.PERCENTAGE,
             "frequency": shared.HrisDeductionFrequency.ONE_TIME,
             "garnishment_type": shared.GarnishmentType.CHILD_SUPPORT,
-            "id": "d01383a7-87c1-493e-b3b3-164ba724d0ba",
+            "id": "2b0eecf4-4ef5-4c58-952b-20761e9d8c04",
             "is_active": True,
             "max_amount": 21794.0,
             "metadata": [],
             "notes": "Carmen desidero.",
-            "start_at": parse_datetime("2025-03-15T07:36:56.039Z"),
+            "start_at": parse_datetime("2025-03-16T01:46:40.283Z"),
             "type": shared.HrisDeductionType.FIXED,
-            "updated_at": parse_datetime("2024-03-22T06:56:26.096Z"),
+            "updated_at": parse_datetime("2024-03-22T21:37:00.022Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

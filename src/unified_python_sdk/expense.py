@@ -24,6 +24,8 @@ class Expense(BaseSDK):
     ) -> operations.CreateAccountingExpenseResponse:
         r"""Create an expense
 
+        Creates a AccountingExpense. Provide the unified AccountingExpense fields in the request body; they are mapped to the provider's API. Returns the created AccountingExpense.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -124,6 +126,8 @@ class Expense(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAccountingExpenseResponse:
         r"""Create an expense
+
+        Creates a AccountingExpense. Provide the unified AccountingExpense fields in the request body; they are mapped to the provider's API. Returns the created AccountingExpense.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -226,6 +230,8 @@ class Expense(BaseSDK):
     ) -> operations.CreateLegalExpenseResponse:
         r"""Create an expense
 
+        Creates a LegalExpense. Provide the unified LegalExpense fields in the request body; they are mapped to the provider's API. Returns the created LegalExpense.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -320,6 +326,8 @@ class Expense(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateLegalExpenseResponse:
         r"""Create an expense
+
+        Creates a LegalExpense. Provide the unified LegalExpense fields in the request body; they are mapped to the provider's API. Returns the created LegalExpense.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -416,6 +424,8 @@ class Expense(BaseSDK):
     ) -> operations.GetAccountingExpenseResponse:
         r"""Retrieve an expense
 
+        Retrieves a single AccountingExpense by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -507,6 +517,8 @@ class Expense(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAccountingExpenseResponse:
         r"""Retrieve an expense
+
+        Retrieves a single AccountingExpense by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -600,6 +612,8 @@ class Expense(BaseSDK):
     ) -> operations.GetLegalExpenseResponse:
         r"""Retrieve an expense
 
+        Retrieves a single LegalExpense by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -691,6 +705,8 @@ class Expense(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetLegalExpenseResponse:
         r"""Retrieve an expense
+
+        Retrieves a single LegalExpense by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -784,6 +800,8 @@ class Expense(BaseSDK):
     ) -> operations.ListAccountingExpensesResponse:
         r"""List all expenses
 
+        Returns a list of AccountingExpenses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -875,6 +893,8 @@ class Expense(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAccountingExpensesResponse:
         r"""List all expenses
+
+        Returns a list of AccountingExpenses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -968,6 +988,8 @@ class Expense(BaseSDK):
     ) -> operations.ListLegalExpensesResponse:
         r"""List all expenses
 
+        Returns a list of LegalExpenses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1060,6 +1082,8 @@ class Expense(BaseSDK):
     ) -> operations.ListLegalExpensesResponse:
         r"""List all expenses
 
+        Returns a list of LegalExpenses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1151,6 +1175,8 @@ class Expense(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAccountingExpenseResponse:
         r"""Update an expense
+
+        Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1251,6 +1277,8 @@ class Expense(BaseSDK):
     ) -> operations.PatchAccountingExpenseResponse:
         r"""Update an expense
 
+        Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1350,6 +1378,8 @@ class Expense(BaseSDK):
     ) -> operations.PatchLegalExpenseResponse:
         r"""Update an expense
 
+        Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1445,6 +1475,8 @@ class Expense(BaseSDK):
     ) -> operations.PatchLegalExpenseResponse:
         r"""Update an expense
 
+        Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1539,6 +1571,8 @@ class Expense(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAccountingExpenseResponse:
         r"""Remove an expense
+
+        Deletes the AccountingExpense identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1639,6 +1673,8 @@ class Expense(BaseSDK):
     ) -> operations.RemoveAccountingExpenseResponse:
         r"""Remove an expense
 
+        Deletes the AccountingExpense identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1738,6 +1774,8 @@ class Expense(BaseSDK):
     ) -> operations.RemoveLegalExpenseResponse:
         r"""Remove an expense
 
+        Deletes the LegalExpense identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1835,6 +1873,8 @@ class Expense(BaseSDK):
     ) -> operations.RemoveLegalExpenseResponse:
         r"""Remove an expense
 
+        Deletes the LegalExpense identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1931,6 +1971,8 @@ class Expense(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAccountingExpenseResponse:
         r"""Update an expense
+
+        Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2033,6 +2075,8 @@ class Expense(BaseSDK):
     ) -> operations.UpdateAccountingExpenseResponse:
         r"""Update an expense
 
+        Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2134,6 +2178,8 @@ class Expense(BaseSDK):
     ) -> operations.UpdateLegalExpenseResponse:
         r"""Update an expense
 
+        Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2228,6 +2274,8 @@ class Expense(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateLegalExpenseResponse:
         r"""Update an expense
+
+        Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

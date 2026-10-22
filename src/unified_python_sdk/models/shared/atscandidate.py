@@ -43,6 +43,7 @@ class AtsCandidateTypedDict(TypedDict):
     date_of_birth: NotRequired[datetime]
     education: NotRequired[List[AtsCandidateEducationTypedDict]]
     emails: NotRequired[List[AtsEmailTypedDict]]
+    r"""The candidate's email addresses"""
     experiences: NotRequired[List[AtsCandidateExperienceTypedDict]]
     external_identifier: NotRequired[str]
     first_name: NotRequired[str]
@@ -54,6 +55,7 @@ class AtsCandidateTypedDict(TypedDict):
     r"""URLs for web pages containing additional material about the candidate (LinkedIn, other social media, articles, etc.)"""
     metadata: NotRequired[List[AtsMetadataTypedDict]]
     name: NotRequired[str]
+    r"""The candidate's full name"""
     origin: NotRequired[Origin]
     raw: NotRequired[Dict[str, Any]]
     skills: NotRequired[List[str]]
@@ -90,6 +92,7 @@ class AtsCandidate(BaseModel):
     education: Optional[List[AtsCandidateEducation]] = None
 
     emails: Optional[List[AtsEmail]] = None
+    r"""The candidate's email addresses"""
 
     experiences: Optional[List[AtsCandidateExperience]] = None
 
@@ -111,6 +114,7 @@ class AtsCandidate(BaseModel):
     metadata: Optional[List[AtsMetadata]] = None
 
     name: Optional[str] = None
+    r"""The candidate's full name"""
 
     origin: Optional[Origin] = None
 

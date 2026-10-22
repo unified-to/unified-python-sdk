@@ -13,7 +13,7 @@
 
 ## create_kms_page
 
-Create a page
+Creates a KmsPage. Provide the unified KmsPage fields in the request body; they are mapped to the provider's API. Returns the created KmsPage.
 
 ### Example Usage
 
@@ -35,12 +35,12 @@ with UnifiedTo(
             "created_at": parse_datetime("2019-05-20T18:06:50.749Z"),
             "download_url": "https://agitated-validity.info",
             "has_children": True,
-            "id": "2c372c72-dc85-40f7-b10f-545a651ce2f6",
+            "id": "09d346b6-e6f1-48d9-88f3-ad33c3498f06",
             "is_active": True,
             "metadata": [],
             "title": "even minister extract",
             "type": shared.KmsPageType.HTML,
-            "updated_at": parse_datetime("2025-10-09T04:18:16.759Z"),
+            "updated_at": parse_datetime("2025-10-10T00:50:34.700Z"),
             "web_url": "https://another-petticoat.info",
         },
         "connection_id": "<id>",
@@ -72,7 +72,7 @@ with UnifiedTo(
 
 ## get_kms_page
 
-Retrieve a page
+Retrieves a single KmsPage by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -119,7 +119,7 @@ with UnifiedTo(
 
 ## list_kms_pages
 
-List all pages
+Returns a list of KmsPages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -165,7 +165,7 @@ with UnifiedTo(
 
 ## patch_kms_page
 
-Update a page
+Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to change in the request body.
 
 ### Example Usage
 
@@ -187,12 +187,12 @@ with UnifiedTo(
             "created_at": parse_datetime("2019-05-20T18:06:50.749Z"),
             "download_url": "https://agitated-validity.info",
             "has_children": True,
-            "id": "0aaea4d8-bd25-4324-88e3-814eee2e04b0",
+            "id": "92edceee-2b74-46db-a8ae-060c225ade64",
             "is_active": True,
             "metadata": [],
             "title": "even minister extract",
             "type": shared.KmsPageType.HTML,
-            "updated_at": parse_datetime("2025-10-09T04:18:16.773Z"),
+            "updated_at": parse_datetime("2025-10-10T00:50:34.716Z"),
             "web_url": "https://another-petticoat.info",
         },
         "connection_id": "<id>",
@@ -225,7 +225,7 @@ with UnifiedTo(
 
 ## remove_kms_page
 
-Remove a page
+Deletes the KmsPage identified by `id`.
 
 ### Example Usage
 
@@ -272,7 +272,7 @@ with UnifiedTo(
 
 ## update_kms_page
 
-Update a page
+Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to change in the request body.
 
 ### Example Usage
 
@@ -294,12 +294,12 @@ with UnifiedTo(
             "created_at": parse_datetime("2019-05-20T18:06:50.749Z"),
             "download_url": "https://agitated-validity.info",
             "has_children": True,
-            "id": "0aaea4d8-bd25-4324-88e3-814eee2e04b0",
+            "id": "92edceee-2b74-46db-a8ae-060c225ade64",
             "is_active": True,
             "metadata": [],
             "title": "even minister extract",
             "type": shared.KmsPageType.HTML,
-            "updated_at": parse_datetime("2025-10-09T04:18:16.773Z"),
+            "updated_at": parse_datetime("2025-10-10T00:50:34.716Z"),
             "web_url": "https://another-petticoat.info",
         },
         "connection_id": "<id>",

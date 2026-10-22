@@ -92,12 +92,14 @@ class HrisEmployeeTypedDict(TypedDict):
     date_of_birth: NotRequired[datetime]
     r"""YYYYMM/DD"""
     emails: NotRequired[List[HrisEmailTypedDict]]
+    r"""The employee's email addresses"""
     employee_number: NotRequired[str]
     r"""the company's ID for this employee"""
     employee_roles: NotRequired[List[PropertyHrisEmployeeEmployeeRoles]]
     employment_status: NotRequired[EmploymentStatus]
     employment_type: NotRequired[HrisEmployeeEmploymentType]
     first_name: NotRequired[str]
+    r"""The employee's first (given) name"""
     flsa_status: NotRequired[FlsaStatus]
     r"""US Fair Labor Standards Act classification"""
     gender: NotRequired[HrisEmployeeGender]
@@ -114,11 +116,13 @@ class HrisEmployeeTypedDict(TypedDict):
     r"""the hris_job (position) this employee holds; their primary job when they hold more than one"""
     language_locale: NotRequired[str]
     last_name: NotRequired[str]
+    r"""The employee's last (family) name"""
     locations: NotRequired[List[HrisLocationTypedDict]]
     manager_id: NotRequired[str]
     marital_status: NotRequired[MaritalStatus]
     metadata: NotRequired[List[HrisMetadataTypedDict]]
     name: NotRequired[str]
+    r"""The employee's full name"""
     pay_frequency: NotRequired[PayFrequency]
     r"""how often the employee is paid (eg. BIWEEKLY)"""
     pronouns: NotRequired[str]
@@ -164,6 +168,7 @@ class HrisEmployee(BaseModel):
     r"""YYYYMM/DD"""
 
     emails: Optional[List[HrisEmail]] = None
+    r"""The employee's email addresses"""
 
     employee_number: Optional[str] = None
     r"""the company's ID for this employee"""
@@ -175,6 +180,7 @@ class HrisEmployee(BaseModel):
     employment_type: Optional[HrisEmployeeEmploymentType] = None
 
     first_name: Optional[str] = None
+    r"""The employee's first (given) name"""
 
     flsa_status: Optional[FlsaStatus] = None
     r"""US Fair Labor Standards Act classification"""
@@ -201,6 +207,7 @@ class HrisEmployee(BaseModel):
     language_locale: Optional[str] = None
 
     last_name: Optional[str] = None
+    r"""The employee's last (family) name"""
 
     locations: Optional[List[HrisLocation]] = None
 
@@ -211,6 +218,7 @@ class HrisEmployee(BaseModel):
     metadata: Optional[List[HrisMetadata]] = None
 
     name: Optional[str] = None
+    r"""The employee's full name"""
 
     pay_frequency: Optional[PayFrequency] = None
     r"""how often the employee is paid (eg. BIWEEKLY)"""

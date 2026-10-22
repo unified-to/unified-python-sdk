@@ -102,6 +102,7 @@ class AccountingInvoiceTypedDict(TypedDict):
     is_inclusive_of_tax: NotRequired[bool]
     r"""True when the document amounts already include tax"""
     lineitems: NotRequired[List[AccountingLineitemTypedDict]]
+    r"""The invoice's line items: what is billed, with the quantity, price and amount of each"""
     metadata: NotRequired[List[AccountingMetadataTypedDict]]
     notes: NotRequired[str]
     organization_id: NotRequired[str]
@@ -179,6 +180,7 @@ class AccountingInvoice(BaseModel):
     r"""True when the document amounts already include tax"""
 
     lineitems: Optional[List[AccountingLineitem]] = None
+    r"""The invoice's line items: what is billed, with the quantity, price and amount of each"""
 
     metadata: Optional[List[AccountingMetadata]] = None
 

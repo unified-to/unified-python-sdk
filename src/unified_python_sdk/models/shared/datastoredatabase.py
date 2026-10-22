@@ -17,6 +17,7 @@ class DatastoreDatabaseTypedDict(TypedDict):
     is_active: NotRequired[bool]
     metadata: NotRequired[List[DatastoreMetadataTypedDict]]
     name: NotRequired[str]
+    r"""The database's name"""
     password: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
     region: NotRequired[str]
@@ -38,6 +39,7 @@ class DatastoreDatabase(BaseModel):
     metadata: Optional[List[DatastoreMetadata]] = None
 
     name: Optional[str] = None
+    r"""The database's name"""
 
     password: Optional[str] = None
 

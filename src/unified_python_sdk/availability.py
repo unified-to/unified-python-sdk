@@ -24,6 +24,8 @@ class Availability(BaseSDK):
     ) -> operations.ListCommerceAvailabilitiesResponse:
         r"""List all availabilities
 
+        Returns a list of CommerceAvailabilities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -117,6 +119,8 @@ class Availability(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListCommerceAvailabilitiesResponse:
         r"""List all availabilities
+
+        Returns a list of CommerceAvailabilities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

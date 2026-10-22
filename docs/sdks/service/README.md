@@ -13,7 +13,7 @@
 
 ## create_compute_service
 
-Create a service
+Creates a ComputeService. Provide the unified ComputeService fields in the request body; they are mapped to the provider's API. Returns the created ComputeService.
 
 ### Example Usage
 
@@ -35,7 +35,7 @@ with UnifiedTo(
             "branch": "main",
             "build_command": "npm run build",
             "created_at": parse_datetime("2023-10-04T02:06:29.391Z"),
-            "id": "4c45ee40-ecf8-46b8-9195-13a4e608b5a1",
+            "id": "5aa4a9da-3136-44d7-b67a-774ca43245eb",
             "instance_count": 6.0,
             "max_instance_count": 6.0,
             "metadata": [],
@@ -46,7 +46,7 @@ with UnifiedTo(
             "runtime": "python",
             "status": shared.ComputeServiceStatus.SUSPENDED,
             "type": shared.ComputeServiceType.OTHER,
-            "updated_at": parse_datetime("2025-04-04T16:27:58.461Z"),
+            "updated_at": parse_datetime("2025-04-05T04:13:31.628Z"),
             "url": "https://tame-sideboard.rotating-shoulder.biz",
         },
         "connection_id": "<id>",
@@ -78,7 +78,7 @@ with UnifiedTo(
 
 ## get_compute_service
 
-Retrieve a service
+Retrieves a single ComputeService by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -125,7 +125,7 @@ with UnifiedTo(
 
 ## list_compute_services
 
-List all services
+Returns a list of ComputeServices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -171,7 +171,7 @@ with UnifiedTo(
 
 ## patch_compute_service
 
-Update a service
+Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change in the request body.
 
 ### Example Usage
 
@@ -193,7 +193,7 @@ with UnifiedTo(
             "branch": "main",
             "build_command": "npm run build",
             "created_at": parse_datetime("2023-10-04T02:06:29.391Z"),
-            "id": "125a5440-2ec7-48ee-9039-5acfbfdf6a06",
+            "id": "8ce46942-4d37-431a-b3d0-f3fb463c15a9",
             "instance_count": 6.0,
             "max_instance_count": 6.0,
             "metadata": [],
@@ -204,7 +204,7 @@ with UnifiedTo(
             "runtime": "python",
             "status": shared.ComputeServiceStatus.SUSPENDED,
             "type": shared.ComputeServiceType.OTHER,
-            "updated_at": parse_datetime("2025-04-04T16:27:58.476Z"),
+            "updated_at": parse_datetime("2025-04-05T04:13:31.639Z"),
             "url": "https://tame-sideboard.rotating-shoulder.biz",
         },
         "connection_id": "<id>",
@@ -237,7 +237,7 @@ with UnifiedTo(
 
 ## remove_compute_service
 
-Remove a service
+Deletes the ComputeService identified by `id`.
 
 ### Example Usage
 
@@ -284,7 +284,7 @@ with UnifiedTo(
 
 ## update_compute_service
 
-Update a service
+Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change in the request body.
 
 ### Example Usage
 
@@ -306,7 +306,7 @@ with UnifiedTo(
             "branch": "main",
             "build_command": "npm run build",
             "created_at": parse_datetime("2023-10-04T02:06:29.391Z"),
-            "id": "125a5440-2ec7-48ee-9039-5acfbfdf6a06",
+            "id": "8ce46942-4d37-431a-b3d0-f3fb463c15a9",
             "instance_count": 6.0,
             "max_instance_count": 6.0,
             "metadata": [],
@@ -317,7 +317,7 @@ with UnifiedTo(
             "runtime": "python",
             "status": shared.ComputeServiceStatus.SUSPENDED,
             "type": shared.ComputeServiceType.OTHER,
-            "updated_at": parse_datetime("2025-04-04T16:27:58.476Z"),
+            "updated_at": parse_datetime("2025-04-05T04:13:31.639Z"),
             "url": "https://tame-sideboard.rotating-shoulder.biz",
         },
         "connection_id": "<id>",

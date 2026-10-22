@@ -2,6 +2,7 @@
 
 from .basesdk import BaseSDK
 from typing import List, Mapping, Optional, Union, cast
+from typing_extensions import deprecated
 from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
@@ -10,6 +11,9 @@ from unified_python_sdk.utils.unmarshal_json_response import unmarshal_json_resp
 
 
 class Order(BaseSDK):
+    @deprecated(
+        "warning: ** DEPRECATED ** - This will be removed in a future release, please migrate away from it as soon as possible."
+    )
     def create_accounting_order(
         self,
         *,
@@ -23,6 +27,8 @@ class Order(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAccountingOrderResponse:
         r"""Create an order
+
+        Creates a AccountingOrder. Provide the unified AccountingOrder fields in the request body; they are mapped to the provider's API. Returns the created AccountingOrder.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -105,6 +111,9 @@ class Order(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
+    @deprecated(
+        "warning: ** DEPRECATED ** - This will be removed in a future release, please migrate away from it as soon as possible."
+    )
     async def create_accounting_order_async(
         self,
         *,
@@ -118,6 +127,8 @@ class Order(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAccountingOrderResponse:
         r"""Create an order
+
+        Creates a AccountingOrder. Provide the unified AccountingOrder fields in the request body; they are mapped to the provider's API. Returns the created AccountingOrder.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -214,6 +225,8 @@ class Order(BaseSDK):
     ) -> operations.CreateAssessmentOrderResponse:
         r"""Create an order
 
+        Creates a AssessmentOrder. Provide the unified AssessmentOrder fields in the request body; they are mapped to the provider's API. Returns the created AssessmentOrder.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -309,6 +322,8 @@ class Order(BaseSDK):
     ) -> operations.CreateAssessmentOrderResponse:
         r"""Create an order
 
+        Creates a AssessmentOrder. Provide the unified AssessmentOrder fields in the request body; they are mapped to the provider's API. Returns the created AssessmentOrder.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -390,6 +405,9 @@ class Order(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
+    @deprecated(
+        "warning: ** DEPRECATED ** - This will be removed in a future release, please migrate away from it as soon as possible."
+    )
     def get_accounting_order(
         self,
         *,
@@ -403,6 +421,8 @@ class Order(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAccountingOrderResponse:
         r"""Retrieve an order
+
+        Retrieves a single AccountingOrder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -482,6 +502,9 @@ class Order(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
+    @deprecated(
+        "warning: ** DEPRECATED ** - This will be removed in a future release, please migrate away from it as soon as possible."
+    )
     async def get_accounting_order_async(
         self,
         *,
@@ -495,6 +518,8 @@ class Order(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAccountingOrderResponse:
         r"""Retrieve an order
+
+        Retrieves a single AccountingOrder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -588,6 +613,8 @@ class Order(BaseSDK):
     ) -> operations.GetAssessmentOrderResponse:
         r"""Retrieve an order
 
+        Retrieves a single AssessmentOrder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -680,6 +707,8 @@ class Order(BaseSDK):
     ) -> operations.GetAssessmentOrderResponse:
         r"""Retrieve an order
 
+        Retrieves a single AssessmentOrder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -758,6 +787,9 @@ class Order(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
+    @deprecated(
+        "warning: ** DEPRECATED ** - This will be removed in a future release, please migrate away from it as soon as possible."
+    )
     def list_accounting_orders(
         self,
         *,
@@ -771,6 +803,8 @@ class Order(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAccountingOrdersResponse:
         r"""List all orders
+
+        Returns a list of AccountingOrders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -850,6 +884,9 @@ class Order(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
+    @deprecated(
+        "warning: ** DEPRECATED ** - This will be removed in a future release, please migrate away from it as soon as possible."
+    )
     async def list_accounting_orders_async(
         self,
         *,
@@ -863,6 +900,8 @@ class Order(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAccountingOrdersResponse:
         r"""List all orders
+
+        Returns a list of AccountingOrders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -942,6 +981,9 @@ class Order(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
+    @deprecated(
+        "warning: ** DEPRECATED ** - This will be removed in a future release, please migrate away from it as soon as possible."
+    )
     def patch_accounting_order(
         self,
         *,
@@ -955,6 +997,8 @@ class Order(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAccountingOrderResponse:
         r"""Update an order
+
+        Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1037,6 +1081,9 @@ class Order(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
+    @deprecated(
+        "warning: ** DEPRECATED ** - This will be removed in a future release, please migrate away from it as soon as possible."
+    )
     async def patch_accounting_order_async(
         self,
         *,
@@ -1050,6 +1097,8 @@ class Order(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAccountingOrderResponse:
         r"""Update an order
+
+        Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1146,6 +1195,8 @@ class Order(BaseSDK):
     ) -> operations.PatchAssessmentOrderResponse:
         r"""Update an order
 
+        Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1241,6 +1292,8 @@ class Order(BaseSDK):
     ) -> operations.PatchAssessmentOrderResponse:
         r"""Update an order
 
+        Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1322,6 +1375,9 @@ class Order(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
+    @deprecated(
+        "warning: ** DEPRECATED ** - This will be removed in a future release, please migrate away from it as soon as possible."
+    )
     def remove_accounting_order(
         self,
         *,
@@ -1335,6 +1391,8 @@ class Order(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAccountingOrderResponse:
         r"""Remove an order
+
+        Deletes the AccountingOrder identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1419,6 +1477,9 @@ class Order(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
+    @deprecated(
+        "warning: ** DEPRECATED ** - This will be removed in a future release, please migrate away from it as soon as possible."
+    )
     async def remove_accounting_order_async(
         self,
         *,
@@ -1432,6 +1493,8 @@ class Order(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAccountingOrderResponse:
         r"""Remove an order
+
+        Deletes the AccountingOrder identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1516,6 +1579,9 @@ class Order(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
+    @deprecated(
+        "warning: ** DEPRECATED ** - This will be removed in a future release, please migrate away from it as soon as possible."
+    )
     def update_accounting_order(
         self,
         *,
@@ -1529,6 +1595,8 @@ class Order(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAccountingOrderResponse:
         r"""Update an order
+
+        Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1611,6 +1679,9 @@ class Order(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
+    @deprecated(
+        "warning: ** DEPRECATED ** - This will be removed in a future release, please migrate away from it as soon as possible."
+    )
     async def update_accounting_order_async(
         self,
         *,
@@ -1624,6 +1695,8 @@ class Order(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAccountingOrderResponse:
         r"""Update an order
+
+        Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1720,6 +1793,8 @@ class Order(BaseSDK):
     ) -> operations.UpdateAssessmentOrderResponse:
         r"""Update an order
 
+        Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1814,6 +1889,8 @@ class Order(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAssessmentOrderResponse:
         r"""Update an order
+
+        Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

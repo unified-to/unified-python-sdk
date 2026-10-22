@@ -25,7 +25,7 @@
 
 ## create_kms_comment
 
-Create a comment
+Creates a KmsComment. Provide the unified KmsComment fields in the request body; they are mapped to the provider's API. Returns the created KmsComment.
 
 ### Example Usage
 
@@ -47,10 +47,10 @@ with UnifiedTo(
             "content": "Decimus tolero viriliter usque.",
             "content_type": shared.ContentType.HTML,
             "created_at": parse_datetime("2022-08-26T14:40:49.732Z"),
-            "id": "ec3c9392-45be-4d62-9c26-fcc2d706631c",
+            "id": "f70dadbf-c49e-4d15-b95b-76c9be0a9360",
             "metadata": [],
             "type": shared.KmsCommentType.PAGE,
-            "updated_at": parse_datetime("2023-11-26T06:46:08.923Z"),
+            "updated_at": parse_datetime("2023-11-26T13:57:11.798Z"),
         },
         "connection_id": "<id>",
     })
@@ -81,7 +81,7 @@ with UnifiedTo(
 
 ## create_task_comment
 
-Create a comment
+Creates a TaskComment. Provide the unified TaskComment fields in the request body; they are mapped to the provider's API. Returns the created TaskComment.
 
 ### Example Usage
 
@@ -102,10 +102,10 @@ with UnifiedTo(
         "task_comment": {
             "created_at": parse_datetime("2019-10-12T20:33:37.879Z"),
             "has_children": True,
-            "id": "89584d93-287c-4a9b-b003-a4df2cd44beb",
+            "id": "0443a83e-d435-44b8-887a-9cbb133ec389",
             "metadata": [],
             "text": "Colo ulciscor sublime tabernus.",
-            "updated_at": parse_datetime("2021-10-03T07:58:10.614Z"),
+            "updated_at": parse_datetime("2021-10-03T14:40:44.794Z"),
         },
         "connection_id": "<id>",
     })
@@ -136,7 +136,7 @@ with UnifiedTo(
 
 ## create_uc_comment
 
-Create a comment
+Creates a UcComment. Provide the unified UcComment fields in the request body; they are mapped to the provider's API. Returns the created UcComment.
 
 ### Example Usage
 
@@ -156,9 +156,9 @@ with UnifiedTo(
         "uc_comment": {
             "content": "Vociferor vitiosus.",
             "created_at": "2023-04-02T23:42:31.571Z",
-            "id": "2900e44c-ad7e-4b03-942c-6354e9cb5faf",
+            "id": "b9065532-34c2-4db6-87db-7596b91ab742",
             "metadata": [],
-            "updated_at": "2024-02-09T18:28:50.441Z",
+            "updated_at": "2024-02-10T00:14:01.047Z",
         },
         "connection_id": "<id>",
     })
@@ -189,7 +189,7 @@ with UnifiedTo(
 
 ## get_kms_comment
 
-Retrieve a comment
+Retrieves a single KmsComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -236,7 +236,7 @@ with UnifiedTo(
 
 ## get_task_comment
 
-Retrieve a comment
+Retrieves a single TaskComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -283,7 +283,7 @@ with UnifiedTo(
 
 ## get_uc_comment
 
-Retrieve a comment
+Retrieves a single UcComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -330,7 +330,7 @@ with UnifiedTo(
 
 ## list_kms_comments
 
-List all comments
+Returns a list of KmsComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -376,7 +376,7 @@ with UnifiedTo(
 
 ## list_task_comments
 
-List all comments
+Returns a list of TaskComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -422,7 +422,7 @@ with UnifiedTo(
 
 ## list_uc_comments
 
-List all comments
+Returns a list of UcComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -468,7 +468,7 @@ with UnifiedTo(
 
 ## patch_kms_comment
 
-Update a comment
+Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the request body.
 
 ### Example Usage
 
@@ -490,10 +490,10 @@ with UnifiedTo(
             "content": "Decimus tolero viriliter usque.",
             "content_type": shared.ContentType.HTML,
             "created_at": parse_datetime("2022-08-26T14:40:49.732Z"),
-            "id": "f1b8f0ea-a567-4c6d-a25c-1275f5aabd43",
+            "id": "a08fa0b1-2d59-4bd9-afd2-b70b50910414",
             "metadata": [],
             "type": shared.KmsCommentType.PAGE,
-            "updated_at": parse_datetime("2023-11-26T06:46:08.927Z"),
+            "updated_at": parse_datetime("2023-11-26T13:57:11.803Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -525,7 +525,7 @@ with UnifiedTo(
 
 ## patch_task_comment
 
-Update a comment
+Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the request body.
 
 ### Example Usage
 
@@ -546,10 +546,10 @@ with UnifiedTo(
         "task_comment": {
             "created_at": parse_datetime("2019-10-12T20:33:37.879Z"),
             "has_children": True,
-            "id": "84d2145b-4d40-42b5-b9bd-1b6ab578fefe",
+            "id": "7327dfbd-4c0c-4c6c-b2f8-f9a1b36b2677",
             "metadata": [],
             "text": "Colo ulciscor sublime tabernus.",
-            "updated_at": parse_datetime("2021-10-03T07:58:10.619Z"),
+            "updated_at": parse_datetime("2021-10-03T14:40:44.798Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -581,7 +581,7 @@ with UnifiedTo(
 
 ## patch_uc_comment
 
-Update a comment
+Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the request body.
 
 ### Example Usage
 
@@ -601,9 +601,9 @@ with UnifiedTo(
         "uc_comment": {
             "content": "Vociferor vitiosus.",
             "created_at": "2023-04-02T23:42:31.571Z",
-            "id": "5bc5d560-a024-46de-adfe-091fa5dc62d4",
+            "id": "f9542e44-6a26-42ef-b104-7bb1a17b8698",
             "metadata": [],
-            "updated_at": "2024-02-09T18:28:50.444Z",
+            "updated_at": "2024-02-10T00:14:01.049Z",
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -635,7 +635,7 @@ with UnifiedTo(
 
 ## remove_kms_comment
 
-Remove a comment
+Deletes the KmsComment identified by `id`.
 
 ### Example Usage
 
@@ -682,7 +682,7 @@ with UnifiedTo(
 
 ## remove_task_comment
 
-Remove a comment
+Deletes the TaskComment identified by `id`.
 
 ### Example Usage
 
@@ -729,7 +729,7 @@ with UnifiedTo(
 
 ## remove_uc_comment
 
-Remove a comment
+Deletes the UcComment identified by `id`.
 
 ### Example Usage
 
@@ -776,7 +776,7 @@ with UnifiedTo(
 
 ## update_kms_comment
 
-Update a comment
+Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the request body.
 
 ### Example Usage
 
@@ -798,10 +798,10 @@ with UnifiedTo(
             "content": "Decimus tolero viriliter usque.",
             "content_type": shared.ContentType.HTML,
             "created_at": parse_datetime("2022-08-26T14:40:49.732Z"),
-            "id": "f1b8f0ea-a567-4c6d-a25c-1275f5aabd43",
+            "id": "a08fa0b1-2d59-4bd9-afd2-b70b50910414",
             "metadata": [],
             "type": shared.KmsCommentType.PAGE,
-            "updated_at": parse_datetime("2023-11-26T06:46:08.927Z"),
+            "updated_at": parse_datetime("2023-11-26T13:57:11.803Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -833,7 +833,7 @@ with UnifiedTo(
 
 ## update_task_comment
 
-Update a comment
+Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the request body.
 
 ### Example Usage
 
@@ -854,10 +854,10 @@ with UnifiedTo(
         "task_comment": {
             "created_at": parse_datetime("2019-10-12T20:33:37.879Z"),
             "has_children": True,
-            "id": "84d2145b-4d40-42b5-b9bd-1b6ab578fefe",
+            "id": "7327dfbd-4c0c-4c6c-b2f8-f9a1b36b2677",
             "metadata": [],
             "text": "Colo ulciscor sublime tabernus.",
-            "updated_at": parse_datetime("2021-10-03T07:58:10.619Z"),
+            "updated_at": parse_datetime("2021-10-03T14:40:44.798Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -889,7 +889,7 @@ with UnifiedTo(
 
 ## update_uc_comment
 
-Update a comment
+Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the request body.
 
 ### Example Usage
 
@@ -909,9 +909,9 @@ with UnifiedTo(
         "uc_comment": {
             "content": "Vociferor vitiosus.",
             "created_at": "2023-04-02T23:42:31.571Z",
-            "id": "5bc5d560-a024-46de-adfe-091fa5dc62d4",
+            "id": "f9542e44-6a26-42ef-b104-7bb1a17b8698",
             "metadata": [],
-            "updated_at": "2024-02-09T18:28:50.444Z",
+            "updated_at": "2024-02-10T00:14:01.049Z",
         },
         "connection_id": "<id>",
         "id": "<id>",

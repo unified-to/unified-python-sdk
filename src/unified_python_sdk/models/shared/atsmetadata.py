@@ -39,6 +39,8 @@ AtsMetadataExtraData = TypeAliasType(
 
 
 class AtsMetadataFormat(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""The data type of the custom field, which determines how `value` is formatted."""
+
     TEXT = "TEXT"
     NUMBER = "NUMBER"
     DATE = "DATE"
@@ -77,22 +79,27 @@ AtsMetadataValueTypedDict = TypeAliasType(
     "AtsMetadataValueTypedDict",
     Union[Dict[str, Any], str, float, bool, List[AtsMetadataSchemas5TypedDict]],
 )
+r"""The field's value, typed by `format`: DATE as ISO-8601 (`YYYY-MM-DD`, or `YYYY-MM-DDTHH:MM:SSZ` for date-times); NUMBER, PRICE and CURRENCY as a number; BOOLEAN and YES_NO as true/false; MULTIPLE_SELECT as an array of option values; otherwise a string."""
 
 
 AtsMetadataValue = TypeAliasType(
     "AtsMetadataValue",
     Union[Dict[str, Any], str, float, bool, List[AtsMetadataSchemas5]],
 )
+r"""The field's value, typed by `format`: DATE as ISO-8601 (`YYYY-MM-DD`, or `YYYY-MM-DDTHH:MM:SSZ` for date-times); NUMBER, PRICE and CURRENCY as a number; BOOLEAN and YES_NO as true/false; MULTIPLE_SELECT as an array of option values; otherwise a string."""
 
 
 class AtsMetadataTypedDict(TypedDict):
     extra_data: NotRequired[AtsMetadataExtraDataTypedDict]
     format_: NotRequired[AtsMetadataFormat]
+    r"""The data type of the custom field, which determines how `value` is formatted."""
     id: NotRequired[str]
+    r"""The ID of the custom field definition (from the metadata/metadata endpoint)."""
     namespace: NotRequired[str]
     slug: NotRequired[str]
-    r"""Actual textual value of the slug"""
+    r"""The integration's API name (key) of an existing custom field. List valid slugs for this object with the metadata/metadata endpoint; unknown slugs are rejected by the integration."""
     value: NotRequired[AtsMetadataValueTypedDict]
+    r"""The field's value, typed by `format`: DATE as ISO-8601 (`YYYY-MM-DD`, or `YYYY-MM-DDTHH:MM:SSZ` for date-times); NUMBER, PRICE and CURRENCY as a number; BOOLEAN and YES_NO as true/false; MULTIPLE_SELECT as an array of option values; otherwise a string."""
 
 
 class AtsMetadata(BaseModel):
@@ -101,15 +108,18 @@ class AtsMetadata(BaseModel):
     format_: Annotated[Optional[AtsMetadataFormat], pydantic.Field(alias="format")] = (
         None
     )
+    r"""The data type of the custom field, which determines how `value` is formatted."""
 
     id: Optional[str] = None
+    r"""The ID of the custom field definition (from the metadata/metadata endpoint)."""
 
     namespace: Optional[str] = None
 
     slug: Optional[str] = None
-    r"""Actual textual value of the slug"""
+    r"""The integration's API name (key) of an existing custom field. List valid slugs for this object with the metadata/metadata endpoint; unknown slugs are rejected by the integration."""
 
     value: Optional[AtsMetadataValue] = None
+    r"""The field's value, typed by `format`: DATE as ISO-8601 (`YYYY-MM-DD`, or `YYYY-MM-DDTHH:MM:SSZ` for date-times); NUMBER, PRICE and CURRENCY as a number; BOOLEAN and YES_NO as true/false; MULTIPLE_SELECT as an array of option values; otherwise a string."""
 
     @field_serializer("format_")
     def serialize_format_(self, value):

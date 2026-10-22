@@ -24,6 +24,8 @@ class Uc(BaseSDK):
     ) -> operations.CreateUcCommentResponse:
         r"""Create a comment
 
+        Creates a UcComment. Provide the unified UcComment fields in the request body; they are mapped to the provider's API. Returns the created UcComment.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -118,6 +120,8 @@ class Uc(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateUcCommentResponse:
         r"""Create a comment
+
+        Creates a UcComment. Provide the unified UcComment fields in the request body; they are mapped to the provider's API. Returns the created UcComment.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -214,6 +218,8 @@ class Uc(BaseSDK):
     ) -> operations.CreateUcContactResponse:
         r"""Create a contact
 
+        Creates a UcContact. Provide the unified UcContact fields in the request body; they are mapped to the provider's API. Returns the created UcContact.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -308,6 +314,8 @@ class Uc(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateUcContactResponse:
         r"""Create a contact
+
+        Creates a UcContact. Provide the unified UcContact fields in the request body; they are mapped to the provider's API. Returns the created UcContact.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -404,6 +412,8 @@ class Uc(BaseSDK):
     ) -> operations.CreateUcRecordingResponse:
         r"""Create a recording
 
+        Creates a UcRecording. Provide the unified UcRecording fields in the request body; they are mapped to the provider's API. Returns the created UcRecording.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -499,6 +509,8 @@ class Uc(BaseSDK):
     ) -> operations.CreateUcRecordingResponse:
         r"""Create a recording
 
+        Creates a UcRecording. Provide the unified UcRecording fields in the request body; they are mapped to the provider's API. Returns the created UcRecording.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -593,6 +605,8 @@ class Uc(BaseSDK):
     ) -> operations.GetUcCallResponse:
         r"""Retrieve a call
 
+        Retrieves a single UcCall by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -682,6 +696,8 @@ class Uc(BaseSDK):
     ) -> operations.GetUcCallResponse:
         r"""Retrieve a call
 
+        Retrieves a single UcCall by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -770,6 +786,8 @@ class Uc(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetUcCommentResponse:
         r"""Retrieve a comment
+
+        Retrieves a single UcComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -862,6 +880,8 @@ class Uc(BaseSDK):
     ) -> operations.GetUcCommentResponse:
         r"""Retrieve a comment
 
+        Retrieves a single UcComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -952,6 +972,8 @@ class Uc(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetUcContactResponse:
         r"""Retrieve a contact
+
+        Retrieves a single UcContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1044,6 +1066,8 @@ class Uc(BaseSDK):
     ) -> operations.GetUcContactResponse:
         r"""Retrieve a contact
 
+        Retrieves a single UcContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1134,6 +1158,8 @@ class Uc(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetUcRecordingResponse:
         r"""Retrieve a recording
+
+        Retrieves a single UcRecording by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1226,6 +1252,8 @@ class Uc(BaseSDK):
     ) -> operations.GetUcRecordingResponse:
         r"""Retrieve a recording
 
+        Retrieves a single UcRecording by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1317,6 +1345,8 @@ class Uc(BaseSDK):
     ) -> operations.GetUcScorecardResponse:
         r"""Retrieve a scorecard
 
+        Retrieves a single UcScorecard by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1407,6 +1437,8 @@ class Uc(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetUcScorecardResponse:
         r"""Retrieve a scorecard
+
+        Retrieves a single UcScorecard by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1500,6 +1532,8 @@ class Uc(BaseSDK):
     ) -> operations.GetUcScorecardtemplateResponse:
         r"""Retrieve a scorecardtemplate
 
+        Retrieves a single UcScorecardtemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1592,6 +1626,8 @@ class Uc(BaseSDK):
     ) -> operations.GetUcScorecardtemplateResponse:
         r"""Retrieve a scorecardtemplate
 
+        Retrieves a single UcScorecardtemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1682,6 +1718,8 @@ class Uc(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListUcCallsResponse:
         r"""List all calls
+
+        Returns a list of UcCalls. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1774,6 +1812,8 @@ class Uc(BaseSDK):
     ) -> operations.ListUcCallsResponse:
         r"""List all calls
 
+        Returns a list of UcCalls. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1864,6 +1904,8 @@ class Uc(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListUcCommentsResponse:
         r"""List all comments
+
+        Returns a list of UcComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1956,6 +1998,8 @@ class Uc(BaseSDK):
     ) -> operations.ListUcCommentsResponse:
         r"""List all comments
 
+        Returns a list of UcComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2047,6 +2091,8 @@ class Uc(BaseSDK):
     ) -> operations.ListUcContactsResponse:
         r"""List all contacts
 
+        Returns a list of UcContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2137,6 +2183,8 @@ class Uc(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListUcContactsResponse:
         r"""List all contacts
+
+        Returns a list of UcContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2230,6 +2278,8 @@ class Uc(BaseSDK):
     ) -> operations.ListUcRecordingsResponse:
         r"""List all recordings
 
+        Returns a list of UcRecordings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2321,6 +2371,8 @@ class Uc(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListUcRecordingsResponse:
         r"""List all recordings
+
+        Returns a list of UcRecordings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2414,6 +2466,8 @@ class Uc(BaseSDK):
     ) -> operations.ListUcScorecardsResponse:
         r"""List all scorecards
 
+        Returns a list of UcScorecards. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2506,6 +2560,8 @@ class Uc(BaseSDK):
     ) -> operations.ListUcScorecardsResponse:
         r"""List all scorecards
 
+        Returns a list of UcScorecards. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2597,6 +2653,8 @@ class Uc(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListUcScorecardtemplatesResponse:
         r"""List all scorecardtemplates
+
+        Returns a list of UcScorecardtemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2692,6 +2750,8 @@ class Uc(BaseSDK):
     ) -> operations.ListUcScorecardtemplatesResponse:
         r"""List all scorecardtemplates
 
+        Returns a list of UcScorecardtemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2784,6 +2844,8 @@ class Uc(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchUcCommentResponse:
         r"""Update a comment
+
+        Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2879,6 +2941,8 @@ class Uc(BaseSDK):
     ) -> operations.PatchUcCommentResponse:
         r"""Update a comment
 
+        Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2973,6 +3037,8 @@ class Uc(BaseSDK):
     ) -> operations.PatchUcContactResponse:
         r"""Update a contact
 
+        Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3066,6 +3132,8 @@ class Uc(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchUcContactResponse:
         r"""Update a contact
+
+        Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3162,6 +3230,8 @@ class Uc(BaseSDK):
     ) -> operations.PatchUcRecordingResponse:
         r"""Update a recording
 
+        Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3257,6 +3327,8 @@ class Uc(BaseSDK):
     ) -> operations.PatchUcRecordingResponse:
         r"""Update a recording
 
+        Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3351,6 +3423,8 @@ class Uc(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveUcCommentResponse:
         r"""Remove a comment
+
+        Deletes the UcComment identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3449,6 +3523,8 @@ class Uc(BaseSDK):
     ) -> operations.RemoveUcCommentResponse:
         r"""Remove a comment
 
+        Deletes the UcComment identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3545,6 +3621,8 @@ class Uc(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveUcContactResponse:
         r"""Remove a contact
+
+        Deletes the UcContact identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3643,6 +3721,8 @@ class Uc(BaseSDK):
     ) -> operations.RemoveUcContactResponse:
         r"""Remove a contact
 
+        Deletes the UcContact identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3739,6 +3819,8 @@ class Uc(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveUcRecordingResponse:
         r"""Remove a recording
+
+        Deletes the UcRecording identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3837,6 +3919,8 @@ class Uc(BaseSDK):
     ) -> operations.RemoveUcRecordingResponse:
         r"""Remove a recording
 
+        Deletes the UcRecording identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3934,6 +4018,8 @@ class Uc(BaseSDK):
     ) -> operations.UpdateUcCommentResponse:
         r"""Update a comment
 
+        Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4028,6 +4114,8 @@ class Uc(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateUcCommentResponse:
         r"""Update a comment
+
+        Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4124,6 +4212,8 @@ class Uc(BaseSDK):
     ) -> operations.UpdateUcContactResponse:
         r"""Update a contact
 
+        Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4218,6 +4308,8 @@ class Uc(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateUcContactResponse:
         r"""Update a contact
+
+        Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4314,6 +4406,8 @@ class Uc(BaseSDK):
     ) -> operations.UpdateUcRecordingResponse:
         r"""Update a recording
 
+        Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4408,6 +4502,8 @@ class Uc(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateUcRecordingResponse:
         r"""Update a recording
+
+        Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

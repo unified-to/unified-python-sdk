@@ -838,6 +838,11 @@ if TYPE_CHECKING:
     )
     from .datastorefieldvalue import DatastoreFieldValue, DatastoreFieldValueTypedDict
     from .datastorefilter import DatastoreFilter, DatastoreFilterTypedDict
+    from .datastorefiltergroup import (
+        DatastoreFilterGroup,
+        DatastoreFilterGroupType,
+        DatastoreFilterGroupTypedDict,
+    )
     from .datastoremetadata import (
         DatastoreMetadata,
         DatastoreMetadata1,
@@ -3521,6 +3526,9 @@ __all__ = [
     "DatastoreFieldValue",
     "DatastoreFieldValueTypedDict",
     "DatastoreFilter",
+    "DatastoreFilterGroup",
+    "DatastoreFilterGroupType",
+    "DatastoreFilterGroupTypedDict",
     "DatastoreFilterTypedDict",
     "DatastoreMetadata",
     "DatastoreMetadata1",
@@ -5846,6 +5854,9 @@ _dynamic_imports: dict[str, str] = {
     "DatastoreFieldValueTypedDict": ".datastorefieldvalue",
     "DatastoreFilter": ".datastorefilter",
     "DatastoreFilterTypedDict": ".datastorefilter",
+    "DatastoreFilterGroup": ".datastorefiltergroup",
+    "DatastoreFilterGroupType": ".datastorefiltergroup",
+    "DatastoreFilterGroupTypedDict": ".datastorefiltergroup",
     "DatastoreMetadata": ".datastoremetadata",
     "DatastoreMetadata1": ".datastoremetadata",
     "DatastoreMetadata1TypedDict": ".datastoremetadata",

@@ -24,6 +24,8 @@ class Scorecard(BaseSDK):
     ) -> operations.CreateAtsScorecardResponse:
         r"""Create a scorecard
 
+        Creates a AtsScorecard. Provide the unified AtsScorecard fields in the request body; they are mapped to the provider's API. Returns the created AtsScorecard.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -118,6 +120,8 @@ class Scorecard(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAtsScorecardResponse:
         r"""Create a scorecard
+
+        Creates a AtsScorecard. Provide the unified AtsScorecard fields in the request body; they are mapped to the provider's API. Returns the created AtsScorecard.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -214,6 +218,8 @@ class Scorecard(BaseSDK):
     ) -> operations.GetAtsScorecardResponse:
         r"""Retrieve a scorecard
 
+        Retrieves a single AtsScorecard by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -306,6 +312,8 @@ class Scorecard(BaseSDK):
     ) -> operations.GetAtsScorecardResponse:
         r"""Retrieve a scorecard
 
+        Retrieves a single AtsScorecard by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -397,6 +405,8 @@ class Scorecard(BaseSDK):
     ) -> operations.GetUcScorecardResponse:
         r"""Retrieve a scorecard
 
+        Retrieves a single UcScorecard by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -487,6 +497,8 @@ class Scorecard(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetUcScorecardResponse:
         r"""Retrieve a scorecard
+
+        Retrieves a single UcScorecard by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -580,6 +592,8 @@ class Scorecard(BaseSDK):
     ) -> operations.ListAtsScorecardsResponse:
         r"""List all scorecards
 
+        Returns a list of AtsScorecards. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -671,6 +685,8 @@ class Scorecard(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAtsScorecardsResponse:
         r"""List all scorecards
+
+        Returns a list of AtsScorecards. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -764,6 +780,8 @@ class Scorecard(BaseSDK):
     ) -> operations.ListUcScorecardsResponse:
         r"""List all scorecards
 
+        Returns a list of UcScorecards. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -856,6 +874,8 @@ class Scorecard(BaseSDK):
     ) -> operations.ListUcScorecardsResponse:
         r"""List all scorecards
 
+        Returns a list of UcScorecards. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -947,6 +967,8 @@ class Scorecard(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAtsScorecardResponse:
         r"""Update a scorecard
+
+        Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1043,6 +1065,8 @@ class Scorecard(BaseSDK):
     ) -> operations.PatchAtsScorecardResponse:
         r"""Update a scorecard
 
+        Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1137,6 +1161,8 @@ class Scorecard(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAtsScorecardResponse:
         r"""Remove a scorecard
+
+        Deletes the AtsScorecard identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1235,6 +1261,8 @@ class Scorecard(BaseSDK):
     ) -> operations.RemoveAtsScorecardResponse:
         r"""Remove a scorecard
 
+        Deletes the AtsScorecard identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1332,6 +1360,8 @@ class Scorecard(BaseSDK):
     ) -> operations.UpdateAtsScorecardResponse:
         r"""Update a scorecard
 
+        Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1426,6 +1456,8 @@ class Scorecard(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAtsScorecardResponse:
         r"""Update a scorecard
+
+        Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

@@ -38,7 +38,7 @@
 
 ## create_genai_agent
 
-Create an agent
+Creates a GenaiAgent. Provide the unified GenaiAgent fields in the request body; they are mapped to the provider's API. Returns the created GenaiAgent.
 
 ### Example Usage
 
@@ -59,11 +59,11 @@ with UnifiedTo(
         "genai_agent": {
             "created_at": parse_datetime("2020-12-18T02:23:33.723Z"),
             "description": "Assentator tero sequi.",
-            "id": "3a998df9-cfa8-485e-b450-36bd04489918",
+            "id": "e6383f2d-b4d2-489e-9384-0cca840ad6f3",
             "instructions": "Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.",
             "is_active": False,
             "name": "daughter with",
-            "updated_at": parse_datetime("2025-10-15T10:43:39.292Z"),
+            "updated_at": parse_datetime("2025-10-16T06:26:17.706Z"),
         },
         "connection_id": "<id>",
     })
@@ -94,7 +94,7 @@ with UnifiedTo(
 
 ## create_genai_embedding
 
-Create an embedding
+Creates a GenaiEmbedding. Provide the unified GenaiEmbedding fields in the request body; they are mapped to the provider's API. Returns the created GenaiEmbedding.
 
 ### Example Usage
 
@@ -120,7 +120,7 @@ with UnifiedTo(
             "dimension": 423.0,
             "embeddings": "Est.",
             "enconding_format": shared.EncondingFormat.FLOAT,
-            "id": "43dcda99-c0f0-42f6-94c9-abd78efb412d",
+            "id": "6f64474a-e4ea-475a-a3a2-7ed4a98a77ca",
             "max_tokens": 223.0,
             "tokens_used": 836.0,
             "type": "classification",
@@ -154,7 +154,7 @@ with UnifiedTo(
 
 ## create_genai_memory
 
-Create a memory
+Creates a GenaiMemory. Provide the unified GenaiMemory fields in the request body; they are mapped to the provider's API. Returns the created GenaiMemory.
 
 ### Example Usage
 
@@ -175,7 +175,7 @@ with UnifiedTo(
         "genai_memory": {
             "content": "Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.",
             "created_at": parse_datetime("2021-10-22T04:14:41.668Z"),
-            "id": "d52bae61-be5a-4471-8201-c5a2ec6174fa",
+            "id": "8b8d63fc-2487-4efa-b199-2f4f3735511d",
             "metadata": [
                 {
                     "extra_data": {
@@ -190,7 +190,7 @@ with UnifiedTo(
             ],
             "name": "sponte.md",
             "type": shared.GenaiMemoryType.MEMORY,
-            "updated_at": parse_datetime("2023-04-25T21:27:26.180Z"),
+            "updated_at": parse_datetime("2023-04-26T04:39:23.581Z"),
             "user_identifier": "9d170613-4338-447d-bdb6-8ea96a2d7513",
         },
         "connection_id": "<id>",
@@ -222,7 +222,7 @@ with UnifiedTo(
 
 ## create_genai_organization
 
-Create an organization
+Creates a GenaiOrganization. Provide the unified GenaiOrganization fields in the request body; they are mapped to the provider's API. Returns the created GenaiOrganization.
 
 ### Example Usage
 
@@ -243,10 +243,10 @@ with UnifiedTo(
         "genai_organization": {
             "created_at": parse_datetime("2020-10-27T16:03:47.122Z"),
             "description": "Voluptates abeo subseco.",
-            "id": "0e9dda18-145f-4694-81a5-9026b1443d0e",
+            "id": "979ae74f-14ff-48a7-ad20-609831f3425d",
             "is_active": False,
             "name": "officially about",
-            "updated_at": parse_datetime("2023-01-26T10:36:41.332Z"),
+            "updated_at": parse_datetime("2023-01-26T19:34:30.479Z"),
         },
         "connection_id": "<id>",
     })
@@ -277,7 +277,7 @@ with UnifiedTo(
 
 ## create_genai_prompt
 
-Create a prompt
+Creates a GenaiPrompt. Provide the unified GenaiPrompt fields in the request body; they are mapped to the provider's API. Returns the created GenaiPrompt.
 
 ### Example Usage
 
@@ -397,7 +397,7 @@ with UnifiedTo(
 
 ## create_genai_task
 
-Create a task
+Creates a GenaiTask. Provide the unified GenaiTask fields in the request body; they are mapped to the provider's API. Returns the created GenaiTask.
 
 ### Example Usage
 
@@ -416,10 +416,10 @@ with UnifiedTo(
 
     res = unified_to.genai.create_genai_task(request={
         "genai_task": {
-            "completed_at": parse_datetime("2025-10-01T06:36:12.546Z"),
+            "completed_at": parse_datetime("2025-10-02T02:15:37.668Z"),
             "created_at": parse_datetime("2020-10-25T20:19:33.247Z"),
             "files_changed": 19.0,
-            "id": "d04c1891-f0c6-4ee2-80ac-73218de3aaeb",
+            "id": "442fcbae-d067-4f9c-9db3-a70e9c393a98",
             "instructions": "Benigne canonicus officiis solvo adsidue deleo angustus.",
             "lines_added": 244.0,
             "lines_deleted": 118.0,
@@ -434,12 +434,12 @@ with UnifiedTo(
             "pullrequest_url": "https://github.com/berenice.satterfield/joshingly-ignorance/pull/383",
             "repo_url": "https://github.com/berenice.satterfield/joshingly-ignorance",
             "source_branch_identifier": "main",
-            "started_at": parse_datetime("2024-05-21T10:26:55.088Z"),
+            "started_at": parse_datetime("2024-05-22T00:40:23.675Z"),
             "status": shared.GenaiTaskStatus.BLOCKED,
             "summary": "Cur aeternus cogito vesper.",
             "target_branch_identifier": "agent/joshingly-ignorance",
             "tokens_used": 2165.0,
-            "updated_at": parse_datetime("2023-02-26T07:13:13.628Z"),
+            "updated_at": parse_datetime("2023-02-26T16:31:59.677Z"),
             "web_url": "https://inexperienced-adrenalin.biz/",
         },
         "connection_id": "<id>",
@@ -471,7 +471,7 @@ with UnifiedTo(
 
 ## get_genai_agent
 
-Retrieve an agent
+Retrieves a single GenaiAgent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -518,7 +518,7 @@ with UnifiedTo(
 
 ## get_genai_memory
 
-Retrieve a memory
+Retrieves a single GenaiMemory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -565,7 +565,7 @@ with UnifiedTo(
 
 ## get_genai_model
 
-Retrieve a model
+Retrieves a single GenaiModel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -612,7 +612,7 @@ with UnifiedTo(
 
 ## get_genai_organization
 
-Retrieve an organization
+Retrieves a single GenaiOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -659,7 +659,7 @@ with UnifiedTo(
 
 ## get_genai_skill
 
-Retrieve a skill
+Retrieves a single GenaiSkill by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -706,7 +706,7 @@ with UnifiedTo(
 
 ## get_genai_task
 
-Retrieve a task
+Retrieves a single GenaiTask by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -753,7 +753,7 @@ with UnifiedTo(
 
 ## list_genai_agents
 
-List all agents
+Returns a list of GenaiAgents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -799,7 +799,7 @@ with UnifiedTo(
 
 ## list_genai_memories
 
-List all memories
+Returns a list of GenaiMemories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -845,7 +845,7 @@ with UnifiedTo(
 
 ## list_genai_models
 
-List all models
+Returns a list of GenaiModels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -891,7 +891,7 @@ with UnifiedTo(
 
 ## list_genai_organizations
 
-List all organizations
+Returns a list of GenaiOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -937,7 +937,7 @@ with UnifiedTo(
 
 ## list_genai_skills
 
-List all skills
+Returns a list of GenaiSkills. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -983,7 +983,7 @@ with UnifiedTo(
 
 ## list_genai_tasks
 
-List all tasks
+Returns a list of GenaiTasks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1029,7 +1029,7 @@ with UnifiedTo(
 
 ## patch_genai_agent
 
-Update an agent
+Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields to change in the request body.
 
 ### Example Usage
 
@@ -1050,11 +1050,11 @@ with UnifiedTo(
         "genai_agent": {
             "created_at": parse_datetime("2020-12-18T02:23:33.723Z"),
             "description": "Assentator tero sequi.",
-            "id": "24582fd0-446d-4c0a-80f5-014e5bcff7ce",
+            "id": "691117f4-f6f3-456b-90b6-e5ab838c6c45",
             "instructions": "Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.",
             "is_active": False,
             "name": "daughter with",
-            "updated_at": parse_datetime("2025-10-15T10:43:39.297Z"),
+            "updated_at": parse_datetime("2025-10-16T06:26:17.713Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1086,7 +1086,7 @@ with UnifiedTo(
 
 ## patch_genai_memory
 
-Update a memory
+Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fields to change in the request body.
 
 ### Example Usage
 
@@ -1107,7 +1107,7 @@ with UnifiedTo(
         "genai_memory": {
             "content": "Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.",
             "created_at": parse_datetime("2021-10-22T04:14:41.668Z"),
-            "id": "4cb1b545-be33-458f-a537-14aba855b963",
+            "id": "eedef7f5-cf14-4aff-a523-5470405a3db1",
             "metadata": [
                 {
                     "extra_data": {
@@ -1122,7 +1122,7 @@ with UnifiedTo(
             ],
             "name": "sponte.md",
             "type": shared.GenaiMemoryType.MEMORY,
-            "updated_at": parse_datetime("2023-04-25T21:27:26.191Z"),
+            "updated_at": parse_datetime("2023-04-26T04:39:23.586Z"),
             "user_identifier": "9d170613-4338-447d-bdb6-8ea96a2d7513",
         },
         "connection_id": "<id>",
@@ -1155,7 +1155,7 @@ with UnifiedTo(
 
 ## patch_genai_organization
 
-Update an organization
+Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -1176,10 +1176,10 @@ with UnifiedTo(
         "genai_organization": {
             "created_at": parse_datetime("2020-10-27T16:03:47.122Z"),
             "description": "Voluptates abeo subseco.",
-            "id": "f87a73b9-edbc-4cbc-9662-ddb11d3381e9",
+            "id": "f8be95c0-9ebe-4e98-8012-81311a8cd9b5",
             "is_active": False,
             "name": "officially about",
-            "updated_at": parse_datetime("2023-01-26T10:36:41.334Z"),
+            "updated_at": parse_datetime("2023-01-26T19:34:30.483Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1211,7 +1211,7 @@ with UnifiedTo(
 
 ## patch_genai_task
 
-Update a task
+Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the request body.
 
 ### Example Usage
 
@@ -1230,10 +1230,10 @@ with UnifiedTo(
 
     res = unified_to.genai.patch_genai_task(request={
         "genai_task": {
-            "completed_at": parse_datetime("2025-10-01T06:36:12.563Z"),
+            "completed_at": parse_datetime("2025-10-02T02:15:37.686Z"),
             "created_at": parse_datetime("2020-10-25T20:19:33.247Z"),
             "files_changed": 19.0,
-            "id": "7b8631d6-ac88-4ed9-bd1e-6950bd18a8ef",
+            "id": "4013dc78-f8cd-401f-8553-cc0548fc6a44",
             "instructions": "Benigne canonicus officiis solvo adsidue deleo angustus.",
             "lines_added": 244.0,
             "lines_deleted": 118.0,
@@ -1248,12 +1248,12 @@ with UnifiedTo(
             "pullrequest_url": "https://github.com/berenice.satterfield/joshingly-ignorance/pull/383",
             "repo_url": "https://github.com/berenice.satterfield/joshingly-ignorance",
             "source_branch_identifier": "main",
-            "started_at": parse_datetime("2024-05-21T10:26:55.100Z"),
+            "started_at": parse_datetime("2024-05-22T00:40:23.688Z"),
             "status": shared.GenaiTaskStatus.BLOCKED,
             "summary": "Cur aeternus cogito vesper.",
             "target_branch_identifier": "agent/joshingly-ignorance",
             "tokens_used": 2165.0,
-            "updated_at": parse_datetime("2023-02-26T07:13:13.636Z"),
+            "updated_at": parse_datetime("2023-02-26T16:31:59.686Z"),
             "web_url": "https://inexperienced-adrenalin.biz/",
         },
         "connection_id": "<id>",
@@ -1286,7 +1286,7 @@ with UnifiedTo(
 
 ## remove_genai_agent
 
-Remove an agent
+Deletes the GenaiAgent identified by `id`.
 
 ### Example Usage
 
@@ -1333,7 +1333,7 @@ with UnifiedTo(
 
 ## remove_genai_memory
 
-Remove a memory
+Deletes the GenaiMemory identified by `id`.
 
 ### Example Usage
 
@@ -1380,7 +1380,7 @@ with UnifiedTo(
 
 ## remove_genai_organization
 
-Remove an organization
+Deletes the GenaiOrganization identified by `id`.
 
 ### Example Usage
 
@@ -1427,7 +1427,7 @@ with UnifiedTo(
 
 ## remove_genai_skill
 
-Remove a skill
+Deletes the GenaiSkill identified by `id`.
 
 ### Example Usage
 
@@ -1474,7 +1474,7 @@ with UnifiedTo(
 
 ## remove_genai_task
 
-Remove a task
+Deletes the GenaiTask identified by `id`.
 
 ### Example Usage
 
@@ -1521,7 +1521,7 @@ with UnifiedTo(
 
 ## update_genai_agent
 
-Update an agent
+Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields to change in the request body.
 
 ### Example Usage
 
@@ -1542,11 +1542,11 @@ with UnifiedTo(
         "genai_agent": {
             "created_at": parse_datetime("2020-12-18T02:23:33.723Z"),
             "description": "Assentator tero sequi.",
-            "id": "24582fd0-446d-4c0a-80f5-014e5bcff7ce",
+            "id": "691117f4-f6f3-456b-90b6-e5ab838c6c45",
             "instructions": "Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.",
             "is_active": False,
             "name": "daughter with",
-            "updated_at": parse_datetime("2025-10-15T10:43:39.297Z"),
+            "updated_at": parse_datetime("2025-10-16T06:26:17.713Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1578,7 +1578,7 @@ with UnifiedTo(
 
 ## update_genai_memory
 
-Update a memory
+Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fields to change in the request body.
 
 ### Example Usage
 
@@ -1599,7 +1599,7 @@ with UnifiedTo(
         "genai_memory": {
             "content": "Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.",
             "created_at": parse_datetime("2021-10-22T04:14:41.668Z"),
-            "id": "4cb1b545-be33-458f-a537-14aba855b963",
+            "id": "eedef7f5-cf14-4aff-a523-5470405a3db1",
             "metadata": [
                 {
                     "extra_data": {
@@ -1614,7 +1614,7 @@ with UnifiedTo(
             ],
             "name": "sponte.md",
             "type": shared.GenaiMemoryType.MEMORY,
-            "updated_at": parse_datetime("2023-04-25T21:27:26.191Z"),
+            "updated_at": parse_datetime("2023-04-26T04:39:23.586Z"),
             "user_identifier": "9d170613-4338-447d-bdb6-8ea96a2d7513",
         },
         "connection_id": "<id>",
@@ -1647,7 +1647,7 @@ with UnifiedTo(
 
 ## update_genai_organization
 
-Update an organization
+Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -1668,10 +1668,10 @@ with UnifiedTo(
         "genai_organization": {
             "created_at": parse_datetime("2020-10-27T16:03:47.122Z"),
             "description": "Voluptates abeo subseco.",
-            "id": "f87a73b9-edbc-4cbc-9662-ddb11d3381e9",
+            "id": "f8be95c0-9ebe-4e98-8012-81311a8cd9b5",
             "is_active": False,
             "name": "officially about",
-            "updated_at": parse_datetime("2023-01-26T10:36:41.334Z"),
+            "updated_at": parse_datetime("2023-01-26T19:34:30.483Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1703,7 +1703,7 @@ with UnifiedTo(
 
 ## update_genai_task
 
-Update a task
+Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the request body.
 
 ### Example Usage
 
@@ -1722,10 +1722,10 @@ with UnifiedTo(
 
     res = unified_to.genai.update_genai_task(request={
         "genai_task": {
-            "completed_at": parse_datetime("2025-10-01T06:36:12.563Z"),
+            "completed_at": parse_datetime("2025-10-02T02:15:37.686Z"),
             "created_at": parse_datetime("2020-10-25T20:19:33.247Z"),
             "files_changed": 19.0,
-            "id": "7b8631d6-ac88-4ed9-bd1e-6950bd18a8ef",
+            "id": "4013dc78-f8cd-401f-8553-cc0548fc6a44",
             "instructions": "Benigne canonicus officiis solvo adsidue deleo angustus.",
             "lines_added": 244.0,
             "lines_deleted": 118.0,
@@ -1740,12 +1740,12 @@ with UnifiedTo(
             "pullrequest_url": "https://github.com/berenice.satterfield/joshingly-ignorance/pull/383",
             "repo_url": "https://github.com/berenice.satterfield/joshingly-ignorance",
             "source_branch_identifier": "main",
-            "started_at": parse_datetime("2024-05-21T10:26:55.100Z"),
+            "started_at": parse_datetime("2024-05-22T00:40:23.688Z"),
             "status": shared.GenaiTaskStatus.BLOCKED,
             "summary": "Cur aeternus cogito vesper.",
             "target_branch_identifier": "agent/joshingly-ignorance",
             "tokens_used": 2165.0,
-            "updated_at": parse_datetime("2023-02-26T07:13:13.636Z"),
+            "updated_at": parse_datetime("2023-02-26T16:31:59.686Z"),
             "web_url": "https://inexperienced-adrenalin.biz/",
         },
         "connection_id": "<id>",

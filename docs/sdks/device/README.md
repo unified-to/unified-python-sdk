@@ -13,7 +13,7 @@
 
 ## create_hris_device
 
-Create a device
+Creates a HrisDevice. Provide the unified HrisDevice fields in the request body; they are mapped to the provider's API. Returns the created HrisDevice.
 
 ### Example Usage
 
@@ -40,7 +40,7 @@ with UnifiedTo(
             "has_hd_encrypted": True,
             "has_password_manager": True,
             "has_screenlock": False,
-            "id": "ab448fd5-5b69-4eef-8dea-b8afb105937b",
+            "id": "8948d49b-375f-49ed-a723-905a47075ae9",
             "is_missing": False,
             "manufacturer": "Hackett Inc",
             "metadata": [],
@@ -48,7 +48,7 @@ with UnifiedTo(
             "name": "august-laptop",
             "os": "transmitter",
             "os_version": "8.4.8",
-            "updated_at": parse_datetime("2023-06-08T07:18:09.533Z"),
+            "updated_at": parse_datetime("2023-06-08T20:30:23.493Z"),
             "version": "4.15.7",
         },
         "connection_id": "<id>",
@@ -80,7 +80,7 @@ with UnifiedTo(
 
 ## get_hris_device
 
-Retrieve a device
+Retrieves a single HrisDevice by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -127,7 +127,7 @@ with UnifiedTo(
 
 ## list_hris_devices
 
-List all devices
+Returns a list of HrisDevices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -173,7 +173,7 @@ with UnifiedTo(
 
 ## patch_hris_device
 
-Update a device
+Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the request body.
 
 ### Example Usage
 
@@ -200,7 +200,7 @@ with UnifiedTo(
             "has_hd_encrypted": True,
             "has_password_manager": True,
             "has_screenlock": False,
-            "id": "7cfafe39-68f3-4249-8fcc-5856661e7236",
+            "id": "afc52eb2-dd4b-4278-b6f0-3f16a2a2e6dd",
             "is_missing": False,
             "manufacturer": "Hackett Inc",
             "metadata": [],
@@ -208,7 +208,7 @@ with UnifiedTo(
             "name": "august-laptop",
             "os": "transmitter",
             "os_version": "8.4.8",
-            "updated_at": parse_datetime("2023-06-08T07:18:09.544Z"),
+            "updated_at": parse_datetime("2023-06-08T20:30:23.500Z"),
             "version": "4.15.7",
         },
         "connection_id": "<id>",
@@ -241,7 +241,7 @@ with UnifiedTo(
 
 ## remove_hris_device
 
-Remove a device
+Deletes the HrisDevice identified by `id`.
 
 ### Example Usage
 
@@ -288,7 +288,7 @@ with UnifiedTo(
 
 ## update_hris_device
 
-Update a device
+Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the request body.
 
 ### Example Usage
 
@@ -315,7 +315,7 @@ with UnifiedTo(
             "has_hd_encrypted": True,
             "has_password_manager": True,
             "has_screenlock": False,
-            "id": "7cfafe39-68f3-4249-8fcc-5856661e7236",
+            "id": "afc52eb2-dd4b-4278-b6f0-3f16a2a2e6dd",
             "is_missing": False,
             "manufacturer": "Hackett Inc",
             "metadata": [],
@@ -323,7 +323,7 @@ with UnifiedTo(
             "name": "august-laptop",
             "os": "transmitter",
             "os_version": "8.4.8",
-            "updated_at": parse_datetime("2023-06-08T07:18:09.544Z"),
+            "updated_at": parse_datetime("2023-06-08T20:30:23.500Z"),
             "version": "4.15.7",
         },
         "connection_id": "<id>",

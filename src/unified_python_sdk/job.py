@@ -23,6 +23,8 @@ class Job(BaseSDK):
     ) -> operations.CreateAtsJobResponse:
         r"""Create a job
 
+        Creates a AtsJob. Provide the unified AtsJob fields in the request body; they are mapped to the provider's API. Returns the created AtsJob.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -114,6 +116,8 @@ class Job(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAtsJobResponse:
         r"""Create a job
+
+        Creates a AtsJob. Provide the unified AtsJob fields in the request body; they are mapped to the provider's API. Returns the created AtsJob.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -207,6 +211,8 @@ class Job(BaseSDK):
     ) -> operations.CreateHrisJobResponse:
         r"""Create a job
 
+        Creates a HrisJob. Provide the unified HrisJob fields in the request body; they are mapped to the provider's API. Returns the created HrisJob.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -298,6 +304,8 @@ class Job(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateHrisJobResponse:
         r"""Create a job
+
+        Creates a HrisJob. Provide the unified HrisJob fields in the request body; they are mapped to the provider's API. Returns the created HrisJob.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -391,6 +399,8 @@ class Job(BaseSDK):
     ) -> operations.GetAtsJobResponse:
         r"""Retrieve a job
 
+        Retrieves a single AtsJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -479,6 +489,8 @@ class Job(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAtsJobResponse:
         r"""Retrieve a job
+
+        Retrieves a single AtsJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -569,6 +581,8 @@ class Job(BaseSDK):
     ) -> operations.GetHrisJobResponse:
         r"""Retrieve a job
 
+        Retrieves a single HrisJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -658,6 +672,8 @@ class Job(BaseSDK):
     ) -> operations.GetHrisJobResponse:
         r"""Retrieve a job
 
+        Retrieves a single HrisJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -746,6 +762,8 @@ class Job(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAtsJobsResponse:
         r"""List all jobs
+
+        Returns a list of AtsJobs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -838,6 +856,8 @@ class Job(BaseSDK):
     ) -> operations.ListAtsJobsResponse:
         r"""List all jobs
 
+        Returns a list of AtsJobs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -928,6 +948,8 @@ class Job(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListHrisJobsResponse:
         r"""List all jobs
+
+        Returns a list of HrisJobs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1020,6 +1042,8 @@ class Job(BaseSDK):
     ) -> operations.ListHrisJobsResponse:
         r"""List all jobs
 
+        Returns a list of HrisJobs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1110,6 +1134,8 @@ class Job(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAtsJobResponse:
         r"""Update a job
+
+        Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1203,6 +1229,8 @@ class Job(BaseSDK):
     ) -> operations.PatchAtsJobResponse:
         r"""Update a job
 
+        Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1294,6 +1322,8 @@ class Job(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchHrisJobResponse:
         r"""Update a job
+
+        Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1387,6 +1417,8 @@ class Job(BaseSDK):
     ) -> operations.PatchHrisJobResponse:
         r"""Update a job
 
+        Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1478,6 +1510,8 @@ class Job(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAtsJobResponse:
         r"""Remove a job
+
+        Deletes the AtsJob identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1575,6 +1609,8 @@ class Job(BaseSDK):
     ) -> operations.RemoveAtsJobResponse:
         r"""Remove a job
 
+        Deletes the AtsJob identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1670,6 +1706,8 @@ class Job(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveHrisJobResponse:
         r"""Remove a job
+
+        Deletes the HrisJob identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1767,6 +1805,8 @@ class Job(BaseSDK):
     ) -> operations.RemoveHrisJobResponse:
         r"""Remove a job
 
+        Deletes the HrisJob identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1863,6 +1903,8 @@ class Job(BaseSDK):
     ) -> operations.UpdateAtsJobResponse:
         r"""Update a job
 
+        Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1954,6 +1996,8 @@ class Job(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAtsJobResponse:
         r"""Update a job
+
+        Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2047,6 +2091,8 @@ class Job(BaseSDK):
     ) -> operations.UpdateHrisJobResponse:
         r"""Update a job
 
+        Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2138,6 +2184,8 @@ class Job(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateHrisJobResponse:
         r"""Update a job
+
+        Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

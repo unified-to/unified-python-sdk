@@ -24,6 +24,8 @@ class Item(BaseSDK):
     ) -> operations.CreateCommerceItemResponse:
         r"""Create an item
 
+        Creates a CommerceItem. Provide the unified CommerceItem fields in the request body; they are mapped to the provider's API. Returns the created CommerceItem.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -118,6 +120,8 @@ class Item(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateCommerceItemResponse:
         r"""Create an item
+
+        Creates a CommerceItem. Provide the unified CommerceItem fields in the request body; they are mapped to the provider's API. Returns the created CommerceItem.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -214,6 +218,8 @@ class Item(BaseSDK):
     ) -> operations.GetCommerceItemResponse:
         r"""Retrieve an item
 
+        Retrieves a single CommerceItem by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -305,6 +311,8 @@ class Item(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetCommerceItemResponse:
         r"""Retrieve an item
+
+        Retrieves a single CommerceItem by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -398,6 +406,8 @@ class Item(BaseSDK):
     ) -> operations.ListCommerceItemsResponse:
         r"""List all items
 
+        Returns a list of CommerceItems. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -490,6 +500,8 @@ class Item(BaseSDK):
     ) -> operations.ListCommerceItemsResponse:
         r"""List all items
 
+        Returns a list of CommerceItems. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -581,6 +593,8 @@ class Item(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchCommerceItemResponse:
         r"""Update an item
+
+        Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -677,6 +691,8 @@ class Item(BaseSDK):
     ) -> operations.PatchCommerceItemResponse:
         r"""Update an item
 
+        Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -771,6 +787,8 @@ class Item(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveCommerceItemResponse:
         r"""Remove an item
+
+        Deletes the CommerceItem identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -869,6 +887,8 @@ class Item(BaseSDK):
     ) -> operations.RemoveCommerceItemResponse:
         r"""Remove an item
 
+        Deletes the CommerceItem identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -966,6 +986,8 @@ class Item(BaseSDK):
     ) -> operations.UpdateCommerceItemResponse:
         r"""Update an item
 
+        Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1060,6 +1082,8 @@ class Item(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateCommerceItemResponse:
         r"""Update an item
+
+        Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

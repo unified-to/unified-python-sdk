@@ -13,7 +13,7 @@
 
 ## create_accounting_paymentterm
 
-Create a paymentterm
+Creates a AccountingPaymentterm. Provide the unified AccountingPaymentterm fields in the request body; they are mapped to the provider's API. Returns the created AccountingPaymentterm.
 
 ### Example Usage
 
@@ -41,12 +41,12 @@ with UnifiedTo(
             "discount_percent": 5.0,
             "due_days": 57.0,
             "due_next_month_days": 9.0,
-            "id": "d590c9b9-758e-4522-94b0-f1d75ee7d5e6",
+            "id": "8e092a25-d81d-4f02-99ec-9d392ada484c",
             "is_active": False,
             "metadata": [],
             "name": "Net 30",
             "type": shared.AccountingPaymenttermType.NET_15,
-            "updated_at": parse_datetime("2026-01-08T11:08:28.842Z"),
+            "updated_at": parse_datetime("2026-01-09T07:22:59.460Z"),
         },
         "connection_id": "<id>",
     })
@@ -77,7 +77,7 @@ with UnifiedTo(
 
 ## get_accounting_paymentterm
 
-Retrieve a paymentterm
+Retrieves a single AccountingPaymentterm by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -124,7 +124,7 @@ with UnifiedTo(
 
 ## list_accounting_paymentterms
 
-List all paymentterms
+Returns a list of AccountingPaymentterms. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -170,7 +170,7 @@ with UnifiedTo(
 
 ## patch_accounting_paymentterm
 
-Update a paymentterm
+Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm fields to change in the request body.
 
 ### Example Usage
 
@@ -198,12 +198,12 @@ with UnifiedTo(
             "discount_percent": 5.0,
             "due_days": 57.0,
             "due_next_month_days": 9.0,
-            "id": "37df86e8-8bdf-41a1-b539-8ce5baedf25b",
+            "id": "61ff1f8f-4985-4e40-a8d4-ff7eb3f02792",
             "is_active": False,
             "metadata": [],
             "name": "Net 30",
             "type": shared.AccountingPaymenttermType.NET_15,
-            "updated_at": parse_datetime("2026-01-08T11:08:28.870Z"),
+            "updated_at": parse_datetime("2026-01-09T07:22:59.471Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -235,7 +235,7 @@ with UnifiedTo(
 
 ## remove_accounting_paymentterm
 
-Remove a paymentterm
+Deletes the AccountingPaymentterm identified by `id`.
 
 ### Example Usage
 
@@ -282,7 +282,7 @@ with UnifiedTo(
 
 ## update_accounting_paymentterm
 
-Update a paymentterm
+Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm fields to change in the request body.
 
 ### Example Usage
 
@@ -310,12 +310,12 @@ with UnifiedTo(
             "discount_percent": 5.0,
             "due_days": 57.0,
             "due_next_month_days": 9.0,
-            "id": "37df86e8-8bdf-41a1-b539-8ce5baedf25b",
+            "id": "61ff1f8f-4985-4e40-a8d4-ff7eb3f02792",
             "is_active": False,
             "metadata": [],
             "name": "Net 30",
             "type": shared.AccountingPaymenttermType.NET_15,
-            "updated_at": parse_datetime("2026-01-08T11:08:28.870Z"),
+            "updated_at": parse_datetime("2026-01-09T07:22:59.471Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

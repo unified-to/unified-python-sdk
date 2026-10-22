@@ -63,6 +63,7 @@ class AtsJobTypedDict(TypedDict):
     minimum_degree: NotRequired[str]
     minimum_experience_years: NotRequired[float]
     name: NotRequired[str]
+    r"""The job's title"""
     number_of_openings: NotRequired[float]
     r"""Number of openings for the job"""
     openings: NotRequired[List[AtsJobOpeningTypedDict]]
@@ -123,6 +124,7 @@ class AtsJob(BaseModel):
     minimum_experience_years: Optional[float] = None
 
     name: Optional[str] = None
+    r"""The job's title"""
 
     number_of_openings: Optional[float] = None
     r"""Number of openings for the job"""

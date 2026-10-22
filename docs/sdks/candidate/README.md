@@ -13,7 +13,7 @@
 
 ## create_ats_candidate
 
-Create a candidate
+Creates a AtsCandidate. Provide the unified AtsCandidate fields in the request body; they are mapped to the provider's API. Returns the created AtsCandidate.
 
 ### Example Usage
 
@@ -83,7 +83,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Ardith",
-            "id": "621ede17-d7bb-4d42-b84f-e8f3bead71b6",
+            "id": "d6158514-0b98-44b7-b485-fe144b84b2a8",
             "image_url": "https://avatars.githubusercontent.com/u/27464445",
             "job_ids": [],
             "last_name": "Beatty",
@@ -96,7 +96,7 @@ with UnifiedTo(
 
                     },
                     "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "ca216ebe-fe55-403b-aad2-7b1e449ca34b",
+                    "id": "2c40bd7e-b0aa-4953-8489-fb78f25489d3",
                     "namespace": "custom",
                     "slug": "custom_field",
                     "value": "officia",
@@ -123,7 +123,7 @@ with UnifiedTo(
                 },
             ],
             "title": "Customer Division Producer",
-            "updated_at": parse_datetime("2024-04-28T17:46:38.408Z"),
+            "updated_at": parse_datetime("2024-04-28T22:00:51.392Z"),
             "web_url": "https://fragrant-husband.net/",
         },
         "connection_id": "<id>",
@@ -155,7 +155,7 @@ with UnifiedTo(
 
 ## get_ats_candidate
 
-Retrieve a candidate
+Retrieves a single AtsCandidate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -202,7 +202,7 @@ with UnifiedTo(
 
 ## list_ats_candidates
 
-List all candidates
+Returns a list of AtsCandidates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -248,7 +248,7 @@ with UnifiedTo(
 
 ## patch_ats_candidate
 
-Update a candidate
+Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in the request body.
 
 ### Example Usage
 
@@ -318,7 +318,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Ardith",
-            "id": "f8c3986e-ed87-4952-b5af-9ee7d02a0118",
+            "id": "33c70965-b05d-40b8-a4f6-7140edb9bf1b",
             "image_url": "https://avatars.githubusercontent.com/u/27464445",
             "job_ids": [],
             "last_name": "Beatty",
@@ -331,7 +331,7 @@ with UnifiedTo(
 
                     },
                     "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "0985bb29-678c-4e1f-a509-dc7855ae8d34",
+                    "id": "d21457b0-099d-4edc-b53c-7a891e833870",
                     "namespace": "custom",
                     "slug": "custom_field",
                     "value": "officia",
@@ -358,7 +358,7 @@ with UnifiedTo(
                 },
             ],
             "title": "Customer Division Producer",
-            "updated_at": parse_datetime("2024-04-28T17:46:38.414Z"),
+            "updated_at": parse_datetime("2024-04-28T22:00:51.397Z"),
             "web_url": "https://fragrant-husband.net/",
         },
         "connection_id": "<id>",
@@ -391,7 +391,7 @@ with UnifiedTo(
 
 ## remove_ats_candidate
 
-Remove a candidate
+Deletes the AtsCandidate identified by `id`.
 
 ### Example Usage
 
@@ -438,7 +438,7 @@ with UnifiedTo(
 
 ## update_ats_candidate
 
-Update a candidate
+Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in the request body.
 
 ### Example Usage
 
@@ -508,7 +508,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Ardith",
-            "id": "f8c3986e-ed87-4952-b5af-9ee7d02a0118",
+            "id": "33c70965-b05d-40b8-a4f6-7140edb9bf1b",
             "image_url": "https://avatars.githubusercontent.com/u/27464445",
             "job_ids": [],
             "last_name": "Beatty",
@@ -521,7 +521,7 @@ with UnifiedTo(
 
                     },
                     "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "0985bb29-678c-4e1f-a509-dc7855ae8d34",
+                    "id": "d21457b0-099d-4edc-b53c-7a891e833870",
                     "namespace": "custom",
                     "slug": "custom_field",
                     "value": "officia",
@@ -548,7 +548,7 @@ with UnifiedTo(
                 },
             ],
             "title": "Customer Division Producer",
-            "updated_at": parse_datetime("2024-04-28T17:46:38.414Z"),
+            "updated_at": parse_datetime("2024-04-28T22:00:51.397Z"),
             "web_url": "https://fragrant-husband.net/",
         },
         "connection_id": "<id>",

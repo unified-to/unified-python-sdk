@@ -25,7 +25,7 @@
 
 ## create_kms_comment
 
-Create a comment
+Creates a KmsComment. Provide the unified KmsComment fields in the request body; they are mapped to the provider's API. Returns the created KmsComment.
 
 ### Example Usage
 
@@ -47,10 +47,10 @@ with UnifiedTo(
             "content": "Decimus tolero viriliter usque.",
             "content_type": shared.ContentType.HTML,
             "created_at": parse_datetime("2022-08-26T14:40:49.732Z"),
-            "id": "ec3c9392-45be-4d62-9c26-fcc2d706631c",
+            "id": "f70dadbf-c49e-4d15-b95b-76c9be0a9360",
             "metadata": [],
             "type": shared.KmsCommentType.PAGE,
-            "updated_at": parse_datetime("2023-11-26T06:46:08.923Z"),
+            "updated_at": parse_datetime("2023-11-26T13:57:11.798Z"),
         },
         "connection_id": "<id>",
     })
@@ -81,7 +81,7 @@ with UnifiedTo(
 
 ## create_kms_page
 
-Create a page
+Creates a KmsPage. Provide the unified KmsPage fields in the request body; they are mapped to the provider's API. Returns the created KmsPage.
 
 ### Example Usage
 
@@ -103,12 +103,12 @@ with UnifiedTo(
             "created_at": parse_datetime("2019-05-20T18:06:50.749Z"),
             "download_url": "https://agitated-validity.info",
             "has_children": True,
-            "id": "2c372c72-dc85-40f7-b10f-545a651ce2f6",
+            "id": "09d346b6-e6f1-48d9-88f3-ad33c3498f06",
             "is_active": True,
             "metadata": [],
             "title": "even minister extract",
             "type": shared.KmsPageType.HTML,
-            "updated_at": parse_datetime("2025-10-09T04:18:16.759Z"),
+            "updated_at": parse_datetime("2025-10-10T00:50:34.700Z"),
             "web_url": "https://another-petticoat.info",
         },
         "connection_id": "<id>",
@@ -140,7 +140,7 @@ with UnifiedTo(
 
 ## create_kms_space
 
-Create a space
+Creates a KmsSpace. Provide the unified KmsSpace fields in the request body; they are mapped to the provider's API. Returns the created KmsSpace.
 
 ### Example Usage
 
@@ -161,11 +161,11 @@ with UnifiedTo(
         "kms_space": {
             "created_at": parse_datetime("2022-10-31T00:56:54.246Z"),
             "description": "Acer.",
-            "id": "090b8212-a2cf-4879-9631-cf9b03aac7a6",
+            "id": "446ff652-9d3f-47e2-8138-b6d4e60961ff",
             "is_active": False,
             "metadata": [],
             "name": "into nor afore",
-            "updated_at": parse_datetime("2025-12-29T22:48:32.352Z"),
+            "updated_at": parse_datetime("2025-12-30T17:48:47.665Z"),
         },
         "connection_id": "<id>",
     })
@@ -196,7 +196,7 @@ with UnifiedTo(
 
 ## get_kms_comment
 
-Retrieve a comment
+Retrieves a single KmsComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -243,7 +243,7 @@ with UnifiedTo(
 
 ## get_kms_page
 
-Retrieve a page
+Retrieves a single KmsPage by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -290,7 +290,7 @@ with UnifiedTo(
 
 ## get_kms_space
 
-Retrieve a space
+Retrieves a single KmsSpace by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -337,7 +337,7 @@ with UnifiedTo(
 
 ## list_kms_comments
 
-List all comments
+Returns a list of KmsComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -383,7 +383,7 @@ with UnifiedTo(
 
 ## list_kms_pages
 
-List all pages
+Returns a list of KmsPages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -429,7 +429,7 @@ with UnifiedTo(
 
 ## list_kms_spaces
 
-List all spaces
+Returns a list of KmsSpaces. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -475,7 +475,7 @@ with UnifiedTo(
 
 ## patch_kms_comment
 
-Update a comment
+Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the request body.
 
 ### Example Usage
 
@@ -497,10 +497,10 @@ with UnifiedTo(
             "content": "Decimus tolero viriliter usque.",
             "content_type": shared.ContentType.HTML,
             "created_at": parse_datetime("2022-08-26T14:40:49.732Z"),
-            "id": "f1b8f0ea-a567-4c6d-a25c-1275f5aabd43",
+            "id": "a08fa0b1-2d59-4bd9-afd2-b70b50910414",
             "metadata": [],
             "type": shared.KmsCommentType.PAGE,
-            "updated_at": parse_datetime("2023-11-26T06:46:08.927Z"),
+            "updated_at": parse_datetime("2023-11-26T13:57:11.803Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -532,7 +532,7 @@ with UnifiedTo(
 
 ## patch_kms_page
 
-Update a page
+Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to change in the request body.
 
 ### Example Usage
 
@@ -554,12 +554,12 @@ with UnifiedTo(
             "created_at": parse_datetime("2019-05-20T18:06:50.749Z"),
             "download_url": "https://agitated-validity.info",
             "has_children": True,
-            "id": "0aaea4d8-bd25-4324-88e3-814eee2e04b0",
+            "id": "92edceee-2b74-46db-a8ae-060c225ade64",
             "is_active": True,
             "metadata": [],
             "title": "even minister extract",
             "type": shared.KmsPageType.HTML,
-            "updated_at": parse_datetime("2025-10-09T04:18:16.773Z"),
+            "updated_at": parse_datetime("2025-10-10T00:50:34.716Z"),
             "web_url": "https://another-petticoat.info",
         },
         "connection_id": "<id>",
@@ -592,7 +592,7 @@ with UnifiedTo(
 
 ## patch_kms_space
 
-Update a space
+Updates the KmsSpace identified by `id`. Provide the unified KmsSpace fields to change in the request body.
 
 ### Example Usage
 
@@ -613,11 +613,11 @@ with UnifiedTo(
         "kms_space": {
             "created_at": parse_datetime("2022-10-31T00:56:54.246Z"),
             "description": "Acer.",
-            "id": "33a444d3-5b62-4b56-84ab-6eaec77ed7c8",
+            "id": "64d1bceb-c2c9-4d49-a9a6-82cc4c5ee096",
             "is_active": False,
             "metadata": [],
             "name": "into nor afore",
-            "updated_at": parse_datetime("2025-12-29T22:48:32.362Z"),
+            "updated_at": parse_datetime("2025-12-30T17:48:47.677Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -649,7 +649,7 @@ with UnifiedTo(
 
 ## remove_kms_comment
 
-Remove a comment
+Deletes the KmsComment identified by `id`.
 
 ### Example Usage
 
@@ -696,7 +696,7 @@ with UnifiedTo(
 
 ## remove_kms_page
 
-Remove a page
+Deletes the KmsPage identified by `id`.
 
 ### Example Usage
 
@@ -743,7 +743,7 @@ with UnifiedTo(
 
 ## remove_kms_space
 
-Remove a space
+Deletes the KmsSpace identified by `id`.
 
 ### Example Usage
 
@@ -790,7 +790,7 @@ with UnifiedTo(
 
 ## update_kms_comment
 
-Update a comment
+Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the request body.
 
 ### Example Usage
 
@@ -812,10 +812,10 @@ with UnifiedTo(
             "content": "Decimus tolero viriliter usque.",
             "content_type": shared.ContentType.HTML,
             "created_at": parse_datetime("2022-08-26T14:40:49.732Z"),
-            "id": "f1b8f0ea-a567-4c6d-a25c-1275f5aabd43",
+            "id": "a08fa0b1-2d59-4bd9-afd2-b70b50910414",
             "metadata": [],
             "type": shared.KmsCommentType.PAGE,
-            "updated_at": parse_datetime("2023-11-26T06:46:08.927Z"),
+            "updated_at": parse_datetime("2023-11-26T13:57:11.803Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -847,7 +847,7 @@ with UnifiedTo(
 
 ## update_kms_page
 
-Update a page
+Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to change in the request body.
 
 ### Example Usage
 
@@ -869,12 +869,12 @@ with UnifiedTo(
             "created_at": parse_datetime("2019-05-20T18:06:50.749Z"),
             "download_url": "https://agitated-validity.info",
             "has_children": True,
-            "id": "0aaea4d8-bd25-4324-88e3-814eee2e04b0",
+            "id": "92edceee-2b74-46db-a8ae-060c225ade64",
             "is_active": True,
             "metadata": [],
             "title": "even minister extract",
             "type": shared.KmsPageType.HTML,
-            "updated_at": parse_datetime("2025-10-09T04:18:16.773Z"),
+            "updated_at": parse_datetime("2025-10-10T00:50:34.716Z"),
             "web_url": "https://another-petticoat.info",
         },
         "connection_id": "<id>",
@@ -907,7 +907,7 @@ with UnifiedTo(
 
 ## update_kms_space
 
-Update a space
+Updates the KmsSpace identified by `id`. Provide the unified KmsSpace fields to change in the request body.
 
 ### Example Usage
 
@@ -928,11 +928,11 @@ with UnifiedTo(
         "kms_space": {
             "created_at": parse_datetime("2022-10-31T00:56:54.246Z"),
             "description": "Acer.",
-            "id": "33a444d3-5b62-4b56-84ab-6eaec77ed7c8",
+            "id": "64d1bceb-c2c9-4d49-a9a6-82cc4c5ee096",
             "is_active": False,
             "metadata": [],
             "name": "into nor afore",
-            "updated_at": parse_datetime("2025-12-29T22:48:32.362Z"),
+            "updated_at": parse_datetime("2025-12-30T17:48:47.677Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

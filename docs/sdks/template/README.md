@@ -15,7 +15,7 @@
 
 ## create_compute_template
 
-Create a template
+Creates a ComputeTemplate. Provide the unified ComputeTemplate fields in the request body; they are mapped to the provider's API. Returns the created ComputeTemplate.
 
 ### Example Usage
 
@@ -40,10 +40,10 @@ with UnifiedTo(
             "dockerfile": "FROM ubuntu:24.04\nRUN apt-get update",
             "gpu_count": 2.0,
             "gpu_model": shared.ComputeTemplateGpuModel.NVIDIA_GH200,
-            "id": "45861dbc-d156-4117-a385-2099a142e18b",
+            "id": "eaa43204-8bb4-45ef-a7a2-05e9a78e76d8",
             "image": "perfumed-molasses/cohibeo:5.2",
             "is_public": False,
-            "last_used_at": parse_datetime("2026-03-23T20:23:02.244Z"),
+            "last_used_at": parse_datetime("2026-03-24T16:28:06.696Z"),
             "memory_mb": 8192.0,
             "metadata": [],
             "name": "multi-byte-card",
@@ -51,7 +51,7 @@ with UnifiedTo(
                 8080.0,
             ],
             "status": shared.ComputeTemplateStatus.OTHER,
-            "updated_at": parse_datetime("2025-02-12T18:36:08.773Z"),
+            "updated_at": parse_datetime("2025-02-13T07:28:16.292Z"),
         },
         "connection_id": "<id>",
     })
@@ -82,7 +82,7 @@ with UnifiedTo(
 
 ## get_compute_template
 
-Retrieve a template
+Retrieves a single ComputeTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -129,7 +129,7 @@ with UnifiedTo(
 
 ## get_signing_template
 
-Retrieve a template
+Retrieves a single SigningTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -176,7 +176,7 @@ with UnifiedTo(
 
 ## list_compute_templates
 
-List all templates
+Returns a list of ComputeTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -222,7 +222,7 @@ with UnifiedTo(
 
 ## list_signing_templates
 
-List all templates
+Returns a list of SigningTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -268,7 +268,7 @@ with UnifiedTo(
 
 ## patch_compute_template
 
-Update a template
+Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change in the request body.
 
 ### Example Usage
 
@@ -293,10 +293,10 @@ with UnifiedTo(
             "dockerfile": "FROM ubuntu:24.04\nRUN apt-get update",
             "gpu_count": 2.0,
             "gpu_model": shared.ComputeTemplateGpuModel.NVIDIA_GH200,
-            "id": "40c203b4-a64e-4b07-a9dd-51bd17c3c5e5",
+            "id": "54d4604d-270c-4610-8aab-cf1d48975452",
             "image": "perfumed-molasses/cohibeo:5.2",
             "is_public": False,
-            "last_used_at": parse_datetime("2026-03-23T20:23:02.260Z"),
+            "last_used_at": parse_datetime("2026-03-24T16:28:06.720Z"),
             "memory_mb": 8192.0,
             "metadata": [],
             "name": "multi-byte-card",
@@ -304,7 +304,7 @@ with UnifiedTo(
                 8080.0,
             ],
             "status": shared.ComputeTemplateStatus.OTHER,
-            "updated_at": parse_datetime("2025-02-12T18:36:08.783Z"),
+            "updated_at": parse_datetime("2025-02-13T07:28:16.307Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -336,7 +336,7 @@ with UnifiedTo(
 
 ## remove_compute_template
 
-Remove a template
+Deletes the ComputeTemplate identified by `id`.
 
 ### Example Usage
 
@@ -383,7 +383,7 @@ with UnifiedTo(
 
 ## update_compute_template
 
-Update a template
+Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change in the request body.
 
 ### Example Usage
 
@@ -408,10 +408,10 @@ with UnifiedTo(
             "dockerfile": "FROM ubuntu:24.04\nRUN apt-get update",
             "gpu_count": 2.0,
             "gpu_model": shared.ComputeTemplateGpuModel.NVIDIA_GH200,
-            "id": "40c203b4-a64e-4b07-a9dd-51bd17c3c5e5",
+            "id": "54d4604d-270c-4610-8aab-cf1d48975452",
             "image": "perfumed-molasses/cohibeo:5.2",
             "is_public": False,
-            "last_used_at": parse_datetime("2026-03-23T20:23:02.260Z"),
+            "last_used_at": parse_datetime("2026-03-24T16:28:06.720Z"),
             "memory_mb": 8192.0,
             "metadata": [],
             "name": "multi-byte-card",
@@ -419,7 +419,7 @@ with UnifiedTo(
                 8080.0,
             ],
             "status": shared.ComputeTemplateStatus.OTHER,
-            "updated_at": parse_datetime("2025-02-12T18:36:08.783Z"),
+            "updated_at": parse_datetime("2025-02-13T07:28:16.307Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

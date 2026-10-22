@@ -36,12 +36,14 @@ class AtsApplicationTypedDict(TypedDict):
     applied_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     candidate_id: NotRequired[str]
+    r"""The ID of the candidate who is applying (an AtsCandidate ID)"""
     created_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     hired_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
     job_id: NotRequired[str]
+    r"""The ID of the job being applied to (an AtsJob ID)"""
     metadata: NotRequired[List[AtsMetadataTypedDict]]
     offers: NotRequired[List[AtsOfferTypedDict]]
     original_status: NotRequired[str]
@@ -69,6 +71,7 @@ class AtsApplication(BaseModel):
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     candidate_id: Optional[str] = None
+    r"""The ID of the candidate who is applying (an AtsCandidate ID)"""
 
     created_at: Optional[datetime] = None
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
@@ -79,6 +82,7 @@ class AtsApplication(BaseModel):
     id: Optional[str] = None
 
     job_id: Optional[str] = None
+    r"""The ID of the job being applied to (an AtsJob ID)"""
 
     metadata: Optional[List[AtsMetadata]] = None
 

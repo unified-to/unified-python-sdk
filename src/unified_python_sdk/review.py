@@ -24,6 +24,8 @@ class Review(BaseSDK):
     ) -> operations.CreateCommerceReviewResponse:
         r"""Create a review
 
+        Creates a CommerceReview. Provide the unified CommerceReview fields in the request body; they are mapped to the provider's API. Returns the created CommerceReview.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -118,6 +120,8 @@ class Review(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateCommerceReviewResponse:
         r"""Create a review
+
+        Creates a CommerceReview. Provide the unified CommerceReview fields in the request body; they are mapped to the provider's API. Returns the created CommerceReview.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -214,6 +218,8 @@ class Review(BaseSDK):
     ) -> operations.GetCommerceReviewResponse:
         r"""Retrieve a review
 
+        Retrieves a single CommerceReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -305,6 +311,8 @@ class Review(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetCommerceReviewResponse:
         r"""Retrieve a review
+
+        Retrieves a single CommerceReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -398,6 +406,8 @@ class Review(BaseSDK):
     ) -> operations.GetPerformanceReviewResponse:
         r"""Retrieve a review
 
+        Retrieves a single PerformanceReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -489,6 +499,8 @@ class Review(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetPerformanceReviewResponse:
         r"""Retrieve a review
+
+        Retrieves a single PerformanceReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -582,6 +594,8 @@ class Review(BaseSDK):
     ) -> operations.GetSocialReviewResponse:
         r"""Retrieve a review
 
+        Retrieves a single SocialReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -673,6 +687,8 @@ class Review(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetSocialReviewResponse:
         r"""Retrieve a review
+
+        Retrieves a single SocialReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -766,6 +782,8 @@ class Review(BaseSDK):
     ) -> operations.ListCommerceReviewsResponse:
         r"""List all reviews
 
+        Returns a list of CommerceReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -857,6 +875,8 @@ class Review(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListCommerceReviewsResponse:
         r"""List all reviews
+
+        Returns a list of CommerceReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -950,6 +970,8 @@ class Review(BaseSDK):
     ) -> operations.ListPerformanceReviewsResponse:
         r"""List all reviews
 
+        Returns a list of PerformanceReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1041,6 +1063,8 @@ class Review(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListPerformanceReviewsResponse:
         r"""List all reviews
+
+        Returns a list of PerformanceReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1134,6 +1158,8 @@ class Review(BaseSDK):
     ) -> operations.ListSocialReviewsResponse:
         r"""List all reviews
 
+        Returns a list of SocialReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1226,6 +1252,8 @@ class Review(BaseSDK):
     ) -> operations.ListSocialReviewsResponse:
         r"""List all reviews
 
+        Returns a list of SocialReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1317,6 +1345,8 @@ class Review(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchCommerceReviewResponse:
         r"""Update a review
+
+        Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1413,6 +1443,8 @@ class Review(BaseSDK):
     ) -> operations.PatchCommerceReviewResponse:
         r"""Update a review
 
+        Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1507,6 +1539,8 @@ class Review(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchSocialReviewResponse:
         r"""Update a review
+
+        Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1603,6 +1637,8 @@ class Review(BaseSDK):
     ) -> operations.PatchSocialReviewResponse:
         r"""Update a review
 
+        Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1697,6 +1733,8 @@ class Review(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveCommerceReviewResponse:
         r"""Remove a review
+
+        Deletes the CommerceReview identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1795,6 +1833,8 @@ class Review(BaseSDK):
     ) -> operations.RemoveCommerceReviewResponse:
         r"""Remove a review
 
+        Deletes the CommerceReview identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1892,6 +1932,8 @@ class Review(BaseSDK):
     ) -> operations.UpdateCommerceReviewResponse:
         r"""Update a review
 
+        Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1986,6 +2028,8 @@ class Review(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateCommerceReviewResponse:
         r"""Update a review
+
+        Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2082,6 +2126,8 @@ class Review(BaseSDK):
     ) -> operations.UpdateSocialReviewResponse:
         r"""Update a review
 
+        Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2176,6 +2222,8 @@ class Review(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateSocialReviewResponse:
         r"""Update a review
+
+        Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

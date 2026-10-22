@@ -24,6 +24,8 @@ class Commerce(BaseSDK):
     ) -> operations.CreateCommerceCollectionResponse:
         r"""Create a collection
 
+        Creates a CommerceCollection. Provide the unified CommerceCollection fields in the request body; they are mapped to the provider's API. Returns the created CommerceCollection.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -124,6 +126,8 @@ class Commerce(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateCommerceCollectionResponse:
         r"""Create a collection
+
+        Creates a CommerceCollection. Provide the unified CommerceCollection fields in the request body; they are mapped to the provider's API. Returns the created CommerceCollection.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -226,6 +230,8 @@ class Commerce(BaseSDK):
     ) -> operations.CreateCommerceInventoryResponse:
         r"""Create an inventory
 
+        Creates a CommerceInventory. Provide the unified CommerceInventory fields in the request body; they are mapped to the provider's API. Returns the created CommerceInventory.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -326,6 +332,8 @@ class Commerce(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateCommerceInventoryResponse:
         r"""Create an inventory
+
+        Creates a CommerceInventory. Provide the unified CommerceInventory fields in the request body; they are mapped to the provider's API. Returns the created CommerceInventory.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -428,6 +436,8 @@ class Commerce(BaseSDK):
     ) -> operations.CreateCommerceItemResponse:
         r"""Create an item
 
+        Creates a CommerceItem. Provide the unified CommerceItem fields in the request body; they are mapped to the provider's API. Returns the created CommerceItem.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -523,6 +533,8 @@ class Commerce(BaseSDK):
     ) -> operations.CreateCommerceItemResponse:
         r"""Create an item
 
+        Creates a CommerceItem. Provide the unified CommerceItem fields in the request body; they are mapped to the provider's API. Returns the created CommerceItem.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -617,6 +629,8 @@ class Commerce(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateCommerceItemvariantResponse:
         r"""Create an itemvariant
+
+        Creates a CommerceItemvariant. Provide the unified CommerceItemvariant fields in the request body; they are mapped to the provider's API. Returns the created CommerceItemvariant.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -719,6 +733,8 @@ class Commerce(BaseSDK):
     ) -> operations.CreateCommerceItemvariantResponse:
         r"""Create an itemvariant
 
+        Creates a CommerceItemvariant. Provide the unified CommerceItemvariant fields in the request body; they are mapped to the provider's API. Returns the created CommerceItemvariant.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -820,6 +836,8 @@ class Commerce(BaseSDK):
     ) -> operations.CreateCommerceLocationResponse:
         r"""Create a location
 
+        Creates a CommerceLocation. Provide the unified CommerceLocation fields in the request body; they are mapped to the provider's API. Returns the created CommerceLocation.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -915,6 +933,8 @@ class Commerce(BaseSDK):
     ) -> operations.CreateCommerceLocationResponse:
         r"""Create a location
 
+        Creates a CommerceLocation. Provide the unified CommerceLocation fields in the request body; they are mapped to the provider's API. Returns the created CommerceLocation.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1009,6 +1029,8 @@ class Commerce(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateCommerceReservationResponse:
         r"""Create a reservation
+
+        Creates a CommerceReservation. Provide the unified CommerceReservation fields in the request body; they are mapped to the provider's API. Returns the created CommerceReservation.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1111,6 +1133,8 @@ class Commerce(BaseSDK):
     ) -> operations.CreateCommerceReservationResponse:
         r"""Create a reservation
 
+        Creates a CommerceReservation. Provide the unified CommerceReservation fields in the request body; they are mapped to the provider's API. Returns the created CommerceReservation.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1212,6 +1236,8 @@ class Commerce(BaseSDK):
     ) -> operations.CreateCommerceReviewResponse:
         r"""Create a review
 
+        Creates a CommerceReview. Provide the unified CommerceReview fields in the request body; they are mapped to the provider's API. Returns the created CommerceReview.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1307,6 +1333,8 @@ class Commerce(BaseSDK):
     ) -> operations.CreateCommerceReviewResponse:
         r"""Create a review
 
+        Creates a CommerceReview. Provide the unified CommerceReview fields in the request body; they are mapped to the provider's API. Returns the created CommerceReview.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1401,6 +1429,8 @@ class Commerce(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateCommerceSaleschannelResponse:
         r"""Create a saleschannel
+
+        Creates a CommerceSaleschannel. Provide the unified CommerceSaleschannel fields in the request body; they are mapped to the provider's API. Returns the created CommerceSaleschannel.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1503,6 +1533,8 @@ class Commerce(BaseSDK):
     ) -> operations.CreateCommerceSaleschannelResponse:
         r"""Create a saleschannel
 
+        Creates a CommerceSaleschannel. Provide the unified CommerceSaleschannel fields in the request body; they are mapped to the provider's API. Returns the created CommerceSaleschannel.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1604,6 +1636,8 @@ class Commerce(BaseSDK):
     ) -> operations.GetCommerceCollectionResponse:
         r"""Retrieve a collection
 
+        Retrieves a single CommerceCollection by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1695,6 +1729,8 @@ class Commerce(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetCommerceCollectionResponse:
         r"""Retrieve a collection
+
+        Retrieves a single CommerceCollection by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1788,6 +1824,8 @@ class Commerce(BaseSDK):
     ) -> operations.GetCommerceInventoryResponse:
         r"""Retrieve an inventory
 
+        Retrieves a single CommerceInventory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1879,6 +1917,8 @@ class Commerce(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetCommerceInventoryResponse:
         r"""Retrieve an inventory
+
+        Retrieves a single CommerceInventory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1972,6 +2012,8 @@ class Commerce(BaseSDK):
     ) -> operations.GetCommerceItemResponse:
         r"""Retrieve an item
 
+        Retrieves a single CommerceItem by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2063,6 +2105,8 @@ class Commerce(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetCommerceItemResponse:
         r"""Retrieve an item
+
+        Retrieves a single CommerceItem by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2156,6 +2200,8 @@ class Commerce(BaseSDK):
     ) -> operations.GetCommerceItemvariantResponse:
         r"""Retrieve an itemvariant
 
+        Retrieves a single CommerceItemvariant by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2247,6 +2293,8 @@ class Commerce(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetCommerceItemvariantResponse:
         r"""Retrieve an itemvariant
+
+        Retrieves a single CommerceItemvariant by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2340,6 +2388,8 @@ class Commerce(BaseSDK):
     ) -> operations.GetCommerceLocationResponse:
         r"""Retrieve a location
 
+        Retrieves a single CommerceLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2431,6 +2481,8 @@ class Commerce(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetCommerceLocationResponse:
         r"""Retrieve a location
+
+        Retrieves a single CommerceLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2524,6 +2576,8 @@ class Commerce(BaseSDK):
     ) -> operations.GetCommerceReservationResponse:
         r"""Retrieve a reservation
 
+        Retrieves a single CommerceReservation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2615,6 +2669,8 @@ class Commerce(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetCommerceReservationResponse:
         r"""Retrieve a reservation
+
+        Retrieves a single CommerceReservation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2708,6 +2764,8 @@ class Commerce(BaseSDK):
     ) -> operations.GetCommerceReviewResponse:
         r"""Retrieve a review
 
+        Retrieves a single CommerceReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2800,6 +2858,8 @@ class Commerce(BaseSDK):
     ) -> operations.GetCommerceReviewResponse:
         r"""Retrieve a review
 
+        Retrieves a single CommerceReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2891,6 +2951,8 @@ class Commerce(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetCommerceSaleschannelResponse:
         r"""Retrieve a saleschannel
+
+        Retrieves a single CommerceSaleschannel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2986,6 +3048,8 @@ class Commerce(BaseSDK):
     ) -> operations.GetCommerceSaleschannelResponse:
         r"""Retrieve a saleschannel
 
+        Retrieves a single CommerceSaleschannel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3079,6 +3143,8 @@ class Commerce(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListCommerceAvailabilitiesResponse:
         r"""List all availabilities
+
+        Returns a list of CommerceAvailabilities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3174,6 +3240,8 @@ class Commerce(BaseSDK):
     ) -> operations.ListCommerceAvailabilitiesResponse:
         r"""List all availabilities
 
+        Returns a list of CommerceAvailabilities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3267,6 +3335,8 @@ class Commerce(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListCommerceCollectionsResponse:
         r"""List all collections
+
+        Returns a list of CommerceCollections. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3362,6 +3432,8 @@ class Commerce(BaseSDK):
     ) -> operations.ListCommerceCollectionsResponse:
         r"""List all collections
 
+        Returns a list of CommerceCollections. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3455,6 +3527,8 @@ class Commerce(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListCommerceInventoriesResponse:
         r"""List all inventories
+
+        Returns a list of CommerceInventories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3550,6 +3624,8 @@ class Commerce(BaseSDK):
     ) -> operations.ListCommerceInventoriesResponse:
         r"""List all inventories
 
+        Returns a list of CommerceInventories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3644,6 +3720,8 @@ class Commerce(BaseSDK):
     ) -> operations.ListCommerceItemsResponse:
         r"""List all items
 
+        Returns a list of CommerceItems. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3736,6 +3814,8 @@ class Commerce(BaseSDK):
     ) -> operations.ListCommerceItemsResponse:
         r"""List all items
 
+        Returns a list of CommerceItems. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3827,6 +3907,8 @@ class Commerce(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListCommerceItemvariantsResponse:
         r"""List all itemvariants
+
+        Returns a list of CommerceItemvariants. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3922,6 +4004,8 @@ class Commerce(BaseSDK):
     ) -> operations.ListCommerceItemvariantsResponse:
         r"""List all itemvariants
 
+        Returns a list of CommerceItemvariants. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4016,6 +4100,8 @@ class Commerce(BaseSDK):
     ) -> operations.ListCommerceLocationsResponse:
         r"""List all locations
 
+        Returns a list of CommerceLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4108,6 +4194,8 @@ class Commerce(BaseSDK):
     ) -> operations.ListCommerceLocationsResponse:
         r"""List all locations
 
+        Returns a list of CommerceLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4199,6 +4287,8 @@ class Commerce(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListCommerceReservationsResponse:
         r"""List all reservations
+
+        Returns a list of CommerceReservations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4294,6 +4384,8 @@ class Commerce(BaseSDK):
     ) -> operations.ListCommerceReservationsResponse:
         r"""List all reservations
 
+        Returns a list of CommerceReservations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4388,6 +4480,8 @@ class Commerce(BaseSDK):
     ) -> operations.ListCommerceReviewsResponse:
         r"""List all reviews
 
+        Returns a list of CommerceReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4480,6 +4574,8 @@ class Commerce(BaseSDK):
     ) -> operations.ListCommerceReviewsResponse:
         r"""List all reviews
 
+        Returns a list of CommerceReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4571,6 +4667,8 @@ class Commerce(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListCommerceSaleschannelsResponse:
         r"""List all saleschannels
+
+        Returns a list of CommerceSaleschannels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4666,6 +4764,8 @@ class Commerce(BaseSDK):
     ) -> operations.ListCommerceSaleschannelsResponse:
         r"""List all saleschannels
 
+        Returns a list of CommerceSaleschannels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4759,6 +4859,8 @@ class Commerce(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchCommerceCollectionResponse:
         r"""Update a collection
+
+        Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4861,6 +4963,8 @@ class Commerce(BaseSDK):
     ) -> operations.PatchCommerceCollectionResponse:
         r"""Update a collection
 
+        Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4962,6 +5066,8 @@ class Commerce(BaseSDK):
     ) -> operations.PatchCommerceInventoryResponse:
         r"""Update an inventory
 
+        Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5060,6 +5166,8 @@ class Commerce(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchCommerceInventoryResponse:
         r"""Update an inventory
+
+        Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -5160,6 +5268,8 @@ class Commerce(BaseSDK):
     ) -> operations.PatchCommerceItemResponse:
         r"""Update an item
 
+        Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5255,6 +5365,8 @@ class Commerce(BaseSDK):
     ) -> operations.PatchCommerceItemResponse:
         r"""Update an item
 
+        Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5349,6 +5461,8 @@ class Commerce(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchCommerceItemvariantResponse:
         r"""Update an itemvariant
+
+        Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -5451,6 +5565,8 @@ class Commerce(BaseSDK):
     ) -> operations.PatchCommerceItemvariantResponse:
         r"""Update an itemvariant
 
+        Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5552,6 +5668,8 @@ class Commerce(BaseSDK):
     ) -> operations.PatchCommerceLocationResponse:
         r"""Update a location
 
+        Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5647,6 +5765,8 @@ class Commerce(BaseSDK):
     ) -> operations.PatchCommerceLocationResponse:
         r"""Update a location
 
+        Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5741,6 +5861,8 @@ class Commerce(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchCommerceReservationResponse:
         r"""Update a reservation
+
+        Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -5843,6 +5965,8 @@ class Commerce(BaseSDK):
     ) -> operations.PatchCommerceReservationResponse:
         r"""Update a reservation
 
+        Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5944,6 +6068,8 @@ class Commerce(BaseSDK):
     ) -> operations.PatchCommerceReviewResponse:
         r"""Update a review
 
+        Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6039,6 +6165,8 @@ class Commerce(BaseSDK):
     ) -> operations.PatchCommerceReviewResponse:
         r"""Update a review
 
+        Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6133,6 +6261,8 @@ class Commerce(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchCommerceSaleschannelResponse:
         r"""Update a saleschannel
+
+        Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -6235,6 +6365,8 @@ class Commerce(BaseSDK):
     ) -> operations.PatchCommerceSaleschannelResponse:
         r"""Update a saleschannel
 
+        Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6336,6 +6468,8 @@ class Commerce(BaseSDK):
     ) -> operations.RemoveCommerceCollectionResponse:
         r"""Remove a collection
 
+        Deletes the CommerceCollection identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6434,6 +6568,8 @@ class Commerce(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveCommerceCollectionResponse:
         r"""Remove a collection
+
+        Deletes the CommerceCollection identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -6534,6 +6670,8 @@ class Commerce(BaseSDK):
     ) -> operations.RemoveCommerceInventoryResponse:
         r"""Remove an inventory
 
+        Deletes the CommerceInventory identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6632,6 +6770,8 @@ class Commerce(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveCommerceInventoryResponse:
         r"""Remove an inventory
+
+        Deletes the CommerceInventory identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -6732,6 +6872,8 @@ class Commerce(BaseSDK):
     ) -> operations.RemoveCommerceItemResponse:
         r"""Remove an item
 
+        Deletes the CommerceItem identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6829,6 +6971,8 @@ class Commerce(BaseSDK):
     ) -> operations.RemoveCommerceItemResponse:
         r"""Remove an item
 
+        Deletes the CommerceItem identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6925,6 +7069,8 @@ class Commerce(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveCommerceItemvariantResponse:
         r"""Remove an itemvariant
+
+        Deletes the CommerceItemvariant identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -7025,6 +7171,8 @@ class Commerce(BaseSDK):
     ) -> operations.RemoveCommerceItemvariantResponse:
         r"""Remove an itemvariant
 
+        Deletes the CommerceItemvariant identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7124,6 +7272,8 @@ class Commerce(BaseSDK):
     ) -> operations.RemoveCommerceLocationResponse:
         r"""Remove a location
 
+        Deletes the CommerceLocation identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7221,6 +7371,8 @@ class Commerce(BaseSDK):
     ) -> operations.RemoveCommerceLocationResponse:
         r"""Remove a location
 
+        Deletes the CommerceLocation identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7317,6 +7469,8 @@ class Commerce(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveCommerceReservationResponse:
         r"""Remove a reservation
+
+        Deletes the CommerceReservation identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -7417,6 +7571,8 @@ class Commerce(BaseSDK):
     ) -> operations.RemoveCommerceReservationResponse:
         r"""Remove a reservation
 
+        Deletes the CommerceReservation identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7516,6 +7672,8 @@ class Commerce(BaseSDK):
     ) -> operations.RemoveCommerceReviewResponse:
         r"""Remove a review
 
+        Deletes the CommerceReview identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7613,6 +7771,8 @@ class Commerce(BaseSDK):
     ) -> operations.RemoveCommerceReviewResponse:
         r"""Remove a review
 
+        Deletes the CommerceReview identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7709,6 +7869,8 @@ class Commerce(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveCommerceSaleschannelResponse:
         r"""Remove a saleschannel
+
+        Deletes the CommerceSaleschannel identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -7809,6 +7971,8 @@ class Commerce(BaseSDK):
     ) -> operations.RemoveCommerceSaleschannelResponse:
         r"""Remove a saleschannel
 
+        Deletes the CommerceSaleschannel identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7907,6 +8071,8 @@ class Commerce(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateCommerceCollectionResponse:
         r"""Update a collection
+
+        Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -8009,6 +8175,8 @@ class Commerce(BaseSDK):
     ) -> operations.UpdateCommerceCollectionResponse:
         r"""Update a collection
 
+        Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -8109,6 +8277,8 @@ class Commerce(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateCommerceInventoryResponse:
         r"""Update an inventory
+
+        Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -8211,6 +8381,8 @@ class Commerce(BaseSDK):
     ) -> operations.UpdateCommerceInventoryResponse:
         r"""Update an inventory
 
+        Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -8312,6 +8484,8 @@ class Commerce(BaseSDK):
     ) -> operations.UpdateCommerceItemResponse:
         r"""Update an item
 
+        Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -8407,6 +8581,8 @@ class Commerce(BaseSDK):
     ) -> operations.UpdateCommerceItemResponse:
         r"""Update an item
 
+        Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -8501,6 +8677,8 @@ class Commerce(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateCommerceItemvariantResponse:
         r"""Update an itemvariant
+
+        Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -8603,6 +8781,8 @@ class Commerce(BaseSDK):
     ) -> operations.UpdateCommerceItemvariantResponse:
         r"""Update an itemvariant
 
+        Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -8704,6 +8884,8 @@ class Commerce(BaseSDK):
     ) -> operations.UpdateCommerceLocationResponse:
         r"""Update a location
 
+        Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -8799,6 +8981,8 @@ class Commerce(BaseSDK):
     ) -> operations.UpdateCommerceLocationResponse:
         r"""Update a location
 
+        Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -8893,6 +9077,8 @@ class Commerce(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateCommerceReservationResponse:
         r"""Update a reservation
+
+        Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -8995,6 +9181,8 @@ class Commerce(BaseSDK):
     ) -> operations.UpdateCommerceReservationResponse:
         r"""Update a reservation
 
+        Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -9096,6 +9284,8 @@ class Commerce(BaseSDK):
     ) -> operations.UpdateCommerceReviewResponse:
         r"""Update a review
 
+        Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -9191,6 +9381,8 @@ class Commerce(BaseSDK):
     ) -> operations.UpdateCommerceReviewResponse:
         r"""Update a review
 
+        Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -9285,6 +9477,8 @@ class Commerce(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateCommerceSaleschannelResponse:
         r"""Update a saleschannel
+
+        Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -9386,6 +9580,8 @@ class Commerce(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateCommerceSaleschannelResponse:
         r"""Update a saleschannel
+
+        Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

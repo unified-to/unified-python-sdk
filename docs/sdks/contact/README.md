@@ -25,7 +25,7 @@
 
 ## create_accounting_contact
 
-Create a contact
+Creates a AccountingContact. Provide the unified AccountingContact fields in the request body; they are mapped to the provider's API. Returns the created AccountingContact.
 
 ### Example Usage
 
@@ -68,7 +68,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Delores",
-            "id": "db8b51b2-b8d0-4e28-855d-fd7fcb3ecd41",
+            "id": "fdf93d62-2079-4d04-a659-6a963caddc00",
             "identification": "531850872",
             "is_active": True,
             "is_customer": True,
@@ -79,7 +79,7 @@ with UnifiedTo(
             "payment_methods": [
                 {
                     "default": True,
-                    "id": "cd9aaba8-e4cd-4940-a7e0-36093a1d2fbc",
+                    "id": "8636e7f8-2c88-4c9e-9549-3751ae2979e6",
                     "name": "Visa 7844",
                     "type": shared.AccountingContactPaymentMethodType.CARD,
                 },
@@ -101,7 +101,7 @@ with UnifiedTo(
                     "type": shared.AccountingTelephoneType.FAX,
                 },
             ],
-            "updated_at": parse_datetime("2023-12-19T20:49:07.881Z"),
+            "updated_at": parse_datetime("2023-12-20T07:36:45.907Z"),
             "website": "https://kertzmanngroup.com",
         },
         "connection_id": "<id>",
@@ -133,7 +133,7 @@ with UnifiedTo(
 
 ## create_crm_contact
 
-Create a contact
+Creates a CrmContact. Provide the unified CrmContact fields in the request body; they are mapped to the provider's API. Returns the created CrmContact.
 
 ### Example Usage
 
@@ -170,7 +170,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Mohammad",
-            "id": "739ce1b5-555e-43f0-8d48-ef496726adb2",
+            "id": "6be397fd-fb29-4e99-a32c-895bf4fc4e3a",
             "image_url": "https://avatars.githubusercontent.com/u/26803724",
             "last_name": "Bartell",
             "link_urls": [
@@ -182,7 +182,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CrmMetadataFormat.TEXT,
-                    "id": "61bee087-b03b-416d-9a99-40e30b15d0bb",
+                    "id": "c1ac2149-70d3-459b-b9d2-79bef51441d7",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "antiquus",
@@ -200,7 +200,7 @@ with UnifiedTo(
                 },
             ],
             "title": "National Tactics Analyst",
-            "updated_at": parse_datetime("2021-02-24T05:06:24.613Z"),
+            "updated_at": parse_datetime("2021-02-24T05:42:21.126Z"),
         },
         "connection_id": "<id>",
     })
@@ -231,7 +231,7 @@ with UnifiedTo(
 
 ## create_uc_contact
 
-Create a contact
+Creates a UcContact. Provide the unified UcContact fields in the request body; they are mapped to the provider's API. Returns the created UcContact.
 
 ### Example Usage
 
@@ -259,7 +259,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Luther",
-            "id": "9ff2e5a9-d2ff-41ff-9a7b-4b06681db2b4",
+            "id": "07d54d1d-38a4-4c25-aa39-d52da829527a",
             "last_name": "Rogahn",
             "metadata": [],
             "name": "Luther Rogahn",
@@ -278,7 +278,7 @@ with UnifiedTo(
                 },
             ],
             "title": "Chief Optimization Executive",
-            "updated_at": parse_datetime("2023-12-08T09:03:40.534Z"),
+            "updated_at": parse_datetime("2023-12-08T23:06:51.843Z"),
         },
         "connection_id": "<id>",
     })
@@ -309,7 +309,7 @@ with UnifiedTo(
 
 ## get_accounting_contact
 
-Retrieve a contact
+Retrieves a single AccountingContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -356,7 +356,7 @@ with UnifiedTo(
 
 ## get_crm_contact
 
-Retrieve a contact
+Retrieves a single CrmContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -403,7 +403,7 @@ with UnifiedTo(
 
 ## get_uc_contact
 
-Retrieve a contact
+Retrieves a single UcContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -450,7 +450,7 @@ with UnifiedTo(
 
 ## list_accounting_contacts
 
-List all contacts
+Returns a list of AccountingContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -496,7 +496,7 @@ with UnifiedTo(
 
 ## list_crm_contacts
 
-List all contacts
+Returns a list of CrmContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -542,7 +542,7 @@ with UnifiedTo(
 
 ## list_uc_contacts
 
-List all contacts
+Returns a list of UcContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -588,7 +588,7 @@ with UnifiedTo(
 
 ## patch_accounting_contact
 
-Update a contact
+Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to change in the request body.
 
 ### Example Usage
 
@@ -631,7 +631,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Delores",
-            "id": "6fa570fa-de91-4dbe-9428-907f6aadbd6e",
+            "id": "2094babf-af16-43a0-af2f-3f8e8126dab1",
             "identification": "531850872",
             "is_active": True,
             "is_customer": True,
@@ -642,7 +642,7 @@ with UnifiedTo(
             "payment_methods": [
                 {
                     "default": True,
-                    "id": "9f95e65a-72e5-44c3-915e-fda577dbded5",
+                    "id": "4b732532-2bc6-4d80-8805-357304c02d5a",
                     "name": "Visa 7844",
                     "type": shared.AccountingContactPaymentMethodType.CARD,
                 },
@@ -664,7 +664,7 @@ with UnifiedTo(
                     "type": shared.AccountingTelephoneType.FAX,
                 },
             ],
-            "updated_at": parse_datetime("2023-12-19T20:49:07.910Z"),
+            "updated_at": parse_datetime("2023-12-20T07:36:45.925Z"),
             "website": "https://kertzmanngroup.com",
         },
         "connection_id": "<id>",
@@ -697,7 +697,7 @@ with UnifiedTo(
 
 ## patch_crm_contact
 
-Update a contact
+Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the request body.
 
 ### Example Usage
 
@@ -734,7 +734,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Mohammad",
-            "id": "5755d189-87e9-4fad-9745-135da57f80dc",
+            "id": "86854558-d801-4b6a-8b08-c5c9087fc5c5",
             "image_url": "https://avatars.githubusercontent.com/u/26803724",
             "last_name": "Bartell",
             "link_urls": [
@@ -746,7 +746,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CrmMetadataFormat.TEXT,
-                    "id": "76fee8e1-4c33-4429-9dc6-3e428eb31ba6",
+                    "id": "e061d87c-c4a7-4741-8734-8aca32ffae2c",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "antiquus",
@@ -764,7 +764,7 @@ with UnifiedTo(
                 },
             ],
             "title": "National Tactics Analyst",
-            "updated_at": parse_datetime("2021-02-24T05:06:24.614Z"),
+            "updated_at": parse_datetime("2021-02-24T05:42:21.127Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -796,7 +796,7 @@ with UnifiedTo(
 
 ## patch_uc_contact
 
-Update a contact
+Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the request body.
 
 ### Example Usage
 
@@ -824,7 +824,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Luther",
-            "id": "298bacf9-c0c2-46c2-b545-c41a6c5a967f",
+            "id": "62d40703-2d73-48d4-98f9-bd4bfc5324d5",
             "last_name": "Rogahn",
             "metadata": [],
             "name": "Luther Rogahn",
@@ -843,7 +843,7 @@ with UnifiedTo(
                 },
             ],
             "title": "Chief Optimization Executive",
-            "updated_at": parse_datetime("2023-12-08T09:03:40.544Z"),
+            "updated_at": parse_datetime("2023-12-08T23:06:51.851Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -875,7 +875,7 @@ with UnifiedTo(
 
 ## remove_accounting_contact
 
-Remove a contact
+Deletes the AccountingContact identified by `id`.
 
 ### Example Usage
 
@@ -922,7 +922,7 @@ with UnifiedTo(
 
 ## remove_crm_contact
 
-Remove a contact
+Deletes the CrmContact identified by `id`.
 
 ### Example Usage
 
@@ -969,7 +969,7 @@ with UnifiedTo(
 
 ## remove_uc_contact
 
-Remove a contact
+Deletes the UcContact identified by `id`.
 
 ### Example Usage
 
@@ -1016,7 +1016,7 @@ with UnifiedTo(
 
 ## update_accounting_contact
 
-Update a contact
+Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to change in the request body.
 
 ### Example Usage
 
@@ -1059,7 +1059,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Delores",
-            "id": "6fa570fa-de91-4dbe-9428-907f6aadbd6e",
+            "id": "2094babf-af16-43a0-af2f-3f8e8126dab1",
             "identification": "531850872",
             "is_active": True,
             "is_customer": True,
@@ -1070,7 +1070,7 @@ with UnifiedTo(
             "payment_methods": [
                 {
                     "default": True,
-                    "id": "9f95e65a-72e5-44c3-915e-fda577dbded5",
+                    "id": "4b732532-2bc6-4d80-8805-357304c02d5a",
                     "name": "Visa 7844",
                     "type": shared.AccountingContactPaymentMethodType.CARD,
                 },
@@ -1092,7 +1092,7 @@ with UnifiedTo(
                     "type": shared.AccountingTelephoneType.FAX,
                 },
             ],
-            "updated_at": parse_datetime("2023-12-19T20:49:07.910Z"),
+            "updated_at": parse_datetime("2023-12-20T07:36:45.925Z"),
             "website": "https://kertzmanngroup.com",
         },
         "connection_id": "<id>",
@@ -1125,7 +1125,7 @@ with UnifiedTo(
 
 ## update_crm_contact
 
-Update a contact
+Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the request body.
 
 ### Example Usage
 
@@ -1162,7 +1162,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Mohammad",
-            "id": "5755d189-87e9-4fad-9745-135da57f80dc",
+            "id": "86854558-d801-4b6a-8b08-c5c9087fc5c5",
             "image_url": "https://avatars.githubusercontent.com/u/26803724",
             "last_name": "Bartell",
             "link_urls": [
@@ -1174,7 +1174,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CrmMetadataFormat.TEXT,
-                    "id": "76fee8e1-4c33-4429-9dc6-3e428eb31ba6",
+                    "id": "e061d87c-c4a7-4741-8734-8aca32ffae2c",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "antiquus",
@@ -1192,7 +1192,7 @@ with UnifiedTo(
                 },
             ],
             "title": "National Tactics Analyst",
-            "updated_at": parse_datetime("2021-02-24T05:06:24.614Z"),
+            "updated_at": parse_datetime("2021-02-24T05:42:21.127Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1224,7 +1224,7 @@ with UnifiedTo(
 
 ## update_uc_contact
 
-Update a contact
+Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the request body.
 
 ### Example Usage
 
@@ -1252,7 +1252,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Luther",
-            "id": "298bacf9-c0c2-46c2-b545-c41a6c5a967f",
+            "id": "62d40703-2d73-48d4-98f9-bd4bfc5324d5",
             "last_name": "Rogahn",
             "metadata": [],
             "name": "Luther Rogahn",
@@ -1271,7 +1271,7 @@ with UnifiedTo(
                 },
             ],
             "title": "Chief Optimization Executive",
-            "updated_at": parse_datetime("2023-12-08T09:03:40.544Z"),
+            "updated_at": parse_datetime("2023-12-08T23:06:51.851Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

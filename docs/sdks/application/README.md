@@ -13,7 +13,7 @@
 
 ## create_ats_application
 
-Create an application
+Creates a AtsApplication. Provide the unified AtsApplication fields in the request body; they are mapped to the provider's API. Returns the created AtsApplication.
 
 ### Example Usage
 
@@ -33,17 +33,17 @@ with UnifiedTo(
     res = unified_to.application.create_ats_application(request={
         "ats_application": {
             "answers": [],
-            "applied_at": parse_datetime("2025-09-29T18:38:27.347Z"),
+            "applied_at": parse_datetime("2025-09-30T10:07:05.968Z"),
             "created_at": parse_datetime("2023-10-17T07:19:48.787Z"),
-            "hired_at": parse_datetime("2026-05-12T18:26:15.802Z"),
-            "id": "3be64929-f537-4521-9361-c4c8326d0157",
+            "hired_at": parse_datetime("2026-05-13T14:47:45.163Z"),
+            "id": "9c2e6ea4-6b90-4c68-93a2-344b71e7dd8d",
             "metadata": [
                 {
                     "extra_data": {
 
                     },
                     "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "220edaf6-bc48-4c79-b54b-6ceb2c57dd0d",
+                    "id": "38390c94-ee6e-49d6-9af9-49bf6b77284a",
                     "namespace": "application",
                     "slug": "stella",
                     "value": "Caput.",
@@ -52,12 +52,12 @@ with UnifiedTo(
             "offers": [],
             "original_status": "vomica",
             "original_substatus": "allatus",
-            "rejected_at": parse_datetime("2026-10-11T13:02:04.086Z"),
+            "rejected_at": parse_datetime("2026-10-12T12:41:06.322Z"),
             "rejected_reason": "Cometes amplitudo videlicet talio.",
             "source": "credo",
             "status": shared.AtsApplicationStatus.REVIEWING,
             "summary": "Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.",
-            "updated_at": parse_datetime("2026-10-18T09:16:18.517Z"),
+            "updated_at": parse_datetime("2026-10-19T09:04:15.175Z"),
         },
         "connection_id": "<id>",
     })
@@ -88,7 +88,7 @@ with UnifiedTo(
 
 ## get_ats_application
 
-Retrieve an application
+Retrieves a single AtsApplication by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -135,7 +135,7 @@ with UnifiedTo(
 
 ## list_ats_applications
 
-List all applications
+Returns a list of AtsApplications. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -181,7 +181,7 @@ with UnifiedTo(
 
 ## patch_ats_application
 
-Update an application
+Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change in the request body.
 
 ### Example Usage
 
@@ -201,17 +201,17 @@ with UnifiedTo(
     res = unified_to.application.patch_ats_application(request={
         "ats_application": {
             "answers": [],
-            "applied_at": parse_datetime("2025-09-29T18:38:27.368Z"),
+            "applied_at": parse_datetime("2025-09-30T10:07:05.985Z"),
             "created_at": parse_datetime("2023-10-17T07:19:48.787Z"),
-            "hired_at": parse_datetime("2026-05-12T18:26:15.830Z"),
-            "id": "e191ba0a-9c3b-4d82-ab5b-223b65befa0a",
+            "hired_at": parse_datetime("2026-05-13T14:47:45.185Z"),
+            "id": "4be98c80-0842-49db-af54-a6568bd8bde2",
             "metadata": [
                 {
                     "extra_data": {
 
                     },
                     "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "e488328a-175e-4b51-952f-7f0e4f54e681",
+                    "id": "69265a38-6757-4b66-b686-94690afae256",
                     "namespace": "application",
                     "slug": "stella",
                     "value": "Caput.",
@@ -220,12 +220,12 @@ with UnifiedTo(
             "offers": [],
             "original_status": "vomica",
             "original_substatus": "allatus",
-            "rejected_at": parse_datetime("2026-10-11T13:02:04.118Z"),
+            "rejected_at": parse_datetime("2026-10-12T12:41:06.348Z"),
             "rejected_reason": "Cometes amplitudo videlicet talio.",
             "source": "credo",
             "status": shared.AtsApplicationStatus.REVIEWING,
             "summary": "Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.",
-            "updated_at": parse_datetime("2026-10-18T09:16:18.549Z"),
+            "updated_at": parse_datetime("2026-10-19T09:04:15.201Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -257,7 +257,7 @@ with UnifiedTo(
 
 ## remove_ats_application
 
-Remove an application
+Deletes the AtsApplication identified by `id`.
 
 ### Example Usage
 
@@ -304,7 +304,7 @@ with UnifiedTo(
 
 ## update_ats_application
 
-Update an application
+Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change in the request body.
 
 ### Example Usage
 
@@ -324,17 +324,17 @@ with UnifiedTo(
     res = unified_to.application.update_ats_application(request={
         "ats_application": {
             "answers": [],
-            "applied_at": parse_datetime("2025-09-29T18:38:27.368Z"),
+            "applied_at": parse_datetime("2025-09-30T10:07:05.985Z"),
             "created_at": parse_datetime("2023-10-17T07:19:48.787Z"),
-            "hired_at": parse_datetime("2026-05-12T18:26:15.830Z"),
-            "id": "e191ba0a-9c3b-4d82-ab5b-223b65befa0a",
+            "hired_at": parse_datetime("2026-05-13T14:47:45.185Z"),
+            "id": "4be98c80-0842-49db-af54-a6568bd8bde2",
             "metadata": [
                 {
                     "extra_data": {
 
                     },
                     "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "e488328a-175e-4b51-952f-7f0e4f54e681",
+                    "id": "69265a38-6757-4b66-b686-94690afae256",
                     "namespace": "application",
                     "slug": "stella",
                     "value": "Caput.",
@@ -343,12 +343,12 @@ with UnifiedTo(
             "offers": [],
             "original_status": "vomica",
             "original_substatus": "allatus",
-            "rejected_at": parse_datetime("2026-10-11T13:02:04.118Z"),
+            "rejected_at": parse_datetime("2026-10-12T12:41:06.348Z"),
             "rejected_reason": "Cometes amplitudo videlicet talio.",
             "source": "credo",
             "status": shared.AtsApplicationStatus.REVIEWING,
             "summary": "Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.",
-            "updated_at": parse_datetime("2026-10-18T09:16:18.549Z"),
+            "updated_at": parse_datetime("2026-10-19T09:04:15.201Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

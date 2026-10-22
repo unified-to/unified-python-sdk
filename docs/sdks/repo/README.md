@@ -37,7 +37,7 @@
 
 ## create_repo_branch
 
-Create a branch
+Creates a RepoBranch. Provide the unified RepoBranch fields in the request body; they are mapped to the provider's API. Returns the created RepoBranch.
 
 ### Example Usage
 
@@ -57,11 +57,11 @@ with UnifiedTo(
     res = unified_to.repo.create_repo_branch(request={
         "repo_branch": {
             "created_at": parse_datetime("2019-02-24T09:33:48.540Z"),
-            "id": "1977544f-f608-4b0c-95f6-93d6c8b189fc",
+            "id": "2e0abdc1-3bc6-4576-86b2-498ceec9b4b3",
             "metadata": [],
             "name": "transmitter-calculate",
             "repo_id": "<id>",
-            "updated_at": parse_datetime("2020-01-07T08:02:21.811Z"),
+            "updated_at": parse_datetime("2020-01-07T10:44:37.774Z"),
         },
         "connection_id": "<id>",
     })
@@ -92,7 +92,7 @@ with UnifiedTo(
 
 ## create_repo_commit
 
-Create a commit
+Creates a RepoCommit. Provide the unified RepoCommit fields in the request body; they are mapped to the provider's API. Returns the created RepoCommit.
 
 ### Example Usage
 
@@ -112,14 +112,14 @@ with UnifiedTo(
     res = unified_to.repo.create_repo_commit(request={
         "repo_commit": {
             "created_at": parse_datetime("2020-07-12T16:20:42.520Z"),
-            "id": "ea7fc4cb-af24-4313-a099-e8898d5527b7",
+            "id": "592bcae2-bd76-458c-98cd-2ab53079eb09",
             "lines_added": 313.0,
             "lines_changed": 659.0,
             "lines_deleted": 482.0,
             "message": "quantify bluetooth bandwidth",
             "metadata": [],
             "repo_id": "<id>",
-            "updated_at": parse_datetime("2023-05-31T06:49:09.389Z"),
+            "updated_at": parse_datetime("2023-05-31T17:46:40.721Z"),
         },
         "connection_id": "<id>",
     })
@@ -150,7 +150,7 @@ with UnifiedTo(
 
 ## create_repo_organization
 
-Create an organization
+Creates a RepoOrganization. Provide the unified RepoOrganization fields in the request body; they are mapped to the provider's API. Returns the created RepoOrganization.
 
 ### Example Usage
 
@@ -172,10 +172,10 @@ with UnifiedTo(
             "avatar_url": "https://picsum.photos/seed/fGl6Lb/3157/3173",
             "created_at": parse_datetime("2022-07-07T00:18:40.748Z"),
             "description": "Trepide defendo supra testimonium ager.",
-            "id": "80e8a6fd-a1fe-49b5-9218-70e0019ddd60",
+            "id": "933e206a-d0b9-4551-b0a1-48ec334aa3f3",
             "metadata": [],
             "name": "Denesik - Lemke",
-            "updated_at": parse_datetime("2023-08-21T15:07:00.136Z"),
+            "updated_at": parse_datetime("2023-08-21T21:22:03.917Z"),
             "web_url": "https://turbulent-overheard.biz",
         },
         "connection_id": "<id>",
@@ -207,7 +207,7 @@ with UnifiedTo(
 
 ## create_repo_pullrequest
 
-Create a pullrequest
+Creates a RepoPullrequest. Provide the unified RepoPullrequest fields in the request body; they are mapped to the provider's API. Returns the created RepoPullrequest.
 
 ### Example Usage
 
@@ -226,9 +226,9 @@ with UnifiedTo(
 
     res = unified_to.repo.create_repo_pullrequest(request={
         "repo_pullrequest": {
-            "closed_at": parse_datetime("2025-05-01T13:49:56.790Z"),
+            "closed_at": parse_datetime("2025-05-02T04:03:35.410Z"),
             "created_at": parse_datetime("2023-02-27T09:37:13.663Z"),
-            "id": "107e687f-47df-41e1-8207-aad4e09e6700",
+            "id": "5d31e7a9-e7a6-4efe-a22d-7c351e02021d",
             "labels": [
                 "creptio",
                 "tutamen",
@@ -237,7 +237,7 @@ with UnifiedTo(
             "notes": "Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.",
             "status": shared.RepoPullrequestStatus.APPROVED,
             "title": "reboot mobile application",
-            "updated_at": parse_datetime("2026-01-17T07:02:05.496Z"),
+            "updated_at": parse_datetime("2026-01-18T01:55:58.476Z"),
         },
         "connection_id": "<id>",
     })
@@ -268,7 +268,7 @@ with UnifiedTo(
 
 ## create_repo_repository
 
-Create a repository
+Creates a RepoRepository. Provide the unified RepoRepository fields in the request body; they are mapped to the provider's API. Returns the created RepoRepository.
 
 ### Example Usage
 
@@ -289,11 +289,11 @@ with UnifiedTo(
         "repo_repository": {
             "created_at": parse_datetime("2023-06-12T09:42:00.080Z"),
             "description": "Sed somnus crastinus armarium.",
-            "id": "66453156-002c-4535-9f4c-2752f08a0ce6",
+            "id": "86f236b6-8cd3-488a-b7b2-ce93a56c7517",
             "is_private": False,
             "metadata": [],
             "name": "bah-bogus",
-            "updated_at": parse_datetime("2024-03-01T02:04:01.289Z"),
+            "updated_at": parse_datetime("2024-03-01T07:10:32.663Z"),
             "web_url": "https://neat-birdbath.org",
         },
         "connection_id": "<id>",
@@ -325,7 +325,7 @@ with UnifiedTo(
 
 ## get_repo_branch
 
-Retrieve a branch
+Retrieves a single RepoBranch by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -372,7 +372,7 @@ with UnifiedTo(
 
 ## get_repo_commit
 
-Retrieve a commit
+Retrieves a single RepoCommit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -419,7 +419,7 @@ with UnifiedTo(
 
 ## get_repo_organization
 
-Retrieve an organization
+Retrieves a single RepoOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -466,7 +466,7 @@ with UnifiedTo(
 
 ## get_repo_pullrequest
 
-Retrieve a pullrequest
+Retrieves a single RepoPullrequest by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -513,7 +513,7 @@ with UnifiedTo(
 
 ## get_repo_repository
 
-Retrieve a repository
+Retrieves a single RepoRepository by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -560,7 +560,7 @@ with UnifiedTo(
 
 ## list_repo_branches
 
-List all branches
+Returns a list of RepoBranches. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -606,7 +606,7 @@ with UnifiedTo(
 
 ## list_repo_commits
 
-List all commits
+Returns a list of RepoCommits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -652,7 +652,7 @@ with UnifiedTo(
 
 ## list_repo_organizations
 
-List all organizations
+Returns a list of RepoOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -698,7 +698,7 @@ with UnifiedTo(
 
 ## list_repo_pullrequests
 
-List all pullrequests
+Returns a list of RepoPullrequests. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -744,7 +744,7 @@ with UnifiedTo(
 
 ## list_repo_repositories
 
-List all repositories
+Returns a list of RepoRepositories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -790,7 +790,7 @@ with UnifiedTo(
 
 ## patch_repo_branch
 
-Update a branch
+Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the request body.
 
 ### Example Usage
 
@@ -810,11 +810,11 @@ with UnifiedTo(
     res = unified_to.repo.patch_repo_branch(request={
         "repo_branch": {
             "created_at": parse_datetime("2019-02-24T09:33:48.540Z"),
-            "id": "6dc80949-6f8b-4219-b731-291c308a1a44",
+            "id": "61096c53-c8e7-4fe5-b5b6-a2ff57e6c228",
             "metadata": [],
             "name": "transmitter-calculate",
             "repo_id": "<id>",
-            "updated_at": parse_datetime("2020-01-07T08:02:21.812Z"),
+            "updated_at": parse_datetime("2020-01-07T10:44:37.776Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -846,7 +846,7 @@ with UnifiedTo(
 
 ## patch_repo_commit
 
-Update a commit
+Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the request body.
 
 ### Example Usage
 
@@ -866,14 +866,14 @@ with UnifiedTo(
     res = unified_to.repo.patch_repo_commit(request={
         "repo_commit": {
             "created_at": parse_datetime("2020-07-12T16:20:42.520Z"),
-            "id": "6f4cd413-c6d3-406d-aacc-2b96e1fae49a",
+            "id": "f72dc39a-23be-4866-b859-2830fde4bcf8",
             "lines_added": 313.0,
             "lines_changed": 659.0,
             "lines_deleted": 482.0,
             "message": "quantify bluetooth bandwidth",
             "metadata": [],
             "repo_id": "<id>",
-            "updated_at": parse_datetime("2023-05-31T06:49:09.401Z"),
+            "updated_at": parse_datetime("2023-05-31T17:46:40.728Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -905,7 +905,7 @@ with UnifiedTo(
 
 ## patch_repo_organization
 
-Update an organization
+Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -927,10 +927,10 @@ with UnifiedTo(
             "avatar_url": "https://picsum.photos/seed/fGl6Lb/3157/3173",
             "created_at": parse_datetime("2022-07-07T00:18:40.748Z"),
             "description": "Trepide defendo supra testimonium ager.",
-            "id": "ad9a058b-873e-4876-a837-1b47d35c0e0e",
+            "id": "85be66a9-5510-4ada-ac47-f32a603fd07c",
             "metadata": [],
             "name": "Denesik - Lemke",
-            "updated_at": parse_datetime("2023-08-21T15:07:00.140Z"),
+            "updated_at": parse_datetime("2023-08-21T21:22:03.920Z"),
             "web_url": "https://turbulent-overheard.biz",
         },
         "connection_id": "<id>",
@@ -963,7 +963,7 @@ with UnifiedTo(
 
 ## patch_repo_pullrequest
 
-Update a pullrequest
+Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change in the request body.
 
 ### Example Usage
 
@@ -982,9 +982,9 @@ with UnifiedTo(
 
     res = unified_to.repo.patch_repo_pullrequest(request={
         "repo_pullrequest": {
-            "closed_at": parse_datetime("2025-05-01T13:49:56.801Z"),
+            "closed_at": parse_datetime("2025-05-02T04:03:35.421Z"),
             "created_at": parse_datetime("2023-02-27T09:37:13.663Z"),
-            "id": "743d6e2e-ff01-4226-87e4-63e082360e6c",
+            "id": "23ed0922-82e8-4b77-9733-8682bc9d3310",
             "labels": [
                 "creptio",
                 "tutamen",
@@ -993,7 +993,7 @@ with UnifiedTo(
             "notes": "Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.",
             "status": shared.RepoPullrequestStatus.APPROVED,
             "title": "reboot mobile application",
-            "updated_at": parse_datetime("2026-01-17T07:02:05.510Z"),
+            "updated_at": parse_datetime("2026-01-18T01:55:58.490Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1025,7 +1025,7 @@ with UnifiedTo(
 
 ## patch_repo_repository
 
-Update a repository
+Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change in the request body.
 
 ### Example Usage
 
@@ -1046,11 +1046,11 @@ with UnifiedTo(
         "repo_repository": {
             "created_at": parse_datetime("2023-06-12T09:42:00.080Z"),
             "description": "Sed somnus crastinus armarium.",
-            "id": "c2277c4c-e335-4cde-b578-cf33cb4ca875",
+            "id": "2702d848-a85c-4e23-af94-267ef6cff2da",
             "is_private": False,
             "metadata": [],
             "name": "bah-bogus",
-            "updated_at": parse_datetime("2024-03-01T02:04:01.292Z"),
+            "updated_at": parse_datetime("2024-03-01T07:10:32.666Z"),
             "web_url": "https://neat-birdbath.org",
         },
         "connection_id": "<id>",
@@ -1083,7 +1083,7 @@ with UnifiedTo(
 
 ## remove_repo_branch
 
-Remove a branch
+Deletes the RepoBranch identified by `id`.
 
 ### Example Usage
 
@@ -1130,7 +1130,7 @@ with UnifiedTo(
 
 ## remove_repo_commit
 
-Remove a commit
+Deletes the RepoCommit identified by `id`.
 
 ### Example Usage
 
@@ -1177,7 +1177,7 @@ with UnifiedTo(
 
 ## remove_repo_organization
 
-Remove an organization
+Deletes the RepoOrganization identified by `id`.
 
 ### Example Usage
 
@@ -1224,7 +1224,7 @@ with UnifiedTo(
 
 ## remove_repo_pullrequest
 
-Remove a pullrequest
+Deletes the RepoPullrequest identified by `id`.
 
 ### Example Usage
 
@@ -1271,7 +1271,7 @@ with UnifiedTo(
 
 ## remove_repo_repository
 
-Remove a repository
+Deletes the RepoRepository identified by `id`.
 
 ### Example Usage
 
@@ -1318,7 +1318,7 @@ with UnifiedTo(
 
 ## update_repo_branch
 
-Update a branch
+Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the request body.
 
 ### Example Usage
 
@@ -1338,11 +1338,11 @@ with UnifiedTo(
     res = unified_to.repo.update_repo_branch(request={
         "repo_branch": {
             "created_at": parse_datetime("2019-02-24T09:33:48.540Z"),
-            "id": "6dc80949-6f8b-4219-b731-291c308a1a44",
+            "id": "61096c53-c8e7-4fe5-b5b6-a2ff57e6c228",
             "metadata": [],
             "name": "transmitter-calculate",
             "repo_id": "<id>",
-            "updated_at": parse_datetime("2020-01-07T08:02:21.812Z"),
+            "updated_at": parse_datetime("2020-01-07T10:44:37.776Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1374,7 +1374,7 @@ with UnifiedTo(
 
 ## update_repo_commit
 
-Update a commit
+Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the request body.
 
 ### Example Usage
 
@@ -1394,14 +1394,14 @@ with UnifiedTo(
     res = unified_to.repo.update_repo_commit(request={
         "repo_commit": {
             "created_at": parse_datetime("2020-07-12T16:20:42.520Z"),
-            "id": "6f4cd413-c6d3-406d-aacc-2b96e1fae49a",
+            "id": "f72dc39a-23be-4866-b859-2830fde4bcf8",
             "lines_added": 313.0,
             "lines_changed": 659.0,
             "lines_deleted": 482.0,
             "message": "quantify bluetooth bandwidth",
             "metadata": [],
             "repo_id": "<id>",
-            "updated_at": parse_datetime("2023-05-31T06:49:09.401Z"),
+            "updated_at": parse_datetime("2023-05-31T17:46:40.728Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1433,7 +1433,7 @@ with UnifiedTo(
 
 ## update_repo_organization
 
-Update an organization
+Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -1455,10 +1455,10 @@ with UnifiedTo(
             "avatar_url": "https://picsum.photos/seed/fGl6Lb/3157/3173",
             "created_at": parse_datetime("2022-07-07T00:18:40.748Z"),
             "description": "Trepide defendo supra testimonium ager.",
-            "id": "ad9a058b-873e-4876-a837-1b47d35c0e0e",
+            "id": "85be66a9-5510-4ada-ac47-f32a603fd07c",
             "metadata": [],
             "name": "Denesik - Lemke",
-            "updated_at": parse_datetime("2023-08-21T15:07:00.140Z"),
+            "updated_at": parse_datetime("2023-08-21T21:22:03.920Z"),
             "web_url": "https://turbulent-overheard.biz",
         },
         "connection_id": "<id>",
@@ -1491,7 +1491,7 @@ with UnifiedTo(
 
 ## update_repo_pullrequest
 
-Update a pullrequest
+Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change in the request body.
 
 ### Example Usage
 
@@ -1510,9 +1510,9 @@ with UnifiedTo(
 
     res = unified_to.repo.update_repo_pullrequest(request={
         "repo_pullrequest": {
-            "closed_at": parse_datetime("2025-05-01T13:49:56.801Z"),
+            "closed_at": parse_datetime("2025-05-02T04:03:35.421Z"),
             "created_at": parse_datetime("2023-02-27T09:37:13.663Z"),
-            "id": "743d6e2e-ff01-4226-87e4-63e082360e6c",
+            "id": "23ed0922-82e8-4b77-9733-8682bc9d3310",
             "labels": [
                 "creptio",
                 "tutamen",
@@ -1521,7 +1521,7 @@ with UnifiedTo(
             "notes": "Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.",
             "status": shared.RepoPullrequestStatus.APPROVED,
             "title": "reboot mobile application",
-            "updated_at": parse_datetime("2026-01-17T07:02:05.510Z"),
+            "updated_at": parse_datetime("2026-01-18T01:55:58.490Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1553,7 +1553,7 @@ with UnifiedTo(
 
 ## update_repo_repository
 
-Update a repository
+Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change in the request body.
 
 ### Example Usage
 
@@ -1574,11 +1574,11 @@ with UnifiedTo(
         "repo_repository": {
             "created_at": parse_datetime("2023-06-12T09:42:00.080Z"),
             "description": "Sed somnus crastinus armarium.",
-            "id": "c2277c4c-e335-4cde-b578-cf33cb4ca875",
+            "id": "2702d848-a85c-4e23-af94-267ef6cff2da",
             "is_private": False,
             "metadata": [],
             "name": "bah-bogus",
-            "updated_at": parse_datetime("2024-03-01T02:04:01.292Z"),
+            "updated_at": parse_datetime("2024-03-01T07:10:32.666Z"),
             "web_url": "https://neat-birdbath.org",
         },
         "connection_id": "<id>",

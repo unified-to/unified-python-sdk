@@ -24,6 +24,8 @@ class Analytics(BaseSDK):
     ) -> operations.CreateAnalyticsEventResponse:
         r"""Create an event
 
+        Creates a AnalyticsEvent. Provide the unified AnalyticsEvent fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsEvent.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -119,6 +121,8 @@ class Analytics(BaseSDK):
     ) -> operations.CreateAnalyticsEventResponse:
         r"""Create an event
 
+        Creates a AnalyticsEvent. Provide the unified AnalyticsEvent fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsEvent.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -213,6 +217,8 @@ class Analytics(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAnalyticsPropertyResponse:
         r"""Create a property
+
+        Creates a AnalyticsProperty. Provide the unified AnalyticsProperty fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsProperty.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -315,6 +321,8 @@ class Analytics(BaseSDK):
     ) -> operations.CreateAnalyticsPropertyResponse:
         r"""Create a property
 
+        Creates a AnalyticsProperty. Provide the unified AnalyticsProperty fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsProperty.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -416,6 +424,8 @@ class Analytics(BaseSDK):
     ) -> operations.CreateAnalyticsVisitorResponse:
         r"""Create a visitor
 
+        Creates a AnalyticsVisitor. Provide the unified AnalyticsVisitor fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsVisitor.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -510,6 +520,8 @@ class Analytics(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAnalyticsVisitorResponse:
         r"""Create a visitor
+
+        Creates a AnalyticsVisitor. Provide the unified AnalyticsVisitor fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsVisitor.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -606,6 +618,8 @@ class Analytics(BaseSDK):
     ) -> operations.GetAnalyticsEventResponse:
         r"""Retrieve an event
 
+        Retrieves a single AnalyticsEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -697,6 +711,8 @@ class Analytics(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAnalyticsEventResponse:
         r"""Retrieve an event
+
+        Retrieves a single AnalyticsEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -790,6 +806,8 @@ class Analytics(BaseSDK):
     ) -> operations.GetAnalyticsPropertyResponse:
         r"""Retrieve a property
 
+        Retrieves a single AnalyticsProperty by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -881,6 +899,8 @@ class Analytics(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAnalyticsPropertyResponse:
         r"""Retrieve a property
+
+        Retrieves a single AnalyticsProperty by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -974,6 +994,8 @@ class Analytics(BaseSDK):
     ) -> operations.GetAnalyticsSessionResponse:
         r"""Retrieve a session
 
+        Retrieves a single AnalyticsSession by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1065,6 +1087,8 @@ class Analytics(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAnalyticsSessionResponse:
         r"""Retrieve a session
+
+        Retrieves a single AnalyticsSession by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1158,6 +1182,8 @@ class Analytics(BaseSDK):
     ) -> operations.GetAnalyticsVisitorResponse:
         r"""Retrieve a visitor
 
+        Retrieves a single AnalyticsVisitor by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1249,6 +1275,8 @@ class Analytics(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAnalyticsVisitorResponse:
         r"""Retrieve a visitor
+
+        Retrieves a single AnalyticsVisitor by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1342,6 +1370,8 @@ class Analytics(BaseSDK):
     ) -> operations.ListAnalyticsEventsResponse:
         r"""List all events
 
+        Returns a list of AnalyticsEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1434,6 +1464,8 @@ class Analytics(BaseSDK):
     ) -> operations.ListAnalyticsEventsResponse:
         r"""List all events
 
+        Returns a list of AnalyticsEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1525,6 +1557,8 @@ class Analytics(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAnalyticsPropertiesResponse:
         r"""List all properties
+
+        Returns a list of AnalyticsProperties. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1620,6 +1654,8 @@ class Analytics(BaseSDK):
     ) -> operations.ListAnalyticsPropertiesResponse:
         r"""List all properties
 
+        Returns a list of AnalyticsProperties. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1714,6 +1750,8 @@ class Analytics(BaseSDK):
     ) -> operations.ListAnalyticsReportsResponse:
         r"""List all reports
 
+        Returns a list of AnalyticsReports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1805,6 +1843,8 @@ class Analytics(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAnalyticsReportsResponse:
         r"""List all reports
+
+        Returns a list of AnalyticsReports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1898,6 +1938,8 @@ class Analytics(BaseSDK):
     ) -> operations.ListAnalyticsSessionsResponse:
         r"""List all sessions
 
+        Returns a list of AnalyticsSessions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1989,6 +2031,8 @@ class Analytics(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAnalyticsSessionsResponse:
         r"""List all sessions
+
+        Returns a list of AnalyticsSessions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2082,6 +2126,8 @@ class Analytics(BaseSDK):
     ) -> operations.ListAnalyticsVisitorsResponse:
         r"""List all visitors
 
+        Returns a list of AnalyticsVisitors. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2174,6 +2220,8 @@ class Analytics(BaseSDK):
     ) -> operations.ListAnalyticsVisitorsResponse:
         r"""List all visitors
 
+        Returns a list of AnalyticsVisitors. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2265,6 +2313,8 @@ class Analytics(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAnalyticsPropertyResponse:
         r"""Update a property
+
+        Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2365,6 +2415,8 @@ class Analytics(BaseSDK):
     ) -> operations.PatchAnalyticsPropertyResponse:
         r"""Update a property
 
+        Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2464,6 +2516,8 @@ class Analytics(BaseSDK):
     ) -> operations.PatchAnalyticsVisitorResponse:
         r"""Update a visitor
 
+        Updates the AnalyticsVisitor identified by `id`. Provide the unified AnalyticsVisitor fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2559,6 +2613,8 @@ class Analytics(BaseSDK):
     ) -> operations.PatchAnalyticsVisitorResponse:
         r"""Update a visitor
 
+        Updates the AnalyticsVisitor identified by `id`. Provide the unified AnalyticsVisitor fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2653,6 +2709,8 @@ class Analytics(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAnalyticsPropertyResponse:
         r"""Remove a property
+
+        Deletes the AnalyticsProperty identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2753,6 +2811,8 @@ class Analytics(BaseSDK):
     ) -> operations.RemoveAnalyticsPropertyResponse:
         r"""Remove a property
 
+        Deletes the AnalyticsProperty identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2852,6 +2912,8 @@ class Analytics(BaseSDK):
     ) -> operations.RemoveAnalyticsVisitorResponse:
         r"""Remove a visitor
 
+        Deletes the AnalyticsVisitor identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2949,6 +3011,8 @@ class Analytics(BaseSDK):
     ) -> operations.RemoveAnalyticsVisitorResponse:
         r"""Remove a visitor
 
+        Deletes the AnalyticsVisitor identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3045,6 +3109,8 @@ class Analytics(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAnalyticsPropertyResponse:
         r"""Update a property
+
+        Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3147,6 +3213,8 @@ class Analytics(BaseSDK):
     ) -> operations.UpdateAnalyticsPropertyResponse:
         r"""Update a property
 
+        Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3248,6 +3316,8 @@ class Analytics(BaseSDK):
     ) -> operations.UpdateAnalyticsVisitorResponse:
         r"""Update a visitor
 
+        Updates the AnalyticsVisitor identified by `id`. Provide the unified AnalyticsVisitor fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3342,6 +3412,8 @@ class Analytics(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAnalyticsVisitorResponse:
         r"""Update a visitor
+
+        Updates the AnalyticsVisitor identified by `id`. Provide the unified AnalyticsVisitor fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

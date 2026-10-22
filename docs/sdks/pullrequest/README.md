@@ -13,7 +13,7 @@
 
 ## create_repo_pullrequest
 
-Create a pullrequest
+Creates a RepoPullrequest. Provide the unified RepoPullrequest fields in the request body; they are mapped to the provider's API. Returns the created RepoPullrequest.
 
 ### Example Usage
 
@@ -32,9 +32,9 @@ with UnifiedTo(
 
     res = unified_to.pullrequest.create_repo_pullrequest(request={
         "repo_pullrequest": {
-            "closed_at": parse_datetime("2025-05-01T13:49:56.790Z"),
+            "closed_at": parse_datetime("2025-05-02T04:03:35.410Z"),
             "created_at": parse_datetime("2023-02-27T09:37:13.663Z"),
-            "id": "107e687f-47df-41e1-8207-aad4e09e6700",
+            "id": "5d31e7a9-e7a6-4efe-a22d-7c351e02021d",
             "labels": [
                 "creptio",
                 "tutamen",
@@ -43,7 +43,7 @@ with UnifiedTo(
             "notes": "Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.",
             "status": shared.RepoPullrequestStatus.APPROVED,
             "title": "reboot mobile application",
-            "updated_at": parse_datetime("2026-01-17T07:02:05.496Z"),
+            "updated_at": parse_datetime("2026-01-18T01:55:58.476Z"),
         },
         "connection_id": "<id>",
     })
@@ -74,7 +74,7 @@ with UnifiedTo(
 
 ## get_repo_pullrequest
 
-Retrieve a pullrequest
+Retrieves a single RepoPullrequest by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -121,7 +121,7 @@ with UnifiedTo(
 
 ## list_repo_pullrequests
 
-List all pullrequests
+Returns a list of RepoPullrequests. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -167,7 +167,7 @@ with UnifiedTo(
 
 ## patch_repo_pullrequest
 
-Update a pullrequest
+Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change in the request body.
 
 ### Example Usage
 
@@ -186,9 +186,9 @@ with UnifiedTo(
 
     res = unified_to.pullrequest.patch_repo_pullrequest(request={
         "repo_pullrequest": {
-            "closed_at": parse_datetime("2025-05-01T13:49:56.801Z"),
+            "closed_at": parse_datetime("2025-05-02T04:03:35.421Z"),
             "created_at": parse_datetime("2023-02-27T09:37:13.663Z"),
-            "id": "743d6e2e-ff01-4226-87e4-63e082360e6c",
+            "id": "23ed0922-82e8-4b77-9733-8682bc9d3310",
             "labels": [
                 "creptio",
                 "tutamen",
@@ -197,7 +197,7 @@ with UnifiedTo(
             "notes": "Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.",
             "status": shared.RepoPullrequestStatus.APPROVED,
             "title": "reboot mobile application",
-            "updated_at": parse_datetime("2026-01-17T07:02:05.510Z"),
+            "updated_at": parse_datetime("2026-01-18T01:55:58.490Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -229,7 +229,7 @@ with UnifiedTo(
 
 ## remove_repo_pullrequest
 
-Remove a pullrequest
+Deletes the RepoPullrequest identified by `id`.
 
 ### Example Usage
 
@@ -276,7 +276,7 @@ with UnifiedTo(
 
 ## update_repo_pullrequest
 
-Update a pullrequest
+Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change in the request body.
 
 ### Example Usage
 
@@ -295,9 +295,9 @@ with UnifiedTo(
 
     res = unified_to.pullrequest.update_repo_pullrequest(request={
         "repo_pullrequest": {
-            "closed_at": parse_datetime("2025-05-01T13:49:56.801Z"),
+            "closed_at": parse_datetime("2025-05-02T04:03:35.421Z"),
             "created_at": parse_datetime("2023-02-27T09:37:13.663Z"),
-            "id": "743d6e2e-ff01-4226-87e4-63e082360e6c",
+            "id": "23ed0922-82e8-4b77-9733-8682bc9d3310",
             "labels": [
                 "creptio",
                 "tutamen",
@@ -306,7 +306,7 @@ with UnifiedTo(
             "notes": "Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.",
             "status": shared.RepoPullrequestStatus.APPROVED,
             "title": "reboot mobile application",
-            "updated_at": parse_datetime("2026-01-17T07:02:05.510Z"),
+            "updated_at": parse_datetime("2026-01-18T01:55:58.490Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

@@ -29,7 +29,7 @@
 
 ## create_payment_link
 
-Create a link
+Creates a PaymentLink. Provide the unified PaymentLink fields in the request body; they are mapped to the provider's API. Returns the created PaymentLink.
 
 ### Example Usage
 
@@ -52,13 +52,13 @@ with UnifiedTo(
             "created_at": parse_datetime("2023-06-04T16:11:45.685Z"),
             "currency": "CAD",
             "description": "Savor the tender essence in our Ball, designed for dim culinary adventures",
-            "id": "b78627ec-3001-412f-a577-0630fd5e9512",
+            "id": "fc515664-3d8a-4056-95ed-aaf2662aefd8",
             "is_active": True,
             "is_chargeable_now": True,
             "lineitems": [
                 {
                     "created_at": parse_datetime("2023-06-04T16:11:45.685Z"),
-                    "id": "958fa847-7deb-4984-a216-0ae8479df9f1",
+                    "id": "77b51887-c151-4811-aff1-67b93542f04a",
                     "item_description": "Discover the worst new Computer with an exciting mix of Steel ingredients",
                     "item_name": "Soft Marble Cheese",
                     "tax_amount": 0.0,
@@ -70,7 +70,7 @@ with UnifiedTo(
                 {
                     "created_at": parse_datetime("2023-06-04T16:11:45.685Z"),
                     "discount_amount": 424.32,
-                    "id": "e67c0838-50ab-4933-a381-32a177bb0f83",
+                    "id": "4a10838e-ed44-472c-b4ef-88a6d0b75590",
                     "item_description": "Innovative Shoes featuring utilized technology and Cotton construction",
                     "item_name": "Sleek Aluminum Shoes",
                     "notes": "Cervus decretum viridis doloremque.",
@@ -82,7 +82,7 @@ with UnifiedTo(
                 },
                 {
                     "created_at": parse_datetime("2023-06-04T16:11:45.685Z"),
-                    "id": "02a3155b-193e-4f22-8e39-7e057e75fc79",
+                    "id": "b19062d1-03db-4538-8b1a-d279ccaa2c70",
                     "item_description": "Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance",
                     "item_name": "Elegant Concrete Gloves",
                     "notes": "Desipio usque vacuus currus cetera testimonium.",
@@ -95,8 +95,8 @@ with UnifiedTo(
             ],
             "metadata": [],
             "success_url": "https://tinted-jet.info",
-            "updated_at": parse_datetime("2024-04-13T09:30:09.988Z"),
-            "url": "https://pay.example.com/b78627ec-3001-412f-a577-0630fd5e9512",
+            "updated_at": parse_datetime("2024-04-13T15:33:57.274Z"),
+            "url": "https://pay.example.com/fc515664-3d8a-4056-95ed-aaf2662aefd8",
         },
         "connection_id": "<id>",
     })
@@ -127,7 +127,7 @@ with UnifiedTo(
 
 ## create_payment_payment
 
-Create a payment
+Creates a PaymentPayment. Provide the unified PaymentPayment fields in the request body; they are mapped to the provider's API. Returns the created PaymentPayment.
 
 ### Example Usage
 
@@ -153,7 +153,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-03-10T00:19:42.086Z"),
             "currency": "EUR",
             "fee_amount": 2055.82,
-            "id": "109be62d-0fa2-42ea-9213-25ee43d62d39",
+            "id": "6417fb64-0ec5-46b0-9311-17b57d95df10",
             "metadata": [],
             "net_amount": 68824.18,
             "notes": "Bibo tactus vilicus.",
@@ -165,7 +165,7 @@ with UnifiedTo(
             "tip_amount": 0.0,
             "total_amount": 70880.0,
             "type": shared.PaymentPaymentType.INVOICE,
-            "updated_at": parse_datetime("2025-10-08T00:31:50.138Z"),
+            "updated_at": parse_datetime("2025-10-08T19:02:15.634Z"),
         },
         "connection_id": "<id>",
     })
@@ -196,7 +196,7 @@ with UnifiedTo(
 
 ## create_payment_subscription
 
-Create a subscription
+Creates a PaymentSubscription. Provide the unified PaymentSubscription fields in the request body; they are mapped to the provider's API. Returns the created PaymentSubscription.
 
 ### Example Usage
 
@@ -221,7 +221,7 @@ with UnifiedTo(
             "current_period_start_at": parse_datetime("2023-05-08T10:11:03.414Z"),
             "day_of_month": 8.0,
             "description": "Innovative Mouse featuring important technology and Bamboo construction",
-            "id": "cd1547b7-5292-4f71-af9d-d046946a7fcf",
+            "id": "ec15d0db-8265-4e03-93fb-6af020431b8f",
             "interval": 1.0,
             "interval_unit": shared.IntervalUnit.YEAR,
             "lineitems": [],
@@ -230,7 +230,7 @@ with UnifiedTo(
             "start_at": parse_datetime("2023-05-08T10:11:03.414Z"),
             "status": shared.PaymentSubscriptionStatus.ACTIVE,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2023-10-04T12:52:17.662Z"),
+            "updated_at": parse_datetime("2023-10-04T15:41:28.097Z"),
         },
         "connection_id": "<id>",
     })
@@ -261,7 +261,7 @@ with UnifiedTo(
 
 ## get_payment_link
 
-Retrieve a link
+Retrieves a single PaymentLink by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -308,7 +308,7 @@ with UnifiedTo(
 
 ## get_payment_payment
 
-Retrieve a payment
+Retrieves a single PaymentPayment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -355,7 +355,7 @@ with UnifiedTo(
 
 ## get_payment_payout
 
-Retrieve a payout
+Retrieves a single PaymentPayout by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -402,7 +402,7 @@ with UnifiedTo(
 
 ## get_payment_refund
 
-Retrieve a refund
+Retrieves a single PaymentRefund by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -449,7 +449,7 @@ with UnifiedTo(
 
 ## get_payment_subscription
 
-Retrieve a subscription
+Retrieves a single PaymentSubscription by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -496,7 +496,7 @@ with UnifiedTo(
 
 ## list_payment_links
 
-List all links
+Returns a list of PaymentLinks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -542,7 +542,7 @@ with UnifiedTo(
 
 ## list_payment_payments
 
-List all payments
+Returns a list of PaymentPayments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -588,7 +588,7 @@ with UnifiedTo(
 
 ## list_payment_payouts
 
-List all payouts
+Returns a list of PaymentPayouts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -634,7 +634,7 @@ with UnifiedTo(
 
 ## list_payment_refunds
 
-List all refunds
+Returns a list of PaymentRefunds. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -680,7 +680,7 @@ with UnifiedTo(
 
 ## list_payment_subscriptions
 
-List all subscriptions
+Returns a list of PaymentSubscriptions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -726,7 +726,7 @@ with UnifiedTo(
 
 ## patch_payment_link
 
-Update a link
+Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the request body.
 
 ### Example Usage
 
@@ -749,13 +749,13 @@ with UnifiedTo(
             "created_at": parse_datetime("2023-06-04T16:11:45.685Z"),
             "currency": "CAD",
             "description": "Savor the tender essence in our Ball, designed for dim culinary adventures",
-            "id": "0c4720a8-7e94-4f22-bb38-adae3c25b5d0",
+            "id": "08f916f2-a958-486e-9292-d7529bd8ccba",
             "is_active": True,
             "is_chargeable_now": True,
             "lineitems": [
                 {
                     "created_at": parse_datetime("2023-06-04T16:11:45.685Z"),
-                    "id": "5c02f8fb-c6e9-4e59-a24c-c1b9ce61745b",
+                    "id": "3530b134-abde-4de0-ac67-e0478bf02437",
                     "item_description": "Discover the worst new Computer with an exciting mix of Steel ingredients",
                     "item_name": "Soft Marble Cheese",
                     "tax_amount": 0.0,
@@ -767,7 +767,7 @@ with UnifiedTo(
                 {
                     "created_at": parse_datetime("2023-06-04T16:11:45.685Z"),
                     "discount_amount": 424.32,
-                    "id": "c54b9cb5-b822-4429-9e14-888d068fbfe6",
+                    "id": "37245c21-0f1d-4cb1-95ee-fdffdda2bc73",
                     "item_description": "Innovative Shoes featuring utilized technology and Cotton construction",
                     "item_name": "Sleek Aluminum Shoes",
                     "notes": "Cervus decretum viridis doloremque.",
@@ -779,7 +779,7 @@ with UnifiedTo(
                 },
                 {
                     "created_at": parse_datetime("2023-06-04T16:11:45.685Z"),
-                    "id": "5db96022-15e7-4c95-8ea5-0fc69f6de9e6",
+                    "id": "b60c42d8-7654-4944-b7a1-a96966847949",
                     "item_description": "Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance",
                     "item_name": "Elegant Concrete Gloves",
                     "notes": "Desipio usque vacuus currus cetera testimonium.",
@@ -792,8 +792,8 @@ with UnifiedTo(
             ],
             "metadata": [],
             "success_url": "https://tinted-jet.info",
-            "updated_at": parse_datetime("2024-04-13T09:30:09.994Z"),
-            "url": "https://pay.example.com/0c4720a8-7e94-4f22-bb38-adae3c25b5d0",
+            "updated_at": parse_datetime("2024-04-13T15:33:57.282Z"),
+            "url": "https://pay.example.com/08f916f2-a958-486e-9292-d7529bd8ccba",
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -825,7 +825,7 @@ with UnifiedTo(
 
 ## patch_payment_payment
 
-Update a payment
+Updates the PaymentPayment identified by `id`. Provide the unified PaymentPayment fields to change in the request body.
 
 ### Example Usage
 
@@ -851,7 +851,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-03-10T00:19:42.086Z"),
             "currency": "EUR",
             "fee_amount": 2055.82,
-            "id": "f8e1c481-001b-480e-b7ab-96f1933f7631",
+            "id": "08b1fd70-0071-4b52-838f-889911be728e",
             "metadata": [],
             "net_amount": 68824.18,
             "notes": "Bibo tactus vilicus.",
@@ -863,7 +863,7 @@ with UnifiedTo(
             "tip_amount": 0.0,
             "total_amount": 70880.0,
             "type": shared.PaymentPaymentType.INVOICE,
-            "updated_at": parse_datetime("2025-10-08T00:31:50.160Z"),
+            "updated_at": parse_datetime("2025-10-08T19:02:15.660Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -895,7 +895,7 @@ with UnifiedTo(
 
 ## patch_payment_subscription
 
-Update a subscription
+Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields to change in the request body.
 
 ### Example Usage
 
@@ -920,7 +920,7 @@ with UnifiedTo(
             "current_period_start_at": parse_datetime("2023-05-08T10:11:03.414Z"),
             "day_of_month": 8.0,
             "description": "Innovative Mouse featuring important technology and Bamboo construction",
-            "id": "6b1072e3-79fc-4a84-af1b-e01794f9334a",
+            "id": "d45db3c0-8446-4d27-878e-56e3b0022611",
             "interval": 1.0,
             "interval_unit": shared.IntervalUnit.YEAR,
             "lineitems": [],
@@ -929,7 +929,7 @@ with UnifiedTo(
             "start_at": parse_datetime("2023-05-08T10:11:03.414Z"),
             "status": shared.PaymentSubscriptionStatus.ACTIVE,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2023-10-04T12:52:17.667Z"),
+            "updated_at": parse_datetime("2023-10-04T15:41:28.101Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -961,7 +961,7 @@ with UnifiedTo(
 
 ## remove_payment_link
 
-Remove a link
+Deletes the PaymentLink identified by `id`.
 
 ### Example Usage
 
@@ -1008,7 +1008,7 @@ with UnifiedTo(
 
 ## remove_payment_payment
 
-Remove a payment
+Deletes the PaymentPayment identified by `id`.
 
 ### Example Usage
 
@@ -1055,7 +1055,7 @@ with UnifiedTo(
 
 ## remove_payment_subscription
 
-Remove a subscription
+Deletes the PaymentSubscription identified by `id`.
 
 ### Example Usage
 
@@ -1102,7 +1102,7 @@ with UnifiedTo(
 
 ## update_payment_link
 
-Update a link
+Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the request body.
 
 ### Example Usage
 
@@ -1125,13 +1125,13 @@ with UnifiedTo(
             "created_at": parse_datetime("2023-06-04T16:11:45.685Z"),
             "currency": "CAD",
             "description": "Savor the tender essence in our Ball, designed for dim culinary adventures",
-            "id": "0c4720a8-7e94-4f22-bb38-adae3c25b5d0",
+            "id": "08f916f2-a958-486e-9292-d7529bd8ccba",
             "is_active": True,
             "is_chargeable_now": True,
             "lineitems": [
                 {
                     "created_at": parse_datetime("2023-06-04T16:11:45.685Z"),
-                    "id": "5c02f8fb-c6e9-4e59-a24c-c1b9ce61745b",
+                    "id": "3530b134-abde-4de0-ac67-e0478bf02437",
                     "item_description": "Discover the worst new Computer with an exciting mix of Steel ingredients",
                     "item_name": "Soft Marble Cheese",
                     "tax_amount": 0.0,
@@ -1143,7 +1143,7 @@ with UnifiedTo(
                 {
                     "created_at": parse_datetime("2023-06-04T16:11:45.685Z"),
                     "discount_amount": 424.32,
-                    "id": "c54b9cb5-b822-4429-9e14-888d068fbfe6",
+                    "id": "37245c21-0f1d-4cb1-95ee-fdffdda2bc73",
                     "item_description": "Innovative Shoes featuring utilized technology and Cotton construction",
                     "item_name": "Sleek Aluminum Shoes",
                     "notes": "Cervus decretum viridis doloremque.",
@@ -1155,7 +1155,7 @@ with UnifiedTo(
                 },
                 {
                     "created_at": parse_datetime("2023-06-04T16:11:45.685Z"),
-                    "id": "5db96022-15e7-4c95-8ea5-0fc69f6de9e6",
+                    "id": "b60c42d8-7654-4944-b7a1-a96966847949",
                     "item_description": "Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance",
                     "item_name": "Elegant Concrete Gloves",
                     "notes": "Desipio usque vacuus currus cetera testimonium.",
@@ -1168,8 +1168,8 @@ with UnifiedTo(
             ],
             "metadata": [],
             "success_url": "https://tinted-jet.info",
-            "updated_at": parse_datetime("2024-04-13T09:30:09.994Z"),
-            "url": "https://pay.example.com/0c4720a8-7e94-4f22-bb38-adae3c25b5d0",
+            "updated_at": parse_datetime("2024-04-13T15:33:57.282Z"),
+            "url": "https://pay.example.com/08f916f2-a958-486e-9292-d7529bd8ccba",
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1201,7 +1201,7 @@ with UnifiedTo(
 
 ## update_payment_payment
 
-Update a payment
+Updates the PaymentPayment identified by `id`. Provide the unified PaymentPayment fields to change in the request body.
 
 ### Example Usage
 
@@ -1227,7 +1227,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-03-10T00:19:42.086Z"),
             "currency": "EUR",
             "fee_amount": 2055.82,
-            "id": "f8e1c481-001b-480e-b7ab-96f1933f7631",
+            "id": "08b1fd70-0071-4b52-838f-889911be728e",
             "metadata": [],
             "net_amount": 68824.18,
             "notes": "Bibo tactus vilicus.",
@@ -1239,7 +1239,7 @@ with UnifiedTo(
             "tip_amount": 0.0,
             "total_amount": 70880.0,
             "type": shared.PaymentPaymentType.INVOICE,
-            "updated_at": parse_datetime("2025-10-08T00:31:50.160Z"),
+            "updated_at": parse_datetime("2025-10-08T19:02:15.660Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1271,7 +1271,7 @@ with UnifiedTo(
 
 ## update_payment_subscription
 
-Update a subscription
+Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields to change in the request body.
 
 ### Example Usage
 
@@ -1296,7 +1296,7 @@ with UnifiedTo(
             "current_period_start_at": parse_datetime("2023-05-08T10:11:03.414Z"),
             "day_of_month": 8.0,
             "description": "Innovative Mouse featuring important technology and Bamboo construction",
-            "id": "6b1072e3-79fc-4a84-af1b-e01794f9334a",
+            "id": "d45db3c0-8446-4d27-878e-56e3b0022611",
             "interval": 1.0,
             "interval_unit": shared.IntervalUnit.YEAR,
             "lineitems": [],
@@ -1305,7 +1305,7 @@ with UnifiedTo(
             "start_at": parse_datetime("2023-05-08T10:11:03.414Z"),
             "status": shared.PaymentSubscriptionStatus.ACTIVE,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2023-10-04T12:52:17.667Z"),
+            "updated_at": parse_datetime("2023-10-04T15:41:28.101Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

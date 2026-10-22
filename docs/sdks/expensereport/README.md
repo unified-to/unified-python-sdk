@@ -13,7 +13,7 @@
 
 ## create_accounting_expensereport
 
-Create an expensereport
+Creates a AccountingExpensereport. Provide the unified AccountingExpensereport fields in the request body; they are mapped to the provider's API. Returns the created AccountingExpensereport.
 
 ### Example Usage
 
@@ -32,16 +32,16 @@ with UnifiedTo(
 
     res = unified_to.expensereport.create_accounting_expensereport(request={
         "accounting_expensereport": {
-            "approved_at": parse_datetime("2021-04-19T11:28:31.620Z"),
+            "approved_at": parse_datetime("2021-04-19T14:47:54.423Z"),
             "attachments": [],
             "category_ids": [],
             "created_at": parse_datetime("2020-05-29T02:04:59.078Z"),
             "currency": "GBP",
             "external_number": "ER-31240",
-            "id": "0e1a2879-7c11-49b3-bf53-718d06608f52",
+            "id": "eff22fdd-5648-4116-8ab6-24ed493db75e",
             "lineitems": [
                 {
-                    "id": "8953e182-2003-42db-bdd6-df7c41e5f07a",
+                    "id": "9baccfe5-705f-4d5e-b5c0-8e97007892a9",
                     "item_name": "Conference ticket",
                     "tax_amount": 0.0,
                     "total_amount": 39.9,
@@ -49,7 +49,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "2872ca66-3046-4949-b93f-d4e7cf067339",
+                    "id": "04c541a5-881d-458c-8cda-74565ba46f9d",
                     "item_name": "Flight",
                     "notes": "Soluta omnis dolor.",
                     "tax_amount": 0.0,
@@ -58,7 +58,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "774a00fb-0ad4-460b-b83a-74b274fc43e1",
+                    "id": "5c0c84dd-7ffb-439a-add9-cd76e3822a27",
                     "item_name": "Client dinner",
                     "notes": "Altus caveo capio.",
                     "tax_amount": 0.0,
@@ -67,7 +67,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "229b5e80-2e70-4671-8545-b4e23d6d4814",
+                    "id": "5dee1ff0-0a81-4a52-85dd-b530f20136e8",
                     "item_name": "Flight",
                     "tax_amount": 0.0,
                     "total_amount": 445.27,
@@ -79,11 +79,11 @@ with UnifiedTo(
             "name": "Lolita Kunde - October expenses",
             "posted_at": parse_datetime("2020-05-29T02:04:59.078Z"),
             "reimbursed_amount": 908.46,
-            "reimbursed_at": parse_datetime("2021-04-19T11:28:31.620Z"),
+            "reimbursed_at": parse_datetime("2021-04-19T14:47:54.423Z"),
             "status": shared.AccountingExpensereportStatus.PAID,
             "tax_amount": 0.0,
             "total_amount": 908.46,
-            "updated_at": parse_datetime("2021-04-19T11:28:31.620Z"),
+            "updated_at": parse_datetime("2021-04-19T14:47:54.423Z"),
         },
         "connection_id": "<id>",
     })
@@ -114,7 +114,7 @@ with UnifiedTo(
 
 ## get_accounting_expensereport
 
-Retrieve an expensereport
+Retrieves a single AccountingExpensereport by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -161,7 +161,7 @@ with UnifiedTo(
 
 ## list_accounting_expensereports
 
-List all expensereports
+Returns a list of AccountingExpensereports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -207,7 +207,7 @@ with UnifiedTo(
 
 ## patch_accounting_expensereport
 
-Update an expensereport
+Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport fields to change in the request body.
 
 ### Example Usage
 
@@ -226,16 +226,16 @@ with UnifiedTo(
 
     res = unified_to.expensereport.patch_accounting_expensereport(request={
         "accounting_expensereport": {
-            "approved_at": parse_datetime("2021-04-19T11:28:31.627Z"),
+            "approved_at": parse_datetime("2021-04-19T14:47:54.430Z"),
             "attachments": [],
             "category_ids": [],
             "created_at": parse_datetime("2020-05-29T02:04:59.078Z"),
             "currency": "GBP",
             "external_number": "ER-31240",
-            "id": "2d99a3aa-894c-4130-9a8b-c6c1fea59f58",
+            "id": "1b57eed0-0948-4c2c-ba32-0a52df93900d",
             "lineitems": [
                 {
-                    "id": "47beed38-a624-45e4-897a-794497ae9250",
+                    "id": "4e409aba-062b-4ec0-b9af-9462ba902709",
                     "item_name": "Conference ticket",
                     "tax_amount": 0.0,
                     "total_amount": 39.9,
@@ -243,7 +243,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "45b133d0-943b-4580-9d37-96301611ed33",
+                    "id": "1dd8e1a0-b6d8-4a6c-8239-d72cb82a1105",
                     "item_name": "Flight",
                     "notes": "Soluta omnis dolor.",
                     "tax_amount": 0.0,
@@ -252,7 +252,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "3abdb02e-5254-4d4f-91b3-e7915ea52258",
+                    "id": "1ad82fac-e61b-4489-a4f7-d30d02679c5b",
                     "item_name": "Client dinner",
                     "notes": "Altus caveo capio.",
                     "tax_amount": 0.0,
@@ -261,7 +261,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "44a7fd29-a498-434a-8bcb-c67bdb6e4632",
+                    "id": "37c9f695-3e6f-44d4-9276-53746b40a05c",
                     "item_name": "Flight",
                     "tax_amount": 0.0,
                     "total_amount": 445.27,
@@ -273,11 +273,11 @@ with UnifiedTo(
             "name": "Lolita Kunde - October expenses",
             "posted_at": parse_datetime("2020-05-29T02:04:59.078Z"),
             "reimbursed_amount": 908.46,
-            "reimbursed_at": parse_datetime("2021-04-19T11:28:31.627Z"),
+            "reimbursed_at": parse_datetime("2021-04-19T14:47:54.430Z"),
             "status": shared.AccountingExpensereportStatus.PAID,
             "tax_amount": 0.0,
             "total_amount": 908.46,
-            "updated_at": parse_datetime("2021-04-19T11:28:31.627Z"),
+            "updated_at": parse_datetime("2021-04-19T14:47:54.430Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -309,7 +309,7 @@ with UnifiedTo(
 
 ## remove_accounting_expensereport
 
-Remove an expensereport
+Deletes the AccountingExpensereport identified by `id`.
 
 ### Example Usage
 
@@ -356,7 +356,7 @@ with UnifiedTo(
 
 ## update_accounting_expensereport
 
-Update an expensereport
+Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport fields to change in the request body.
 
 ### Example Usage
 
@@ -375,16 +375,16 @@ with UnifiedTo(
 
     res = unified_to.expensereport.update_accounting_expensereport(request={
         "accounting_expensereport": {
-            "approved_at": parse_datetime("2021-04-19T11:28:31.627Z"),
+            "approved_at": parse_datetime("2021-04-19T14:47:54.430Z"),
             "attachments": [],
             "category_ids": [],
             "created_at": parse_datetime("2020-05-29T02:04:59.078Z"),
             "currency": "GBP",
             "external_number": "ER-31240",
-            "id": "2d99a3aa-894c-4130-9a8b-c6c1fea59f58",
+            "id": "1b57eed0-0948-4c2c-ba32-0a52df93900d",
             "lineitems": [
                 {
-                    "id": "47beed38-a624-45e4-897a-794497ae9250",
+                    "id": "4e409aba-062b-4ec0-b9af-9462ba902709",
                     "item_name": "Conference ticket",
                     "tax_amount": 0.0,
                     "total_amount": 39.9,
@@ -392,7 +392,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "45b133d0-943b-4580-9d37-96301611ed33",
+                    "id": "1dd8e1a0-b6d8-4a6c-8239-d72cb82a1105",
                     "item_name": "Flight",
                     "notes": "Soluta omnis dolor.",
                     "tax_amount": 0.0,
@@ -401,7 +401,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "3abdb02e-5254-4d4f-91b3-e7915ea52258",
+                    "id": "1ad82fac-e61b-4489-a4f7-d30d02679c5b",
                     "item_name": "Client dinner",
                     "notes": "Altus caveo capio.",
                     "tax_amount": 0.0,
@@ -410,7 +410,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "44a7fd29-a498-434a-8bcb-c67bdb6e4632",
+                    "id": "37c9f695-3e6f-44d4-9276-53746b40a05c",
                     "item_name": "Flight",
                     "tax_amount": 0.0,
                     "total_amount": 445.27,
@@ -422,11 +422,11 @@ with UnifiedTo(
             "name": "Lolita Kunde - October expenses",
             "posted_at": parse_datetime("2020-05-29T02:04:59.078Z"),
             "reimbursed_amount": 908.46,
-            "reimbursed_at": parse_datetime("2021-04-19T11:28:31.627Z"),
+            "reimbursed_at": parse_datetime("2021-04-19T14:47:54.430Z"),
             "status": shared.AccountingExpensereportStatus.PAID,
             "tax_amount": 0.0,
             "total_amount": 908.46,
-            "updated_at": parse_datetime("2021-04-19T11:28:31.627Z"),
+            "updated_at": parse_datetime("2021-04-19T14:47:54.430Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

@@ -24,6 +24,8 @@ class Social(BaseSDK):
     ) -> operations.CreateSocialPostResponse:
         r"""Create a post
 
+        Creates a SocialPost. Provide the unified SocialPost fields in the request body; they are mapped to the provider's API. Returns the created SocialPost.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -118,6 +120,8 @@ class Social(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateSocialPostResponse:
         r"""Create a post
+
+        Creates a SocialPost. Provide the unified SocialPost fields in the request body; they are mapped to the provider's API. Returns the created SocialPost.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -214,6 +218,8 @@ class Social(BaseSDK):
     ) -> operations.GetSocialInsightResponse:
         r"""Retrieve an insight
 
+        Retrieves a single SocialInsight by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -306,6 +312,8 @@ class Social(BaseSDK):
     ) -> operations.GetSocialInsightResponse:
         r"""Retrieve an insight
 
+        Retrieves a single SocialInsight by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -397,6 +405,8 @@ class Social(BaseSDK):
     ) -> operations.GetSocialPostResponse:
         r"""Retrieve a post
 
+        Retrieves a single SocialPost by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -487,6 +497,8 @@ class Social(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetSocialPostResponse:
         r"""Retrieve a post
+
+        Retrieves a single SocialPost by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -580,6 +592,8 @@ class Social(BaseSDK):
     ) -> operations.GetSocialProfileResponse:
         r"""Retrieve a profile
 
+        Retrieves a single SocialProfile by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -671,6 +685,8 @@ class Social(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetSocialProfileResponse:
         r"""Retrieve a profile
+
+        Retrieves a single SocialProfile by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -764,6 +780,8 @@ class Social(BaseSDK):
     ) -> operations.GetSocialReviewResponse:
         r"""Retrieve a review
 
+        Retrieves a single SocialReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -855,6 +873,8 @@ class Social(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetSocialReviewResponse:
         r"""Retrieve a review
+
+        Retrieves a single SocialReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -948,6 +968,8 @@ class Social(BaseSDK):
     ) -> operations.ListSocialInsightsResponse:
         r"""List all insights
 
+        Returns a list of SocialInsights. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1039,6 +1061,8 @@ class Social(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListSocialInsightsResponse:
         r"""List all insights
+
+        Returns a list of SocialInsights. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1132,6 +1156,8 @@ class Social(BaseSDK):
     ) -> operations.ListSocialPostsResponse:
         r"""List all posts
 
+        Returns a list of SocialPosts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1223,6 +1249,8 @@ class Social(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListSocialPostsResponse:
         r"""List all posts
+
+        Returns a list of SocialPosts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1316,6 +1344,8 @@ class Social(BaseSDK):
     ) -> operations.ListSocialProfilesResponse:
         r"""List all profiles
 
+        Returns a list of SocialProfiles. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1407,6 +1437,8 @@ class Social(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListSocialProfilesResponse:
         r"""List all profiles
+
+        Returns a list of SocialProfiles. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1500,6 +1532,8 @@ class Social(BaseSDK):
     ) -> operations.ListSocialReviewsResponse:
         r"""List all reviews
 
+        Returns a list of SocialReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1592,6 +1626,8 @@ class Social(BaseSDK):
     ) -> operations.ListSocialReviewsResponse:
         r"""List all reviews
 
+        Returns a list of SocialReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1683,6 +1719,8 @@ class Social(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchSocialPostResponse:
         r"""Update a post
+
+        Updates the SocialPost identified by `id`. Provide the unified SocialPost fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1779,6 +1817,8 @@ class Social(BaseSDK):
     ) -> operations.PatchSocialPostResponse:
         r"""Update a post
 
+        Updates the SocialPost identified by `id`. Provide the unified SocialPost fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1873,6 +1913,8 @@ class Social(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchSocialReviewResponse:
         r"""Update a review
+
+        Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1969,6 +2011,8 @@ class Social(BaseSDK):
     ) -> operations.PatchSocialReviewResponse:
         r"""Update a review
 
+        Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2063,6 +2107,8 @@ class Social(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveSocialPostResponse:
         r"""Remove a post
+
+        Deletes the SocialPost identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2161,6 +2207,8 @@ class Social(BaseSDK):
     ) -> operations.RemoveSocialPostResponse:
         r"""Remove a post
 
+        Deletes the SocialPost identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2258,6 +2306,8 @@ class Social(BaseSDK):
     ) -> operations.UpdateSocialPostResponse:
         r"""Update a post
 
+        Updates the SocialPost identified by `id`. Provide the unified SocialPost fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2352,6 +2402,8 @@ class Social(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateSocialPostResponse:
         r"""Update a post
+
+        Updates the SocialPost identified by `id`. Provide the unified SocialPost fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2448,6 +2500,8 @@ class Social(BaseSDK):
     ) -> operations.UpdateSocialReviewResponse:
         r"""Update a review
 
+        Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2542,6 +2596,8 @@ class Social(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateSocialReviewResponse:
         r"""Update a review
+
+        Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

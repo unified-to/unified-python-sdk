@@ -24,6 +24,8 @@ class Member(BaseSDK):
     ) -> operations.CreateMartechMemberResponse:
         r"""Create a member
 
+        Creates a MarketingMember. Provide the unified MarketingMember fields in the request body; they are mapped to the provider's API. Returns the created MarketingMember.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -119,6 +121,8 @@ class Member(BaseSDK):
     ) -> operations.CreateMartechMemberResponse:
         r"""Create a member
 
+        Creates a MarketingMember. Provide the unified MarketingMember fields in the request body; they are mapped to the provider's API. Returns the created MarketingMember.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -213,6 +217,8 @@ class Member(BaseSDK):
     ) -> operations.GetClubsMemberResponse:
         r"""Retrieve a member
 
+        Retrieves a single ClubsMember by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -303,6 +309,8 @@ class Member(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetClubsMemberResponse:
         r"""Retrieve a member
+
+        Retrieves a single ClubsMember by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -396,6 +404,8 @@ class Member(BaseSDK):
     ) -> operations.GetMartechMemberResponse:
         r"""Retrieve a member
 
+        Retrieves a single MarketingMember by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -487,6 +497,8 @@ class Member(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetMartechMemberResponse:
         r"""Retrieve a member
+
+        Retrieves a single MarketingMember by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -580,6 +592,8 @@ class Member(BaseSDK):
     ) -> operations.ListClubsMembersResponse:
         r"""List all members
 
+        Returns a list of ClubsMembers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -671,6 +685,8 @@ class Member(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListClubsMembersResponse:
         r"""List all members
+
+        Returns a list of ClubsMembers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -764,6 +780,8 @@ class Member(BaseSDK):
     ) -> operations.ListMartechMembersResponse:
         r"""List all members
 
+        Returns a list of MarketingMembers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -856,6 +874,8 @@ class Member(BaseSDK):
     ) -> operations.ListMartechMembersResponse:
         r"""List all members
 
+        Returns a list of MarketingMembers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -947,6 +967,8 @@ class Member(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchMartechMemberResponse:
         r"""Update a member
+
+        Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1043,6 +1065,8 @@ class Member(BaseSDK):
     ) -> operations.PatchMartechMemberResponse:
         r"""Update a member
 
+        Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1137,6 +1161,8 @@ class Member(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveMartechMemberResponse:
         r"""Remove a member
+
+        Deletes the MarketingMember identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1235,6 +1261,8 @@ class Member(BaseSDK):
     ) -> operations.RemoveMartechMemberResponse:
         r"""Remove a member
 
+        Deletes the MarketingMember identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1332,6 +1360,8 @@ class Member(BaseSDK):
     ) -> operations.UpdateMartechMemberResponse:
         r"""Update a member
 
+        Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1426,6 +1456,8 @@ class Member(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateMartechMemberResponse:
         r"""Update a member
+
+        Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

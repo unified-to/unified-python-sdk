@@ -24,6 +24,8 @@ class Compute(BaseSDK):
     ) -> operations.CreateComputeDeploymentResponse:
         r"""Create a deployment
 
+        Creates a ComputeDeployment. Provide the unified ComputeDeployment fields in the request body; they are mapped to the provider's API. Returns the created ComputeDeployment.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -124,6 +126,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateComputeDeploymentResponse:
         r"""Create a deployment
+
+        Creates a ComputeDeployment. Provide the unified ComputeDeployment fields in the request body; they are mapped to the provider's API. Returns the created ComputeDeployment.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -226,6 +230,8 @@ class Compute(BaseSDK):
     ) -> operations.CreateComputeDomainResponse:
         r"""Create a domain
 
+        Creates a ComputeDomain. Provide the unified ComputeDomain fields in the request body; they are mapped to the provider's API. Returns the created ComputeDomain.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -320,6 +326,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateComputeDomainResponse:
         r"""Create a domain
+
+        Creates a ComputeDomain. Provide the unified ComputeDomain fields in the request body; they are mapped to the provider's API. Returns the created ComputeDomain.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -416,6 +424,8 @@ class Compute(BaseSDK):
     ) -> operations.CreateComputeEnvvarResponse:
         r"""Create an envvar
 
+        Creates a ComputeEnvvar. Provide the unified ComputeEnvvar fields in the request body; they are mapped to the provider's API. Returns the created ComputeEnvvar.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -510,6 +520,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateComputeEnvvarResponse:
         r"""Create an envvar
+
+        Creates a ComputeEnvvar. Provide the unified ComputeEnvvar fields in the request body; they are mapped to the provider's API. Returns the created ComputeEnvvar.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -606,6 +618,8 @@ class Compute(BaseSDK):
     ) -> operations.CreateComputeInstanceResponse:
         r"""Create an instance
 
+        Creates a ComputeInstance. Provide the unified ComputeInstance fields in the request body; they are mapped to the provider's API. Returns the created ComputeInstance.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -700,6 +714,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateComputeInstanceResponse:
         r"""Create an instance
+
+        Creates a ComputeInstance. Provide the unified ComputeInstance fields in the request body; they are mapped to the provider's API. Returns the created ComputeInstance.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -796,6 +812,8 @@ class Compute(BaseSDK):
     ) -> operations.CreateComputeKeyResponse:
         r"""Create a key
 
+        Creates a ComputeKey. Provide the unified ComputeKey fields in the request body; they are mapped to the provider's API. Returns the created ComputeKey.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -890,6 +908,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateComputeKeyResponse:
         r"""Create a key
+
+        Creates a ComputeKey. Provide the unified ComputeKey fields in the request body; they are mapped to the provider's API. Returns the created ComputeKey.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -986,6 +1006,8 @@ class Compute(BaseSDK):
     ) -> operations.CreateComputeServiceResponse:
         r"""Create a service
 
+        Creates a ComputeService. Provide the unified ComputeService fields in the request body; they are mapped to the provider's API. Returns the created ComputeService.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1080,6 +1102,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateComputeServiceResponse:
         r"""Create a service
+
+        Creates a ComputeService. Provide the unified ComputeService fields in the request body; they are mapped to the provider's API. Returns the created ComputeService.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1176,6 +1200,8 @@ class Compute(BaseSDK):
     ) -> operations.CreateComputeSnapshotResponse:
         r"""Create a snapshot
 
+        Creates a ComputeSnapshot. Provide the unified ComputeSnapshot fields in the request body; they are mapped to the provider's API. Returns the created ComputeSnapshot.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1270,6 +1296,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateComputeSnapshotResponse:
         r"""Create a snapshot
+
+        Creates a ComputeSnapshot. Provide the unified ComputeSnapshot fields in the request body; they are mapped to the provider's API. Returns the created ComputeSnapshot.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1366,6 +1394,8 @@ class Compute(BaseSDK):
     ) -> operations.CreateComputeTemplateResponse:
         r"""Create a template
 
+        Creates a ComputeTemplate. Provide the unified ComputeTemplate fields in the request body; they are mapped to the provider's API. Returns the created ComputeTemplate.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1460,6 +1490,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateComputeTemplateResponse:
         r"""Create a template
+
+        Creates a ComputeTemplate. Provide the unified ComputeTemplate fields in the request body; they are mapped to the provider's API. Returns the created ComputeTemplate.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1556,6 +1588,8 @@ class Compute(BaseSDK):
     ) -> operations.CreateComputeVolumeResponse:
         r"""Create a volume
 
+        Creates a ComputeVolume. Provide the unified ComputeVolume fields in the request body; they are mapped to the provider's API. Returns the created ComputeVolume.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1650,6 +1684,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateComputeVolumeResponse:
         r"""Create a volume
+
+        Creates a ComputeVolume. Provide the unified ComputeVolume fields in the request body; they are mapped to the provider's API. Returns the created ComputeVolume.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1746,6 +1782,8 @@ class Compute(BaseSDK):
     ) -> operations.GetComputeDeploymentResponse:
         r"""Retrieve a deployment
 
+        Retrieves a single ComputeDeployment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1837,6 +1875,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetComputeDeploymentResponse:
         r"""Retrieve a deployment
+
+        Retrieves a single ComputeDeployment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1930,6 +1970,8 @@ class Compute(BaseSDK):
     ) -> operations.GetComputeDomainResponse:
         r"""Retrieve a domain
 
+        Retrieves a single ComputeDomain by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2021,6 +2063,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetComputeDomainResponse:
         r"""Retrieve a domain
+
+        Retrieves a single ComputeDomain by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2114,6 +2158,8 @@ class Compute(BaseSDK):
     ) -> operations.GetComputeEnvvarResponse:
         r"""Retrieve an envvar
 
+        Retrieves a single ComputeEnvvar by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2205,6 +2251,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetComputeEnvvarResponse:
         r"""Retrieve an envvar
+
+        Retrieves a single ComputeEnvvar by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2298,6 +2346,8 @@ class Compute(BaseSDK):
     ) -> operations.GetComputeGputypeResponse:
         r"""Retrieve a gputype
 
+        Retrieves a single ComputeGputype by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2389,6 +2439,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetComputeGputypeResponse:
         r"""Retrieve a gputype
+
+        Retrieves a single ComputeGputype by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2482,6 +2534,8 @@ class Compute(BaseSDK):
     ) -> operations.GetComputeInstanceResponse:
         r"""Retrieve an instance
 
+        Retrieves a single ComputeInstance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2574,6 +2628,8 @@ class Compute(BaseSDK):
     ) -> operations.GetComputeInstanceResponse:
         r"""Retrieve an instance
 
+        Retrieves a single ComputeInstance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2665,6 +2721,8 @@ class Compute(BaseSDK):
     ) -> operations.GetComputeKeyResponse:
         r"""Retrieve a key
 
+        Retrieves a single ComputeKey by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2755,6 +2813,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetComputeKeyResponse:
         r"""Retrieve a key
+
+        Retrieves a single ComputeKey by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2848,6 +2908,8 @@ class Compute(BaseSDK):
     ) -> operations.GetComputeRegionResponse:
         r"""Retrieve a region
 
+        Retrieves a single ComputeRegion by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2939,6 +3001,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetComputeRegionResponse:
         r"""Retrieve a region
+
+        Retrieves a single ComputeRegion by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3032,6 +3096,8 @@ class Compute(BaseSDK):
     ) -> operations.GetComputeServiceResponse:
         r"""Retrieve a service
 
+        Retrieves a single ComputeService by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3123,6 +3189,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetComputeServiceResponse:
         r"""Retrieve a service
+
+        Retrieves a single ComputeService by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3216,6 +3284,8 @@ class Compute(BaseSDK):
     ) -> operations.GetComputeSnapshotResponse:
         r"""Retrieve a snapshot
 
+        Retrieves a single ComputeSnapshot by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3307,6 +3377,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetComputeSnapshotResponse:
         r"""Retrieve a snapshot
+
+        Retrieves a single ComputeSnapshot by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3400,6 +3472,8 @@ class Compute(BaseSDK):
     ) -> operations.GetComputeTemplateResponse:
         r"""Retrieve a template
 
+        Retrieves a single ComputeTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3491,6 +3565,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetComputeTemplateResponse:
         r"""Retrieve a template
+
+        Retrieves a single ComputeTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3584,6 +3660,8 @@ class Compute(BaseSDK):
     ) -> operations.GetComputeVolumeResponse:
         r"""Retrieve a volume
 
+        Retrieves a single ComputeVolume by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3675,6 +3753,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetComputeVolumeResponse:
         r"""Retrieve a volume
+
+        Retrieves a single ComputeVolume by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3768,6 +3848,8 @@ class Compute(BaseSDK):
     ) -> operations.ListComputeDeploymentsResponse:
         r"""List all deployments
 
+        Returns a list of ComputeDeployments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3859,6 +3941,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListComputeDeploymentsResponse:
         r"""List all deployments
+
+        Returns a list of ComputeDeployments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3952,6 +4036,8 @@ class Compute(BaseSDK):
     ) -> operations.ListComputeDomainsResponse:
         r"""List all domains
 
+        Returns a list of ComputeDomains. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4043,6 +4129,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListComputeDomainsResponse:
         r"""List all domains
+
+        Returns a list of ComputeDomains. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4136,6 +4224,8 @@ class Compute(BaseSDK):
     ) -> operations.ListComputeEnvvarsResponse:
         r"""List all envvars
 
+        Returns a list of ComputeEnvvars. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4227,6 +4317,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListComputeEnvvarsResponse:
         r"""List all envvars
+
+        Returns a list of ComputeEnvvars. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4320,6 +4412,8 @@ class Compute(BaseSDK):
     ) -> operations.ListComputeGputypesResponse:
         r"""List all gputypes
 
+        Returns a list of ComputeGputypes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4411,6 +4505,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListComputeGputypesResponse:
         r"""List all gputypes
+
+        Returns a list of ComputeGputypes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4504,6 +4600,8 @@ class Compute(BaseSDK):
     ) -> operations.ListComputeInstancesResponse:
         r"""List all instances
 
+        Returns a list of ComputeInstances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4595,6 +4693,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListComputeInstancesResponse:
         r"""List all instances
+
+        Returns a list of ComputeInstances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4688,6 +4788,8 @@ class Compute(BaseSDK):
     ) -> operations.ListComputeKeysResponse:
         r"""List all keys
 
+        Returns a list of ComputeKeys. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4779,6 +4881,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListComputeKeysResponse:
         r"""List all keys
+
+        Returns a list of ComputeKeys. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4872,6 +4976,8 @@ class Compute(BaseSDK):
     ) -> operations.ListComputeRegionsResponse:
         r"""List all regions
 
+        Returns a list of ComputeRegions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4963,6 +5069,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListComputeRegionsResponse:
         r"""List all regions
+
+        Returns a list of ComputeRegions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -5056,6 +5164,8 @@ class Compute(BaseSDK):
     ) -> operations.ListComputeServicesResponse:
         r"""List all services
 
+        Returns a list of ComputeServices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5147,6 +5257,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListComputeServicesResponse:
         r"""List all services
+
+        Returns a list of ComputeServices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -5240,6 +5352,8 @@ class Compute(BaseSDK):
     ) -> operations.ListComputeSnapshotsResponse:
         r"""List all snapshots
 
+        Returns a list of ComputeSnapshots. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5331,6 +5445,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListComputeSnapshotsResponse:
         r"""List all snapshots
+
+        Returns a list of ComputeSnapshots. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -5424,6 +5540,8 @@ class Compute(BaseSDK):
     ) -> operations.ListComputeTemplatesResponse:
         r"""List all templates
 
+        Returns a list of ComputeTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5515,6 +5633,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListComputeTemplatesResponse:
         r"""List all templates
+
+        Returns a list of ComputeTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -5608,6 +5728,8 @@ class Compute(BaseSDK):
     ) -> operations.ListComputeUsagesResponse:
         r"""List all usages
 
+        Returns a list of ComputeUsages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5699,6 +5821,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListComputeUsagesResponse:
         r"""List all usages
+
+        Returns a list of ComputeUsages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -5792,6 +5916,8 @@ class Compute(BaseSDK):
     ) -> operations.ListComputeVolumesResponse:
         r"""List all volumes
 
+        Returns a list of ComputeVolumes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5884,6 +6010,8 @@ class Compute(BaseSDK):
     ) -> operations.ListComputeVolumesResponse:
         r"""List all volumes
 
+        Returns a list of ComputeVolumes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5975,6 +6103,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchComputeDeploymentResponse:
         r"""Update a deployment
+
+        Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -6075,6 +6205,8 @@ class Compute(BaseSDK):
     ) -> operations.PatchComputeDeploymentResponse:
         r"""Update a deployment
 
+        Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6174,6 +6306,8 @@ class Compute(BaseSDK):
     ) -> operations.PatchComputeDomainResponse:
         r"""Update a domain
 
+        Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6268,6 +6402,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchComputeDomainResponse:
         r"""Update a domain
+
+        Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -6364,6 +6500,8 @@ class Compute(BaseSDK):
     ) -> operations.PatchComputeEnvvarResponse:
         r"""Update an envvar
 
+        Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6458,6 +6596,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchComputeEnvvarResponse:
         r"""Update an envvar
+
+        Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -6554,6 +6694,8 @@ class Compute(BaseSDK):
     ) -> operations.PatchComputeInstanceResponse:
         r"""Update an instance
 
+        Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6648,6 +6790,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchComputeInstanceResponse:
         r"""Update an instance
+
+        Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -6744,6 +6888,8 @@ class Compute(BaseSDK):
     ) -> operations.PatchComputeKeyResponse:
         r"""Update a key
 
+        Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6838,6 +6984,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchComputeKeyResponse:
         r"""Update a key
+
+        Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -6934,6 +7082,8 @@ class Compute(BaseSDK):
     ) -> operations.PatchComputeServiceResponse:
         r"""Update a service
 
+        Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7028,6 +7178,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchComputeServiceResponse:
         r"""Update a service
+
+        Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -7124,6 +7276,8 @@ class Compute(BaseSDK):
     ) -> operations.PatchComputeTemplateResponse:
         r"""Update a template
 
+        Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7218,6 +7372,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchComputeTemplateResponse:
         r"""Update a template
+
+        Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -7314,6 +7470,8 @@ class Compute(BaseSDK):
     ) -> operations.PatchComputeVolumeResponse:
         r"""Update a volume
 
+        Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7409,6 +7567,8 @@ class Compute(BaseSDK):
     ) -> operations.PatchComputeVolumeResponse:
         r"""Update a volume
 
+        Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7503,6 +7663,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveComputeDeploymentResponse:
         r"""Remove a deployment
+
+        Deletes the ComputeDeployment identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -7603,6 +7765,8 @@ class Compute(BaseSDK):
     ) -> operations.RemoveComputeDeploymentResponse:
         r"""Remove a deployment
 
+        Deletes the ComputeDeployment identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7702,6 +7866,8 @@ class Compute(BaseSDK):
     ) -> operations.RemoveComputeDomainResponse:
         r"""Remove a domain
 
+        Deletes the ComputeDomain identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7798,6 +7964,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveComputeDomainResponse:
         r"""Remove a domain
+
+        Deletes the ComputeDomain identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -7896,6 +8064,8 @@ class Compute(BaseSDK):
     ) -> operations.RemoveComputeEnvvarResponse:
         r"""Remove an envvar
 
+        Deletes the ComputeEnvvar identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7992,6 +8162,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveComputeEnvvarResponse:
         r"""Remove an envvar
+
+        Deletes the ComputeEnvvar identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -8090,6 +8262,8 @@ class Compute(BaseSDK):
     ) -> operations.RemoveComputeInstanceResponse:
         r"""Remove an instance
 
+        Deletes the ComputeInstance identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -8186,6 +8360,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveComputeInstanceResponse:
         r"""Remove an instance
+
+        Deletes the ComputeInstance identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -8284,6 +8460,8 @@ class Compute(BaseSDK):
     ) -> operations.RemoveComputeKeyResponse:
         r"""Remove a key
 
+        Deletes the ComputeKey identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -8380,6 +8558,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveComputeKeyResponse:
         r"""Remove a key
+
+        Deletes the ComputeKey identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -8478,6 +8658,8 @@ class Compute(BaseSDK):
     ) -> operations.RemoveComputeServiceResponse:
         r"""Remove a service
 
+        Deletes the ComputeService identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -8574,6 +8756,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveComputeServiceResponse:
         r"""Remove a service
+
+        Deletes the ComputeService identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -8672,6 +8856,8 @@ class Compute(BaseSDK):
     ) -> operations.RemoveComputeSnapshotResponse:
         r"""Remove a snapshot
 
+        Deletes the ComputeSnapshot identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -8768,6 +8954,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveComputeSnapshotResponse:
         r"""Remove a snapshot
+
+        Deletes the ComputeSnapshot identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -8866,6 +9054,8 @@ class Compute(BaseSDK):
     ) -> operations.RemoveComputeTemplateResponse:
         r"""Remove a template
 
+        Deletes the ComputeTemplate identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -8962,6 +9152,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveComputeTemplateResponse:
         r"""Remove a template
+
+        Deletes the ComputeTemplate identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -9060,6 +9252,8 @@ class Compute(BaseSDK):
     ) -> operations.RemoveComputeVolumeResponse:
         r"""Remove a volume
 
+        Deletes the ComputeVolume identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -9157,6 +9351,8 @@ class Compute(BaseSDK):
     ) -> operations.RemoveComputeVolumeResponse:
         r"""Remove a volume
 
+        Deletes the ComputeVolume identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -9253,6 +9449,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateComputeDeploymentResponse:
         r"""Update a deployment
+
+        Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -9355,6 +9553,8 @@ class Compute(BaseSDK):
     ) -> operations.UpdateComputeDeploymentResponse:
         r"""Update a deployment
 
+        Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -9456,6 +9656,8 @@ class Compute(BaseSDK):
     ) -> operations.UpdateComputeDomainResponse:
         r"""Update a domain
 
+        Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -9550,6 +9752,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateComputeDomainResponse:
         r"""Update a domain
+
+        Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -9646,6 +9850,8 @@ class Compute(BaseSDK):
     ) -> operations.UpdateComputeEnvvarResponse:
         r"""Update an envvar
 
+        Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -9740,6 +9946,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateComputeEnvvarResponse:
         r"""Update an envvar
+
+        Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -9836,6 +10044,8 @@ class Compute(BaseSDK):
     ) -> operations.UpdateComputeInstanceResponse:
         r"""Update an instance
 
+        Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -9930,6 +10140,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateComputeInstanceResponse:
         r"""Update an instance
+
+        Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -10026,6 +10238,8 @@ class Compute(BaseSDK):
     ) -> operations.UpdateComputeKeyResponse:
         r"""Update a key
 
+        Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -10120,6 +10334,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateComputeKeyResponse:
         r"""Update a key
+
+        Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -10216,6 +10432,8 @@ class Compute(BaseSDK):
     ) -> operations.UpdateComputeServiceResponse:
         r"""Update a service
 
+        Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -10310,6 +10528,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateComputeServiceResponse:
         r"""Update a service
+
+        Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -10406,6 +10626,8 @@ class Compute(BaseSDK):
     ) -> operations.UpdateComputeTemplateResponse:
         r"""Update a template
 
+        Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -10500,6 +10722,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateComputeTemplateResponse:
         r"""Update a template
+
+        Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -10596,6 +10820,8 @@ class Compute(BaseSDK):
     ) -> operations.UpdateComputeVolumeResponse:
         r"""Update a volume
 
+        Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -10690,6 +10916,8 @@ class Compute(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateComputeVolumeResponse:
         r"""Update a volume
+
+        Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

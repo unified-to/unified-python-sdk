@@ -24,6 +24,8 @@ class Location(BaseSDK):
     ) -> operations.CreateCommerceLocationResponse:
         r"""Create a location
 
+        Creates a CommerceLocation. Provide the unified CommerceLocation fields in the request body; they are mapped to the provider's API. Returns the created CommerceLocation.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -118,6 +120,8 @@ class Location(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateCommerceLocationResponse:
         r"""Create a location
+
+        Creates a CommerceLocation. Provide the unified CommerceLocation fields in the request body; they are mapped to the provider's API. Returns the created CommerceLocation.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -214,6 +218,8 @@ class Location(BaseSDK):
     ) -> operations.CreateHrisLocationResponse:
         r"""Create a location
 
+        Creates a HrisLocation. Provide the unified HrisLocation fields in the request body; they are mapped to the provider's API. Returns the created HrisLocation.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -308,6 +314,8 @@ class Location(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateHrisLocationResponse:
         r"""Create a location
+
+        Creates a HrisLocation. Provide the unified HrisLocation fields in the request body; they are mapped to the provider's API. Returns the created HrisLocation.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -404,6 +412,8 @@ class Location(BaseSDK):
     ) -> operations.GetClubsLocationResponse:
         r"""Retrieve a location
 
+        Retrieves a single ClubsLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -495,6 +505,8 @@ class Location(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetClubsLocationResponse:
         r"""Retrieve a location
+
+        Retrieves a single ClubsLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -588,6 +600,8 @@ class Location(BaseSDK):
     ) -> operations.GetCommerceLocationResponse:
         r"""Retrieve a location
 
+        Retrieves a single CommerceLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -679,6 +693,8 @@ class Location(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetCommerceLocationResponse:
         r"""Retrieve a location
+
+        Retrieves a single CommerceLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -772,6 +788,8 @@ class Location(BaseSDK):
     ) -> operations.GetHealthcareLocationResponse:
         r"""Retrieve a location
 
+        Retrieves a single HealthcareLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -863,6 +881,8 @@ class Location(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetHealthcareLocationResponse:
         r"""Retrieve a location
+
+        Retrieves a single HealthcareLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -956,6 +976,8 @@ class Location(BaseSDK):
     ) -> operations.GetHrisLocationResponse:
         r"""Retrieve a location
 
+        Retrieves a single HrisLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1047,6 +1069,8 @@ class Location(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetHrisLocationResponse:
         r"""Retrieve a location
+
+        Retrieves a single HrisLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1140,6 +1164,8 @@ class Location(BaseSDK):
     ) -> operations.ListClubsLocationsResponse:
         r"""List all locations
 
+        Returns a list of ClubsLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1231,6 +1257,8 @@ class Location(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListClubsLocationsResponse:
         r"""List all locations
+
+        Returns a list of ClubsLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1324,6 +1352,8 @@ class Location(BaseSDK):
     ) -> operations.ListCommerceLocationsResponse:
         r"""List all locations
 
+        Returns a list of CommerceLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1416,6 +1446,8 @@ class Location(BaseSDK):
     ) -> operations.ListCommerceLocationsResponse:
         r"""List all locations
 
+        Returns a list of CommerceLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1507,6 +1539,8 @@ class Location(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListHealthcareLocationsResponse:
         r"""List all locations
+
+        Returns a list of HealthcareLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1602,6 +1636,8 @@ class Location(BaseSDK):
     ) -> operations.ListHealthcareLocationsResponse:
         r"""List all locations
 
+        Returns a list of HealthcareLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1696,6 +1732,8 @@ class Location(BaseSDK):
     ) -> operations.ListHrisLocationsResponse:
         r"""List all locations
 
+        Returns a list of HrisLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1788,6 +1826,8 @@ class Location(BaseSDK):
     ) -> operations.ListHrisLocationsResponse:
         r"""List all locations
 
+        Returns a list of HrisLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1879,6 +1919,8 @@ class Location(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchCommerceLocationResponse:
         r"""Update a location
+
+        Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1975,6 +2017,8 @@ class Location(BaseSDK):
     ) -> operations.PatchCommerceLocationResponse:
         r"""Update a location
 
+        Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2069,6 +2113,8 @@ class Location(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchHrisLocationResponse:
         r"""Update a location
+
+        Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2165,6 +2211,8 @@ class Location(BaseSDK):
     ) -> operations.PatchHrisLocationResponse:
         r"""Update a location
 
+        Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2259,6 +2307,8 @@ class Location(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveCommerceLocationResponse:
         r"""Remove a location
+
+        Deletes the CommerceLocation identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2357,6 +2407,8 @@ class Location(BaseSDK):
     ) -> operations.RemoveCommerceLocationResponse:
         r"""Remove a location
 
+        Deletes the CommerceLocation identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2453,6 +2505,8 @@ class Location(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveHrisLocationResponse:
         r"""Remove a location
+
+        Deletes the HrisLocation identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2551,6 +2605,8 @@ class Location(BaseSDK):
     ) -> operations.RemoveHrisLocationResponse:
         r"""Remove a location
 
+        Deletes the HrisLocation identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2648,6 +2704,8 @@ class Location(BaseSDK):
     ) -> operations.UpdateCommerceLocationResponse:
         r"""Update a location
 
+        Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2742,6 +2800,8 @@ class Location(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateCommerceLocationResponse:
         r"""Update a location
+
+        Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2838,6 +2898,8 @@ class Location(BaseSDK):
     ) -> operations.UpdateHrisLocationResponse:
         r"""Update a location
 
+        Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2932,6 +2994,8 @@ class Location(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateHrisLocationResponse:
         r"""Update a location
+
+        Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

@@ -13,7 +13,7 @@
 
 ## create_accounting_journal
 
-Create a journal
+Creates a AccountingJournal. Provide the unified AccountingJournal fields in the request body; they are mapped to the provider's API. Returns the created AccountingJournal.
 
 ### Example Usage
 
@@ -37,16 +37,16 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-02-20T15:14:55.881Z"),
             "currency": "CAD",
             "description": "Cilicium minima calco constans adipisci.",
-            "id": "8ce28b0e-a732-4732-b09d-30eaecb6d35c",
+            "id": "b9302d8f-af88-40b1-a888-c2f2f8fe9263",
             "is_inclusive_of_tax": True,
             "lineitems": [],
             "metadata": [],
-            "posted_at": parse_datetime("2023-11-06T10:38:03.653Z"),
+            "posted_at": parse_datetime("2023-11-06T23:54:38.642Z"),
             "reference": "JE-78884",
             "source": "crustulum",
             "status": shared.AccountingJournalStatus.VOID,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2022-01-10T19:41:25.945Z"),
+            "updated_at": parse_datetime("2022-01-11T02:27:14.336Z"),
         },
         "connection_id": "<id>",
     })
@@ -77,7 +77,7 @@ with UnifiedTo(
 
 ## get_accounting_journal
 
-Retrieve a journal
+Retrieves a single AccountingJournal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -124,7 +124,7 @@ with UnifiedTo(
 
 ## list_accounting_journals
 
-List all journals
+Returns a list of AccountingJournals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -170,7 +170,7 @@ with UnifiedTo(
 
 ## patch_accounting_journal
 
-Update a journal
+Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to change in the request body.
 
 ### Example Usage
 
@@ -194,16 +194,16 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-02-20T15:14:55.881Z"),
             "currency": "CAD",
             "description": "Cilicium minima calco constans adipisci.",
-            "id": "b5c79f1c-5f37-418b-8fed-ac844859c529",
+            "id": "3975395e-fb4b-446b-9434-0530f747cc4f",
             "is_inclusive_of_tax": True,
             "lineitems": [],
             "metadata": [],
-            "posted_at": parse_datetime("2023-11-06T10:38:03.690Z"),
+            "posted_at": parse_datetime("2023-11-06T23:54:38.655Z"),
             "reference": "JE-78884",
             "source": "crustulum",
             "status": shared.AccountingJournalStatus.VOID,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2022-01-10T19:41:25.963Z"),
+            "updated_at": parse_datetime("2022-01-11T02:27:14.342Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -235,7 +235,7 @@ with UnifiedTo(
 
 ## remove_accounting_journal
 
-Remove a journal
+Deletes the AccountingJournal identified by `id`.
 
 ### Example Usage
 
@@ -282,7 +282,7 @@ with UnifiedTo(
 
 ## update_accounting_journal
 
-Update a journal
+Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to change in the request body.
 
 ### Example Usage
 
@@ -306,16 +306,16 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-02-20T15:14:55.881Z"),
             "currency": "CAD",
             "description": "Cilicium minima calco constans adipisci.",
-            "id": "b5c79f1c-5f37-418b-8fed-ac844859c529",
+            "id": "3975395e-fb4b-446b-9434-0530f747cc4f",
             "is_inclusive_of_tax": True,
             "lineitems": [],
             "metadata": [],
-            "posted_at": parse_datetime("2023-11-06T10:38:03.690Z"),
+            "posted_at": parse_datetime("2023-11-06T23:54:38.655Z"),
             "reference": "JE-78884",
             "source": "crustulum",
             "status": shared.AccountingJournalStatus.VOID,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2022-01-10T19:41:25.963Z"),
+            "updated_at": parse_datetime("2022-01-11T02:27:14.342Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

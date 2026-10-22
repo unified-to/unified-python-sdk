@@ -26,6 +26,8 @@ class SortOrder(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class PropertyDatastoreQueryQueryTypedDict(TypedDict):
+    r"""What to run: a raw `sql` statement, or a structured query (select, filter, sort, limit/offset, aggregate)"""
+
     aggregate: NotRequired[PropertyDatastoreQueryQueryAggregateTypedDict]
     expand: NotRequired[Dict[str, DatastoreQueryExpandTypedDict]]
     filter_: NotRequired[PropertyDatastoreQueryQueryFilterTypedDict]
@@ -40,6 +42,8 @@ class PropertyDatastoreQueryQueryTypedDict(TypedDict):
 
 
 class PropertyDatastoreQueryQuery(BaseModel):
+    r"""What to run: a raw `sql` statement, or a structured query (select, filter, sort, limit/offset, aggregate)"""
+
     aggregate: Optional[PropertyDatastoreQueryQueryAggregate] = None
 
     expand: Optional[Dict[str, DatastoreQueryExpand]] = None

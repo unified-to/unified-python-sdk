@@ -13,7 +13,7 @@
 
 ## create_messaging_channel
 
-Create a channel
+Creates a MessagingChannel. Provide the unified MessagingChannel fields in the request body; they are mapped to the provider's API. Returns the created MessagingChannel.
 
 ### Example Usage
 
@@ -35,13 +35,13 @@ with UnifiedTo(
             "created_at": parse_datetime("2023-10-05T02:09:22.795Z"),
             "description": "Dolores tutis.",
             "has_subchannels": True,
-            "id": "93d263b8-e7b1-4d67-832d-191c3f6595b2",
+            "id": "cee1e969-9044-4ce5-9796-0f9998ee811e",
             "is_active": False,
             "is_private": True,
             "members": [],
             "metadata": [],
             "name": "tego",
-            "updated_at": parse_datetime("2026-05-21T13:49:13.979Z"),
+            "updated_at": parse_datetime("2026-05-22T10:24:21.806Z"),
             "web_url": "https://svelte-rule.name/",
         },
         "connection_id": "<id>",
@@ -73,7 +73,7 @@ with UnifiedTo(
 
 ## get_messaging_channel
 
-Retrieve a channel
+Retrieves a single MessagingChannel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -120,7 +120,7 @@ with UnifiedTo(
 
 ## list_messaging_channels
 
-List all channels
+Returns a list of MessagingChannels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -166,7 +166,7 @@ with UnifiedTo(
 
 ## patch_messaging_channel
 
-Update a channel
+Updates the MessagingChannel identified by `id`. Provide the unified MessagingChannel fields to change in the request body.
 
 ### Example Usage
 
@@ -188,13 +188,13 @@ with UnifiedTo(
             "created_at": parse_datetime("2023-10-05T02:09:22.795Z"),
             "description": "Dolores tutis.",
             "has_subchannels": True,
-            "id": "0b23a4d7-7783-4b6a-8928-f36fd0b6511d",
+            "id": "e830d3e5-6cca-4ac1-bc1a-19992f36ecd6",
             "is_active": False,
             "is_private": True,
             "members": [],
             "metadata": [],
             "name": "tego",
-            "updated_at": parse_datetime("2026-05-21T13:49:13.992Z"),
+            "updated_at": parse_datetime("2026-05-22T10:24:21.821Z"),
             "web_url": "https://svelte-rule.name/",
         },
         "connection_id": "<id>",
@@ -227,7 +227,7 @@ with UnifiedTo(
 
 ## remove_messaging_channel
 
-Remove a channel
+Deletes the MessagingChannel identified by `id`.
 
 ### Example Usage
 
@@ -274,7 +274,7 @@ with UnifiedTo(
 
 ## update_messaging_channel
 
-Update a channel
+Updates the MessagingChannel identified by `id`. Provide the unified MessagingChannel fields to change in the request body.
 
 ### Example Usage
 
@@ -296,13 +296,13 @@ with UnifiedTo(
             "created_at": parse_datetime("2023-10-05T02:09:22.795Z"),
             "description": "Dolores tutis.",
             "has_subchannels": True,
-            "id": "0b23a4d7-7783-4b6a-8928-f36fd0b6511d",
+            "id": "e830d3e5-6cca-4ac1-bc1a-19992f36ecd6",
             "is_active": False,
             "is_private": True,
             "members": [],
             "metadata": [],
             "name": "tego",
-            "updated_at": parse_datetime("2026-05-21T13:49:13.992Z"),
+            "updated_at": parse_datetime("2026-05-22T10:24:21.821Z"),
             "web_url": "https://svelte-rule.name/",
         },
         "connection_id": "<id>",

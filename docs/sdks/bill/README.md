@@ -13,7 +13,7 @@
 
 ## create_accounting_bill
 
-Create a bill
+Creates a AccountingBill. Provide the unified AccountingBill fields in the request body; they are mapped to the provider's API. Returns the created AccountingBill.
 
 ### Example Usage
 
@@ -35,13 +35,13 @@ with UnifiedTo(
             "attachments": [
                 {
                     "download_url": "https://puny-foodstuffs.name",
-                    "id": "45052cf1-197b-4fc0-8220-13da145a58d8",
+                    "id": "6c9209f9-761e-4b05-bad7-d11aada20346",
                     "mime_type": "application/pdf",
                     "name": "BILL-2466.pdf",
                 },
                 {
                     "download_url": "https://grimy-characterization.net",
-                    "id": "1eeb2689-98e9-440d-af4c-744318cad986",
+                    "id": "043c0df2-d8b5-4766-856e-78913fedeec5",
                     "mime_type": "application/pdf",
                     "name": "BILL-2466-1.pdf",
                 },
@@ -54,7 +54,7 @@ with UnifiedTo(
             "discount_amount": 0.0,
             "due_at": parse_datetime("2019-09-07T23:03:14.104Z"),
             "extended_notes": [],
-            "id": "9965cfa0-223e-4786-ad87-85946fcda146",
+            "id": "b0d3a065-8e95-4707-848a-38944e7d7452",
             "lineitems": [],
             "metadata": [],
             "notes": "Admiratio deporto tutamen cilicium infit amissio ante demulceo.",
@@ -70,7 +70,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "term": shared.Term.NET_90,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2020-06-01T05:47:36.998Z"),
+            "updated_at": parse_datetime("2020-06-01T08:26:07.744Z"),
             "url": "https://cluttered-importance.org/bills/BILL-2466",
         },
         "connection_id": "<id>",
@@ -102,7 +102,7 @@ with UnifiedTo(
 
 ## get_accounting_bill
 
-Retrieve a bill
+Retrieves a single AccountingBill by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -149,7 +149,7 @@ with UnifiedTo(
 
 ## list_accounting_bills
 
-List all bills
+Returns a list of AccountingBills. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -195,7 +195,7 @@ with UnifiedTo(
 
 ## patch_accounting_bill
 
-Update a bill
+Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change in the request body.
 
 ### Example Usage
 
@@ -217,13 +217,13 @@ with UnifiedTo(
             "attachments": [
                 {
                     "download_url": "https://puny-foodstuffs.name",
-                    "id": "881aec22-5343-4818-a118-8900356bb85b",
+                    "id": "4527ae4f-25b4-4131-a05b-228a6f649e97",
                     "mime_type": "application/pdf",
                     "name": "BILL-2466.pdf",
                 },
                 {
                     "download_url": "https://grimy-characterization.net",
-                    "id": "f5931690-b366-461f-8f10-5ee077974221",
+                    "id": "5743dca5-30a1-4e95-92ce-8a27d46e5b0c",
                     "mime_type": "application/pdf",
                     "name": "BILL-2466-1.pdf",
                 },
@@ -236,7 +236,7 @@ with UnifiedTo(
             "discount_amount": 0.0,
             "due_at": parse_datetime("2019-09-07T23:03:14.104Z"),
             "extended_notes": [],
-            "id": "8b545bca-d301-42f9-99b9-1197ece4b6fb",
+            "id": "ebe23029-ea98-4dc0-a1ec-eb5de14a04e5",
             "lineitems": [],
             "metadata": [],
             "notes": "Admiratio deporto tutamen cilicium infit amissio ante demulceo.",
@@ -252,7 +252,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "term": shared.Term.NET_90,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2020-06-01T05:47:37.013Z"),
+            "updated_at": parse_datetime("2020-06-01T08:26:07.748Z"),
             "url": "https://cluttered-importance.org/bills/BILL-2466",
         },
         "connection_id": "<id>",
@@ -285,7 +285,7 @@ with UnifiedTo(
 
 ## remove_accounting_bill
 
-Remove a bill
+Deletes the AccountingBill identified by `id`.
 
 ### Example Usage
 
@@ -332,7 +332,7 @@ with UnifiedTo(
 
 ## update_accounting_bill
 
-Update a bill
+Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change in the request body.
 
 ### Example Usage
 
@@ -354,13 +354,13 @@ with UnifiedTo(
             "attachments": [
                 {
                     "download_url": "https://puny-foodstuffs.name",
-                    "id": "881aec22-5343-4818-a118-8900356bb85b",
+                    "id": "4527ae4f-25b4-4131-a05b-228a6f649e97",
                     "mime_type": "application/pdf",
                     "name": "BILL-2466.pdf",
                 },
                 {
                     "download_url": "https://grimy-characterization.net",
-                    "id": "f5931690-b366-461f-8f10-5ee077974221",
+                    "id": "5743dca5-30a1-4e95-92ce-8a27d46e5b0c",
                     "mime_type": "application/pdf",
                     "name": "BILL-2466-1.pdf",
                 },
@@ -373,7 +373,7 @@ with UnifiedTo(
             "discount_amount": 0.0,
             "due_at": parse_datetime("2019-09-07T23:03:14.104Z"),
             "extended_notes": [],
-            "id": "8b545bca-d301-42f9-99b9-1197ece4b6fb",
+            "id": "ebe23029-ea98-4dc0-a1ec-eb5de14a04e5",
             "lineitems": [],
             "metadata": [],
             "notes": "Admiratio deporto tutamen cilicium infit amissio ante demulceo.",
@@ -389,7 +389,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "term": shared.Term.NET_90,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2020-06-01T05:47:37.013Z"),
+            "updated_at": parse_datetime("2020-06-01T08:26:07.748Z"),
             "url": "https://cluttered-importance.org/bills/BILL-2466",
         },
         "connection_id": "<id>",

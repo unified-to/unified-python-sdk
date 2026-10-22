@@ -24,6 +24,8 @@ class Template(BaseSDK):
     ) -> operations.CreateComputeTemplateResponse:
         r"""Create a template
 
+        Creates a ComputeTemplate. Provide the unified ComputeTemplate fields in the request body; they are mapped to the provider's API. Returns the created ComputeTemplate.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -118,6 +120,8 @@ class Template(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateComputeTemplateResponse:
         r"""Create a template
+
+        Creates a ComputeTemplate. Provide the unified ComputeTemplate fields in the request body; they are mapped to the provider's API. Returns the created ComputeTemplate.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -214,6 +218,8 @@ class Template(BaseSDK):
     ) -> operations.GetComputeTemplateResponse:
         r"""Retrieve a template
 
+        Retrieves a single ComputeTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -305,6 +311,8 @@ class Template(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetComputeTemplateResponse:
         r"""Retrieve a template
+
+        Retrieves a single ComputeTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -398,6 +406,8 @@ class Template(BaseSDK):
     ) -> operations.GetSigningTemplateResponse:
         r"""Retrieve a template
 
+        Retrieves a single SigningTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -489,6 +499,8 @@ class Template(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetSigningTemplateResponse:
         r"""Retrieve a template
+
+        Retrieves a single SigningTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -582,6 +594,8 @@ class Template(BaseSDK):
     ) -> operations.ListComputeTemplatesResponse:
         r"""List all templates
 
+        Returns a list of ComputeTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -673,6 +687,8 @@ class Template(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListComputeTemplatesResponse:
         r"""List all templates
+
+        Returns a list of ComputeTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -766,6 +782,8 @@ class Template(BaseSDK):
     ) -> operations.ListSigningTemplatesResponse:
         r"""List all templates
 
+        Returns a list of SigningTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -858,6 +876,8 @@ class Template(BaseSDK):
     ) -> operations.ListSigningTemplatesResponse:
         r"""List all templates
 
+        Returns a list of SigningTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -949,6 +969,8 @@ class Template(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchComputeTemplateResponse:
         r"""Update a template
+
+        Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1045,6 +1067,8 @@ class Template(BaseSDK):
     ) -> operations.PatchComputeTemplateResponse:
         r"""Update a template
 
+        Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1139,6 +1163,8 @@ class Template(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveComputeTemplateResponse:
         r"""Remove a template
+
+        Deletes the ComputeTemplate identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1237,6 +1263,8 @@ class Template(BaseSDK):
     ) -> operations.RemoveComputeTemplateResponse:
         r"""Remove a template
 
+        Deletes the ComputeTemplate identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1334,6 +1362,8 @@ class Template(BaseSDK):
     ) -> operations.UpdateComputeTemplateResponse:
         r"""Update a template
 
+        Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1428,6 +1458,8 @@ class Template(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateComputeTemplateResponse:
         r"""Update a template
+
+        Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

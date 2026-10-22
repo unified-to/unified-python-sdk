@@ -13,7 +13,7 @@
 
 ## create_legal_matter
 
-Create a matter
+Creates a LegalMatter. Provide the unified LegalMatter fields in the request body; they are mapped to the provider's API. Returns the created LegalMatter.
 
 ### Example Usage
 
@@ -39,11 +39,11 @@ with UnifiedTo(
             "created_at": parse_datetime("2023-05-28T04:10:42.375Z"),
             "currency": "BOB",
             "description": "Speciosus cresco aut cotidie temeritas arma.",
-            "id": "a301cea9-d6f5-4f6a-b414-07531d07acb4",
+            "id": "0a3fcc05-e27a-4b82-949f-badc14cd9a55",
             "metadata": [],
             "name": "Walter v. Franecki - Spinka",
             "number": "2023-3062",
-            "opened_at": parse_datetime("2023-07-05T06:18:34.368Z"),
+            "opened_at": parse_datetime("2023-07-05T07:02:28.411Z"),
             "parties": [
                 {
                     "description": "Urban Walter",
@@ -52,8 +52,8 @@ with UnifiedTo(
             ],
             "stage": "currus",
             "status": shared.LegalMatterStatus.OPEN,
-            "statute_of_limitations_at": parse_datetime("2027-06-28T21:07:04.795Z"),
-            "updated_at": parse_datetime("2023-07-17T10:05:12.081Z"),
+            "statute_of_limitations_at": parse_datetime("2027-06-29T20:58:22.479Z"),
+            "updated_at": parse_datetime("2023-07-17T11:03:06.872Z"),
         },
         "connection_id": "<id>",
     })
@@ -84,7 +84,7 @@ with UnifiedTo(
 
 ## get_legal_matter
 
-Retrieve a matter
+Retrieves a single LegalMatter by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -131,7 +131,7 @@ with UnifiedTo(
 
 ## list_legal_matters
 
-List all matters
+Returns a list of LegalMatters. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -177,7 +177,7 @@ with UnifiedTo(
 
 ## patch_legal_matter
 
-Update a matter
+Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the request body.
 
 ### Example Usage
 
@@ -203,11 +203,11 @@ with UnifiedTo(
             "created_at": parse_datetime("2023-05-28T04:10:42.375Z"),
             "currency": "BOB",
             "description": "Speciosus cresco aut cotidie temeritas arma.",
-            "id": "c5aa26ca-60f6-4d46-82e2-d1847c6a522c",
+            "id": "0b6277a1-c527-4b4f-be63-395f7b3ff9b0",
             "metadata": [],
             "name": "Walter v. Franecki - Spinka",
             "number": "2023-3062",
-            "opened_at": parse_datetime("2023-07-05T06:18:34.369Z"),
+            "opened_at": parse_datetime("2023-07-05T07:02:28.412Z"),
             "parties": [
                 {
                     "description": "Urban Walter",
@@ -216,8 +216,8 @@ with UnifiedTo(
             ],
             "stage": "currus",
             "status": shared.LegalMatterStatus.OPEN,
-            "statute_of_limitations_at": parse_datetime("2027-06-28T21:07:04.824Z"),
-            "updated_at": parse_datetime("2023-07-17T10:05:12.082Z"),
+            "statute_of_limitations_at": parse_datetime("2027-06-29T20:58:22.506Z"),
+            "updated_at": parse_datetime("2023-07-17T11:03:06.873Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -249,7 +249,7 @@ with UnifiedTo(
 
 ## remove_legal_matter
 
-Remove a matter
+Deletes the LegalMatter identified by `id`.
 
 ### Example Usage
 
@@ -296,7 +296,7 @@ with UnifiedTo(
 
 ## update_legal_matter
 
-Update a matter
+Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the request body.
 
 ### Example Usage
 
@@ -322,11 +322,11 @@ with UnifiedTo(
             "created_at": parse_datetime("2023-05-28T04:10:42.375Z"),
             "currency": "BOB",
             "description": "Speciosus cresco aut cotidie temeritas arma.",
-            "id": "c5aa26ca-60f6-4d46-82e2-d1847c6a522c",
+            "id": "0b6277a1-c527-4b4f-be63-395f7b3ff9b0",
             "metadata": [],
             "name": "Walter v. Franecki - Spinka",
             "number": "2023-3062",
-            "opened_at": parse_datetime("2023-07-05T06:18:34.369Z"),
+            "opened_at": parse_datetime("2023-07-05T07:02:28.412Z"),
             "parties": [
                 {
                     "description": "Urban Walter",
@@ -335,8 +335,8 @@ with UnifiedTo(
             ],
             "stage": "currus",
             "status": shared.LegalMatterStatus.OPEN,
-            "statute_of_limitations_at": parse_datetime("2027-06-28T21:07:04.824Z"),
-            "updated_at": parse_datetime("2023-07-17T10:05:12.082Z"),
+            "statute_of_limitations_at": parse_datetime("2027-06-29T20:58:22.506Z"),
+            "updated_at": parse_datetime("2023-07-17T11:03:06.873Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

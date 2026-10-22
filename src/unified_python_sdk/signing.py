@@ -24,6 +24,8 @@ class Signing(BaseSDK):
     ) -> operations.CreateSigningDocumentResponse:
         r"""Create a document
 
+        Creates a SigningDocument. Provide the unified SigningDocument fields in the request body; they are mapped to the provider's API. Returns the created SigningDocument.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -118,6 +120,8 @@ class Signing(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateSigningDocumentResponse:
         r"""Create a document
+
+        Creates a SigningDocument. Provide the unified SigningDocument fields in the request body; they are mapped to the provider's API. Returns the created SigningDocument.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -214,6 +218,8 @@ class Signing(BaseSDK):
     ) -> operations.CreateSigningSignatoryResponse:
         r"""Create a signatory
 
+        Creates a SigningSignatory. Provide the unified SigningSignatory fields in the request body; they are mapped to the provider's API. Returns the created SigningSignatory.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -308,6 +314,8 @@ class Signing(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateSigningSignatoryResponse:
         r"""Create a signatory
+
+        Creates a SigningSignatory. Provide the unified SigningSignatory fields in the request body; they are mapped to the provider's API. Returns the created SigningSignatory.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -404,6 +412,8 @@ class Signing(BaseSDK):
     ) -> operations.GetSigningDocumentResponse:
         r"""Retrieve a document
 
+        Retrieves a single SigningDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -495,6 +505,8 @@ class Signing(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetSigningDocumentResponse:
         r"""Retrieve a document
+
+        Retrieves a single SigningDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -588,6 +600,8 @@ class Signing(BaseSDK):
     ) -> operations.GetSigningSignatoryResponse:
         r"""Retrieve a signatory
 
+        Retrieves a single SigningSignatory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -679,6 +693,8 @@ class Signing(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetSigningSignatoryResponse:
         r"""Retrieve a signatory
+
+        Retrieves a single SigningSignatory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -772,6 +788,8 @@ class Signing(BaseSDK):
     ) -> operations.GetSigningTemplateResponse:
         r"""Retrieve a template
 
+        Retrieves a single SigningTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -863,6 +881,8 @@ class Signing(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetSigningTemplateResponse:
         r"""Retrieve a template
+
+        Retrieves a single SigningTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -956,6 +976,8 @@ class Signing(BaseSDK):
     ) -> operations.ListSigningDocumentsResponse:
         r"""List all documents
 
+        Returns a list of SigningDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1047,6 +1069,8 @@ class Signing(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListSigningDocumentsResponse:
         r"""List all documents
+
+        Returns a list of SigningDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1140,6 +1164,8 @@ class Signing(BaseSDK):
     ) -> operations.ListSigningSignatoriesResponse:
         r"""List all signatories
 
+        Returns a list of SigningSignatories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1231,6 +1257,8 @@ class Signing(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListSigningSignatoriesResponse:
         r"""List all signatories
+
+        Returns a list of SigningSignatories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1324,6 +1352,8 @@ class Signing(BaseSDK):
     ) -> operations.ListSigningTemplatesResponse:
         r"""List all templates
 
+        Returns a list of SigningTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1416,6 +1446,8 @@ class Signing(BaseSDK):
     ) -> operations.ListSigningTemplatesResponse:
         r"""List all templates
 
+        Returns a list of SigningTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1507,6 +1539,8 @@ class Signing(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchSigningDocumentResponse:
         r"""Update a document
+
+        Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1603,6 +1637,8 @@ class Signing(BaseSDK):
     ) -> operations.PatchSigningDocumentResponse:
         r"""Update a document
 
+        Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1697,6 +1733,8 @@ class Signing(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchSigningSignatoryResponse:
         r"""Update a signatory
+
+        Updates the SigningSignatory identified by `id`. Provide the unified SigningSignatory fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1793,6 +1831,8 @@ class Signing(BaseSDK):
     ) -> operations.PatchSigningSignatoryResponse:
         r"""Update a signatory
 
+        Updates the SigningSignatory identified by `id`. Provide the unified SigningSignatory fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1887,6 +1927,8 @@ class Signing(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveSigningDocumentResponse:
         r"""Remove a document
+
+        Deletes the SigningDocument identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1985,6 +2027,8 @@ class Signing(BaseSDK):
     ) -> operations.RemoveSigningDocumentResponse:
         r"""Remove a document
 
+        Deletes the SigningDocument identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2081,6 +2125,8 @@ class Signing(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveSigningSignatoryResponse:
         r"""Remove a signatory
+
+        Deletes the SigningSignatory identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2179,6 +2225,8 @@ class Signing(BaseSDK):
     ) -> operations.RemoveSigningSignatoryResponse:
         r"""Remove a signatory
 
+        Deletes the SigningSignatory identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2276,6 +2324,8 @@ class Signing(BaseSDK):
     ) -> operations.UpdateSigningDocumentResponse:
         r"""Update a document
 
+        Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2370,6 +2420,8 @@ class Signing(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateSigningDocumentResponse:
         r"""Update a document
+
+        Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2466,6 +2518,8 @@ class Signing(BaseSDK):
     ) -> operations.UpdateSigningSignatoryResponse:
         r"""Update a signatory
 
+        Updates the SigningSignatory identified by `id`. Provide the unified SigningSignatory fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2560,6 +2614,8 @@ class Signing(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateSigningSignatoryResponse:
         r"""Update a signatory
+
+        Updates the SigningSignatory identified by `id`. Provide the unified SigningSignatory fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

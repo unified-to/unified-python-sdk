@@ -19,7 +19,7 @@
 
 ## create_accounting_project
 
-Create a project
+Creates a AccountingProject. Provide the unified AccountingProject fields in the request body; they are mapped to the provider's API. Returns the created AccountingProject.
 
 ### Example Usage
 
@@ -66,7 +66,7 @@ with UnifiedTo(
 
 ## create_task_project
 
-Create a project
+Creates a TaskProject. Provide the unified TaskProject fields in the request body; they are mapped to the provider's API. Returns the created TaskProject.
 
 ### Example Usage
 
@@ -89,14 +89,14 @@ with UnifiedTo(
             "description": "Valetudo aggredior accommodo curiositas vox.",
             "has_children": False,
             "has_tasks": False,
-            "id": "58860c38-43c5-4d54-9d59-b6b343f23654",
+            "id": "586e2b04-721f-4fb4-b1c9-ff0295b8f983",
             "metadata": [
                 {
                     "extra_data": {
 
                     },
                     "format_": shared.TaskMetadataFormat.TEXT,
-                    "id": "e05c0b76-22e9-470a-abdc-5a6cc1c93300",
+                    "id": "ac6d7296-95fc-4c6c-b2b1-b41a06651184",
                     "namespace": "custom",
                     "slug": "decens",
                     "value": "uterque",
@@ -106,14 +106,14 @@ with UnifiedTo(
 
                     },
                     "format_": shared.TaskMetadataFormat.TEXT,
-                    "id": "b195583e-2f69-4f45-ae8e-c02acdbfe72d",
+                    "id": "9bfa2064-4758-497f-942c-b3cc0ea19dfd",
                     "namespace": "custom",
                     "slug": "benevolentia",
                     "value": "pariatur",
                 },
             ],
             "name": "Garden",
-            "updated_at": parse_datetime("2023-10-11T14:30:05.844Z"),
+            "updated_at": parse_datetime("2023-10-11T16:39:32.559Z"),
         },
         "connection_id": "<id>",
     })
@@ -144,7 +144,7 @@ with UnifiedTo(
 
 ## get_accounting_project
 
-Retrieve a project
+Retrieves a single AccountingProject by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -191,7 +191,7 @@ with UnifiedTo(
 
 ## get_task_project
 
-Retrieve a project
+Retrieves a single TaskProject by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -238,7 +238,7 @@ with UnifiedTo(
 
 ## list_accounting_projects
 
-List all projects
+Returns a list of AccountingProjects. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -284,7 +284,7 @@ with UnifiedTo(
 
 ## list_task_projects
 
-List all projects
+Returns a list of TaskProjects. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -330,7 +330,7 @@ with UnifiedTo(
 
 ## patch_accounting_project
 
-Update a project
+Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to change in the request body.
 
 ### Example Usage
 
@@ -378,7 +378,7 @@ with UnifiedTo(
 
 ## patch_task_project
 
-Update a project
+Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the request body.
 
 ### Example Usage
 
@@ -401,14 +401,14 @@ with UnifiedTo(
             "description": "Valetudo aggredior accommodo curiositas vox.",
             "has_children": False,
             "has_tasks": False,
-            "id": "93101195-8daf-4dec-af0e-224992f61ee1",
+            "id": "4b217ca0-ecb9-4c4b-ae3d-75b658e307e7",
             "metadata": [
                 {
                     "extra_data": {
 
                     },
                     "format_": shared.TaskMetadataFormat.TEXT,
-                    "id": "4cb37b5f-57b7-499c-8550-07474797dad3",
+                    "id": "b7b73d5c-f1ff-48b2-8a4c-101025b18919",
                     "namespace": "custom",
                     "slug": "decens",
                     "value": "uterque",
@@ -418,14 +418,14 @@ with UnifiedTo(
 
                     },
                     "format_": shared.TaskMetadataFormat.TEXT,
-                    "id": "b9101958-c810-4c3d-b9cb-cdd75d056e5a",
+                    "id": "279643ea-8251-402f-bc4c-eeb7f28d150a",
                     "namespace": "custom",
                     "slug": "benevolentia",
                     "value": "pariatur",
                 },
             ],
             "name": "Garden",
-            "updated_at": parse_datetime("2023-10-11T14:30:05.846Z"),
+            "updated_at": parse_datetime("2023-10-11T16:39:32.560Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -457,7 +457,7 @@ with UnifiedTo(
 
 ## remove_accounting_project
 
-Remove a project
+Deletes the AccountingProject identified by `id`.
 
 ### Example Usage
 
@@ -504,7 +504,7 @@ with UnifiedTo(
 
 ## remove_task_project
 
-Remove a project
+Deletes the TaskProject identified by `id`.
 
 ### Example Usage
 
@@ -551,7 +551,7 @@ with UnifiedTo(
 
 ## update_accounting_project
 
-Update a project
+Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to change in the request body.
 
 ### Example Usage
 
@@ -599,7 +599,7 @@ with UnifiedTo(
 
 ## update_task_project
 
-Update a project
+Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the request body.
 
 ### Example Usage
 
@@ -622,14 +622,14 @@ with UnifiedTo(
             "description": "Valetudo aggredior accommodo curiositas vox.",
             "has_children": False,
             "has_tasks": False,
-            "id": "93101195-8daf-4dec-af0e-224992f61ee1",
+            "id": "4b217ca0-ecb9-4c4b-ae3d-75b658e307e7",
             "metadata": [
                 {
                     "extra_data": {
 
                     },
                     "format_": shared.TaskMetadataFormat.TEXT,
-                    "id": "4cb37b5f-57b7-499c-8550-07474797dad3",
+                    "id": "b7b73d5c-f1ff-48b2-8a4c-101025b18919",
                     "namespace": "custom",
                     "slug": "decens",
                     "value": "uterque",
@@ -639,14 +639,14 @@ with UnifiedTo(
 
                     },
                     "format_": shared.TaskMetadataFormat.TEXT,
-                    "id": "b9101958-c810-4c3d-b9cb-cdd75d056e5a",
+                    "id": "279643ea-8251-402f-bc4c-eeb7f28d150a",
                     "namespace": "custom",
                     "slug": "benevolentia",
                     "value": "pariatur",
                 },
             ],
             "name": "Garden",
-            "updated_at": parse_datetime("2023-10-11T14:30:05.846Z"),
+            "updated_at": parse_datetime("2023-10-11T16:39:32.560Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

@@ -14,10 +14,12 @@ class TicketingNoteTypedDict(TypedDict):
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     customer_id: NotRequired[str]
     description: NotRequired[str]
+    r"""The note's text"""
     id: NotRequired[str]
     metadata: NotRequired[List[TicketingMetadataTypedDict]]
     raw: NotRequired[Dict[str, Any]]
     ticket_id: NotRequired[str]
+    r"""The ID of the ticket the note is added to (a TicketingTicket ID)"""
     updated_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
@@ -31,6 +33,7 @@ class TicketingNote(BaseModel):
     customer_id: Optional[str] = None
 
     description: Optional[str] = None
+    r"""The note's text"""
 
     id: Optional[str] = None
 
@@ -39,6 +42,7 @@ class TicketingNote(BaseModel):
     raw: Optional[Dict[str, Any]] = None
 
     ticket_id: Optional[str] = None
+    r"""The ID of the ticket the note is added to (a TicketingTicket ID)"""
 
     updated_at: Optional[datetime] = None
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""

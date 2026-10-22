@@ -13,7 +13,7 @@
 
 ## create_healthcare_appointment
 
-Create an appointment
+Creates a HealthcareAppointment. Provide the unified HealthcareAppointment fields in the request body; they are mapped to the provider's API. Returns the created HealthcareAppointment.
 
 ### Example Usage
 
@@ -35,7 +35,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2023-04-11T08:16:20.874Z"),
             "description": "clarus aptus cetera",
             "end_at": parse_datetime("2023-12-12T13:04:41.451Z"),
-            "id": "78e3419c-3f84-444a-95b2-32813aaa7e55",
+            "id": "26c0c976-c996-4dbb-8b58-5166dbe67220",
             "metadata": [],
             "practitioner_ids": [],
             "reasons": [
@@ -55,7 +55,7 @@ with UnifiedTo(
             "slot_ids": [],
             "start_at": parse_datetime("2023-12-12T12:34:41.451Z"),
             "status": shared.HealthcareAppointmentStatus.BOOKED,
-            "updated_at": parse_datetime("2025-11-19T10:37:36.973Z"),
+            "updated_at": parse_datetime("2025-11-20T04:16:13.523Z"),
         },
         "connection_id": "<id>",
     })
@@ -86,7 +86,7 @@ with UnifiedTo(
 
 ## get_healthcare_appointment
 
-Retrieve an appointment
+Retrieves a single HealthcareAppointment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -133,7 +133,7 @@ with UnifiedTo(
 
 ## list_healthcare_appointments
 
-List all appointments
+Returns a list of HealthcareAppointments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -179,7 +179,7 @@ with UnifiedTo(
 
 ## patch_healthcare_appointment
 
-Update an appointment
+Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment fields to change in the request body.
 
 ### Example Usage
 
@@ -201,7 +201,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2023-04-11T08:16:20.874Z"),
             "description": "clarus aptus cetera",
             "end_at": parse_datetime("2023-12-12T13:04:41.451Z"),
-            "id": "738d9041-01ed-4d17-bddb-4774797ef8d1",
+            "id": "76ec3204-d039-4780-a1a6-9d82e5c58b81",
             "metadata": [],
             "practitioner_ids": [],
             "reasons": [
@@ -221,7 +221,7 @@ with UnifiedTo(
             "slot_ids": [],
             "start_at": parse_datetime("2023-12-12T12:34:41.451Z"),
             "status": shared.HealthcareAppointmentStatus.BOOKED,
-            "updated_at": parse_datetime("2025-11-19T10:37:36.995Z"),
+            "updated_at": parse_datetime("2025-11-20T04:16:13.539Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -253,7 +253,7 @@ with UnifiedTo(
 
 ## remove_healthcare_appointment
 
-Remove an appointment
+Deletes the HealthcareAppointment identified by `id`.
 
 ### Example Usage
 
@@ -300,7 +300,7 @@ with UnifiedTo(
 
 ## update_healthcare_appointment
 
-Update an appointment
+Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment fields to change in the request body.
 
 ### Example Usage
 
@@ -322,7 +322,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2023-04-11T08:16:20.874Z"),
             "description": "clarus aptus cetera",
             "end_at": parse_datetime("2023-12-12T13:04:41.451Z"),
-            "id": "738d9041-01ed-4d17-bddb-4774797ef8d1",
+            "id": "76ec3204-d039-4780-a1a6-9d82e5c58b81",
             "metadata": [],
             "practitioner_ids": [],
             "reasons": [
@@ -342,7 +342,7 @@ with UnifiedTo(
             "slot_ids": [],
             "start_at": parse_datetime("2023-12-12T12:34:41.451Z"),
             "status": shared.HealthcareAppointmentStatus.BOOKED,
-            "updated_at": parse_datetime("2025-11-19T10:37:36.995Z"),
+            "updated_at": parse_datetime("2025-11-20T04:16:13.539Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

@@ -24,6 +24,8 @@ class Organization(BaseSDK):
     ) -> operations.CreateAdsOrganizationResponse:
         r"""Create an organization
 
+        Creates a AdsOrganization. Provide the unified AdsOrganization fields in the request body; they are mapped to the provider's API. Returns the created AdsOrganization.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -119,6 +121,8 @@ class Organization(BaseSDK):
     ) -> operations.CreateAdsOrganizationResponse:
         r"""Create an organization
 
+        Creates a AdsOrganization. Provide the unified AdsOrganization fields in the request body; they are mapped to the provider's API. Returns the created AdsOrganization.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -213,6 +217,8 @@ class Organization(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateGenaiOrganizationResponse:
         r"""Create an organization
+
+        Creates a GenaiOrganization. Provide the unified GenaiOrganization fields in the request body; they are mapped to the provider's API. Returns the created GenaiOrganization.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -315,6 +321,8 @@ class Organization(BaseSDK):
     ) -> operations.CreateGenaiOrganizationResponse:
         r"""Create an organization
 
+        Creates a GenaiOrganization. Provide the unified GenaiOrganization fields in the request body; they are mapped to the provider's API. Returns the created GenaiOrganization.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -416,6 +424,8 @@ class Organization(BaseSDK):
     ) -> operations.CreateRepoOrganizationResponse:
         r"""Create an organization
 
+        Creates a RepoOrganization. Provide the unified RepoOrganization fields in the request body; they are mapped to the provider's API. Returns the created RepoOrganization.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -510,6 +520,8 @@ class Organization(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateRepoOrganizationResponse:
         r"""Create an organization
+
+        Creates a RepoOrganization. Provide the unified RepoOrganization fields in the request body; they are mapped to the provider's API. Returns the created RepoOrganization.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -606,6 +618,8 @@ class Organization(BaseSDK):
     ) -> operations.GetAccountingOrganizationResponse:
         r"""Retrieve an organization
 
+        Retrieves a single AccountingOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -699,6 +713,8 @@ class Organization(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAccountingOrganizationResponse:
         r"""Retrieve an organization
+
+        Retrieves a single AccountingOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -794,6 +810,8 @@ class Organization(BaseSDK):
     ) -> operations.GetAdsOrganizationResponse:
         r"""Retrieve an organization
 
+        Retrieves a single AdsOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -885,6 +903,8 @@ class Organization(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAdsOrganizationResponse:
         r"""Retrieve an organization
+
+        Retrieves a single AdsOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -978,6 +998,8 @@ class Organization(BaseSDK):
     ) -> operations.GetGenaiOrganizationResponse:
         r"""Retrieve an organization
 
+        Retrieves a single GenaiOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1069,6 +1091,8 @@ class Organization(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetGenaiOrganizationResponse:
         r"""Retrieve an organization
+
+        Retrieves a single GenaiOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1162,6 +1186,8 @@ class Organization(BaseSDK):
     ) -> operations.GetRepoOrganizationResponse:
         r"""Retrieve an organization
 
+        Retrieves a single RepoOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1254,6 +1280,8 @@ class Organization(BaseSDK):
     ) -> operations.GetRepoOrganizationResponse:
         r"""Retrieve an organization
 
+        Retrieves a single RepoOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1345,6 +1373,8 @@ class Organization(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAccountingOrganizationsResponse:
         r"""List all organizations
+
+        Returns a list of AccountingOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1440,6 +1470,8 @@ class Organization(BaseSDK):
     ) -> operations.ListAccountingOrganizationsResponse:
         r"""List all organizations
 
+        Returns a list of AccountingOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1534,6 +1566,8 @@ class Organization(BaseSDK):
     ) -> operations.ListAdsOrganizationsResponse:
         r"""List all organizations
 
+        Returns a list of AdsOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1625,6 +1659,8 @@ class Organization(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAdsOrganizationsResponse:
         r"""List all organizations
+
+        Returns a list of AdsOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1718,6 +1754,8 @@ class Organization(BaseSDK):
     ) -> operations.ListGenaiOrganizationsResponse:
         r"""List all organizations
 
+        Returns a list of GenaiOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1809,6 +1847,8 @@ class Organization(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListGenaiOrganizationsResponse:
         r"""List all organizations
+
+        Returns a list of GenaiOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1902,6 +1942,8 @@ class Organization(BaseSDK):
     ) -> operations.ListRepoOrganizationsResponse:
         r"""List all organizations
 
+        Returns a list of RepoOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1994,6 +2036,8 @@ class Organization(BaseSDK):
     ) -> operations.ListRepoOrganizationsResponse:
         r"""List all organizations
 
+        Returns a list of RepoOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2085,6 +2129,8 @@ class Organization(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAdsOrganizationResponse:
         r"""Update an organization
+
+        Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2181,6 +2227,8 @@ class Organization(BaseSDK):
     ) -> operations.PatchAdsOrganizationResponse:
         r"""Update an organization
 
+        Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2275,6 +2323,8 @@ class Organization(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchGenaiOrganizationResponse:
         r"""Update an organization
+
+        Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2375,6 +2425,8 @@ class Organization(BaseSDK):
     ) -> operations.PatchGenaiOrganizationResponse:
         r"""Update an organization
 
+        Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2474,6 +2526,8 @@ class Organization(BaseSDK):
     ) -> operations.PatchRepoOrganizationResponse:
         r"""Update an organization
 
+        Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2569,6 +2623,8 @@ class Organization(BaseSDK):
     ) -> operations.PatchRepoOrganizationResponse:
         r"""Update an organization
 
+        Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2663,6 +2719,8 @@ class Organization(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAdsOrganizationResponse:
         r"""Remove an organization
+
+        Deletes the AdsOrganization identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2761,6 +2819,8 @@ class Organization(BaseSDK):
     ) -> operations.RemoveAdsOrganizationResponse:
         r"""Remove an organization
 
+        Deletes the AdsOrganization identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2857,6 +2917,8 @@ class Organization(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveGenaiOrganizationResponse:
         r"""Remove an organization
+
+        Deletes the GenaiOrganization identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2957,6 +3019,8 @@ class Organization(BaseSDK):
     ) -> operations.RemoveGenaiOrganizationResponse:
         r"""Remove an organization
 
+        Deletes the GenaiOrganization identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3056,6 +3120,8 @@ class Organization(BaseSDK):
     ) -> operations.RemoveRepoOrganizationResponse:
         r"""Remove an organization
 
+        Deletes the RepoOrganization identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3152,6 +3218,8 @@ class Organization(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveRepoOrganizationResponse:
         r"""Remove an organization
+
+        Deletes the RepoOrganization identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3250,6 +3318,8 @@ class Organization(BaseSDK):
     ) -> operations.UpdateAdsOrganizationResponse:
         r"""Update an organization
 
+        Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3345,6 +3415,8 @@ class Organization(BaseSDK):
     ) -> operations.UpdateAdsOrganizationResponse:
         r"""Update an organization
 
+        Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3439,6 +3511,8 @@ class Organization(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateGenaiOrganizationResponse:
         r"""Update an organization
+
+        Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3541,6 +3615,8 @@ class Organization(BaseSDK):
     ) -> operations.UpdateGenaiOrganizationResponse:
         r"""Update an organization
 
+        Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3642,6 +3718,8 @@ class Organization(BaseSDK):
     ) -> operations.UpdateRepoOrganizationResponse:
         r"""Update an organization
 
+        Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3736,6 +3814,8 @@ class Organization(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateRepoOrganizationResponse:
         r"""Update an organization
+
+        Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

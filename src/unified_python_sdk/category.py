@@ -24,6 +24,8 @@ class Category(BaseSDK):
     ) -> operations.CreateAccountingCategoryResponse:
         r"""Create a category
 
+        Creates a AccountingCategory. Provide the unified AccountingCategory fields in the request body; they are mapped to the provider's API. Returns the created AccountingCategory.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -124,6 +126,8 @@ class Category(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAccountingCategoryResponse:
         r"""Create a category
+
+        Creates a AccountingCategory. Provide the unified AccountingCategory fields in the request body; they are mapped to the provider's API. Returns the created AccountingCategory.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -226,6 +230,8 @@ class Category(BaseSDK):
     ) -> operations.CreateTicketingCategoryResponse:
         r"""Create a category
 
+        Creates a TicketingCategory. Provide the unified TicketingCategory fields in the request body; they are mapped to the provider's API. Returns the created TicketingCategory.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -326,6 +332,8 @@ class Category(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateTicketingCategoryResponse:
         r"""Create a category
+
+        Creates a TicketingCategory. Provide the unified TicketingCategory fields in the request body; they are mapped to the provider's API. Returns the created TicketingCategory.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -428,6 +436,8 @@ class Category(BaseSDK):
     ) -> operations.GetAccountingCategoryResponse:
         r"""Retrieve a category
 
+        Retrieves a single AccountingCategory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -519,6 +529,8 @@ class Category(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAccountingCategoryResponse:
         r"""Retrieve a category
+
+        Retrieves a single AccountingCategory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -612,6 +624,8 @@ class Category(BaseSDK):
     ) -> operations.GetTicketingCategoryResponse:
         r"""Retrieve a category
 
+        Retrieves a single TicketingCategory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -704,6 +718,8 @@ class Category(BaseSDK):
     ) -> operations.GetTicketingCategoryResponse:
         r"""Retrieve a category
 
+        Retrieves a single TicketingCategory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -795,6 +811,8 @@ class Category(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAccountingCategoriesResponse:
         r"""List all categories
+
+        Returns a list of AccountingCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -890,6 +908,8 @@ class Category(BaseSDK):
     ) -> operations.ListAccountingCategoriesResponse:
         r"""List all categories
 
+        Returns a list of AccountingCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -983,6 +1003,8 @@ class Category(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListTicketingCategoriesResponse:
         r"""List all categories
+
+        Returns a list of TicketingCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1078,6 +1100,8 @@ class Category(BaseSDK):
     ) -> operations.ListTicketingCategoriesResponse:
         r"""List all categories
 
+        Returns a list of TicketingCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1171,6 +1195,8 @@ class Category(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAccountingCategoryResponse:
         r"""Update a category
+
+        Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1273,6 +1299,8 @@ class Category(BaseSDK):
     ) -> operations.PatchAccountingCategoryResponse:
         r"""Update a category
 
+        Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1374,6 +1402,8 @@ class Category(BaseSDK):
     ) -> operations.PatchTicketingCategoryResponse:
         r"""Update a category
 
+        Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1472,6 +1502,8 @@ class Category(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchTicketingCategoryResponse:
         r"""Update a category
+
+        Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1572,6 +1604,8 @@ class Category(BaseSDK):
     ) -> operations.RemoveAccountingCategoryResponse:
         r"""Remove a category
 
+        Deletes the AccountingCategory identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1670,6 +1704,8 @@ class Category(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAccountingCategoryResponse:
         r"""Remove a category
+
+        Deletes the AccountingCategory identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1770,6 +1806,8 @@ class Category(BaseSDK):
     ) -> operations.RemoveTicketingCategoryResponse:
         r"""Remove a category
 
+        Deletes the TicketingCategory identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1869,6 +1907,8 @@ class Category(BaseSDK):
     ) -> operations.RemoveTicketingCategoryResponse:
         r"""Remove a category
 
+        Deletes the TicketingCategory identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1967,6 +2007,8 @@ class Category(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAccountingCategoryResponse:
         r"""Update a category
+
+        Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2069,6 +2111,8 @@ class Category(BaseSDK):
     ) -> operations.UpdateAccountingCategoryResponse:
         r"""Update a category
 
+        Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2170,6 +2214,8 @@ class Category(BaseSDK):
     ) -> operations.UpdateTicketingCategoryResponse:
         r"""Update a category
 
+        Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2270,6 +2316,8 @@ class Category(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateTicketingCategoryResponse:
         r"""Update a category
+
+        Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

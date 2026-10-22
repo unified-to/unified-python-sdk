@@ -24,6 +24,8 @@ class Ats(BaseSDK):
     ) -> operations.CreateAtsActivityResponse:
         r"""Create an activity
 
+        Creates a AtsActivity. Provide the unified AtsActivity fields in the request body; they are mapped to the provider's API. Returns the created AtsActivity.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -118,6 +120,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAtsActivityResponse:
         r"""Create an activity
+
+        Creates a AtsActivity. Provide the unified AtsActivity fields in the request body; they are mapped to the provider's API. Returns the created AtsActivity.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -214,6 +218,8 @@ class Ats(BaseSDK):
     ) -> operations.CreateAtsApplicationResponse:
         r"""Create an application
 
+        Creates a AtsApplication. Provide the unified AtsApplication fields in the request body; they are mapped to the provider's API. Returns the created AtsApplication.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -308,6 +314,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAtsApplicationResponse:
         r"""Create an application
+
+        Creates a AtsApplication. Provide the unified AtsApplication fields in the request body; they are mapped to the provider's API. Returns the created AtsApplication.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -404,6 +412,8 @@ class Ats(BaseSDK):
     ) -> operations.CreateAtsCandidateResponse:
         r"""Create a candidate
 
+        Creates a AtsCandidate. Provide the unified AtsCandidate fields in the request body; they are mapped to the provider's API. Returns the created AtsCandidate.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -498,6 +508,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAtsCandidateResponse:
         r"""Create a candidate
+
+        Creates a AtsCandidate. Provide the unified AtsCandidate fields in the request body; they are mapped to the provider's API. Returns the created AtsCandidate.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -594,6 +606,8 @@ class Ats(BaseSDK):
     ) -> operations.CreateAtsCompanyResponse:
         r"""Create a company
 
+        Creates a AtsCompany. Provide the unified AtsCompany fields in the request body; they are mapped to the provider's API. Returns the created AtsCompany.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -688,6 +702,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAtsCompanyResponse:
         r"""Create a company
+
+        Creates a AtsCompany. Provide the unified AtsCompany fields in the request body; they are mapped to the provider's API. Returns the created AtsCompany.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -784,6 +800,8 @@ class Ats(BaseSDK):
     ) -> operations.CreateAtsDocumentResponse:
         r"""Create a document
 
+        Creates a AtsDocument. Provide the unified AtsDocument fields in the request body; they are mapped to the provider's API. Returns the created AtsDocument.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -878,6 +896,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAtsDocumentResponse:
         r"""Create a document
+
+        Creates a AtsDocument. Provide the unified AtsDocument fields in the request body; they are mapped to the provider's API. Returns the created AtsDocument.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -974,6 +994,8 @@ class Ats(BaseSDK):
     ) -> operations.CreateAtsInterviewResponse:
         r"""Create an interview
 
+        Creates a AtsInterview. Provide the unified AtsInterview fields in the request body; they are mapped to the provider's API. Returns the created AtsInterview.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1069,6 +1091,8 @@ class Ats(BaseSDK):
     ) -> operations.CreateAtsInterviewResponse:
         r"""Create an interview
 
+        Creates a AtsInterview. Provide the unified AtsInterview fields in the request body; they are mapped to the provider's API. Returns the created AtsInterview.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1163,6 +1187,8 @@ class Ats(BaseSDK):
     ) -> operations.CreateAtsJobResponse:
         r"""Create a job
 
+        Creates a AtsJob. Provide the unified AtsJob fields in the request body; they are mapped to the provider's API. Returns the created AtsJob.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1254,6 +1280,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAtsJobResponse:
         r"""Create a job
+
+        Creates a AtsJob. Provide the unified AtsJob fields in the request body; they are mapped to the provider's API. Returns the created AtsJob.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1347,6 +1375,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAtsScorecardResponse:
         r"""Create a scorecard
+
+        Creates a AtsScorecard. Provide the unified AtsScorecard fields in the request body; they are mapped to the provider's API. Returns the created AtsScorecard.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1443,6 +1473,8 @@ class Ats(BaseSDK):
     ) -> operations.CreateAtsScorecardResponse:
         r"""Create a scorecard
 
+        Creates a AtsScorecard. Provide the unified AtsScorecard fields in the request body; they are mapped to the provider's API. Returns the created AtsScorecard.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1537,6 +1569,8 @@ class Ats(BaseSDK):
     ) -> operations.GetAtsActivityResponse:
         r"""Retrieve an activity
 
+        Retrieves a single AtsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1627,6 +1661,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAtsActivityResponse:
         r"""Retrieve an activity
+
+        Retrieves a single AtsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1720,6 +1756,8 @@ class Ats(BaseSDK):
     ) -> operations.GetAtsApplicationResponse:
         r"""Retrieve an application
 
+        Retrieves a single AtsApplication by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1812,6 +1850,8 @@ class Ats(BaseSDK):
     ) -> operations.GetAtsApplicationResponse:
         r"""Retrieve an application
 
+        Retrieves a single AtsApplication by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1903,6 +1943,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAtsApplicationstatusResponse:
         r"""Retrieve an applicationstatus
+
+        Retrieves a single AtsStatus by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1998,6 +2040,8 @@ class Ats(BaseSDK):
     ) -> operations.GetAtsApplicationstatusResponse:
         r"""Retrieve an applicationstatus
 
+        Retrieves a single AtsStatus by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2092,6 +2136,8 @@ class Ats(BaseSDK):
     ) -> operations.GetAtsCandidateResponse:
         r"""Retrieve a candidate
 
+        Retrieves a single AtsCandidate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2184,6 +2230,8 @@ class Ats(BaseSDK):
     ) -> operations.GetAtsCandidateResponse:
         r"""Retrieve a candidate
 
+        Retrieves a single AtsCandidate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2274,6 +2322,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAtsCompanyResponse:
         r"""Retrieve a company
+
+        Retrieves a single AtsCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2366,6 +2416,8 @@ class Ats(BaseSDK):
     ) -> operations.GetAtsCompanyResponse:
         r"""Retrieve a company
 
+        Retrieves a single AtsCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2457,6 +2509,8 @@ class Ats(BaseSDK):
     ) -> operations.GetAtsDocumentResponse:
         r"""Retrieve a document
 
+        Retrieves a single AtsDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2547,6 +2601,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAtsDocumentResponse:
         r"""Retrieve a document
+
+        Retrieves a single AtsDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2640,6 +2696,8 @@ class Ats(BaseSDK):
     ) -> operations.GetAtsInterviewResponse:
         r"""Retrieve an interview
 
+        Retrieves a single AtsInterview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2732,6 +2790,8 @@ class Ats(BaseSDK):
     ) -> operations.GetAtsInterviewResponse:
         r"""Retrieve an interview
 
+        Retrieves a single AtsInterview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2823,6 +2883,8 @@ class Ats(BaseSDK):
     ) -> operations.GetAtsJobResponse:
         r"""Retrieve a job
 
+        Retrieves a single AtsJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2911,6 +2973,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAtsJobResponse:
         r"""Retrieve a job
+
+        Retrieves a single AtsJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3001,6 +3065,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAtsScorecardResponse:
         r"""Retrieve a scorecard
+
+        Retrieves a single AtsScorecard by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3094,6 +3160,8 @@ class Ats(BaseSDK):
     ) -> operations.GetAtsScorecardResponse:
         r"""Retrieve a scorecard
 
+        Retrieves a single AtsScorecard by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3185,6 +3253,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAtsActivitiesResponse:
         r"""List all activities
+
+        Returns a list of AtsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3278,6 +3348,8 @@ class Ats(BaseSDK):
     ) -> operations.ListAtsActivitiesResponse:
         r"""List all activities
 
+        Returns a list of AtsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3369,6 +3441,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAtsApplicationsResponse:
         r"""List all applications
+
+        Returns a list of AtsApplications. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3462,6 +3536,8 @@ class Ats(BaseSDK):
     ) -> operations.ListAtsApplicationsResponse:
         r"""List all applications
 
+        Returns a list of AtsApplications. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3553,6 +3629,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAtsApplicationstatusesResponse:
         r"""List all applicationstatuses
+
+        Returns a list of AtsStatuses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3648,6 +3726,8 @@ class Ats(BaseSDK):
     ) -> operations.ListAtsApplicationstatusesResponse:
         r"""List all applicationstatuses
 
+        Returns a list of AtsStatuses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3742,6 +3822,8 @@ class Ats(BaseSDK):
     ) -> operations.ListAtsCandidatesResponse:
         r"""List all candidates
 
+        Returns a list of AtsCandidates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3833,6 +3915,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAtsCandidatesResponse:
         r"""List all candidates
+
+        Returns a list of AtsCandidates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3926,6 +4010,8 @@ class Ats(BaseSDK):
     ) -> operations.ListAtsCompaniesResponse:
         r"""List all companies
 
+        Returns a list of AtsCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4017,6 +4103,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAtsCompaniesResponse:
         r"""List all companies
+
+        Returns a list of AtsCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4110,6 +4198,8 @@ class Ats(BaseSDK):
     ) -> operations.ListAtsDocumentsResponse:
         r"""List all documents
 
+        Returns a list of AtsDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4201,6 +4291,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAtsDocumentsResponse:
         r"""List all documents
+
+        Returns a list of AtsDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4294,6 +4386,8 @@ class Ats(BaseSDK):
     ) -> operations.ListAtsInterviewsResponse:
         r"""List all interviews
 
+        Returns a list of AtsInterviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4386,6 +4480,8 @@ class Ats(BaseSDK):
     ) -> operations.ListAtsInterviewsResponse:
         r"""List all interviews
 
+        Returns a list of AtsInterviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4477,6 +4573,8 @@ class Ats(BaseSDK):
     ) -> operations.ListAtsJobsResponse:
         r"""List all jobs
 
+        Returns a list of AtsJobs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4567,6 +4665,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAtsJobsResponse:
         r"""List all jobs
+
+        Returns a list of AtsJobs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4660,6 +4760,8 @@ class Ats(BaseSDK):
     ) -> operations.ListAtsScorecardsResponse:
         r"""List all scorecards
 
+        Returns a list of AtsScorecards. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4752,6 +4854,8 @@ class Ats(BaseSDK):
     ) -> operations.ListAtsScorecardsResponse:
         r"""List all scorecards
 
+        Returns a list of AtsScorecards. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4843,6 +4947,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAtsActivityResponse:
         r"""Update an activity
+
+        Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4939,6 +5045,8 @@ class Ats(BaseSDK):
     ) -> operations.PatchAtsActivityResponse:
         r"""Update an activity
 
+        Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5033,6 +5141,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAtsApplicationResponse:
         r"""Update an application
+
+        Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -5129,6 +5239,8 @@ class Ats(BaseSDK):
     ) -> operations.PatchAtsApplicationResponse:
         r"""Update an application
 
+        Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5223,6 +5335,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAtsCandidateResponse:
         r"""Update a candidate
+
+        Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -5319,6 +5433,8 @@ class Ats(BaseSDK):
     ) -> operations.PatchAtsCandidateResponse:
         r"""Update a candidate
 
+        Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5413,6 +5529,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAtsCompanyResponse:
         r"""Update a company
+
+        Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -5509,6 +5627,8 @@ class Ats(BaseSDK):
     ) -> operations.PatchAtsCompanyResponse:
         r"""Update a company
 
+        Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5603,6 +5723,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAtsDocumentResponse:
         r"""Update a document
+
+        Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -5699,6 +5821,8 @@ class Ats(BaseSDK):
     ) -> operations.PatchAtsDocumentResponse:
         r"""Update a document
 
+        Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5793,6 +5917,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAtsInterviewResponse:
         r"""Update an interview
+
+        Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -5889,6 +6015,8 @@ class Ats(BaseSDK):
     ) -> operations.PatchAtsInterviewResponse:
         r"""Update an interview
 
+        Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5983,6 +6111,8 @@ class Ats(BaseSDK):
     ) -> operations.PatchAtsJobResponse:
         r"""Update a job
 
+        Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6074,6 +6204,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAtsJobResponse:
         r"""Update a job
+
+        Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -6167,6 +6299,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAtsScorecardResponse:
         r"""Update a scorecard
+
+        Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -6263,6 +6397,8 @@ class Ats(BaseSDK):
     ) -> operations.PatchAtsScorecardResponse:
         r"""Update a scorecard
 
+        Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6357,6 +6493,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAtsActivityResponse:
         r"""Remove an activity
+
+        Deletes the AtsActivity identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -6455,6 +6593,8 @@ class Ats(BaseSDK):
     ) -> operations.RemoveAtsActivityResponse:
         r"""Remove an activity
 
+        Deletes the AtsActivity identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6551,6 +6691,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAtsApplicationResponse:
         r"""Remove an application
+
+        Deletes the AtsApplication identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -6649,6 +6791,8 @@ class Ats(BaseSDK):
     ) -> operations.RemoveAtsApplicationResponse:
         r"""Remove an application
 
+        Deletes the AtsApplication identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6745,6 +6889,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAtsCandidateResponse:
         r"""Remove a candidate
+
+        Deletes the AtsCandidate identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -6843,6 +6989,8 @@ class Ats(BaseSDK):
     ) -> operations.RemoveAtsCandidateResponse:
         r"""Remove a candidate
 
+        Deletes the AtsCandidate identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6939,6 +7087,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAtsCompanyResponse:
         r"""Remove a company
+
+        Deletes the AtsCompany identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -7037,6 +7187,8 @@ class Ats(BaseSDK):
     ) -> operations.RemoveAtsCompanyResponse:
         r"""Remove a company
 
+        Deletes the AtsCompany identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7133,6 +7285,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAtsDocumentResponse:
         r"""Remove a document
+
+        Deletes the AtsDocument identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -7231,6 +7385,8 @@ class Ats(BaseSDK):
     ) -> operations.RemoveAtsDocumentResponse:
         r"""Remove a document
 
+        Deletes the AtsDocument identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7327,6 +7483,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAtsInterviewResponse:
         r"""Remove an interview
+
+        Deletes the AtsInterview identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -7425,6 +7583,8 @@ class Ats(BaseSDK):
     ) -> operations.RemoveAtsInterviewResponse:
         r"""Remove an interview
 
+        Deletes the AtsInterview identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7521,6 +7681,8 @@ class Ats(BaseSDK):
     ) -> operations.RemoveAtsJobResponse:
         r"""Remove a job
 
+        Deletes the AtsJob identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7616,6 +7778,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAtsJobResponse:
         r"""Remove a job
+
+        Deletes the AtsJob identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -7714,6 +7878,8 @@ class Ats(BaseSDK):
     ) -> operations.RemoveAtsScorecardResponse:
         r"""Remove a scorecard
 
+        Deletes the AtsScorecard identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7810,6 +7976,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAtsScorecardResponse:
         r"""Remove a scorecard
+
+        Deletes the AtsScorecard identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -7908,6 +8076,8 @@ class Ats(BaseSDK):
     ) -> operations.UpdateAtsActivityResponse:
         r"""Update an activity
 
+        Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -8002,6 +8172,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAtsActivityResponse:
         r"""Update an activity
+
+        Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -8098,6 +8270,8 @@ class Ats(BaseSDK):
     ) -> operations.UpdateAtsApplicationResponse:
         r"""Update an application
 
+        Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -8192,6 +8366,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAtsApplicationResponse:
         r"""Update an application
+
+        Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -8288,6 +8464,8 @@ class Ats(BaseSDK):
     ) -> operations.UpdateAtsCandidateResponse:
         r"""Update a candidate
 
+        Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -8382,6 +8560,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAtsCandidateResponse:
         r"""Update a candidate
+
+        Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -8478,6 +8658,8 @@ class Ats(BaseSDK):
     ) -> operations.UpdateAtsCompanyResponse:
         r"""Update a company
 
+        Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -8572,6 +8754,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAtsCompanyResponse:
         r"""Update a company
+
+        Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -8668,6 +8852,8 @@ class Ats(BaseSDK):
     ) -> operations.UpdateAtsDocumentResponse:
         r"""Update a document
 
+        Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -8762,6 +8948,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAtsDocumentResponse:
         r"""Update a document
+
+        Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -8858,6 +9046,8 @@ class Ats(BaseSDK):
     ) -> operations.UpdateAtsInterviewResponse:
         r"""Update an interview
 
+        Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -8953,6 +9143,8 @@ class Ats(BaseSDK):
     ) -> operations.UpdateAtsInterviewResponse:
         r"""Update an interview
 
+        Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -9047,6 +9239,8 @@ class Ats(BaseSDK):
     ) -> operations.UpdateAtsJobResponse:
         r"""Update a job
 
+        Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -9138,6 +9332,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAtsJobResponse:
         r"""Update a job
+
+        Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -9231,6 +9427,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAtsScorecardResponse:
         r"""Update a scorecard
+
+        Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -9326,6 +9524,8 @@ class Ats(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAtsScorecardResponse:
         r"""Update a scorecard
+
+        Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

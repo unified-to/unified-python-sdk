@@ -13,7 +13,7 @@
 
 ## create_commerce_inventory
 
-Create an inventory
+Creates a CommerceInventory. Provide the unified CommerceInventory fields in the request body; they are mapped to the provider's API. Returns the created CommerceInventory.
 
 ### Example Usage
 
@@ -33,9 +33,9 @@ with UnifiedTo(
     res = unified_to.inventory.create_commerce_inventory(request={
         "commerce_inventory": {
             "available": 337.0,
-            "id": "866b763f-b9cb-4d5c-99ed-5a19f8364a82",
+            "id": "a6aa3268-f037-410f-9c86-d1e39d32c421",
             "metadata": [],
-            "updated_at": parse_datetime("2025-11-20T09:44:35.529Z"),
+            "updated_at": parse_datetime("2025-11-21T04:57:50.421Z"),
         },
         "connection_id": "<id>",
     })
@@ -66,7 +66,7 @@ with UnifiedTo(
 
 ## get_commerce_inventory
 
-Retrieve an inventory
+Retrieves a single CommerceInventory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -113,7 +113,7 @@ with UnifiedTo(
 
 ## list_commerce_inventories
 
-List all inventories
+Returns a list of CommerceInventories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -159,7 +159,7 @@ with UnifiedTo(
 
 ## patch_commerce_inventory
 
-Update an inventory
+Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to change in the request body.
 
 ### Example Usage
 
@@ -179,9 +179,9 @@ with UnifiedTo(
     res = unified_to.inventory.patch_commerce_inventory(request={
         "commerce_inventory": {
             "available": 337.0,
-            "id": "ce487db4-52ee-4799-83ab-ec1dc1b80da8",
+            "id": "33d89345-882b-4ab1-b502-ad37be2a7167",
             "metadata": [],
-            "updated_at": parse_datetime("2025-11-20T09:44:35.542Z"),
+            "updated_at": parse_datetime("2025-11-21T04:57:50.432Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -213,7 +213,7 @@ with UnifiedTo(
 
 ## remove_commerce_inventory
 
-Remove an inventory
+Deletes the CommerceInventory identified by `id`.
 
 ### Example Usage
 
@@ -260,7 +260,7 @@ with UnifiedTo(
 
 ## update_commerce_inventory
 
-Update an inventory
+Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to change in the request body.
 
 ### Example Usage
 
@@ -280,9 +280,9 @@ with UnifiedTo(
     res = unified_to.inventory.update_commerce_inventory(request={
         "commerce_inventory": {
             "available": 337.0,
-            "id": "ce487db4-52ee-4799-83ab-ec1dc1b80da8",
+            "id": "33d89345-882b-4ab1-b502-ad37be2a7167",
             "metadata": [],
-            "updated_at": parse_datetime("2025-11-20T09:44:35.542Z"),
+            "updated_at": parse_datetime("2025-11-21T04:57:50.432Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

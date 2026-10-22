@@ -15,7 +15,7 @@
 * [create_accounting_expensereport](#create_accounting_expensereport) - Create an expensereport
 * [create_accounting_invoice](#create_accounting_invoice) - Create an invoice
 * [create_accounting_journal](#create_accounting_journal) - Create a journal
-* [create_accounting_order](#create_accounting_order) - Create an order
+* [~~create_accounting_order~~](#create_accounting_order) - Create an order :warning: **Deprecated**
 * [create_accounting_paymentterm](#create_accounting_paymentterm) - Create a paymentterm
 * [create_accounting_project](#create_accounting_project) - Create a project
 * [create_accounting_purchaseorder](#create_accounting_purchaseorder) - Create a purchaseorder
@@ -39,7 +39,7 @@
 * [get_accounting_expensereport](#get_accounting_expensereport) - Retrieve an expensereport
 * [get_accounting_invoice](#get_accounting_invoice) - Retrieve an invoice
 * [get_accounting_journal](#get_accounting_journal) - Retrieve a journal
-* [get_accounting_order](#get_accounting_order) - Retrieve an order
+* [~~get_accounting_order~~](#get_accounting_order) - Retrieve an order :warning: **Deprecated**
 * [get_accounting_organization](#get_accounting_organization) - Retrieve an organization
 * [get_accounting_paymentterm](#get_accounting_paymentterm) - Retrieve a paymentterm
 * [get_accounting_profitloss](#get_accounting_profitloss) - Retrieve a profitloss
@@ -68,7 +68,7 @@
 * [list_accounting_expenses](#list_accounting_expenses) - List all expenses
 * [list_accounting_invoices](#list_accounting_invoices) - List all invoices
 * [list_accounting_journals](#list_accounting_journals) - List all journals
-* [list_accounting_orders](#list_accounting_orders) - List all orders
+* [~~list_accounting_orders~~](#list_accounting_orders) - List all orders :warning: **Deprecated**
 * [list_accounting_organizations](#list_accounting_organizations) - List all organizations
 * [list_accounting_paymentterms](#list_accounting_paymentterms) - List all paymentterms
 * [list_accounting_profitlosses](#list_accounting_profitlosses) - List all profitlosses
@@ -93,7 +93,7 @@
 * [patch_accounting_expensereport](#patch_accounting_expensereport) - Update an expensereport
 * [patch_accounting_invoice](#patch_accounting_invoice) - Update an invoice
 * [patch_accounting_journal](#patch_accounting_journal) - Update a journal
-* [patch_accounting_order](#patch_accounting_order) - Update an order
+* [~~patch_accounting_order~~](#patch_accounting_order) - Update an order :warning: **Deprecated**
 * [patch_accounting_paymentterm](#patch_accounting_paymentterm) - Update a paymentterm
 * [patch_accounting_project](#patch_accounting_project) - Update a project
 * [patch_accounting_purchaseorder](#patch_accounting_purchaseorder) - Update a purchaseorder
@@ -113,7 +113,7 @@
 * [remove_accounting_expensereport](#remove_accounting_expensereport) - Remove an expensereport
 * [remove_accounting_invoice](#remove_accounting_invoice) - Remove an invoice
 * [remove_accounting_journal](#remove_accounting_journal) - Remove a journal
-* [remove_accounting_order](#remove_accounting_order) - Remove an order
+* [~~remove_accounting_order~~](#remove_accounting_order) - Remove an order :warning: **Deprecated**
 * [remove_accounting_paymentterm](#remove_accounting_paymentterm) - Remove a paymentterm
 * [remove_accounting_project](#remove_accounting_project) - Remove a project
 * [remove_accounting_purchaseorder](#remove_accounting_purchaseorder) - Remove a purchaseorder
@@ -133,7 +133,7 @@
 * [update_accounting_expensereport](#update_accounting_expensereport) - Update an expensereport
 * [update_accounting_invoice](#update_accounting_invoice) - Update an invoice
 * [update_accounting_journal](#update_accounting_journal) - Update a journal
-* [update_accounting_order](#update_accounting_order) - Update an order
+* [~~update_accounting_order~~](#update_accounting_order) - Update an order :warning: **Deprecated**
 * [update_accounting_paymentterm](#update_accounting_paymentterm) - Update a paymentterm
 * [update_accounting_project](#update_accounting_project) - Update a project
 * [update_accounting_purchaseorder](#update_accounting_purchaseorder) - Update a purchaseorder
@@ -145,7 +145,7 @@
 
 ## create_accounting_account
 
-Create an account
+Creates a AccountingAccount. Provide the unified AccountingAccount fields in the request body; they are mapped to the provider's API. Returns the created AccountingAccount.
 
 ### Example Usage
 
@@ -169,7 +169,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "ecf5b11c-7793-4217-adb9-73064cb6d664",
+            "id": "cf355b43-f7e4-4200-abd9-da8905ac9789",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -182,7 +182,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-06T21:39:36.829Z"),
+            "updated_at": parse_datetime("2023-08-07T03:43:27.331Z"),
         },
         "connection_id": "<id>",
     })
@@ -213,7 +213,7 @@ with UnifiedTo(
 
 ## create_accounting_bankfeedaccount
 
-Create a bankfeedaccount
+Creates a AccountingBankfeedaccount. Provide the unified AccountingBankfeedaccount fields in the request body; they are mapped to the provider's API. Returns the created AccountingBankfeedaccount.
 
 ### Example Usage
 
@@ -240,12 +240,12 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-10-31T16:42:19.277Z"),
             "currency": "AUD",
             "feed_start_at": parse_datetime("2022-10-31T16:42:19.277Z"),
-            "id": "da22f4c9-c9fc-4ee9-8788-43e54ea5aada",
+            "id": "329766c9-e779-4893-a2d5-4ea17f4c2e0f",
             "metadata": [],
             "name": "Corwin, Donnelly and Connelly Checking",
             "routing_number": "694667752",
             "status": shared.AccountingBankfeedaccountStatus.ACTIVE,
-            "updated_at": parse_datetime("2024-04-23T19:54:29.623Z"),
+            "updated_at": parse_datetime("2024-04-24T04:47:33.222Z"),
         },
         "connection_id": "<id>",
     })
@@ -276,7 +276,7 @@ with UnifiedTo(
 
 ## create_accounting_bankfeedtransaction
 
-Create a bankfeedtransaction
+Creates a AccountingBankfeedtransaction. Provide the unified AccountingBankfeedtransaction fields in the request body; they are mapped to the provider's API. Returns the created AccountingBankfeedtransaction.
 
 ### Example Usage
 
@@ -301,15 +301,15 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-03-24T23:41:08.374Z"),
             "currency": "CAD",
             "description": "Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781.",
-            "id": "9d7f1d1e-6836-421d-bcc7-0f960838a365",
+            "id": "7554558e-75d6-4b22-a53e-2fb82bd0a8bc",
             "is_pending": True,
             "merchant_name": "Buckridge - Feest",
             "metadata": [],
-            "posted_at": parse_datetime("2025-04-14T19:54:37.886Z"),
+            "posted_at": parse_datetime("2025-04-15T11:51:15.882Z"),
             "reference": "79574105",
-            "transaction_at": parse_datetime("2022-07-30T08:09:49.075Z"),
+            "transaction_at": parse_datetime("2022-07-30T09:58:54.151Z"),
             "type": shared.AccountingBankfeedtransactionType.CREDIT,
-            "updated_at": parse_datetime("2022-05-25T01:44:27.953Z"),
+            "updated_at": parse_datetime("2022-05-25T02:36:47.333Z"),
         },
         "connection_id": "<id>",
     })
@@ -340,7 +340,7 @@ with UnifiedTo(
 
 ## create_accounting_bill
 
-Create a bill
+Creates a AccountingBill. Provide the unified AccountingBill fields in the request body; they are mapped to the provider's API. Returns the created AccountingBill.
 
 ### Example Usage
 
@@ -362,13 +362,13 @@ with UnifiedTo(
             "attachments": [
                 {
                     "download_url": "https://puny-foodstuffs.name",
-                    "id": "45052cf1-197b-4fc0-8220-13da145a58d8",
+                    "id": "6c9209f9-761e-4b05-bad7-d11aada20346",
                     "mime_type": "application/pdf",
                     "name": "BILL-2466.pdf",
                 },
                 {
                     "download_url": "https://grimy-characterization.net",
-                    "id": "1eeb2689-98e9-440d-af4c-744318cad986",
+                    "id": "043c0df2-d8b5-4766-856e-78913fedeec5",
                     "mime_type": "application/pdf",
                     "name": "BILL-2466-1.pdf",
                 },
@@ -381,7 +381,7 @@ with UnifiedTo(
             "discount_amount": 0.0,
             "due_at": parse_datetime("2019-09-07T23:03:14.104Z"),
             "extended_notes": [],
-            "id": "9965cfa0-223e-4786-ad87-85946fcda146",
+            "id": "b0d3a065-8e95-4707-848a-38944e7d7452",
             "lineitems": [],
             "metadata": [],
             "notes": "Admiratio deporto tutamen cilicium infit amissio ante demulceo.",
@@ -397,7 +397,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "term": shared.Term.NET_90,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2020-06-01T05:47:36.998Z"),
+            "updated_at": parse_datetime("2020-06-01T08:26:07.744Z"),
             "url": "https://cluttered-importance.org/bills/BILL-2466",
         },
         "connection_id": "<id>",
@@ -429,7 +429,7 @@ with UnifiedTo(
 
 ## create_accounting_category
 
-Create a category
+Creates a AccountingCategory. Provide the unified AccountingCategory fields in the request body; they are mapped to the provider's API. Returns the created AccountingCategory.
 
 ### Example Usage
 
@@ -450,11 +450,11 @@ with UnifiedTo(
         "accounting_category": {
             "created_at": parse_datetime("2023-05-30T12:29:04.257Z"),
             "description": "Textus ab thymum labore basium.",
-            "id": "1e52365d-baa8-471d-a17f-5e9226df37dd",
+            "id": "1c264a31-fc6d-404c-a395-87fd00ef7a9b",
             "is_active": False,
             "metadata": [],
             "name": "Beauty",
-            "updated_at": parse_datetime("2025-09-11T12:07:38.662Z"),
+            "updated_at": parse_datetime("2025-09-12T04:11:51.669Z"),
         },
         "connection_id": "<id>",
     })
@@ -485,7 +485,7 @@ with UnifiedTo(
 
 ## create_accounting_contact
 
-Create a contact
+Creates a AccountingContact. Provide the unified AccountingContact fields in the request body; they are mapped to the provider's API. Returns the created AccountingContact.
 
 ### Example Usage
 
@@ -528,7 +528,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Delores",
-            "id": "db8b51b2-b8d0-4e28-855d-fd7fcb3ecd41",
+            "id": "fdf93d62-2079-4d04-a659-6a963caddc00",
             "identification": "531850872",
             "is_active": True,
             "is_customer": True,
@@ -539,7 +539,7 @@ with UnifiedTo(
             "payment_methods": [
                 {
                     "default": True,
-                    "id": "cd9aaba8-e4cd-4940-a7e0-36093a1d2fbc",
+                    "id": "8636e7f8-2c88-4c9e-9549-3751ae2979e6",
                     "name": "Visa 7844",
                     "type": shared.AccountingContactPaymentMethodType.CARD,
                 },
@@ -561,7 +561,7 @@ with UnifiedTo(
                     "type": shared.AccountingTelephoneType.FAX,
                 },
             ],
-            "updated_at": parse_datetime("2023-12-19T20:49:07.881Z"),
+            "updated_at": parse_datetime("2023-12-20T07:36:45.907Z"),
             "website": "https://kertzmanngroup.com",
         },
         "connection_id": "<id>",
@@ -593,7 +593,7 @@ with UnifiedTo(
 
 ## create_accounting_creditmemo
 
-Create a creditmemo
+Creates a AccountingCreditmemo. Provide the unified AccountingCreditmemo fields in the request body; they are mapped to the provider's API. Returns the created AccountingCreditmemo.
 
 ### Example Usage
 
@@ -619,7 +619,7 @@ with UnifiedTo(
             "creditmemo_number": "CM-99537",
             "currency": "AUD",
             "discount_amount": 0.0,
-            "id": "d36f62f7-fb72-41e0-8cb7-4aab750d2d6b",
+            "id": "abafb946-a93b-47e1-a26b-a262d14db967",
             "lineitems": [],
             "metadata": [],
             "notes": "Hic vorax dedecor amo adfero torqueo quas victoria.",
@@ -628,7 +628,7 @@ with UnifiedTo(
             "status": shared.AccountingCreditmemoStatus.AUTHORIZED,
             "tax_amount": 0.0,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2025-09-11T07:54:08.376Z"),
+            "updated_at": parse_datetime("2025-09-11T23:11:29.386Z"),
         },
         "connection_id": "<id>",
     })
@@ -659,7 +659,7 @@ with UnifiedTo(
 
 ## create_accounting_expense
 
-Create an expense
+Creates a AccountingExpense. Provide the unified AccountingExpense fields in the request body; they are mapped to the provider's API. Returns the created AccountingExpense.
 
 ### Example Usage
 
@@ -681,13 +681,13 @@ with UnifiedTo(
             "attachments": [
                 {
                     "download_url": "https://rubbery-couch.biz/",
-                    "id": "6217a4bb-48a6-4d40-920e-b75fc1cf90e7",
+                    "id": "9aabf60d-0097-4632-aaf4-994d747eae41",
                     "mime_type": "application/pdf",
                     "name": "receipt-9696.pdf",
                 },
                 {
                     "download_url": "https://appropriate-smog.biz/",
-                    "id": "246cd982-ffac-4258-9b31-78ef29344c07",
+                    "id": "e86d99a2-10c8-4f17-9bad-f9d328ac4f39",
                     "mime_type": "application/pdf",
                     "name": "receipt-9696-1.pdf",
                 },
@@ -696,10 +696,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-06-11T03:39:37.305Z"),
             "currency": "GBP",
             "external_number": "EXP-38303",
-            "id": "2f637aa3-2358-4201-93ba-7a22b51db902",
+            "id": "fc5b3f57-18bd-4021-a137-4246201f6077",
             "lineitems": [
                 {
-                    "id": "1d667263-a363-48c9-96ce-83531baecff2",
+                    "id": "d2e7ed56-b5e3-45c7-9fa6-e0e7a5a555a3",
                     "item_name": "Client dinner",
                     "tax_amount": 0.0,
                     "total_amount": 364.74,
@@ -707,7 +707,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "b76da731-6c4b-4689-b083-928acbe2cb76",
+                    "id": "a74ba4b7-02a3-4d2c-aec0-9ae6bb4ec6cf",
                     "item_name": "Client dinner",
                     "tax_amount": 0.0,
                     "total_amount": 258.35,
@@ -715,7 +715,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "601c4d71-09c5-4b8b-bb4f-0beff5cb752a",
+                    "id": "04917fce-3562-48b4-b20b-868a6fefebf3",
                     "item_name": "Conference ticket",
                     "notes": "Casus umquam conicio cinis demitto sint.",
                     "tax_amount": 0.0,
@@ -724,7 +724,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "fae1bec1-afa6-4618-91e8-d0ac582a7b36",
+                    "id": "3219eb0f-659b-491e-bc64-9d497ef1055d",
                     "item_name": "Hotel",
                     "tax_amount": 0.0,
                     "total_amount": 157.04,
@@ -732,7 +732,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "1cf0c727-1317-4c7d-989d-cbad2a437a83",
+                    "id": "217d79c7-ec0c-4226-9351-944aa1f6ef6f",
                     "item_name": "Hotel",
                     "tax_amount": 0.0,
                     "total_amount": 164.02,
@@ -748,7 +748,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "total_amount": 972.29,
             "type": shared.AccountingExpenseType.COMPANY,
-            "updated_at": parse_datetime("2020-09-02T07:17:01.299Z"),
+            "updated_at": parse_datetime("2020-09-02T08:08:15.486Z"),
         },
         "connection_id": "<id>",
     })
@@ -779,7 +779,7 @@ with UnifiedTo(
 
 ## create_accounting_expensereport
 
-Create an expensereport
+Creates a AccountingExpensereport. Provide the unified AccountingExpensereport fields in the request body; they are mapped to the provider's API. Returns the created AccountingExpensereport.
 
 ### Example Usage
 
@@ -798,16 +798,16 @@ with UnifiedTo(
 
     res = unified_to.accounting.create_accounting_expensereport(request={
         "accounting_expensereport": {
-            "approved_at": parse_datetime("2021-04-19T11:28:31.620Z"),
+            "approved_at": parse_datetime("2021-04-19T14:47:54.423Z"),
             "attachments": [],
             "category_ids": [],
             "created_at": parse_datetime("2020-05-29T02:04:59.078Z"),
             "currency": "GBP",
             "external_number": "ER-31240",
-            "id": "0e1a2879-7c11-49b3-bf53-718d06608f52",
+            "id": "eff22fdd-5648-4116-8ab6-24ed493db75e",
             "lineitems": [
                 {
-                    "id": "8953e182-2003-42db-bdd6-df7c41e5f07a",
+                    "id": "9baccfe5-705f-4d5e-b5c0-8e97007892a9",
                     "item_name": "Conference ticket",
                     "tax_amount": 0.0,
                     "total_amount": 39.9,
@@ -815,7 +815,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "2872ca66-3046-4949-b93f-d4e7cf067339",
+                    "id": "04c541a5-881d-458c-8cda-74565ba46f9d",
                     "item_name": "Flight",
                     "notes": "Soluta omnis dolor.",
                     "tax_amount": 0.0,
@@ -824,7 +824,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "774a00fb-0ad4-460b-b83a-74b274fc43e1",
+                    "id": "5c0c84dd-7ffb-439a-add9-cd76e3822a27",
                     "item_name": "Client dinner",
                     "notes": "Altus caveo capio.",
                     "tax_amount": 0.0,
@@ -833,7 +833,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "229b5e80-2e70-4671-8545-b4e23d6d4814",
+                    "id": "5dee1ff0-0a81-4a52-85dd-b530f20136e8",
                     "item_name": "Flight",
                     "tax_amount": 0.0,
                     "total_amount": 445.27,
@@ -845,11 +845,11 @@ with UnifiedTo(
             "name": "Lolita Kunde - October expenses",
             "posted_at": parse_datetime("2020-05-29T02:04:59.078Z"),
             "reimbursed_amount": 908.46,
-            "reimbursed_at": parse_datetime("2021-04-19T11:28:31.620Z"),
+            "reimbursed_at": parse_datetime("2021-04-19T14:47:54.423Z"),
             "status": shared.AccountingExpensereportStatus.PAID,
             "tax_amount": 0.0,
             "total_amount": 908.46,
-            "updated_at": parse_datetime("2021-04-19T11:28:31.620Z"),
+            "updated_at": parse_datetime("2021-04-19T14:47:54.423Z"),
         },
         "connection_id": "<id>",
     })
@@ -880,7 +880,7 @@ with UnifiedTo(
 
 ## create_accounting_invoice
 
-Create an invoice
+Creates a AccountingInvoice. Provide the unified AccountingInvoice fields in the request body; they are mapped to the provider's API. Returns the created AccountingInvoice.
 
 ### Example Usage
 
@@ -902,13 +902,13 @@ with UnifiedTo(
             "attachments": [
                 {
                     "download_url": "https://glossy-markup.net/",
-                    "id": "998ae156-c453-4d71-abbb-89e52529ec22",
+                    "id": "af834e8b-1f37-45e1-a6da-09cde99b20c9",
                     "mime_type": "application/pdf",
                     "name": "INV-77705.pdf",
                 },
                 {
                     "download_url": "https://earnest-giggle.net",
-                    "id": "0129f312-930f-4108-b08e-f4656be84d9d",
+                    "id": "89fae7cd-e0cc-487d-b776-164dc14d6664",
                     "mime_type": "application/pdf",
                     "name": "INV-77705-1.pdf",
                 },
@@ -920,7 +920,7 @@ with UnifiedTo(
             "discount_amount": 0.0,
             "due_at": parse_datetime("2022-12-07T14:17:29.587Z"),
             "extended_notes": [],
-            "id": "fafb36d3-1c5b-4d6a-86e8-647876ceed5b",
+            "id": "05c0496e-f40e-433d-85e0-7982db3c2176",
             "invoice_number": "INV-77705",
             "is_inclusive_of_tax": False,
             "lineitems": [],
@@ -938,7 +938,7 @@ with UnifiedTo(
             "term": shared.AccountingInvoiceTerm.NET_25,
             "total_amount": 0.0,
             "type": shared.AccountingInvoiceType.INVOICE,
-            "updated_at": parse_datetime("2026-04-23T12:59:16.962Z"),
+            "updated_at": parse_datetime("2026-04-24T09:51:39.852Z"),
             "url": "https://gifted-yarmulke.info/invoices/INV-77705",
         },
         "connection_id": "<id>",
@@ -970,7 +970,7 @@ with UnifiedTo(
 
 ## create_accounting_journal
 
-Create a journal
+Creates a AccountingJournal. Provide the unified AccountingJournal fields in the request body; they are mapped to the provider's API. Returns the created AccountingJournal.
 
 ### Example Usage
 
@@ -994,16 +994,16 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-02-20T15:14:55.881Z"),
             "currency": "CAD",
             "description": "Cilicium minima calco constans adipisci.",
-            "id": "8ce28b0e-a732-4732-b09d-30eaecb6d35c",
+            "id": "b9302d8f-af88-40b1-a888-c2f2f8fe9263",
             "is_inclusive_of_tax": True,
             "lineitems": [],
             "metadata": [],
-            "posted_at": parse_datetime("2023-11-06T10:38:03.653Z"),
+            "posted_at": parse_datetime("2023-11-06T23:54:38.642Z"),
             "reference": "JE-78884",
             "source": "crustulum",
             "status": shared.AccountingJournalStatus.VOID,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2022-01-10T19:41:25.945Z"),
+            "updated_at": parse_datetime("2022-01-11T02:27:14.336Z"),
         },
         "connection_id": "<id>",
     })
@@ -1032,9 +1032,11 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## create_accounting_order
+## ~~create_accounting_order~~
 
-Create an order
+Creates a AccountingOrder. Provide the unified AccountingOrder fields in the request body; they are mapped to the provider's API. Returns the created AccountingOrder.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -1063,7 +1065,7 @@ with UnifiedTo(
             },
             "created_at": parse_datetime("2020-11-20T03:46:49.837Z"),
             "currency": "GBP",
-            "id": "cb1d4dac-549f-44d8-9055-7d4fb9ceab04",
+            "id": "28d3b89f-0446-43dd-9b12-88dae6df1211",
             "lineitems": [],
             "metadata": [],
             "posted_at": parse_datetime("2020-11-20T03:46:49.837Z"),
@@ -1078,7 +1080,7 @@ with UnifiedTo(
             "status": shared.AccountingOrderStatus.AUTHORIZED,
             "total_amount": 0.0,
             "type": shared.AccountingOrderType.SALES,
-            "updated_at": parse_datetime("2022-02-08T07:17:50.334Z"),
+            "updated_at": parse_datetime("2022-02-08T12:12:41.888Z"),
         },
         "connection_id": "<id>",
     })
@@ -1109,7 +1111,7 @@ with UnifiedTo(
 
 ## create_accounting_paymentterm
 
-Create a paymentterm
+Creates a AccountingPaymentterm. Provide the unified AccountingPaymentterm fields in the request body; they are mapped to the provider's API. Returns the created AccountingPaymentterm.
 
 ### Example Usage
 
@@ -1137,12 +1139,12 @@ with UnifiedTo(
             "discount_percent": 5.0,
             "due_days": 57.0,
             "due_next_month_days": 9.0,
-            "id": "d590c9b9-758e-4522-94b0-f1d75ee7d5e6",
+            "id": "8e092a25-d81d-4f02-99ec-9d392ada484c",
             "is_active": False,
             "metadata": [],
             "name": "Net 30",
             "type": shared.AccountingPaymenttermType.NET_15,
-            "updated_at": parse_datetime("2026-01-08T11:08:28.842Z"),
+            "updated_at": parse_datetime("2026-01-09T07:22:59.460Z"),
         },
         "connection_id": "<id>",
     })
@@ -1173,7 +1175,7 @@ with UnifiedTo(
 
 ## create_accounting_project
 
-Create a project
+Creates a AccountingProject. Provide the unified AccountingProject fields in the request body; they are mapped to the provider's API. Returns the created AccountingProject.
 
 ### Example Usage
 
@@ -1220,7 +1222,7 @@ with UnifiedTo(
 
 ## create_accounting_purchaseorder
 
-Create a purchaseorder
+Creates a AccountingPurchaseorder. Provide the unified AccountingPurchaseorder fields in the request body; they are mapped to the provider's API. Returns the created AccountingPurchaseorder.
 
 ### Example Usage
 
@@ -1252,7 +1254,7 @@ with UnifiedTo(
             "category_ids": [],
             "created_at": parse_datetime("2020-12-12T07:17:47.021Z"),
             "currency": "EUR",
-            "id": "d45b3edb-aedc-4d7f-a749-adf83208b680",
+            "id": "e2480d4a-e417-498a-aa01-91742640660d",
             "lineitems": [],
             "metadata": [],
             "posted_at": parse_datetime("2020-12-12T07:17:47.021Z"),
@@ -1266,7 +1268,7 @@ with UnifiedTo(
             },
             "status": shared.AccountingPurchaseorderStatus.SUBMITTED,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2021-08-11T05:59:49.623Z"),
+            "updated_at": parse_datetime("2021-08-11T08:41:44.885Z"),
         },
         "connection_id": "<id>",
     })
@@ -1297,7 +1299,7 @@ with UnifiedTo(
 
 ## create_accounting_quote
 
-Create a quote
+Creates a AccountingQuote. Provide the unified AccountingQuote fields in the request body; they are mapped to the provider's API. Returns the created AccountingQuote.
 
 ### Example Usage
 
@@ -1344,7 +1346,7 @@ with UnifiedTo(
 
 ## create_accounting_salesorder
 
-Create a salesorder
+Creates a AccountingSalesorder. Provide the unified AccountingSalesorder fields in the request body; they are mapped to the provider's API. Returns the created AccountingSalesorder.
 
 ### Example Usage
 
@@ -1373,13 +1375,13 @@ with UnifiedTo(
                 "region_code": "MO",
             },
             "category_ids": [],
-            "closed_at": parse_datetime("2023-03-25T12:56:07.857Z"),
+            "closed_at": parse_datetime("2023-03-25T18:51:55.584Z"),
             "created_at": parse_datetime("2022-01-17T16:11:50.310Z"),
             "currency": "USD",
             "discount_amount": 0.0,
             "fees": [],
             "fulfillment_type": shared.FulfillmentType.OTHER,
-            "id": "682db75b-3d6a-4088-8356-45659be13c4d",
+            "id": "31b40f4c-8c74-473c-834c-108a496eb083",
             "lineitems": [],
             "metadata": [],
             "order_number": "832663",
@@ -1401,7 +1403,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "tip_amount": 0.0,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2023-03-25T12:56:07.857Z"),
+            "updated_at": parse_datetime("2023-03-25T18:51:55.584Z"),
         },
         "connection_id": "<id>",
     })
@@ -1432,7 +1434,7 @@ with UnifiedTo(
 
 ## create_accounting_taxrate
 
-Create a taxrate
+Creates a AccountingTaxrate. Provide the unified AccountingTaxrate fields in the request body; they are mapped to the provider's API. Returns the created AccountingTaxrate.
 
 ### Example Usage
 
@@ -1462,7 +1464,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-01-04T10:37:56.894Z"),
             "description": "Exempt (0%)",
             "effective_rate": 0.0,
-            "id": "97af5175-0087-4cb6-87a1-368a14a5fcdf",
+            "id": "01c2eb64-87ee-4c55-9300-b6e0dfec82ad",
             "is_active": False,
             "is_compound": False,
             "metadata": [],
@@ -1471,7 +1473,7 @@ with UnifiedTo(
             "region": "KS",
             "total_rate": 0.0,
             "type": shared.AccountingTaxrateType.SALES,
-            "updated_at": parse_datetime("2020-02-13T05:09:46.312Z"),
+            "updated_at": parse_datetime("2020-02-13T05:32:42.700Z"),
         },
         "connection_id": "<id>",
     })
@@ -1502,7 +1504,7 @@ with UnifiedTo(
 
 ## create_accounting_transaction
 
-Create a transaction
+Creates a AccountingTransaction. Provide the unified AccountingTransaction fields in the request body; they are mapped to the provider's API. Returns the created AccountingTransaction.
 
 ### Example Usage
 
@@ -1522,12 +1524,12 @@ with UnifiedTo(
     res = unified_to.accounting.create_accounting_transaction(request={
         "accounting_transaction": {
             "created_at": parse_datetime("2019-09-25T11:40:42.574Z"),
-            "id": "251a49f7-c871-44c9-ae34-9ae0138b1f8d",
+            "id": "52dd8af7-7cd7-4625-ab77-a9d341b24d4c",
             "lineitems": [
                 {
                     "category_ids": [],
                     "description": "The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability",
-                    "id": "76027784-fd4c-4d97-84c3-34037ee14b43",
+                    "id": "d314aa8e-2877-4e1f-8e2d-e1854503d98a",
                     "name": "Shirt",
                     "total_amount": 10184.0,
                     "unit_amount": 536.0,
@@ -1539,7 +1541,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "total_amount": 10184.0,
             "transaction_at": parse_datetime("2019-09-25T11:40:42.574Z"),
-            "updated_at": parse_datetime("2019-10-14T06:08:27.202Z"),
+            "updated_at": parse_datetime("2019-10-14T06:18:51.360Z"),
         },
         "connection_id": "<id>",
     })
@@ -1570,7 +1572,7 @@ with UnifiedTo(
 
 ## create_accounting_vendorcredit
 
-Create a vendorcredit
+Creates a AccountingVendorcredit. Provide the unified AccountingVendorcredit fields in the request body; they are mapped to the provider's API. Returns the created AccountingVendorcredit.
 
 ### Example Usage
 
@@ -1593,14 +1595,14 @@ with UnifiedTo(
             "balance_amount": 0.0,
             "created_at": parse_datetime("2023-04-15T21:14:08.197Z"),
             "currency": "USD",
-            "id": "d350789d-ecae-4b22-b27f-77d2ffafbefe",
+            "id": "e0ad29dd-9fb5-4e4f-8296-935abcee8fd1",
             "lineitems": [],
             "metadata": [],
             "notes": "Volup conatus cruciamentum decor avaritia.",
             "posted_at": parse_datetime("2023-04-15T21:14:08.197Z"),
             "status": shared.AccountingVendorcreditStatus.AUTHORIZED,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2023-10-03T01:41:32.201Z"),
+            "updated_at": parse_datetime("2023-10-03T04:51:13.945Z"),
         },
         "connection_id": "<id>",
     })
@@ -1631,7 +1633,7 @@ with UnifiedTo(
 
 ## get_accounting_account
 
-Retrieve an account
+Retrieves a single AccountingAccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1678,7 +1680,7 @@ with UnifiedTo(
 
 ## get_accounting_agedpayable
 
-Retrieve an agedpayable
+Retrieves a single AccountingAgedpayable by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1725,7 +1727,7 @@ with UnifiedTo(
 
 ## get_accounting_agedreceivable
 
-Retrieve an agedreceivable
+Retrieves a single AccountingAgedreceivable by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1772,7 +1774,7 @@ with UnifiedTo(
 
 ## get_accounting_balancesheet
 
-Retrieve a balancesheet
+Retrieves a single AccountingBalancesheet by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1819,7 +1821,7 @@ with UnifiedTo(
 
 ## get_accounting_bankfeedaccount
 
-Retrieve a bankfeedaccount
+Retrieves a single AccountingBankfeedaccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1866,7 +1868,7 @@ with UnifiedTo(
 
 ## get_accounting_bankfeedtransaction
 
-Retrieve a bankfeedtransaction
+Retrieves a single AccountingBankfeedtransaction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1913,7 +1915,7 @@ with UnifiedTo(
 
 ## get_accounting_bill
 
-Retrieve a bill
+Retrieves a single AccountingBill by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1960,7 +1962,7 @@ with UnifiedTo(
 
 ## get_accounting_cashflow
 
-Retrieve a cashflow
+Retrieves a single AccountingCashflow by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2007,7 +2009,7 @@ with UnifiedTo(
 
 ## get_accounting_category
 
-Retrieve a category
+Retrieves a single AccountingCategory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2054,7 +2056,7 @@ with UnifiedTo(
 
 ## get_accounting_contact
 
-Retrieve a contact
+Retrieves a single AccountingContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2101,7 +2103,7 @@ with UnifiedTo(
 
 ## get_accounting_creditmemo
 
-Retrieve a creditmemo
+Retrieves a single AccountingCreditmemo by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2148,7 +2150,7 @@ with UnifiedTo(
 
 ## get_accounting_expense
 
-Retrieve an expense
+Retrieves a single AccountingExpense by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2195,7 +2197,7 @@ with UnifiedTo(
 
 ## get_accounting_expensereport
 
-Retrieve an expensereport
+Retrieves a single AccountingExpensereport by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2242,7 +2244,7 @@ with UnifiedTo(
 
 ## get_accounting_invoice
 
-Retrieve an invoice
+Retrieves a single AccountingInvoice by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2289,7 +2291,7 @@ with UnifiedTo(
 
 ## get_accounting_journal
 
-Retrieve a journal
+Retrieves a single AccountingJournal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2334,9 +2336,11 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## get_accounting_order
+## ~~get_accounting_order~~
 
-Retrieve an order
+Retrieves a single AccountingOrder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -2383,7 +2387,7 @@ with UnifiedTo(
 
 ## get_accounting_organization
 
-Retrieve an organization
+Retrieves a single AccountingOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2430,7 +2434,7 @@ with UnifiedTo(
 
 ## get_accounting_paymentterm
 
-Retrieve a paymentterm
+Retrieves a single AccountingPaymentterm by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2477,7 +2481,7 @@ with UnifiedTo(
 
 ## get_accounting_profitloss
 
-Retrieve a profitloss
+Retrieves a single AccountingProfitloss by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2524,7 +2528,7 @@ with UnifiedTo(
 
 ## get_accounting_project
 
-Retrieve a project
+Retrieves a single AccountingProject by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2571,7 +2575,7 @@ with UnifiedTo(
 
 ## get_accounting_purchaseorder
 
-Retrieve a purchaseorder
+Retrieves a single AccountingPurchaseorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2618,7 +2622,7 @@ with UnifiedTo(
 
 ## get_accounting_purchasereceipt
 
-Retrieve a purchasereceipt
+Retrieves a single AccountingPurchasereceipt by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2665,7 +2669,7 @@ with UnifiedTo(
 
 ## get_accounting_quote
 
-Retrieve a quote
+Retrieves a single AccountingQuote by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2712,7 +2716,7 @@ with UnifiedTo(
 
 ## get_accounting_salesorder
 
-Retrieve a salesorder
+Retrieves a single AccountingSalesorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2759,7 +2763,7 @@ with UnifiedTo(
 
 ## get_accounting_salesreceipt
 
-Retrieve a salesreceipt
+Retrieves a single AccountingSalesreceipt by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2806,7 +2810,7 @@ with UnifiedTo(
 
 ## get_accounting_taxrate
 
-Retrieve a taxrate
+Retrieves a single AccountingTaxrate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2853,7 +2857,7 @@ with UnifiedTo(
 
 ## get_accounting_transaction
 
-Retrieve a transaction
+Retrieves a single AccountingTransaction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2900,7 +2904,7 @@ with UnifiedTo(
 
 ## get_accounting_trialbalance
 
-Retrieve a trialbalance
+Retrieves a single AccountingTrialbalance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2947,7 +2951,7 @@ with UnifiedTo(
 
 ## get_accounting_vendorcredit
 
-Retrieve a vendorcredit
+Retrieves a single AccountingVendorcredit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2994,7 +2998,7 @@ with UnifiedTo(
 
 ## list_accounting_accounts
 
-List all accounts
+Returns a list of AccountingAccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3040,7 +3044,7 @@ with UnifiedTo(
 
 ## list_accounting_agedpayables
 
-List all agedpayables
+Returns a list of AccountingAgedpayables. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3086,7 +3090,7 @@ with UnifiedTo(
 
 ## list_accounting_agedreceivables
 
-List all agedreceivables
+Returns a list of AccountingAgedreceivables. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3132,7 +3136,7 @@ with UnifiedTo(
 
 ## list_accounting_balancesheets
 
-List all balancesheets
+Returns a list of AccountingBalancesheets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3178,7 +3182,7 @@ with UnifiedTo(
 
 ## list_accounting_bankfeedaccounts
 
-List all bankfeedaccounts
+Returns a list of AccountingBankfeedaccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3224,7 +3228,7 @@ with UnifiedTo(
 
 ## list_accounting_bankfeedtransactions
 
-List all bankfeedtransactions
+Returns a list of AccountingBankfeedtransactions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3270,7 +3274,7 @@ with UnifiedTo(
 
 ## list_accounting_bills
 
-List all bills
+Returns a list of AccountingBills. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3316,7 +3320,7 @@ with UnifiedTo(
 
 ## list_accounting_cashflows
 
-List all cashflows
+Returns a list of AccountingCashflows. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3362,7 +3366,7 @@ with UnifiedTo(
 
 ## list_accounting_categories
 
-List all categories
+Returns a list of AccountingCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3408,7 +3412,7 @@ with UnifiedTo(
 
 ## list_accounting_contacts
 
-List all contacts
+Returns a list of AccountingContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3454,7 +3458,7 @@ with UnifiedTo(
 
 ## list_accounting_creditmemoes
 
-List all creditmemoes
+Returns a list of AccountingCreditmemoes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3500,7 +3504,7 @@ with UnifiedTo(
 
 ## list_accounting_expensereports
 
-List all expensereports
+Returns a list of AccountingExpensereports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3546,7 +3550,7 @@ with UnifiedTo(
 
 ## list_accounting_expenses
 
-List all expenses
+Returns a list of AccountingExpenses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3592,7 +3596,7 @@ with UnifiedTo(
 
 ## list_accounting_invoices
 
-List all invoices
+Returns a list of AccountingInvoices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3638,7 +3642,7 @@ with UnifiedTo(
 
 ## list_accounting_journals
 
-List all journals
+Returns a list of AccountingJournals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3682,9 +3686,11 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## list_accounting_orders
+## ~~list_accounting_orders~~
 
-List all orders
+Returns a list of AccountingOrders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -3730,7 +3736,7 @@ with UnifiedTo(
 
 ## list_accounting_organizations
 
-List all organizations
+Returns a list of AccountingOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3776,7 +3782,7 @@ with UnifiedTo(
 
 ## list_accounting_paymentterms
 
-List all paymentterms
+Returns a list of AccountingPaymentterms. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3822,7 +3828,7 @@ with UnifiedTo(
 
 ## list_accounting_profitlosses
 
-List all profitlosses
+Returns a list of AccountingProfitlosses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3868,7 +3874,7 @@ with UnifiedTo(
 
 ## list_accounting_projects
 
-List all projects
+Returns a list of AccountingProjects. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3914,7 +3920,7 @@ with UnifiedTo(
 
 ## list_accounting_purchaseorders
 
-List all purchaseorders
+Returns a list of AccountingPurchaseorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3960,7 +3966,7 @@ with UnifiedTo(
 
 ## list_accounting_purchasereceipts
 
-List all purchasereceipts
+Returns a list of AccountingPurchasereceipts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4006,7 +4012,7 @@ with UnifiedTo(
 
 ## list_accounting_quotes
 
-List all quotes
+Returns a list of AccountingQuotes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4052,7 +4058,7 @@ with UnifiedTo(
 
 ## list_accounting_salesorders
 
-List all salesorders
+Returns a list of AccountingSalesorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4098,7 +4104,7 @@ with UnifiedTo(
 
 ## list_accounting_salesreceipts
 
-List all salesreceipts
+Returns a list of AccountingSalesreceipts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4144,7 +4150,7 @@ with UnifiedTo(
 
 ## list_accounting_taxrates
 
-List all taxrates
+Returns a list of AccountingTaxrates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4190,7 +4196,7 @@ with UnifiedTo(
 
 ## list_accounting_transactions
 
-List all transactions
+Returns a list of AccountingTransactions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4236,7 +4242,7 @@ with UnifiedTo(
 
 ## list_accounting_trialbalances
 
-List all trialbalances
+Returns a list of AccountingTrialbalances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4282,7 +4288,7 @@ with UnifiedTo(
 
 ## list_accounting_vendorcredits
 
-List all vendorcredits
+Returns a list of AccountingVendorcredits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4328,7 +4334,7 @@ with UnifiedTo(
 
 ## patch_accounting_account
 
-Update an account
+Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to change in the request body.
 
 ### Example Usage
 
@@ -4352,7 +4358,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "3304d74d-5b42-45cd-824f-cf4c4b71e09d",
+            "id": "b074017e-1dd1-4e9c-9a9a-ba6ae9afe0cc",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -4365,7 +4371,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-06T21:39:36.834Z"),
+            "updated_at": parse_datetime("2023-08-07T03:43:27.336Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -4397,7 +4403,7 @@ with UnifiedTo(
 
 ## patch_accounting_bankfeedaccount
 
-Update a bankfeedaccount
+Updates the AccountingBankfeedaccount identified by `id`. Provide the unified AccountingBankfeedaccount fields to change in the request body.
 
 ### Example Usage
 
@@ -4424,12 +4430,12 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-10-31T16:42:19.277Z"),
             "currency": "AUD",
             "feed_start_at": parse_datetime("2022-10-31T16:42:19.277Z"),
-            "id": "d423cdc2-464f-4d8a-8d72-aa5a223a0968",
+            "id": "8ec2518c-6f9b-4290-93cb-17782db67db4",
             "metadata": [],
             "name": "Corwin, Donnelly and Connelly Checking",
             "routing_number": "694667752",
             "status": shared.AccountingBankfeedaccountStatus.ACTIVE,
-            "updated_at": parse_datetime("2024-04-23T19:54:29.631Z"),
+            "updated_at": parse_datetime("2024-04-24T04:47:33.229Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -4461,7 +4467,7 @@ with UnifiedTo(
 
 ## patch_accounting_bankfeedtransaction
 
-Update a bankfeedtransaction
+Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified AccountingBankfeedtransaction fields to change in the request body.
 
 ### Example Usage
 
@@ -4486,15 +4492,15 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-03-24T23:41:08.374Z"),
             "currency": "CAD",
             "description": "Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781.",
-            "id": "5b2d5916-e88b-4808-b28c-aa9646641043",
+            "id": "b3decb3e-ed00-4600-8302-27158f3ab3e0",
             "is_pending": True,
             "merchant_name": "Buckridge - Feest",
             "metadata": [],
-            "posted_at": parse_datetime("2025-04-14T19:54:37.909Z"),
+            "posted_at": parse_datetime("2025-04-15T11:51:15.898Z"),
             "reference": "79574105",
-            "transaction_at": parse_datetime("2022-07-30T08:09:49.077Z"),
+            "transaction_at": parse_datetime("2022-07-30T09:58:54.153Z"),
             "type": shared.AccountingBankfeedtransactionType.CREDIT,
-            "updated_at": parse_datetime("2022-05-25T01:44:27.954Z"),
+            "updated_at": parse_datetime("2022-05-25T02:36:47.333Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -4526,7 +4532,7 @@ with UnifiedTo(
 
 ## patch_accounting_bill
 
-Update a bill
+Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change in the request body.
 
 ### Example Usage
 
@@ -4548,13 +4554,13 @@ with UnifiedTo(
             "attachments": [
                 {
                     "download_url": "https://puny-foodstuffs.name",
-                    "id": "881aec22-5343-4818-a118-8900356bb85b",
+                    "id": "4527ae4f-25b4-4131-a05b-228a6f649e97",
                     "mime_type": "application/pdf",
                     "name": "BILL-2466.pdf",
                 },
                 {
                     "download_url": "https://grimy-characterization.net",
-                    "id": "f5931690-b366-461f-8f10-5ee077974221",
+                    "id": "5743dca5-30a1-4e95-92ce-8a27d46e5b0c",
                     "mime_type": "application/pdf",
                     "name": "BILL-2466-1.pdf",
                 },
@@ -4567,7 +4573,7 @@ with UnifiedTo(
             "discount_amount": 0.0,
             "due_at": parse_datetime("2019-09-07T23:03:14.104Z"),
             "extended_notes": [],
-            "id": "8b545bca-d301-42f9-99b9-1197ece4b6fb",
+            "id": "ebe23029-ea98-4dc0-a1ec-eb5de14a04e5",
             "lineitems": [],
             "metadata": [],
             "notes": "Admiratio deporto tutamen cilicium infit amissio ante demulceo.",
@@ -4583,7 +4589,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "term": shared.Term.NET_90,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2020-06-01T05:47:37.013Z"),
+            "updated_at": parse_datetime("2020-06-01T08:26:07.748Z"),
             "url": "https://cluttered-importance.org/bills/BILL-2466",
         },
         "connection_id": "<id>",
@@ -4616,7 +4622,7 @@ with UnifiedTo(
 
 ## patch_accounting_category
 
-Update a category
+Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to change in the request body.
 
 ### Example Usage
 
@@ -4637,11 +4643,11 @@ with UnifiedTo(
         "accounting_category": {
             "created_at": parse_datetime("2023-05-30T12:29:04.257Z"),
             "description": "Textus ab thymum labore basium.",
-            "id": "90ee0885-40a9-4987-adf1-5290274d6fce",
+            "id": "20661dee-4099-4eee-9e2e-d361dd190255",
             "is_active": False,
             "metadata": [],
             "name": "Beauty",
-            "updated_at": parse_datetime("2025-09-11T12:07:38.676Z"),
+            "updated_at": parse_datetime("2025-09-12T04:11:51.679Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -4673,7 +4679,7 @@ with UnifiedTo(
 
 ## patch_accounting_contact
 
-Update a contact
+Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to change in the request body.
 
 ### Example Usage
 
@@ -4716,7 +4722,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Delores",
-            "id": "6fa570fa-de91-4dbe-9428-907f6aadbd6e",
+            "id": "2094babf-af16-43a0-af2f-3f8e8126dab1",
             "identification": "531850872",
             "is_active": True,
             "is_customer": True,
@@ -4727,7 +4733,7 @@ with UnifiedTo(
             "payment_methods": [
                 {
                     "default": True,
-                    "id": "9f95e65a-72e5-44c3-915e-fda577dbded5",
+                    "id": "4b732532-2bc6-4d80-8805-357304c02d5a",
                     "name": "Visa 7844",
                     "type": shared.AccountingContactPaymentMethodType.CARD,
                 },
@@ -4749,7 +4755,7 @@ with UnifiedTo(
                     "type": shared.AccountingTelephoneType.FAX,
                 },
             ],
-            "updated_at": parse_datetime("2023-12-19T20:49:07.910Z"),
+            "updated_at": parse_datetime("2023-12-20T07:36:45.925Z"),
             "website": "https://kertzmanngroup.com",
         },
         "connection_id": "<id>",
@@ -4782,7 +4788,7 @@ with UnifiedTo(
 
 ## patch_accounting_creditmemo
 
-Update a creditmemo
+Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields to change in the request body.
 
 ### Example Usage
 
@@ -4808,7 +4814,7 @@ with UnifiedTo(
             "creditmemo_number": "CM-99537",
             "currency": "AUD",
             "discount_amount": 0.0,
-            "id": "3ad508d5-8642-4842-906d-c6820cefea1d",
+            "id": "8a145713-1fbd-40e2-b361-bdd9b06ef0da",
             "lineitems": [],
             "metadata": [],
             "notes": "Hic vorax dedecor amo adfero torqueo quas victoria.",
@@ -4817,7 +4823,7 @@ with UnifiedTo(
             "status": shared.AccountingCreditmemoStatus.AUTHORIZED,
             "tax_amount": 0.0,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2025-09-11T07:54:08.437Z"),
+            "updated_at": parse_datetime("2025-09-11T23:11:29.409Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -4849,7 +4855,7 @@ with UnifiedTo(
 
 ## patch_accounting_expense
 
-Update an expense
+Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to change in the request body.
 
 ### Example Usage
 
@@ -4871,13 +4877,13 @@ with UnifiedTo(
             "attachments": [
                 {
                     "download_url": "https://rubbery-couch.biz/",
-                    "id": "7f5e8f6d-5b67-4bdc-b3a6-795a979a7cc5",
+                    "id": "d58b40c5-3bab-4eb8-8953-45045eb60e9f",
                     "mime_type": "application/pdf",
                     "name": "receipt-9696.pdf",
                 },
                 {
                     "download_url": "https://appropriate-smog.biz/",
-                    "id": "ab8c8763-5658-4312-a40a-af59795cc07d",
+                    "id": "77647132-cdbd-485d-a2c5-c2ea5ce89131",
                     "mime_type": "application/pdf",
                     "name": "receipt-9696-1.pdf",
                 },
@@ -4886,10 +4892,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-06-11T03:39:37.305Z"),
             "currency": "GBP",
             "external_number": "EXP-38303",
-            "id": "78c59949-bd64-4224-8a44-3fa8c82c9203",
+            "id": "542e253e-9be2-4769-9e7b-513144533652",
             "lineitems": [
                 {
-                    "id": "e92b05c0-da82-47b3-ad05-9d94ca454984",
+                    "id": "077d67ff-ee2e-4c5f-ac4f-bb6481113a38",
                     "item_name": "Client dinner",
                     "tax_amount": 0.0,
                     "total_amount": 364.74,
@@ -4897,7 +4903,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "ca6e2f57-3d8f-4ac3-bcca-8c430730ff96",
+                    "id": "0906ed39-7dae-456f-9c82-077543591acd",
                     "item_name": "Client dinner",
                     "tax_amount": 0.0,
                     "total_amount": 258.35,
@@ -4905,7 +4911,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "08ef5c05-24c7-4be6-b6c5-0d630ff7d3d4",
+                    "id": "f4ae5862-e96c-4dbc-a116-2f9d71403708",
                     "item_name": "Conference ticket",
                     "notes": "Casus umquam conicio cinis demitto sint.",
                     "tax_amount": 0.0,
@@ -4914,7 +4920,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "5de53bde-a8d8-4377-8512-14e14c509d2d",
+                    "id": "9ad8a271-29b8-4c2f-a966-e56e1d5fa671",
                     "item_name": "Hotel",
                     "tax_amount": 0.0,
                     "total_amount": 157.04,
@@ -4922,7 +4928,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "15520258-90ea-47af-95e0-9a053f927ecd",
+                    "id": "e783cbf5-5d97-4777-8798-596b0362a0c4",
                     "item_name": "Hotel",
                     "tax_amount": 0.0,
                     "total_amount": 164.02,
@@ -4938,7 +4944,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "total_amount": 972.29,
             "type": shared.AccountingExpenseType.COMPANY,
-            "updated_at": parse_datetime("2020-09-02T07:17:01.301Z"),
+            "updated_at": parse_datetime("2020-09-02T08:08:15.489Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -4970,7 +4976,7 @@ with UnifiedTo(
 
 ## patch_accounting_expensereport
 
-Update an expensereport
+Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport fields to change in the request body.
 
 ### Example Usage
 
@@ -4989,16 +4995,16 @@ with UnifiedTo(
 
     res = unified_to.accounting.patch_accounting_expensereport(request={
         "accounting_expensereport": {
-            "approved_at": parse_datetime("2021-04-19T11:28:31.627Z"),
+            "approved_at": parse_datetime("2021-04-19T14:47:54.430Z"),
             "attachments": [],
             "category_ids": [],
             "created_at": parse_datetime("2020-05-29T02:04:59.078Z"),
             "currency": "GBP",
             "external_number": "ER-31240",
-            "id": "2d99a3aa-894c-4130-9a8b-c6c1fea59f58",
+            "id": "1b57eed0-0948-4c2c-ba32-0a52df93900d",
             "lineitems": [
                 {
-                    "id": "47beed38-a624-45e4-897a-794497ae9250",
+                    "id": "4e409aba-062b-4ec0-b9af-9462ba902709",
                     "item_name": "Conference ticket",
                     "tax_amount": 0.0,
                     "total_amount": 39.9,
@@ -5006,7 +5012,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "45b133d0-943b-4580-9d37-96301611ed33",
+                    "id": "1dd8e1a0-b6d8-4a6c-8239-d72cb82a1105",
                     "item_name": "Flight",
                     "notes": "Soluta omnis dolor.",
                     "tax_amount": 0.0,
@@ -5015,7 +5021,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "3abdb02e-5254-4d4f-91b3-e7915ea52258",
+                    "id": "1ad82fac-e61b-4489-a4f7-d30d02679c5b",
                     "item_name": "Client dinner",
                     "notes": "Altus caveo capio.",
                     "tax_amount": 0.0,
@@ -5024,7 +5030,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "44a7fd29-a498-434a-8bcb-c67bdb6e4632",
+                    "id": "37c9f695-3e6f-44d4-9276-53746b40a05c",
                     "item_name": "Flight",
                     "tax_amount": 0.0,
                     "total_amount": 445.27,
@@ -5036,11 +5042,11 @@ with UnifiedTo(
             "name": "Lolita Kunde - October expenses",
             "posted_at": parse_datetime("2020-05-29T02:04:59.078Z"),
             "reimbursed_amount": 908.46,
-            "reimbursed_at": parse_datetime("2021-04-19T11:28:31.627Z"),
+            "reimbursed_at": parse_datetime("2021-04-19T14:47:54.430Z"),
             "status": shared.AccountingExpensereportStatus.PAID,
             "tax_amount": 0.0,
             "total_amount": 908.46,
-            "updated_at": parse_datetime("2021-04-19T11:28:31.627Z"),
+            "updated_at": parse_datetime("2021-04-19T14:47:54.430Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -5072,7 +5078,7 @@ with UnifiedTo(
 
 ## patch_accounting_invoice
 
-Update an invoice
+Updates the AccountingInvoice identified by `id`. Provide the unified AccountingInvoice fields to change in the request body.
 
 ### Example Usage
 
@@ -5094,13 +5100,13 @@ with UnifiedTo(
             "attachments": [
                 {
                     "download_url": "https://glossy-markup.net/",
-                    "id": "f53b24c3-e4b4-4b63-9ca3-a217cf37ed77",
+                    "id": "1614570e-8426-44b9-a5b3-9ed962bb37fe",
                     "mime_type": "application/pdf",
                     "name": "INV-77705.pdf",
                 },
                 {
                     "download_url": "https://earnest-giggle.net",
-                    "id": "8b7e8a9d-a64c-40a7-8e73-015681e8d6b3",
+                    "id": "e4c33475-8125-472b-b327-5a7e63b662ad",
                     "mime_type": "application/pdf",
                     "name": "INV-77705-1.pdf",
                 },
@@ -5112,7 +5118,7 @@ with UnifiedTo(
             "discount_amount": 0.0,
             "due_at": parse_datetime("2022-12-07T14:17:29.587Z"),
             "extended_notes": [],
-            "id": "723b6a86-69df-4120-b5f1-f0aa4ee07386",
+            "id": "3b31841e-3d5f-4920-ae4f-5fbe81bd9de0",
             "invoice_number": "INV-77705",
             "is_inclusive_of_tax": False,
             "lineitems": [],
@@ -5130,7 +5136,7 @@ with UnifiedTo(
             "term": shared.AccountingInvoiceTerm.NET_25,
             "total_amount": 0.0,
             "type": shared.AccountingInvoiceType.INVOICE,
-            "updated_at": parse_datetime("2026-04-23T12:59:17.076Z"),
+            "updated_at": parse_datetime("2026-04-24T09:51:39.899Z"),
             "url": "https://gifted-yarmulke.info/invoices/INV-77705",
         },
         "connection_id": "<id>",
@@ -5163,7 +5169,7 @@ with UnifiedTo(
 
 ## patch_accounting_journal
 
-Update a journal
+Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to change in the request body.
 
 ### Example Usage
 
@@ -5187,16 +5193,16 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-02-20T15:14:55.881Z"),
             "currency": "CAD",
             "description": "Cilicium minima calco constans adipisci.",
-            "id": "b5c79f1c-5f37-418b-8fed-ac844859c529",
+            "id": "3975395e-fb4b-446b-9434-0530f747cc4f",
             "is_inclusive_of_tax": True,
             "lineitems": [],
             "metadata": [],
-            "posted_at": parse_datetime("2023-11-06T10:38:03.690Z"),
+            "posted_at": parse_datetime("2023-11-06T23:54:38.655Z"),
             "reference": "JE-78884",
             "source": "crustulum",
             "status": shared.AccountingJournalStatus.VOID,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2022-01-10T19:41:25.963Z"),
+            "updated_at": parse_datetime("2022-01-11T02:27:14.342Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -5226,9 +5232,11 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## patch_accounting_order
+## ~~patch_accounting_order~~
 
-Update an order
+Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change in the request body.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -5257,7 +5265,7 @@ with UnifiedTo(
             },
             "created_at": parse_datetime("2020-11-20T03:46:49.837Z"),
             "currency": "GBP",
-            "id": "f413b6fd-062c-426c-b63b-3a8e57117196",
+            "id": "a2722865-e3c2-4eb8-9c96-bde5f90cfaf2",
             "lineitems": [],
             "metadata": [],
             "posted_at": parse_datetime("2020-11-20T03:46:49.837Z"),
@@ -5272,7 +5280,7 @@ with UnifiedTo(
             "status": shared.AccountingOrderStatus.AUTHORIZED,
             "total_amount": 0.0,
             "type": shared.AccountingOrderType.SALES,
-            "updated_at": parse_datetime("2022-02-08T07:17:50.358Z"),
+            "updated_at": parse_datetime("2022-02-08T12:12:41.895Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -5304,7 +5312,7 @@ with UnifiedTo(
 
 ## patch_accounting_paymentterm
 
-Update a paymentterm
+Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm fields to change in the request body.
 
 ### Example Usage
 
@@ -5332,12 +5340,12 @@ with UnifiedTo(
             "discount_percent": 5.0,
             "due_days": 57.0,
             "due_next_month_days": 9.0,
-            "id": "37df86e8-8bdf-41a1-b539-8ce5baedf25b",
+            "id": "61ff1f8f-4985-4e40-a8d4-ff7eb3f02792",
             "is_active": False,
             "metadata": [],
             "name": "Net 30",
             "type": shared.AccountingPaymenttermType.NET_15,
-            "updated_at": parse_datetime("2026-01-08T11:08:28.870Z"),
+            "updated_at": parse_datetime("2026-01-09T07:22:59.471Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -5369,7 +5377,7 @@ with UnifiedTo(
 
 ## patch_accounting_project
 
-Update a project
+Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to change in the request body.
 
 ### Example Usage
 
@@ -5417,7 +5425,7 @@ with UnifiedTo(
 
 ## patch_accounting_purchaseorder
 
-Update a purchaseorder
+Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder fields to change in the request body.
 
 ### Example Usage
 
@@ -5449,7 +5457,7 @@ with UnifiedTo(
             "category_ids": [],
             "created_at": parse_datetime("2020-12-12T07:17:47.021Z"),
             "currency": "EUR",
-            "id": "634738ef-70cb-4ce1-9001-a9bc488b5cef",
+            "id": "a416ea74-f483-42a8-8e48-58535d9028ce",
             "lineitems": [],
             "metadata": [],
             "posted_at": parse_datetime("2020-12-12T07:17:47.021Z"),
@@ -5463,7 +5471,7 @@ with UnifiedTo(
             },
             "status": shared.AccountingPurchaseorderStatus.SUBMITTED,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2021-08-11T05:59:49.636Z"),
+            "updated_at": parse_datetime("2021-08-11T08:41:44.890Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -5495,7 +5503,7 @@ with UnifiedTo(
 
 ## patch_accounting_quote
 
-Update a quote
+Updates the AccountingQuote identified by `id`. Provide the unified AccountingQuote fields to change in the request body.
 
 ### Example Usage
 
@@ -5543,7 +5551,7 @@ with UnifiedTo(
 
 ## patch_accounting_salesorder
 
-Update a salesorder
+Updates the AccountingSalesorder identified by `id`. Provide the unified AccountingSalesorder fields to change in the request body.
 
 ### Example Usage
 
@@ -5572,13 +5580,13 @@ with UnifiedTo(
                 "region_code": "MO",
             },
             "category_ids": [],
-            "closed_at": parse_datetime("2023-03-25T12:56:07.875Z"),
+            "closed_at": parse_datetime("2023-03-25T18:51:55.597Z"),
             "created_at": parse_datetime("2022-01-17T16:11:50.310Z"),
             "currency": "USD",
             "discount_amount": 0.0,
             "fees": [],
             "fulfillment_type": shared.FulfillmentType.OTHER,
-            "id": "0b6e3f77-ddfb-40ee-bced-b13bab0db7b6",
+            "id": "eb857dee-e60e-475f-bdcd-edb5a376f942",
             "lineitems": [],
             "metadata": [],
             "order_number": "832663",
@@ -5600,7 +5608,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "tip_amount": 0.0,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2023-03-25T12:56:07.875Z"),
+            "updated_at": parse_datetime("2023-03-25T18:51:55.597Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -5632,7 +5640,7 @@ with UnifiedTo(
 
 ## patch_accounting_taxrate
 
-Update a taxrate
+Updates the AccountingTaxrate identified by `id`. Provide the unified AccountingTaxrate fields to change in the request body.
 
 ### Example Usage
 
@@ -5662,7 +5670,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-01-04T10:37:56.894Z"),
             "description": "Exempt (0%)",
             "effective_rate": 0.0,
-            "id": "101de838-4e26-4409-ae5d-3840d8be378b",
+            "id": "6fadebf2-8c72-4fb3-97f5-5057ddd19842",
             "is_active": False,
             "is_compound": False,
             "metadata": [],
@@ -5671,7 +5679,7 @@ with UnifiedTo(
             "region": "KS",
             "total_rate": 0.0,
             "type": shared.AccountingTaxrateType.SALES,
-            "updated_at": parse_datetime("2020-02-13T05:09:46.313Z"),
+            "updated_at": parse_datetime("2020-02-13T05:32:42.700Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -5703,7 +5711,7 @@ with UnifiedTo(
 
 ## patch_accounting_transaction
 
-Update a transaction
+Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction fields to change in the request body.
 
 ### Example Usage
 
@@ -5723,12 +5731,12 @@ with UnifiedTo(
     res = unified_to.accounting.patch_accounting_transaction(request={
         "accounting_transaction": {
             "created_at": parse_datetime("2019-09-25T11:40:42.574Z"),
-            "id": "653c6524-7f22-4944-81c8-880be085e034",
+            "id": "22225963-66fb-48f2-9300-11e70830bb12",
             "lineitems": [
                 {
                     "category_ids": [],
                     "description": "The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability",
-                    "id": "4587fa53-e4f7-4468-b0ff-7c8d83fb147b",
+                    "id": "577033d5-6fa9-46c2-938e-3831528b30c8",
                     "name": "Shirt",
                     "total_amount": 10184.0,
                     "unit_amount": 536.0,
@@ -5740,7 +5748,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "total_amount": 10184.0,
             "transaction_at": parse_datetime("2019-09-25T11:40:42.574Z"),
-            "updated_at": parse_datetime("2019-10-14T06:08:27.202Z"),
+            "updated_at": parse_datetime("2019-10-14T06:18:51.360Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -5772,7 +5780,7 @@ with UnifiedTo(
 
 ## patch_accounting_vendorcredit
 
-Update a vendorcredit
+Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit fields to change in the request body.
 
 ### Example Usage
 
@@ -5795,14 +5803,14 @@ with UnifiedTo(
             "balance_amount": 0.0,
             "created_at": parse_datetime("2023-04-15T21:14:08.197Z"),
             "currency": "USD",
-            "id": "d61ee6a8-e40a-4843-b35b-d2e78958d029",
+            "id": "4e28d8ea-334a-44d8-a5ac-bdb5cce5570b",
             "lineitems": [],
             "metadata": [],
             "notes": "Volup conatus cruciamentum decor avaritia.",
             "posted_at": parse_datetime("2023-04-15T21:14:08.197Z"),
             "status": shared.AccountingVendorcreditStatus.AUTHORIZED,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2023-10-03T01:41:32.211Z"),
+            "updated_at": parse_datetime("2023-10-03T04:51:13.949Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -5834,7 +5842,7 @@ with UnifiedTo(
 
 ## remove_accounting_account
 
-Remove an account
+Deletes the AccountingAccount identified by `id`.
 
 ### Example Usage
 
@@ -5881,7 +5889,7 @@ with UnifiedTo(
 
 ## remove_accounting_bankfeedaccount
 
-Remove a bankfeedaccount
+Deletes the AccountingBankfeedaccount identified by `id`.
 
 ### Example Usage
 
@@ -5928,7 +5936,7 @@ with UnifiedTo(
 
 ## remove_accounting_bankfeedtransaction
 
-Remove a bankfeedtransaction
+Deletes the AccountingBankfeedtransaction identified by `id`.
 
 ### Example Usage
 
@@ -5975,7 +5983,7 @@ with UnifiedTo(
 
 ## remove_accounting_bill
 
-Remove a bill
+Deletes the AccountingBill identified by `id`.
 
 ### Example Usage
 
@@ -6022,7 +6030,7 @@ with UnifiedTo(
 
 ## remove_accounting_category
 
-Remove a category
+Deletes the AccountingCategory identified by `id`.
 
 ### Example Usage
 
@@ -6069,7 +6077,7 @@ with UnifiedTo(
 
 ## remove_accounting_contact
 
-Remove a contact
+Deletes the AccountingContact identified by `id`.
 
 ### Example Usage
 
@@ -6116,7 +6124,7 @@ with UnifiedTo(
 
 ## remove_accounting_creditmemo
 
-Remove a creditmemo
+Deletes the AccountingCreditmemo identified by `id`.
 
 ### Example Usage
 
@@ -6163,7 +6171,7 @@ with UnifiedTo(
 
 ## remove_accounting_expense
 
-Remove an expense
+Deletes the AccountingExpense identified by `id`.
 
 ### Example Usage
 
@@ -6210,7 +6218,7 @@ with UnifiedTo(
 
 ## remove_accounting_expensereport
 
-Remove an expensereport
+Deletes the AccountingExpensereport identified by `id`.
 
 ### Example Usage
 
@@ -6257,7 +6265,7 @@ with UnifiedTo(
 
 ## remove_accounting_invoice
 
-Remove an invoice
+Deletes the AccountingInvoice identified by `id`.
 
 ### Example Usage
 
@@ -6304,7 +6312,7 @@ with UnifiedTo(
 
 ## remove_accounting_journal
 
-Remove a journal
+Deletes the AccountingJournal identified by `id`.
 
 ### Example Usage
 
@@ -6349,9 +6357,11 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## remove_accounting_order
+## ~~remove_accounting_order~~
 
-Remove an order
+Deletes the AccountingOrder identified by `id`.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -6398,7 +6408,7 @@ with UnifiedTo(
 
 ## remove_accounting_paymentterm
 
-Remove a paymentterm
+Deletes the AccountingPaymentterm identified by `id`.
 
 ### Example Usage
 
@@ -6445,7 +6455,7 @@ with UnifiedTo(
 
 ## remove_accounting_project
 
-Remove a project
+Deletes the AccountingProject identified by `id`.
 
 ### Example Usage
 
@@ -6492,7 +6502,7 @@ with UnifiedTo(
 
 ## remove_accounting_purchaseorder
 
-Remove a purchaseorder
+Deletes the AccountingPurchaseorder identified by `id`.
 
 ### Example Usage
 
@@ -6539,7 +6549,7 @@ with UnifiedTo(
 
 ## remove_accounting_quote
 
-Remove a quote
+Deletes the AccountingQuote identified by `id`.
 
 ### Example Usage
 
@@ -6586,7 +6596,7 @@ with UnifiedTo(
 
 ## remove_accounting_salesorder
 
-Remove a salesorder
+Deletes the AccountingSalesorder identified by `id`.
 
 ### Example Usage
 
@@ -6633,7 +6643,7 @@ with UnifiedTo(
 
 ## remove_accounting_taxrate
 
-Remove a taxrate
+Deletes the AccountingTaxrate identified by `id`.
 
 ### Example Usage
 
@@ -6680,7 +6690,7 @@ with UnifiedTo(
 
 ## remove_accounting_transaction
 
-Remove a transaction
+Deletes the AccountingTransaction identified by `id`.
 
 ### Example Usage
 
@@ -6727,7 +6737,7 @@ with UnifiedTo(
 
 ## remove_accounting_vendorcredit
 
-Remove a vendorcredit
+Deletes the AccountingVendorcredit identified by `id`.
 
 ### Example Usage
 
@@ -6774,7 +6784,7 @@ with UnifiedTo(
 
 ## update_accounting_account
 
-Update an account
+Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to change in the request body.
 
 ### Example Usage
 
@@ -6798,7 +6808,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "3304d74d-5b42-45cd-824f-cf4c4b71e09d",
+            "id": "b074017e-1dd1-4e9c-9a9a-ba6ae9afe0cc",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -6811,7 +6821,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-06T21:39:36.834Z"),
+            "updated_at": parse_datetime("2023-08-07T03:43:27.336Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -6843,7 +6853,7 @@ with UnifiedTo(
 
 ## update_accounting_bankfeedaccount
 
-Update a bankfeedaccount
+Updates the AccountingBankfeedaccount identified by `id`. Provide the unified AccountingBankfeedaccount fields to change in the request body.
 
 ### Example Usage
 
@@ -6870,12 +6880,12 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-10-31T16:42:19.277Z"),
             "currency": "AUD",
             "feed_start_at": parse_datetime("2022-10-31T16:42:19.277Z"),
-            "id": "d423cdc2-464f-4d8a-8d72-aa5a223a0968",
+            "id": "8ec2518c-6f9b-4290-93cb-17782db67db4",
             "metadata": [],
             "name": "Corwin, Donnelly and Connelly Checking",
             "routing_number": "694667752",
             "status": shared.AccountingBankfeedaccountStatus.ACTIVE,
-            "updated_at": parse_datetime("2024-04-23T19:54:29.631Z"),
+            "updated_at": parse_datetime("2024-04-24T04:47:33.229Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -6907,7 +6917,7 @@ with UnifiedTo(
 
 ## update_accounting_bankfeedtransaction
 
-Update a bankfeedtransaction
+Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified AccountingBankfeedtransaction fields to change in the request body.
 
 ### Example Usage
 
@@ -6932,15 +6942,15 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-03-24T23:41:08.374Z"),
             "currency": "CAD",
             "description": "Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781.",
-            "id": "5b2d5916-e88b-4808-b28c-aa9646641043",
+            "id": "b3decb3e-ed00-4600-8302-27158f3ab3e0",
             "is_pending": True,
             "merchant_name": "Buckridge - Feest",
             "metadata": [],
-            "posted_at": parse_datetime("2025-04-14T19:54:37.909Z"),
+            "posted_at": parse_datetime("2025-04-15T11:51:15.898Z"),
             "reference": "79574105",
-            "transaction_at": parse_datetime("2022-07-30T08:09:49.077Z"),
+            "transaction_at": parse_datetime("2022-07-30T09:58:54.153Z"),
             "type": shared.AccountingBankfeedtransactionType.CREDIT,
-            "updated_at": parse_datetime("2022-05-25T01:44:27.954Z"),
+            "updated_at": parse_datetime("2022-05-25T02:36:47.333Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -6972,7 +6982,7 @@ with UnifiedTo(
 
 ## update_accounting_bill
 
-Update a bill
+Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change in the request body.
 
 ### Example Usage
 
@@ -6994,13 +7004,13 @@ with UnifiedTo(
             "attachments": [
                 {
                     "download_url": "https://puny-foodstuffs.name",
-                    "id": "881aec22-5343-4818-a118-8900356bb85b",
+                    "id": "4527ae4f-25b4-4131-a05b-228a6f649e97",
                     "mime_type": "application/pdf",
                     "name": "BILL-2466.pdf",
                 },
                 {
                     "download_url": "https://grimy-characterization.net",
-                    "id": "f5931690-b366-461f-8f10-5ee077974221",
+                    "id": "5743dca5-30a1-4e95-92ce-8a27d46e5b0c",
                     "mime_type": "application/pdf",
                     "name": "BILL-2466-1.pdf",
                 },
@@ -7013,7 +7023,7 @@ with UnifiedTo(
             "discount_amount": 0.0,
             "due_at": parse_datetime("2019-09-07T23:03:14.104Z"),
             "extended_notes": [],
-            "id": "8b545bca-d301-42f9-99b9-1197ece4b6fb",
+            "id": "ebe23029-ea98-4dc0-a1ec-eb5de14a04e5",
             "lineitems": [],
             "metadata": [],
             "notes": "Admiratio deporto tutamen cilicium infit amissio ante demulceo.",
@@ -7029,7 +7039,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "term": shared.Term.NET_90,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2020-06-01T05:47:37.013Z"),
+            "updated_at": parse_datetime("2020-06-01T08:26:07.748Z"),
             "url": "https://cluttered-importance.org/bills/BILL-2466",
         },
         "connection_id": "<id>",
@@ -7062,7 +7072,7 @@ with UnifiedTo(
 
 ## update_accounting_category
 
-Update a category
+Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to change in the request body.
 
 ### Example Usage
 
@@ -7083,11 +7093,11 @@ with UnifiedTo(
         "accounting_category": {
             "created_at": parse_datetime("2023-05-30T12:29:04.257Z"),
             "description": "Textus ab thymum labore basium.",
-            "id": "90ee0885-40a9-4987-adf1-5290274d6fce",
+            "id": "20661dee-4099-4eee-9e2e-d361dd190255",
             "is_active": False,
             "metadata": [],
             "name": "Beauty",
-            "updated_at": parse_datetime("2025-09-11T12:07:38.676Z"),
+            "updated_at": parse_datetime("2025-09-12T04:11:51.679Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -7119,7 +7129,7 @@ with UnifiedTo(
 
 ## update_accounting_contact
 
-Update a contact
+Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to change in the request body.
 
 ### Example Usage
 
@@ -7162,7 +7172,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Delores",
-            "id": "6fa570fa-de91-4dbe-9428-907f6aadbd6e",
+            "id": "2094babf-af16-43a0-af2f-3f8e8126dab1",
             "identification": "531850872",
             "is_active": True,
             "is_customer": True,
@@ -7173,7 +7183,7 @@ with UnifiedTo(
             "payment_methods": [
                 {
                     "default": True,
-                    "id": "9f95e65a-72e5-44c3-915e-fda577dbded5",
+                    "id": "4b732532-2bc6-4d80-8805-357304c02d5a",
                     "name": "Visa 7844",
                     "type": shared.AccountingContactPaymentMethodType.CARD,
                 },
@@ -7195,7 +7205,7 @@ with UnifiedTo(
                     "type": shared.AccountingTelephoneType.FAX,
                 },
             ],
-            "updated_at": parse_datetime("2023-12-19T20:49:07.910Z"),
+            "updated_at": parse_datetime("2023-12-20T07:36:45.925Z"),
             "website": "https://kertzmanngroup.com",
         },
         "connection_id": "<id>",
@@ -7228,7 +7238,7 @@ with UnifiedTo(
 
 ## update_accounting_creditmemo
 
-Update a creditmemo
+Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields to change in the request body.
 
 ### Example Usage
 
@@ -7254,7 +7264,7 @@ with UnifiedTo(
             "creditmemo_number": "CM-99537",
             "currency": "AUD",
             "discount_amount": 0.0,
-            "id": "3ad508d5-8642-4842-906d-c6820cefea1d",
+            "id": "8a145713-1fbd-40e2-b361-bdd9b06ef0da",
             "lineitems": [],
             "metadata": [],
             "notes": "Hic vorax dedecor amo adfero torqueo quas victoria.",
@@ -7263,7 +7273,7 @@ with UnifiedTo(
             "status": shared.AccountingCreditmemoStatus.AUTHORIZED,
             "tax_amount": 0.0,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2025-09-11T07:54:08.437Z"),
+            "updated_at": parse_datetime("2025-09-11T23:11:29.409Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -7295,7 +7305,7 @@ with UnifiedTo(
 
 ## update_accounting_expense
 
-Update an expense
+Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to change in the request body.
 
 ### Example Usage
 
@@ -7317,13 +7327,13 @@ with UnifiedTo(
             "attachments": [
                 {
                     "download_url": "https://rubbery-couch.biz/",
-                    "id": "7f5e8f6d-5b67-4bdc-b3a6-795a979a7cc5",
+                    "id": "d58b40c5-3bab-4eb8-8953-45045eb60e9f",
                     "mime_type": "application/pdf",
                     "name": "receipt-9696.pdf",
                 },
                 {
                     "download_url": "https://appropriate-smog.biz/",
-                    "id": "ab8c8763-5658-4312-a40a-af59795cc07d",
+                    "id": "77647132-cdbd-485d-a2c5-c2ea5ce89131",
                     "mime_type": "application/pdf",
                     "name": "receipt-9696-1.pdf",
                 },
@@ -7332,10 +7342,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-06-11T03:39:37.305Z"),
             "currency": "GBP",
             "external_number": "EXP-38303",
-            "id": "78c59949-bd64-4224-8a44-3fa8c82c9203",
+            "id": "542e253e-9be2-4769-9e7b-513144533652",
             "lineitems": [
                 {
-                    "id": "e92b05c0-da82-47b3-ad05-9d94ca454984",
+                    "id": "077d67ff-ee2e-4c5f-ac4f-bb6481113a38",
                     "item_name": "Client dinner",
                     "tax_amount": 0.0,
                     "total_amount": 364.74,
@@ -7343,7 +7353,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "ca6e2f57-3d8f-4ac3-bcca-8c430730ff96",
+                    "id": "0906ed39-7dae-456f-9c82-077543591acd",
                     "item_name": "Client dinner",
                     "tax_amount": 0.0,
                     "total_amount": 258.35,
@@ -7351,7 +7361,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "08ef5c05-24c7-4be6-b6c5-0d630ff7d3d4",
+                    "id": "f4ae5862-e96c-4dbc-a116-2f9d71403708",
                     "item_name": "Conference ticket",
                     "notes": "Casus umquam conicio cinis demitto sint.",
                     "tax_amount": 0.0,
@@ -7360,7 +7370,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "5de53bde-a8d8-4377-8512-14e14c509d2d",
+                    "id": "9ad8a271-29b8-4c2f-a966-e56e1d5fa671",
                     "item_name": "Hotel",
                     "tax_amount": 0.0,
                     "total_amount": 157.04,
@@ -7368,7 +7378,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "15520258-90ea-47af-95e0-9a053f927ecd",
+                    "id": "e783cbf5-5d97-4777-8798-596b0362a0c4",
                     "item_name": "Hotel",
                     "tax_amount": 0.0,
                     "total_amount": 164.02,
@@ -7384,7 +7394,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "total_amount": 972.29,
             "type": shared.AccountingExpenseType.COMPANY,
-            "updated_at": parse_datetime("2020-09-02T07:17:01.301Z"),
+            "updated_at": parse_datetime("2020-09-02T08:08:15.489Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -7416,7 +7426,7 @@ with UnifiedTo(
 
 ## update_accounting_expensereport
 
-Update an expensereport
+Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport fields to change in the request body.
 
 ### Example Usage
 
@@ -7435,16 +7445,16 @@ with UnifiedTo(
 
     res = unified_to.accounting.update_accounting_expensereport(request={
         "accounting_expensereport": {
-            "approved_at": parse_datetime("2021-04-19T11:28:31.627Z"),
+            "approved_at": parse_datetime("2021-04-19T14:47:54.430Z"),
             "attachments": [],
             "category_ids": [],
             "created_at": parse_datetime("2020-05-29T02:04:59.078Z"),
             "currency": "GBP",
             "external_number": "ER-31240",
-            "id": "2d99a3aa-894c-4130-9a8b-c6c1fea59f58",
+            "id": "1b57eed0-0948-4c2c-ba32-0a52df93900d",
             "lineitems": [
                 {
-                    "id": "47beed38-a624-45e4-897a-794497ae9250",
+                    "id": "4e409aba-062b-4ec0-b9af-9462ba902709",
                     "item_name": "Conference ticket",
                     "tax_amount": 0.0,
                     "total_amount": 39.9,
@@ -7452,7 +7462,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "45b133d0-943b-4580-9d37-96301611ed33",
+                    "id": "1dd8e1a0-b6d8-4a6c-8239-d72cb82a1105",
                     "item_name": "Flight",
                     "notes": "Soluta omnis dolor.",
                     "tax_amount": 0.0,
@@ -7461,7 +7471,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "3abdb02e-5254-4d4f-91b3-e7915ea52258",
+                    "id": "1ad82fac-e61b-4489-a4f7-d30d02679c5b",
                     "item_name": "Client dinner",
                     "notes": "Altus caveo capio.",
                     "tax_amount": 0.0,
@@ -7470,7 +7480,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "44a7fd29-a498-434a-8bcb-c67bdb6e4632",
+                    "id": "37c9f695-3e6f-44d4-9276-53746b40a05c",
                     "item_name": "Flight",
                     "tax_amount": 0.0,
                     "total_amount": 445.27,
@@ -7482,11 +7492,11 @@ with UnifiedTo(
             "name": "Lolita Kunde - October expenses",
             "posted_at": parse_datetime("2020-05-29T02:04:59.078Z"),
             "reimbursed_amount": 908.46,
-            "reimbursed_at": parse_datetime("2021-04-19T11:28:31.627Z"),
+            "reimbursed_at": parse_datetime("2021-04-19T14:47:54.430Z"),
             "status": shared.AccountingExpensereportStatus.PAID,
             "tax_amount": 0.0,
             "total_amount": 908.46,
-            "updated_at": parse_datetime("2021-04-19T11:28:31.627Z"),
+            "updated_at": parse_datetime("2021-04-19T14:47:54.430Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -7518,7 +7528,7 @@ with UnifiedTo(
 
 ## update_accounting_invoice
 
-Update an invoice
+Updates the AccountingInvoice identified by `id`. Provide the unified AccountingInvoice fields to change in the request body.
 
 ### Example Usage
 
@@ -7540,13 +7550,13 @@ with UnifiedTo(
             "attachments": [
                 {
                     "download_url": "https://glossy-markup.net/",
-                    "id": "f53b24c3-e4b4-4b63-9ca3-a217cf37ed77",
+                    "id": "1614570e-8426-44b9-a5b3-9ed962bb37fe",
                     "mime_type": "application/pdf",
                     "name": "INV-77705.pdf",
                 },
                 {
                     "download_url": "https://earnest-giggle.net",
-                    "id": "8b7e8a9d-a64c-40a7-8e73-015681e8d6b3",
+                    "id": "e4c33475-8125-472b-b327-5a7e63b662ad",
                     "mime_type": "application/pdf",
                     "name": "INV-77705-1.pdf",
                 },
@@ -7558,7 +7568,7 @@ with UnifiedTo(
             "discount_amount": 0.0,
             "due_at": parse_datetime("2022-12-07T14:17:29.587Z"),
             "extended_notes": [],
-            "id": "723b6a86-69df-4120-b5f1-f0aa4ee07386",
+            "id": "3b31841e-3d5f-4920-ae4f-5fbe81bd9de0",
             "invoice_number": "INV-77705",
             "is_inclusive_of_tax": False,
             "lineitems": [],
@@ -7576,7 +7586,7 @@ with UnifiedTo(
             "term": shared.AccountingInvoiceTerm.NET_25,
             "total_amount": 0.0,
             "type": shared.AccountingInvoiceType.INVOICE,
-            "updated_at": parse_datetime("2026-04-23T12:59:17.076Z"),
+            "updated_at": parse_datetime("2026-04-24T09:51:39.899Z"),
             "url": "https://gifted-yarmulke.info/invoices/INV-77705",
         },
         "connection_id": "<id>",
@@ -7609,7 +7619,7 @@ with UnifiedTo(
 
 ## update_accounting_journal
 
-Update a journal
+Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to change in the request body.
 
 ### Example Usage
 
@@ -7633,16 +7643,16 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-02-20T15:14:55.881Z"),
             "currency": "CAD",
             "description": "Cilicium minima calco constans adipisci.",
-            "id": "b5c79f1c-5f37-418b-8fed-ac844859c529",
+            "id": "3975395e-fb4b-446b-9434-0530f747cc4f",
             "is_inclusive_of_tax": True,
             "lineitems": [],
             "metadata": [],
-            "posted_at": parse_datetime("2023-11-06T10:38:03.690Z"),
+            "posted_at": parse_datetime("2023-11-06T23:54:38.655Z"),
             "reference": "JE-78884",
             "source": "crustulum",
             "status": shared.AccountingJournalStatus.VOID,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2022-01-10T19:41:25.963Z"),
+            "updated_at": parse_datetime("2022-01-11T02:27:14.342Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -7672,9 +7682,11 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
-## update_accounting_order
+## ~~update_accounting_order~~
 
-Update an order
+Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change in the request body.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -7703,7 +7715,7 @@ with UnifiedTo(
             },
             "created_at": parse_datetime("2020-11-20T03:46:49.837Z"),
             "currency": "GBP",
-            "id": "f413b6fd-062c-426c-b63b-3a8e57117196",
+            "id": "a2722865-e3c2-4eb8-9c96-bde5f90cfaf2",
             "lineitems": [],
             "metadata": [],
             "posted_at": parse_datetime("2020-11-20T03:46:49.837Z"),
@@ -7718,7 +7730,7 @@ with UnifiedTo(
             "status": shared.AccountingOrderStatus.AUTHORIZED,
             "total_amount": 0.0,
             "type": shared.AccountingOrderType.SALES,
-            "updated_at": parse_datetime("2022-02-08T07:17:50.358Z"),
+            "updated_at": parse_datetime("2022-02-08T12:12:41.895Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -7750,7 +7762,7 @@ with UnifiedTo(
 
 ## update_accounting_paymentterm
 
-Update a paymentterm
+Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm fields to change in the request body.
 
 ### Example Usage
 
@@ -7778,12 +7790,12 @@ with UnifiedTo(
             "discount_percent": 5.0,
             "due_days": 57.0,
             "due_next_month_days": 9.0,
-            "id": "37df86e8-8bdf-41a1-b539-8ce5baedf25b",
+            "id": "61ff1f8f-4985-4e40-a8d4-ff7eb3f02792",
             "is_active": False,
             "metadata": [],
             "name": "Net 30",
             "type": shared.AccountingPaymenttermType.NET_15,
-            "updated_at": parse_datetime("2026-01-08T11:08:28.870Z"),
+            "updated_at": parse_datetime("2026-01-09T07:22:59.471Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -7815,7 +7827,7 @@ with UnifiedTo(
 
 ## update_accounting_project
 
-Update a project
+Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to change in the request body.
 
 ### Example Usage
 
@@ -7863,7 +7875,7 @@ with UnifiedTo(
 
 ## update_accounting_purchaseorder
 
-Update a purchaseorder
+Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder fields to change in the request body.
 
 ### Example Usage
 
@@ -7895,7 +7907,7 @@ with UnifiedTo(
             "category_ids": [],
             "created_at": parse_datetime("2020-12-12T07:17:47.021Z"),
             "currency": "EUR",
-            "id": "634738ef-70cb-4ce1-9001-a9bc488b5cef",
+            "id": "a416ea74-f483-42a8-8e48-58535d9028ce",
             "lineitems": [],
             "metadata": [],
             "posted_at": parse_datetime("2020-12-12T07:17:47.021Z"),
@@ -7909,7 +7921,7 @@ with UnifiedTo(
             },
             "status": shared.AccountingPurchaseorderStatus.SUBMITTED,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2021-08-11T05:59:49.636Z"),
+            "updated_at": parse_datetime("2021-08-11T08:41:44.890Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -7941,7 +7953,7 @@ with UnifiedTo(
 
 ## update_accounting_quote
 
-Update a quote
+Updates the AccountingQuote identified by `id`. Provide the unified AccountingQuote fields to change in the request body.
 
 ### Example Usage
 
@@ -7989,7 +8001,7 @@ with UnifiedTo(
 
 ## update_accounting_salesorder
 
-Update a salesorder
+Updates the AccountingSalesorder identified by `id`. Provide the unified AccountingSalesorder fields to change in the request body.
 
 ### Example Usage
 
@@ -8018,13 +8030,13 @@ with UnifiedTo(
                 "region_code": "MO",
             },
             "category_ids": [],
-            "closed_at": parse_datetime("2023-03-25T12:56:07.875Z"),
+            "closed_at": parse_datetime("2023-03-25T18:51:55.597Z"),
             "created_at": parse_datetime("2022-01-17T16:11:50.310Z"),
             "currency": "USD",
             "discount_amount": 0.0,
             "fees": [],
             "fulfillment_type": shared.FulfillmentType.OTHER,
-            "id": "0b6e3f77-ddfb-40ee-bced-b13bab0db7b6",
+            "id": "eb857dee-e60e-475f-bdcd-edb5a376f942",
             "lineitems": [],
             "metadata": [],
             "order_number": "832663",
@@ -8046,7 +8058,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "tip_amount": 0.0,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2023-03-25T12:56:07.875Z"),
+            "updated_at": parse_datetime("2023-03-25T18:51:55.597Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -8078,7 +8090,7 @@ with UnifiedTo(
 
 ## update_accounting_taxrate
 
-Update a taxrate
+Updates the AccountingTaxrate identified by `id`. Provide the unified AccountingTaxrate fields to change in the request body.
 
 ### Example Usage
 
@@ -8108,7 +8120,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-01-04T10:37:56.894Z"),
             "description": "Exempt (0%)",
             "effective_rate": 0.0,
-            "id": "101de838-4e26-4409-ae5d-3840d8be378b",
+            "id": "6fadebf2-8c72-4fb3-97f5-5057ddd19842",
             "is_active": False,
             "is_compound": False,
             "metadata": [],
@@ -8117,7 +8129,7 @@ with UnifiedTo(
             "region": "KS",
             "total_rate": 0.0,
             "type": shared.AccountingTaxrateType.SALES,
-            "updated_at": parse_datetime("2020-02-13T05:09:46.313Z"),
+            "updated_at": parse_datetime("2020-02-13T05:32:42.700Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -8149,7 +8161,7 @@ with UnifiedTo(
 
 ## update_accounting_transaction
 
-Update a transaction
+Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction fields to change in the request body.
 
 ### Example Usage
 
@@ -8169,12 +8181,12 @@ with UnifiedTo(
     res = unified_to.accounting.update_accounting_transaction(request={
         "accounting_transaction": {
             "created_at": parse_datetime("2019-09-25T11:40:42.574Z"),
-            "id": "653c6524-7f22-4944-81c8-880be085e034",
+            "id": "22225963-66fb-48f2-9300-11e70830bb12",
             "lineitems": [
                 {
                     "category_ids": [],
                     "description": "The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability",
-                    "id": "4587fa53-e4f7-4468-b0ff-7c8d83fb147b",
+                    "id": "577033d5-6fa9-46c2-938e-3831528b30c8",
                     "name": "Shirt",
                     "total_amount": 10184.0,
                     "unit_amount": 536.0,
@@ -8186,7 +8198,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "total_amount": 10184.0,
             "transaction_at": parse_datetime("2019-09-25T11:40:42.574Z"),
-            "updated_at": parse_datetime("2019-10-14T06:08:27.202Z"),
+            "updated_at": parse_datetime("2019-10-14T06:18:51.360Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -8218,7 +8230,7 @@ with UnifiedTo(
 
 ## update_accounting_vendorcredit
 
-Update a vendorcredit
+Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit fields to change in the request body.
 
 ### Example Usage
 
@@ -8241,14 +8253,14 @@ with UnifiedTo(
             "balance_amount": 0.0,
             "created_at": parse_datetime("2023-04-15T21:14:08.197Z"),
             "currency": "USD",
-            "id": "d61ee6a8-e40a-4843-b35b-d2e78958d029",
+            "id": "4e28d8ea-334a-44d8-a5ac-bdb5cce5570b",
             "lineitems": [],
             "metadata": [],
             "notes": "Volup conatus cruciamentum decor avaritia.",
             "posted_at": parse_datetime("2023-04-15T21:14:08.197Z"),
             "status": shared.AccountingVendorcreditStatus.AUTHORIZED,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2023-10-03T01:41:32.211Z"),
+            "updated_at": parse_datetime("2023-10-03T04:51:13.949Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

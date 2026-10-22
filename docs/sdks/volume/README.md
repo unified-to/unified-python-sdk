@@ -13,7 +13,7 @@
 
 ## create_compute_volume
 
-Create a volume
+Creates a ComputeVolume. Provide the unified ComputeVolume fields in the request body; they are mapped to the provider's API. Returns the created ComputeVolume.
 
 ### Example Usage
 
@@ -33,14 +33,14 @@ with UnifiedTo(
     res = unified_to.volume.create_compute_volume(request={
         "compute_volume": {
             "created_at": parse_datetime("2022-11-15T15:12:48.055Z"),
-            "id": "adf0429d-d496-46d9-9f85-7e1b62fd1792",
+            "id": "55825a37-409f-476f-89bc-18142a68869a",
             "instance_ids": [],
             "metadata": [],
             "name": "vol-solum",
             "size_mb": 1024000.0,
             "status": shared.ComputeVolumeStatus.OTHER,
             "type": shared.ComputeVolumeType.HIGH_PERFORMANCE,
-            "updated_at": parse_datetime("2024-02-09T21:49:38.128Z"),
+            "updated_at": parse_datetime("2024-02-10T05:19:38.193Z"),
             "used_mb": 524986.0,
         },
         "connection_id": "<id>",
@@ -72,7 +72,7 @@ with UnifiedTo(
 
 ## get_compute_volume
 
-Retrieve a volume
+Retrieves a single ComputeVolume by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -119,7 +119,7 @@ with UnifiedTo(
 
 ## list_compute_volumes
 
-List all volumes
+Returns a list of ComputeVolumes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -165,7 +165,7 @@ with UnifiedTo(
 
 ## patch_compute_volume
 
-Update a volume
+Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in the request body.
 
 ### Example Usage
 
@@ -185,14 +185,14 @@ with UnifiedTo(
     res = unified_to.volume.patch_compute_volume(request={
         "compute_volume": {
             "created_at": parse_datetime("2022-11-15T15:12:48.055Z"),
-            "id": "4e6b48c7-a0e2-45cf-9c09-7674d9c87ad7",
+            "id": "33536cfd-0184-4e65-ab51-dcf407b45b59",
             "instance_ids": [],
             "metadata": [],
             "name": "vol-solum",
             "size_mb": 1024000.0,
             "status": shared.ComputeVolumeStatus.OTHER,
             "type": shared.ComputeVolumeType.HIGH_PERFORMANCE,
-            "updated_at": parse_datetime("2024-02-09T21:49:38.133Z"),
+            "updated_at": parse_datetime("2024-02-10T05:19:38.198Z"),
             "used_mb": 524986.0,
         },
         "connection_id": "<id>",
@@ -225,7 +225,7 @@ with UnifiedTo(
 
 ## remove_compute_volume
 
-Remove a volume
+Deletes the ComputeVolume identified by `id`.
 
 ### Example Usage
 
@@ -272,7 +272,7 @@ with UnifiedTo(
 
 ## update_compute_volume
 
-Update a volume
+Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in the request body.
 
 ### Example Usage
 
@@ -292,14 +292,14 @@ with UnifiedTo(
     res = unified_to.volume.update_compute_volume(request={
         "compute_volume": {
             "created_at": parse_datetime("2022-11-15T15:12:48.055Z"),
-            "id": "4e6b48c7-a0e2-45cf-9c09-7674d9c87ad7",
+            "id": "33536cfd-0184-4e65-ab51-dcf407b45b59",
             "instance_ids": [],
             "metadata": [],
             "name": "vol-solum",
             "size_mb": 1024000.0,
             "status": shared.ComputeVolumeStatus.OTHER,
             "type": shared.ComputeVolumeType.HIGH_PERFORMANCE,
-            "updated_at": parse_datetime("2024-02-09T21:49:38.133Z"),
+            "updated_at": parse_datetime("2024-02-10T05:19:38.198Z"),
             "used_mb": 524986.0,
         },
         "connection_id": "<id>",

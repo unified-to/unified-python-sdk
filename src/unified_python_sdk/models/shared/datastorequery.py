@@ -20,6 +20,7 @@ class DatastoreQueryTypedDict(TypedDict):
     database_id: NotRequired[str]
     metadata: NotRequired[List[DatastoreMetadataTypedDict]]
     query: NotRequired[PropertyDatastoreQueryQueryTypedDict]
+    r"""What to run: a raw `sql` statement, or a structured query (select, filter, sort, limit/offset, aggregate)"""
     raw: NotRequired[Dict[str, Any]]
     response: NotRequired[PropertyDatastoreQueryResponseTypedDict]
     table_id: NotRequired[str]
@@ -31,6 +32,7 @@ class DatastoreQuery(BaseModel):
     metadata: Optional[List[DatastoreMetadata]] = None
 
     query: Optional[PropertyDatastoreQueryQuery] = None
+    r"""What to run: a raw `sql` statement, or a structured query (select, filter, sort, limit/offset, aggregate)"""
 
     raw: Optional[Dict[str, Any]] = None
 

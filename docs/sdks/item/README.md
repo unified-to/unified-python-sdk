@@ -13,7 +13,7 @@
 
 ## create_commerce_item
 
-Create an item
+Creates a CommerceItem. Provide the unified CommerceItem fields in the request body; they are mapped to the provider's API. Returns the created CommerceItem.
 
 ### Example Usage
 
@@ -37,7 +37,7 @@ with UnifiedTo(
             "description": "Decretum vulnero ustulo abeo.",
             "duration": 104.0,
             "global_code": "978-0-85270-680-0",
-            "id": "b4355650-4a6e-4ce1-9ea4-d9d1626667e6",
+            "id": "fe4c1760-dd1d-4260-96a4-bad0e53bec82",
             "is_active": False,
             "is_featured": False,
             "is_taxable": True,
@@ -46,10 +46,10 @@ with UnifiedTo(
                 {
                     "alt": "Caterva eveniet acies candidus.",
                     "height": 876.0,
-                    "id": "f5123d4d-f233-4369-bf79-817379a8b577",
+                    "id": "8759e0fd-2c61-45e3-981d-5f23256302d4",
                     "metadata": [
                         {
-                            "id": "7ce8686d-8808-4058-8cdb-44767bc6c710",
+                            "id": "553ccae7-1fa0-472b-a39f-89fa5081f0d3",
                             "slug": "doloremque",
                             "value": "allatus",
                         },
@@ -62,10 +62,10 @@ with UnifiedTo(
                 {
                     "alt": "Comedo.",
                     "height": 651.0,
-                    "id": "96f62058-f418-4ffa-9586-267f1b8ccfd9",
+                    "id": "1896f31b-fd70-4c98-95e7-199e800a8bfe",
                     "metadata": [
                         {
-                            "id": "03daeabb-d03a-4024-bc65-670485449927",
+                            "id": "6e03dc91-db6e-49a7-bbfc-e7ba7697f29e",
                             "slug": "bis",
                             "value": "somniculosus",
                         },
@@ -82,7 +82,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CommerceMetadataFormat.TEXT,
-                    "id": "dd4003f0-370d-4dfd-ba38-a26efbd98a44",
+                    "id": "daa29a61-22f3-479b-bd26-39f3809db791",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "abstergo",
@@ -105,7 +105,7 @@ with UnifiedTo(
             ],
             "total_stock": 682.0,
             "type": "SERVICE",
-            "updated_at": parse_datetime("2022-04-19T11:59:36.533Z"),
+            "updated_at": parse_datetime("2022-04-19T21:11:29.775Z"),
             "vendor_name": "Mayer - Flatley",
             "weight": 37.0,
             "weight_unit": shared.WeightUnit.OZ,
@@ -139,7 +139,7 @@ with UnifiedTo(
 
 ## get_commerce_item
 
-Retrieve an item
+Retrieves a single CommerceItem by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -186,7 +186,7 @@ with UnifiedTo(
 
 ## list_commerce_items
 
-List all items
+Returns a list of CommerceItems. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -232,7 +232,7 @@ with UnifiedTo(
 
 ## patch_commerce_item
 
-Update an item
+Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in the request body.
 
 ### Example Usage
 
@@ -256,7 +256,7 @@ with UnifiedTo(
             "description": "Decretum vulnero ustulo abeo.",
             "duration": 104.0,
             "global_code": "978-0-85270-680-0",
-            "id": "09b515c2-7dc6-427e-b9eb-d1ab26d3d524",
+            "id": "27828a84-f47c-4d8d-b65b-9bae0b6ac3c4",
             "is_active": False,
             "is_featured": False,
             "is_taxable": True,
@@ -265,10 +265,10 @@ with UnifiedTo(
                 {
                     "alt": "Caterva eveniet acies candidus.",
                     "height": 876.0,
-                    "id": "b7485481-8efb-4ea0-b803-b9512d1d7c89",
+                    "id": "c6006932-3c9c-40f7-8358-67e85c54b2b4",
                     "metadata": [
                         {
-                            "id": "f26267f4-a390-4e18-94f5-dfb4716549d3",
+                            "id": "7657b784-22d3-43b7-a3b4-8b70507e45e4",
                             "slug": "doloremque",
                             "value": "allatus",
                         },
@@ -281,10 +281,10 @@ with UnifiedTo(
                 {
                     "alt": "Comedo.",
                     "height": 651.0,
-                    "id": "366b231e-aaa5-4223-a63b-3786036de8fd",
+                    "id": "b5a64600-20fe-4fd9-8f29-bcbce6bdf87d",
                     "metadata": [
                         {
-                            "id": "300cf771-4f64-4010-baaa-1074fc076137",
+                            "id": "9e6576a7-7aa4-4967-8996-7a533c4f95a0",
                             "slug": "bis",
                             "value": "somniculosus",
                         },
@@ -301,7 +301,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CommerceMetadataFormat.TEXT,
-                    "id": "e4ab767b-9bd1-4dac-95e7-caaee906e3dd",
+                    "id": "201410db-b358-4e4d-ac4c-6052277cb222",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "abstergo",
@@ -324,7 +324,7 @@ with UnifiedTo(
             ],
             "total_stock": 682.0,
             "type": "SERVICE",
-            "updated_at": parse_datetime("2022-04-19T11:59:36.554Z"),
+            "updated_at": parse_datetime("2022-04-19T21:11:29.792Z"),
             "vendor_name": "Mayer - Flatley",
             "weight": 37.0,
             "weight_unit": shared.WeightUnit.OZ,
@@ -359,7 +359,7 @@ with UnifiedTo(
 
 ## remove_commerce_item
 
-Remove an item
+Deletes the CommerceItem identified by `id`.
 
 ### Example Usage
 
@@ -406,7 +406,7 @@ with UnifiedTo(
 
 ## update_commerce_item
 
-Update an item
+Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in the request body.
 
 ### Example Usage
 
@@ -430,7 +430,7 @@ with UnifiedTo(
             "description": "Decretum vulnero ustulo abeo.",
             "duration": 104.0,
             "global_code": "978-0-85270-680-0",
-            "id": "09b515c2-7dc6-427e-b9eb-d1ab26d3d524",
+            "id": "27828a84-f47c-4d8d-b65b-9bae0b6ac3c4",
             "is_active": False,
             "is_featured": False,
             "is_taxable": True,
@@ -439,10 +439,10 @@ with UnifiedTo(
                 {
                     "alt": "Caterva eveniet acies candidus.",
                     "height": 876.0,
-                    "id": "b7485481-8efb-4ea0-b803-b9512d1d7c89",
+                    "id": "c6006932-3c9c-40f7-8358-67e85c54b2b4",
                     "metadata": [
                         {
-                            "id": "f26267f4-a390-4e18-94f5-dfb4716549d3",
+                            "id": "7657b784-22d3-43b7-a3b4-8b70507e45e4",
                             "slug": "doloremque",
                             "value": "allatus",
                         },
@@ -455,10 +455,10 @@ with UnifiedTo(
                 {
                     "alt": "Comedo.",
                     "height": 651.0,
-                    "id": "366b231e-aaa5-4223-a63b-3786036de8fd",
+                    "id": "b5a64600-20fe-4fd9-8f29-bcbce6bdf87d",
                     "metadata": [
                         {
-                            "id": "300cf771-4f64-4010-baaa-1074fc076137",
+                            "id": "9e6576a7-7aa4-4967-8996-7a533c4f95a0",
                             "slug": "bis",
                             "value": "somniculosus",
                         },
@@ -475,7 +475,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CommerceMetadataFormat.TEXT,
-                    "id": "e4ab767b-9bd1-4dac-95e7-caaee906e3dd",
+                    "id": "201410db-b358-4e4d-ac4c-6052277cb222",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "abstergo",
@@ -498,7 +498,7 @@ with UnifiedTo(
             ],
             "total_stock": 682.0,
             "type": "SERVICE",
-            "updated_at": parse_datetime("2022-04-19T11:59:36.554Z"),
+            "updated_at": parse_datetime("2022-04-19T21:11:29.792Z"),
             "vendor_name": "Mayer - Flatley",
             "weight": 37.0,
             "weight_unit": shared.WeightUnit.OZ,

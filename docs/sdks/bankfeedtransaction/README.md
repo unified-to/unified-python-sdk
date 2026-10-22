@@ -13,7 +13,7 @@
 
 ## create_accounting_bankfeedtransaction
 
-Create a bankfeedtransaction
+Creates a AccountingBankfeedtransaction. Provide the unified AccountingBankfeedtransaction fields in the request body; they are mapped to the provider's API. Returns the created AccountingBankfeedtransaction.
 
 ### Example Usage
 
@@ -38,15 +38,15 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-03-24T23:41:08.374Z"),
             "currency": "CAD",
             "description": "Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781.",
-            "id": "9d7f1d1e-6836-421d-bcc7-0f960838a365",
+            "id": "7554558e-75d6-4b22-a53e-2fb82bd0a8bc",
             "is_pending": True,
             "merchant_name": "Buckridge - Feest",
             "metadata": [],
-            "posted_at": parse_datetime("2025-04-14T19:54:37.886Z"),
+            "posted_at": parse_datetime("2025-04-15T11:51:15.882Z"),
             "reference": "79574105",
-            "transaction_at": parse_datetime("2022-07-30T08:09:49.075Z"),
+            "transaction_at": parse_datetime("2022-07-30T09:58:54.151Z"),
             "type": shared.AccountingBankfeedtransactionType.CREDIT,
-            "updated_at": parse_datetime("2022-05-25T01:44:27.953Z"),
+            "updated_at": parse_datetime("2022-05-25T02:36:47.333Z"),
         },
         "connection_id": "<id>",
     })
@@ -77,7 +77,7 @@ with UnifiedTo(
 
 ## get_accounting_bankfeedtransaction
 
-Retrieve a bankfeedtransaction
+Retrieves a single AccountingBankfeedtransaction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -124,7 +124,7 @@ with UnifiedTo(
 
 ## list_accounting_bankfeedtransactions
 
-List all bankfeedtransactions
+Returns a list of AccountingBankfeedtransactions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -170,7 +170,7 @@ with UnifiedTo(
 
 ## patch_accounting_bankfeedtransaction
 
-Update a bankfeedtransaction
+Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified AccountingBankfeedtransaction fields to change in the request body.
 
 ### Example Usage
 
@@ -195,15 +195,15 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-03-24T23:41:08.374Z"),
             "currency": "CAD",
             "description": "Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781.",
-            "id": "5b2d5916-e88b-4808-b28c-aa9646641043",
+            "id": "b3decb3e-ed00-4600-8302-27158f3ab3e0",
             "is_pending": True,
             "merchant_name": "Buckridge - Feest",
             "metadata": [],
-            "posted_at": parse_datetime("2025-04-14T19:54:37.909Z"),
+            "posted_at": parse_datetime("2025-04-15T11:51:15.898Z"),
             "reference": "79574105",
-            "transaction_at": parse_datetime("2022-07-30T08:09:49.077Z"),
+            "transaction_at": parse_datetime("2022-07-30T09:58:54.153Z"),
             "type": shared.AccountingBankfeedtransactionType.CREDIT,
-            "updated_at": parse_datetime("2022-05-25T01:44:27.954Z"),
+            "updated_at": parse_datetime("2022-05-25T02:36:47.333Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -235,7 +235,7 @@ with UnifiedTo(
 
 ## remove_accounting_bankfeedtransaction
 
-Remove a bankfeedtransaction
+Deletes the AccountingBankfeedtransaction identified by `id`.
 
 ### Example Usage
 
@@ -282,7 +282,7 @@ with UnifiedTo(
 
 ## update_accounting_bankfeedtransaction
 
-Update a bankfeedtransaction
+Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified AccountingBankfeedtransaction fields to change in the request body.
 
 ### Example Usage
 
@@ -307,15 +307,15 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-03-24T23:41:08.374Z"),
             "currency": "CAD",
             "description": "Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781.",
-            "id": "5b2d5916-e88b-4808-b28c-aa9646641043",
+            "id": "b3decb3e-ed00-4600-8302-27158f3ab3e0",
             "is_pending": True,
             "merchant_name": "Buckridge - Feest",
             "metadata": [],
-            "posted_at": parse_datetime("2025-04-14T19:54:37.909Z"),
+            "posted_at": parse_datetime("2025-04-15T11:51:15.898Z"),
             "reference": "79574105",
-            "transaction_at": parse_datetime("2022-07-30T08:09:49.077Z"),
+            "transaction_at": parse_datetime("2022-07-30T09:58:54.153Z"),
             "type": shared.AccountingBankfeedtransactionType.CREDIT,
-            "updated_at": parse_datetime("2022-05-25T01:44:27.954Z"),
+            "updated_at": parse_datetime("2022-05-25T02:36:47.333Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

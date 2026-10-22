@@ -42,6 +42,8 @@ DatastoreMetadataExtraData = TypeAliasType(
 
 
 class DatastoreMetadataFormat(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""The data type of the custom field, which determines how `value` is formatted."""
+
     TEXT = "TEXT"
     NUMBER = "NUMBER"
     DATE = "DATE"
@@ -80,21 +82,27 @@ DatastoreMetadataValueTypedDict = TypeAliasType(
     "DatastoreMetadataValueTypedDict",
     Union[Dict[str, Any], str, float, bool, List[DatastoreMetadataSchemas5TypedDict]],
 )
+r"""The field's value, typed by `format`: DATE as ISO-8601 (`YYYY-MM-DD`, or `YYYY-MM-DDTHH:MM:SSZ` for date-times); NUMBER, PRICE and CURRENCY as a number; BOOLEAN and YES_NO as true/false; MULTIPLE_SELECT as an array of option values; otherwise a string."""
 
 
 DatastoreMetadataValue = TypeAliasType(
     "DatastoreMetadataValue",
     Union[Dict[str, Any], str, float, bool, List[DatastoreMetadataSchemas5]],
 )
+r"""The field's value, typed by `format`: DATE as ISO-8601 (`YYYY-MM-DD`, or `YYYY-MM-DDTHH:MM:SSZ` for date-times); NUMBER, PRICE and CURRENCY as a number; BOOLEAN and YES_NO as true/false; MULTIPLE_SELECT as an array of option values; otherwise a string."""
 
 
 class DatastoreMetadataTypedDict(TypedDict):
     extra_data: NotRequired[DatastoreMetadataExtraDataTypedDict]
     format_: NotRequired[DatastoreMetadataFormat]
+    r"""The data type of the custom field, which determines how `value` is formatted."""
     id: NotRequired[str]
+    r"""The ID of the custom field definition (from the metadata/metadata endpoint)."""
     namespace: NotRequired[str]
     slug: NotRequired[str]
+    r"""The integration's API name (key) of an existing custom field. List valid slugs for this object with the metadata/metadata endpoint; unknown slugs are rejected by the integration."""
     value: NotRequired[DatastoreMetadataValueTypedDict]
+    r"""The field's value, typed by `format`: DATE as ISO-8601 (`YYYY-MM-DD`, or `YYYY-MM-DDTHH:MM:SSZ` for date-times); NUMBER, PRICE and CURRENCY as a number; BOOLEAN and YES_NO as true/false; MULTIPLE_SELECT as an array of option values; otherwise a string."""
 
 
 class DatastoreMetadata(BaseModel):
@@ -103,14 +111,18 @@ class DatastoreMetadata(BaseModel):
     format_: Annotated[
         Optional[DatastoreMetadataFormat], pydantic.Field(alias="format")
     ] = None
+    r"""The data type of the custom field, which determines how `value` is formatted."""
 
     id: Optional[str] = None
+    r"""The ID of the custom field definition (from the metadata/metadata endpoint)."""
 
     namespace: Optional[str] = None
 
     slug: Optional[str] = None
+    r"""The integration's API name (key) of an existing custom field. List valid slugs for this object with the metadata/metadata endpoint; unknown slugs are rejected by the integration."""
 
     value: Optional[DatastoreMetadataValue] = None
+    r"""The field's value, typed by `format`: DATE as ISO-8601 (`YYYY-MM-DD`, or `YYYY-MM-DDTHH:MM:SSZ` for date-times); NUMBER, PRICE and CURRENCY as a number; BOOLEAN and YES_NO as true/false; MULTIPLE_SELECT as an array of option values; otherwise a string."""
 
     @field_serializer("format_")
     def serialize_format_(self, value):

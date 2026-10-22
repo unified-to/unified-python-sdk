@@ -13,7 +13,7 @@
 
 ## create_ats_interview
 
-Create an interview
+Creates a AtsInterview. Provide the unified AtsInterview fields in the request body; they are mapped to the provider's API. Returns the created AtsInterview.
 
 ### Example Usage
 
@@ -34,13 +34,13 @@ with UnifiedTo(
         "ats_interview": {
             "created_at": parse_datetime("2021-11-28T03:14:47.774Z"),
             "end_at": parse_datetime("2021-12-08T06:33:19.583Z"),
-            "id": "ddcec412-5ab6-4d71-a2bc-813065c792ee",
+            "id": "bbff662e-1b0a-4b74-ae44-126c9ba08ca6",
             "location": "26596 Halle Trafficway",
             "meeting_url": "https://immaculate-foodstuffs.biz",
             "metadata": [],
             "start_at": parse_datetime("2021-12-08T06:03:19.583Z"),
             "status": shared.AtsInterviewStatus.SCHEDULED,
-            "updated_at": parse_datetime("2023-09-23T16:37:18.637Z"),
+            "updated_at": parse_datetime("2023-09-24T01:29:20.700Z"),
         },
         "connection_id": "<id>",
     })
@@ -71,7 +71,7 @@ with UnifiedTo(
 
 ## get_ats_interview
 
-Retrieve an interview
+Retrieves a single AtsInterview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -118,7 +118,7 @@ with UnifiedTo(
 
 ## list_ats_interviews
 
-List all interviews
+Returns a list of AtsInterviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -164,7 +164,7 @@ with UnifiedTo(
 
 ## patch_ats_interview
 
-Update an interview
+Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in the request body.
 
 ### Example Usage
 
@@ -185,13 +185,13 @@ with UnifiedTo(
         "ats_interview": {
             "created_at": parse_datetime("2021-11-28T03:14:47.774Z"),
             "end_at": parse_datetime("2021-12-08T06:33:19.583Z"),
-            "id": "ea829ecb-45a9-4a25-b7c9-dbb578bd83bb",
+            "id": "233684a9-a898-473b-a48f-b075574510d6",
             "location": "26596 Halle Trafficway",
             "meeting_url": "https://immaculate-foodstuffs.biz",
             "metadata": [],
             "start_at": parse_datetime("2021-12-08T06:03:19.583Z"),
             "status": shared.AtsInterviewStatus.SCHEDULED,
-            "updated_at": parse_datetime("2023-09-23T16:37:18.644Z"),
+            "updated_at": parse_datetime("2023-09-24T01:29:20.706Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -223,7 +223,7 @@ with UnifiedTo(
 
 ## remove_ats_interview
 
-Remove an interview
+Deletes the AtsInterview identified by `id`.
 
 ### Example Usage
 
@@ -270,7 +270,7 @@ with UnifiedTo(
 
 ## update_ats_interview
 
-Update an interview
+Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in the request body.
 
 ### Example Usage
 
@@ -291,13 +291,13 @@ with UnifiedTo(
         "ats_interview": {
             "created_at": parse_datetime("2021-11-28T03:14:47.774Z"),
             "end_at": parse_datetime("2021-12-08T06:33:19.583Z"),
-            "id": "ea829ecb-45a9-4a25-b7c9-dbb578bd83bb",
+            "id": "233684a9-a898-473b-a48f-b075574510d6",
             "location": "26596 Halle Trafficway",
             "meeting_url": "https://immaculate-foodstuffs.biz",
             "metadata": [],
             "start_at": parse_datetime("2021-12-08T06:03:19.583Z"),
             "status": shared.AtsInterviewStatus.SCHEDULED,
-            "updated_at": parse_datetime("2023-09-23T16:37:18.644Z"),
+            "updated_at": parse_datetime("2023-09-24T01:29:20.706Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

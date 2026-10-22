@@ -13,7 +13,7 @@
 
 ## create_hris_earning
 
-Create an earning
+Creates a HrisEarning. Provide the unified HrisEarning fields in the request body; they are mapped to the provider's API. Returns the created HrisEarning.
 
 ### Example Usage
 
@@ -36,12 +36,12 @@ with UnifiedTo(
             "created_at": parse_datetime("2019-01-26T12:44:52.326Z"),
             "currency": "USD",
             "frequency": shared.HrisEarningFrequency.SEMIMONTHLY,
-            "id": "ca70a602-763a-4e33-baab-9e77a958b51d",
+            "id": "fc526592-d3cd-43c8-b69a-04fc3f803646",
             "metadata": [],
             "notes": "Deporto truculenter vinum beatae.",
-            "start_at": parse_datetime("2022-07-25T11:46:31.030Z"),
+            "start_at": parse_datetime("2022-07-25T22:33:07.377Z"),
             "status": shared.HrisEarningStatus.ENDED,
-            "updated_at": parse_datetime("2020-02-08T20:32:11.612Z"),
+            "updated_at": parse_datetime("2020-02-08T23:43:54.807Z"),
         },
         "connection_id": "<id>",
     })
@@ -72,7 +72,7 @@ with UnifiedTo(
 
 ## get_hris_earning
 
-Retrieve an earning
+Retrieves a single HrisEarning by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -119,7 +119,7 @@ with UnifiedTo(
 
 ## list_hris_earnings
 
-List all earnings
+Returns a list of HrisEarnings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -165,7 +165,7 @@ with UnifiedTo(
 
 ## patch_hris_earning
 
-Update an earning
+Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the request body.
 
 ### Example Usage
 
@@ -188,12 +188,12 @@ with UnifiedTo(
             "created_at": parse_datetime("2019-01-26T12:44:52.326Z"),
             "currency": "USD",
             "frequency": shared.HrisEarningFrequency.SEMIMONTHLY,
-            "id": "01d244a3-4eff-449a-9d88-23b7eb7ff959",
+            "id": "c30ab4a5-6379-402f-94ce-29656bc968ac",
             "metadata": [],
             "notes": "Deporto truculenter vinum beatae.",
-            "start_at": parse_datetime("2022-07-25T11:46:31.044Z"),
+            "start_at": parse_datetime("2022-07-25T22:33:07.384Z"),
             "status": shared.HrisEarningStatus.ENDED,
-            "updated_at": parse_datetime("2020-02-08T20:32:11.616Z"),
+            "updated_at": parse_datetime("2020-02-08T23:43:54.809Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -225,7 +225,7 @@ with UnifiedTo(
 
 ## remove_hris_earning
 
-Remove an earning
+Deletes the HrisEarning identified by `id`.
 
 ### Example Usage
 
@@ -272,7 +272,7 @@ with UnifiedTo(
 
 ## update_hris_earning
 
-Update an earning
+Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the request body.
 
 ### Example Usage
 
@@ -295,12 +295,12 @@ with UnifiedTo(
             "created_at": parse_datetime("2019-01-26T12:44:52.326Z"),
             "currency": "USD",
             "frequency": shared.HrisEarningFrequency.SEMIMONTHLY,
-            "id": "01d244a3-4eff-449a-9d88-23b7eb7ff959",
+            "id": "c30ab4a5-6379-402f-94ce-29656bc968ac",
             "metadata": [],
             "notes": "Deporto truculenter vinum beatae.",
-            "start_at": parse_datetime("2022-07-25T11:46:31.044Z"),
+            "start_at": parse_datetime("2022-07-25T22:33:07.384Z"),
             "status": shared.HrisEarningStatus.ENDED,
-            "updated_at": parse_datetime("2020-02-08T20:32:11.616Z"),
+            "updated_at": parse_datetime("2020-02-08T23:43:54.809Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

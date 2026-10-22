@@ -8,7 +8,7 @@
 
 ## create_shipping_rate
 
-Create a rate
+Creates a ShippingRate. Provide the unified ShippingRate fields in the request body; they are mapped to the provider's API. Returns the created ShippingRate.
 
 ### Example Usage
 
@@ -28,7 +28,7 @@ with UnifiedTo(
     res = unified_to.rate.create_shipping_rate(request={
         "shipping_rate": {
             "currency": "USD",
-            "id": "daa07837-c775-44ab-8d87-f914e0f8e159",
+            "id": "36f2bf2c-0eaf-479b-9001-08394a563150",
             "metadata": [],
             "rates": [
                 {

@@ -13,7 +13,7 @@
 
 ## create_legal_timeentry
 
-Create a timeentry
+Creates a LegalTimeentry. Provide the unified LegalTimeentry fields in the request body; they are mapped to the provider's API. Returns the created LegalTimeentry.
 
 ### Example Usage
 
@@ -36,13 +36,13 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-05-06T03:26:03.756Z"),
             "currency": "ZAR",
             "description": "Ea derideo adulatio torrens.",
-            "id": "56d400b9-8dbf-431c-a3a0-f225c4f7dd60",
+            "id": "ae2c0d52-8cb7-4a6b-9d3d-ae3ff9f57b82",
             "is_billable": True,
             "metadata": [],
             "minutes": 390.0,
             "rate_amount": 637.0,
             "total_amount": 4140.5,
-            "updated_at": parse_datetime("2022-06-30T01:49:16.410Z"),
+            "updated_at": parse_datetime("2022-06-30T02:37:32.644Z"),
             "worked_at": parse_datetime("2022-05-06T03:26:03.756Z"),
         },
         "connection_id": "<id>",
@@ -74,7 +74,7 @@ with UnifiedTo(
 
 ## get_legal_timeentry
 
-Retrieve a timeentry
+Retrieves a single LegalTimeentry by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -121,7 +121,7 @@ with UnifiedTo(
 
 ## list_legal_timeentries
 
-List all timeentries
+Returns a list of LegalTimeentries. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -167,7 +167,7 @@ with UnifiedTo(
 
 ## patch_legal_timeentry
 
-Update a timeentry
+Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change in the request body.
 
 ### Example Usage
 
@@ -190,13 +190,13 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-05-06T03:26:03.756Z"),
             "currency": "ZAR",
             "description": "Ea derideo adulatio torrens.",
-            "id": "4bbc89ed-a3dc-447a-96f1-2314b7b324dd",
+            "id": "4e531b0d-4ddd-4eee-9a69-1e4583eca5bc",
             "is_billable": True,
             "metadata": [],
             "minutes": 390.0,
             "rate_amount": 637.0,
             "total_amount": 4140.5,
-            "updated_at": parse_datetime("2022-06-30T01:49:16.411Z"),
+            "updated_at": parse_datetime("2022-06-30T02:37:32.645Z"),
             "worked_at": parse_datetime("2022-05-06T03:26:03.756Z"),
         },
         "connection_id": "<id>",
@@ -229,7 +229,7 @@ with UnifiedTo(
 
 ## remove_legal_timeentry
 
-Remove a timeentry
+Deletes the LegalTimeentry identified by `id`.
 
 ### Example Usage
 
@@ -276,7 +276,7 @@ with UnifiedTo(
 
 ## update_legal_timeentry
 
-Update a timeentry
+Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change in the request body.
 
 ### Example Usage
 
@@ -299,13 +299,13 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-05-06T03:26:03.756Z"),
             "currency": "ZAR",
             "description": "Ea derideo adulatio torrens.",
-            "id": "4bbc89ed-a3dc-447a-96f1-2314b7b324dd",
+            "id": "4e531b0d-4ddd-4eee-9a69-1e4583eca5bc",
             "is_billable": True,
             "metadata": [],
             "minutes": 390.0,
             "rate_amount": 637.0,
             "total_amount": 4140.5,
-            "updated_at": parse_datetime("2022-06-30T01:49:16.411Z"),
+            "updated_at": parse_datetime("2022-06-30T02:37:32.645Z"),
             "worked_at": parse_datetime("2022-05-06T03:26:03.756Z"),
         },
         "connection_id": "<id>",

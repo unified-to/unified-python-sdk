@@ -13,7 +13,7 @@
 
 ## create_repo_repository
 
-Create a repository
+Creates a RepoRepository. Provide the unified RepoRepository fields in the request body; they are mapped to the provider's API. Returns the created RepoRepository.
 
 ### Example Usage
 
@@ -34,11 +34,11 @@ with UnifiedTo(
         "repo_repository": {
             "created_at": parse_datetime("2023-06-12T09:42:00.080Z"),
             "description": "Sed somnus crastinus armarium.",
-            "id": "66453156-002c-4535-9f4c-2752f08a0ce6",
+            "id": "86f236b6-8cd3-488a-b7b2-ce93a56c7517",
             "is_private": False,
             "metadata": [],
             "name": "bah-bogus",
-            "updated_at": parse_datetime("2024-03-01T02:04:01.289Z"),
+            "updated_at": parse_datetime("2024-03-01T07:10:32.663Z"),
             "web_url": "https://neat-birdbath.org",
         },
         "connection_id": "<id>",
@@ -70,7 +70,7 @@ with UnifiedTo(
 
 ## get_repo_repository
 
-Retrieve a repository
+Retrieves a single RepoRepository by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -117,7 +117,7 @@ with UnifiedTo(
 
 ## list_repo_repositories
 
-List all repositories
+Returns a list of RepoRepositories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -163,7 +163,7 @@ with UnifiedTo(
 
 ## patch_repo_repository
 
-Update a repository
+Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change in the request body.
 
 ### Example Usage
 
@@ -184,11 +184,11 @@ with UnifiedTo(
         "repo_repository": {
             "created_at": parse_datetime("2023-06-12T09:42:00.080Z"),
             "description": "Sed somnus crastinus armarium.",
-            "id": "c2277c4c-e335-4cde-b578-cf33cb4ca875",
+            "id": "2702d848-a85c-4e23-af94-267ef6cff2da",
             "is_private": False,
             "metadata": [],
             "name": "bah-bogus",
-            "updated_at": parse_datetime("2024-03-01T02:04:01.292Z"),
+            "updated_at": parse_datetime("2024-03-01T07:10:32.666Z"),
             "web_url": "https://neat-birdbath.org",
         },
         "connection_id": "<id>",
@@ -221,7 +221,7 @@ with UnifiedTo(
 
 ## remove_repo_repository
 
-Remove a repository
+Deletes the RepoRepository identified by `id`.
 
 ### Example Usage
 
@@ -268,7 +268,7 @@ with UnifiedTo(
 
 ## update_repo_repository
 
-Update a repository
+Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change in the request body.
 
 ### Example Usage
 
@@ -289,11 +289,11 @@ with UnifiedTo(
         "repo_repository": {
             "created_at": parse_datetime("2023-06-12T09:42:00.080Z"),
             "description": "Sed somnus crastinus armarium.",
-            "id": "c2277c4c-e335-4cde-b578-cf33cb4ca875",
+            "id": "2702d848-a85c-4e23-af94-267ef6cff2da",
             "is_private": False,
             "metadata": [],
             "name": "bah-bogus",
-            "updated_at": parse_datetime("2024-03-01T02:04:01.292Z"),
+            "updated_at": parse_datetime("2024-03-01T07:10:32.666Z"),
             "web_url": "https://neat-birdbath.org",
         },
         "connection_id": "<id>",

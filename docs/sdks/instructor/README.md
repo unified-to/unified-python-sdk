@@ -13,7 +13,7 @@
 
 ## create_lms_instructor
 
-Create an instructor
+Creates a LmsInstructor. Provide the unified LmsInstructor fields in the request body; they are mapped to the provider's API. Returns the created LmsInstructor.
 
 ### Example Usage
 
@@ -37,7 +37,7 @@ with UnifiedTo(
                 {},
             ],
             "first_name": "Deangelo",
-            "id": "4bae5fc1-d7ea-4c53-8a1c-bdacf8208fb1",
+            "id": "57402488-af3f-404b-8ada-780956f69f5b",
             "image_url": "https://avatars.githubusercontent.com/u/95131132",
             "last_name": "Ritchie",
             "metadata": [],
@@ -53,7 +53,7 @@ with UnifiedTo(
                 },
             ],
             "title": "Regional Security Agent",
-            "updated_at": parse_datetime("2025-07-24T10:16:02.920Z"),
+            "updated_at": parse_datetime("2025-07-25T04:13:25.928Z"),
         },
         "connection_id": "<id>",
     })
@@ -84,7 +84,7 @@ with UnifiedTo(
 
 ## get_lms_instructor
 
-Retrieve an instructor
+Retrieves a single LmsInstructor by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -131,7 +131,7 @@ with UnifiedTo(
 
 ## list_lms_instructors
 
-List all instructors
+Returns a list of LmsInstructors. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -177,7 +177,7 @@ with UnifiedTo(
 
 ## patch_lms_instructor
 
-Update an instructor
+Updates the LmsInstructor identified by `id`. Provide the unified LmsInstructor fields to change in the request body.
 
 ### Example Usage
 
@@ -201,7 +201,7 @@ with UnifiedTo(
                 {},
             ],
             "first_name": "Deangelo",
-            "id": "32aa9102-02ef-492f-ab01-271f80083b4e",
+            "id": "7ef6015d-4d96-4456-8b89-51b9e4139eb2",
             "image_url": "https://avatars.githubusercontent.com/u/95131132",
             "last_name": "Ritchie",
             "metadata": [],
@@ -217,7 +217,7 @@ with UnifiedTo(
                 },
             ],
             "title": "Regional Security Agent",
-            "updated_at": parse_datetime("2025-07-24T10:16:02.934Z"),
+            "updated_at": parse_datetime("2025-07-25T04:13:25.942Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -249,7 +249,7 @@ with UnifiedTo(
 
 ## remove_lms_instructor
 
-Remove an instructor
+Deletes the LmsInstructor identified by `id`.
 
 ### Example Usage
 
@@ -296,7 +296,7 @@ with UnifiedTo(
 
 ## update_lms_instructor
 
-Update an instructor
+Updates the LmsInstructor identified by `id`. Provide the unified LmsInstructor fields to change in the request body.
 
 ### Example Usage
 
@@ -320,7 +320,7 @@ with UnifiedTo(
                 {},
             ],
             "first_name": "Deangelo",
-            "id": "32aa9102-02ef-492f-ab01-271f80083b4e",
+            "id": "7ef6015d-4d96-4456-8b89-51b9e4139eb2",
             "image_url": "https://avatars.githubusercontent.com/u/95131132",
             "last_name": "Ritchie",
             "metadata": [],
@@ -336,7 +336,7 @@ with UnifiedTo(
                 },
             ],
             "title": "Regional Security Agent",
-            "updated_at": parse_datetime("2025-07-24T10:16:02.934Z"),
+            "updated_at": parse_datetime("2025-07-25T04:13:25.942Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

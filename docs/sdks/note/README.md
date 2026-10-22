@@ -13,7 +13,7 @@
 
 ## create_ticketing_note
 
-Create a note
+Creates a TicketingNote. Provide the unified TicketingNote fields in the request body; they are mapped to the provider's API. Returns the created TicketingNote.
 
 ### Example Usage
 
@@ -34,9 +34,9 @@ with UnifiedTo(
         "ticketing_note": {
             "created_at": parse_datetime("2019-07-23T15:05:03.241Z"),
             "description": "Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.",
-            "id": "43cbd9a4-af31-439f-bccb-ccf43ddfab87",
+            "id": "86334ced-97d3-4ff2-9d8e-f069597c280d",
             "metadata": [],
-            "updated_at": parse_datetime("2024-09-29T06:39:43.238Z"),
+            "updated_at": parse_datetime("2024-09-29T23:44:28.352Z"),
         },
         "connection_id": "<id>",
     })
@@ -67,7 +67,7 @@ with UnifiedTo(
 
 ## get_ticketing_note
 
-Retrieve a note
+Retrieves a single TicketingNote by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -114,7 +114,7 @@ with UnifiedTo(
 
 ## list_ticketing_notes
 
-List all notes
+Returns a list of TicketingNotes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -160,7 +160,7 @@ with UnifiedTo(
 
 ## patch_ticketing_note
 
-Update a note
+Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in the request body.
 
 ### Example Usage
 
@@ -181,9 +181,9 @@ with UnifiedTo(
         "ticketing_note": {
             "created_at": parse_datetime("2019-07-23T15:05:03.241Z"),
             "description": "Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.",
-            "id": "9caf8231-718e-41eb-941c-c6b5327d3281",
+            "id": "df11d5bd-3ba0-413e-b03a-41438bcf0f2a",
             "metadata": [],
-            "updated_at": parse_datetime("2024-09-29T06:39:43.247Z"),
+            "updated_at": parse_datetime("2024-09-29T23:44:28.358Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -215,7 +215,7 @@ with UnifiedTo(
 
 ## remove_ticketing_note
 
-Remove a note
+Deletes the TicketingNote identified by `id`.
 
 ### Example Usage
 
@@ -262,7 +262,7 @@ with UnifiedTo(
 
 ## update_ticketing_note
 
-Update a note
+Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in the request body.
 
 ### Example Usage
 
@@ -283,9 +283,9 @@ with UnifiedTo(
         "ticketing_note": {
             "created_at": parse_datetime("2019-07-23T15:05:03.241Z"),
             "description": "Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.",
-            "id": "9caf8231-718e-41eb-941c-c6b5327d3281",
+            "id": "df11d5bd-3ba0-413e-b03a-41438bcf0f2a",
             "metadata": [],
-            "updated_at": parse_datetime("2024-09-29T06:39:43.247Z"),
+            "updated_at": parse_datetime("2024-09-29T23:44:28.358Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

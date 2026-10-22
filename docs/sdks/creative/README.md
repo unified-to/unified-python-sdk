@@ -13,7 +13,7 @@
 
 ## create_ads_creative
 
-Create a creative
+Creates a AdsCreative. Provide the unified AdsCreative fields in the request body; they are mapped to the provider's API. Returns the created AdsCreative.
 
 ### Example Usage
 
@@ -33,7 +33,7 @@ with UnifiedTo(
     res = unified_to.creative.create_ads_creative(request={
         "ads_creative": {
             "created_at": parse_datetime("2020-02-17T11:24:51.093Z"),
-            "id": "b96751f3-a235-43f1-93ce-f92f643448b4",
+            "id": "ac28e829-d356-4981-a84e-754e20ddac77",
             "labels": [
                 "coma",
                 "accedo",
@@ -42,7 +42,7 @@ with UnifiedTo(
             "metadata": [],
             "name": "Brekke, Bradtke and Robel",
             "status": shared.AdsCreativeStatus.PAUSED,
-            "updated_at": parse_datetime("2021-06-27T18:16:31.013Z"),
+            "updated_at": parse_datetime("2021-06-27T23:07:56.004Z"),
         },
         "connection_id": "<id>",
     })
@@ -73,7 +73,7 @@ with UnifiedTo(
 
 ## get_ads_creative
 
-Retrieve a creative
+Retrieves a single AdsCreative by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -120,7 +120,7 @@ with UnifiedTo(
 
 ## list_ads_creatives
 
-List all creatives
+Returns a list of AdsCreatives. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -166,7 +166,7 @@ with UnifiedTo(
 
 ## patch_ads_creative
 
-Update a creative
+Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the request body.
 
 ### Example Usage
 
@@ -186,7 +186,7 @@ with UnifiedTo(
     res = unified_to.creative.patch_ads_creative(request={
         "ads_creative": {
             "created_at": parse_datetime("2020-02-17T11:24:51.093Z"),
-            "id": "5bbfc8ac-1890-4e76-814e-e13241aa2283",
+            "id": "1c96b97d-6841-4fe2-8d1b-0daa7ddf2854",
             "labels": [
                 "coma",
                 "accedo",
@@ -195,7 +195,7 @@ with UnifiedTo(
             "metadata": [],
             "name": "Brekke, Bradtke and Robel",
             "status": shared.AdsCreativeStatus.PAUSED,
-            "updated_at": parse_datetime("2021-06-27T18:16:31.024Z"),
+            "updated_at": parse_datetime("2021-06-27T23:07:56.013Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -227,7 +227,7 @@ with UnifiedTo(
 
 ## remove_ads_creative
 
-Remove a creative
+Deletes the AdsCreative identified by `id`.
 
 ### Example Usage
 
@@ -274,7 +274,7 @@ with UnifiedTo(
 
 ## update_ads_creative
 
-Update a creative
+Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the request body.
 
 ### Example Usage
 
@@ -294,7 +294,7 @@ with UnifiedTo(
     res = unified_to.creative.update_ads_creative(request={
         "ads_creative": {
             "created_at": parse_datetime("2020-02-17T11:24:51.093Z"),
-            "id": "5bbfc8ac-1890-4e76-814e-e13241aa2283",
+            "id": "1c96b97d-6841-4fe2-8d1b-0daa7ddf2854",
             "labels": [
                 "coma",
                 "accedo",
@@ -303,7 +303,7 @@ with UnifiedTo(
             "metadata": [],
             "name": "Brekke, Bradtke and Robel",
             "status": shared.AdsCreativeStatus.PAUSED,
-            "updated_at": parse_datetime("2021-06-27T18:16:31.024Z"),
+            "updated_at": parse_datetime("2021-06-27T23:07:56.013Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

@@ -24,6 +24,8 @@ class Service(BaseSDK):
     ) -> operations.CreateComputeServiceResponse:
         r"""Create a service
 
+        Creates a ComputeService. Provide the unified ComputeService fields in the request body; they are mapped to the provider's API. Returns the created ComputeService.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -118,6 +120,8 @@ class Service(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateComputeServiceResponse:
         r"""Create a service
+
+        Creates a ComputeService. Provide the unified ComputeService fields in the request body; they are mapped to the provider's API. Returns the created ComputeService.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -214,6 +218,8 @@ class Service(BaseSDK):
     ) -> operations.GetComputeServiceResponse:
         r"""Retrieve a service
 
+        Retrieves a single ComputeService by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -305,6 +311,8 @@ class Service(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetComputeServiceResponse:
         r"""Retrieve a service
+
+        Retrieves a single ComputeService by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -398,6 +406,8 @@ class Service(BaseSDK):
     ) -> operations.ListComputeServicesResponse:
         r"""List all services
 
+        Returns a list of ComputeServices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -490,6 +500,8 @@ class Service(BaseSDK):
     ) -> operations.ListComputeServicesResponse:
         r"""List all services
 
+        Returns a list of ComputeServices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -581,6 +593,8 @@ class Service(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchComputeServiceResponse:
         r"""Update a service
+
+        Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -677,6 +691,8 @@ class Service(BaseSDK):
     ) -> operations.PatchComputeServiceResponse:
         r"""Update a service
 
+        Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -771,6 +787,8 @@ class Service(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveComputeServiceResponse:
         r"""Remove a service
+
+        Deletes the ComputeService identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -869,6 +887,8 @@ class Service(BaseSDK):
     ) -> operations.RemoveComputeServiceResponse:
         r"""Remove a service
 
+        Deletes the ComputeService identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -966,6 +986,8 @@ class Service(BaseSDK):
     ) -> operations.UpdateComputeServiceResponse:
         r"""Update a service
 
+        Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1060,6 +1082,8 @@ class Service(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateComputeServiceResponse:
         r"""Update a service
+
+        Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

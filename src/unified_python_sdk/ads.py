@@ -23,6 +23,8 @@ class Ads(BaseSDK):
     ) -> operations.CreateAdsAdResponse:
         r"""Create an ad
 
+        Creates a AdsAd. Provide the unified AdsAd fields in the request body; they are mapped to the provider's API. Returns the created AdsAd.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -114,6 +116,8 @@ class Ads(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAdsAdResponse:
         r"""Create an ad
+
+        Creates a AdsAd. Provide the unified AdsAd fields in the request body; they are mapped to the provider's API. Returns the created AdsAd.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -207,6 +211,8 @@ class Ads(BaseSDK):
     ) -> operations.CreateAdsAssetResponse:
         r"""Create an asset
 
+        Creates a AdsAsset. Provide the unified AdsAsset fields in the request body; they are mapped to the provider's API. Returns the created AdsAsset.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -298,6 +304,8 @@ class Ads(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAdsAssetResponse:
         r"""Create an asset
+
+        Creates a AdsAsset. Provide the unified AdsAsset fields in the request body; they are mapped to the provider's API. Returns the created AdsAsset.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -391,6 +399,8 @@ class Ads(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAdsCampaignResponse:
         r"""Create a campaign
+
+        Creates a AdsCampaign. Provide the unified AdsCampaign fields in the request body; they are mapped to the provider's API. Returns the created AdsCampaign.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -487,6 +497,8 @@ class Ads(BaseSDK):
     ) -> operations.CreateAdsCampaignResponse:
         r"""Create a campaign
 
+        Creates a AdsCampaign. Provide the unified AdsCampaign fields in the request body; they are mapped to the provider's API. Returns the created AdsCampaign.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -581,6 +593,8 @@ class Ads(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAdsCreativeResponse:
         r"""Create a creative
+
+        Creates a AdsCreative. Provide the unified AdsCreative fields in the request body; they are mapped to the provider's API. Returns the created AdsCreative.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -677,6 +691,8 @@ class Ads(BaseSDK):
     ) -> operations.CreateAdsCreativeResponse:
         r"""Create a creative
 
+        Creates a AdsCreative. Provide the unified AdsCreative fields in the request body; they are mapped to the provider's API. Returns the created AdsCreative.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -771,6 +787,8 @@ class Ads(BaseSDK):
     ) -> operations.CreateAdsGroupResponse:
         r"""Create a group
 
+        Creates a AdsGroup. Provide the unified AdsGroup fields in the request body; they are mapped to the provider's API. Returns the created AdsGroup.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -862,6 +880,8 @@ class Ads(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAdsGroupResponse:
         r"""Create a group
+
+        Creates a AdsGroup. Provide the unified AdsGroup fields in the request body; they are mapped to the provider's API. Returns the created AdsGroup.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -955,6 +975,8 @@ class Ads(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAdsInsertionorderResponse:
         r"""Create an insertionorder
+
+        Creates a AdsInsertionorder. Provide the unified AdsInsertionorder fields in the request body; they are mapped to the provider's API. Returns the created AdsInsertionorder.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1057,6 +1079,8 @@ class Ads(BaseSDK):
     ) -> operations.CreateAdsInsertionorderResponse:
         r"""Create an insertionorder
 
+        Creates a AdsInsertionorder. Provide the unified AdsInsertionorder fields in the request body; they are mapped to the provider's API. Returns the created AdsInsertionorder.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1158,6 +1182,8 @@ class Ads(BaseSDK):
     ) -> operations.CreateAdsOrganizationResponse:
         r"""Create an organization
 
+        Creates a AdsOrganization. Provide the unified AdsOrganization fields in the request body; they are mapped to the provider's API. Returns the created AdsOrganization.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1253,6 +1279,8 @@ class Ads(BaseSDK):
     ) -> operations.CreateAdsOrganizationResponse:
         r"""Create an organization
 
+        Creates a AdsOrganization. Provide the unified AdsOrganization fields in the request body; they are mapped to the provider's API. Returns the created AdsOrganization.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1345,6 +1373,8 @@ class Ads(BaseSDK):
     ) -> operations.GetAdsAdResponse:
         r"""Retrieve an ad
 
+        Retrieves a single AdsAd by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1431,6 +1461,8 @@ class Ads(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAdsAdResponse:
         r"""Retrieve an ad
+
+        Retrieves a single AdsAd by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1521,6 +1553,8 @@ class Ads(BaseSDK):
     ) -> operations.GetAdsAssetResponse:
         r"""Retrieve an asset
 
+        Retrieves a single AdsAsset by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1610,6 +1644,8 @@ class Ads(BaseSDK):
     ) -> operations.GetAdsAssetResponse:
         r"""Retrieve an asset
 
+        Retrieves a single AdsAsset by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1698,6 +1734,8 @@ class Ads(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAdsCampaignResponse:
         r"""Retrieve a campaign
+
+        Retrieves a single AdsCampaign by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1790,6 +1828,8 @@ class Ads(BaseSDK):
     ) -> operations.GetAdsCampaignResponse:
         r"""Retrieve a campaign
 
+        Retrieves a single AdsCampaign by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1880,6 +1920,8 @@ class Ads(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAdsCreativeResponse:
         r"""Retrieve a creative
+
+        Retrieves a single AdsCreative by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1972,6 +2014,8 @@ class Ads(BaseSDK):
     ) -> operations.GetAdsCreativeResponse:
         r"""Retrieve a creative
 
+        Retrieves a single AdsCreative by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2063,6 +2107,8 @@ class Ads(BaseSDK):
     ) -> operations.GetAdsGroupResponse:
         r"""Retrieve a group
 
+        Retrieves a single AdsGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2151,6 +2197,8 @@ class Ads(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAdsGroupResponse:
         r"""Retrieve a group
+
+        Retrieves a single AdsGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2241,6 +2289,8 @@ class Ads(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAdsInsertionorderResponse:
         r"""Retrieve an insertionorder
+
+        Retrieves a single AdsInsertionorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2334,6 +2384,8 @@ class Ads(BaseSDK):
     ) -> operations.GetAdsInsertionorderResponse:
         r"""Retrieve an insertionorder
 
+        Retrieves a single AdsInsertionorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2425,6 +2477,8 @@ class Ads(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAdsOrganizationResponse:
         r"""Retrieve an organization
+
+        Retrieves a single AdsOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2518,6 +2572,8 @@ class Ads(BaseSDK):
     ) -> operations.GetAdsOrganizationResponse:
         r"""Retrieve an organization
 
+        Retrieves a single AdsOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2608,6 +2664,8 @@ class Ads(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAdsPromotedResponse:
         r"""Retrieve a promoted
+
+        Retrieves a single AdsPromoted by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2700,6 +2758,8 @@ class Ads(BaseSDK):
     ) -> operations.GetAdsPromotedResponse:
         r"""Retrieve a promoted
 
+        Retrieves a single AdsPromoted by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2790,6 +2850,8 @@ class Ads(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAdsTargetResponse:
         r"""Retrieve a target
+
+        Retrieves a single AdsTarget by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2882,6 +2944,8 @@ class Ads(BaseSDK):
     ) -> operations.GetAdsTargetResponse:
         r"""Retrieve a target
 
+        Retrieves a single AdsTarget by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2973,6 +3037,8 @@ class Ads(BaseSDK):
     ) -> operations.ListAdsAdsResponse:
         r"""List all ads
 
+        Returns a list of AdsAds. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3062,6 +3128,8 @@ class Ads(BaseSDK):
     ) -> operations.ListAdsAdsResponse:
         r"""List all ads
 
+        Returns a list of AdsAds. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3150,6 +3218,8 @@ class Ads(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAdsAssetsResponse:
         r"""List all assets
+
+        Returns a list of AdsAssets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3241,6 +3311,8 @@ class Ads(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAdsAssetsResponse:
         r"""List all assets
+
+        Returns a list of AdsAssets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3334,6 +3406,8 @@ class Ads(BaseSDK):
     ) -> operations.ListAdsCampaignsResponse:
         r"""List all campaigns
 
+        Returns a list of AdsCampaigns. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3425,6 +3499,8 @@ class Ads(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAdsCampaignsResponse:
         r"""List all campaigns
+
+        Returns a list of AdsCampaigns. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3518,6 +3594,8 @@ class Ads(BaseSDK):
     ) -> operations.ListAdsCreativesResponse:
         r"""List all creatives
 
+        Returns a list of AdsCreatives. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3610,6 +3688,8 @@ class Ads(BaseSDK):
     ) -> operations.ListAdsCreativesResponse:
         r"""List all creatives
 
+        Returns a list of AdsCreatives. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3701,6 +3781,8 @@ class Ads(BaseSDK):
     ) -> operations.ListAdsGroupsResponse:
         r"""List all groups
 
+        Returns a list of AdsGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3791,6 +3873,8 @@ class Ads(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAdsGroupsResponse:
         r"""List all groups
+
+        Returns a list of AdsGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3884,6 +3968,8 @@ class Ads(BaseSDK):
     ) -> operations.ListAdsInsertionordersResponse:
         r"""List all insertionorders
 
+        Returns a list of AdsInsertionorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3975,6 +4061,8 @@ class Ads(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAdsInsertionordersResponse:
         r"""List all insertionorders
+
+        Returns a list of AdsInsertionorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4068,6 +4156,8 @@ class Ads(BaseSDK):
     ) -> operations.ListAdsOrganizationsResponse:
         r"""List all organizations
 
+        Returns a list of AdsOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4159,6 +4249,8 @@ class Ads(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAdsOrganizationsResponse:
         r"""List all organizations
+
+        Returns a list of AdsOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4252,6 +4344,8 @@ class Ads(BaseSDK):
     ) -> operations.ListAdsPromotedsResponse:
         r"""List all promoteds
 
+        Returns a list of AdsPromoteds. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4344,6 +4438,8 @@ class Ads(BaseSDK):
     ) -> operations.ListAdsPromotedsResponse:
         r"""List all promoteds
 
+        Returns a list of AdsPromoteds. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4434,6 +4530,8 @@ class Ads(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAdsReportsResponse:
         r"""List all reports
+
+        Returns a list of AdsReports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4526,6 +4624,8 @@ class Ads(BaseSDK):
     ) -> operations.ListAdsReportsResponse:
         r"""List all reports
 
+        Returns a list of AdsReports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4616,6 +4716,8 @@ class Ads(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAdsTargetsResponse:
         r"""List all targets
+
+        Returns a list of AdsTargets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4708,6 +4810,8 @@ class Ads(BaseSDK):
     ) -> operations.ListAdsTargetsResponse:
         r"""List all targets
 
+        Returns a list of AdsTargets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4798,6 +4902,8 @@ class Ads(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAdsAdResponse:
         r"""Update an ad
+
+        Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4891,6 +4997,8 @@ class Ads(BaseSDK):
     ) -> operations.PatchAdsAdResponse:
         r"""Update an ad
 
+        Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4983,6 +5091,8 @@ class Ads(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAdsCampaignResponse:
         r"""Update a campaign
+
+        Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -5079,6 +5189,8 @@ class Ads(BaseSDK):
     ) -> operations.PatchAdsCampaignResponse:
         r"""Update a campaign
 
+        Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5173,6 +5285,8 @@ class Ads(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAdsCreativeResponse:
         r"""Update a creative
+
+        Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -5269,6 +5383,8 @@ class Ads(BaseSDK):
     ) -> operations.PatchAdsCreativeResponse:
         r"""Update a creative
 
+        Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5363,6 +5479,8 @@ class Ads(BaseSDK):
     ) -> operations.PatchAdsGroupResponse:
         r"""Update a group
 
+        Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5454,6 +5572,8 @@ class Ads(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAdsGroupResponse:
         r"""Update a group
+
+        Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -5547,6 +5667,8 @@ class Ads(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAdsInsertionorderResponse:
         r"""Update an insertionorder
+
+        Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -5647,6 +5769,8 @@ class Ads(BaseSDK):
     ) -> operations.PatchAdsInsertionorderResponse:
         r"""Update an insertionorder
 
+        Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5746,6 +5870,8 @@ class Ads(BaseSDK):
     ) -> operations.PatchAdsOrganizationResponse:
         r"""Update an organization
 
+        Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5841,6 +5967,8 @@ class Ads(BaseSDK):
     ) -> operations.PatchAdsOrganizationResponse:
         r"""Update an organization
 
+        Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5934,6 +6062,8 @@ class Ads(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAdsAdResponse:
         r"""Remove an ad
+
+        Deletes the AdsAd identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -6030,6 +6160,8 @@ class Ads(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAdsAdResponse:
         r"""Remove an ad
+
+        Deletes the AdsAd identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -6128,6 +6260,8 @@ class Ads(BaseSDK):
     ) -> operations.RemoveAdsCampaignResponse:
         r"""Remove a campaign
 
+        Deletes the AdsCampaign identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6224,6 +6358,8 @@ class Ads(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAdsCampaignResponse:
         r"""Remove a campaign
+
+        Deletes the AdsCampaign identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -6322,6 +6458,8 @@ class Ads(BaseSDK):
     ) -> operations.RemoveAdsCreativeResponse:
         r"""Remove a creative
 
+        Deletes the AdsCreative identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6419,6 +6557,8 @@ class Ads(BaseSDK):
     ) -> operations.RemoveAdsCreativeResponse:
         r"""Remove a creative
 
+        Deletes the AdsCreative identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6514,6 +6654,8 @@ class Ads(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAdsGroupResponse:
         r"""Remove a group
+
+        Deletes the AdsGroup identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -6611,6 +6753,8 @@ class Ads(BaseSDK):
     ) -> operations.RemoveAdsGroupResponse:
         r"""Remove a group
 
+        Deletes the AdsGroup identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6707,6 +6851,8 @@ class Ads(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAdsInsertionorderResponse:
         r"""Remove an insertionorder
+
+        Deletes the AdsInsertionorder identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -6807,6 +6953,8 @@ class Ads(BaseSDK):
     ) -> operations.RemoveAdsInsertionorderResponse:
         r"""Remove an insertionorder
 
+        Deletes the AdsInsertionorder identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6906,6 +7054,8 @@ class Ads(BaseSDK):
     ) -> operations.RemoveAdsOrganizationResponse:
         r"""Remove an organization
 
+        Deletes the AdsOrganization identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7003,6 +7153,8 @@ class Ads(BaseSDK):
     ) -> operations.RemoveAdsOrganizationResponse:
         r"""Remove an organization
 
+        Deletes the AdsOrganization identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7099,6 +7251,8 @@ class Ads(BaseSDK):
     ) -> operations.UpdateAdsAdResponse:
         r"""Update an ad
 
+        Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7190,6 +7344,8 @@ class Ads(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAdsAdResponse:
         r"""Update an ad
+
+        Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -7283,6 +7439,8 @@ class Ads(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAdsCampaignResponse:
         r"""Update a campaign
+
+        Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -7379,6 +7537,8 @@ class Ads(BaseSDK):
     ) -> operations.UpdateAdsCampaignResponse:
         r"""Update a campaign
 
+        Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7473,6 +7633,8 @@ class Ads(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAdsCreativeResponse:
         r"""Update a creative
+
+        Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -7569,6 +7731,8 @@ class Ads(BaseSDK):
     ) -> operations.UpdateAdsCreativeResponse:
         r"""Update a creative
 
+        Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7663,6 +7827,8 @@ class Ads(BaseSDK):
     ) -> operations.UpdateAdsGroupResponse:
         r"""Update a group
 
+        Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7754,6 +7920,8 @@ class Ads(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAdsGroupResponse:
         r"""Update a group
+
+        Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -7847,6 +8015,8 @@ class Ads(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAdsInsertionorderResponse:
         r"""Update an insertionorder
+
+        Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -7949,6 +8119,8 @@ class Ads(BaseSDK):
     ) -> operations.UpdateAdsInsertionorderResponse:
         r"""Update an insertionorder
 
+        Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -8050,6 +8222,8 @@ class Ads(BaseSDK):
     ) -> operations.UpdateAdsOrganizationResponse:
         r"""Update an organization
 
+        Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -8144,6 +8318,8 @@ class Ads(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAdsOrganizationResponse:
         r"""Update an organization
+
+        Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

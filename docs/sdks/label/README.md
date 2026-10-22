@@ -13,7 +13,7 @@
 
 ## create_shipping_label
 
-Create a label
+Creates a ShippingLabel. Provide the unified ShippingLabel fields in the request body; they are mapped to the provider's API. Returns the created ShippingLabel.
 
 ### Example Usage
 
@@ -33,17 +33,17 @@ with UnifiedTo(
     res = unified_to.label.create_shipping_label(request={
         "shipping_label": {
             "created_at": parse_datetime("2022-11-18T16:45:38.067Z"),
-            "id": "ad27bb24-972f-4fbc-9897-028fe37ed8bd",
+            "id": "0a7687ba-1b2d-4861-a73f-bd0f245ecb14",
             "is_voided": False,
             "label_cost": 40.83653403213248,
             "label_cost_currency": "USD",
             "label_format": shared.LabelFormat.PNG,
-            "label_url": "https://labels.example.com/ad27bb24-972f-4fbc-9897-028fe37ed8bd.pdf",
+            "label_url": "https://labels.example.com/0a7687ba-1b2d-4861-a73f-bd0f245ecb14.pdf",
             "metadata": [],
             "service_code": "Dzy",
             "status": shared.ShippingLabelStatus.EXCEPTION,
             "tracking_number": "ZYV60FOIBUJ6",
-            "updated_at": parse_datetime("2024-04-28T21:51:59.833Z"),
+            "updated_at": parse_datetime("2024-04-29T06:38:50.663Z"),
         },
         "connection_id": "<id>",
     })
@@ -74,7 +74,7 @@ with UnifiedTo(
 
 ## get_shipping_label
 
-Retrieve a label
+Retrieves a single ShippingLabel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -121,7 +121,7 @@ with UnifiedTo(
 
 ## list_shipping_labels
 
-List all labels
+Returns a list of ShippingLabels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -167,7 +167,7 @@ with UnifiedTo(
 
 ## patch_shipping_label
 
-Update a label
+Updates the ShippingLabel identified by `id`. Provide the unified ShippingLabel fields to change in the request body.
 
 ### Example Usage
 
@@ -187,17 +187,17 @@ with UnifiedTo(
     res = unified_to.label.patch_shipping_label(request={
         "shipping_label": {
             "created_at": parse_datetime("2022-11-18T16:45:38.067Z"),
-            "id": "5a0182b7-9141-44ac-a5a4-d8a8d55ccc06",
+            "id": "dc4fada4-942f-4b74-95d8-576e6405865f",
             "is_voided": False,
             "label_cost": 40.83653403213248,
             "label_cost_currency": "USD",
             "label_format": shared.LabelFormat.PNG,
-            "label_url": "https://labels.example.com/5a0182b7-9141-44ac-a5a4-d8a8d55ccc06.pdf",
+            "label_url": "https://labels.example.com/dc4fada4-942f-4b74-95d8-576e6405865f.pdf",
             "metadata": [],
             "service_code": "Dzy",
             "status": shared.ShippingLabelStatus.EXCEPTION,
             "tracking_number": "ZYV60FOIBUJ6",
-            "updated_at": parse_datetime("2024-04-28T21:51:59.839Z"),
+            "updated_at": parse_datetime("2024-04-29T06:38:50.677Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -229,7 +229,7 @@ with UnifiedTo(
 
 ## remove_shipping_label
 
-Remove a label
+Deletes the ShippingLabel identified by `id`.
 
 ### Example Usage
 
@@ -276,7 +276,7 @@ with UnifiedTo(
 
 ## update_shipping_label
 
-Update a label
+Updates the ShippingLabel identified by `id`. Provide the unified ShippingLabel fields to change in the request body.
 
 ### Example Usage
 
@@ -296,17 +296,17 @@ with UnifiedTo(
     res = unified_to.label.update_shipping_label(request={
         "shipping_label": {
             "created_at": parse_datetime("2022-11-18T16:45:38.067Z"),
-            "id": "5a0182b7-9141-44ac-a5a4-d8a8d55ccc06",
+            "id": "dc4fada4-942f-4b74-95d8-576e6405865f",
             "is_voided": False,
             "label_cost": 40.83653403213248,
             "label_cost_currency": "USD",
             "label_format": shared.LabelFormat.PNG,
-            "label_url": "https://labels.example.com/5a0182b7-9141-44ac-a5a4-d8a8d55ccc06.pdf",
+            "label_url": "https://labels.example.com/dc4fada4-942f-4b74-95d8-576e6405865f.pdf",
             "metadata": [],
             "service_code": "Dzy",
             "status": shared.ShippingLabelStatus.EXCEPTION,
             "tracking_number": "ZYV60FOIBUJ6",
-            "updated_at": parse_datetime("2024-04-28T21:51:59.839Z"),
+            "updated_at": parse_datetime("2024-04-29T06:38:50.677Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

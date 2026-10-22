@@ -13,7 +13,7 @@
 
 ## create_accounting_salesorder
 
-Create a salesorder
+Creates a AccountingSalesorder. Provide the unified AccountingSalesorder fields in the request body; they are mapped to the provider's API. Returns the created AccountingSalesorder.
 
 ### Example Usage
 
@@ -42,13 +42,13 @@ with UnifiedTo(
                 "region_code": "MO",
             },
             "category_ids": [],
-            "closed_at": parse_datetime("2023-03-25T12:56:07.857Z"),
+            "closed_at": parse_datetime("2023-03-25T18:51:55.584Z"),
             "created_at": parse_datetime("2022-01-17T16:11:50.310Z"),
             "currency": "USD",
             "discount_amount": 0.0,
             "fees": [],
             "fulfillment_type": shared.FulfillmentType.OTHER,
-            "id": "682db75b-3d6a-4088-8356-45659be13c4d",
+            "id": "31b40f4c-8c74-473c-834c-108a496eb083",
             "lineitems": [],
             "metadata": [],
             "order_number": "832663",
@@ -70,7 +70,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "tip_amount": 0.0,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2023-03-25T12:56:07.857Z"),
+            "updated_at": parse_datetime("2023-03-25T18:51:55.584Z"),
         },
         "connection_id": "<id>",
     })
@@ -101,7 +101,7 @@ with UnifiedTo(
 
 ## get_accounting_salesorder
 
-Retrieve a salesorder
+Retrieves a single AccountingSalesorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -148,7 +148,7 @@ with UnifiedTo(
 
 ## list_accounting_salesorders
 
-List all salesorders
+Returns a list of AccountingSalesorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -194,7 +194,7 @@ with UnifiedTo(
 
 ## patch_accounting_salesorder
 
-Update a salesorder
+Updates the AccountingSalesorder identified by `id`. Provide the unified AccountingSalesorder fields to change in the request body.
 
 ### Example Usage
 
@@ -223,13 +223,13 @@ with UnifiedTo(
                 "region_code": "MO",
             },
             "category_ids": [],
-            "closed_at": parse_datetime("2023-03-25T12:56:07.875Z"),
+            "closed_at": parse_datetime("2023-03-25T18:51:55.597Z"),
             "created_at": parse_datetime("2022-01-17T16:11:50.310Z"),
             "currency": "USD",
             "discount_amount": 0.0,
             "fees": [],
             "fulfillment_type": shared.FulfillmentType.OTHER,
-            "id": "0b6e3f77-ddfb-40ee-bced-b13bab0db7b6",
+            "id": "eb857dee-e60e-475f-bdcd-edb5a376f942",
             "lineitems": [],
             "metadata": [],
             "order_number": "832663",
@@ -251,7 +251,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "tip_amount": 0.0,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2023-03-25T12:56:07.875Z"),
+            "updated_at": parse_datetime("2023-03-25T18:51:55.597Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -283,7 +283,7 @@ with UnifiedTo(
 
 ## remove_accounting_salesorder
 
-Remove a salesorder
+Deletes the AccountingSalesorder identified by `id`.
 
 ### Example Usage
 
@@ -330,7 +330,7 @@ with UnifiedTo(
 
 ## update_accounting_salesorder
 
-Update a salesorder
+Updates the AccountingSalesorder identified by `id`. Provide the unified AccountingSalesorder fields to change in the request body.
 
 ### Example Usage
 
@@ -359,13 +359,13 @@ with UnifiedTo(
                 "region_code": "MO",
             },
             "category_ids": [],
-            "closed_at": parse_datetime("2023-03-25T12:56:07.875Z"),
+            "closed_at": parse_datetime("2023-03-25T18:51:55.597Z"),
             "created_at": parse_datetime("2022-01-17T16:11:50.310Z"),
             "currency": "USD",
             "discount_amount": 0.0,
             "fees": [],
             "fulfillment_type": shared.FulfillmentType.OTHER,
-            "id": "0b6e3f77-ddfb-40ee-bced-b13bab0db7b6",
+            "id": "eb857dee-e60e-475f-bdcd-edb5a376f942",
             "lineitems": [],
             "metadata": [],
             "order_number": "832663",
@@ -387,7 +387,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "tip_amount": 0.0,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2023-03-25T12:56:07.875Z"),
+            "updated_at": parse_datetime("2023-03-25T18:51:55.597Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

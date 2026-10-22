@@ -24,6 +24,8 @@ class Embedding(BaseSDK):
     ) -> operations.CreateGenaiEmbeddingResponse:
         r"""Create an embedding
 
+        Creates a GenaiEmbedding. Provide the unified GenaiEmbedding fields in the request body; they are mapped to the provider's API. Returns the created GenaiEmbedding.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -118,6 +120,8 @@ class Embedding(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateGenaiEmbeddingResponse:
         r"""Create an embedding
+
+        Creates a GenaiEmbedding. Provide the unified GenaiEmbedding fields in the request body; they are mapped to the provider's API. Returns the created GenaiEmbedding.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

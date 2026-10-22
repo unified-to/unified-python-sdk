@@ -64,7 +64,7 @@
 
 ## create_compute_deployment
 
-Create a deployment
+Creates a ComputeDeployment. Provide the unified ComputeDeployment fields in the request body; they are mapped to the provider's API. Returns the created ComputeDeployment.
 
 ### Example Usage
 
@@ -88,13 +88,13 @@ with UnifiedTo(
             "commit_message": "copy primary pixel",
             "created_at": parse_datetime("2022-06-07T03:52:04.613Z"),
             "environment": shared.Environment.PREVIEW,
-            "finished_at": parse_datetime("2025-08-29T15:02:09.011Z"),
-            "id": "118c4a0f-6a4c-450b-bc1e-f02f918c6784",
+            "finished_at": parse_datetime("2025-08-30T08:39:21.131Z"),
+            "id": "25ba96fd-fe07-48cd-b826-6741970cfc4f",
             "metadata": [],
-            "started_at": parse_datetime("2025-04-10T07:26:56.632Z"),
+            "started_at": parse_datetime("2025-04-10T22:57:28.715Z"),
             "status": shared.ComputeDeploymentStatus.LIVE,
             "trigger": shared.Trigger.API,
-            "updated_at": parse_datetime("2026-02-28T17:58:56.230Z"),
+            "updated_at": parse_datetime("2026-03-01T14:20:16.768Z"),
             "url": "https://comfortable-petal.name",
         },
         "connection_id": "<id>",
@@ -126,7 +126,7 @@ with UnifiedTo(
 
 ## create_compute_domain
 
-Create a domain
+Creates a ComputeDomain. Provide the unified ComputeDomain fields in the request body; they are mapped to the provider's API. Returns the created ComputeDomain.
 
 ### Example Usage
 
@@ -146,12 +146,12 @@ with UnifiedTo(
     res = unified_to.compute.create_compute_domain(request={
         "compute_domain": {
             "created_at": parse_datetime("2019-11-22T16:38:26.009Z"),
-            "id": "dd6ba3b4-11fc-4d67-aa64-f3aef835838e",
+            "id": "551bfdc5-f3f9-4bec-b4ac-aebb4840484d",
             "is_primary": False,
             "metadata": [],
             "name": "mysterious-republican.usable-section.info",
             "status": shared.ComputeDomainStatus.PENDING,
-            "updated_at": parse_datetime("2023-11-03T15:08:58.319Z"),
+            "updated_at": parse_datetime("2023-11-04T04:46:33.831Z"),
         },
         "connection_id": "<id>",
     })
@@ -182,7 +182,7 @@ with UnifiedTo(
 
 ## create_compute_envvar
 
-Create an envvar
+Creates a ComputeEnvvar. Provide the unified ComputeEnvvar fields in the request body; they are mapped to the provider's API. Returns the created ComputeEnvvar.
 
 ### Example Usage
 
@@ -205,11 +205,11 @@ with UnifiedTo(
             "environments": [
                 shared.PropertyComputeEnvvarEnvironments.PREVIEW,
             ],
-            "id": "85469808-5e34-48b8-a37d-d0d50a520e06",
+            "id": "45267d80-0151-4bb4-8576-dce993a3529c",
             "is_secret": True,
             "metadata": [],
             "name": "AEGER_SUBSTANTIA",
-            "updated_at": parse_datetime("2025-07-03T14:18:21.342Z"),
+            "updated_at": parse_datetime("2025-07-04T08:10:42.741Z"),
         },
         "connection_id": "<id>",
     })
@@ -240,7 +240,7 @@ with UnifiedTo(
 
 ## create_compute_instance
 
-Create an instance
+Creates a ComputeInstance. Provide the unified ComputeInstance fields in the request body; they are mapped to the provider's API. Returns the created ComputeInstance.
 
 ### Example Usage
 
@@ -277,7 +277,7 @@ with UnifiedTo(
             ],
             "gpu_count": 0.0,
             "has_internet_access": True,
-            "id": "2fa38d57-975a-48f9-bb0f-a33d7ca6df1c",
+            "id": "468756b5-e6c9-4689-8e98-6b4bd5f7940d",
             "image": "ubuntu:24.04",
             "market": shared.Market.SPOT,
             "memory_mb": 2048.0,
@@ -292,11 +292,11 @@ with UnifiedTo(
                 "port": 22.0,
                 "username": "root",
             },
-            "started_at": parse_datetime("2025-03-23T23:15:07.360Z"),
+            "started_at": parse_datetime("2025-03-24T13:47:14.312Z"),
             "status": shared.ComputeInstanceStatus.ERROR,
             "status_reason": "Sponte quasi adversus alioqui reiciendis arca carmen canis.",
             "type": shared.ComputeInstanceType.BAREMETAL,
-            "updated_at": parse_datetime("2025-06-16T04:47:23.794Z"),
+            "updated_at": parse_datetime("2025-06-16T20:41:16.883Z"),
         },
         "connection_id": "<id>",
     })
@@ -327,7 +327,7 @@ with UnifiedTo(
 
 ## create_compute_key
 
-Create a key
+Creates a ComputeKey. Provide the unified ComputeKey fields in the request body; they are mapped to the provider's API. Returns the created ComputeKey.
 
 ### Example Usage
 
@@ -347,11 +347,11 @@ with UnifiedTo(
     res = unified_to.compute.create_compute_key(request={
         "compute_key": {
             "created_at": parse_datetime("2023-08-19T14:31:46.492Z"),
-            "id": "bc28e659-7d18-4c7c-89e5-027b806d5e67",
+            "id": "725133a7-c506-47e4-81d0-3b0553657a5f",
             "metadata": [],
             "name": "nienow-secret",
             "type": shared.ComputeKeyType.SECRET,
-            "updated_at": parse_datetime("2024-10-06T23:18:56.355Z"),
+            "updated_at": parse_datetime("2024-10-07T07:50:55.892Z"),
         },
         "connection_id": "<id>",
     })
@@ -382,7 +382,7 @@ with UnifiedTo(
 
 ## create_compute_service
 
-Create a service
+Creates a ComputeService. Provide the unified ComputeService fields in the request body; they are mapped to the provider's API. Returns the created ComputeService.
 
 ### Example Usage
 
@@ -404,7 +404,7 @@ with UnifiedTo(
             "branch": "main",
             "build_command": "npm run build",
             "created_at": parse_datetime("2023-10-04T02:06:29.391Z"),
-            "id": "4c45ee40-ecf8-46b8-9195-13a4e608b5a1",
+            "id": "5aa4a9da-3136-44d7-b67a-774ca43245eb",
             "instance_count": 6.0,
             "max_instance_count": 6.0,
             "metadata": [],
@@ -415,7 +415,7 @@ with UnifiedTo(
             "runtime": "python",
             "status": shared.ComputeServiceStatus.SUSPENDED,
             "type": shared.ComputeServiceType.OTHER,
-            "updated_at": parse_datetime("2025-04-04T16:27:58.461Z"),
+            "updated_at": parse_datetime("2025-04-05T04:13:31.628Z"),
             "url": "https://tame-sideboard.rotating-shoulder.biz",
         },
         "connection_id": "<id>",
@@ -447,7 +447,7 @@ with UnifiedTo(
 
 ## create_compute_snapshot
 
-Create a snapshot
+Creates a ComputeSnapshot. Provide the unified ComputeSnapshot fields in the request body; they are mapped to the provider's API. Returns the created ComputeSnapshot.
 
 ### Example Usage
 
@@ -467,13 +467,13 @@ with UnifiedTo(
     res = unified_to.compute.create_compute_snapshot(request={
         "compute_snapshot": {
             "created_at": parse_datetime("2021-09-24T14:40:06.110Z"),
-            "id": "f269958b-3607-4340-bef2-0cdc8c8ee673",
+            "id": "7a18b86c-23c2-464c-a653-5b452e03d454",
             "metadata": [],
             "name": "snap-alius",
             "size_mb": 169984.0,
             "status": shared.ComputeSnapshotStatus.DELETING,
             "type": shared.ComputeSnapshotType.DISK,
-            "updated_at": parse_datetime("2026-03-30T21:19:57.943Z"),
+            "updated_at": parse_datetime("2026-03-31T18:33:33.680Z"),
         },
         "connection_id": "<id>",
     })
@@ -504,7 +504,7 @@ with UnifiedTo(
 
 ## create_compute_template
 
-Create a template
+Creates a ComputeTemplate. Provide the unified ComputeTemplate fields in the request body; they are mapped to the provider's API. Returns the created ComputeTemplate.
 
 ### Example Usage
 
@@ -529,10 +529,10 @@ with UnifiedTo(
             "dockerfile": "FROM ubuntu:24.04\nRUN apt-get update",
             "gpu_count": 2.0,
             "gpu_model": shared.ComputeTemplateGpuModel.NVIDIA_GH200,
-            "id": "45861dbc-d156-4117-a385-2099a142e18b",
+            "id": "eaa43204-8bb4-45ef-a7a2-05e9a78e76d8",
             "image": "perfumed-molasses/cohibeo:5.2",
             "is_public": False,
-            "last_used_at": parse_datetime("2026-03-23T20:23:02.244Z"),
+            "last_used_at": parse_datetime("2026-03-24T16:28:06.696Z"),
             "memory_mb": 8192.0,
             "metadata": [],
             "name": "multi-byte-card",
@@ -540,7 +540,7 @@ with UnifiedTo(
                 8080.0,
             ],
             "status": shared.ComputeTemplateStatus.OTHER,
-            "updated_at": parse_datetime("2025-02-12T18:36:08.773Z"),
+            "updated_at": parse_datetime("2025-02-13T07:28:16.292Z"),
         },
         "connection_id": "<id>",
     })
@@ -571,7 +571,7 @@ with UnifiedTo(
 
 ## create_compute_volume
 
-Create a volume
+Creates a ComputeVolume. Provide the unified ComputeVolume fields in the request body; they are mapped to the provider's API. Returns the created ComputeVolume.
 
 ### Example Usage
 
@@ -591,14 +591,14 @@ with UnifiedTo(
     res = unified_to.compute.create_compute_volume(request={
         "compute_volume": {
             "created_at": parse_datetime("2022-11-15T15:12:48.055Z"),
-            "id": "adf0429d-d496-46d9-9f85-7e1b62fd1792",
+            "id": "55825a37-409f-476f-89bc-18142a68869a",
             "instance_ids": [],
             "metadata": [],
             "name": "vol-solum",
             "size_mb": 1024000.0,
             "status": shared.ComputeVolumeStatus.OTHER,
             "type": shared.ComputeVolumeType.HIGH_PERFORMANCE,
-            "updated_at": parse_datetime("2024-02-09T21:49:38.128Z"),
+            "updated_at": parse_datetime("2024-02-10T05:19:38.193Z"),
             "used_mb": 524986.0,
         },
         "connection_id": "<id>",
@@ -630,7 +630,7 @@ with UnifiedTo(
 
 ## get_compute_deployment
 
-Retrieve a deployment
+Retrieves a single ComputeDeployment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -677,7 +677,7 @@ with UnifiedTo(
 
 ## get_compute_domain
 
-Retrieve a domain
+Retrieves a single ComputeDomain by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -724,7 +724,7 @@ with UnifiedTo(
 
 ## get_compute_envvar
 
-Retrieve an envvar
+Retrieves a single ComputeEnvvar by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -771,7 +771,7 @@ with UnifiedTo(
 
 ## get_compute_gputype
 
-Retrieve a gputype
+Retrieves a single ComputeGputype by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -818,7 +818,7 @@ with UnifiedTo(
 
 ## get_compute_instance
 
-Retrieve an instance
+Retrieves a single ComputeInstance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -865,7 +865,7 @@ with UnifiedTo(
 
 ## get_compute_key
 
-Retrieve a key
+Retrieves a single ComputeKey by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -912,7 +912,7 @@ with UnifiedTo(
 
 ## get_compute_region
 
-Retrieve a region
+Retrieves a single ComputeRegion by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -959,7 +959,7 @@ with UnifiedTo(
 
 ## get_compute_service
 
-Retrieve a service
+Retrieves a single ComputeService by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1006,7 +1006,7 @@ with UnifiedTo(
 
 ## get_compute_snapshot
 
-Retrieve a snapshot
+Retrieves a single ComputeSnapshot by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1053,7 +1053,7 @@ with UnifiedTo(
 
 ## get_compute_template
 
-Retrieve a template
+Retrieves a single ComputeTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1100,7 +1100,7 @@ with UnifiedTo(
 
 ## get_compute_volume
 
-Retrieve a volume
+Retrieves a single ComputeVolume by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1147,7 +1147,7 @@ with UnifiedTo(
 
 ## list_compute_deployments
 
-List all deployments
+Returns a list of ComputeDeployments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1193,7 +1193,7 @@ with UnifiedTo(
 
 ## list_compute_domains
 
-List all domains
+Returns a list of ComputeDomains. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1239,7 +1239,7 @@ with UnifiedTo(
 
 ## list_compute_envvars
 
-List all envvars
+Returns a list of ComputeEnvvars. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1285,7 +1285,7 @@ with UnifiedTo(
 
 ## list_compute_gputypes
 
-List all gputypes
+Returns a list of ComputeGputypes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1331,7 +1331,7 @@ with UnifiedTo(
 
 ## list_compute_instances
 
-List all instances
+Returns a list of ComputeInstances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1377,7 +1377,7 @@ with UnifiedTo(
 
 ## list_compute_keys
 
-List all keys
+Returns a list of ComputeKeys. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1423,7 +1423,7 @@ with UnifiedTo(
 
 ## list_compute_regions
 
-List all regions
+Returns a list of ComputeRegions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1469,7 +1469,7 @@ with UnifiedTo(
 
 ## list_compute_services
 
-List all services
+Returns a list of ComputeServices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1515,7 +1515,7 @@ with UnifiedTo(
 
 ## list_compute_snapshots
 
-List all snapshots
+Returns a list of ComputeSnapshots. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1561,7 +1561,7 @@ with UnifiedTo(
 
 ## list_compute_templates
 
-List all templates
+Returns a list of ComputeTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1607,7 +1607,7 @@ with UnifiedTo(
 
 ## list_compute_usages
 
-List all usages
+Returns a list of ComputeUsages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1653,7 +1653,7 @@ with UnifiedTo(
 
 ## list_compute_volumes
 
-List all volumes
+Returns a list of ComputeVolumes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1699,7 +1699,7 @@ with UnifiedTo(
 
 ## patch_compute_deployment
 
-Update a deployment
+Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to change in the request body.
 
 ### Example Usage
 
@@ -1723,13 +1723,13 @@ with UnifiedTo(
             "commit_message": "copy primary pixel",
             "created_at": parse_datetime("2022-06-07T03:52:04.613Z"),
             "environment": shared.Environment.PREVIEW,
-            "finished_at": parse_datetime("2025-08-29T15:02:09.033Z"),
-            "id": "11ca298f-9892-459f-b75e-da09783febd8",
+            "finished_at": parse_datetime("2025-08-30T08:39:21.145Z"),
+            "id": "d3cda7e1-1d2a-4128-8ecf-16721fcf731a",
             "metadata": [],
-            "started_at": parse_datetime("2025-04-10T07:26:56.652Z"),
+            "started_at": parse_datetime("2025-04-10T22:57:28.727Z"),
             "status": shared.ComputeDeploymentStatus.LIVE,
             "trigger": shared.Trigger.API,
-            "updated_at": parse_datetime("2026-02-28T17:58:56.257Z"),
+            "updated_at": parse_datetime("2026-03-01T14:20:16.783Z"),
             "url": "https://comfortable-petal.name",
         },
         "connection_id": "<id>",
@@ -1762,7 +1762,7 @@ with UnifiedTo(
 
 ## patch_compute_domain
 
-Update a domain
+Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in the request body.
 
 ### Example Usage
 
@@ -1782,12 +1782,12 @@ with UnifiedTo(
     res = unified_to.compute.patch_compute_domain(request={
         "compute_domain": {
             "created_at": parse_datetime("2019-11-22T16:38:26.009Z"),
-            "id": "433bf6e8-1a86-4d5d-8cad-3353c77e233e",
+            "id": "0654d12c-42c7-4802-974c-08c6d4f0f544",
             "is_primary": False,
             "metadata": [],
             "name": "mysterious-republican.usable-section.info",
             "status": shared.ComputeDomainStatus.PENDING,
-            "updated_at": parse_datetime("2023-11-03T15:08:58.330Z"),
+            "updated_at": parse_datetime("2023-11-04T04:46:33.838Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1819,7 +1819,7 @@ with UnifiedTo(
 
 ## patch_compute_envvar
 
-Update an envvar
+Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in the request body.
 
 ### Example Usage
 
@@ -1842,11 +1842,11 @@ with UnifiedTo(
             "environments": [
                 shared.PropertyComputeEnvvarEnvironments.PREVIEW,
             ],
-            "id": "3598af98-8618-4d5b-895a-d2b5811d5b26",
+            "id": "f0db2170-df5b-4931-a32a-b0958fe98b2c",
             "is_secret": True,
             "metadata": [],
             "name": "AEGER_SUBSTANTIA",
-            "updated_at": parse_datetime("2025-07-03T14:18:21.354Z"),
+            "updated_at": parse_datetime("2025-07-04T08:10:42.750Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1878,7 +1878,7 @@ with UnifiedTo(
 
 ## patch_compute_instance
 
-Update an instance
+Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change in the request body.
 
 ### Example Usage
 
@@ -1915,7 +1915,7 @@ with UnifiedTo(
             ],
             "gpu_count": 0.0,
             "has_internet_access": True,
-            "id": "5516476d-5b91-46df-8c5d-01dd7135dab6",
+            "id": "e8839c42-59e6-46ea-b661-3ffe8d9568e5",
             "image": "ubuntu:24.04",
             "market": shared.Market.SPOT,
             "memory_mb": 2048.0,
@@ -1930,11 +1930,11 @@ with UnifiedTo(
                 "port": 22.0,
                 "username": "root",
             },
-            "started_at": parse_datetime("2025-03-23T23:15:07.391Z"),
+            "started_at": parse_datetime("2025-03-24T13:47:14.341Z"),
             "status": shared.ComputeInstanceStatus.ERROR,
             "status_reason": "Sponte quasi adversus alioqui reiciendis arca carmen canis.",
             "type": shared.ComputeInstanceType.BAREMETAL,
-            "updated_at": parse_datetime("2025-06-16T04:47:23.828Z"),
+            "updated_at": parse_datetime("2025-06-16T20:41:16.915Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1966,7 +1966,7 @@ with UnifiedTo(
 
 ## patch_compute_key
 
-Update a key
+Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the request body.
 
 ### Example Usage
 
@@ -1986,11 +1986,11 @@ with UnifiedTo(
     res = unified_to.compute.patch_compute_key(request={
         "compute_key": {
             "created_at": parse_datetime("2023-08-19T14:31:46.492Z"),
-            "id": "7cabe2cd-57bc-4d7c-ac2b-2080b47e5c53",
+            "id": "75e89696-fc90-4cd8-8c31-b54eb0d5c71f",
             "metadata": [],
             "name": "nienow-secret",
             "type": shared.ComputeKeyType.SECRET,
-            "updated_at": parse_datetime("2024-10-06T23:18:56.361Z"),
+            "updated_at": parse_datetime("2024-10-07T07:50:55.897Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2022,7 +2022,7 @@ with UnifiedTo(
 
 ## patch_compute_service
 
-Update a service
+Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change in the request body.
 
 ### Example Usage
 
@@ -2044,7 +2044,7 @@ with UnifiedTo(
             "branch": "main",
             "build_command": "npm run build",
             "created_at": parse_datetime("2023-10-04T02:06:29.391Z"),
-            "id": "125a5440-2ec7-48ee-9039-5acfbfdf6a06",
+            "id": "8ce46942-4d37-431a-b3d0-f3fb463c15a9",
             "instance_count": 6.0,
             "max_instance_count": 6.0,
             "metadata": [],
@@ -2055,7 +2055,7 @@ with UnifiedTo(
             "runtime": "python",
             "status": shared.ComputeServiceStatus.SUSPENDED,
             "type": shared.ComputeServiceType.OTHER,
-            "updated_at": parse_datetime("2025-04-04T16:27:58.476Z"),
+            "updated_at": parse_datetime("2025-04-05T04:13:31.639Z"),
             "url": "https://tame-sideboard.rotating-shoulder.biz",
         },
         "connection_id": "<id>",
@@ -2088,7 +2088,7 @@ with UnifiedTo(
 
 ## patch_compute_template
 
-Update a template
+Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change in the request body.
 
 ### Example Usage
 
@@ -2113,10 +2113,10 @@ with UnifiedTo(
             "dockerfile": "FROM ubuntu:24.04\nRUN apt-get update",
             "gpu_count": 2.0,
             "gpu_model": shared.ComputeTemplateGpuModel.NVIDIA_GH200,
-            "id": "40c203b4-a64e-4b07-a9dd-51bd17c3c5e5",
+            "id": "54d4604d-270c-4610-8aab-cf1d48975452",
             "image": "perfumed-molasses/cohibeo:5.2",
             "is_public": False,
-            "last_used_at": parse_datetime("2026-03-23T20:23:02.260Z"),
+            "last_used_at": parse_datetime("2026-03-24T16:28:06.720Z"),
             "memory_mb": 8192.0,
             "metadata": [],
             "name": "multi-byte-card",
@@ -2124,7 +2124,7 @@ with UnifiedTo(
                 8080.0,
             ],
             "status": shared.ComputeTemplateStatus.OTHER,
-            "updated_at": parse_datetime("2025-02-12T18:36:08.783Z"),
+            "updated_at": parse_datetime("2025-02-13T07:28:16.307Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2156,7 +2156,7 @@ with UnifiedTo(
 
 ## patch_compute_volume
 
-Update a volume
+Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in the request body.
 
 ### Example Usage
 
@@ -2176,14 +2176,14 @@ with UnifiedTo(
     res = unified_to.compute.patch_compute_volume(request={
         "compute_volume": {
             "created_at": parse_datetime("2022-11-15T15:12:48.055Z"),
-            "id": "4e6b48c7-a0e2-45cf-9c09-7674d9c87ad7",
+            "id": "33536cfd-0184-4e65-ab51-dcf407b45b59",
             "instance_ids": [],
             "metadata": [],
             "name": "vol-solum",
             "size_mb": 1024000.0,
             "status": shared.ComputeVolumeStatus.OTHER,
             "type": shared.ComputeVolumeType.HIGH_PERFORMANCE,
-            "updated_at": parse_datetime("2024-02-09T21:49:38.133Z"),
+            "updated_at": parse_datetime("2024-02-10T05:19:38.198Z"),
             "used_mb": 524986.0,
         },
         "connection_id": "<id>",
@@ -2216,7 +2216,7 @@ with UnifiedTo(
 
 ## remove_compute_deployment
 
-Remove a deployment
+Deletes the ComputeDeployment identified by `id`.
 
 ### Example Usage
 
@@ -2263,7 +2263,7 @@ with UnifiedTo(
 
 ## remove_compute_domain
 
-Remove a domain
+Deletes the ComputeDomain identified by `id`.
 
 ### Example Usage
 
@@ -2310,7 +2310,7 @@ with UnifiedTo(
 
 ## remove_compute_envvar
 
-Remove an envvar
+Deletes the ComputeEnvvar identified by `id`.
 
 ### Example Usage
 
@@ -2357,7 +2357,7 @@ with UnifiedTo(
 
 ## remove_compute_instance
 
-Remove an instance
+Deletes the ComputeInstance identified by `id`.
 
 ### Example Usage
 
@@ -2404,7 +2404,7 @@ with UnifiedTo(
 
 ## remove_compute_key
 
-Remove a key
+Deletes the ComputeKey identified by `id`.
 
 ### Example Usage
 
@@ -2451,7 +2451,7 @@ with UnifiedTo(
 
 ## remove_compute_service
 
-Remove a service
+Deletes the ComputeService identified by `id`.
 
 ### Example Usage
 
@@ -2498,7 +2498,7 @@ with UnifiedTo(
 
 ## remove_compute_snapshot
 
-Remove a snapshot
+Deletes the ComputeSnapshot identified by `id`.
 
 ### Example Usage
 
@@ -2545,7 +2545,7 @@ with UnifiedTo(
 
 ## remove_compute_template
 
-Remove a template
+Deletes the ComputeTemplate identified by `id`.
 
 ### Example Usage
 
@@ -2592,7 +2592,7 @@ with UnifiedTo(
 
 ## remove_compute_volume
 
-Remove a volume
+Deletes the ComputeVolume identified by `id`.
 
 ### Example Usage
 
@@ -2639,7 +2639,7 @@ with UnifiedTo(
 
 ## update_compute_deployment
 
-Update a deployment
+Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to change in the request body.
 
 ### Example Usage
 
@@ -2663,13 +2663,13 @@ with UnifiedTo(
             "commit_message": "copy primary pixel",
             "created_at": parse_datetime("2022-06-07T03:52:04.613Z"),
             "environment": shared.Environment.PREVIEW,
-            "finished_at": parse_datetime("2025-08-29T15:02:09.033Z"),
-            "id": "11ca298f-9892-459f-b75e-da09783febd8",
+            "finished_at": parse_datetime("2025-08-30T08:39:21.145Z"),
+            "id": "d3cda7e1-1d2a-4128-8ecf-16721fcf731a",
             "metadata": [],
-            "started_at": parse_datetime("2025-04-10T07:26:56.652Z"),
+            "started_at": parse_datetime("2025-04-10T22:57:28.727Z"),
             "status": shared.ComputeDeploymentStatus.LIVE,
             "trigger": shared.Trigger.API,
-            "updated_at": parse_datetime("2026-02-28T17:58:56.257Z"),
+            "updated_at": parse_datetime("2026-03-01T14:20:16.783Z"),
             "url": "https://comfortable-petal.name",
         },
         "connection_id": "<id>",
@@ -2702,7 +2702,7 @@ with UnifiedTo(
 
 ## update_compute_domain
 
-Update a domain
+Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in the request body.
 
 ### Example Usage
 
@@ -2722,12 +2722,12 @@ with UnifiedTo(
     res = unified_to.compute.update_compute_domain(request={
         "compute_domain": {
             "created_at": parse_datetime("2019-11-22T16:38:26.009Z"),
-            "id": "433bf6e8-1a86-4d5d-8cad-3353c77e233e",
+            "id": "0654d12c-42c7-4802-974c-08c6d4f0f544",
             "is_primary": False,
             "metadata": [],
             "name": "mysterious-republican.usable-section.info",
             "status": shared.ComputeDomainStatus.PENDING,
-            "updated_at": parse_datetime("2023-11-03T15:08:58.330Z"),
+            "updated_at": parse_datetime("2023-11-04T04:46:33.838Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2759,7 +2759,7 @@ with UnifiedTo(
 
 ## update_compute_envvar
 
-Update an envvar
+Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in the request body.
 
 ### Example Usage
 
@@ -2782,11 +2782,11 @@ with UnifiedTo(
             "environments": [
                 shared.PropertyComputeEnvvarEnvironments.PREVIEW,
             ],
-            "id": "3598af98-8618-4d5b-895a-d2b5811d5b26",
+            "id": "f0db2170-df5b-4931-a32a-b0958fe98b2c",
             "is_secret": True,
             "metadata": [],
             "name": "AEGER_SUBSTANTIA",
-            "updated_at": parse_datetime("2025-07-03T14:18:21.354Z"),
+            "updated_at": parse_datetime("2025-07-04T08:10:42.750Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2818,7 +2818,7 @@ with UnifiedTo(
 
 ## update_compute_instance
 
-Update an instance
+Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change in the request body.
 
 ### Example Usage
 
@@ -2855,7 +2855,7 @@ with UnifiedTo(
             ],
             "gpu_count": 0.0,
             "has_internet_access": True,
-            "id": "5516476d-5b91-46df-8c5d-01dd7135dab6",
+            "id": "e8839c42-59e6-46ea-b661-3ffe8d9568e5",
             "image": "ubuntu:24.04",
             "market": shared.Market.SPOT,
             "memory_mb": 2048.0,
@@ -2870,11 +2870,11 @@ with UnifiedTo(
                 "port": 22.0,
                 "username": "root",
             },
-            "started_at": parse_datetime("2025-03-23T23:15:07.391Z"),
+            "started_at": parse_datetime("2025-03-24T13:47:14.341Z"),
             "status": shared.ComputeInstanceStatus.ERROR,
             "status_reason": "Sponte quasi adversus alioqui reiciendis arca carmen canis.",
             "type": shared.ComputeInstanceType.BAREMETAL,
-            "updated_at": parse_datetime("2025-06-16T04:47:23.828Z"),
+            "updated_at": parse_datetime("2025-06-16T20:41:16.915Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2906,7 +2906,7 @@ with UnifiedTo(
 
 ## update_compute_key
 
-Update a key
+Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the request body.
 
 ### Example Usage
 
@@ -2926,11 +2926,11 @@ with UnifiedTo(
     res = unified_to.compute.update_compute_key(request={
         "compute_key": {
             "created_at": parse_datetime("2023-08-19T14:31:46.492Z"),
-            "id": "7cabe2cd-57bc-4d7c-ac2b-2080b47e5c53",
+            "id": "75e89696-fc90-4cd8-8c31-b54eb0d5c71f",
             "metadata": [],
             "name": "nienow-secret",
             "type": shared.ComputeKeyType.SECRET,
-            "updated_at": parse_datetime("2024-10-06T23:18:56.361Z"),
+            "updated_at": parse_datetime("2024-10-07T07:50:55.897Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2962,7 +2962,7 @@ with UnifiedTo(
 
 ## update_compute_service
 
-Update a service
+Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change in the request body.
 
 ### Example Usage
 
@@ -2984,7 +2984,7 @@ with UnifiedTo(
             "branch": "main",
             "build_command": "npm run build",
             "created_at": parse_datetime("2023-10-04T02:06:29.391Z"),
-            "id": "125a5440-2ec7-48ee-9039-5acfbfdf6a06",
+            "id": "8ce46942-4d37-431a-b3d0-f3fb463c15a9",
             "instance_count": 6.0,
             "max_instance_count": 6.0,
             "metadata": [],
@@ -2995,7 +2995,7 @@ with UnifiedTo(
             "runtime": "python",
             "status": shared.ComputeServiceStatus.SUSPENDED,
             "type": shared.ComputeServiceType.OTHER,
-            "updated_at": parse_datetime("2025-04-04T16:27:58.476Z"),
+            "updated_at": parse_datetime("2025-04-05T04:13:31.639Z"),
             "url": "https://tame-sideboard.rotating-shoulder.biz",
         },
         "connection_id": "<id>",
@@ -3028,7 +3028,7 @@ with UnifiedTo(
 
 ## update_compute_template
 
-Update a template
+Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change in the request body.
 
 ### Example Usage
 
@@ -3053,10 +3053,10 @@ with UnifiedTo(
             "dockerfile": "FROM ubuntu:24.04\nRUN apt-get update",
             "gpu_count": 2.0,
             "gpu_model": shared.ComputeTemplateGpuModel.NVIDIA_GH200,
-            "id": "40c203b4-a64e-4b07-a9dd-51bd17c3c5e5",
+            "id": "54d4604d-270c-4610-8aab-cf1d48975452",
             "image": "perfumed-molasses/cohibeo:5.2",
             "is_public": False,
-            "last_used_at": parse_datetime("2026-03-23T20:23:02.260Z"),
+            "last_used_at": parse_datetime("2026-03-24T16:28:06.720Z"),
             "memory_mb": 8192.0,
             "metadata": [],
             "name": "multi-byte-card",
@@ -3064,7 +3064,7 @@ with UnifiedTo(
                 8080.0,
             ],
             "status": shared.ComputeTemplateStatus.OTHER,
-            "updated_at": parse_datetime("2025-02-12T18:36:08.783Z"),
+            "updated_at": parse_datetime("2025-02-13T07:28:16.307Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -3096,7 +3096,7 @@ with UnifiedTo(
 
 ## update_compute_volume
 
-Update a volume
+Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in the request body.
 
 ### Example Usage
 
@@ -3116,14 +3116,14 @@ with UnifiedTo(
     res = unified_to.compute.update_compute_volume(request={
         "compute_volume": {
             "created_at": parse_datetime("2022-11-15T15:12:48.055Z"),
-            "id": "4e6b48c7-a0e2-45cf-9c09-7674d9c87ad7",
+            "id": "33536cfd-0184-4e65-ab51-dcf407b45b59",
             "instance_ids": [],
             "metadata": [],
             "name": "vol-solum",
             "size_mb": 1024000.0,
             "status": shared.ComputeVolumeStatus.OTHER,
             "type": shared.ComputeVolumeType.HIGH_PERFORMANCE,
-            "updated_at": parse_datetime("2024-02-09T21:49:38.133Z"),
+            "updated_at": parse_datetime("2024-02-10T05:19:38.198Z"),
             "used_mb": 524986.0,
         },
         "connection_id": "<id>",

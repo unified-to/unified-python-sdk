@@ -24,6 +24,8 @@ class Rate(BaseSDK):
     ) -> operations.CreateShippingRateResponse:
         r"""Create a rate
 
+        Creates a ShippingRate. Provide the unified ShippingRate fields in the request body; they are mapped to the provider's API. Returns the created ShippingRate.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -118,6 +120,8 @@ class Rate(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateShippingRateResponse:
         r"""Create a rate
+
+        Creates a ShippingRate. Provide the unified ShippingRate fields in the request body; they are mapped to the provider's API. Returns the created ShippingRate.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

@@ -13,7 +13,7 @@
 
 ## create_lms_class
 
-Create a class
+Creates a LmsClass. Provide the unified LmsClass fields in the request body; they are mapped to the provider's API. Returns the created LmsClass.
 
 ### Example Usage
 
@@ -34,7 +34,7 @@ with UnifiedTo(
         "lms_class": {
             "created_at": parse_datetime("2020-02-20T14:48:51.845Z"),
             "description": "Anser sperno decerno.",
-            "id": "d660518e-52af-484e-87a6-28a5fec7df28",
+            "id": "d5601fe2-ef5f-477b-8c81-5a56dfdd5b83",
             "instructors": [],
             "languages": [
                 "in",
@@ -56,7 +56,7 @@ with UnifiedTo(
             "metadata": [],
             "name": "virtus",
             "students": [],
-            "updated_at": parse_datetime("2025-08-03T21:26:37.853Z"),
+            "updated_at": parse_datetime("2025-08-04T16:57:24.398Z"),
         },
         "connection_id": "<id>",
     })
@@ -87,7 +87,7 @@ with UnifiedTo(
 
 ## get_lms_class
 
-Retrieve a class
+Retrieves a single LmsClass by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -134,7 +134,7 @@ with UnifiedTo(
 
 ## list_lms_classes
 
-List all classes
+Returns a list of LmsClasses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -180,7 +180,7 @@ with UnifiedTo(
 
 ## patch_lms_class
 
-Update a class
+Updates the LmsClass identified by `id`. Provide the unified LmsClass fields to change in the request body.
 
 ### Example Usage
 
@@ -201,7 +201,7 @@ with UnifiedTo(
         "lms_class": {
             "created_at": parse_datetime("2020-02-20T14:48:51.845Z"),
             "description": "Anser sperno decerno.",
-            "id": "257fb6d7-8169-4ae7-a837-069542ce7c8b",
+            "id": "1a61a532-a2d5-4710-a0c1-85adfa63eb39",
             "instructors": [],
             "languages": [
                 "in",
@@ -223,7 +223,7 @@ with UnifiedTo(
             "metadata": [],
             "name": "virtus",
             "students": [],
-            "updated_at": parse_datetime("2025-08-03T21:26:37.869Z"),
+            "updated_at": parse_datetime("2025-08-04T16:57:24.422Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -255,7 +255,7 @@ with UnifiedTo(
 
 ## remove_lms_class
 
-Remove a class
+Deletes the LmsClass identified by `id`.
 
 ### Example Usage
 
@@ -302,7 +302,7 @@ with UnifiedTo(
 
 ## update_lms_class
 
-Update a class
+Updates the LmsClass identified by `id`. Provide the unified LmsClass fields to change in the request body.
 
 ### Example Usage
 
@@ -323,7 +323,7 @@ with UnifiedTo(
         "lms_class": {
             "created_at": parse_datetime("2020-02-20T14:48:51.845Z"),
             "description": "Anser sperno decerno.",
-            "id": "257fb6d7-8169-4ae7-a837-069542ce7c8b",
+            "id": "1a61a532-a2d5-4710-a0c1-85adfa63eb39",
             "instructors": [],
             "languages": [
                 "in",
@@ -345,7 +345,7 @@ with UnifiedTo(
             "metadata": [],
             "name": "virtus",
             "students": [],
-            "updated_at": parse_datetime("2025-08-03T21:26:37.869Z"),
+            "updated_at": parse_datetime("2025-08-04T16:57:24.422Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

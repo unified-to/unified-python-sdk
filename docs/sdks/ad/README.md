@@ -13,7 +13,7 @@
 
 ## create_ads_ad
 
-Create an ad
+Creates a AdsAd. Provide the unified AdsAd fields in the request body; they are mapped to the provider's API. Returns the created AdsAd.
 
 ### Example Usage
 
@@ -39,11 +39,11 @@ with UnifiedTo(
             "creative_asset_url": "https://picsum.photos/seed/LwOzrpr9/948/2793",
             "description": "Accedo vespillo carpo dolor decet stillicidium comptus tenuis.",
             "final_url": "https://improbable-sanity.com",
-            "id": "1e2dbb3b-2885-4c1f-b2f2-875b8645436d",
+            "id": "79efa2ba-b89a-4321-9695-db7067961ed4",
             "metadata": [],
             "name": "Hermiston Group",
             "status": shared.AdsAdStatus.ARCHIVED,
-            "updated_at": parse_datetime("2024-06-18T13:37:34.408Z"),
+            "updated_at": parse_datetime("2024-06-18T23:21:17.005Z"),
         },
         "connection_id": "<id>",
     })
@@ -74,7 +74,7 @@ with UnifiedTo(
 
 ## get_ads_ad
 
-Retrieve an ad
+Retrieves a single AdsAd by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -121,7 +121,7 @@ with UnifiedTo(
 
 ## list_ads_ads
 
-List all ads
+Returns a list of AdsAds. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -167,7 +167,7 @@ with UnifiedTo(
 
 ## patch_ads_ad
 
-Update an ad
+Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request body.
 
 ### Example Usage
 
@@ -193,11 +193,11 @@ with UnifiedTo(
             "creative_asset_url": "https://picsum.photos/seed/LwOzrpr9/948/2793",
             "description": "Accedo vespillo carpo dolor decet stillicidium comptus tenuis.",
             "final_url": "https://improbable-sanity.com",
-            "id": "540b17ff-e6d6-41d8-909a-d7c4e9ac40c2",
+            "id": "e492fe18-8c3c-4017-9124-e101e5326ca6",
             "metadata": [],
             "name": "Hermiston Group",
             "status": shared.AdsAdStatus.ARCHIVED,
-            "updated_at": parse_datetime("2024-06-18T13:37:34.425Z"),
+            "updated_at": parse_datetime("2024-06-18T23:21:17.023Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -229,7 +229,7 @@ with UnifiedTo(
 
 ## remove_ads_ad
 
-Remove an ad
+Deletes the AdsAd identified by `id`.
 
 ### Example Usage
 
@@ -276,7 +276,7 @@ with UnifiedTo(
 
 ## update_ads_ad
 
-Update an ad
+Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request body.
 
 ### Example Usage
 
@@ -302,11 +302,11 @@ with UnifiedTo(
             "creative_asset_url": "https://picsum.photos/seed/LwOzrpr9/948/2793",
             "description": "Accedo vespillo carpo dolor decet stillicidium comptus tenuis.",
             "final_url": "https://improbable-sanity.com",
-            "id": "540b17ff-e6d6-41d8-909a-d7c4e9ac40c2",
+            "id": "e492fe18-8c3c-4017-9124-e101e5326ca6",
             "metadata": [],
             "name": "Hermiston Group",
             "status": shared.AdsAdStatus.ARCHIVED,
-            "updated_at": parse_datetime("2024-06-18T13:37:34.425Z"),
+            "updated_at": parse_datetime("2024-06-18T23:21:17.023Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

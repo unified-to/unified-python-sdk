@@ -13,6 +13,8 @@ from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
 class MetadataMetadataFormat(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""The data type of the custom field's values"""
+
     TEXT = "TEXT"
     NUMBER = "NUMBER"
     DATE = "DATE"
@@ -30,11 +32,13 @@ class MetadataMetadataFormat(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class MetadataMetadataTypedDict(TypedDict):
     name: str
+    r"""The display name of the custom field"""
     object_type: str
     r"""This is the unified object type that this metadata is associated with. eg. crm_contact or commerce_item"""
     created_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     format_: NotRequired[MetadataMetadataFormat]
+    r"""The data type of the custom field's values"""
     id: NotRequired[str]
     is_required: NotRequired[bool]
     r"""When true, this metadata slug is required for create for this integration."""
@@ -49,6 +53,7 @@ class MetadataMetadataTypedDict(TypedDict):
 
 class MetadataMetadata(BaseModel):
     name: str
+    r"""The display name of the custom field"""
 
     object_type: str
     r"""This is the unified object type that this metadata is associated with. eg. crm_contact or commerce_item"""
@@ -59,6 +64,7 @@ class MetadataMetadata(BaseModel):
     format_: Annotated[
         Optional[MetadataMetadataFormat], pydantic.Field(alias="format")
     ] = None
+    r"""The data type of the custom field's values"""
 
     id: Optional[str] = None
 

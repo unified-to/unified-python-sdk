@@ -37,7 +37,7 @@
 
 ## create_healthcare_appointment
 
-Create an appointment
+Creates a HealthcareAppointment. Provide the unified HealthcareAppointment fields in the request body; they are mapped to the provider's API. Returns the created HealthcareAppointment.
 
 ### Example Usage
 
@@ -59,7 +59,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2023-04-11T08:16:20.874Z"),
             "description": "clarus aptus cetera",
             "end_at": parse_datetime("2023-12-12T13:04:41.451Z"),
-            "id": "78e3419c-3f84-444a-95b2-32813aaa7e55",
+            "id": "26c0c976-c996-4dbb-8b58-5166dbe67220",
             "metadata": [],
             "practitioner_ids": [],
             "reasons": [
@@ -79,7 +79,7 @@ with UnifiedTo(
             "slot_ids": [],
             "start_at": parse_datetime("2023-12-12T12:34:41.451Z"),
             "status": shared.HealthcareAppointmentStatus.BOOKED,
-            "updated_at": parse_datetime("2025-11-19T10:37:36.973Z"),
+            "updated_at": parse_datetime("2025-11-20T04:16:13.523Z"),
         },
         "connection_id": "<id>",
     })
@@ -110,7 +110,7 @@ with UnifiedTo(
 
 ## create_healthcare_observation
 
-Create an observation
+Creates a HealthcareObservation. Provide the unified HealthcareObservation fields in the request body; they are mapped to the provider's API. Returns the created HealthcareObservation.
 
 ### Example Usage
 
@@ -161,15 +161,15 @@ with UnifiedTo(
                 },
             ],
             "created_at": parse_datetime("2022-12-06T21:34:04.293Z"),
-            "id": "878c4fbe-c6da-4f1c-8b2b-3415da6a3e0e",
+            "id": "3d95939a-fd15-4205-a9a7-8996dcd8717c",
             "interpretation": shared.Interpretation.CRITICAL_HIGH,
-            "issued_at": parse_datetime("2025-05-11T10:26:23.241Z"),
+            "issued_at": parse_datetime("2025-05-12T01:23:42.793Z"),
             "metadata": [],
             "name": "Blood pressure panel",
-            "observed_at": parse_datetime("2025-01-20T03:57:34.624Z"),
+            "observed_at": parse_datetime("2025-01-20T17:02:16.723Z"),
             "status": shared.HealthcareObservationStatus.CORRECTED,
             "type": shared.HealthcareObservationType.VITAL_SIGNS,
-            "updated_at": parse_datetime("2026-03-24T06:20:26.478Z"),
+            "updated_at": parse_datetime("2026-03-25T02:38:27.139Z"),
         },
         "connection_id": "<id>",
     })
@@ -200,7 +200,7 @@ with UnifiedTo(
 
 ## create_healthcare_patient
 
-Create a patient
+Creates a HealthcarePatient. Provide the unified HealthcarePatient fields in the request body; they are mapped to the provider's API. Returns the created HealthcarePatient.
 
 ### Example Usage
 
@@ -226,7 +226,7 @@ with UnifiedTo(
                 "postal_code": "54031",
                 "region": "Nebraska",
             },
-            "birthdate": "2025-02-12",
+            "birthdate": "2025-02-13",
             "created_at": parse_datetime("2021-06-05T21:08:04.917Z"),
             "emails": [
                 {
@@ -236,7 +236,7 @@ with UnifiedTo(
             ],
             "first_name": "Alejandrin",
             "gender": shared.HealthcarePatientGender.FEMALE,
-            "id": "345c3b07-8ea6-4168-9475-bfe6f301545f",
+            "id": "bff90549-5920-4a01-933d-a669aa5b05f7",
             "identifiers": [
                 {
                     "type": shared.HealthcareIdentifierType.MRN,
@@ -256,7 +256,7 @@ with UnifiedTo(
                     "type": shared.HealthcareTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2026-06-22T20:13:50.798Z"),
+            "updated_at": parse_datetime("2026-06-23T18:37:32.861Z"),
         },
         "connection_id": "<id>",
     })
@@ -287,7 +287,7 @@ with UnifiedTo(
 
 ## get_healthcare_allergy
 
-Retrieve an allergy
+Retrieves a single HealthcareAllergy by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -334,7 +334,7 @@ with UnifiedTo(
 
 ## get_healthcare_appointment
 
-Retrieve an appointment
+Retrieves a single HealthcareAppointment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -381,7 +381,7 @@ with UnifiedTo(
 
 ## get_healthcare_condition
 
-Retrieve a condition
+Retrieves a single HealthcareCondition by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -428,7 +428,7 @@ with UnifiedTo(
 
 ## get_healthcare_encounter
 
-Retrieve an encounter
+Retrieves a single HealthcareEncounter by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -475,7 +475,7 @@ with UnifiedTo(
 
 ## get_healthcare_immunization
 
-Retrieve an immunization
+Retrieves a single HealthcareImmunization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -522,7 +522,7 @@ with UnifiedTo(
 
 ## get_healthcare_location
 
-Retrieve a location
+Retrieves a single HealthcareLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -569,7 +569,7 @@ with UnifiedTo(
 
 ## get_healthcare_medication
 
-Retrieve a medication
+Retrieves a single HealthcareMedication by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -616,7 +616,7 @@ with UnifiedTo(
 
 ## get_healthcare_observation
 
-Retrieve an observation
+Retrieves a single HealthcareObservation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -663,7 +663,7 @@ with UnifiedTo(
 
 ## get_healthcare_patient
 
-Retrieve a patient
+Retrieves a single HealthcarePatient by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -710,7 +710,7 @@ with UnifiedTo(
 
 ## get_healthcare_practitioner
 
-Retrieve a practitioner
+Retrieves a single HealthcarePractitioner by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -757,7 +757,7 @@ with UnifiedTo(
 
 ## get_healthcare_slot
 
-Retrieve a slot
+Retrieves a single HealthcareSlot by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -804,7 +804,7 @@ with UnifiedTo(
 
 ## list_healthcare_allergies
 
-List all allergies
+Returns a list of HealthcareAllergies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -850,7 +850,7 @@ with UnifiedTo(
 
 ## list_healthcare_appointments
 
-List all appointments
+Returns a list of HealthcareAppointments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -896,7 +896,7 @@ with UnifiedTo(
 
 ## list_healthcare_conditions
 
-List all conditions
+Returns a list of HealthcareConditions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -942,7 +942,7 @@ with UnifiedTo(
 
 ## list_healthcare_encounters
 
-List all encounters
+Returns a list of HealthcareEncounters. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -988,7 +988,7 @@ with UnifiedTo(
 
 ## list_healthcare_immunizations
 
-List all immunizations
+Returns a list of HealthcareImmunizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1034,7 +1034,7 @@ with UnifiedTo(
 
 ## list_healthcare_locations
 
-List all locations
+Returns a list of HealthcareLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1080,7 +1080,7 @@ with UnifiedTo(
 
 ## list_healthcare_medications
 
-List all medications
+Returns a list of HealthcareMedications. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1126,7 +1126,7 @@ with UnifiedTo(
 
 ## list_healthcare_observations
 
-List all observations
+Returns a list of HealthcareObservations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1172,7 +1172,7 @@ with UnifiedTo(
 
 ## list_healthcare_patients
 
-List all patients
+Returns a list of HealthcarePatients. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1218,7 +1218,7 @@ with UnifiedTo(
 
 ## list_healthcare_practitioners
 
-List all practitioners
+Returns a list of HealthcarePractitioners. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1264,7 +1264,7 @@ with UnifiedTo(
 
 ## list_healthcare_slots
 
-List all slots
+Returns a list of HealthcareSlots. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1310,7 +1310,7 @@ with UnifiedTo(
 
 ## patch_healthcare_appointment
 
-Update an appointment
+Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment fields to change in the request body.
 
 ### Example Usage
 
@@ -1332,7 +1332,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2023-04-11T08:16:20.874Z"),
             "description": "clarus aptus cetera",
             "end_at": parse_datetime("2023-12-12T13:04:41.451Z"),
-            "id": "738d9041-01ed-4d17-bddb-4774797ef8d1",
+            "id": "76ec3204-d039-4780-a1a6-9d82e5c58b81",
             "metadata": [],
             "practitioner_ids": [],
             "reasons": [
@@ -1352,7 +1352,7 @@ with UnifiedTo(
             "slot_ids": [],
             "start_at": parse_datetime("2023-12-12T12:34:41.451Z"),
             "status": shared.HealthcareAppointmentStatus.BOOKED,
-            "updated_at": parse_datetime("2025-11-19T10:37:36.995Z"),
+            "updated_at": parse_datetime("2025-11-20T04:16:13.539Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1384,7 +1384,7 @@ with UnifiedTo(
 
 ## patch_healthcare_patient
 
-Update a patient
+Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to change in the request body.
 
 ### Example Usage
 
@@ -1410,7 +1410,7 @@ with UnifiedTo(
                 "postal_code": "54031",
                 "region": "Nebraska",
             },
-            "birthdate": "2025-02-12",
+            "birthdate": "2025-02-13",
             "created_at": parse_datetime("2021-06-05T21:08:04.917Z"),
             "emails": [
                 {
@@ -1420,7 +1420,7 @@ with UnifiedTo(
             ],
             "first_name": "Alejandrin",
             "gender": shared.HealthcarePatientGender.FEMALE,
-            "id": "52690fb3-4b8c-47df-b212-a82439f0afef",
+            "id": "e0aa04a2-ee2c-4f84-963b-2cb8213f03bb",
             "identifiers": [
                 {
                     "type": shared.HealthcareIdentifierType.MRN,
@@ -1440,7 +1440,7 @@ with UnifiedTo(
                     "type": shared.HealthcareTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2026-06-22T20:13:50.834Z"),
+            "updated_at": parse_datetime("2026-06-23T18:37:32.888Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1472,7 +1472,7 @@ with UnifiedTo(
 
 ## remove_healthcare_appointment
 
-Remove an appointment
+Deletes the HealthcareAppointment identified by `id`.
 
 ### Example Usage
 
@@ -1519,7 +1519,7 @@ with UnifiedTo(
 
 ## update_healthcare_appointment
 
-Update an appointment
+Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment fields to change in the request body.
 
 ### Example Usage
 
@@ -1541,7 +1541,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2023-04-11T08:16:20.874Z"),
             "description": "clarus aptus cetera",
             "end_at": parse_datetime("2023-12-12T13:04:41.451Z"),
-            "id": "738d9041-01ed-4d17-bddb-4774797ef8d1",
+            "id": "76ec3204-d039-4780-a1a6-9d82e5c58b81",
             "metadata": [],
             "practitioner_ids": [],
             "reasons": [
@@ -1561,7 +1561,7 @@ with UnifiedTo(
             "slot_ids": [],
             "start_at": parse_datetime("2023-12-12T12:34:41.451Z"),
             "status": shared.HealthcareAppointmentStatus.BOOKED,
-            "updated_at": parse_datetime("2025-11-19T10:37:36.995Z"),
+            "updated_at": parse_datetime("2025-11-20T04:16:13.539Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1593,7 +1593,7 @@ with UnifiedTo(
 
 ## update_healthcare_patient
 
-Update a patient
+Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to change in the request body.
 
 ### Example Usage
 
@@ -1619,7 +1619,7 @@ with UnifiedTo(
                 "postal_code": "54031",
                 "region": "Nebraska",
             },
-            "birthdate": "2025-02-12",
+            "birthdate": "2025-02-13",
             "created_at": parse_datetime("2021-06-05T21:08:04.917Z"),
             "emails": [
                 {
@@ -1629,7 +1629,7 @@ with UnifiedTo(
             ],
             "first_name": "Alejandrin",
             "gender": shared.HealthcarePatientGender.FEMALE,
-            "id": "52690fb3-4b8c-47df-b212-a82439f0afef",
+            "id": "e0aa04a2-ee2c-4f84-963b-2cb8213f03bb",
             "identifiers": [
                 {
                     "type": shared.HealthcareIdentifierType.MRN,
@@ -1649,7 +1649,7 @@ with UnifiedTo(
                     "type": shared.HealthcareTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2026-06-22T20:13:50.834Z"),
+            "updated_at": parse_datetime("2026-06-23T18:37:32.888Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

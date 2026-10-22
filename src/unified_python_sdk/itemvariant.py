@@ -24,6 +24,8 @@ class Itemvariant(BaseSDK):
     ) -> operations.CreateCommerceItemvariantResponse:
         r"""Create an itemvariant
 
+        Creates a CommerceItemvariant. Provide the unified CommerceItemvariant fields in the request body; they are mapped to the provider's API. Returns the created CommerceItemvariant.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -124,6 +126,8 @@ class Itemvariant(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateCommerceItemvariantResponse:
         r"""Create an itemvariant
+
+        Creates a CommerceItemvariant. Provide the unified CommerceItemvariant fields in the request body; they are mapped to the provider's API. Returns the created CommerceItemvariant.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -226,6 +230,8 @@ class Itemvariant(BaseSDK):
     ) -> operations.GetCommerceItemvariantResponse:
         r"""Retrieve an itemvariant
 
+        Retrieves a single CommerceItemvariant by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -318,6 +324,8 @@ class Itemvariant(BaseSDK):
     ) -> operations.GetCommerceItemvariantResponse:
         r"""Retrieve an itemvariant
 
+        Retrieves a single CommerceItemvariant by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -409,6 +417,8 @@ class Itemvariant(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListCommerceItemvariantsResponse:
         r"""List all itemvariants
+
+        Returns a list of CommerceItemvariants. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -504,6 +514,8 @@ class Itemvariant(BaseSDK):
     ) -> operations.ListCommerceItemvariantsResponse:
         r"""List all itemvariants
 
+        Returns a list of CommerceItemvariants. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -597,6 +609,8 @@ class Itemvariant(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchCommerceItemvariantResponse:
         r"""Update an itemvariant
+
+        Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -699,6 +713,8 @@ class Itemvariant(BaseSDK):
     ) -> operations.PatchCommerceItemvariantResponse:
         r"""Update an itemvariant
 
+        Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -800,6 +816,8 @@ class Itemvariant(BaseSDK):
     ) -> operations.RemoveCommerceItemvariantResponse:
         r"""Remove an itemvariant
 
+        Deletes the CommerceItemvariant identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -899,6 +917,8 @@ class Itemvariant(BaseSDK):
     ) -> operations.RemoveCommerceItemvariantResponse:
         r"""Remove an itemvariant
 
+        Deletes the CommerceItemvariant identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -997,6 +1017,8 @@ class Itemvariant(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateCommerceItemvariantResponse:
         r"""Update an itemvariant
+
+        Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1098,6 +1120,8 @@ class Itemvariant(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateCommerceItemvariantResponse:
         r"""Update an itemvariant
+
+        Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

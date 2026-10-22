@@ -23,6 +23,8 @@ class Target(BaseSDK):
     ) -> operations.GetAdsTargetResponse:
         r"""Retrieve a target
 
+        Retrieves a single AdsTarget by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -113,6 +115,8 @@ class Target(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAdsTargetResponse:
         r"""Retrieve a target
+
+        Retrieves a single AdsTarget by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -205,6 +209,8 @@ class Target(BaseSDK):
     ) -> operations.ListAdsTargetsResponse:
         r"""List all targets
 
+        Returns a list of AdsTargets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -295,6 +301,8 @@ class Target(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAdsTargetsResponse:
         r"""List all targets
+
+        Returns a list of AdsTargets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

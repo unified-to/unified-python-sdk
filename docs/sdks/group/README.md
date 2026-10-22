@@ -27,7 +27,7 @@
 
 ## create_ads_group
 
-Create a group
+Creates a AdsGroup. Provide the unified AdsGroup fields in the request body; they are mapped to the provider's API. Returns the created AdsGroup.
 
 ### Example Usage
 
@@ -52,15 +52,15 @@ with UnifiedTo(
             "created_at": parse_datetime("2019-08-29T17:59:41.045Z"),
             "currency": "USD",
             "effective_status": shared.AdsGroupEffectiveStatus.PAUSED,
-            "end_at": parse_datetime("2026-06-25T01:30:03.970Z"),
-            "id": "51a41afa-b2f8-4593-a572-515dd447b314",
+            "end_at": parse_datetime("2026-06-26T00:16:40.347Z"),
+            "id": "12560f3e-69eb-4197-9710-683515cc09a8",
             "language_locale": "fr-FR",
             "metadata": [],
             "name": "Stark - Baumbach",
-            "start_at": parse_datetime("2026-01-09T06:44:42.612Z"),
+            "start_at": parse_datetime("2026-01-10T03:59:49.722Z"),
             "status": shared.AdsGroupStatus.PROCESSING,
             "targeting": {},
-            "updated_at": parse_datetime("2022-01-13T16:12:20.767Z"),
+            "updated_at": parse_datetime("2022-01-14T00:08:26.728Z"),
         },
         "connection_id": "<id>",
     })
@@ -91,7 +91,7 @@ with UnifiedTo(
 
 ## create_hris_group
 
-Create a group
+Creates a HrisGroup. Provide the unified HrisGroup fields in the request body; they are mapped to the provider's API. Returns the created HrisGroup.
 
 ### Example Usage
 
@@ -112,12 +112,12 @@ with UnifiedTo(
         "hris_group": {
             "created_at": parse_datetime("2023-11-01T13:13:40.714Z"),
             "description": "Absorbeo casso.",
-            "id": "2e50245a-b671-4e9b-a0c5-4e965889bbc4",
+            "id": "1d18b974-d325-49fa-b0e1-a2e01f2dd256",
             "is_active": False,
             "metadata": [],
             "name": "Games",
             "type": shared.HrisGroupType.BRANCH,
-            "updated_at": parse_datetime("2026-05-21T23:23:20.538Z"),
+            "updated_at": parse_datetime("2026-05-22T19:54:01.894Z"),
         },
         "connection_id": "<id>",
     })
@@ -197,7 +197,7 @@ with UnifiedTo(
 
 ## get_ads_group
 
-Retrieve a group
+Retrieves a single AdsGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -244,7 +244,7 @@ with UnifiedTo(
 
 ## get_clubs_group
 
-Retrieve a group
+Retrieves a single ClubsGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -291,7 +291,7 @@ with UnifiedTo(
 
 ## get_hris_group
 
-Retrieve a group
+Retrieves a single HrisGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -385,7 +385,7 @@ with UnifiedTo(
 
 ## list_ads_groups
 
-List all groups
+Returns a list of AdsGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -431,7 +431,7 @@ with UnifiedTo(
 
 ## list_clubs_groups
 
-List all groups
+Returns a list of ClubsGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -477,7 +477,7 @@ with UnifiedTo(
 
 ## list_hris_groups
 
-List all groups
+Returns a list of HrisGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -569,7 +569,7 @@ with UnifiedTo(
 
 ## patch_ads_group
 
-Update a group
+Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the request body.
 
 ### Example Usage
 
@@ -594,15 +594,15 @@ with UnifiedTo(
             "created_at": parse_datetime("2019-08-29T17:59:41.045Z"),
             "currency": "USD",
             "effective_status": shared.AdsGroupEffectiveStatus.PAUSED,
-            "end_at": parse_datetime("2026-06-25T01:30:04.152Z"),
-            "id": "763174b7-0ab1-468c-8286-197f2310e707",
+            "end_at": parse_datetime("2026-06-26T00:16:40.530Z"),
+            "id": "2bc07cae-346a-45af-9571-099f47cdbe81",
             "language_locale": "fr-FR",
             "metadata": [],
             "name": "Stark - Baumbach",
-            "start_at": parse_datetime("2026-01-09T06:44:42.781Z"),
+            "start_at": parse_datetime("2026-01-10T03:59:49.894Z"),
             "status": shared.AdsGroupStatus.PROCESSING,
             "targeting": {},
-            "updated_at": parse_datetime("2022-01-13T16:12:20.830Z"),
+            "updated_at": parse_datetime("2022-01-14T00:08:26.792Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -634,7 +634,7 @@ with UnifiedTo(
 
 ## patch_hris_group
 
-Update a group
+Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the request body.
 
 ### Example Usage
 
@@ -655,12 +655,12 @@ with UnifiedTo(
         "hris_group": {
             "created_at": parse_datetime("2023-11-01T13:13:40.714Z"),
             "description": "Absorbeo casso.",
-            "id": "651fe221-b89f-42e1-905e-ccb07e52e56c",
+            "id": "4a3e0f10-b197-48b9-b1d1-20f46e3874fd",
             "is_active": False,
             "metadata": [],
             "name": "Games",
             "type": shared.HrisGroupType.BRANCH,
-            "updated_at": parse_datetime("2026-05-21T23:23:20.553Z"),
+            "updated_at": parse_datetime("2026-05-22T19:54:01.911Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -742,7 +742,7 @@ with UnifiedTo(
 
 ## remove_ads_group
 
-Remove a group
+Deletes the AdsGroup identified by `id`.
 
 ### Example Usage
 
@@ -789,7 +789,7 @@ with UnifiedTo(
 
 ## remove_hris_group
 
-Remove a group
+Deletes the HrisGroup identified by `id`.
 
 ### Example Usage
 
@@ -883,7 +883,7 @@ with UnifiedTo(
 
 ## update_ads_group
 
-Update a group
+Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the request body.
 
 ### Example Usage
 
@@ -908,15 +908,15 @@ with UnifiedTo(
             "created_at": parse_datetime("2019-08-29T17:59:41.045Z"),
             "currency": "USD",
             "effective_status": shared.AdsGroupEffectiveStatus.PAUSED,
-            "end_at": parse_datetime("2026-06-25T01:30:04.152Z"),
-            "id": "763174b7-0ab1-468c-8286-197f2310e707",
+            "end_at": parse_datetime("2026-06-26T00:16:40.530Z"),
+            "id": "2bc07cae-346a-45af-9571-099f47cdbe81",
             "language_locale": "fr-FR",
             "metadata": [],
             "name": "Stark - Baumbach",
-            "start_at": parse_datetime("2026-01-09T06:44:42.781Z"),
+            "start_at": parse_datetime("2026-01-10T03:59:49.894Z"),
             "status": shared.AdsGroupStatus.PROCESSING,
             "targeting": {},
-            "updated_at": parse_datetime("2022-01-13T16:12:20.830Z"),
+            "updated_at": parse_datetime("2022-01-14T00:08:26.792Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -948,7 +948,7 @@ with UnifiedTo(
 
 ## update_hris_group
 
-Update a group
+Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the request body.
 
 ### Example Usage
 
@@ -969,12 +969,12 @@ with UnifiedTo(
         "hris_group": {
             "created_at": parse_datetime("2023-11-01T13:13:40.714Z"),
             "description": "Absorbeo casso.",
-            "id": "651fe221-b89f-42e1-905e-ccb07e52e56c",
+            "id": "4a3e0f10-b197-48b9-b1d1-20f46e3874fd",
             "is_active": False,
             "metadata": [],
             "name": "Games",
             "type": shared.HrisGroupType.BRANCH,
-            "updated_at": parse_datetime("2026-05-21T23:23:20.553Z"),
+            "updated_at": parse_datetime("2026-05-22T19:54:01.911Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

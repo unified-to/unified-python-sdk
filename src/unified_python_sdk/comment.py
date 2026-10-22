@@ -24,6 +24,8 @@ class Comment(BaseSDK):
     ) -> operations.CreateKmsCommentResponse:
         r"""Create a comment
 
+        Creates a KmsComment. Provide the unified KmsComment fields in the request body; they are mapped to the provider's API. Returns the created KmsComment.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -118,6 +120,8 @@ class Comment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateKmsCommentResponse:
         r"""Create a comment
+
+        Creates a KmsComment. Provide the unified KmsComment fields in the request body; they are mapped to the provider's API. Returns the created KmsComment.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -214,6 +218,8 @@ class Comment(BaseSDK):
     ) -> operations.CreateTaskCommentResponse:
         r"""Create a comment
 
+        Creates a TaskComment. Provide the unified TaskComment fields in the request body; they are mapped to the provider's API. Returns the created TaskComment.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -308,6 +314,8 @@ class Comment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateTaskCommentResponse:
         r"""Create a comment
+
+        Creates a TaskComment. Provide the unified TaskComment fields in the request body; they are mapped to the provider's API. Returns the created TaskComment.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -404,6 +412,8 @@ class Comment(BaseSDK):
     ) -> operations.CreateUcCommentResponse:
         r"""Create a comment
 
+        Creates a UcComment. Provide the unified UcComment fields in the request body; they are mapped to the provider's API. Returns the created UcComment.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -499,6 +509,8 @@ class Comment(BaseSDK):
     ) -> operations.CreateUcCommentResponse:
         r"""Create a comment
 
+        Creates a UcComment. Provide the unified UcComment fields in the request body; they are mapped to the provider's API. Returns the created UcComment.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -593,6 +605,8 @@ class Comment(BaseSDK):
     ) -> operations.GetKmsCommentResponse:
         r"""Retrieve a comment
 
+        Retrieves a single KmsComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -683,6 +697,8 @@ class Comment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetKmsCommentResponse:
         r"""Retrieve a comment
+
+        Retrieves a single KmsComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -775,6 +791,8 @@ class Comment(BaseSDK):
     ) -> operations.GetTaskCommentResponse:
         r"""Retrieve a comment
 
+        Retrieves a single TaskComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -865,6 +883,8 @@ class Comment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetTaskCommentResponse:
         r"""Retrieve a comment
+
+        Retrieves a single TaskComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -957,6 +977,8 @@ class Comment(BaseSDK):
     ) -> operations.GetUcCommentResponse:
         r"""Retrieve a comment
 
+        Retrieves a single UcComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1047,6 +1069,8 @@ class Comment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetUcCommentResponse:
         r"""Retrieve a comment
+
+        Retrieves a single UcComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1140,6 +1164,8 @@ class Comment(BaseSDK):
     ) -> operations.ListKmsCommentsResponse:
         r"""List all comments
 
+        Returns a list of KmsComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1231,6 +1257,8 @@ class Comment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListKmsCommentsResponse:
         r"""List all comments
+
+        Returns a list of KmsComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1324,6 +1352,8 @@ class Comment(BaseSDK):
     ) -> operations.ListTaskCommentsResponse:
         r"""List all comments
 
+        Returns a list of TaskComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1416,6 +1446,8 @@ class Comment(BaseSDK):
     ) -> operations.ListTaskCommentsResponse:
         r"""List all comments
 
+        Returns a list of TaskComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1506,6 +1538,8 @@ class Comment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListUcCommentsResponse:
         r"""List all comments
+
+        Returns a list of UcComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1598,6 +1632,8 @@ class Comment(BaseSDK):
     ) -> operations.ListUcCommentsResponse:
         r"""List all comments
 
+        Returns a list of UcComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1689,6 +1725,8 @@ class Comment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchKmsCommentResponse:
         r"""Update a comment
+
+        Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1785,6 +1823,8 @@ class Comment(BaseSDK):
     ) -> operations.PatchKmsCommentResponse:
         r"""Update a comment
 
+        Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1879,6 +1919,8 @@ class Comment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchTaskCommentResponse:
         r"""Update a comment
+
+        Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1975,6 +2017,8 @@ class Comment(BaseSDK):
     ) -> operations.PatchTaskCommentResponse:
         r"""Update a comment
 
+        Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2068,6 +2112,8 @@ class Comment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchUcCommentResponse:
         r"""Update a comment
+
+        Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2163,6 +2209,8 @@ class Comment(BaseSDK):
     ) -> operations.PatchUcCommentResponse:
         r"""Update a comment
 
+        Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2257,6 +2305,8 @@ class Comment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveKmsCommentResponse:
         r"""Remove a comment
+
+        Deletes the KmsComment identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2355,6 +2405,8 @@ class Comment(BaseSDK):
     ) -> operations.RemoveKmsCommentResponse:
         r"""Remove a comment
 
+        Deletes the KmsComment identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2451,6 +2503,8 @@ class Comment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveTaskCommentResponse:
         r"""Remove a comment
+
+        Deletes the TaskComment identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2549,6 +2603,8 @@ class Comment(BaseSDK):
     ) -> operations.RemoveTaskCommentResponse:
         r"""Remove a comment
 
+        Deletes the TaskComment identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2645,6 +2701,8 @@ class Comment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveUcCommentResponse:
         r"""Remove a comment
+
+        Deletes the UcComment identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2743,6 +2801,8 @@ class Comment(BaseSDK):
     ) -> operations.RemoveUcCommentResponse:
         r"""Remove a comment
 
+        Deletes the UcComment identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2840,6 +2900,8 @@ class Comment(BaseSDK):
     ) -> operations.UpdateKmsCommentResponse:
         r"""Update a comment
 
+        Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2934,6 +2996,8 @@ class Comment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateKmsCommentResponse:
         r"""Update a comment
+
+        Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3030,6 +3094,8 @@ class Comment(BaseSDK):
     ) -> operations.UpdateTaskCommentResponse:
         r"""Update a comment
 
+        Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3124,6 +3190,8 @@ class Comment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateTaskCommentResponse:
         r"""Update a comment
+
+        Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3220,6 +3288,8 @@ class Comment(BaseSDK):
     ) -> operations.UpdateUcCommentResponse:
         r"""Update a comment
 
+        Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3314,6 +3384,8 @@ class Comment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateUcCommentResponse:
         r"""Update a comment
+
+        Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

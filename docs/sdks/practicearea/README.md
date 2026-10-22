@@ -13,7 +13,7 @@
 
 ## create_legal_practicearea
 
-Create a practicearea
+Creates a LegalPracticearea. Provide the unified LegalPracticearea fields in the request body; they are mapped to the provider's API. Returns the created LegalPracticearea.
 
 ### Example Usage
 
@@ -34,11 +34,11 @@ with UnifiedTo(
         "legal_practicearea": {
             "code": "QCA",
             "created_at": parse_datetime("2023-01-28T21:00:26.264Z"),
-            "id": "8c5d487c-ae65-43f1-ae17-fa940de17a44",
+            "id": "14c1b0ec-9925-4ac1-a8ac-f6491f0df2a0",
             "metadata": [],
             "name": "witty Law",
             "type": shared.LegalPracticeareaType.EDUCATION,
-            "updated_at": parse_datetime("2025-08-27T17:05:14.922Z"),
+            "updated_at": parse_datetime("2025-08-28T09:35:39.147Z"),
         },
         "connection_id": "<id>",
     })
@@ -69,7 +69,7 @@ with UnifiedTo(
 
 ## get_legal_practicearea
 
-Retrieve a practicearea
+Retrieves a single LegalPracticearea by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -116,7 +116,7 @@ with UnifiedTo(
 
 ## list_legal_practiceareas
 
-List all practiceareas
+Returns a list of LegalPracticeareas. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -162,7 +162,7 @@ with UnifiedTo(
 
 ## patch_legal_practicearea
 
-Update a practicearea
+Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to change in the request body.
 
 ### Example Usage
 
@@ -183,11 +183,11 @@ with UnifiedTo(
         "legal_practicearea": {
             "code": "QCA",
             "created_at": parse_datetime("2023-01-28T21:00:26.264Z"),
-            "id": "5b420f1d-9628-40f6-a231-46ead3aa27f8",
+            "id": "592d6358-4956-42ee-8be7-964244924972",
             "metadata": [],
             "name": "witty Law",
             "type": shared.LegalPracticeareaType.EDUCATION,
-            "updated_at": parse_datetime("2025-08-27T17:05:14.934Z"),
+            "updated_at": parse_datetime("2025-08-28T09:35:39.162Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -219,7 +219,7 @@ with UnifiedTo(
 
 ## remove_legal_practicearea
 
-Remove a practicearea
+Deletes the LegalPracticearea identified by `id`.
 
 ### Example Usage
 
@@ -266,7 +266,7 @@ with UnifiedTo(
 
 ## update_legal_practicearea
 
-Update a practicearea
+Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to change in the request body.
 
 ### Example Usage
 
@@ -287,11 +287,11 @@ with UnifiedTo(
         "legal_practicearea": {
             "code": "QCA",
             "created_at": parse_datetime("2023-01-28T21:00:26.264Z"),
-            "id": "5b420f1d-9628-40f6-a231-46ead3aa27f8",
+            "id": "592d6358-4956-42ee-8be7-964244924972",
             "metadata": [],
             "name": "witty Law",
             "type": shared.LegalPracticeareaType.EDUCATION,
-            "updated_at": parse_datetime("2025-08-27T17:05:14.934Z"),
+            "updated_at": parse_datetime("2025-08-28T09:35:39.162Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

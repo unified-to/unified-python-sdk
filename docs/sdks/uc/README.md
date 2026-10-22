@@ -31,7 +31,7 @@
 
 ## create_uc_comment
 
-Create a comment
+Creates a UcComment. Provide the unified UcComment fields in the request body; they are mapped to the provider's API. Returns the created UcComment.
 
 ### Example Usage
 
@@ -51,9 +51,9 @@ with UnifiedTo(
         "uc_comment": {
             "content": "Vociferor vitiosus.",
             "created_at": "2023-04-02T23:42:31.571Z",
-            "id": "2900e44c-ad7e-4b03-942c-6354e9cb5faf",
+            "id": "b9065532-34c2-4db6-87db-7596b91ab742",
             "metadata": [],
-            "updated_at": "2024-02-09T18:28:50.441Z",
+            "updated_at": "2024-02-10T00:14:01.047Z",
         },
         "connection_id": "<id>",
     })
@@ -84,7 +84,7 @@ with UnifiedTo(
 
 ## create_uc_contact
 
-Create a contact
+Creates a UcContact. Provide the unified UcContact fields in the request body; they are mapped to the provider's API. Returns the created UcContact.
 
 ### Example Usage
 
@@ -112,7 +112,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Luther",
-            "id": "9ff2e5a9-d2ff-41ff-9a7b-4b06681db2b4",
+            "id": "07d54d1d-38a4-4c25-aa39-d52da829527a",
             "last_name": "Rogahn",
             "metadata": [],
             "name": "Luther Rogahn",
@@ -131,7 +131,7 @@ with UnifiedTo(
                 },
             ],
             "title": "Chief Optimization Executive",
-            "updated_at": parse_datetime("2023-12-08T09:03:40.534Z"),
+            "updated_at": parse_datetime("2023-12-08T23:06:51.843Z"),
         },
         "connection_id": "<id>",
     })
@@ -162,7 +162,7 @@ with UnifiedTo(
 
 ## create_uc_recording
 
-Create a recording
+Creates a UcRecording. Provide the unified UcRecording fields in the request body; they are mapped to the provider's API. Returns the created UcRecording.
 
 ### Example Usage
 
@@ -182,36 +182,36 @@ with UnifiedTo(
     res = unified_to.uc.create_uc_recording(request={
         "uc_recording": {
             "contacts": [],
-            "conversation_identifier": "dd9901cd-2211-4de3-9db8-244d042e231e",
+            "conversation_identifier": "ce79efe1-cc1c-4c2c-acec-02afbbdf5310",
             "created_at": parse_datetime("2022-09-17T19:41:46.956Z"),
-            "end_at": parse_datetime("2024-05-04T23:53:45.904Z"),
-            "expires_at": parse_datetime("2026-04-26T18:24:22.783Z"),
-            "id": "dd9901cd-2211-4de3-9db8-244d042e231e",
+            "end_at": parse_datetime("2024-05-05T09:23:54.557Z"),
+            "expires_at": parse_datetime("2026-04-27T15:25:56.416Z"),
+            "id": "ce79efe1-cc1c-4c2c-acec-02afbbdf5310",
             "media": [
                 {
-                    "end_at": parse_datetime("2024-04-01T19:33:58.491Z"),
+                    "end_at": parse_datetime("2024-04-02T04:32:20.046Z"),
                     "language": "en",
                     "recording_download_url": "https://parched-wasabi.com/",
-                    "start_at": parse_datetime("2026-05-15T10:28:13.245Z"),
+                    "start_at": parse_datetime("2026-05-16T07:47:39.929Z"),
                     "transcript_download_url": "https://colossal-cuckoo.name",
                     "transcripts": [
                         {
-                            "end_at": parse_datetime("2026-02-24T12:13:55.566Z"),
-                            "start_at": parse_datetime("2024-06-02T06:02:13.402Z"),
+                            "end_at": parse_datetime("2026-02-25T08:16:48.339Z"),
+                            "start_at": parse_datetime("2024-06-02T15:59:26.107Z"),
                             "text": "Turpis maiores ducimus tero speculum.",
                         },
                         {
-                            "end_at": parse_datetime("2024-10-12T13:10:00.179Z"),
-                            "start_at": parse_datetime("2026-08-02T21:02:42.197Z"),
+                            "end_at": parse_datetime("2024-10-13T01:13:56.875Z"),
+                            "start_at": parse_datetime("2026-08-03T19:38:14.859Z"),
                             "text": "Magnam consuasor uxor tergiversatio subseco.",
                         },
                     ],
                 },
             ],
             "metadata": [],
-            "start_at": parse_datetime("2023-04-27T18:03:33.062Z"),
+            "start_at": parse_datetime("2023-04-27T21:36:08.953Z"),
             "type": shared.UcRecordingType.OUTBOUND,
-            "updated_at": parse_datetime("2025-03-16T11:05:14.449Z"),
+            "updated_at": parse_datetime("2025-03-17T01:37:35.043Z"),
             "user_phone": "1-915-327-0429 x509",
             "web_url": "https://spherical-comparison.org",
         },
@@ -244,7 +244,7 @@ with UnifiedTo(
 
 ## get_uc_call
 
-Retrieve a call
+Retrieves a single UcCall by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -291,7 +291,7 @@ with UnifiedTo(
 
 ## get_uc_comment
 
-Retrieve a comment
+Retrieves a single UcComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -338,7 +338,7 @@ with UnifiedTo(
 
 ## get_uc_contact
 
-Retrieve a contact
+Retrieves a single UcContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -385,7 +385,7 @@ with UnifiedTo(
 
 ## get_uc_recording
 
-Retrieve a recording
+Retrieves a single UcRecording by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -432,7 +432,7 @@ with UnifiedTo(
 
 ## get_uc_scorecard
 
-Retrieve a scorecard
+Retrieves a single UcScorecard by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -479,7 +479,7 @@ with UnifiedTo(
 
 ## get_uc_scorecardtemplate
 
-Retrieve a scorecardtemplate
+Retrieves a single UcScorecardtemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -526,7 +526,7 @@ with UnifiedTo(
 
 ## list_uc_calls
 
-List all calls
+Returns a list of UcCalls. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -572,7 +572,7 @@ with UnifiedTo(
 
 ## list_uc_comments
 
-List all comments
+Returns a list of UcComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -618,7 +618,7 @@ with UnifiedTo(
 
 ## list_uc_contacts
 
-List all contacts
+Returns a list of UcContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -664,7 +664,7 @@ with UnifiedTo(
 
 ## list_uc_recordings
 
-List all recordings
+Returns a list of UcRecordings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -710,7 +710,7 @@ with UnifiedTo(
 
 ## list_uc_scorecards
 
-List all scorecards
+Returns a list of UcScorecards. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -756,7 +756,7 @@ with UnifiedTo(
 
 ## list_uc_scorecardtemplates
 
-List all scorecardtemplates
+Returns a list of UcScorecardtemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -802,7 +802,7 @@ with UnifiedTo(
 
 ## patch_uc_comment
 
-Update a comment
+Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the request body.
 
 ### Example Usage
 
@@ -822,9 +822,9 @@ with UnifiedTo(
         "uc_comment": {
             "content": "Vociferor vitiosus.",
             "created_at": "2023-04-02T23:42:31.571Z",
-            "id": "5bc5d560-a024-46de-adfe-091fa5dc62d4",
+            "id": "f9542e44-6a26-42ef-b104-7bb1a17b8698",
             "metadata": [],
-            "updated_at": "2024-02-09T18:28:50.444Z",
+            "updated_at": "2024-02-10T00:14:01.049Z",
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -856,7 +856,7 @@ with UnifiedTo(
 
 ## patch_uc_contact
 
-Update a contact
+Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the request body.
 
 ### Example Usage
 
@@ -884,7 +884,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Luther",
-            "id": "298bacf9-c0c2-46c2-b545-c41a6c5a967f",
+            "id": "62d40703-2d73-48d4-98f9-bd4bfc5324d5",
             "last_name": "Rogahn",
             "metadata": [],
             "name": "Luther Rogahn",
@@ -903,7 +903,7 @@ with UnifiedTo(
                 },
             ],
             "title": "Chief Optimization Executive",
-            "updated_at": parse_datetime("2023-12-08T09:03:40.544Z"),
+            "updated_at": parse_datetime("2023-12-08T23:06:51.851Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -935,7 +935,7 @@ with UnifiedTo(
 
 ## patch_uc_recording
 
-Update a recording
+Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the request body.
 
 ### Example Usage
 
@@ -955,36 +955,36 @@ with UnifiedTo(
     res = unified_to.uc.patch_uc_recording(request={
         "uc_recording": {
             "contacts": [],
-            "conversation_identifier": "a9bbdf61-65bb-4277-b7e2-1af174837916",
+            "conversation_identifier": "12f12c15-a763-464e-b713-8b7b1c4b7c11",
             "created_at": parse_datetime("2022-09-17T19:41:46.956Z"),
-            "end_at": parse_datetime("2024-05-04T23:53:45.917Z"),
-            "expires_at": parse_datetime("2026-04-26T18:24:22.813Z"),
-            "id": "a9bbdf61-65bb-4277-b7e2-1af174837916",
+            "end_at": parse_datetime("2024-05-05T09:23:54.571Z"),
+            "expires_at": parse_datetime("2026-04-27T15:25:56.447Z"),
+            "id": "12f12c15-a763-464e-b713-8b7b1c4b7c11",
             "media": [
                 {
-                    "end_at": parse_datetime("2024-04-01T19:33:58.504Z"),
+                    "end_at": parse_datetime("2024-04-02T04:32:20.059Z"),
                     "language": "en",
                     "recording_download_url": "https://parched-wasabi.com/",
-                    "start_at": parse_datetime("2026-05-15T10:28:13.275Z"),
+                    "start_at": parse_datetime("2026-05-16T07:47:39.960Z"),
                     "transcript_download_url": "https://colossal-cuckoo.name",
                     "transcripts": [
                         {
-                            "end_at": parse_datetime("2026-02-24T12:13:55.594Z"),
-                            "start_at": parse_datetime("2024-06-02T06:02:13.416Z"),
+                            "end_at": parse_datetime("2026-02-25T08:16:48.368Z"),
+                            "start_at": parse_datetime("2024-06-02T15:59:26.122Z"),
                             "text": "Turpis maiores ducimus tero speculum.",
                         },
                         {
-                            "end_at": parse_datetime("2024-10-12T13:10:00.196Z"),
-                            "start_at": parse_datetime("2026-08-02T21:02:42.228Z"),
+                            "end_at": parse_datetime("2024-10-13T01:13:56.892Z"),
+                            "start_at": parse_datetime("2026-08-03T19:38:14.893Z"),
                             "text": "Magnam consuasor uxor tergiversatio subseco.",
                         },
                     ],
                 },
             ],
             "metadata": [],
-            "start_at": parse_datetime("2023-04-27T18:03:33.067Z"),
+            "start_at": parse_datetime("2023-04-27T21:36:08.958Z"),
             "type": shared.UcRecordingType.OUTBOUND,
-            "updated_at": parse_datetime("2025-03-16T11:05:14.469Z"),
+            "updated_at": parse_datetime("2025-03-17T01:37:35.064Z"),
             "user_phone": "1-915-327-0429 x509",
             "web_url": "https://spherical-comparison.org",
         },
@@ -1018,7 +1018,7 @@ with UnifiedTo(
 
 ## remove_uc_comment
 
-Remove a comment
+Deletes the UcComment identified by `id`.
 
 ### Example Usage
 
@@ -1065,7 +1065,7 @@ with UnifiedTo(
 
 ## remove_uc_contact
 
-Remove a contact
+Deletes the UcContact identified by `id`.
 
 ### Example Usage
 
@@ -1112,7 +1112,7 @@ with UnifiedTo(
 
 ## remove_uc_recording
 
-Remove a recording
+Deletes the UcRecording identified by `id`.
 
 ### Example Usage
 
@@ -1159,7 +1159,7 @@ with UnifiedTo(
 
 ## update_uc_comment
 
-Update a comment
+Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the request body.
 
 ### Example Usage
 
@@ -1179,9 +1179,9 @@ with UnifiedTo(
         "uc_comment": {
             "content": "Vociferor vitiosus.",
             "created_at": "2023-04-02T23:42:31.571Z",
-            "id": "5bc5d560-a024-46de-adfe-091fa5dc62d4",
+            "id": "f9542e44-6a26-42ef-b104-7bb1a17b8698",
             "metadata": [],
-            "updated_at": "2024-02-09T18:28:50.444Z",
+            "updated_at": "2024-02-10T00:14:01.049Z",
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1213,7 +1213,7 @@ with UnifiedTo(
 
 ## update_uc_contact
 
-Update a contact
+Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the request body.
 
 ### Example Usage
 
@@ -1241,7 +1241,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Luther",
-            "id": "298bacf9-c0c2-46c2-b545-c41a6c5a967f",
+            "id": "62d40703-2d73-48d4-98f9-bd4bfc5324d5",
             "last_name": "Rogahn",
             "metadata": [],
             "name": "Luther Rogahn",
@@ -1260,7 +1260,7 @@ with UnifiedTo(
                 },
             ],
             "title": "Chief Optimization Executive",
-            "updated_at": parse_datetime("2023-12-08T09:03:40.544Z"),
+            "updated_at": parse_datetime("2023-12-08T23:06:51.851Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1292,7 +1292,7 @@ with UnifiedTo(
 
 ## update_uc_recording
 
-Update a recording
+Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the request body.
 
 ### Example Usage
 
@@ -1312,36 +1312,36 @@ with UnifiedTo(
     res = unified_to.uc.update_uc_recording(request={
         "uc_recording": {
             "contacts": [],
-            "conversation_identifier": "a9bbdf61-65bb-4277-b7e2-1af174837916",
+            "conversation_identifier": "12f12c15-a763-464e-b713-8b7b1c4b7c11",
             "created_at": parse_datetime("2022-09-17T19:41:46.956Z"),
-            "end_at": parse_datetime("2024-05-04T23:53:45.917Z"),
-            "expires_at": parse_datetime("2026-04-26T18:24:22.813Z"),
-            "id": "a9bbdf61-65bb-4277-b7e2-1af174837916",
+            "end_at": parse_datetime("2024-05-05T09:23:54.571Z"),
+            "expires_at": parse_datetime("2026-04-27T15:25:56.447Z"),
+            "id": "12f12c15-a763-464e-b713-8b7b1c4b7c11",
             "media": [
                 {
-                    "end_at": parse_datetime("2024-04-01T19:33:58.504Z"),
+                    "end_at": parse_datetime("2024-04-02T04:32:20.059Z"),
                     "language": "en",
                     "recording_download_url": "https://parched-wasabi.com/",
-                    "start_at": parse_datetime("2026-05-15T10:28:13.275Z"),
+                    "start_at": parse_datetime("2026-05-16T07:47:39.960Z"),
                     "transcript_download_url": "https://colossal-cuckoo.name",
                     "transcripts": [
                         {
-                            "end_at": parse_datetime("2026-02-24T12:13:55.594Z"),
-                            "start_at": parse_datetime("2024-06-02T06:02:13.416Z"),
+                            "end_at": parse_datetime("2026-02-25T08:16:48.368Z"),
+                            "start_at": parse_datetime("2024-06-02T15:59:26.122Z"),
                             "text": "Turpis maiores ducimus tero speculum.",
                         },
                         {
-                            "end_at": parse_datetime("2024-10-12T13:10:00.196Z"),
-                            "start_at": parse_datetime("2026-08-02T21:02:42.228Z"),
+                            "end_at": parse_datetime("2024-10-13T01:13:56.892Z"),
+                            "start_at": parse_datetime("2026-08-03T19:38:14.893Z"),
                             "text": "Magnam consuasor uxor tergiversatio subseco.",
                         },
                     ],
                 },
             ],
             "metadata": [],
-            "start_at": parse_datetime("2023-04-27T18:03:33.067Z"),
+            "start_at": parse_datetime("2023-04-27T21:36:08.958Z"),
             "type": shared.UcRecordingType.OUTBOUND,
-            "updated_at": parse_datetime("2025-03-16T11:05:14.469Z"),
+            "updated_at": parse_datetime("2025-03-17T01:37:35.064Z"),
             "user_phone": "1-915-327-0429 x509",
             "web_url": "https://spherical-comparison.org",
         },

@@ -13,7 +13,7 @@
 
 ## create_commerce_reservation
 
-Create a reservation
+Creates a CommerceReservation. Provide the unified CommerceReservation fields in the request body; they are mapped to the provider's API. Returns the created CommerceReservation.
 
 ### Example Usage
 
@@ -37,13 +37,13 @@ with UnifiedTo(
             "guest_email": "julien.bartoletti@icloud.com",
             "guest_name": "Julien Bartoletti",
             "guest_phone": "(728) 596-2620",
-            "id": "66b9aba1-05fd-485c-9fda-81d3cb1e778a",
+            "id": "60c10133-52cf-40e4-bb0c-3c0be69d6146",
             "metadata": [],
             "notes": "Adsum textilis ipsum despecto.",
             "size": 10.0,
             "start_at": parse_datetime("2021-12-18T00:40:25.125Z"),
             "status": shared.CommerceReservationStatus.PENDING,
-            "updated_at": parse_datetime("2023-01-03T21:22:44.391Z"),
+            "updated_at": parse_datetime("2023-01-04T02:33:54.875Z"),
             "url": "https://expensive-gift.org",
         },
         "connection_id": "<id>",
@@ -75,7 +75,7 @@ with UnifiedTo(
 
 ## get_commerce_reservation
 
-Retrieve a reservation
+Retrieves a single CommerceReservation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -122,7 +122,7 @@ with UnifiedTo(
 
 ## list_commerce_reservations
 
-List all reservations
+Returns a list of CommerceReservations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -168,7 +168,7 @@ with UnifiedTo(
 
 ## patch_commerce_reservation
 
-Update a reservation
+Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields to change in the request body.
 
 ### Example Usage
 
@@ -192,13 +192,13 @@ with UnifiedTo(
             "guest_email": "julien.bartoletti@icloud.com",
             "guest_name": "Julien Bartoletti",
             "guest_phone": "(728) 596-2620",
-            "id": "e355bbf5-3201-45d4-ac1a-2c13b534b743",
+            "id": "4f525164-06a5-4358-aede-fbd19be29b8c",
             "metadata": [],
             "notes": "Adsum textilis ipsum despecto.",
             "size": 10.0,
             "start_at": parse_datetime("2021-12-18T00:40:25.125Z"),
             "status": shared.CommerceReservationStatus.PENDING,
-            "updated_at": parse_datetime("2023-01-03T21:22:44.395Z"),
+            "updated_at": parse_datetime("2023-01-04T02:33:54.879Z"),
             "url": "https://expensive-gift.org",
         },
         "connection_id": "<id>",
@@ -231,7 +231,7 @@ with UnifiedTo(
 
 ## remove_commerce_reservation
 
-Remove a reservation
+Deletes the CommerceReservation identified by `id`.
 
 ### Example Usage
 
@@ -278,7 +278,7 @@ with UnifiedTo(
 
 ## update_commerce_reservation
 
-Update a reservation
+Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields to change in the request body.
 
 ### Example Usage
 
@@ -302,13 +302,13 @@ with UnifiedTo(
             "guest_email": "julien.bartoletti@icloud.com",
             "guest_name": "Julien Bartoletti",
             "guest_phone": "(728) 596-2620",
-            "id": "e355bbf5-3201-45d4-ac1a-2c13b534b743",
+            "id": "4f525164-06a5-4358-aede-fbd19be29b8c",
             "metadata": [],
             "notes": "Adsum textilis ipsum despecto.",
             "size": 10.0,
             "start_at": parse_datetime("2021-12-18T00:40:25.125Z"),
             "status": shared.CommerceReservationStatus.PENDING,
-            "updated_at": parse_datetime("2023-01-03T21:22:44.395Z"),
+            "updated_at": parse_datetime("2023-01-04T02:33:54.879Z"),
             "url": "https://expensive-gift.org",
         },
         "connection_id": "<id>",

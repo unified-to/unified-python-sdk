@@ -24,6 +24,8 @@ class Healthcare(BaseSDK):
     ) -> operations.CreateHealthcareAppointmentResponse:
         r"""Create an appointment
 
+        Creates a HealthcareAppointment. Provide the unified HealthcareAppointment fields in the request body; they are mapped to the provider's API. Returns the created HealthcareAppointment.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -124,6 +126,8 @@ class Healthcare(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateHealthcareAppointmentResponse:
         r"""Create an appointment
+
+        Creates a HealthcareAppointment. Provide the unified HealthcareAppointment fields in the request body; they are mapped to the provider's API. Returns the created HealthcareAppointment.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -226,6 +230,8 @@ class Healthcare(BaseSDK):
     ) -> operations.CreateHealthcareObservationResponse:
         r"""Create an observation
 
+        Creates a HealthcareObservation. Provide the unified HealthcareObservation fields in the request body; they are mapped to the provider's API. Returns the created HealthcareObservation.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -326,6 +332,8 @@ class Healthcare(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateHealthcareObservationResponse:
         r"""Create an observation
+
+        Creates a HealthcareObservation. Provide the unified HealthcareObservation fields in the request body; they are mapped to the provider's API. Returns the created HealthcareObservation.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -428,6 +436,8 @@ class Healthcare(BaseSDK):
     ) -> operations.CreateHealthcarePatientResponse:
         r"""Create a patient
 
+        Creates a HealthcarePatient. Provide the unified HealthcarePatient fields in the request body; they are mapped to the provider's API. Returns the created HealthcarePatient.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -528,6 +538,8 @@ class Healthcare(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateHealthcarePatientResponse:
         r"""Create a patient
+
+        Creates a HealthcarePatient. Provide the unified HealthcarePatient fields in the request body; they are mapped to the provider's API. Returns the created HealthcarePatient.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -630,6 +642,8 @@ class Healthcare(BaseSDK):
     ) -> operations.GetHealthcareAllergyResponse:
         r"""Retrieve an allergy
 
+        Retrieves a single HealthcareAllergy by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -722,6 +736,8 @@ class Healthcare(BaseSDK):
     ) -> operations.GetHealthcareAllergyResponse:
         r"""Retrieve an allergy
 
+        Retrieves a single HealthcareAllergy by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -813,6 +829,8 @@ class Healthcare(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetHealthcareAppointmentResponse:
         r"""Retrieve an appointment
+
+        Retrieves a single HealthcareAppointment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -908,6 +926,8 @@ class Healthcare(BaseSDK):
     ) -> operations.GetHealthcareAppointmentResponse:
         r"""Retrieve an appointment
 
+        Retrieves a single HealthcareAppointment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1002,6 +1022,8 @@ class Healthcare(BaseSDK):
     ) -> operations.GetHealthcareConditionResponse:
         r"""Retrieve a condition
 
+        Retrieves a single HealthcareCondition by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1093,6 +1115,8 @@ class Healthcare(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetHealthcareConditionResponse:
         r"""Retrieve a condition
+
+        Retrieves a single HealthcareCondition by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1186,6 +1210,8 @@ class Healthcare(BaseSDK):
     ) -> operations.GetHealthcareEncounterResponse:
         r"""Retrieve an encounter
 
+        Retrieves a single HealthcareEncounter by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1278,6 +1304,8 @@ class Healthcare(BaseSDK):
     ) -> operations.GetHealthcareEncounterResponse:
         r"""Retrieve an encounter
 
+        Retrieves a single HealthcareEncounter by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1369,6 +1397,8 @@ class Healthcare(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetHealthcareImmunizationResponse:
         r"""Retrieve an immunization
+
+        Retrieves a single HealthcareImmunization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1464,6 +1494,8 @@ class Healthcare(BaseSDK):
     ) -> operations.GetHealthcareImmunizationResponse:
         r"""Retrieve an immunization
 
+        Retrieves a single HealthcareImmunization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1558,6 +1590,8 @@ class Healthcare(BaseSDK):
     ) -> operations.GetHealthcareLocationResponse:
         r"""Retrieve a location
 
+        Retrieves a single HealthcareLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1650,6 +1684,8 @@ class Healthcare(BaseSDK):
     ) -> operations.GetHealthcareLocationResponse:
         r"""Retrieve a location
 
+        Retrieves a single HealthcareLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1741,6 +1777,8 @@ class Healthcare(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetHealthcareMedicationResponse:
         r"""Retrieve a medication
+
+        Retrieves a single HealthcareMedication by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1836,6 +1874,8 @@ class Healthcare(BaseSDK):
     ) -> operations.GetHealthcareMedicationResponse:
         r"""Retrieve a medication
 
+        Retrieves a single HealthcareMedication by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1929,6 +1969,8 @@ class Healthcare(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetHealthcareObservationResponse:
         r"""Retrieve an observation
+
+        Retrieves a single HealthcareObservation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2024,6 +2066,8 @@ class Healthcare(BaseSDK):
     ) -> operations.GetHealthcareObservationResponse:
         r"""Retrieve an observation
 
+        Retrieves a single HealthcareObservation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2118,6 +2162,8 @@ class Healthcare(BaseSDK):
     ) -> operations.GetHealthcarePatientResponse:
         r"""Retrieve a patient
 
+        Retrieves a single HealthcarePatient by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2210,6 +2256,8 @@ class Healthcare(BaseSDK):
     ) -> operations.GetHealthcarePatientResponse:
         r"""Retrieve a patient
 
+        Retrieves a single HealthcarePatient by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2301,6 +2349,8 @@ class Healthcare(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetHealthcarePractitionerResponse:
         r"""Retrieve a practitioner
+
+        Retrieves a single HealthcarePractitioner by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2396,6 +2446,8 @@ class Healthcare(BaseSDK):
     ) -> operations.GetHealthcarePractitionerResponse:
         r"""Retrieve a practitioner
 
+        Retrieves a single HealthcarePractitioner by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2490,6 +2542,8 @@ class Healthcare(BaseSDK):
     ) -> operations.GetHealthcareSlotResponse:
         r"""Retrieve a slot
 
+        Retrieves a single HealthcareSlot by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2582,6 +2636,8 @@ class Healthcare(BaseSDK):
     ) -> operations.GetHealthcareSlotResponse:
         r"""Retrieve a slot
 
+        Retrieves a single HealthcareSlot by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2673,6 +2729,8 @@ class Healthcare(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListHealthcareAllergiesResponse:
         r"""List all allergies
+
+        Returns a list of HealthcareAllergies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2768,6 +2826,8 @@ class Healthcare(BaseSDK):
     ) -> operations.ListHealthcareAllergiesResponse:
         r"""List all allergies
 
+        Returns a list of HealthcareAllergies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2861,6 +2921,8 @@ class Healthcare(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListHealthcareAppointmentsResponse:
         r"""List all appointments
+
+        Returns a list of HealthcareAppointments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2956,6 +3018,8 @@ class Healthcare(BaseSDK):
     ) -> operations.ListHealthcareAppointmentsResponse:
         r"""List all appointments
 
+        Returns a list of HealthcareAppointments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3049,6 +3113,8 @@ class Healthcare(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListHealthcareConditionsResponse:
         r"""List all conditions
+
+        Returns a list of HealthcareConditions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3144,6 +3210,8 @@ class Healthcare(BaseSDK):
     ) -> operations.ListHealthcareConditionsResponse:
         r"""List all conditions
 
+        Returns a list of HealthcareConditions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3237,6 +3305,8 @@ class Healthcare(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListHealthcareEncountersResponse:
         r"""List all encounters
+
+        Returns a list of HealthcareEncounters. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3332,6 +3402,8 @@ class Healthcare(BaseSDK):
     ) -> operations.ListHealthcareEncountersResponse:
         r"""List all encounters
 
+        Returns a list of HealthcareEncounters. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3425,6 +3497,8 @@ class Healthcare(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListHealthcareImmunizationsResponse:
         r"""List all immunizations
+
+        Returns a list of HealthcareImmunizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3520,6 +3594,8 @@ class Healthcare(BaseSDK):
     ) -> operations.ListHealthcareImmunizationsResponse:
         r"""List all immunizations
 
+        Returns a list of HealthcareImmunizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3613,6 +3689,8 @@ class Healthcare(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListHealthcareLocationsResponse:
         r"""List all locations
+
+        Returns a list of HealthcareLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3708,6 +3786,8 @@ class Healthcare(BaseSDK):
     ) -> operations.ListHealthcareLocationsResponse:
         r"""List all locations
 
+        Returns a list of HealthcareLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3801,6 +3881,8 @@ class Healthcare(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListHealthcareMedicationsResponse:
         r"""List all medications
+
+        Returns a list of HealthcareMedications. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3896,6 +3978,8 @@ class Healthcare(BaseSDK):
     ) -> operations.ListHealthcareMedicationsResponse:
         r"""List all medications
 
+        Returns a list of HealthcareMedications. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3989,6 +4073,8 @@ class Healthcare(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListHealthcareObservationsResponse:
         r"""List all observations
+
+        Returns a list of HealthcareObservations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4084,6 +4170,8 @@ class Healthcare(BaseSDK):
     ) -> operations.ListHealthcareObservationsResponse:
         r"""List all observations
 
+        Returns a list of HealthcareObservations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4178,6 +4266,8 @@ class Healthcare(BaseSDK):
     ) -> operations.ListHealthcarePatientsResponse:
         r"""List all patients
 
+        Returns a list of HealthcarePatients. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4270,6 +4360,8 @@ class Healthcare(BaseSDK):
     ) -> operations.ListHealthcarePatientsResponse:
         r"""List all patients
 
+        Returns a list of HealthcarePatients. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4361,6 +4453,8 @@ class Healthcare(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListHealthcarePractitionersResponse:
         r"""List all practitioners
+
+        Returns a list of HealthcarePractitioners. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4456,6 +4550,8 @@ class Healthcare(BaseSDK):
     ) -> operations.ListHealthcarePractitionersResponse:
         r"""List all practitioners
 
+        Returns a list of HealthcarePractitioners. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4550,6 +4646,8 @@ class Healthcare(BaseSDK):
     ) -> operations.ListHealthcareSlotsResponse:
         r"""List all slots
 
+        Returns a list of HealthcareSlots. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4642,6 +4740,8 @@ class Healthcare(BaseSDK):
     ) -> operations.ListHealthcareSlotsResponse:
         r"""List all slots
 
+        Returns a list of HealthcareSlots. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4733,6 +4833,8 @@ class Healthcare(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchHealthcareAppointmentResponse:
         r"""Update an appointment
+
+        Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4835,6 +4937,8 @@ class Healthcare(BaseSDK):
     ) -> operations.PatchHealthcareAppointmentResponse:
         r"""Update an appointment
 
+        Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4936,6 +5040,8 @@ class Healthcare(BaseSDK):
     ) -> operations.PatchHealthcarePatientResponse:
         r"""Update a patient
 
+        Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5034,6 +5140,8 @@ class Healthcare(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchHealthcarePatientResponse:
         r"""Update a patient
+
+        Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -5134,6 +5242,8 @@ class Healthcare(BaseSDK):
     ) -> operations.RemoveHealthcareAppointmentResponse:
         r"""Remove an appointment
 
+        Deletes the HealthcareAppointment identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5233,6 +5343,8 @@ class Healthcare(BaseSDK):
     ) -> operations.RemoveHealthcareAppointmentResponse:
         r"""Remove an appointment
 
+        Deletes the HealthcareAppointment identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5331,6 +5443,8 @@ class Healthcare(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateHealthcareAppointmentResponse:
         r"""Update an appointment
+
+        Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -5433,6 +5547,8 @@ class Healthcare(BaseSDK):
     ) -> operations.UpdateHealthcareAppointmentResponse:
         r"""Update an appointment
 
+        Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5534,6 +5650,8 @@ class Healthcare(BaseSDK):
     ) -> operations.UpdateHealthcarePatientResponse:
         r"""Update a patient
 
+        Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5634,6 +5752,8 @@ class Healthcare(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateHealthcarePatientResponse:
         r"""Update a patient
+
+        Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

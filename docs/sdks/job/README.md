@@ -19,7 +19,7 @@
 
 ## create_ats_job
 
-Create a job
+Creates a AtsJob. Provide the unified AtsJob fields in the request body; they are mapped to the provider's API. Returns the created AtsJob.
 
 ### Example Usage
 
@@ -68,7 +68,7 @@ with UnifiedTo(
             "description": "Global",
             "employment_type": shared.EmploymentType.FREELANCE,
             "hiring_managers": [],
-            "id": "d5878e4b-8b8f-42a6-8ed9-1078a38a0843",
+            "id": "2f1b7ebc-9852-4931-90f1-89dd6c2ce9cb",
             "industry": "Handcrafted Bamboo Soap",
             "language_locale": "en",
             "metadata": [
@@ -77,7 +77,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "5ec867ec-230e-42d9-ab19-cc1e65806529",
+                    "id": "c75075fd-9a62-4aa4-a635-a8c78c9e0ad9",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "desolo",
@@ -90,7 +90,7 @@ with UnifiedTo(
             "openings": [
                 {
                     "close_reason": "Admoveo trado textilis.",
-                    "opened_at": parse_datetime("2026-06-07T21:23:37.269Z"),
+                    "opened_at": parse_datetime("2026-06-08T18:36:46.211Z"),
                     "status": shared.AtsJobOpeningStatus.OPEN,
                 },
             ],
@@ -104,14 +104,14 @@ with UnifiedTo(
                         "region": "Wisconsin",
                         "region_code": "CO",
                     },
-                    "created_at": parse_datetime("2026-08-02T00:24:41.868Z"),
+                    "created_at": parse_datetime("2026-08-02T22:42:23.508Z"),
                     "description": "Beatus eum volutabrum balbus victus ipsa tubineus claustrum.",
-                    "id": "641a68a5-3712-4e4d-98fb-b45036a7a779",
+                    "id": "3ba66c8e-ea9e-4ce8-bdf4-cc6d1106ddb3",
                     "is_active": False,
                     "location": "1725 Hessel Keys",
                     "name": "International Identity Manager",
                     "posting_url": "https://obedient-yak.com",
-                    "updated_at": parse_datetime("2026-08-28T07:47:34.839Z"),
+                    "updated_at": parse_datetime("2026-08-29T06:36:04.638Z"),
                 },
             ],
             "public_job_urls": [
@@ -121,7 +121,7 @@ with UnifiedTo(
             "questions": [
                 {
                     "description": "Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado.",
-                    "id": "862283a1-8f32-48d3-b3f4-a27311eb8b87",
+                    "id": "a5a8c189-4d6f-4700-9166-2777d1882265",
                     "max_length": 117.0,
                     "min_length": 1.0,
                     "options": [
@@ -134,7 +134,7 @@ with UnifiedTo(
                     "type": shared.AtsJobQuestionType.TEXT,
                 },
                 {
-                    "id": "c437e681-b81f-4367-82ad-0ff3cebce049",
+                    "id": "32a1bbdf-b4e0-4ae0-8e0b-0dc217e89fb2",
                     "max_length": 453.0,
                     "min_length": 1.0,
                     "options": [
@@ -147,7 +147,7 @@ with UnifiedTo(
                 },
                 {
                     "description": "Taceo rem compello spectaculum mollitia arcus compello.",
-                    "id": "f614bca7-6772-4f1b-8d02-732ae899fd2f",
+                    "id": "aef905ab-59c5-442f-8c48-57a3ecebc53d",
                     "max_length": 66.0,
                     "min_length": 1.0,
                     "options": [
@@ -165,7 +165,7 @@ with UnifiedTo(
             ],
             "status": shared.AtsJobStatus.ARCHIVED,
             "summary": "Crepusculum adsuesco vere.",
-            "updated_at": parse_datetime("2026-02-27T09:43:12.513Z"),
+            "updated_at": parse_datetime("2026-02-28T04:58:42.080Z"),
         },
         "connection_id": "<id>",
     })
@@ -196,7 +196,7 @@ with UnifiedTo(
 
 ## create_hris_job
 
-Create a job
+Creates a HrisJob. Provide the unified HrisJob fields in the request body; they are mapped to the provider's API. Returns the created HrisJob.
 
 ### Example Usage
 
@@ -219,11 +219,11 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-10-28T01:13:19.491Z"),
             "description": "Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.",
             "employment_type": shared.HrisJobEmploymentType.FREELANCE,
-            "id": "74b4e6c5-232b-4a0e-ba74-386cd4e39fde",
+            "id": "40d8a395-8f3c-45c7-9458-c256a829c475",
             "is_active": False,
             "metadata": [],
             "name": "Internal Integration Specialist",
-            "updated_at": parse_datetime("2023-01-30T05:16:45.945Z"),
+            "updated_at": parse_datetime("2023-01-30T14:16:54.965Z"),
         },
         "connection_id": "<id>",
     })
@@ -254,7 +254,7 @@ with UnifiedTo(
 
 ## get_ats_job
 
-Retrieve a job
+Retrieves a single AtsJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -301,7 +301,7 @@ with UnifiedTo(
 
 ## get_hris_job
 
-Retrieve a job
+Retrieves a single HrisJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -348,7 +348,7 @@ with UnifiedTo(
 
 ## list_ats_jobs
 
-List all jobs
+Returns a list of AtsJobs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -394,7 +394,7 @@ with UnifiedTo(
 
 ## list_hris_jobs
 
-List all jobs
+Returns a list of HrisJobs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -440,7 +440,7 @@ with UnifiedTo(
 
 ## patch_ats_job
 
-Update a job
+Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request body.
 
 ### Example Usage
 
@@ -489,7 +489,7 @@ with UnifiedTo(
             "description": "Global",
             "employment_type": shared.EmploymentType.FREELANCE,
             "hiring_managers": [],
-            "id": "5d34a61a-1e4a-4ab6-b66c-1be6e5d9b7fc",
+            "id": "9a66fe38-546a-43c1-a6e2-64e49af50e1a",
             "industry": "Handcrafted Bamboo Soap",
             "language_locale": "en",
             "metadata": [
@@ -498,7 +498,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "32cda706-335c-49ef-a6b0-14f6a1c0bd7c",
+                    "id": "133a3986-25d9-47c6-948f-1b6cee5cf06c",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "desolo",
@@ -511,7 +511,7 @@ with UnifiedTo(
             "openings": [
                 {
                     "close_reason": "Admoveo trado textilis.",
-                    "opened_at": parse_datetime("2026-06-07T21:23:37.323Z"),
+                    "opened_at": parse_datetime("2026-06-08T18:36:46.273Z"),
                     "status": shared.AtsJobOpeningStatus.OPEN,
                 },
             ],
@@ -525,14 +525,14 @@ with UnifiedTo(
                         "region": "Wisconsin",
                         "region_code": "CO",
                     },
-                    "created_at": parse_datetime("2026-08-02T00:24:41.925Z"),
+                    "created_at": parse_datetime("2026-08-02T22:42:23.571Z"),
                     "description": "Beatus eum volutabrum balbus victus ipsa tubineus claustrum.",
-                    "id": "f1ba3e64-d9ba-41f2-925b-88b51d905251",
+                    "id": "539d9969-b0aa-4be3-8f98-1de80d87ee85",
                     "is_active": False,
                     "location": "1725 Hessel Keys",
                     "name": "International Identity Manager",
                     "posting_url": "https://obedient-yak.com",
-                    "updated_at": parse_datetime("2026-08-28T07:47:34.897Z"),
+                    "updated_at": parse_datetime("2026-08-29T06:36:04.703Z"),
                 },
             ],
             "public_job_urls": [
@@ -542,7 +542,7 @@ with UnifiedTo(
             "questions": [
                 {
                     "description": "Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado.",
-                    "id": "c1bf2bc5-f39c-4807-97d5-9099eae0ece1",
+                    "id": "f6c9e280-dc94-4f9f-8f68-2d9380362403",
                     "max_length": 117.0,
                     "min_length": 1.0,
                     "options": [
@@ -555,7 +555,7 @@ with UnifiedTo(
                     "type": shared.AtsJobQuestionType.TEXT,
                 },
                 {
-                    "id": "15c8ed80-3a14-407c-b4ab-3c5701c80ee9",
+                    "id": "c763b368-3f14-4a1b-abf1-d64283996603",
                     "max_length": 453.0,
                     "min_length": 1.0,
                     "options": [
@@ -568,7 +568,7 @@ with UnifiedTo(
                 },
                 {
                     "description": "Taceo rem compello spectaculum mollitia arcus compello.",
-                    "id": "4d682ebe-2e5b-4be3-b67a-b9658a10394a",
+                    "id": "9bff608e-1937-49d0-ba78-9df903fcdc1f",
                     "max_length": 66.0,
                     "min_length": 1.0,
                     "options": [
@@ -586,7 +586,7 @@ with UnifiedTo(
             ],
             "status": shared.AtsJobStatus.ARCHIVED,
             "summary": "Crepusculum adsuesco vere.",
-            "updated_at": parse_datetime("2026-02-27T09:43:12.562Z"),
+            "updated_at": parse_datetime("2026-02-28T04:58:42.136Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -618,7 +618,7 @@ with UnifiedTo(
 
 ## patch_hris_job
 
-Update a job
+Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request body.
 
 ### Example Usage
 
@@ -641,11 +641,11 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-10-28T01:13:19.491Z"),
             "description": "Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.",
             "employment_type": shared.HrisJobEmploymentType.FREELANCE,
-            "id": "a02f6bbb-91dc-45eb-9cd1-3eb9d7131a33",
+            "id": "efdd1e58-1ea2-4e0c-b5c0-6a8691cdab7a",
             "is_active": False,
             "metadata": [],
             "name": "Internal Integration Specialist",
-            "updated_at": parse_datetime("2023-01-30T05:16:46.019Z"),
+            "updated_at": parse_datetime("2023-01-30T14:16:55.027Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -677,7 +677,7 @@ with UnifiedTo(
 
 ## remove_ats_job
 
-Remove a job
+Deletes the AtsJob identified by `id`.
 
 ### Example Usage
 
@@ -724,7 +724,7 @@ with UnifiedTo(
 
 ## remove_hris_job
 
-Remove a job
+Deletes the HrisJob identified by `id`.
 
 ### Example Usage
 
@@ -771,7 +771,7 @@ with UnifiedTo(
 
 ## update_ats_job
 
-Update a job
+Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request body.
 
 ### Example Usage
 
@@ -820,7 +820,7 @@ with UnifiedTo(
             "description": "Global",
             "employment_type": shared.EmploymentType.FREELANCE,
             "hiring_managers": [],
-            "id": "5d34a61a-1e4a-4ab6-b66c-1be6e5d9b7fc",
+            "id": "9a66fe38-546a-43c1-a6e2-64e49af50e1a",
             "industry": "Handcrafted Bamboo Soap",
             "language_locale": "en",
             "metadata": [
@@ -829,7 +829,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "32cda706-335c-49ef-a6b0-14f6a1c0bd7c",
+                    "id": "133a3986-25d9-47c6-948f-1b6cee5cf06c",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "desolo",
@@ -842,7 +842,7 @@ with UnifiedTo(
             "openings": [
                 {
                     "close_reason": "Admoveo trado textilis.",
-                    "opened_at": parse_datetime("2026-06-07T21:23:37.323Z"),
+                    "opened_at": parse_datetime("2026-06-08T18:36:46.273Z"),
                     "status": shared.AtsJobOpeningStatus.OPEN,
                 },
             ],
@@ -856,14 +856,14 @@ with UnifiedTo(
                         "region": "Wisconsin",
                         "region_code": "CO",
                     },
-                    "created_at": parse_datetime("2026-08-02T00:24:41.925Z"),
+                    "created_at": parse_datetime("2026-08-02T22:42:23.571Z"),
                     "description": "Beatus eum volutabrum balbus victus ipsa tubineus claustrum.",
-                    "id": "f1ba3e64-d9ba-41f2-925b-88b51d905251",
+                    "id": "539d9969-b0aa-4be3-8f98-1de80d87ee85",
                     "is_active": False,
                     "location": "1725 Hessel Keys",
                     "name": "International Identity Manager",
                     "posting_url": "https://obedient-yak.com",
-                    "updated_at": parse_datetime("2026-08-28T07:47:34.897Z"),
+                    "updated_at": parse_datetime("2026-08-29T06:36:04.703Z"),
                 },
             ],
             "public_job_urls": [
@@ -873,7 +873,7 @@ with UnifiedTo(
             "questions": [
                 {
                     "description": "Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado.",
-                    "id": "c1bf2bc5-f39c-4807-97d5-9099eae0ece1",
+                    "id": "f6c9e280-dc94-4f9f-8f68-2d9380362403",
                     "max_length": 117.0,
                     "min_length": 1.0,
                     "options": [
@@ -886,7 +886,7 @@ with UnifiedTo(
                     "type": shared.AtsJobQuestionType.TEXT,
                 },
                 {
-                    "id": "15c8ed80-3a14-407c-b4ab-3c5701c80ee9",
+                    "id": "c763b368-3f14-4a1b-abf1-d64283996603",
                     "max_length": 453.0,
                     "min_length": 1.0,
                     "options": [
@@ -899,7 +899,7 @@ with UnifiedTo(
                 },
                 {
                     "description": "Taceo rem compello spectaculum mollitia arcus compello.",
-                    "id": "4d682ebe-2e5b-4be3-b67a-b9658a10394a",
+                    "id": "9bff608e-1937-49d0-ba78-9df903fcdc1f",
                     "max_length": 66.0,
                     "min_length": 1.0,
                     "options": [
@@ -917,7 +917,7 @@ with UnifiedTo(
             ],
             "status": shared.AtsJobStatus.ARCHIVED,
             "summary": "Crepusculum adsuesco vere.",
-            "updated_at": parse_datetime("2026-02-27T09:43:12.562Z"),
+            "updated_at": parse_datetime("2026-02-28T04:58:42.136Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -949,7 +949,7 @@ with UnifiedTo(
 
 ## update_hris_job
 
-Update a job
+Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request body.
 
 ### Example Usage
 
@@ -972,11 +972,11 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-10-28T01:13:19.491Z"),
             "description": "Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.",
             "employment_type": shared.HrisJobEmploymentType.FREELANCE,
-            "id": "a02f6bbb-91dc-45eb-9cd1-3eb9d7131a33",
+            "id": "efdd1e58-1ea2-4e0c-b5c0-6a8691cdab7a",
             "is_active": False,
             "metadata": [],
             "name": "Internal Integration Specialist",
-            "updated_at": parse_datetime("2023-01-30T05:16:46.019Z"),
+            "updated_at": parse_datetime("2023-01-30T14:16:55.027Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

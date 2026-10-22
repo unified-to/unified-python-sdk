@@ -13,7 +13,7 @@
 
 ## create_commerce_saleschannel
 
-Create a saleschannel
+Creates a CommerceSaleschannel. Provide the unified CommerceSaleschannel fields in the request body; they are mapped to the provider's API. Returns the created CommerceSaleschannel.
 
 ### Example Usage
 
@@ -35,11 +35,11 @@ with UnifiedTo(
             "collections": [],
             "created_at": parse_datetime("2021-12-12T06:19:55.421Z"),
             "description": "Utroque denuncio solutio.",
-            "id": "87ad1378-25cc-48c8-942d-ef801d96a1aa",
+            "id": "f5000683-c155-418d-ba03-716ec32f7165",
             "is_active": False,
             "metadata": [],
             "slug": "amiculum-congregatio-suspendo",
-            "updated_at": parse_datetime("2025-01-27T23:58:39.784Z"),
+            "updated_at": parse_datetime("2025-01-28T15:20:47.188Z"),
         },
         "connection_id": "<id>",
     })
@@ -70,7 +70,7 @@ with UnifiedTo(
 
 ## get_commerce_saleschannel
 
-Retrieve a saleschannel
+Retrieves a single CommerceSaleschannel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -117,7 +117,7 @@ with UnifiedTo(
 
 ## list_commerce_saleschannels
 
-List all saleschannels
+Returns a list of CommerceSaleschannels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -163,7 +163,7 @@ with UnifiedTo(
 
 ## patch_commerce_saleschannel
 
-Update a saleschannel
+Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields to change in the request body.
 
 ### Example Usage
 
@@ -185,11 +185,11 @@ with UnifiedTo(
             "collections": [],
             "created_at": parse_datetime("2021-12-12T06:19:55.421Z"),
             "description": "Utroque denuncio solutio.",
-            "id": "07f49938-85b7-44e9-90c1-647988fc7fb5",
+            "id": "91b0c154-d7b0-4359-9c83-044aed157d8b",
             "is_active": False,
             "metadata": [],
             "slug": "amiculum-congregatio-suspendo",
-            "updated_at": parse_datetime("2025-01-27T23:58:39.793Z"),
+            "updated_at": parse_datetime("2025-01-28T15:20:47.199Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -221,7 +221,7 @@ with UnifiedTo(
 
 ## remove_commerce_saleschannel
 
-Remove a saleschannel
+Deletes the CommerceSaleschannel identified by `id`.
 
 ### Example Usage
 
@@ -268,7 +268,7 @@ with UnifiedTo(
 
 ## update_commerce_saleschannel
 
-Update a saleschannel
+Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields to change in the request body.
 
 ### Example Usage
 
@@ -290,11 +290,11 @@ with UnifiedTo(
             "collections": [],
             "created_at": parse_datetime("2021-12-12T06:19:55.421Z"),
             "description": "Utroque denuncio solutio.",
-            "id": "07f49938-85b7-44e9-90c1-647988fc7fb5",
+            "id": "91b0c154-d7b0-4359-9c83-044aed157d8b",
             "is_active": False,
             "metadata": [],
             "slug": "amiculum-congregatio-suspendo",
-            "updated_at": parse_datetime("2025-01-27T23:58:39.793Z"),
+            "updated_at": parse_datetime("2025-01-28T15:20:47.199Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

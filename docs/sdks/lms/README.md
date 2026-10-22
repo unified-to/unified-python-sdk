@@ -49,7 +49,7 @@
 
 ## create_lms_activity
 
-Create an activity
+Creates a LmsActivity. Provide the unified LmsActivity fields in the request body; they are mapped to the provider's API. Returns the created LmsActivity.
 
 ### Example Usage
 
@@ -69,15 +69,15 @@ with UnifiedTo(
     res = unified_to.lms.create_lms_activity(request={
         "lms_activity": {
             "assigned_grade": "summopere",
-            "completed_at": parse_datetime("2023-12-05T23:38:03.448Z"),
+            "completed_at": parse_datetime("2023-12-06T12:04:39.234Z"),
             "created_at": parse_datetime("2020-10-17T01:25:21.745Z"),
             "duration_minutes": 55.0,
-            "id": "5cd62e9b-a4e0-44bb-91d5-190f71d542fd",
+            "id": "0a87f169-efad-4aba-b463-b08da0add2bd",
             "is_completed": True,
             "metadata": [],
             "progress_percentage": 100.0,
-            "started_at": parse_datetime("2021-04-25T04:23:06.673Z"),
-            "updated_at": parse_datetime("2022-01-30T23:40:16.601Z"),
+            "started_at": parse_datetime("2021-04-25T06:27:05.348Z"),
+            "updated_at": parse_datetime("2022-01-31T04:47:21.858Z"),
         },
         "connection_id": "<id>",
     })
@@ -108,7 +108,7 @@ with UnifiedTo(
 
 ## create_lms_class
 
-Create a class
+Creates a LmsClass. Provide the unified LmsClass fields in the request body; they are mapped to the provider's API. Returns the created LmsClass.
 
 ### Example Usage
 
@@ -129,7 +129,7 @@ with UnifiedTo(
         "lms_class": {
             "created_at": parse_datetime("2020-02-20T14:48:51.845Z"),
             "description": "Anser sperno decerno.",
-            "id": "d660518e-52af-484e-87a6-28a5fec7df28",
+            "id": "d5601fe2-ef5f-477b-8c81-5a56dfdd5b83",
             "instructors": [],
             "languages": [
                 "in",
@@ -151,7 +151,7 @@ with UnifiedTo(
             "metadata": [],
             "name": "virtus",
             "students": [],
-            "updated_at": parse_datetime("2025-08-03T21:26:37.853Z"),
+            "updated_at": parse_datetime("2025-08-04T16:57:24.398Z"),
         },
         "connection_id": "<id>",
     })
@@ -182,7 +182,7 @@ with UnifiedTo(
 
 ## create_lms_collection
 
-Create a collection
+Creates a LmsCollection. Provide the unified LmsCollection fields in the request body; they are mapped to the provider's API. Returns the created LmsCollection.
 
 ### Example Usage
 
@@ -203,7 +203,7 @@ with UnifiedTo(
         "lms_collection": {
             "created_at": parse_datetime("2019-08-19T14:40:29.227Z"),
             "description": "Ab.",
-            "id": "0dd076bb-7ba5-43a1-bf57-e82971b0475d",
+            "id": "0eef2f70-ca9e-44d8-9319-214f259637da",
             "is_active": True,
             "media": [
                 {
@@ -220,7 +220,7 @@ with UnifiedTo(
             ],
             "metadata": [],
             "name": "ara",
-            "updated_at": parse_datetime("2026-07-30T07:00:06.040Z"),
+            "updated_at": parse_datetime("2026-07-31T06:06:12.452Z"),
         },
         "connection_id": "<id>",
     })
@@ -251,7 +251,7 @@ with UnifiedTo(
 
 ## create_lms_content
 
-Create a content
+Creates a LmsContent. Provide the unified LmsContent fields in the request body; they are mapped to the provider's API. Returns the created LmsContent.
 
 ### Example Usage
 
@@ -277,7 +277,7 @@ with UnifiedTo(
             "description": "Usque laboriosam ventosus adflicto.",
             "difficulty": "Beginner",
             "duration_minutes": 19.0,
-            "id": "2afde838-ca85-404c-be9b-9ded2f21065b",
+            "id": "c1a50c5f-3b8d-4e1a-89d7-24e8071225bc",
             "instructors": [],
             "is_active": True,
             "languages": [
@@ -337,7 +337,7 @@ with UnifiedTo(
             "metadata": [],
             "name": "ut",
             "provider_name": "Bins LLC",
-            "published_at": parse_datetime("2022-09-03T06:17:00.873Z"),
+            "published_at": parse_datetime("2022-09-03T13:41:50.364Z"),
             "short_description": "Caritas.",
             "skills": [
                 "trucido",
@@ -352,7 +352,7 @@ with UnifiedTo(
             "tags": [
                 "dens",
             ],
-            "updated_at": parse_datetime("2022-10-04T04:33:15.738Z"),
+            "updated_at": parse_datetime("2022-10-04T12:18:18.550Z"),
         },
         "connection_id": "<id>",
     })
@@ -383,7 +383,7 @@ with UnifiedTo(
 
 ## create_lms_course
 
-Create a course
+Creates a LmsCourse. Provide the unified LmsCourse fields in the request body; they are mapped to the provider's API. Returns the created LmsCourse.
 
 ### Example Usage
 
@@ -410,7 +410,7 @@ with UnifiedTo(
             "currency": "FJD",
             "description": "Vinco alias aut capitulus.",
             "duration_minutes": 148.0,
-            "id": "d7f8ee11-fb3c-4191-9946-89d66832d77c",
+            "id": "cdaaee30-a874-4db8-8776-f21dd9b770e4",
             "instructors": [],
             "is_active": True,
             "is_private": False,
@@ -437,14 +437,14 @@ with UnifiedTo(
             "name": "comptus",
             "price_amount": 84.0,
             "provider_name": "Homenick - Wunsch",
-            "published_at": parse_datetime("2022-11-05T18:10:59.957Z"),
+            "published_at": parse_datetime("2022-11-05T18:40:25.835Z"),
             "skills": [
                 "adiuvo",
                 "tam",
             ],
             "students": [],
             "time_estimate_minutes": 100.0,
-            "updated_at": parse_datetime("2023-02-09T18:19:42.895Z"),
+            "updated_at": parse_datetime("2023-02-09T20:22:16.292Z"),
         },
         "connection_id": "<id>",
     })
@@ -475,7 +475,7 @@ with UnifiedTo(
 
 ## create_lms_instructor
 
-Create an instructor
+Creates a LmsInstructor. Provide the unified LmsInstructor fields in the request body; they are mapped to the provider's API. Returns the created LmsInstructor.
 
 ### Example Usage
 
@@ -499,7 +499,7 @@ with UnifiedTo(
                 {},
             ],
             "first_name": "Deangelo",
-            "id": "4bae5fc1-d7ea-4c53-8a1c-bdacf8208fb1",
+            "id": "57402488-af3f-404b-8ada-780956f69f5b",
             "image_url": "https://avatars.githubusercontent.com/u/95131132",
             "last_name": "Ritchie",
             "metadata": [],
@@ -515,7 +515,7 @@ with UnifiedTo(
                 },
             ],
             "title": "Regional Security Agent",
-            "updated_at": parse_datetime("2025-07-24T10:16:02.920Z"),
+            "updated_at": parse_datetime("2025-07-25T04:13:25.928Z"),
         },
         "connection_id": "<id>",
     })
@@ -546,7 +546,7 @@ with UnifiedTo(
 
 ## create_lms_student
 
-Create a student
+Creates a LmsStudent. Provide the unified LmsStudent fields in the request body; they are mapped to the provider's API. Returns the created LmsStudent.
 
 ### Example Usage
 
@@ -578,7 +578,7 @@ with UnifiedTo(
                 {},
             ],
             "first_name": "Marcella",
-            "id": "dc9a9128-cdb5-4fe5-9343-fbf0b6b41816",
+            "id": "3969f57c-214d-4f0b-aa7c-8d5395c21384",
             "image_url": "https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg",
             "last_name": "Murazik",
             "metadata": [],
@@ -597,7 +597,7 @@ with UnifiedTo(
                     "type": shared.LmsTelephoneType.FAX,
                 },
             ],
-            "updated_at": parse_datetime("2022-06-30T23:25:03.916Z"),
+            "updated_at": parse_datetime("2022-07-01T07:39:18.663Z"),
         },
         "connection_id": "<id>",
     })
@@ -628,7 +628,7 @@ with UnifiedTo(
 
 ## get_lms_activity
 
-Retrieve an activity
+Retrieves a single LmsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -675,7 +675,7 @@ with UnifiedTo(
 
 ## get_lms_class
 
-Retrieve a class
+Retrieves a single LmsClass by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -722,7 +722,7 @@ with UnifiedTo(
 
 ## get_lms_collection
 
-Retrieve a collection
+Retrieves a single LmsCollection by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -769,7 +769,7 @@ with UnifiedTo(
 
 ## get_lms_content
 
-Retrieve a content
+Retrieves a single LmsContent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -816,7 +816,7 @@ with UnifiedTo(
 
 ## get_lms_course
 
-Retrieve a course
+Retrieves a single LmsCourse by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -863,7 +863,7 @@ with UnifiedTo(
 
 ## get_lms_instructor
 
-Retrieve an instructor
+Retrieves a single LmsInstructor by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -910,7 +910,7 @@ with UnifiedTo(
 
 ## get_lms_student
 
-Retrieve a student
+Retrieves a single LmsStudent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -957,7 +957,7 @@ with UnifiedTo(
 
 ## list_lms_activities
 
-List all activities
+Returns a list of LmsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1003,7 +1003,7 @@ with UnifiedTo(
 
 ## list_lms_classes
 
-List all classes
+Returns a list of LmsClasses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1049,7 +1049,7 @@ with UnifiedTo(
 
 ## list_lms_collections
 
-List all collections
+Returns a list of LmsCollections. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1095,7 +1095,7 @@ with UnifiedTo(
 
 ## list_lms_contents
 
-List all contents
+Returns a list of LmsContents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1141,7 +1141,7 @@ with UnifiedTo(
 
 ## list_lms_courses
 
-List all courses
+Returns a list of LmsCourses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1187,7 +1187,7 @@ with UnifiedTo(
 
 ## list_lms_instructors
 
-List all instructors
+Returns a list of LmsInstructors. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1233,7 +1233,7 @@ with UnifiedTo(
 
 ## list_lms_students
 
-List all students
+Returns a list of LmsStudents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1279,7 +1279,7 @@ with UnifiedTo(
 
 ## patch_lms_activity
 
-Update an activity
+Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the request body.
 
 ### Example Usage
 
@@ -1299,15 +1299,15 @@ with UnifiedTo(
     res = unified_to.lms.patch_lms_activity(request={
         "lms_activity": {
             "assigned_grade": "summopere",
-            "completed_at": parse_datetime("2023-12-05T23:38:03.460Z"),
+            "completed_at": parse_datetime("2023-12-06T12:04:39.243Z"),
             "created_at": parse_datetime("2020-10-17T01:25:21.745Z"),
             "duration_minutes": 55.0,
-            "id": "eabaa2c0-642f-4b71-a133-55eea5a8ceab",
+            "id": "5e21e9ae-106a-48db-8731-1534e0864f1f",
             "is_completed": True,
             "metadata": [],
             "progress_percentage": 100.0,
-            "started_at": parse_datetime("2021-04-25T04:23:06.675Z"),
-            "updated_at": parse_datetime("2022-01-30T23:40:16.606Z"),
+            "started_at": parse_datetime("2021-04-25T06:27:05.350Z"),
+            "updated_at": parse_datetime("2022-01-31T04:47:21.861Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1339,7 +1339,7 @@ with UnifiedTo(
 
 ## patch_lms_class
 
-Update a class
+Updates the LmsClass identified by `id`. Provide the unified LmsClass fields to change in the request body.
 
 ### Example Usage
 
@@ -1360,7 +1360,7 @@ with UnifiedTo(
         "lms_class": {
             "created_at": parse_datetime("2020-02-20T14:48:51.845Z"),
             "description": "Anser sperno decerno.",
-            "id": "257fb6d7-8169-4ae7-a837-069542ce7c8b",
+            "id": "1a61a532-a2d5-4710-a0c1-85adfa63eb39",
             "instructors": [],
             "languages": [
                 "in",
@@ -1382,7 +1382,7 @@ with UnifiedTo(
             "metadata": [],
             "name": "virtus",
             "students": [],
-            "updated_at": parse_datetime("2025-08-03T21:26:37.869Z"),
+            "updated_at": parse_datetime("2025-08-04T16:57:24.422Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1414,7 +1414,7 @@ with UnifiedTo(
 
 ## patch_lms_collection
 
-Update a collection
+Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in the request body.
 
 ### Example Usage
 
@@ -1435,7 +1435,7 @@ with UnifiedTo(
         "lms_collection": {
             "created_at": parse_datetime("2019-08-19T14:40:29.227Z"),
             "description": "Ab.",
-            "id": "cdb6703c-8edd-4256-9aab-2d20a7391bc9",
+            "id": "935b9a6d-4c66-441d-a9cb-34b4e9e56c7f",
             "is_active": True,
             "media": [
                 {
@@ -1452,7 +1452,7 @@ with UnifiedTo(
             ],
             "metadata": [],
             "name": "ara",
-            "updated_at": parse_datetime("2026-07-30T07:00:06.059Z"),
+            "updated_at": parse_datetime("2026-07-31T06:06:12.473Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1484,7 +1484,7 @@ with UnifiedTo(
 
 ## patch_lms_content
 
-Update a content
+Updates the LmsContent identified by `id`. Provide the unified LmsContent fields to change in the request body.
 
 ### Example Usage
 
@@ -1510,7 +1510,7 @@ with UnifiedTo(
             "description": "Usque laboriosam ventosus adflicto.",
             "difficulty": "Beginner",
             "duration_minutes": 19.0,
-            "id": "4e8c5bbe-2ff4-4560-88e9-015e3911f7e1",
+            "id": "47939b71-9963-4c72-adb3-0c27c660cd9d",
             "instructors": [],
             "is_active": True,
             "languages": [
@@ -1570,7 +1570,7 @@ with UnifiedTo(
             "metadata": [],
             "name": "ut",
             "provider_name": "Bins LLC",
-            "published_at": parse_datetime("2022-09-03T06:17:00.885Z"),
+            "published_at": parse_datetime("2022-09-03T13:41:50.375Z"),
             "short_description": "Caritas.",
             "skills": [
                 "trucido",
@@ -1585,7 +1585,7 @@ with UnifiedTo(
             "tags": [
                 "dens",
             ],
-            "updated_at": parse_datetime("2022-10-04T04:33:15.751Z"),
+            "updated_at": parse_datetime("2022-10-04T12:18:18.562Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1617,7 +1617,7 @@ with UnifiedTo(
 
 ## patch_lms_course
 
-Update a course
+Updates the LmsCourse identified by `id`. Provide the unified LmsCourse fields to change in the request body.
 
 ### Example Usage
 
@@ -1644,7 +1644,7 @@ with UnifiedTo(
             "currency": "FJD",
             "description": "Vinco alias aut capitulus.",
             "duration_minutes": 148.0,
-            "id": "2cfd31ab-b9a0-4ed4-a49a-65a8f4160efc",
+            "id": "bc14f3a8-fe41-4546-8e4e-4e48882fa65d",
             "instructors": [],
             "is_active": True,
             "is_private": False,
@@ -1671,14 +1671,14 @@ with UnifiedTo(
             "name": "comptus",
             "price_amount": 84.0,
             "provider_name": "Homenick - Wunsch",
-            "published_at": parse_datetime("2022-11-05T18:10:59.957Z"),
+            "published_at": parse_datetime("2022-11-05T18:40:25.836Z"),
             "skills": [
                 "adiuvo",
                 "tam",
             ],
             "students": [],
             "time_estimate_minutes": 100.0,
-            "updated_at": parse_datetime("2023-02-09T18:19:42.897Z"),
+            "updated_at": parse_datetime("2023-02-09T20:22:16.294Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1710,7 +1710,7 @@ with UnifiedTo(
 
 ## patch_lms_instructor
 
-Update an instructor
+Updates the LmsInstructor identified by `id`. Provide the unified LmsInstructor fields to change in the request body.
 
 ### Example Usage
 
@@ -1734,7 +1734,7 @@ with UnifiedTo(
                 {},
             ],
             "first_name": "Deangelo",
-            "id": "32aa9102-02ef-492f-ab01-271f80083b4e",
+            "id": "7ef6015d-4d96-4456-8b89-51b9e4139eb2",
             "image_url": "https://avatars.githubusercontent.com/u/95131132",
             "last_name": "Ritchie",
             "metadata": [],
@@ -1750,7 +1750,7 @@ with UnifiedTo(
                 },
             ],
             "title": "Regional Security Agent",
-            "updated_at": parse_datetime("2025-07-24T10:16:02.934Z"),
+            "updated_at": parse_datetime("2025-07-25T04:13:25.942Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1782,7 +1782,7 @@ with UnifiedTo(
 
 ## patch_lms_student
 
-Update a student
+Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields to change in the request body.
 
 ### Example Usage
 
@@ -1814,7 +1814,7 @@ with UnifiedTo(
                 {},
             ],
             "first_name": "Marcella",
-            "id": "12557e2d-6cd3-4482-9135-800594c57fec",
+            "id": "f37eded4-a6e6-482e-81be-849ac16fa098",
             "image_url": "https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg",
             "last_name": "Murazik",
             "metadata": [],
@@ -1833,7 +1833,7 @@ with UnifiedTo(
                     "type": shared.LmsTelephoneType.FAX,
                 },
             ],
-            "updated_at": parse_datetime("2022-06-30T23:25:03.925Z"),
+            "updated_at": parse_datetime("2022-07-01T07:39:18.672Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1865,7 +1865,7 @@ with UnifiedTo(
 
 ## remove_lms_activity
 
-Remove an activity
+Deletes the LmsActivity identified by `id`.
 
 ### Example Usage
 
@@ -1912,7 +1912,7 @@ with UnifiedTo(
 
 ## remove_lms_class
 
-Remove a class
+Deletes the LmsClass identified by `id`.
 
 ### Example Usage
 
@@ -1959,7 +1959,7 @@ with UnifiedTo(
 
 ## remove_lms_collection
 
-Remove a collection
+Deletes the LmsCollection identified by `id`.
 
 ### Example Usage
 
@@ -2006,7 +2006,7 @@ with UnifiedTo(
 
 ## remove_lms_content
 
-Remove a content
+Deletes the LmsContent identified by `id`.
 
 ### Example Usage
 
@@ -2053,7 +2053,7 @@ with UnifiedTo(
 
 ## remove_lms_course
 
-Remove a course
+Deletes the LmsCourse identified by `id`.
 
 ### Example Usage
 
@@ -2100,7 +2100,7 @@ with UnifiedTo(
 
 ## remove_lms_instructor
 
-Remove an instructor
+Deletes the LmsInstructor identified by `id`.
 
 ### Example Usage
 
@@ -2147,7 +2147,7 @@ with UnifiedTo(
 
 ## remove_lms_student
 
-Remove a student
+Deletes the LmsStudent identified by `id`.
 
 ### Example Usage
 
@@ -2194,7 +2194,7 @@ with UnifiedTo(
 
 ## update_lms_activity
 
-Update an activity
+Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the request body.
 
 ### Example Usage
 
@@ -2214,15 +2214,15 @@ with UnifiedTo(
     res = unified_to.lms.update_lms_activity(request={
         "lms_activity": {
             "assigned_grade": "summopere",
-            "completed_at": parse_datetime("2023-12-05T23:38:03.460Z"),
+            "completed_at": parse_datetime("2023-12-06T12:04:39.243Z"),
             "created_at": parse_datetime("2020-10-17T01:25:21.745Z"),
             "duration_minutes": 55.0,
-            "id": "eabaa2c0-642f-4b71-a133-55eea5a8ceab",
+            "id": "5e21e9ae-106a-48db-8731-1534e0864f1f",
             "is_completed": True,
             "metadata": [],
             "progress_percentage": 100.0,
-            "started_at": parse_datetime("2021-04-25T04:23:06.675Z"),
-            "updated_at": parse_datetime("2022-01-30T23:40:16.606Z"),
+            "started_at": parse_datetime("2021-04-25T06:27:05.350Z"),
+            "updated_at": parse_datetime("2022-01-31T04:47:21.861Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2254,7 +2254,7 @@ with UnifiedTo(
 
 ## update_lms_class
 
-Update a class
+Updates the LmsClass identified by `id`. Provide the unified LmsClass fields to change in the request body.
 
 ### Example Usage
 
@@ -2275,7 +2275,7 @@ with UnifiedTo(
         "lms_class": {
             "created_at": parse_datetime("2020-02-20T14:48:51.845Z"),
             "description": "Anser sperno decerno.",
-            "id": "257fb6d7-8169-4ae7-a837-069542ce7c8b",
+            "id": "1a61a532-a2d5-4710-a0c1-85adfa63eb39",
             "instructors": [],
             "languages": [
                 "in",
@@ -2297,7 +2297,7 @@ with UnifiedTo(
             "metadata": [],
             "name": "virtus",
             "students": [],
-            "updated_at": parse_datetime("2025-08-03T21:26:37.869Z"),
+            "updated_at": parse_datetime("2025-08-04T16:57:24.422Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2329,7 +2329,7 @@ with UnifiedTo(
 
 ## update_lms_collection
 
-Update a collection
+Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in the request body.
 
 ### Example Usage
 
@@ -2350,7 +2350,7 @@ with UnifiedTo(
         "lms_collection": {
             "created_at": parse_datetime("2019-08-19T14:40:29.227Z"),
             "description": "Ab.",
-            "id": "cdb6703c-8edd-4256-9aab-2d20a7391bc9",
+            "id": "935b9a6d-4c66-441d-a9cb-34b4e9e56c7f",
             "is_active": True,
             "media": [
                 {
@@ -2367,7 +2367,7 @@ with UnifiedTo(
             ],
             "metadata": [],
             "name": "ara",
-            "updated_at": parse_datetime("2026-07-30T07:00:06.059Z"),
+            "updated_at": parse_datetime("2026-07-31T06:06:12.473Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2399,7 +2399,7 @@ with UnifiedTo(
 
 ## update_lms_content
 
-Update a content
+Updates the LmsContent identified by `id`. Provide the unified LmsContent fields to change in the request body.
 
 ### Example Usage
 
@@ -2425,7 +2425,7 @@ with UnifiedTo(
             "description": "Usque laboriosam ventosus adflicto.",
             "difficulty": "Beginner",
             "duration_minutes": 19.0,
-            "id": "4e8c5bbe-2ff4-4560-88e9-015e3911f7e1",
+            "id": "47939b71-9963-4c72-adb3-0c27c660cd9d",
             "instructors": [],
             "is_active": True,
             "languages": [
@@ -2485,7 +2485,7 @@ with UnifiedTo(
             "metadata": [],
             "name": "ut",
             "provider_name": "Bins LLC",
-            "published_at": parse_datetime("2022-09-03T06:17:00.885Z"),
+            "published_at": parse_datetime("2022-09-03T13:41:50.375Z"),
             "short_description": "Caritas.",
             "skills": [
                 "trucido",
@@ -2500,7 +2500,7 @@ with UnifiedTo(
             "tags": [
                 "dens",
             ],
-            "updated_at": parse_datetime("2022-10-04T04:33:15.751Z"),
+            "updated_at": parse_datetime("2022-10-04T12:18:18.562Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2532,7 +2532,7 @@ with UnifiedTo(
 
 ## update_lms_course
 
-Update a course
+Updates the LmsCourse identified by `id`. Provide the unified LmsCourse fields to change in the request body.
 
 ### Example Usage
 
@@ -2559,7 +2559,7 @@ with UnifiedTo(
             "currency": "FJD",
             "description": "Vinco alias aut capitulus.",
             "duration_minutes": 148.0,
-            "id": "2cfd31ab-b9a0-4ed4-a49a-65a8f4160efc",
+            "id": "bc14f3a8-fe41-4546-8e4e-4e48882fa65d",
             "instructors": [],
             "is_active": True,
             "is_private": False,
@@ -2586,14 +2586,14 @@ with UnifiedTo(
             "name": "comptus",
             "price_amount": 84.0,
             "provider_name": "Homenick - Wunsch",
-            "published_at": parse_datetime("2022-11-05T18:10:59.957Z"),
+            "published_at": parse_datetime("2022-11-05T18:40:25.836Z"),
             "skills": [
                 "adiuvo",
                 "tam",
             ],
             "students": [],
             "time_estimate_minutes": 100.0,
-            "updated_at": parse_datetime("2023-02-09T18:19:42.897Z"),
+            "updated_at": parse_datetime("2023-02-09T20:22:16.294Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2625,7 +2625,7 @@ with UnifiedTo(
 
 ## update_lms_instructor
 
-Update an instructor
+Updates the LmsInstructor identified by `id`. Provide the unified LmsInstructor fields to change in the request body.
 
 ### Example Usage
 
@@ -2649,7 +2649,7 @@ with UnifiedTo(
                 {},
             ],
             "first_name": "Deangelo",
-            "id": "32aa9102-02ef-492f-ab01-271f80083b4e",
+            "id": "7ef6015d-4d96-4456-8b89-51b9e4139eb2",
             "image_url": "https://avatars.githubusercontent.com/u/95131132",
             "last_name": "Ritchie",
             "metadata": [],
@@ -2665,7 +2665,7 @@ with UnifiedTo(
                 },
             ],
             "title": "Regional Security Agent",
-            "updated_at": parse_datetime("2025-07-24T10:16:02.934Z"),
+            "updated_at": parse_datetime("2025-07-25T04:13:25.942Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2697,7 +2697,7 @@ with UnifiedTo(
 
 ## update_lms_student
 
-Update a student
+Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields to change in the request body.
 
 ### Example Usage
 
@@ -2729,7 +2729,7 @@ with UnifiedTo(
                 {},
             ],
             "first_name": "Marcella",
-            "id": "12557e2d-6cd3-4482-9135-800594c57fec",
+            "id": "f37eded4-a6e6-482e-81be-849ac16fa098",
             "image_url": "https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg",
             "last_name": "Murazik",
             "metadata": [],
@@ -2748,7 +2748,7 @@ with UnifiedTo(
                     "type": shared.LmsTelephoneType.FAX,
                 },
             ],
-            "updated_at": parse_datetime("2022-06-30T23:25:03.925Z"),
+            "updated_at": parse_datetime("2022-07-01T07:39:18.672Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

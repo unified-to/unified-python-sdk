@@ -100,7 +100,7 @@
 
 ## create_hris_attendance
 
-Create an attendance
+Creates a HrisAttendance. Provide the unified HrisAttendance fields in the request body; they are mapped to the provider's API. Returns the created HrisAttendance.
 
 ### Example Usage
 
@@ -127,32 +127,32 @@ with UnifiedTo(
                 "region": "Tennessee",
                 "region_code": "CA",
             },
-            "approved_at": parse_datetime("2021-09-19T14:06:24.251Z"),
+            "approved_at": parse_datetime("2021-09-19T14:36:24.348Z"),
             "breaks": [
                 {
                     "duration_minutes": 51.0,
-                    "end_at": parse_datetime("2024-02-14T13:13:33.465Z"),
-                    "id": "d1ca447f-a1c3-4c3d-b77b-328457ebe55e",
+                    "end_at": parse_datetime("2024-02-15T00:45:56.493Z"),
+                    "id": "2febbb18-e9d7-4d0b-b18b-58013d50e9ae",
                     "is_paid": False,
                     "name": "Lunch",
-                    "start_at": parse_datetime("2023-10-29T23:00:50.575Z"),
+                    "start_at": parse_datetime("2023-10-30T09:12:03.208Z"),
                 },
             ],
             "created_at": parse_datetime("2021-08-10T19:43:18.452Z"),
             "currency": "EUR",
             "declared_tips_amount": 54.0,
             "employee_user_id": "<id>",
-            "end_at": parse_datetime("2024-04-23T07:45:33.752Z"),
+            "end_at": parse_datetime("2024-04-23T20:09:49.905Z"),
             "hourly_rate": 16.0,
             "hours": 10.0,
-            "id": "20ddba98-0fb7-4b9e-904a-fcef2fc6ddb5",
+            "id": "5e087bcc-2314-41cf-bef5-c866d0a6f59a",
             "job_name": "Human Accountability Administrator",
             "metadata": [],
             "non_cash_tips_amount": 167.0,
-            "start_at": parse_datetime("2021-11-11T00:55:47.056Z"),
+            "start_at": parse_datetime("2021-11-11T02:05:21.460Z"),
             "status": shared.HrisAttendanceStatus.OPEN,
             "timezone": "America/Atikokan",
-            "updated_at": parse_datetime("2022-01-19T21:04:08.839Z"),
+            "updated_at": parse_datetime("2022-01-19T23:06:24.665Z"),
         },
         "connection_id": "<id>",
     })
@@ -183,7 +183,7 @@ with UnifiedTo(
 
 ## create_hris_bankaccount
 
-Create a bankaccount
+Creates a HrisBankaccount. Provide the unified HrisBankaccount fields in the request body; they are mapped to the provider's API. Returns the created HrisBankaccount.
 
 ### Example Usage
 
@@ -209,7 +209,7 @@ with UnifiedTo(
             "country_code": "US",
             "created_at": parse_datetime("2019-11-16T16:43:45.976Z"),
             "currency": "USD",
-            "id": "e2038892-394d-4cd3-8268-d4e49767b3c2",
+            "id": "3468ebd9-250e-4abe-9b97-508bf2361433",
             "is_primary": True,
             "metadata": [],
             "name": "Granville Schumm - Checking",
@@ -217,7 +217,7 @@ with UnifiedTo(
             "routing_number": "448650724",
             "split_amount": 98.0,
             "split_type": shared.SplitType.PERCENTAGE,
-            "updated_at": parse_datetime("2025-07-01T06:17:13.672Z"),
+            "updated_at": parse_datetime("2025-07-02T01:38:52.642Z"),
         },
         "connection_id": "<id>",
     })
@@ -248,7 +248,7 @@ with UnifiedTo(
 
 ## create_hris_benefit
 
-Create a benefit
+Creates a HrisBenefit. Provide the unified HrisBenefit fields in the request body; they are mapped to the provider's API. Returns the created HrisBenefit.
 
 ### Example Usage
 
@@ -275,13 +275,13 @@ with UnifiedTo(
             "employer_contribution_max_amount": 179093.0,
             "employer_contribution_type": shared.EmployerContributionType.PERCENTAGE,
             "frequency": shared.HrisBenefitFrequency.MONTH,
-            "id": "0423c67b-125c-48f2-9625-52879be2b816",
+            "id": "100e64a1-48f0-479c-90df-02d8e4b037cc",
             "is_active": False,
             "metadata": [],
             "name": "Frozen Wooden Ball",
             "tax": shared.Tax.PRE_TAX,
             "type": shared.HrisBenefitType.OTHER,
-            "updated_at": parse_datetime("2023-03-20T20:18:48.762Z"),
+            "updated_at": parse_datetime("2023-03-21T06:42:51.802Z"),
         },
         "connection_id": "<id>",
     })
@@ -312,7 +312,7 @@ with UnifiedTo(
 
 ## create_hris_company
 
-Create a company
+Creates a HrisCompany. Provide the unified HrisCompany fields in the request body; they are mapped to the provider's API. Returns the created HrisCompany.
 
 ### Example Usage
 
@@ -340,11 +340,11 @@ with UnifiedTo(
                 "region_code": "MO",
             },
             "created_at": parse_datetime("2021-05-02T22:27:38.970Z"),
-            "id": "be564c23-7348-4c21-a4d9-2b1e4fef730b",
+            "id": "1e4e818e-c91c-4ce8-bb9f-87c290b58f50",
             "legal_name": "Gottlieb Group LLC",
             "metadata": [],
             "name": "Gottlieb Group",
-            "updated_at": parse_datetime("2026-10-08T16:17:54.047Z"),
+            "updated_at": parse_datetime("2026-10-09T16:00:24.278Z"),
         },
         "connection_id": "<id>",
     })
@@ -375,7 +375,7 @@ with UnifiedTo(
 
 ## create_hris_deduction
 
-Create a deduction
+Creates a HrisDeduction. Provide the unified HrisDeduction fields in the request body; they are mapped to the provider's API. Returns the created HrisDeduction.
 
 ### Example Usage
 
@@ -401,14 +401,14 @@ with UnifiedTo(
             "employer_type": shared.EmployerType.PERCENTAGE,
             "frequency": shared.HrisDeductionFrequency.ONE_TIME,
             "garnishment_type": shared.GarnishmentType.CHILD_SUPPORT,
-            "id": "617803ec-d9a2-4733-805c-8f1cd4a18958",
+            "id": "a86ffc16-9876-48ec-aaf3-43e7a64c206d",
             "is_active": True,
             "max_amount": 21794.0,
             "metadata": [],
             "notes": "Carmen desidero.",
-            "start_at": parse_datetime("2025-03-15T07:36:56.023Z"),
+            "start_at": parse_datetime("2025-03-16T01:46:40.270Z"),
             "type": shared.HrisDeductionType.FIXED,
-            "updated_at": parse_datetime("2024-03-22T06:56:26.083Z"),
+            "updated_at": parse_datetime("2024-03-22T21:37:00.011Z"),
         },
         "connection_id": "<id>",
     })
@@ -439,7 +439,7 @@ with UnifiedTo(
 
 ## create_hris_device
 
-Create a device
+Creates a HrisDevice. Provide the unified HrisDevice fields in the request body; they are mapped to the provider's API. Returns the created HrisDevice.
 
 ### Example Usage
 
@@ -466,7 +466,7 @@ with UnifiedTo(
             "has_hd_encrypted": True,
             "has_password_manager": True,
             "has_screenlock": False,
-            "id": "ab448fd5-5b69-4eef-8dea-b8afb105937b",
+            "id": "8948d49b-375f-49ed-a723-905a47075ae9",
             "is_missing": False,
             "manufacturer": "Hackett Inc",
             "metadata": [],
@@ -474,7 +474,7 @@ with UnifiedTo(
             "name": "august-laptop",
             "os": "transmitter",
             "os_version": "8.4.8",
-            "updated_at": parse_datetime("2023-06-08T07:18:09.533Z"),
+            "updated_at": parse_datetime("2023-06-08T20:30:23.493Z"),
             "version": "4.15.7",
         },
         "connection_id": "<id>",
@@ -506,7 +506,7 @@ with UnifiedTo(
 
 ## create_hris_document
 
-Create a document
+Creates a HrisDocument. Provide the unified HrisDocument fields in the request body; they are mapped to the provider's API. Returns the created HrisDocument.
 
 ### Example Usage
 
@@ -528,10 +528,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-10-27T11:47:26.086Z"),
             "document_url": "https://sore-decision.biz/",
             "filename": "ridge_forager.xsl",
-            "id": "13731479-d0c5-42c1-a5fe-d45efda6525f",
+            "id": "4fcc4bf2-5c06-437d-8c9c-cb0f58e4ac41",
             "metadata": [],
             "type": shared.HrisDocumentType.POLICY,
-            "updated_at": parse_datetime("2025-10-11T14:02:19.836Z"),
+            "updated_at": parse_datetime("2025-10-12T07:45:12.953Z"),
         },
         "connection_id": "<id>",
     })
@@ -562,7 +562,7 @@ with UnifiedTo(
 
 ## create_hris_earning
 
-Create an earning
+Creates a HrisEarning. Provide the unified HrisEarning fields in the request body; they are mapped to the provider's API. Returns the created HrisEarning.
 
 ### Example Usage
 
@@ -585,12 +585,12 @@ with UnifiedTo(
             "created_at": parse_datetime("2019-01-26T12:44:52.326Z"),
             "currency": "USD",
             "frequency": shared.HrisEarningFrequency.SEMIMONTHLY,
-            "id": "ca70a602-763a-4e33-baab-9e77a958b51d",
+            "id": "fc526592-d3cd-43c8-b69a-04fc3f803646",
             "metadata": [],
             "notes": "Deporto truculenter vinum beatae.",
-            "start_at": parse_datetime("2022-07-25T11:46:31.030Z"),
+            "start_at": parse_datetime("2022-07-25T22:33:07.377Z"),
             "status": shared.HrisEarningStatus.ENDED,
-            "updated_at": parse_datetime("2020-02-08T20:32:11.612Z"),
+            "updated_at": parse_datetime("2020-02-08T23:43:54.807Z"),
         },
         "connection_id": "<id>",
     })
@@ -621,7 +621,7 @@ with UnifiedTo(
 
 ## create_hris_employee
 
-Create an employee
+Creates a HrisEmployee. Provide the unified HrisEmployee fields in the request body; they are mapped to the provider's API. Returns the created HrisEmployee.
 
 ### Example Usage
 
@@ -676,7 +676,7 @@ with UnifiedTo(
             "gender": shared.HrisEmployeeGender.MALE,
             "has_mfa": True,
             "hired_at": parse_datetime("2019-09-16T15:08:53.262Z"),
-            "id": "527ad0f8-8434-48ee-bf9b-56fcdb55f917",
+            "id": "f0059d37-f7f5-475f-ba3a-ae687313ebe6",
             "image_url": "https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg",
             "language_locale": "in",
             "last_name": "Prohaska",
@@ -688,7 +688,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.HrisMetadataFormat.TEXT,
-                    "id": "0870315f-5796-4895-a227-5e5e342081f4",
+                    "id": "a100a8c6-503b-48c0-b130-a362a3c5bdad",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "tutis",
@@ -736,7 +736,7 @@ with UnifiedTo(
             "timeoff_days_used": 9.0,
             "timezone": "Europe/Ljubljana",
             "title": "District Branding Specialist",
-            "updated_at": parse_datetime("2020-07-19T04:12:07.601Z"),
+            "updated_at": parse_datetime("2020-07-19T07:01:26.701Z"),
         },
         "connection_id": "<id>",
     })
@@ -767,7 +767,7 @@ with UnifiedTo(
 
 ## create_hris_group
 
-Create a group
+Creates a HrisGroup. Provide the unified HrisGroup fields in the request body; they are mapped to the provider's API. Returns the created HrisGroup.
 
 ### Example Usage
 
@@ -788,12 +788,12 @@ with UnifiedTo(
         "hris_group": {
             "created_at": parse_datetime("2023-11-01T13:13:40.714Z"),
             "description": "Absorbeo casso.",
-            "id": "2e50245a-b671-4e9b-a0c5-4e965889bbc4",
+            "id": "1d18b974-d325-49fa-b0e1-a2e01f2dd256",
             "is_active": False,
             "metadata": [],
             "name": "Games",
             "type": shared.HrisGroupType.BRANCH,
-            "updated_at": parse_datetime("2026-05-21T23:23:20.538Z"),
+            "updated_at": parse_datetime("2026-05-22T19:54:01.894Z"),
         },
         "connection_id": "<id>",
     })
@@ -824,7 +824,7 @@ with UnifiedTo(
 
 ## create_hris_job
 
-Create a job
+Creates a HrisJob. Provide the unified HrisJob fields in the request body; they are mapped to the provider's API. Returns the created HrisJob.
 
 ### Example Usage
 
@@ -847,11 +847,11 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-10-28T01:13:19.491Z"),
             "description": "Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.",
             "employment_type": shared.HrisJobEmploymentType.FREELANCE,
-            "id": "74b4e6c5-232b-4a0e-ba74-386cd4e39fde",
+            "id": "40d8a395-8f3c-45c7-9458-c256a829c475",
             "is_active": False,
             "metadata": [],
             "name": "Internal Integration Specialist",
-            "updated_at": parse_datetime("2023-01-30T05:16:45.945Z"),
+            "updated_at": parse_datetime("2023-01-30T14:16:54.965Z"),
         },
         "connection_id": "<id>",
     })
@@ -882,7 +882,7 @@ with UnifiedTo(
 
 ## create_hris_location
 
-Create a location
+Creates a HrisLocation. Provide the unified HrisLocation fields in the request body; they are mapped to the provider's API. Returns the created HrisLocation.
 
 ### Example Usage
 
@@ -913,7 +913,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-07-18T10:32:01.414Z"),
             "currency": "MNT",
             "description": "Commemoro acervus.",
-            "id": "fe9574e3-bd65-4c81-b38c-4fa56a987f6e",
+            "id": "1ecb6270-3dbb-4d0c-b876-5c1c8bb0ddef",
             "is_active": False,
             "is_hq": True,
             "language_locale": "it",
@@ -934,7 +934,7 @@ with UnifiedTo(
                 },
             ],
             "timezone": "Asia/Jerusalem",
-            "updated_at": parse_datetime("2023-06-21T02:25:43.715Z"),
+            "updated_at": parse_datetime("2023-06-21T11:09:24.068Z"),
         },
         "connection_id": "<id>",
     })
@@ -965,7 +965,7 @@ with UnifiedTo(
 
 ## create_hris_taxonomy
 
-Create a taxonomy
+Creates a HrisTaxonomy. Provide the unified HrisTaxonomy fields in the request body; they are mapped to the provider's API. Returns the created HrisTaxonomy.
 
 ### Example Usage
 
@@ -991,13 +991,13 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-06-23T02:10:00.789Z"),
             "description": "Uterque vespillo adnuo ea commodo turbo suscipio condico.",
             "domain": "Health",
-            "id": "06a39723-89b4-4d2c-8707-bbc34fea8b75",
+            "id": "563a331c-0d6e-47dc-9fe1-fbd0303dc9fa",
             "is_active": False,
             "metadata": [],
             "name": "International Functionality Architect",
             "subcategory": "Marble",
             "type": shared.HrisTaxonomyType.KNOWLEDGE,
-            "updated_at": parse_datetime("2023-05-29T07:23:58.119Z"),
+            "updated_at": parse_datetime("2023-05-29T12:31:59.841Z"),
             "url": "https://fixed-membership.biz/",
         },
         "connection_id": "<id>",
@@ -1029,7 +1029,7 @@ with UnifiedTo(
 
 ## create_hris_timeoff
 
-Create a timeoff
+Creates a HrisTimeoff. Provide the unified HrisTimeoff fields in the request body; they are mapped to the provider's API. Returns the created HrisTimeoff.
 
 ### Example Usage
 
@@ -1048,21 +1048,21 @@ with UnifiedTo(
 
     res = unified_to.hris.create_hris_timeoff(request={
         "hris_timeoff": {
-            "approved_at": parse_datetime("2022-02-23T09:08:15.669Z"),
+            "approved_at": parse_datetime("2022-02-23T10:56:51.892Z"),
             "comments": "Blandior ventus curiositas amplitudo.",
             "created_at": parse_datetime("2021-10-06T18:00:20.615Z"),
             "duration": 4.0,
             "duration_type": shared.DurationType.DAY,
-            "end_at": parse_datetime("2024-12-28T17:15:02.704Z"),
-            "id": "ba1cbe19-8de1-447b-b048-56b84c6bd552",
+            "end_at": parse_datetime("2024-12-29T08:32:02.355Z"),
+            "id": "9cb84118-4f94-475f-9ce1-f629fe9fdc82",
             "is_paid": True,
             "metadata": [],
             "original_type": "acerbitas ut",
             "reason": "verto",
-            "start_at": parse_datetime("2023-09-04T19:22:26.701Z"),
+            "start_at": parse_datetime("2023-09-05T04:25:23.358Z"),
             "status": shared.HrisTimeoffStatus.DENIED,
             "type": shared.HrisTimeoffType.IN_LIEU,
-            "updated_at": parse_datetime("2022-07-12T19:41:14.378Z"),
+            "updated_at": parse_datetime("2022-07-12T23:18:17.913Z"),
             "user_id": "<id>",
         },
         "connection_id": "<id>",
@@ -1094,7 +1094,7 @@ with UnifiedTo(
 
 ## create_hris_timeshift
 
-Create a timeshift
+Creates a HrisTimeshift. Provide the unified HrisTimeshift fields in the request body; they are mapped to the provider's API. Returns the created HrisTimeshift.
 
 ### Example Usage
 
@@ -1113,7 +1113,7 @@ with UnifiedTo(
 
     res = unified_to.hris.create_hris_timeshift(request={
         "hris_timeshift": {
-            "approved_at": parse_datetime("2022-07-18T01:48:59.737Z"),
+            "approved_at": parse_datetime("2022-07-18T11:45:36.212Z"),
             "compensation": [
                 {
                     "amount": 76761.0,
@@ -1125,13 +1125,13 @@ with UnifiedTo(
             ],
             "created_at": parse_datetime("2019-07-01T23:53:15.738Z"),
             "employee_user_id": "<id>",
-            "end_at": parse_datetime("2026-09-27T01:21:46.639Z"),
+            "end_at": parse_datetime("2026-09-28T01:00:15.668Z"),
             "hours": 6.0,
-            "id": "a76ea2d5-0bb7-45c9-b83d-0991d8193825",
+            "id": "92b01fd8-ed4d-4643-95ba-0d8a8b541854",
             "is_approved": False,
             "metadata": [],
-            "start_at": parse_datetime("2023-07-13T00:27:48.547Z"),
-            "updated_at": parse_datetime("2021-07-01T21:51:37.823Z"),
+            "start_at": parse_datetime("2023-07-13T13:37:31.157Z"),
+            "updated_at": parse_datetime("2021-07-02T04:23:45.080Z"),
         },
         "connection_id": "<id>",
     })
@@ -1162,7 +1162,7 @@ with UnifiedTo(
 
 ## get_hris_attendance
 
-Retrieve an attendance
+Retrieves a single HrisAttendance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1209,7 +1209,7 @@ with UnifiedTo(
 
 ## get_hris_bankaccount
 
-Retrieve a bankaccount
+Retrieves a single HrisBankaccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1256,7 +1256,7 @@ with UnifiedTo(
 
 ## get_hris_benefit
 
-Retrieve a benefit
+Retrieves a single HrisBenefit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1303,7 +1303,7 @@ with UnifiedTo(
 
 ## get_hris_company
 
-Retrieve a company
+Retrieves a single HrisCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1350,7 +1350,7 @@ with UnifiedTo(
 
 ## get_hris_deduction
 
-Retrieve a deduction
+Retrieves a single HrisDeduction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1397,7 +1397,7 @@ with UnifiedTo(
 
 ## get_hris_device
 
-Retrieve a device
+Retrieves a single HrisDevice by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1444,7 +1444,7 @@ with UnifiedTo(
 
 ## get_hris_document
 
-Retrieve a document
+Retrieves a single HrisDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1491,7 +1491,7 @@ with UnifiedTo(
 
 ## get_hris_earning
 
-Retrieve an earning
+Retrieves a single HrisEarning by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1538,7 +1538,7 @@ with UnifiedTo(
 
 ## get_hris_employee
 
-Retrieve an employee
+Retrieves a single HrisEmployee by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1585,7 +1585,7 @@ with UnifiedTo(
 
 ## get_hris_group
 
-Retrieve a group
+Retrieves a single HrisGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1632,7 +1632,7 @@ with UnifiedTo(
 
 ## get_hris_job
 
-Retrieve a job
+Retrieves a single HrisJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1679,7 +1679,7 @@ with UnifiedTo(
 
 ## get_hris_location
 
-Retrieve a location
+Retrieves a single HrisLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1726,7 +1726,7 @@ with UnifiedTo(
 
 ## get_hris_paycode
 
-Retrieve a paycode
+Retrieves a single HrisPaycode by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1773,7 +1773,7 @@ with UnifiedTo(
 
 ## get_hris_payroll
 
-Retrieve a payroll
+Retrieves a single HrisPayroll by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1820,7 +1820,7 @@ with UnifiedTo(
 
 ## get_hris_payslip
 
-Retrieve a payslip
+Retrieves a single HrisPayslip by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1867,7 +1867,7 @@ with UnifiedTo(
 
 ## get_hris_taxonomy
 
-Retrieve a taxonomy
+Retrieves a single HrisTaxonomy by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1914,7 +1914,7 @@ with UnifiedTo(
 
 ## get_hris_timeoff
 
-Retrieve a timeoff
+Retrieves a single HrisTimeoff by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1961,7 +1961,7 @@ with UnifiedTo(
 
 ## get_hris_timeshift
 
-Retrieve a timeshift
+Retrieves a single HrisTimeshift by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2008,7 +2008,7 @@ with UnifiedTo(
 
 ## list_hris_attendances
 
-List all attendances
+Returns a list of HrisAttendances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2054,7 +2054,7 @@ with UnifiedTo(
 
 ## list_hris_bankaccounts
 
-List all bankaccounts
+Returns a list of HrisBankaccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2100,7 +2100,7 @@ with UnifiedTo(
 
 ## list_hris_benefits
 
-List all benefits
+Returns a list of HrisBenefits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2146,7 +2146,7 @@ with UnifiedTo(
 
 ## list_hris_companies
 
-List all companies
+Returns a list of HrisCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2192,7 +2192,7 @@ with UnifiedTo(
 
 ## list_hris_deductions
 
-List all deductions
+Returns a list of HrisDeductions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2238,7 +2238,7 @@ with UnifiedTo(
 
 ## list_hris_devices
 
-List all devices
+Returns a list of HrisDevices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2284,7 +2284,7 @@ with UnifiedTo(
 
 ## list_hris_documents
 
-List all documents
+Returns a list of HrisDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2330,7 +2330,7 @@ with UnifiedTo(
 
 ## list_hris_earnings
 
-List all earnings
+Returns a list of HrisEarnings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2376,7 +2376,7 @@ with UnifiedTo(
 
 ## list_hris_employees
 
-List all employees
+Returns a list of HrisEmployees. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2422,7 +2422,7 @@ with UnifiedTo(
 
 ## list_hris_groups
 
-List all groups
+Returns a list of HrisGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2468,7 +2468,7 @@ with UnifiedTo(
 
 ## list_hris_jobs
 
-List all jobs
+Returns a list of HrisJobs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2514,7 +2514,7 @@ with UnifiedTo(
 
 ## list_hris_locations
 
-List all locations
+Returns a list of HrisLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2560,7 +2560,7 @@ with UnifiedTo(
 
 ## list_hris_paycodes
 
-List all paycodes
+Returns a list of HrisPaycodes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2606,7 +2606,7 @@ with UnifiedTo(
 
 ## list_hris_payrolls
 
-List all payrolls
+Returns a list of HrisPayrolls. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2652,7 +2652,7 @@ with UnifiedTo(
 
 ## list_hris_payslips
 
-List all payslips
+Returns a list of HrisPayslips. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2698,7 +2698,7 @@ with UnifiedTo(
 
 ## list_hris_taxonomies
 
-List all taxonomies
+Returns a list of HrisTaxonomies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2744,7 +2744,7 @@ with UnifiedTo(
 
 ## list_hris_timeoffs
 
-List all timeoffs
+Returns a list of HrisTimeoffs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2790,7 +2790,7 @@ with UnifiedTo(
 
 ## list_hris_timeshifts
 
-List all timeshifts
+Returns a list of HrisTimeshifts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2836,7 +2836,7 @@ with UnifiedTo(
 
 ## patch_hris_attendance
 
-Update an attendance
+Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change in the request body.
 
 ### Example Usage
 
@@ -2863,32 +2863,32 @@ with UnifiedTo(
                 "region": "Tennessee",
                 "region_code": "CA",
             },
-            "approved_at": parse_datetime("2021-09-19T14:06:24.252Z"),
+            "approved_at": parse_datetime("2021-09-19T14:36:24.348Z"),
             "breaks": [
                 {
                     "duration_minutes": 51.0,
-                    "end_at": parse_datetime("2024-02-14T13:13:33.481Z"),
-                    "id": "62f9436e-6f27-4a95-a2a3-0c0f7710f858",
+                    "end_at": parse_datetime("2024-02-15T00:45:56.503Z"),
+                    "id": "6aaf0655-e6e5-451b-8099-50e6f3a2a33d",
                     "is_paid": False,
                     "name": "Lunch",
-                    "start_at": parse_datetime("2023-10-29T23:00:50.589Z"),
+                    "start_at": parse_datetime("2023-10-30T09:12:03.217Z"),
                 },
             ],
             "created_at": parse_datetime("2021-08-10T19:43:18.452Z"),
             "currency": "EUR",
             "declared_tips_amount": 54.0,
             "employee_user_id": "<id>",
-            "end_at": parse_datetime("2024-04-23T07:45:33.769Z"),
+            "end_at": parse_datetime("2024-04-23T20:09:49.916Z"),
             "hourly_rate": 16.0,
             "hours": 10.0,
-            "id": "a6f9cef2-231d-4330-b4c1-058fa3f36b42",
+            "id": "31e79ecd-e0a3-43a4-b3a8-492aff61cb64",
             "job_name": "Human Accountability Administrator",
             "metadata": [],
             "non_cash_tips_amount": 167.0,
-            "start_at": parse_datetime("2021-11-11T00:55:47.058Z"),
+            "start_at": parse_datetime("2021-11-11T02:05:21.461Z"),
             "status": shared.HrisAttendanceStatus.OPEN,
             "timezone": "America/Atikokan",
-            "updated_at": parse_datetime("2022-01-19T21:04:08.841Z"),
+            "updated_at": parse_datetime("2022-01-19T23:06:24.667Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2920,7 +2920,7 @@ with UnifiedTo(
 
 ## patch_hris_bankaccount
 
-Update a bankaccount
+Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change in the request body.
 
 ### Example Usage
 
@@ -2946,7 +2946,7 @@ with UnifiedTo(
             "country_code": "US",
             "created_at": parse_datetime("2019-11-16T16:43:45.976Z"),
             "currency": "USD",
-            "id": "dc2e9a22-22a0-49ce-8a10-395e043bec6c",
+            "id": "b83bd056-9674-4f6e-a525-95182b7b0bd0",
             "is_primary": True,
             "metadata": [],
             "name": "Granville Schumm - Checking",
@@ -2954,7 +2954,7 @@ with UnifiedTo(
             "routing_number": "448650724",
             "split_amount": 98.0,
             "split_type": shared.SplitType.PERCENTAGE,
-            "updated_at": parse_datetime("2025-07-01T06:17:13.689Z"),
+            "updated_at": parse_datetime("2025-07-02T01:38:52.658Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2986,7 +2986,7 @@ with UnifiedTo(
 
 ## patch_hris_benefit
 
-Update a benefit
+Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the request body.
 
 ### Example Usage
 
@@ -3013,13 +3013,13 @@ with UnifiedTo(
             "employer_contribution_max_amount": 179093.0,
             "employer_contribution_type": shared.EmployerContributionType.PERCENTAGE,
             "frequency": shared.HrisBenefitFrequency.MONTH,
-            "id": "eabe641c-582b-4b1c-bff3-08ddc615c9dd",
+            "id": "b36c4fbf-0ca7-4e3c-8e02-7d201f16ca93",
             "is_active": False,
             "metadata": [],
             "name": "Frozen Wooden Ball",
             "tax": shared.Tax.PRE_TAX,
             "type": shared.HrisBenefitType.OTHER,
-            "updated_at": parse_datetime("2023-03-20T20:18:48.773Z"),
+            "updated_at": parse_datetime("2023-03-21T06:42:51.811Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -3051,7 +3051,7 @@ with UnifiedTo(
 
 ## patch_hris_company
 
-Update a company
+Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -3079,11 +3079,11 @@ with UnifiedTo(
                 "region_code": "MO",
             },
             "created_at": parse_datetime("2021-05-02T22:27:38.970Z"),
-            "id": "b682175d-26ba-4348-9515-d2b644e87ddb",
+            "id": "614c60e7-805a-4ebe-9b04-71aabf2ea7b8",
             "legal_name": "Gottlieb Group LLC",
             "metadata": [],
             "name": "Gottlieb Group",
-            "updated_at": parse_datetime("2026-10-08T16:17:54.068Z"),
+            "updated_at": parse_datetime("2026-10-09T16:00:24.302Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -3115,7 +3115,7 @@ with UnifiedTo(
 
 ## patch_hris_deduction
 
-Update a deduction
+Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in the request body.
 
 ### Example Usage
 
@@ -3141,14 +3141,14 @@ with UnifiedTo(
             "employer_type": shared.EmployerType.PERCENTAGE,
             "frequency": shared.HrisDeductionFrequency.ONE_TIME,
             "garnishment_type": shared.GarnishmentType.CHILD_SUPPORT,
-            "id": "d01383a7-87c1-493e-b3b3-164ba724d0ba",
+            "id": "2b0eecf4-4ef5-4c58-952b-20761e9d8c04",
             "is_active": True,
             "max_amount": 21794.0,
             "metadata": [],
             "notes": "Carmen desidero.",
-            "start_at": parse_datetime("2025-03-15T07:36:56.039Z"),
+            "start_at": parse_datetime("2025-03-16T01:46:40.283Z"),
             "type": shared.HrisDeductionType.FIXED,
-            "updated_at": parse_datetime("2024-03-22T06:56:26.096Z"),
+            "updated_at": parse_datetime("2024-03-22T21:37:00.022Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -3180,7 +3180,7 @@ with UnifiedTo(
 
 ## patch_hris_device
 
-Update a device
+Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the request body.
 
 ### Example Usage
 
@@ -3207,7 +3207,7 @@ with UnifiedTo(
             "has_hd_encrypted": True,
             "has_password_manager": True,
             "has_screenlock": False,
-            "id": "7cfafe39-68f3-4249-8fcc-5856661e7236",
+            "id": "afc52eb2-dd4b-4278-b6f0-3f16a2a2e6dd",
             "is_missing": False,
             "manufacturer": "Hackett Inc",
             "metadata": [],
@@ -3215,7 +3215,7 @@ with UnifiedTo(
             "name": "august-laptop",
             "os": "transmitter",
             "os_version": "8.4.8",
-            "updated_at": parse_datetime("2023-06-08T07:18:09.544Z"),
+            "updated_at": parse_datetime("2023-06-08T20:30:23.500Z"),
             "version": "4.15.7",
         },
         "connection_id": "<id>",
@@ -3248,7 +3248,7 @@ with UnifiedTo(
 
 ## patch_hris_document
 
-Update a document
+Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -3270,10 +3270,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-10-27T11:47:26.086Z"),
             "document_url": "https://sore-decision.biz/",
             "filename": "ridge_forager.xsl",
-            "id": "ddb29192-c79e-4a0d-bf27-de63fd798327",
+            "id": "7d80c112-dc78-40ac-9983-b4e0e520055f",
             "metadata": [],
             "type": shared.HrisDocumentType.POLICY,
-            "updated_at": parse_datetime("2025-10-11T14:02:19.845Z"),
+            "updated_at": parse_datetime("2025-10-12T07:45:12.961Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -3305,7 +3305,7 @@ with UnifiedTo(
 
 ## patch_hris_earning
 
-Update an earning
+Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the request body.
 
 ### Example Usage
 
@@ -3328,12 +3328,12 @@ with UnifiedTo(
             "created_at": parse_datetime("2019-01-26T12:44:52.326Z"),
             "currency": "USD",
             "frequency": shared.HrisEarningFrequency.SEMIMONTHLY,
-            "id": "01d244a3-4eff-449a-9d88-23b7eb7ff959",
+            "id": "c30ab4a5-6379-402f-94ce-29656bc968ac",
             "metadata": [],
             "notes": "Deporto truculenter vinum beatae.",
-            "start_at": parse_datetime("2022-07-25T11:46:31.044Z"),
+            "start_at": parse_datetime("2022-07-25T22:33:07.384Z"),
             "status": shared.HrisEarningStatus.ENDED,
-            "updated_at": parse_datetime("2020-02-08T20:32:11.616Z"),
+            "updated_at": parse_datetime("2020-02-08T23:43:54.809Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -3365,7 +3365,7 @@ with UnifiedTo(
 
 ## patch_hris_employee
 
-Update an employee
+Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in the request body.
 
 ### Example Usage
 
@@ -3420,7 +3420,7 @@ with UnifiedTo(
             "gender": shared.HrisEmployeeGender.MALE,
             "has_mfa": True,
             "hired_at": parse_datetime("2019-09-16T15:08:53.262Z"),
-            "id": "cbbb8cf4-94a8-459c-9c06-f5aea240d40b",
+            "id": "af401a62-954a-4750-b0f9-c63eb87066ea",
             "image_url": "https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg",
             "language_locale": "in",
             "last_name": "Prohaska",
@@ -3432,7 +3432,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.HrisMetadataFormat.TEXT,
-                    "id": "98a4ca71-9ead-4fb6-96b2-dfa10af6446c",
+                    "id": "cea3e721-d03d-409d-b8f2-ca5f08895117",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "tutis",
@@ -3480,7 +3480,7 @@ with UnifiedTo(
             "timeoff_days_used": 9.0,
             "timezone": "Europe/Ljubljana",
             "title": "District Branding Specialist",
-            "updated_at": parse_datetime("2020-07-19T04:12:07.614Z"),
+            "updated_at": parse_datetime("2020-07-19T07:01:26.712Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -3512,7 +3512,7 @@ with UnifiedTo(
 
 ## patch_hris_group
 
-Update a group
+Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the request body.
 
 ### Example Usage
 
@@ -3533,12 +3533,12 @@ with UnifiedTo(
         "hris_group": {
             "created_at": parse_datetime("2023-11-01T13:13:40.714Z"),
             "description": "Absorbeo casso.",
-            "id": "651fe221-b89f-42e1-905e-ccb07e52e56c",
+            "id": "4a3e0f10-b197-48b9-b1d1-20f46e3874fd",
             "is_active": False,
             "metadata": [],
             "name": "Games",
             "type": shared.HrisGroupType.BRANCH,
-            "updated_at": parse_datetime("2026-05-21T23:23:20.553Z"),
+            "updated_at": parse_datetime("2026-05-22T19:54:01.911Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -3570,7 +3570,7 @@ with UnifiedTo(
 
 ## patch_hris_job
 
-Update a job
+Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request body.
 
 ### Example Usage
 
@@ -3593,11 +3593,11 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-10-28T01:13:19.491Z"),
             "description": "Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.",
             "employment_type": shared.HrisJobEmploymentType.FREELANCE,
-            "id": "a02f6bbb-91dc-45eb-9cd1-3eb9d7131a33",
+            "id": "efdd1e58-1ea2-4e0c-b5c0-6a8691cdab7a",
             "is_active": False,
             "metadata": [],
             "name": "Internal Integration Specialist",
-            "updated_at": parse_datetime("2023-01-30T05:16:46.019Z"),
+            "updated_at": parse_datetime("2023-01-30T14:16:55.027Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -3629,7 +3629,7 @@ with UnifiedTo(
 
 ## patch_hris_location
 
-Update a location
+Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in the request body.
 
 ### Example Usage
 
@@ -3660,7 +3660,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-07-18T10:32:01.414Z"),
             "currency": "MNT",
             "description": "Commemoro acervus.",
-            "id": "5d42a04c-fb9f-4965-bd74-5235d58a93be",
+            "id": "f595f8c1-17ee-4c09-9c8a-d9d6fe90e62f",
             "is_active": False,
             "is_hq": True,
             "language_locale": "it",
@@ -3681,7 +3681,7 @@ with UnifiedTo(
                 },
             ],
             "timezone": "Asia/Jerusalem",
-            "updated_at": parse_datetime("2023-06-21T02:25:43.725Z"),
+            "updated_at": parse_datetime("2023-06-21T11:09:24.079Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -3713,7 +3713,7 @@ with UnifiedTo(
 
 ## patch_hris_timeoff
 
-Update a timeoff
+Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the request body.
 
 ### Example Usage
 
@@ -3732,21 +3732,21 @@ with UnifiedTo(
 
     res = unified_to.hris.patch_hris_timeoff(request={
         "hris_timeoff": {
-            "approved_at": parse_datetime("2022-02-23T09:08:15.671Z"),
+            "approved_at": parse_datetime("2022-02-23T10:56:51.893Z"),
             "comments": "Blandior ventus curiositas amplitudo.",
             "created_at": parse_datetime("2021-10-06T18:00:20.615Z"),
             "duration": 4.0,
             "duration_type": shared.DurationType.DAY,
-            "end_at": parse_datetime("2024-12-28T17:15:02.718Z"),
-            "id": "2d726330-39ac-4f24-acdb-c8bde00a5e6c",
+            "end_at": parse_datetime("2024-12-29T08:32:02.364Z"),
+            "id": "9453aff1-d935-4270-a1e8-4e535ec124e9",
             "is_paid": True,
             "metadata": [],
             "original_type": "acerbitas ut",
             "reason": "verto",
-            "start_at": parse_datetime("2023-09-04T19:22:26.709Z"),
+            "start_at": parse_datetime("2023-09-05T04:25:23.363Z"),
             "status": shared.HrisTimeoffStatus.DENIED,
             "type": shared.HrisTimeoffType.IN_LIEU,
-            "updated_at": parse_datetime("2022-07-12T19:41:14.381Z"),
+            "updated_at": parse_datetime("2022-07-12T23:18:17.915Z"),
             "user_id": "<id>",
         },
         "connection_id": "<id>",
@@ -3779,7 +3779,7 @@ with UnifiedTo(
 
 ## patch_hris_timeshift
 
-Update a timeshift
+Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in the request body.
 
 ### Example Usage
 
@@ -3798,7 +3798,7 @@ with UnifiedTo(
 
     res = unified_to.hris.patch_hris_timeshift(request={
         "hris_timeshift": {
-            "approved_at": parse_datetime("2022-07-18T01:48:59.749Z"),
+            "approved_at": parse_datetime("2022-07-18T11:45:36.221Z"),
             "compensation": [
                 {
                     "amount": 76761.0,
@@ -3810,13 +3810,13 @@ with UnifiedTo(
             ],
             "created_at": parse_datetime("2019-07-01T23:53:15.738Z"),
             "employee_user_id": "<id>",
-            "end_at": parse_datetime("2026-09-27T01:21:46.668Z"),
+            "end_at": parse_datetime("2026-09-28T01:00:15.689Z"),
             "hours": 6.0,
-            "id": "24fc0ed3-259f-4322-8161-e5e25c20c4b5",
+            "id": "be8b2098-4454-4b17-a20f-c3f23a1d0e71",
             "is_approved": False,
             "metadata": [],
-            "start_at": parse_datetime("2023-07-13T00:27:48.563Z"),
-            "updated_at": parse_datetime("2021-07-01T21:51:37.831Z"),
+            "start_at": parse_datetime("2023-07-13T13:37:31.169Z"),
+            "updated_at": parse_datetime("2021-07-02T04:23:45.085Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -3848,7 +3848,7 @@ with UnifiedTo(
 
 ## remove_hris_attendance
 
-Remove an attendance
+Deletes the HrisAttendance identified by `id`.
 
 ### Example Usage
 
@@ -3895,7 +3895,7 @@ with UnifiedTo(
 
 ## remove_hris_bankaccount
 
-Remove a bankaccount
+Deletes the HrisBankaccount identified by `id`.
 
 ### Example Usage
 
@@ -3942,7 +3942,7 @@ with UnifiedTo(
 
 ## remove_hris_benefit
 
-Remove a benefit
+Deletes the HrisBenefit identified by `id`.
 
 ### Example Usage
 
@@ -3989,7 +3989,7 @@ with UnifiedTo(
 
 ## remove_hris_company
 
-Remove a company
+Deletes the HrisCompany identified by `id`.
 
 ### Example Usage
 
@@ -4036,7 +4036,7 @@ with UnifiedTo(
 
 ## remove_hris_deduction
 
-Remove a deduction
+Deletes the HrisDeduction identified by `id`.
 
 ### Example Usage
 
@@ -4083,7 +4083,7 @@ with UnifiedTo(
 
 ## remove_hris_device
 
-Remove a device
+Deletes the HrisDevice identified by `id`.
 
 ### Example Usage
 
@@ -4130,7 +4130,7 @@ with UnifiedTo(
 
 ## remove_hris_document
 
-Remove a document
+Deletes the HrisDocument identified by `id`.
 
 ### Example Usage
 
@@ -4177,7 +4177,7 @@ with UnifiedTo(
 
 ## remove_hris_earning
 
-Remove an earning
+Deletes the HrisEarning identified by `id`.
 
 ### Example Usage
 
@@ -4224,7 +4224,7 @@ with UnifiedTo(
 
 ## remove_hris_employee
 
-Remove an employee
+Deletes the HrisEmployee identified by `id`.
 
 ### Example Usage
 
@@ -4271,7 +4271,7 @@ with UnifiedTo(
 
 ## remove_hris_group
 
-Remove a group
+Deletes the HrisGroup identified by `id`.
 
 ### Example Usage
 
@@ -4318,7 +4318,7 @@ with UnifiedTo(
 
 ## remove_hris_job
 
-Remove a job
+Deletes the HrisJob identified by `id`.
 
 ### Example Usage
 
@@ -4365,7 +4365,7 @@ with UnifiedTo(
 
 ## remove_hris_location
 
-Remove a location
+Deletes the HrisLocation identified by `id`.
 
 ### Example Usage
 
@@ -4412,7 +4412,7 @@ with UnifiedTo(
 
 ## remove_hris_timeoff
 
-Remove a timeoff
+Deletes the HrisTimeoff identified by `id`.
 
 ### Example Usage
 
@@ -4459,7 +4459,7 @@ with UnifiedTo(
 
 ## remove_hris_timeshift
 
-Remove a timeshift
+Deletes the HrisTimeshift identified by `id`.
 
 ### Example Usage
 
@@ -4506,7 +4506,7 @@ with UnifiedTo(
 
 ## update_hris_attendance
 
-Update an attendance
+Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change in the request body.
 
 ### Example Usage
 
@@ -4533,32 +4533,32 @@ with UnifiedTo(
                 "region": "Tennessee",
                 "region_code": "CA",
             },
-            "approved_at": parse_datetime("2021-09-19T14:06:24.252Z"),
+            "approved_at": parse_datetime("2021-09-19T14:36:24.348Z"),
             "breaks": [
                 {
                     "duration_minutes": 51.0,
-                    "end_at": parse_datetime("2024-02-14T13:13:33.481Z"),
-                    "id": "62f9436e-6f27-4a95-a2a3-0c0f7710f858",
+                    "end_at": parse_datetime("2024-02-15T00:45:56.503Z"),
+                    "id": "6aaf0655-e6e5-451b-8099-50e6f3a2a33d",
                     "is_paid": False,
                     "name": "Lunch",
-                    "start_at": parse_datetime("2023-10-29T23:00:50.589Z"),
+                    "start_at": parse_datetime("2023-10-30T09:12:03.217Z"),
                 },
             ],
             "created_at": parse_datetime("2021-08-10T19:43:18.452Z"),
             "currency": "EUR",
             "declared_tips_amount": 54.0,
             "employee_user_id": "<id>",
-            "end_at": parse_datetime("2024-04-23T07:45:33.769Z"),
+            "end_at": parse_datetime("2024-04-23T20:09:49.916Z"),
             "hourly_rate": 16.0,
             "hours": 10.0,
-            "id": "a6f9cef2-231d-4330-b4c1-058fa3f36b42",
+            "id": "31e79ecd-e0a3-43a4-b3a8-492aff61cb64",
             "job_name": "Human Accountability Administrator",
             "metadata": [],
             "non_cash_tips_amount": 167.0,
-            "start_at": parse_datetime("2021-11-11T00:55:47.058Z"),
+            "start_at": parse_datetime("2021-11-11T02:05:21.461Z"),
             "status": shared.HrisAttendanceStatus.OPEN,
             "timezone": "America/Atikokan",
-            "updated_at": parse_datetime("2022-01-19T21:04:08.841Z"),
+            "updated_at": parse_datetime("2022-01-19T23:06:24.667Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -4590,7 +4590,7 @@ with UnifiedTo(
 
 ## update_hris_bankaccount
 
-Update a bankaccount
+Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change in the request body.
 
 ### Example Usage
 
@@ -4616,7 +4616,7 @@ with UnifiedTo(
             "country_code": "US",
             "created_at": parse_datetime("2019-11-16T16:43:45.976Z"),
             "currency": "USD",
-            "id": "dc2e9a22-22a0-49ce-8a10-395e043bec6c",
+            "id": "b83bd056-9674-4f6e-a525-95182b7b0bd0",
             "is_primary": True,
             "metadata": [],
             "name": "Granville Schumm - Checking",
@@ -4624,7 +4624,7 @@ with UnifiedTo(
             "routing_number": "448650724",
             "split_amount": 98.0,
             "split_type": shared.SplitType.PERCENTAGE,
-            "updated_at": parse_datetime("2025-07-01T06:17:13.689Z"),
+            "updated_at": parse_datetime("2025-07-02T01:38:52.658Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -4656,7 +4656,7 @@ with UnifiedTo(
 
 ## update_hris_benefit
 
-Update a benefit
+Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the request body.
 
 ### Example Usage
 
@@ -4683,13 +4683,13 @@ with UnifiedTo(
             "employer_contribution_max_amount": 179093.0,
             "employer_contribution_type": shared.EmployerContributionType.PERCENTAGE,
             "frequency": shared.HrisBenefitFrequency.MONTH,
-            "id": "eabe641c-582b-4b1c-bff3-08ddc615c9dd",
+            "id": "b36c4fbf-0ca7-4e3c-8e02-7d201f16ca93",
             "is_active": False,
             "metadata": [],
             "name": "Frozen Wooden Ball",
             "tax": shared.Tax.PRE_TAX,
             "type": shared.HrisBenefitType.OTHER,
-            "updated_at": parse_datetime("2023-03-20T20:18:48.773Z"),
+            "updated_at": parse_datetime("2023-03-21T06:42:51.811Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -4721,7 +4721,7 @@ with UnifiedTo(
 
 ## update_hris_company
 
-Update a company
+Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -4749,11 +4749,11 @@ with UnifiedTo(
                 "region_code": "MO",
             },
             "created_at": parse_datetime("2021-05-02T22:27:38.970Z"),
-            "id": "b682175d-26ba-4348-9515-d2b644e87ddb",
+            "id": "614c60e7-805a-4ebe-9b04-71aabf2ea7b8",
             "legal_name": "Gottlieb Group LLC",
             "metadata": [],
             "name": "Gottlieb Group",
-            "updated_at": parse_datetime("2026-10-08T16:17:54.068Z"),
+            "updated_at": parse_datetime("2026-10-09T16:00:24.302Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -4785,7 +4785,7 @@ with UnifiedTo(
 
 ## update_hris_deduction
 
-Update a deduction
+Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in the request body.
 
 ### Example Usage
 
@@ -4811,14 +4811,14 @@ with UnifiedTo(
             "employer_type": shared.EmployerType.PERCENTAGE,
             "frequency": shared.HrisDeductionFrequency.ONE_TIME,
             "garnishment_type": shared.GarnishmentType.CHILD_SUPPORT,
-            "id": "d01383a7-87c1-493e-b3b3-164ba724d0ba",
+            "id": "2b0eecf4-4ef5-4c58-952b-20761e9d8c04",
             "is_active": True,
             "max_amount": 21794.0,
             "metadata": [],
             "notes": "Carmen desidero.",
-            "start_at": parse_datetime("2025-03-15T07:36:56.039Z"),
+            "start_at": parse_datetime("2025-03-16T01:46:40.283Z"),
             "type": shared.HrisDeductionType.FIXED,
-            "updated_at": parse_datetime("2024-03-22T06:56:26.096Z"),
+            "updated_at": parse_datetime("2024-03-22T21:37:00.022Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -4850,7 +4850,7 @@ with UnifiedTo(
 
 ## update_hris_device
 
-Update a device
+Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the request body.
 
 ### Example Usage
 
@@ -4877,7 +4877,7 @@ with UnifiedTo(
             "has_hd_encrypted": True,
             "has_password_manager": True,
             "has_screenlock": False,
-            "id": "7cfafe39-68f3-4249-8fcc-5856661e7236",
+            "id": "afc52eb2-dd4b-4278-b6f0-3f16a2a2e6dd",
             "is_missing": False,
             "manufacturer": "Hackett Inc",
             "metadata": [],
@@ -4885,7 +4885,7 @@ with UnifiedTo(
             "name": "august-laptop",
             "os": "transmitter",
             "os_version": "8.4.8",
-            "updated_at": parse_datetime("2023-06-08T07:18:09.544Z"),
+            "updated_at": parse_datetime("2023-06-08T20:30:23.500Z"),
             "version": "4.15.7",
         },
         "connection_id": "<id>",
@@ -4918,7 +4918,7 @@ with UnifiedTo(
 
 ## update_hris_document
 
-Update a document
+Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -4940,10 +4940,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-10-27T11:47:26.086Z"),
             "document_url": "https://sore-decision.biz/",
             "filename": "ridge_forager.xsl",
-            "id": "ddb29192-c79e-4a0d-bf27-de63fd798327",
+            "id": "7d80c112-dc78-40ac-9983-b4e0e520055f",
             "metadata": [],
             "type": shared.HrisDocumentType.POLICY,
-            "updated_at": parse_datetime("2025-10-11T14:02:19.845Z"),
+            "updated_at": parse_datetime("2025-10-12T07:45:12.961Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -4975,7 +4975,7 @@ with UnifiedTo(
 
 ## update_hris_earning
 
-Update an earning
+Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the request body.
 
 ### Example Usage
 
@@ -4998,12 +4998,12 @@ with UnifiedTo(
             "created_at": parse_datetime("2019-01-26T12:44:52.326Z"),
             "currency": "USD",
             "frequency": shared.HrisEarningFrequency.SEMIMONTHLY,
-            "id": "01d244a3-4eff-449a-9d88-23b7eb7ff959",
+            "id": "c30ab4a5-6379-402f-94ce-29656bc968ac",
             "metadata": [],
             "notes": "Deporto truculenter vinum beatae.",
-            "start_at": parse_datetime("2022-07-25T11:46:31.044Z"),
+            "start_at": parse_datetime("2022-07-25T22:33:07.384Z"),
             "status": shared.HrisEarningStatus.ENDED,
-            "updated_at": parse_datetime("2020-02-08T20:32:11.616Z"),
+            "updated_at": parse_datetime("2020-02-08T23:43:54.809Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -5035,7 +5035,7 @@ with UnifiedTo(
 
 ## update_hris_employee
 
-Update an employee
+Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in the request body.
 
 ### Example Usage
 
@@ -5090,7 +5090,7 @@ with UnifiedTo(
             "gender": shared.HrisEmployeeGender.MALE,
             "has_mfa": True,
             "hired_at": parse_datetime("2019-09-16T15:08:53.262Z"),
-            "id": "cbbb8cf4-94a8-459c-9c06-f5aea240d40b",
+            "id": "af401a62-954a-4750-b0f9-c63eb87066ea",
             "image_url": "https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg",
             "language_locale": "in",
             "last_name": "Prohaska",
@@ -5102,7 +5102,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.HrisMetadataFormat.TEXT,
-                    "id": "98a4ca71-9ead-4fb6-96b2-dfa10af6446c",
+                    "id": "cea3e721-d03d-409d-b8f2-ca5f08895117",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "tutis",
@@ -5150,7 +5150,7 @@ with UnifiedTo(
             "timeoff_days_used": 9.0,
             "timezone": "Europe/Ljubljana",
             "title": "District Branding Specialist",
-            "updated_at": parse_datetime("2020-07-19T04:12:07.614Z"),
+            "updated_at": parse_datetime("2020-07-19T07:01:26.712Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -5182,7 +5182,7 @@ with UnifiedTo(
 
 ## update_hris_group
 
-Update a group
+Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the request body.
 
 ### Example Usage
 
@@ -5203,12 +5203,12 @@ with UnifiedTo(
         "hris_group": {
             "created_at": parse_datetime("2023-11-01T13:13:40.714Z"),
             "description": "Absorbeo casso.",
-            "id": "651fe221-b89f-42e1-905e-ccb07e52e56c",
+            "id": "4a3e0f10-b197-48b9-b1d1-20f46e3874fd",
             "is_active": False,
             "metadata": [],
             "name": "Games",
             "type": shared.HrisGroupType.BRANCH,
-            "updated_at": parse_datetime("2026-05-21T23:23:20.553Z"),
+            "updated_at": parse_datetime("2026-05-22T19:54:01.911Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -5240,7 +5240,7 @@ with UnifiedTo(
 
 ## update_hris_job
 
-Update a job
+Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request body.
 
 ### Example Usage
 
@@ -5263,11 +5263,11 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-10-28T01:13:19.491Z"),
             "description": "Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.",
             "employment_type": shared.HrisJobEmploymentType.FREELANCE,
-            "id": "a02f6bbb-91dc-45eb-9cd1-3eb9d7131a33",
+            "id": "efdd1e58-1ea2-4e0c-b5c0-6a8691cdab7a",
             "is_active": False,
             "metadata": [],
             "name": "Internal Integration Specialist",
-            "updated_at": parse_datetime("2023-01-30T05:16:46.019Z"),
+            "updated_at": parse_datetime("2023-01-30T14:16:55.027Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -5299,7 +5299,7 @@ with UnifiedTo(
 
 ## update_hris_location
 
-Update a location
+Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in the request body.
 
 ### Example Usage
 
@@ -5330,7 +5330,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-07-18T10:32:01.414Z"),
             "currency": "MNT",
             "description": "Commemoro acervus.",
-            "id": "5d42a04c-fb9f-4965-bd74-5235d58a93be",
+            "id": "f595f8c1-17ee-4c09-9c8a-d9d6fe90e62f",
             "is_active": False,
             "is_hq": True,
             "language_locale": "it",
@@ -5351,7 +5351,7 @@ with UnifiedTo(
                 },
             ],
             "timezone": "Asia/Jerusalem",
-            "updated_at": parse_datetime("2023-06-21T02:25:43.725Z"),
+            "updated_at": parse_datetime("2023-06-21T11:09:24.079Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -5383,7 +5383,7 @@ with UnifiedTo(
 
 ## update_hris_timeoff
 
-Update a timeoff
+Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the request body.
 
 ### Example Usage
 
@@ -5402,21 +5402,21 @@ with UnifiedTo(
 
     res = unified_to.hris.update_hris_timeoff(request={
         "hris_timeoff": {
-            "approved_at": parse_datetime("2022-02-23T09:08:15.671Z"),
+            "approved_at": parse_datetime("2022-02-23T10:56:51.893Z"),
             "comments": "Blandior ventus curiositas amplitudo.",
             "created_at": parse_datetime("2021-10-06T18:00:20.615Z"),
             "duration": 4.0,
             "duration_type": shared.DurationType.DAY,
-            "end_at": parse_datetime("2024-12-28T17:15:02.718Z"),
-            "id": "2d726330-39ac-4f24-acdb-c8bde00a5e6c",
+            "end_at": parse_datetime("2024-12-29T08:32:02.364Z"),
+            "id": "9453aff1-d935-4270-a1e8-4e535ec124e9",
             "is_paid": True,
             "metadata": [],
             "original_type": "acerbitas ut",
             "reason": "verto",
-            "start_at": parse_datetime("2023-09-04T19:22:26.709Z"),
+            "start_at": parse_datetime("2023-09-05T04:25:23.363Z"),
             "status": shared.HrisTimeoffStatus.DENIED,
             "type": shared.HrisTimeoffType.IN_LIEU,
-            "updated_at": parse_datetime("2022-07-12T19:41:14.381Z"),
+            "updated_at": parse_datetime("2022-07-12T23:18:17.915Z"),
             "user_id": "<id>",
         },
         "connection_id": "<id>",
@@ -5449,7 +5449,7 @@ with UnifiedTo(
 
 ## update_hris_timeshift
 
-Update a timeshift
+Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in the request body.
 
 ### Example Usage
 
@@ -5468,7 +5468,7 @@ with UnifiedTo(
 
     res = unified_to.hris.update_hris_timeshift(request={
         "hris_timeshift": {
-            "approved_at": parse_datetime("2022-07-18T01:48:59.749Z"),
+            "approved_at": parse_datetime("2022-07-18T11:45:36.221Z"),
             "compensation": [
                 {
                     "amount": 76761.0,
@@ -5480,13 +5480,13 @@ with UnifiedTo(
             ],
             "created_at": parse_datetime("2019-07-01T23:53:15.738Z"),
             "employee_user_id": "<id>",
-            "end_at": parse_datetime("2026-09-27T01:21:46.668Z"),
+            "end_at": parse_datetime("2026-09-28T01:00:15.689Z"),
             "hours": 6.0,
-            "id": "24fc0ed3-259f-4322-8161-e5e25c20c4b5",
+            "id": "be8b2098-4454-4b17-a20f-c3f23a1d0e71",
             "is_approved": False,
             "metadata": [],
-            "start_at": parse_datetime("2023-07-13T00:27:48.563Z"),
-            "updated_at": parse_datetime("2021-07-01T21:51:37.831Z"),
+            "start_at": parse_datetime("2023-07-13T13:37:31.169Z"),
+            "updated_at": parse_datetime("2021-07-02T04:23:45.085Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

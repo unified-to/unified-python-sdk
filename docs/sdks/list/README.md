@@ -13,7 +13,7 @@
 
 ## create_martech_list
 
-Create a list
+Creates a MarketingList. Provide the unified MarketingList fields in the request body; they are mapped to the provider's API. Returns the created MarketingList.
 
 ### Example Usage
 
@@ -42,7 +42,7 @@ with UnifiedTo(
             },
             "created_at": parse_datetime("2019-09-18T02:01:36.950Z"),
             "description": "Vilis.",
-            "id": "2e0c759c-8d98-43b0-8ac1-d859e392158c",
+            "id": "2485bd30-b777-49c0-b8f0-bddbe8d2a0fd",
             "is_active": True,
             "language": "ru",
             "metadata": [],
@@ -52,7 +52,7 @@ with UnifiedTo(
             "sender_name": "Blake Kuhn",
             "sender_phone": "359.305.7962 x28115",
             "subject": "Theca caecus copia crebro valeo ulciscor.",
-            "updated_at": parse_datetime("2022-09-13T10:06:35.117Z"),
+            "updated_at": parse_datetime("2022-09-13T20:09:43.170Z"),
         },
         "connection_id": "<id>",
     })
@@ -83,7 +83,7 @@ with UnifiedTo(
 
 ## get_martech_list
 
-Retrieve a list
+Retrieves a single MarketingList by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -130,7 +130,7 @@ with UnifiedTo(
 
 ## list_martech_lists
 
-List all lists
+Returns a list of MarketingLists. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -176,7 +176,7 @@ with UnifiedTo(
 
 ## patch_martech_list
 
-Update a list
+Updates the MarketingList identified by `id`. Provide the unified MarketingList fields to change in the request body.
 
 ### Example Usage
 
@@ -205,7 +205,7 @@ with UnifiedTo(
             },
             "created_at": parse_datetime("2019-09-18T02:01:36.950Z"),
             "description": "Vilis.",
-            "id": "f2bb9817-e35d-41a4-8e46-84db00b27a93",
+            "id": "0032fa3c-da58-495e-9422-ab015754772d",
             "is_active": True,
             "language": "ru",
             "metadata": [],
@@ -215,7 +215,7 @@ with UnifiedTo(
             "sender_name": "Blake Kuhn",
             "sender_phone": "359.305.7962 x28115",
             "subject": "Theca caecus copia crebro valeo ulciscor.",
-            "updated_at": parse_datetime("2022-09-13T10:06:35.126Z"),
+            "updated_at": parse_datetime("2022-09-13T20:09:43.183Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -247,7 +247,7 @@ with UnifiedTo(
 
 ## remove_martech_list
 
-Remove a list
+Deletes the MarketingList identified by `id`.
 
 ### Example Usage
 
@@ -294,7 +294,7 @@ with UnifiedTo(
 
 ## update_martech_list
 
-Update a list
+Updates the MarketingList identified by `id`. Provide the unified MarketingList fields to change in the request body.
 
 ### Example Usage
 
@@ -323,7 +323,7 @@ with UnifiedTo(
             },
             "created_at": parse_datetime("2019-09-18T02:01:36.950Z"),
             "description": "Vilis.",
-            "id": "f2bb9817-e35d-41a4-8e46-84db00b27a93",
+            "id": "0032fa3c-da58-495e-9422-ab015754772d",
             "is_active": True,
             "language": "ru",
             "metadata": [],
@@ -333,7 +333,7 @@ with UnifiedTo(
             "sender_name": "Blake Kuhn",
             "sender_phone": "359.305.7962 x28115",
             "subject": "Theca caecus copia crebro valeo ulciscor.",
-            "updated_at": parse_datetime("2022-09-13T10:06:35.126Z"),
+            "updated_at": parse_datetime("2022-09-13T20:09:43.183Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

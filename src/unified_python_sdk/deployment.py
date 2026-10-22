@@ -24,6 +24,8 @@ class Deployment(BaseSDK):
     ) -> operations.CreateComputeDeploymentResponse:
         r"""Create a deployment
 
+        Creates a ComputeDeployment. Provide the unified ComputeDeployment fields in the request body; they are mapped to the provider's API. Returns the created ComputeDeployment.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -124,6 +126,8 @@ class Deployment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateComputeDeploymentResponse:
         r"""Create a deployment
+
+        Creates a ComputeDeployment. Provide the unified ComputeDeployment fields in the request body; they are mapped to the provider's API. Returns the created ComputeDeployment.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -226,6 +230,8 @@ class Deployment(BaseSDK):
     ) -> operations.GetComputeDeploymentResponse:
         r"""Retrieve a deployment
 
+        Retrieves a single ComputeDeployment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -317,6 +323,8 @@ class Deployment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetComputeDeploymentResponse:
         r"""Retrieve a deployment
+
+        Retrieves a single ComputeDeployment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -410,6 +418,8 @@ class Deployment(BaseSDK):
     ) -> operations.ListComputeDeploymentsResponse:
         r"""List all deployments
 
+        Returns a list of ComputeDeployments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -502,6 +512,8 @@ class Deployment(BaseSDK):
     ) -> operations.ListComputeDeploymentsResponse:
         r"""List all deployments
 
+        Returns a list of ComputeDeployments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -593,6 +605,8 @@ class Deployment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchComputeDeploymentResponse:
         r"""Update a deployment
+
+        Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -693,6 +707,8 @@ class Deployment(BaseSDK):
     ) -> operations.PatchComputeDeploymentResponse:
         r"""Update a deployment
 
+        Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -791,6 +807,8 @@ class Deployment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveComputeDeploymentResponse:
         r"""Remove a deployment
+
+        Deletes the ComputeDeployment identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -891,6 +909,8 @@ class Deployment(BaseSDK):
     ) -> operations.RemoveComputeDeploymentResponse:
         r"""Remove a deployment
 
+        Deletes the ComputeDeployment identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -989,6 +1009,8 @@ class Deployment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateComputeDeploymentResponse:
         r"""Update a deployment
+
+        Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1090,6 +1112,8 @@ class Deployment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateComputeDeploymentResponse:
         r"""Update a deployment
+
+        Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

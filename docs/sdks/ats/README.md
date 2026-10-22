@@ -57,7 +57,7 @@
 
 ## create_ats_activity
 
-Create an activity
+Creates a AtsActivity. Provide the unified AtsActivity fields in the request body; they are mapped to the provider's API. Returns the created AtsActivity.
 
 ### Example Usage
 
@@ -78,7 +78,7 @@ with UnifiedTo(
         "ats_activity": {
             "created_at": parse_datetime("2022-08-07T03:16:43.865Z"),
             "description": "Sapiente.",
-            "id": "cc456114-11b4-4454-b2c6-674da4151680",
+            "id": "f31f8ba6-5c20-4ce8-91ff-b36db9861837",
             "is_private": False,
             "metadata": [
                 {
@@ -86,7 +86,7 @@ with UnifiedTo(
 
                     },
                     "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "bc322752-5cd3-4a7f-91a8-4b2d8e660b4d",
+                    "id": "ecf256cf-449b-41d7-93b4-7fe6a1aeff92",
                     "namespace": "activity",
                     "slug": "cimentarius",
                     "value": "Reprehenderit verto.",
@@ -95,7 +95,7 @@ with UnifiedTo(
             "sub_type": "TASK",
             "title": "Venio blandior aureus.",
             "type": shared.AtsActivityType.TASK,
-            "updated_at": parse_datetime("2026-04-04T06:33:50.655Z"),
+            "updated_at": parse_datetime("2026-04-05T03:19:02.969Z"),
         },
         "connection_id": "<id>",
     })
@@ -126,7 +126,7 @@ with UnifiedTo(
 
 ## create_ats_application
 
-Create an application
+Creates a AtsApplication. Provide the unified AtsApplication fields in the request body; they are mapped to the provider's API. Returns the created AtsApplication.
 
 ### Example Usage
 
@@ -146,17 +146,17 @@ with UnifiedTo(
     res = unified_to.ats.create_ats_application(request={
         "ats_application": {
             "answers": [],
-            "applied_at": parse_datetime("2025-09-29T18:38:27.347Z"),
+            "applied_at": parse_datetime("2025-09-30T10:07:05.968Z"),
             "created_at": parse_datetime("2023-10-17T07:19:48.787Z"),
-            "hired_at": parse_datetime("2026-05-12T18:26:15.802Z"),
-            "id": "3be64929-f537-4521-9361-c4c8326d0157",
+            "hired_at": parse_datetime("2026-05-13T14:47:45.163Z"),
+            "id": "9c2e6ea4-6b90-4c68-93a2-344b71e7dd8d",
             "metadata": [
                 {
                     "extra_data": {
 
                     },
                     "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "220edaf6-bc48-4c79-b54b-6ceb2c57dd0d",
+                    "id": "38390c94-ee6e-49d6-9af9-49bf6b77284a",
                     "namespace": "application",
                     "slug": "stella",
                     "value": "Caput.",
@@ -165,12 +165,12 @@ with UnifiedTo(
             "offers": [],
             "original_status": "vomica",
             "original_substatus": "allatus",
-            "rejected_at": parse_datetime("2026-10-11T13:02:04.086Z"),
+            "rejected_at": parse_datetime("2026-10-12T12:41:06.322Z"),
             "rejected_reason": "Cometes amplitudo videlicet talio.",
             "source": "credo",
             "status": shared.AtsApplicationStatus.REVIEWING,
             "summary": "Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.",
-            "updated_at": parse_datetime("2026-10-18T09:16:18.517Z"),
+            "updated_at": parse_datetime("2026-10-19T09:04:15.175Z"),
         },
         "connection_id": "<id>",
     })
@@ -201,7 +201,7 @@ with UnifiedTo(
 
 ## create_ats_candidate
 
-Create a candidate
+Creates a AtsCandidate. Provide the unified AtsCandidate fields in the request body; they are mapped to the provider's API. Returns the created AtsCandidate.
 
 ### Example Usage
 
@@ -271,7 +271,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Ardith",
-            "id": "621ede17-d7bb-4d42-b84f-e8f3bead71b6",
+            "id": "d6158514-0b98-44b7-b485-fe144b84b2a8",
             "image_url": "https://avatars.githubusercontent.com/u/27464445",
             "job_ids": [],
             "last_name": "Beatty",
@@ -284,7 +284,7 @@ with UnifiedTo(
 
                     },
                     "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "ca216ebe-fe55-403b-aad2-7b1e449ca34b",
+                    "id": "2c40bd7e-b0aa-4953-8489-fb78f25489d3",
                     "namespace": "custom",
                     "slug": "custom_field",
                     "value": "officia",
@@ -311,7 +311,7 @@ with UnifiedTo(
                 },
             ],
             "title": "Customer Division Producer",
-            "updated_at": parse_datetime("2024-04-28T17:46:38.408Z"),
+            "updated_at": parse_datetime("2024-04-28T22:00:51.392Z"),
             "web_url": "https://fragrant-husband.net/",
         },
         "connection_id": "<id>",
@@ -343,7 +343,7 @@ with UnifiedTo(
 
 ## create_ats_company
 
-Create a company
+Creates a AtsCompany. Provide the unified AtsCompany fields in the request body; they are mapped to the provider's API. Returns the created AtsCompany.
 
 ### Example Usage
 
@@ -363,10 +363,10 @@ with UnifiedTo(
     res = unified_to.ats.create_ats_company(request={
         "ats_company": {
             "created_at": parse_datetime("2019-04-22T03:50:02.920Z"),
-            "id": "798fe2f6-ae0a-4d17-aa92-734c80c4a4b9",
+            "id": "fc717eb1-789d-4f47-8cb9-f011b597131a",
             "name": "Gulgowski, Dibbert and Wilderman",
             "phone": "1-882-360-2010",
-            "updated_at": parse_datetime("2020-10-01T04:11:25.065Z"),
+            "updated_at": parse_datetime("2020-10-01T08:47:21.666Z"),
             "website_url": "https://www.gulgowskidibbert.com",
         },
         "connection_id": "<id>",
@@ -398,7 +398,7 @@ with UnifiedTo(
 
 ## create_ats_document
 
-Create a document
+Creates a AtsDocument. Provide the unified AtsDocument fields in the request body; they are mapped to the provider's API. Returns the created AtsDocument.
 
 ### Example Usage
 
@@ -420,10 +420,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-08-20T08:00:27.437Z"),
             "document_url": "https://vengeful-lashes.biz",
             "filename": "lonzo_schowalter_resume.pdf",
-            "id": "1bb55c59-99ba-4c6a-be78-a8f1155ed818",
+            "id": "53b6fefe-210f-464d-a3c2-ceb0cc0e755d",
             "metadata": [],
             "type": shared.AtsDocumentType.COVER_LETTER,
-            "updated_at": parse_datetime("2022-12-07T04:58:38.769Z"),
+            "updated_at": parse_datetime("2022-12-07T10:57:57.857Z"),
         },
         "connection_id": "<id>",
     })
@@ -454,7 +454,7 @@ with UnifiedTo(
 
 ## create_ats_interview
 
-Create an interview
+Creates a AtsInterview. Provide the unified AtsInterview fields in the request body; they are mapped to the provider's API. Returns the created AtsInterview.
 
 ### Example Usage
 
@@ -475,13 +475,13 @@ with UnifiedTo(
         "ats_interview": {
             "created_at": parse_datetime("2021-11-28T03:14:47.774Z"),
             "end_at": parse_datetime("2021-12-08T06:33:19.583Z"),
-            "id": "ddcec412-5ab6-4d71-a2bc-813065c792ee",
+            "id": "bbff662e-1b0a-4b74-ae44-126c9ba08ca6",
             "location": "26596 Halle Trafficway",
             "meeting_url": "https://immaculate-foodstuffs.biz",
             "metadata": [],
             "start_at": parse_datetime("2021-12-08T06:03:19.583Z"),
             "status": shared.AtsInterviewStatus.SCHEDULED,
-            "updated_at": parse_datetime("2023-09-23T16:37:18.637Z"),
+            "updated_at": parse_datetime("2023-09-24T01:29:20.700Z"),
         },
         "connection_id": "<id>",
     })
@@ -512,7 +512,7 @@ with UnifiedTo(
 
 ## create_ats_job
 
-Create a job
+Creates a AtsJob. Provide the unified AtsJob fields in the request body; they are mapped to the provider's API. Returns the created AtsJob.
 
 ### Example Usage
 
@@ -561,7 +561,7 @@ with UnifiedTo(
             "description": "Global",
             "employment_type": shared.EmploymentType.FREELANCE,
             "hiring_managers": [],
-            "id": "d5878e4b-8b8f-42a6-8ed9-1078a38a0843",
+            "id": "2f1b7ebc-9852-4931-90f1-89dd6c2ce9cb",
             "industry": "Handcrafted Bamboo Soap",
             "language_locale": "en",
             "metadata": [
@@ -570,7 +570,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "5ec867ec-230e-42d9-ab19-cc1e65806529",
+                    "id": "c75075fd-9a62-4aa4-a635-a8c78c9e0ad9",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "desolo",
@@ -583,7 +583,7 @@ with UnifiedTo(
             "openings": [
                 {
                     "close_reason": "Admoveo trado textilis.",
-                    "opened_at": parse_datetime("2026-06-07T21:23:37.269Z"),
+                    "opened_at": parse_datetime("2026-06-08T18:36:46.211Z"),
                     "status": shared.AtsJobOpeningStatus.OPEN,
                 },
             ],
@@ -597,14 +597,14 @@ with UnifiedTo(
                         "region": "Wisconsin",
                         "region_code": "CO",
                     },
-                    "created_at": parse_datetime("2026-08-02T00:24:41.868Z"),
+                    "created_at": parse_datetime("2026-08-02T22:42:23.508Z"),
                     "description": "Beatus eum volutabrum balbus victus ipsa tubineus claustrum.",
-                    "id": "641a68a5-3712-4e4d-98fb-b45036a7a779",
+                    "id": "3ba66c8e-ea9e-4ce8-bdf4-cc6d1106ddb3",
                     "is_active": False,
                     "location": "1725 Hessel Keys",
                     "name": "International Identity Manager",
                     "posting_url": "https://obedient-yak.com",
-                    "updated_at": parse_datetime("2026-08-28T07:47:34.839Z"),
+                    "updated_at": parse_datetime("2026-08-29T06:36:04.638Z"),
                 },
             ],
             "public_job_urls": [
@@ -614,7 +614,7 @@ with UnifiedTo(
             "questions": [
                 {
                     "description": "Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado.",
-                    "id": "862283a1-8f32-48d3-b3f4-a27311eb8b87",
+                    "id": "a5a8c189-4d6f-4700-9166-2777d1882265",
                     "max_length": 117.0,
                     "min_length": 1.0,
                     "options": [
@@ -627,7 +627,7 @@ with UnifiedTo(
                     "type": shared.AtsJobQuestionType.TEXT,
                 },
                 {
-                    "id": "c437e681-b81f-4367-82ad-0ff3cebce049",
+                    "id": "32a1bbdf-b4e0-4ae0-8e0b-0dc217e89fb2",
                     "max_length": 453.0,
                     "min_length": 1.0,
                     "options": [
@@ -640,7 +640,7 @@ with UnifiedTo(
                 },
                 {
                     "description": "Taceo rem compello spectaculum mollitia arcus compello.",
-                    "id": "f614bca7-6772-4f1b-8d02-732ae899fd2f",
+                    "id": "aef905ab-59c5-442f-8c48-57a3ecebc53d",
                     "max_length": 66.0,
                     "min_length": 1.0,
                     "options": [
@@ -658,7 +658,7 @@ with UnifiedTo(
             ],
             "status": shared.AtsJobStatus.ARCHIVED,
             "summary": "Crepusculum adsuesco vere.",
-            "updated_at": parse_datetime("2026-02-27T09:43:12.513Z"),
+            "updated_at": parse_datetime("2026-02-28T04:58:42.080Z"),
         },
         "connection_id": "<id>",
     })
@@ -689,7 +689,7 @@ with UnifiedTo(
 
 ## create_ats_scorecard
 
-Create a scorecard
+Creates a AtsScorecard. Provide the unified AtsScorecard fields in the request body; they are mapped to the provider's API. Returns the created AtsScorecard.
 
 ### Example Usage
 
@@ -710,7 +710,7 @@ with UnifiedTo(
         "ats_scorecard": {
             "comment": "Maiores enim.",
             "created_at": parse_datetime("2022-02-20T17:09:45.498Z"),
-            "id": "443f5ff6-4fd5-48f3-888d-da7840d715ea",
+            "id": "edf3676f-3ef2-4767-bc7c-83962a8433f3",
             "metadata": [],
             "questions": [
                 {
@@ -724,7 +724,7 @@ with UnifiedTo(
                 },
             ],
             "recommendation": shared.Recommendation.STRONG_YES,
-            "updated_at": parse_datetime("2023-06-05T13:38:40.488Z"),
+            "updated_at": parse_datetime("2023-06-05T20:13:30.676Z"),
         },
         "connection_id": "<id>",
     })
@@ -755,7 +755,7 @@ with UnifiedTo(
 
 ## get_ats_activity
 
-Retrieve an activity
+Retrieves a single AtsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -802,7 +802,7 @@ with UnifiedTo(
 
 ## get_ats_application
 
-Retrieve an application
+Retrieves a single AtsApplication by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -849,7 +849,7 @@ with UnifiedTo(
 
 ## get_ats_applicationstatus
 
-Retrieve an applicationstatus
+Retrieves a single AtsStatus by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -896,7 +896,7 @@ with UnifiedTo(
 
 ## get_ats_candidate
 
-Retrieve a candidate
+Retrieves a single AtsCandidate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -943,7 +943,7 @@ with UnifiedTo(
 
 ## get_ats_company
 
-Retrieve a company
+Retrieves a single AtsCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -990,7 +990,7 @@ with UnifiedTo(
 
 ## get_ats_document
 
-Retrieve a document
+Retrieves a single AtsDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1037,7 +1037,7 @@ with UnifiedTo(
 
 ## get_ats_interview
 
-Retrieve an interview
+Retrieves a single AtsInterview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1084,7 +1084,7 @@ with UnifiedTo(
 
 ## get_ats_job
 
-Retrieve a job
+Retrieves a single AtsJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1131,7 +1131,7 @@ with UnifiedTo(
 
 ## get_ats_scorecard
 
-Retrieve a scorecard
+Retrieves a single AtsScorecard by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1178,7 +1178,7 @@ with UnifiedTo(
 
 ## list_ats_activities
 
-List all activities
+Returns a list of AtsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1224,7 +1224,7 @@ with UnifiedTo(
 
 ## list_ats_applications
 
-List all applications
+Returns a list of AtsApplications. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1270,7 +1270,7 @@ with UnifiedTo(
 
 ## list_ats_applicationstatuses
 
-List all applicationstatuses
+Returns a list of AtsStatuses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1316,7 +1316,7 @@ with UnifiedTo(
 
 ## list_ats_candidates
 
-List all candidates
+Returns a list of AtsCandidates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1362,7 +1362,7 @@ with UnifiedTo(
 
 ## list_ats_companies
 
-List all companies
+Returns a list of AtsCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1408,7 +1408,7 @@ with UnifiedTo(
 
 ## list_ats_documents
 
-List all documents
+Returns a list of AtsDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1454,7 +1454,7 @@ with UnifiedTo(
 
 ## list_ats_interviews
 
-List all interviews
+Returns a list of AtsInterviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1500,7 +1500,7 @@ with UnifiedTo(
 
 ## list_ats_jobs
 
-List all jobs
+Returns a list of AtsJobs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1546,7 +1546,7 @@ with UnifiedTo(
 
 ## list_ats_scorecards
 
-List all scorecards
+Returns a list of AtsScorecards. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1592,7 +1592,7 @@ with UnifiedTo(
 
 ## patch_ats_activity
 
-Update an activity
+Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the request body.
 
 ### Example Usage
 
@@ -1613,7 +1613,7 @@ with UnifiedTo(
         "ats_activity": {
             "created_at": parse_datetime("2022-08-07T03:16:43.865Z"),
             "description": "Sapiente.",
-            "id": "63e5469f-6bde-4fc0-aa25-9df6dd1ed565",
+            "id": "36bdb311-6067-41a5-ab75-6998e9b203d4",
             "is_private": False,
             "metadata": [
                 {
@@ -1621,7 +1621,7 @@ with UnifiedTo(
 
                     },
                     "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "91cf4e1f-d934-4511-9c1e-930e4e9d1404",
+                    "id": "578f731c-d74a-4d7c-a885-88f5ca8458ed",
                     "namespace": "activity",
                     "slug": "cimentarius",
                     "value": "Reprehenderit verto.",
@@ -1630,7 +1630,7 @@ with UnifiedTo(
             "sub_type": "TASK",
             "title": "Venio blandior aureus.",
             "type": shared.AtsActivityType.TASK,
-            "updated_at": parse_datetime("2026-04-04T06:33:50.681Z"),
+            "updated_at": parse_datetime("2026-04-05T03:19:02.987Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1662,7 +1662,7 @@ with UnifiedTo(
 
 ## patch_ats_application
 
-Update an application
+Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change in the request body.
 
 ### Example Usage
 
@@ -1682,17 +1682,17 @@ with UnifiedTo(
     res = unified_to.ats.patch_ats_application(request={
         "ats_application": {
             "answers": [],
-            "applied_at": parse_datetime("2025-09-29T18:38:27.368Z"),
+            "applied_at": parse_datetime("2025-09-30T10:07:05.985Z"),
             "created_at": parse_datetime("2023-10-17T07:19:48.787Z"),
-            "hired_at": parse_datetime("2026-05-12T18:26:15.830Z"),
-            "id": "e191ba0a-9c3b-4d82-ab5b-223b65befa0a",
+            "hired_at": parse_datetime("2026-05-13T14:47:45.185Z"),
+            "id": "4be98c80-0842-49db-af54-a6568bd8bde2",
             "metadata": [
                 {
                     "extra_data": {
 
                     },
                     "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "e488328a-175e-4b51-952f-7f0e4f54e681",
+                    "id": "69265a38-6757-4b66-b686-94690afae256",
                     "namespace": "application",
                     "slug": "stella",
                     "value": "Caput.",
@@ -1701,12 +1701,12 @@ with UnifiedTo(
             "offers": [],
             "original_status": "vomica",
             "original_substatus": "allatus",
-            "rejected_at": parse_datetime("2026-10-11T13:02:04.118Z"),
+            "rejected_at": parse_datetime("2026-10-12T12:41:06.348Z"),
             "rejected_reason": "Cometes amplitudo videlicet talio.",
             "source": "credo",
             "status": shared.AtsApplicationStatus.REVIEWING,
             "summary": "Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.",
-            "updated_at": parse_datetime("2026-10-18T09:16:18.549Z"),
+            "updated_at": parse_datetime("2026-10-19T09:04:15.201Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1738,7 +1738,7 @@ with UnifiedTo(
 
 ## patch_ats_candidate
 
-Update a candidate
+Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in the request body.
 
 ### Example Usage
 
@@ -1808,7 +1808,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Ardith",
-            "id": "f8c3986e-ed87-4952-b5af-9ee7d02a0118",
+            "id": "33c70965-b05d-40b8-a4f6-7140edb9bf1b",
             "image_url": "https://avatars.githubusercontent.com/u/27464445",
             "job_ids": [],
             "last_name": "Beatty",
@@ -1821,7 +1821,7 @@ with UnifiedTo(
 
                     },
                     "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "0985bb29-678c-4e1f-a509-dc7855ae8d34",
+                    "id": "d21457b0-099d-4edc-b53c-7a891e833870",
                     "namespace": "custom",
                     "slug": "custom_field",
                     "value": "officia",
@@ -1848,7 +1848,7 @@ with UnifiedTo(
                 },
             ],
             "title": "Customer Division Producer",
-            "updated_at": parse_datetime("2024-04-28T17:46:38.414Z"),
+            "updated_at": parse_datetime("2024-04-28T22:00:51.397Z"),
             "web_url": "https://fragrant-husband.net/",
         },
         "connection_id": "<id>",
@@ -1881,7 +1881,7 @@ with UnifiedTo(
 
 ## patch_ats_company
 
-Update a company
+Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -1901,10 +1901,10 @@ with UnifiedTo(
     res = unified_to.ats.patch_ats_company(request={
         "ats_company": {
             "created_at": parse_datetime("2019-04-22T03:50:02.920Z"),
-            "id": "ddb9cba7-1919-4a13-b0ba-b3bd702d1efd",
+            "id": "9919fbbc-af06-4156-8ed3-2d8d682ca7e2",
             "name": "Gulgowski, Dibbert and Wilderman",
             "phone": "1-882-360-2010",
-            "updated_at": parse_datetime("2020-10-01T04:11:25.070Z"),
+            "updated_at": parse_datetime("2020-10-01T08:47:21.669Z"),
             "website_url": "https://www.gulgowskidibbert.com",
         },
         "connection_id": "<id>",
@@ -1937,7 +1937,7 @@ with UnifiedTo(
 
 ## patch_ats_document
 
-Update a document
+Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -1959,10 +1959,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-08-20T08:00:27.437Z"),
             "document_url": "https://vengeful-lashes.biz",
             "filename": "lonzo_schowalter_resume.pdf",
-            "id": "bb7df27b-3a46-431f-a4d7-5f8398e0e9a6",
+            "id": "5631ea6c-256d-485c-af43-f26a1cbf1216",
             "metadata": [],
             "type": shared.AtsDocumentType.COVER_LETTER,
-            "updated_at": parse_datetime("2022-12-07T04:58:38.774Z"),
+            "updated_at": parse_datetime("2022-12-07T10:57:57.861Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1994,7 +1994,7 @@ with UnifiedTo(
 
 ## patch_ats_interview
 
-Update an interview
+Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in the request body.
 
 ### Example Usage
 
@@ -2015,13 +2015,13 @@ with UnifiedTo(
         "ats_interview": {
             "created_at": parse_datetime("2021-11-28T03:14:47.774Z"),
             "end_at": parse_datetime("2021-12-08T06:33:19.583Z"),
-            "id": "ea829ecb-45a9-4a25-b7c9-dbb578bd83bb",
+            "id": "233684a9-a898-473b-a48f-b075574510d6",
             "location": "26596 Halle Trafficway",
             "meeting_url": "https://immaculate-foodstuffs.biz",
             "metadata": [],
             "start_at": parse_datetime("2021-12-08T06:03:19.583Z"),
             "status": shared.AtsInterviewStatus.SCHEDULED,
-            "updated_at": parse_datetime("2023-09-23T16:37:18.644Z"),
+            "updated_at": parse_datetime("2023-09-24T01:29:20.706Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2053,7 +2053,7 @@ with UnifiedTo(
 
 ## patch_ats_job
 
-Update a job
+Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request body.
 
 ### Example Usage
 
@@ -2102,7 +2102,7 @@ with UnifiedTo(
             "description": "Global",
             "employment_type": shared.EmploymentType.FREELANCE,
             "hiring_managers": [],
-            "id": "5d34a61a-1e4a-4ab6-b66c-1be6e5d9b7fc",
+            "id": "9a66fe38-546a-43c1-a6e2-64e49af50e1a",
             "industry": "Handcrafted Bamboo Soap",
             "language_locale": "en",
             "metadata": [
@@ -2111,7 +2111,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "32cda706-335c-49ef-a6b0-14f6a1c0bd7c",
+                    "id": "133a3986-25d9-47c6-948f-1b6cee5cf06c",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "desolo",
@@ -2124,7 +2124,7 @@ with UnifiedTo(
             "openings": [
                 {
                     "close_reason": "Admoveo trado textilis.",
-                    "opened_at": parse_datetime("2026-06-07T21:23:37.323Z"),
+                    "opened_at": parse_datetime("2026-06-08T18:36:46.273Z"),
                     "status": shared.AtsJobOpeningStatus.OPEN,
                 },
             ],
@@ -2138,14 +2138,14 @@ with UnifiedTo(
                         "region": "Wisconsin",
                         "region_code": "CO",
                     },
-                    "created_at": parse_datetime("2026-08-02T00:24:41.925Z"),
+                    "created_at": parse_datetime("2026-08-02T22:42:23.571Z"),
                     "description": "Beatus eum volutabrum balbus victus ipsa tubineus claustrum.",
-                    "id": "f1ba3e64-d9ba-41f2-925b-88b51d905251",
+                    "id": "539d9969-b0aa-4be3-8f98-1de80d87ee85",
                     "is_active": False,
                     "location": "1725 Hessel Keys",
                     "name": "International Identity Manager",
                     "posting_url": "https://obedient-yak.com",
-                    "updated_at": parse_datetime("2026-08-28T07:47:34.897Z"),
+                    "updated_at": parse_datetime("2026-08-29T06:36:04.703Z"),
                 },
             ],
             "public_job_urls": [
@@ -2155,7 +2155,7 @@ with UnifiedTo(
             "questions": [
                 {
                     "description": "Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado.",
-                    "id": "c1bf2bc5-f39c-4807-97d5-9099eae0ece1",
+                    "id": "f6c9e280-dc94-4f9f-8f68-2d9380362403",
                     "max_length": 117.0,
                     "min_length": 1.0,
                     "options": [
@@ -2168,7 +2168,7 @@ with UnifiedTo(
                     "type": shared.AtsJobQuestionType.TEXT,
                 },
                 {
-                    "id": "15c8ed80-3a14-407c-b4ab-3c5701c80ee9",
+                    "id": "c763b368-3f14-4a1b-abf1-d64283996603",
                     "max_length": 453.0,
                     "min_length": 1.0,
                     "options": [
@@ -2181,7 +2181,7 @@ with UnifiedTo(
                 },
                 {
                     "description": "Taceo rem compello spectaculum mollitia arcus compello.",
-                    "id": "4d682ebe-2e5b-4be3-b67a-b9658a10394a",
+                    "id": "9bff608e-1937-49d0-ba78-9df903fcdc1f",
                     "max_length": 66.0,
                     "min_length": 1.0,
                     "options": [
@@ -2199,7 +2199,7 @@ with UnifiedTo(
             ],
             "status": shared.AtsJobStatus.ARCHIVED,
             "summary": "Crepusculum adsuesco vere.",
-            "updated_at": parse_datetime("2026-02-27T09:43:12.562Z"),
+            "updated_at": parse_datetime("2026-02-28T04:58:42.136Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2231,7 +2231,7 @@ with UnifiedTo(
 
 ## patch_ats_scorecard
 
-Update a scorecard
+Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in the request body.
 
 ### Example Usage
 
@@ -2252,7 +2252,7 @@ with UnifiedTo(
         "ats_scorecard": {
             "comment": "Maiores enim.",
             "created_at": parse_datetime("2022-02-20T17:09:45.498Z"),
-            "id": "8599f5f7-5ae9-4b70-829f-e8272e18818d",
+            "id": "03c41823-53e4-40f4-ad4a-ea8f6aacc6f7",
             "metadata": [],
             "questions": [
                 {
@@ -2266,7 +2266,7 @@ with UnifiedTo(
                 },
             ],
             "recommendation": shared.Recommendation.STRONG_YES,
-            "updated_at": parse_datetime("2023-06-05T13:38:40.492Z"),
+            "updated_at": parse_datetime("2023-06-05T20:13:30.679Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2298,7 +2298,7 @@ with UnifiedTo(
 
 ## remove_ats_activity
 
-Remove an activity
+Deletes the AtsActivity identified by `id`.
 
 ### Example Usage
 
@@ -2345,7 +2345,7 @@ with UnifiedTo(
 
 ## remove_ats_application
 
-Remove an application
+Deletes the AtsApplication identified by `id`.
 
 ### Example Usage
 
@@ -2392,7 +2392,7 @@ with UnifiedTo(
 
 ## remove_ats_candidate
 
-Remove a candidate
+Deletes the AtsCandidate identified by `id`.
 
 ### Example Usage
 
@@ -2439,7 +2439,7 @@ with UnifiedTo(
 
 ## remove_ats_company
 
-Remove a company
+Deletes the AtsCompany identified by `id`.
 
 ### Example Usage
 
@@ -2486,7 +2486,7 @@ with UnifiedTo(
 
 ## remove_ats_document
 
-Remove a document
+Deletes the AtsDocument identified by `id`.
 
 ### Example Usage
 
@@ -2533,7 +2533,7 @@ with UnifiedTo(
 
 ## remove_ats_interview
 
-Remove an interview
+Deletes the AtsInterview identified by `id`.
 
 ### Example Usage
 
@@ -2580,7 +2580,7 @@ with UnifiedTo(
 
 ## remove_ats_job
 
-Remove a job
+Deletes the AtsJob identified by `id`.
 
 ### Example Usage
 
@@ -2627,7 +2627,7 @@ with UnifiedTo(
 
 ## remove_ats_scorecard
 
-Remove a scorecard
+Deletes the AtsScorecard identified by `id`.
 
 ### Example Usage
 
@@ -2674,7 +2674,7 @@ with UnifiedTo(
 
 ## update_ats_activity
 
-Update an activity
+Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the request body.
 
 ### Example Usage
 
@@ -2695,7 +2695,7 @@ with UnifiedTo(
         "ats_activity": {
             "created_at": parse_datetime("2022-08-07T03:16:43.865Z"),
             "description": "Sapiente.",
-            "id": "63e5469f-6bde-4fc0-aa25-9df6dd1ed565",
+            "id": "36bdb311-6067-41a5-ab75-6998e9b203d4",
             "is_private": False,
             "metadata": [
                 {
@@ -2703,7 +2703,7 @@ with UnifiedTo(
 
                     },
                     "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "91cf4e1f-d934-4511-9c1e-930e4e9d1404",
+                    "id": "578f731c-d74a-4d7c-a885-88f5ca8458ed",
                     "namespace": "activity",
                     "slug": "cimentarius",
                     "value": "Reprehenderit verto.",
@@ -2712,7 +2712,7 @@ with UnifiedTo(
             "sub_type": "TASK",
             "title": "Venio blandior aureus.",
             "type": shared.AtsActivityType.TASK,
-            "updated_at": parse_datetime("2026-04-04T06:33:50.681Z"),
+            "updated_at": parse_datetime("2026-04-05T03:19:02.987Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2744,7 +2744,7 @@ with UnifiedTo(
 
 ## update_ats_application
 
-Update an application
+Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change in the request body.
 
 ### Example Usage
 
@@ -2764,17 +2764,17 @@ with UnifiedTo(
     res = unified_to.ats.update_ats_application(request={
         "ats_application": {
             "answers": [],
-            "applied_at": parse_datetime("2025-09-29T18:38:27.368Z"),
+            "applied_at": parse_datetime("2025-09-30T10:07:05.985Z"),
             "created_at": parse_datetime("2023-10-17T07:19:48.787Z"),
-            "hired_at": parse_datetime("2026-05-12T18:26:15.830Z"),
-            "id": "e191ba0a-9c3b-4d82-ab5b-223b65befa0a",
+            "hired_at": parse_datetime("2026-05-13T14:47:45.185Z"),
+            "id": "4be98c80-0842-49db-af54-a6568bd8bde2",
             "metadata": [
                 {
                     "extra_data": {
 
                     },
                     "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "e488328a-175e-4b51-952f-7f0e4f54e681",
+                    "id": "69265a38-6757-4b66-b686-94690afae256",
                     "namespace": "application",
                     "slug": "stella",
                     "value": "Caput.",
@@ -2783,12 +2783,12 @@ with UnifiedTo(
             "offers": [],
             "original_status": "vomica",
             "original_substatus": "allatus",
-            "rejected_at": parse_datetime("2026-10-11T13:02:04.118Z"),
+            "rejected_at": parse_datetime("2026-10-12T12:41:06.348Z"),
             "rejected_reason": "Cometes amplitudo videlicet talio.",
             "source": "credo",
             "status": shared.AtsApplicationStatus.REVIEWING,
             "summary": "Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.",
-            "updated_at": parse_datetime("2026-10-18T09:16:18.549Z"),
+            "updated_at": parse_datetime("2026-10-19T09:04:15.201Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2820,7 +2820,7 @@ with UnifiedTo(
 
 ## update_ats_candidate
 
-Update a candidate
+Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in the request body.
 
 ### Example Usage
 
@@ -2890,7 +2890,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Ardith",
-            "id": "f8c3986e-ed87-4952-b5af-9ee7d02a0118",
+            "id": "33c70965-b05d-40b8-a4f6-7140edb9bf1b",
             "image_url": "https://avatars.githubusercontent.com/u/27464445",
             "job_ids": [],
             "last_name": "Beatty",
@@ -2903,7 +2903,7 @@ with UnifiedTo(
 
                     },
                     "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "0985bb29-678c-4e1f-a509-dc7855ae8d34",
+                    "id": "d21457b0-099d-4edc-b53c-7a891e833870",
                     "namespace": "custom",
                     "slug": "custom_field",
                     "value": "officia",
@@ -2930,7 +2930,7 @@ with UnifiedTo(
                 },
             ],
             "title": "Customer Division Producer",
-            "updated_at": parse_datetime("2024-04-28T17:46:38.414Z"),
+            "updated_at": parse_datetime("2024-04-28T22:00:51.397Z"),
             "web_url": "https://fragrant-husband.net/",
         },
         "connection_id": "<id>",
@@ -2963,7 +2963,7 @@ with UnifiedTo(
 
 ## update_ats_company
 
-Update a company
+Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -2983,10 +2983,10 @@ with UnifiedTo(
     res = unified_to.ats.update_ats_company(request={
         "ats_company": {
             "created_at": parse_datetime("2019-04-22T03:50:02.920Z"),
-            "id": "ddb9cba7-1919-4a13-b0ba-b3bd702d1efd",
+            "id": "9919fbbc-af06-4156-8ed3-2d8d682ca7e2",
             "name": "Gulgowski, Dibbert and Wilderman",
             "phone": "1-882-360-2010",
-            "updated_at": parse_datetime("2020-10-01T04:11:25.070Z"),
+            "updated_at": parse_datetime("2020-10-01T08:47:21.669Z"),
             "website_url": "https://www.gulgowskidibbert.com",
         },
         "connection_id": "<id>",
@@ -3019,7 +3019,7 @@ with UnifiedTo(
 
 ## update_ats_document
 
-Update a document
+Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -3041,10 +3041,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-08-20T08:00:27.437Z"),
             "document_url": "https://vengeful-lashes.biz",
             "filename": "lonzo_schowalter_resume.pdf",
-            "id": "bb7df27b-3a46-431f-a4d7-5f8398e0e9a6",
+            "id": "5631ea6c-256d-485c-af43-f26a1cbf1216",
             "metadata": [],
             "type": shared.AtsDocumentType.COVER_LETTER,
-            "updated_at": parse_datetime("2022-12-07T04:58:38.774Z"),
+            "updated_at": parse_datetime("2022-12-07T10:57:57.861Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -3076,7 +3076,7 @@ with UnifiedTo(
 
 ## update_ats_interview
 
-Update an interview
+Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in the request body.
 
 ### Example Usage
 
@@ -3097,13 +3097,13 @@ with UnifiedTo(
         "ats_interview": {
             "created_at": parse_datetime("2021-11-28T03:14:47.774Z"),
             "end_at": parse_datetime("2021-12-08T06:33:19.583Z"),
-            "id": "ea829ecb-45a9-4a25-b7c9-dbb578bd83bb",
+            "id": "233684a9-a898-473b-a48f-b075574510d6",
             "location": "26596 Halle Trafficway",
             "meeting_url": "https://immaculate-foodstuffs.biz",
             "metadata": [],
             "start_at": parse_datetime("2021-12-08T06:03:19.583Z"),
             "status": shared.AtsInterviewStatus.SCHEDULED,
-            "updated_at": parse_datetime("2023-09-23T16:37:18.644Z"),
+            "updated_at": parse_datetime("2023-09-24T01:29:20.706Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -3135,7 +3135,7 @@ with UnifiedTo(
 
 ## update_ats_job
 
-Update a job
+Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request body.
 
 ### Example Usage
 
@@ -3184,7 +3184,7 @@ with UnifiedTo(
             "description": "Global",
             "employment_type": shared.EmploymentType.FREELANCE,
             "hiring_managers": [],
-            "id": "5d34a61a-1e4a-4ab6-b66c-1be6e5d9b7fc",
+            "id": "9a66fe38-546a-43c1-a6e2-64e49af50e1a",
             "industry": "Handcrafted Bamboo Soap",
             "language_locale": "en",
             "metadata": [
@@ -3193,7 +3193,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "32cda706-335c-49ef-a6b0-14f6a1c0bd7c",
+                    "id": "133a3986-25d9-47c6-948f-1b6cee5cf06c",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "desolo",
@@ -3206,7 +3206,7 @@ with UnifiedTo(
             "openings": [
                 {
                     "close_reason": "Admoveo trado textilis.",
-                    "opened_at": parse_datetime("2026-06-07T21:23:37.323Z"),
+                    "opened_at": parse_datetime("2026-06-08T18:36:46.273Z"),
                     "status": shared.AtsJobOpeningStatus.OPEN,
                 },
             ],
@@ -3220,14 +3220,14 @@ with UnifiedTo(
                         "region": "Wisconsin",
                         "region_code": "CO",
                     },
-                    "created_at": parse_datetime("2026-08-02T00:24:41.925Z"),
+                    "created_at": parse_datetime("2026-08-02T22:42:23.571Z"),
                     "description": "Beatus eum volutabrum balbus victus ipsa tubineus claustrum.",
-                    "id": "f1ba3e64-d9ba-41f2-925b-88b51d905251",
+                    "id": "539d9969-b0aa-4be3-8f98-1de80d87ee85",
                     "is_active": False,
                     "location": "1725 Hessel Keys",
                     "name": "International Identity Manager",
                     "posting_url": "https://obedient-yak.com",
-                    "updated_at": parse_datetime("2026-08-28T07:47:34.897Z"),
+                    "updated_at": parse_datetime("2026-08-29T06:36:04.703Z"),
                 },
             ],
             "public_job_urls": [
@@ -3237,7 +3237,7 @@ with UnifiedTo(
             "questions": [
                 {
                     "description": "Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado.",
-                    "id": "c1bf2bc5-f39c-4807-97d5-9099eae0ece1",
+                    "id": "f6c9e280-dc94-4f9f-8f68-2d9380362403",
                     "max_length": 117.0,
                     "min_length": 1.0,
                     "options": [
@@ -3250,7 +3250,7 @@ with UnifiedTo(
                     "type": shared.AtsJobQuestionType.TEXT,
                 },
                 {
-                    "id": "15c8ed80-3a14-407c-b4ab-3c5701c80ee9",
+                    "id": "c763b368-3f14-4a1b-abf1-d64283996603",
                     "max_length": 453.0,
                     "min_length": 1.0,
                     "options": [
@@ -3263,7 +3263,7 @@ with UnifiedTo(
                 },
                 {
                     "description": "Taceo rem compello spectaculum mollitia arcus compello.",
-                    "id": "4d682ebe-2e5b-4be3-b67a-b9658a10394a",
+                    "id": "9bff608e-1937-49d0-ba78-9df903fcdc1f",
                     "max_length": 66.0,
                     "min_length": 1.0,
                     "options": [
@@ -3281,7 +3281,7 @@ with UnifiedTo(
             ],
             "status": shared.AtsJobStatus.ARCHIVED,
             "summary": "Crepusculum adsuesco vere.",
-            "updated_at": parse_datetime("2026-02-27T09:43:12.562Z"),
+            "updated_at": parse_datetime("2026-02-28T04:58:42.136Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -3313,7 +3313,7 @@ with UnifiedTo(
 
 ## update_ats_scorecard
 
-Update a scorecard
+Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in the request body.
 
 ### Example Usage
 
@@ -3334,7 +3334,7 @@ with UnifiedTo(
         "ats_scorecard": {
             "comment": "Maiores enim.",
             "created_at": parse_datetime("2022-02-20T17:09:45.498Z"),
-            "id": "8599f5f7-5ae9-4b70-829f-e8272e18818d",
+            "id": "03c41823-53e4-40f4-ad4a-ea8f6aacc6f7",
             "metadata": [],
             "questions": [
                 {
@@ -3348,7 +3348,7 @@ with UnifiedTo(
                 },
             ],
             "recommendation": shared.Recommendation.STRONG_YES,
-            "updated_at": parse_datetime("2023-06-05T13:38:40.492Z"),
+            "updated_at": parse_datetime("2023-06-05T20:13:30.679Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

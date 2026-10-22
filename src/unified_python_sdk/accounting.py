@@ -2,6 +2,7 @@
 
 from .basesdk import BaseSDK
 from typing import List, Mapping, Optional, Union, cast
+from typing_extensions import deprecated
 from unified_python_sdk import utils
 from unified_python_sdk._hooks import HookContext
 from unified_python_sdk.models import errors, operations, shared
@@ -23,6 +24,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAccountingAccountResponse:
         r"""Create an account
+
+        Creates a AccountingAccount. Provide the unified AccountingAccount fields in the request body; they are mapped to the provider's API. Returns the created AccountingAccount.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -125,6 +128,8 @@ class Accounting(BaseSDK):
     ) -> operations.CreateAccountingAccountResponse:
         r"""Create an account
 
+        Creates a AccountingAccount. Provide the unified AccountingAccount fields in the request body; they are mapped to the provider's API. Returns the created AccountingAccount.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -225,6 +230,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAccountingBankfeedaccountResponse:
         r"""Create a bankfeedaccount
+
+        Creates a AccountingBankfeedaccount. Provide the unified AccountingBankfeedaccount fields in the request body; they are mapped to the provider's API. Returns the created AccountingBankfeedaccount.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -327,6 +334,8 @@ class Accounting(BaseSDK):
     ) -> operations.CreateAccountingBankfeedaccountResponse:
         r"""Create a bankfeedaccount
 
+        Creates a AccountingBankfeedaccount. Provide the unified AccountingBankfeedaccount fields in the request body; they are mapped to the provider's API. Returns the created AccountingBankfeedaccount.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -427,6 +436,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAccountingBankfeedtransactionResponse:
         r"""Create a bankfeedtransaction
+
+        Creates a AccountingBankfeedtransaction. Provide the unified AccountingBankfeedtransaction fields in the request body; they are mapped to the provider's API. Returns the created AccountingBankfeedtransaction.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -529,6 +540,8 @@ class Accounting(BaseSDK):
     ) -> operations.CreateAccountingBankfeedtransactionResponse:
         r"""Create a bankfeedtransaction
 
+        Creates a AccountingBankfeedtransaction. Provide the unified AccountingBankfeedtransaction fields in the request body; they are mapped to the provider's API. Returns the created AccountingBankfeedtransaction.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -630,6 +643,8 @@ class Accounting(BaseSDK):
     ) -> operations.CreateAccountingBillResponse:
         r"""Create a bill
 
+        Creates a AccountingBill. Provide the unified AccountingBill fields in the request body; they are mapped to the provider's API. Returns the created AccountingBill.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -725,6 +740,8 @@ class Accounting(BaseSDK):
     ) -> operations.CreateAccountingBillResponse:
         r"""Create a bill
 
+        Creates a AccountingBill. Provide the unified AccountingBill fields in the request body; they are mapped to the provider's API. Returns the created AccountingBill.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -819,6 +836,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAccountingCategoryResponse:
         r"""Create a category
+
+        Creates a AccountingCategory. Provide the unified AccountingCategory fields in the request body; they are mapped to the provider's API. Returns the created AccountingCategory.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -921,6 +940,8 @@ class Accounting(BaseSDK):
     ) -> operations.CreateAccountingCategoryResponse:
         r"""Create a category
 
+        Creates a AccountingCategory. Provide the unified AccountingCategory fields in the request body; they are mapped to the provider's API. Returns the created AccountingCategory.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1021,6 +1042,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAccountingContactResponse:
         r"""Create a contact
+
+        Creates a AccountingContact. Provide the unified AccountingContact fields in the request body; they are mapped to the provider's API. Returns the created AccountingContact.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1123,6 +1146,8 @@ class Accounting(BaseSDK):
     ) -> operations.CreateAccountingContactResponse:
         r"""Create a contact
 
+        Creates a AccountingContact. Provide the unified AccountingContact fields in the request body; they are mapped to the provider's API. Returns the created AccountingContact.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1223,6 +1248,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAccountingCreditmemoResponse:
         r"""Create a creditmemo
+
+        Creates a AccountingCreditmemo. Provide the unified AccountingCreditmemo fields in the request body; they are mapped to the provider's API. Returns the created AccountingCreditmemo.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1325,6 +1352,8 @@ class Accounting(BaseSDK):
     ) -> operations.CreateAccountingCreditmemoResponse:
         r"""Create a creditmemo
 
+        Creates a AccountingCreditmemo. Provide the unified AccountingCreditmemo fields in the request body; they are mapped to the provider's API. Returns the created AccountingCreditmemo.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1425,6 +1454,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAccountingExpenseResponse:
         r"""Create an expense
+
+        Creates a AccountingExpense. Provide the unified AccountingExpense fields in the request body; they are mapped to the provider's API. Returns the created AccountingExpense.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1527,6 +1558,8 @@ class Accounting(BaseSDK):
     ) -> operations.CreateAccountingExpenseResponse:
         r"""Create an expense
 
+        Creates a AccountingExpense. Provide the unified AccountingExpense fields in the request body; they are mapped to the provider's API. Returns the created AccountingExpense.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1627,6 +1660,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAccountingExpensereportResponse:
         r"""Create an expensereport
+
+        Creates a AccountingExpensereport. Provide the unified AccountingExpensereport fields in the request body; they are mapped to the provider's API. Returns the created AccountingExpensereport.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1729,6 +1764,8 @@ class Accounting(BaseSDK):
     ) -> operations.CreateAccountingExpensereportResponse:
         r"""Create an expensereport
 
+        Creates a AccountingExpensereport. Provide the unified AccountingExpensereport fields in the request body; they are mapped to the provider's API. Returns the created AccountingExpensereport.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1829,6 +1866,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAccountingInvoiceResponse:
         r"""Create an invoice
+
+        Creates a AccountingInvoice. Provide the unified AccountingInvoice fields in the request body; they are mapped to the provider's API. Returns the created AccountingInvoice.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1931,6 +1970,8 @@ class Accounting(BaseSDK):
     ) -> operations.CreateAccountingInvoiceResponse:
         r"""Create an invoice
 
+        Creates a AccountingInvoice. Provide the unified AccountingInvoice fields in the request body; they are mapped to the provider's API. Returns the created AccountingInvoice.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2031,6 +2072,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAccountingJournalResponse:
         r"""Create a journal
+
+        Creates a AccountingJournal. Provide the unified AccountingJournal fields in the request body; they are mapped to the provider's API. Returns the created AccountingJournal.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2133,6 +2176,8 @@ class Accounting(BaseSDK):
     ) -> operations.CreateAccountingJournalResponse:
         r"""Create a journal
 
+        Creates a AccountingJournal. Provide the unified AccountingJournal fields in the request body; they are mapped to the provider's API. Returns the created AccountingJournal.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2220,6 +2265,9 @@ class Accounting(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
+    @deprecated(
+        "warning: ** DEPRECATED ** - This will be removed in a future release, please migrate away from it as soon as possible."
+    )
     def create_accounting_order(
         self,
         *,
@@ -2233,6 +2281,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAccountingOrderResponse:
         r"""Create an order
+
+        Creates a AccountingOrder. Provide the unified AccountingOrder fields in the request body; they are mapped to the provider's API. Returns the created AccountingOrder.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2315,6 +2365,9 @@ class Accounting(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
+    @deprecated(
+        "warning: ** DEPRECATED ** - This will be removed in a future release, please migrate away from it as soon as possible."
+    )
     async def create_accounting_order_async(
         self,
         *,
@@ -2328,6 +2381,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAccountingOrderResponse:
         r"""Create an order
+
+        Creates a AccountingOrder. Provide the unified AccountingOrder fields in the request body; they are mapped to the provider's API. Returns the created AccountingOrder.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2423,6 +2478,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAccountingPaymenttermResponse:
         r"""Create a paymentterm
+
+        Creates a AccountingPaymentterm. Provide the unified AccountingPaymentterm fields in the request body; they are mapped to the provider's API. Returns the created AccountingPaymentterm.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2525,6 +2582,8 @@ class Accounting(BaseSDK):
     ) -> operations.CreateAccountingPaymenttermResponse:
         r"""Create a paymentterm
 
+        Creates a AccountingPaymentterm. Provide the unified AccountingPaymentterm fields in the request body; they are mapped to the provider's API. Returns the created AccountingPaymentterm.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2625,6 +2684,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAccountingProjectResponse:
         r"""Create a project
+
+        Creates a AccountingProject. Provide the unified AccountingProject fields in the request body; they are mapped to the provider's API. Returns the created AccountingProject.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2727,6 +2788,8 @@ class Accounting(BaseSDK):
     ) -> operations.CreateAccountingProjectResponse:
         r"""Create a project
 
+        Creates a AccountingProject. Provide the unified AccountingProject fields in the request body; they are mapped to the provider's API. Returns the created AccountingProject.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2827,6 +2890,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAccountingPurchaseorderResponse:
         r"""Create a purchaseorder
+
+        Creates a AccountingPurchaseorder. Provide the unified AccountingPurchaseorder fields in the request body; they are mapped to the provider's API. Returns the created AccountingPurchaseorder.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2929,6 +2994,8 @@ class Accounting(BaseSDK):
     ) -> operations.CreateAccountingPurchaseorderResponse:
         r"""Create a purchaseorder
 
+        Creates a AccountingPurchaseorder. Provide the unified AccountingPurchaseorder fields in the request body; they are mapped to the provider's API. Returns the created AccountingPurchaseorder.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3030,6 +3097,8 @@ class Accounting(BaseSDK):
     ) -> operations.CreateAccountingQuoteResponse:
         r"""Create a quote
 
+        Creates a AccountingQuote. Provide the unified AccountingQuote fields in the request body; they are mapped to the provider's API. Returns the created AccountingQuote.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3125,6 +3194,8 @@ class Accounting(BaseSDK):
     ) -> operations.CreateAccountingQuoteResponse:
         r"""Create a quote
 
+        Creates a AccountingQuote. Provide the unified AccountingQuote fields in the request body; they are mapped to the provider's API. Returns the created AccountingQuote.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3219,6 +3290,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAccountingSalesorderResponse:
         r"""Create a salesorder
+
+        Creates a AccountingSalesorder. Provide the unified AccountingSalesorder fields in the request body; they are mapped to the provider's API. Returns the created AccountingSalesorder.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3321,6 +3394,8 @@ class Accounting(BaseSDK):
     ) -> operations.CreateAccountingSalesorderResponse:
         r"""Create a salesorder
 
+        Creates a AccountingSalesorder. Provide the unified AccountingSalesorder fields in the request body; they are mapped to the provider's API. Returns the created AccountingSalesorder.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3421,6 +3496,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAccountingTaxrateResponse:
         r"""Create a taxrate
+
+        Creates a AccountingTaxrate. Provide the unified AccountingTaxrate fields in the request body; they are mapped to the provider's API. Returns the created AccountingTaxrate.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3523,6 +3600,8 @@ class Accounting(BaseSDK):
     ) -> operations.CreateAccountingTaxrateResponse:
         r"""Create a taxrate
 
+        Creates a AccountingTaxrate. Provide the unified AccountingTaxrate fields in the request body; they are mapped to the provider's API. Returns the created AccountingTaxrate.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3623,6 +3702,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAccountingTransactionResponse:
         r"""Create a transaction
+
+        Creates a AccountingTransaction. Provide the unified AccountingTransaction fields in the request body; they are mapped to the provider's API. Returns the created AccountingTransaction.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3725,6 +3806,8 @@ class Accounting(BaseSDK):
     ) -> operations.CreateAccountingTransactionResponse:
         r"""Create a transaction
 
+        Creates a AccountingTransaction. Provide the unified AccountingTransaction fields in the request body; they are mapped to the provider's API. Returns the created AccountingTransaction.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3825,6 +3908,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAccountingVendorcreditResponse:
         r"""Create a vendorcredit
+
+        Creates a AccountingVendorcredit. Provide the unified AccountingVendorcredit fields in the request body; they are mapped to the provider's API. Returns the created AccountingVendorcredit.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3927,6 +4012,8 @@ class Accounting(BaseSDK):
     ) -> operations.CreateAccountingVendorcreditResponse:
         r"""Create a vendorcredit
 
+        Creates a AccountingVendorcredit. Provide the unified AccountingVendorcredit fields in the request body; they are mapped to the provider's API. Returns the created AccountingVendorcredit.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4028,6 +4115,8 @@ class Accounting(BaseSDK):
     ) -> operations.GetAccountingAccountResponse:
         r"""Retrieve an account
 
+        Retrieves a single AccountingAccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4120,6 +4209,8 @@ class Accounting(BaseSDK):
     ) -> operations.GetAccountingAccountResponse:
         r"""Retrieve an account
 
+        Retrieves a single AccountingAccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4211,6 +4302,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAccountingAgedpayableResponse:
         r"""Retrieve an agedpayable
+
+        Retrieves a single AccountingAgedpayable by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4306,6 +4399,8 @@ class Accounting(BaseSDK):
     ) -> operations.GetAccountingAgedpayableResponse:
         r"""Retrieve an agedpayable
 
+        Retrieves a single AccountingAgedpayable by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4399,6 +4494,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAccountingAgedreceivableResponse:
         r"""Retrieve an agedreceivable
+
+        Retrieves a single AccountingAgedreceivable by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4494,6 +4591,8 @@ class Accounting(BaseSDK):
     ) -> operations.GetAccountingAgedreceivableResponse:
         r"""Retrieve an agedreceivable
 
+        Retrieves a single AccountingAgedreceivable by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4587,6 +4686,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAccountingBalancesheetResponse:
         r"""Retrieve a balancesheet
+
+        Retrieves a single AccountingBalancesheet by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4682,6 +4783,8 @@ class Accounting(BaseSDK):
     ) -> operations.GetAccountingBalancesheetResponse:
         r"""Retrieve a balancesheet
 
+        Retrieves a single AccountingBalancesheet by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4775,6 +4878,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAccountingBankfeedaccountResponse:
         r"""Retrieve a bankfeedaccount
+
+        Retrieves a single AccountingBankfeedaccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4870,6 +4975,8 @@ class Accounting(BaseSDK):
     ) -> operations.GetAccountingBankfeedaccountResponse:
         r"""Retrieve a bankfeedaccount
 
+        Retrieves a single AccountingBankfeedaccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4963,6 +5070,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAccountingBankfeedtransactionResponse:
         r"""Retrieve a bankfeedtransaction
+
+        Retrieves a single AccountingBankfeedtransaction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -5058,6 +5167,8 @@ class Accounting(BaseSDK):
     ) -> operations.GetAccountingBankfeedtransactionResponse:
         r"""Retrieve a bankfeedtransaction
 
+        Retrieves a single AccountingBankfeedtransaction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5152,6 +5263,8 @@ class Accounting(BaseSDK):
     ) -> operations.GetAccountingBillResponse:
         r"""Retrieve a bill
 
+        Retrieves a single AccountingBill by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5243,6 +5356,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAccountingBillResponse:
         r"""Retrieve a bill
+
+        Retrieves a single AccountingBill by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -5336,6 +5451,8 @@ class Accounting(BaseSDK):
     ) -> operations.GetAccountingCashflowResponse:
         r"""Retrieve a cashflow
 
+        Retrieves a single AccountingCashflow by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5427,6 +5544,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAccountingCashflowResponse:
         r"""Retrieve a cashflow
+
+        Retrieves a single AccountingCashflow by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -5520,6 +5639,8 @@ class Accounting(BaseSDK):
     ) -> operations.GetAccountingCategoryResponse:
         r"""Retrieve a category
 
+        Retrieves a single AccountingCategory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5611,6 +5732,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAccountingCategoryResponse:
         r"""Retrieve a category
+
+        Retrieves a single AccountingCategory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -5704,6 +5827,8 @@ class Accounting(BaseSDK):
     ) -> operations.GetAccountingContactResponse:
         r"""Retrieve a contact
 
+        Retrieves a single AccountingContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5796,6 +5921,8 @@ class Accounting(BaseSDK):
     ) -> operations.GetAccountingContactResponse:
         r"""Retrieve a contact
 
+        Retrieves a single AccountingContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5887,6 +6014,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAccountingCreditmemoResponse:
         r"""Retrieve a creditmemo
+
+        Retrieves a single AccountingCreditmemo by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -5982,6 +6111,8 @@ class Accounting(BaseSDK):
     ) -> operations.GetAccountingCreditmemoResponse:
         r"""Retrieve a creditmemo
 
+        Retrieves a single AccountingCreditmemo by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6076,6 +6207,8 @@ class Accounting(BaseSDK):
     ) -> operations.GetAccountingExpenseResponse:
         r"""Retrieve an expense
 
+        Retrieves a single AccountingExpense by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6168,6 +6301,8 @@ class Accounting(BaseSDK):
     ) -> operations.GetAccountingExpenseResponse:
         r"""Retrieve an expense
 
+        Retrieves a single AccountingExpense by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6259,6 +6394,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAccountingExpensereportResponse:
         r"""Retrieve an expensereport
+
+        Retrieves a single AccountingExpensereport by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -6354,6 +6491,8 @@ class Accounting(BaseSDK):
     ) -> operations.GetAccountingExpensereportResponse:
         r"""Retrieve an expensereport
 
+        Retrieves a single AccountingExpensereport by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6448,6 +6587,8 @@ class Accounting(BaseSDK):
     ) -> operations.GetAccountingInvoiceResponse:
         r"""Retrieve an invoice
 
+        Retrieves a single AccountingInvoice by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6539,6 +6680,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAccountingInvoiceResponse:
         r"""Retrieve an invoice
+
+        Retrieves a single AccountingInvoice by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -6632,6 +6775,8 @@ class Accounting(BaseSDK):
     ) -> operations.GetAccountingJournalResponse:
         r"""Retrieve a journal
 
+        Retrieves a single AccountingJournal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6724,6 +6869,8 @@ class Accounting(BaseSDK):
     ) -> operations.GetAccountingJournalResponse:
         r"""Retrieve a journal
 
+        Retrieves a single AccountingJournal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6802,6 +6949,9 @@ class Accounting(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
+    @deprecated(
+        "warning: ** DEPRECATED ** - This will be removed in a future release, please migrate away from it as soon as possible."
+    )
     def get_accounting_order(
         self,
         *,
@@ -6815,6 +6965,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAccountingOrderResponse:
         r"""Retrieve an order
+
+        Retrieves a single AccountingOrder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -6894,6 +7046,9 @@ class Accounting(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
+    @deprecated(
+        "warning: ** DEPRECATED ** - This will be removed in a future release, please migrate away from it as soon as possible."
+    )
     async def get_accounting_order_async(
         self,
         *,
@@ -6907,6 +7062,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAccountingOrderResponse:
         r"""Retrieve an order
+
+        Retrieves a single AccountingOrder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -6999,6 +7156,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAccountingOrganizationResponse:
         r"""Retrieve an organization
+
+        Retrieves a single AccountingOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -7094,6 +7253,8 @@ class Accounting(BaseSDK):
     ) -> operations.GetAccountingOrganizationResponse:
         r"""Retrieve an organization
 
+        Retrieves a single AccountingOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7187,6 +7348,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAccountingPaymenttermResponse:
         r"""Retrieve a paymentterm
+
+        Retrieves a single AccountingPaymentterm by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -7282,6 +7445,8 @@ class Accounting(BaseSDK):
     ) -> operations.GetAccountingPaymenttermResponse:
         r"""Retrieve a paymentterm
 
+        Retrieves a single AccountingPaymentterm by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7375,6 +7540,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAccountingProfitlossResponse:
         r"""Retrieve a profitloss
+
+        Retrieves a single AccountingProfitloss by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -7470,6 +7637,8 @@ class Accounting(BaseSDK):
     ) -> operations.GetAccountingProfitlossResponse:
         r"""Retrieve a profitloss
 
+        Retrieves a single AccountingProfitloss by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7564,6 +7733,8 @@ class Accounting(BaseSDK):
     ) -> operations.GetAccountingProjectResponse:
         r"""Retrieve a project
 
+        Retrieves a single AccountingProject by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7656,6 +7827,8 @@ class Accounting(BaseSDK):
     ) -> operations.GetAccountingProjectResponse:
         r"""Retrieve a project
 
+        Retrieves a single AccountingProject by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7747,6 +7920,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAccountingPurchaseorderResponse:
         r"""Retrieve a purchaseorder
+
+        Retrieves a single AccountingPurchaseorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -7842,6 +8017,8 @@ class Accounting(BaseSDK):
     ) -> operations.GetAccountingPurchaseorderResponse:
         r"""Retrieve a purchaseorder
 
+        Retrieves a single AccountingPurchaseorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7935,6 +8112,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAccountingPurchasereceiptResponse:
         r"""Retrieve a purchasereceipt
+
+        Retrieves a single AccountingPurchasereceipt by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -8030,6 +8209,8 @@ class Accounting(BaseSDK):
     ) -> operations.GetAccountingPurchasereceiptResponse:
         r"""Retrieve a purchasereceipt
 
+        Retrieves a single AccountingPurchasereceipt by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -8124,6 +8305,8 @@ class Accounting(BaseSDK):
     ) -> operations.GetAccountingQuoteResponse:
         r"""Retrieve a quote
 
+        Retrieves a single AccountingQuote by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -8216,6 +8399,8 @@ class Accounting(BaseSDK):
     ) -> operations.GetAccountingQuoteResponse:
         r"""Retrieve a quote
 
+        Retrieves a single AccountingQuote by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -8307,6 +8492,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAccountingSalesorderResponse:
         r"""Retrieve a salesorder
+
+        Retrieves a single AccountingSalesorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -8402,6 +8589,8 @@ class Accounting(BaseSDK):
     ) -> operations.GetAccountingSalesorderResponse:
         r"""Retrieve a salesorder
 
+        Retrieves a single AccountingSalesorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -8495,6 +8684,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAccountingSalesreceiptResponse:
         r"""Retrieve a salesreceipt
+
+        Retrieves a single AccountingSalesreceipt by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -8590,6 +8781,8 @@ class Accounting(BaseSDK):
     ) -> operations.GetAccountingSalesreceiptResponse:
         r"""Retrieve a salesreceipt
 
+        Retrieves a single AccountingSalesreceipt by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -8684,6 +8877,8 @@ class Accounting(BaseSDK):
     ) -> operations.GetAccountingTaxrateResponse:
         r"""Retrieve a taxrate
 
+        Retrieves a single AccountingTaxrate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -8776,6 +8971,8 @@ class Accounting(BaseSDK):
     ) -> operations.GetAccountingTaxrateResponse:
         r"""Retrieve a taxrate
 
+        Retrieves a single AccountingTaxrate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -8867,6 +9064,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAccountingTransactionResponse:
         r"""Retrieve a transaction
+
+        Retrieves a single AccountingTransaction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -8962,6 +9161,8 @@ class Accounting(BaseSDK):
     ) -> operations.GetAccountingTransactionResponse:
         r"""Retrieve a transaction
 
+        Retrieves a single AccountingTransaction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -9055,6 +9256,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAccountingTrialbalanceResponse:
         r"""Retrieve a trialbalance
+
+        Retrieves a single AccountingTrialbalance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -9150,6 +9353,8 @@ class Accounting(BaseSDK):
     ) -> operations.GetAccountingTrialbalanceResponse:
         r"""Retrieve a trialbalance
 
+        Retrieves a single AccountingTrialbalance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -9243,6 +9448,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAccountingVendorcreditResponse:
         r"""Retrieve a vendorcredit
+
+        Retrieves a single AccountingVendorcredit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -9338,6 +9545,8 @@ class Accounting(BaseSDK):
     ) -> operations.GetAccountingVendorcreditResponse:
         r"""Retrieve a vendorcredit
 
+        Retrieves a single AccountingVendorcredit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -9432,6 +9641,8 @@ class Accounting(BaseSDK):
     ) -> operations.ListAccountingAccountsResponse:
         r"""List all accounts
 
+        Returns a list of AccountingAccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -9524,6 +9735,8 @@ class Accounting(BaseSDK):
     ) -> operations.ListAccountingAccountsResponse:
         r"""List all accounts
 
+        Returns a list of AccountingAccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -9615,6 +9828,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAccountingAgedpayablesResponse:
         r"""List all agedpayables
+
+        Returns a list of AccountingAgedpayables. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -9710,6 +9925,8 @@ class Accounting(BaseSDK):
     ) -> operations.ListAccountingAgedpayablesResponse:
         r"""List all agedpayables
 
+        Returns a list of AccountingAgedpayables. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -9803,6 +10020,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAccountingAgedreceivablesResponse:
         r"""List all agedreceivables
+
+        Returns a list of AccountingAgedreceivables. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -9898,6 +10117,8 @@ class Accounting(BaseSDK):
     ) -> operations.ListAccountingAgedreceivablesResponse:
         r"""List all agedreceivables
 
+        Returns a list of AccountingAgedreceivables. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -9991,6 +10212,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAccountingBalancesheetsResponse:
         r"""List all balancesheets
+
+        Returns a list of AccountingBalancesheets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -10086,6 +10309,8 @@ class Accounting(BaseSDK):
     ) -> operations.ListAccountingBalancesheetsResponse:
         r"""List all balancesheets
 
+        Returns a list of AccountingBalancesheets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -10179,6 +10404,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAccountingBankfeedaccountsResponse:
         r"""List all bankfeedaccounts
+
+        Returns a list of AccountingBankfeedaccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -10274,6 +10501,8 @@ class Accounting(BaseSDK):
     ) -> operations.ListAccountingBankfeedaccountsResponse:
         r"""List all bankfeedaccounts
 
+        Returns a list of AccountingBankfeedaccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -10367,6 +10596,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAccountingBankfeedtransactionsResponse:
         r"""List all bankfeedtransactions
+
+        Returns a list of AccountingBankfeedtransactions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -10462,6 +10693,8 @@ class Accounting(BaseSDK):
     ) -> operations.ListAccountingBankfeedtransactionsResponse:
         r"""List all bankfeedtransactions
 
+        Returns a list of AccountingBankfeedtransactions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -10556,6 +10789,8 @@ class Accounting(BaseSDK):
     ) -> operations.ListAccountingBillsResponse:
         r"""List all bills
 
+        Returns a list of AccountingBills. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -10648,6 +10883,8 @@ class Accounting(BaseSDK):
     ) -> operations.ListAccountingBillsResponse:
         r"""List all bills
 
+        Returns a list of AccountingBills. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -10739,6 +10976,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAccountingCashflowsResponse:
         r"""List all cashflows
+
+        Returns a list of AccountingCashflows. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -10834,6 +11073,8 @@ class Accounting(BaseSDK):
     ) -> operations.ListAccountingCashflowsResponse:
         r"""List all cashflows
 
+        Returns a list of AccountingCashflows. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -10927,6 +11168,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAccountingCategoriesResponse:
         r"""List all categories
+
+        Returns a list of AccountingCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -11022,6 +11265,8 @@ class Accounting(BaseSDK):
     ) -> operations.ListAccountingCategoriesResponse:
         r"""List all categories
 
+        Returns a list of AccountingCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -11116,6 +11361,8 @@ class Accounting(BaseSDK):
     ) -> operations.ListAccountingContactsResponse:
         r"""List all contacts
 
+        Returns a list of AccountingContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -11208,6 +11455,8 @@ class Accounting(BaseSDK):
     ) -> operations.ListAccountingContactsResponse:
         r"""List all contacts
 
+        Returns a list of AccountingContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -11299,6 +11548,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAccountingCreditmemoesResponse:
         r"""List all creditmemoes
+
+        Returns a list of AccountingCreditmemoes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -11394,6 +11645,8 @@ class Accounting(BaseSDK):
     ) -> operations.ListAccountingCreditmemoesResponse:
         r"""List all creditmemoes
 
+        Returns a list of AccountingCreditmemoes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -11487,6 +11740,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAccountingExpensereportsResponse:
         r"""List all expensereports
+
+        Returns a list of AccountingExpensereports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -11582,6 +11837,8 @@ class Accounting(BaseSDK):
     ) -> operations.ListAccountingExpensereportsResponse:
         r"""List all expensereports
 
+        Returns a list of AccountingExpensereports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -11676,6 +11933,8 @@ class Accounting(BaseSDK):
     ) -> operations.ListAccountingExpensesResponse:
         r"""List all expenses
 
+        Returns a list of AccountingExpenses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -11767,6 +12026,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAccountingExpensesResponse:
         r"""List all expenses
+
+        Returns a list of AccountingExpenses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -11860,6 +12121,8 @@ class Accounting(BaseSDK):
     ) -> operations.ListAccountingInvoicesResponse:
         r"""List all invoices
 
+        Returns a list of AccountingInvoices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -11951,6 +12214,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAccountingInvoicesResponse:
         r"""List all invoices
+
+        Returns a list of AccountingInvoices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -12044,6 +12309,8 @@ class Accounting(BaseSDK):
     ) -> operations.ListAccountingJournalsResponse:
         r"""List all journals
 
+        Returns a list of AccountingJournals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -12136,6 +12403,8 @@ class Accounting(BaseSDK):
     ) -> operations.ListAccountingJournalsResponse:
         r"""List all journals
 
+        Returns a list of AccountingJournals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -12214,6 +12483,9 @@ class Accounting(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
+    @deprecated(
+        "warning: ** DEPRECATED ** - This will be removed in a future release, please migrate away from it as soon as possible."
+    )
     def list_accounting_orders(
         self,
         *,
@@ -12227,6 +12499,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAccountingOrdersResponse:
         r"""List all orders
+
+        Returns a list of AccountingOrders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -12306,6 +12580,9 @@ class Accounting(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
+    @deprecated(
+        "warning: ** DEPRECATED ** - This will be removed in a future release, please migrate away from it as soon as possible."
+    )
     async def list_accounting_orders_async(
         self,
         *,
@@ -12319,6 +12596,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAccountingOrdersResponse:
         r"""List all orders
+
+        Returns a list of AccountingOrders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -12411,6 +12690,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAccountingOrganizationsResponse:
         r"""List all organizations
+
+        Returns a list of AccountingOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -12506,6 +12787,8 @@ class Accounting(BaseSDK):
     ) -> operations.ListAccountingOrganizationsResponse:
         r"""List all organizations
 
+        Returns a list of AccountingOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -12599,6 +12882,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAccountingPaymenttermsResponse:
         r"""List all paymentterms
+
+        Returns a list of AccountingPaymentterms. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -12694,6 +12979,8 @@ class Accounting(BaseSDK):
     ) -> operations.ListAccountingPaymenttermsResponse:
         r"""List all paymentterms
 
+        Returns a list of AccountingPaymentterms. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -12787,6 +13074,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAccountingProfitlossesResponse:
         r"""List all profitlosses
+
+        Returns a list of AccountingProfitlosses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -12882,6 +13171,8 @@ class Accounting(BaseSDK):
     ) -> operations.ListAccountingProfitlossesResponse:
         r"""List all profitlosses
 
+        Returns a list of AccountingProfitlosses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -12976,6 +13267,8 @@ class Accounting(BaseSDK):
     ) -> operations.ListAccountingProjectsResponse:
         r"""List all projects
 
+        Returns a list of AccountingProjects. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -13068,6 +13361,8 @@ class Accounting(BaseSDK):
     ) -> operations.ListAccountingProjectsResponse:
         r"""List all projects
 
+        Returns a list of AccountingProjects. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -13159,6 +13454,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAccountingPurchaseordersResponse:
         r"""List all purchaseorders
+
+        Returns a list of AccountingPurchaseorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -13254,6 +13551,8 @@ class Accounting(BaseSDK):
     ) -> operations.ListAccountingPurchaseordersResponse:
         r"""List all purchaseorders
 
+        Returns a list of AccountingPurchaseorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -13347,6 +13646,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAccountingPurchasereceiptsResponse:
         r"""List all purchasereceipts
+
+        Returns a list of AccountingPurchasereceipts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -13442,6 +13743,8 @@ class Accounting(BaseSDK):
     ) -> operations.ListAccountingPurchasereceiptsResponse:
         r"""List all purchasereceipts
 
+        Returns a list of AccountingPurchasereceipts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -13536,6 +13839,8 @@ class Accounting(BaseSDK):
     ) -> operations.ListAccountingQuotesResponse:
         r"""List all quotes
 
+        Returns a list of AccountingQuotes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -13628,6 +13933,8 @@ class Accounting(BaseSDK):
     ) -> operations.ListAccountingQuotesResponse:
         r"""List all quotes
 
+        Returns a list of AccountingQuotes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -13719,6 +14026,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAccountingSalesordersResponse:
         r"""List all salesorders
+
+        Returns a list of AccountingSalesorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -13814,6 +14123,8 @@ class Accounting(BaseSDK):
     ) -> operations.ListAccountingSalesordersResponse:
         r"""List all salesorders
 
+        Returns a list of AccountingSalesorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -13907,6 +14218,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAccountingSalesreceiptsResponse:
         r"""List all salesreceipts
+
+        Returns a list of AccountingSalesreceipts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -14002,6 +14315,8 @@ class Accounting(BaseSDK):
     ) -> operations.ListAccountingSalesreceiptsResponse:
         r"""List all salesreceipts
 
+        Returns a list of AccountingSalesreceipts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -14096,6 +14411,8 @@ class Accounting(BaseSDK):
     ) -> operations.ListAccountingTaxratesResponse:
         r"""List all taxrates
 
+        Returns a list of AccountingTaxrates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -14188,6 +14505,8 @@ class Accounting(BaseSDK):
     ) -> operations.ListAccountingTaxratesResponse:
         r"""List all taxrates
 
+        Returns a list of AccountingTaxrates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -14279,6 +14598,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAccountingTransactionsResponse:
         r"""List all transactions
+
+        Returns a list of AccountingTransactions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -14374,6 +14695,8 @@ class Accounting(BaseSDK):
     ) -> operations.ListAccountingTransactionsResponse:
         r"""List all transactions
 
+        Returns a list of AccountingTransactions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -14467,6 +14790,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAccountingTrialbalancesResponse:
         r"""List all trialbalances
+
+        Returns a list of AccountingTrialbalances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -14562,6 +14887,8 @@ class Accounting(BaseSDK):
     ) -> operations.ListAccountingTrialbalancesResponse:
         r"""List all trialbalances
 
+        Returns a list of AccountingTrialbalances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -14655,6 +14982,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAccountingVendorcreditsResponse:
         r"""List all vendorcredits
+
+        Returns a list of AccountingVendorcredits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -14750,6 +15079,8 @@ class Accounting(BaseSDK):
     ) -> operations.ListAccountingVendorcreditsResponse:
         r"""List all vendorcredits
 
+        Returns a list of AccountingVendorcredits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -14843,6 +15174,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAccountingAccountResponse:
         r"""Update an account
+
+        Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -14943,6 +15276,8 @@ class Accounting(BaseSDK):
     ) -> operations.PatchAccountingAccountResponse:
         r"""Update an account
 
+        Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -15041,6 +15376,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAccountingBankfeedaccountResponse:
         r"""Update a bankfeedaccount
+
+        Updates the AccountingBankfeedaccount identified by `id`. Provide the unified AccountingBankfeedaccount fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -15143,6 +15480,8 @@ class Accounting(BaseSDK):
     ) -> operations.PatchAccountingBankfeedaccountResponse:
         r"""Update a bankfeedaccount
 
+        Updates the AccountingBankfeedaccount identified by `id`. Provide the unified AccountingBankfeedaccount fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -15243,6 +15582,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAccountingBankfeedtransactionResponse:
         r"""Update a bankfeedtransaction
+
+        Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified AccountingBankfeedtransaction fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -15345,6 +15686,8 @@ class Accounting(BaseSDK):
     ) -> operations.PatchAccountingBankfeedtransactionResponse:
         r"""Update a bankfeedtransaction
 
+        Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified AccountingBankfeedtransaction fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -15446,6 +15789,8 @@ class Accounting(BaseSDK):
     ) -> operations.PatchAccountingBillResponse:
         r"""Update a bill
 
+        Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -15541,6 +15886,8 @@ class Accounting(BaseSDK):
     ) -> operations.PatchAccountingBillResponse:
         r"""Update a bill
 
+        Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -15635,6 +15982,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAccountingCategoryResponse:
         r"""Update a category
+
+        Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -15737,6 +16086,8 @@ class Accounting(BaseSDK):
     ) -> operations.PatchAccountingCategoryResponse:
         r"""Update a category
 
+        Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -15838,6 +16189,8 @@ class Accounting(BaseSDK):
     ) -> operations.PatchAccountingContactResponse:
         r"""Update a contact
 
+        Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -15937,6 +16290,8 @@ class Accounting(BaseSDK):
     ) -> operations.PatchAccountingContactResponse:
         r"""Update a contact
 
+        Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -16035,6 +16390,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAccountingCreditmemoResponse:
         r"""Update a creditmemo
+
+        Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -16137,6 +16494,8 @@ class Accounting(BaseSDK):
     ) -> operations.PatchAccountingCreditmemoResponse:
         r"""Update a creditmemo
 
+        Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -16238,6 +16597,8 @@ class Accounting(BaseSDK):
     ) -> operations.PatchAccountingExpenseResponse:
         r"""Update an expense
 
+        Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -16337,6 +16698,8 @@ class Accounting(BaseSDK):
     ) -> operations.PatchAccountingExpenseResponse:
         r"""Update an expense
 
+        Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -16435,6 +16798,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAccountingExpensereportResponse:
         r"""Update an expensereport
+
+        Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -16537,6 +16902,8 @@ class Accounting(BaseSDK):
     ) -> operations.PatchAccountingExpensereportResponse:
         r"""Update an expensereport
 
+        Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -16638,6 +17005,8 @@ class Accounting(BaseSDK):
     ) -> operations.PatchAccountingInvoiceResponse:
         r"""Update an invoice
 
+        Updates the AccountingInvoice identified by `id`. Provide the unified AccountingInvoice fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -16736,6 +17105,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAccountingInvoiceResponse:
         r"""Update an invoice
+
+        Updates the AccountingInvoice identified by `id`. Provide the unified AccountingInvoice fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -16836,6 +17207,8 @@ class Accounting(BaseSDK):
     ) -> operations.PatchAccountingJournalResponse:
         r"""Update a journal
 
+        Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -16935,6 +17308,8 @@ class Accounting(BaseSDK):
     ) -> operations.PatchAccountingJournalResponse:
         r"""Update a journal
 
+        Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -17020,6 +17395,9 @@ class Accounting(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
+    @deprecated(
+        "warning: ** DEPRECATED ** - This will be removed in a future release, please migrate away from it as soon as possible."
+    )
     def patch_accounting_order(
         self,
         *,
@@ -17033,6 +17411,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAccountingOrderResponse:
         r"""Update an order
+
+        Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -17115,6 +17495,9 @@ class Accounting(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
+    @deprecated(
+        "warning: ** DEPRECATED ** - This will be removed in a future release, please migrate away from it as soon as possible."
+    )
     async def patch_accounting_order_async(
         self,
         *,
@@ -17128,6 +17511,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAccountingOrderResponse:
         r"""Update an order
+
+        Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -17223,6 +17608,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAccountingPaymenttermResponse:
         r"""Update a paymentterm
+
+        Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -17325,6 +17712,8 @@ class Accounting(BaseSDK):
     ) -> operations.PatchAccountingPaymenttermResponse:
         r"""Update a paymentterm
 
+        Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -17426,6 +17815,8 @@ class Accounting(BaseSDK):
     ) -> operations.PatchAccountingProjectResponse:
         r"""Update a project
 
+        Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -17525,6 +17916,8 @@ class Accounting(BaseSDK):
     ) -> operations.PatchAccountingProjectResponse:
         r"""Update a project
 
+        Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -17623,6 +18016,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAccountingPurchaseorderResponse:
         r"""Update a purchaseorder
+
+        Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -17725,6 +18120,8 @@ class Accounting(BaseSDK):
     ) -> operations.PatchAccountingPurchaseorderResponse:
         r"""Update a purchaseorder
 
+        Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -17826,6 +18223,8 @@ class Accounting(BaseSDK):
     ) -> operations.PatchAccountingQuoteResponse:
         r"""Update a quote
 
+        Updates the AccountingQuote identified by `id`. Provide the unified AccountingQuote fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -17921,6 +18320,8 @@ class Accounting(BaseSDK):
     ) -> operations.PatchAccountingQuoteResponse:
         r"""Update a quote
 
+        Updates the AccountingQuote identified by `id`. Provide the unified AccountingQuote fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -18015,6 +18416,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAccountingSalesorderResponse:
         r"""Update a salesorder
+
+        Updates the AccountingSalesorder identified by `id`. Provide the unified AccountingSalesorder fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -18117,6 +18520,8 @@ class Accounting(BaseSDK):
     ) -> operations.PatchAccountingSalesorderResponse:
         r"""Update a salesorder
 
+        Updates the AccountingSalesorder identified by `id`. Provide the unified AccountingSalesorder fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -18218,6 +18623,8 @@ class Accounting(BaseSDK):
     ) -> operations.PatchAccountingTaxrateResponse:
         r"""Update a taxrate
 
+        Updates the AccountingTaxrate identified by `id`. Provide the unified AccountingTaxrate fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -18317,6 +18724,8 @@ class Accounting(BaseSDK):
     ) -> operations.PatchAccountingTaxrateResponse:
         r"""Update a taxrate
 
+        Updates the AccountingTaxrate identified by `id`. Provide the unified AccountingTaxrate fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -18415,6 +18824,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAccountingTransactionResponse:
         r"""Update a transaction
+
+        Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -18517,6 +18928,8 @@ class Accounting(BaseSDK):
     ) -> operations.PatchAccountingTransactionResponse:
         r"""Update a transaction
 
+        Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -18617,6 +19030,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAccountingVendorcreditResponse:
         r"""Update a vendorcredit
+
+        Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -18719,6 +19134,8 @@ class Accounting(BaseSDK):
     ) -> operations.PatchAccountingVendorcreditResponse:
         r"""Update a vendorcredit
 
+        Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -18820,6 +19237,8 @@ class Accounting(BaseSDK):
     ) -> operations.RemoveAccountingAccountResponse:
         r"""Remove an account
 
+        Deletes the AccountingAccount identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -18918,6 +19337,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAccountingAccountResponse:
         r"""Remove an account
+
+        Deletes the AccountingAccount identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -19018,6 +19439,8 @@ class Accounting(BaseSDK):
     ) -> operations.RemoveAccountingBankfeedaccountResponse:
         r"""Remove a bankfeedaccount
 
+        Deletes the AccountingBankfeedaccount identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -19116,6 +19539,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAccountingBankfeedaccountResponse:
         r"""Remove a bankfeedaccount
+
+        Deletes the AccountingBankfeedaccount identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -19216,6 +19641,8 @@ class Accounting(BaseSDK):
     ) -> operations.RemoveAccountingBankfeedtransactionResponse:
         r"""Remove a bankfeedtransaction
 
+        Deletes the AccountingBankfeedtransaction identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -19314,6 +19741,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAccountingBankfeedtransactionResponse:
         r"""Remove a bankfeedtransaction
+
+        Deletes the AccountingBankfeedtransaction identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -19414,6 +19843,8 @@ class Accounting(BaseSDK):
     ) -> operations.RemoveAccountingBillResponse:
         r"""Remove a bill
 
+        Deletes the AccountingBill identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -19511,6 +19942,8 @@ class Accounting(BaseSDK):
     ) -> operations.RemoveAccountingBillResponse:
         r"""Remove a bill
 
+        Deletes the AccountingBill identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -19607,6 +20040,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAccountingCategoryResponse:
         r"""Remove a category
+
+        Deletes the AccountingCategory identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -19707,6 +20142,8 @@ class Accounting(BaseSDK):
     ) -> operations.RemoveAccountingCategoryResponse:
         r"""Remove a category
 
+        Deletes the AccountingCategory identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -19805,6 +20242,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAccountingContactResponse:
         r"""Remove a contact
+
+        Deletes the AccountingContact identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -19905,6 +20344,8 @@ class Accounting(BaseSDK):
     ) -> operations.RemoveAccountingContactResponse:
         r"""Remove a contact
 
+        Deletes the AccountingContact identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -20003,6 +20444,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAccountingCreditmemoResponse:
         r"""Remove a creditmemo
+
+        Deletes the AccountingCreditmemo identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -20103,6 +20546,8 @@ class Accounting(BaseSDK):
     ) -> operations.RemoveAccountingCreditmemoResponse:
         r"""Remove a creditmemo
 
+        Deletes the AccountingCreditmemo identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -20201,6 +20646,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAccountingExpenseResponse:
         r"""Remove an expense
+
+        Deletes the AccountingExpense identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -20301,6 +20748,8 @@ class Accounting(BaseSDK):
     ) -> operations.RemoveAccountingExpenseResponse:
         r"""Remove an expense
 
+        Deletes the AccountingExpense identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -20399,6 +20848,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAccountingExpensereportResponse:
         r"""Remove an expensereport
+
+        Deletes the AccountingExpensereport identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -20499,6 +20950,8 @@ class Accounting(BaseSDK):
     ) -> operations.RemoveAccountingExpensereportResponse:
         r"""Remove an expensereport
 
+        Deletes the AccountingExpensereport identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -20597,6 +21050,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAccountingInvoiceResponse:
         r"""Remove an invoice
+
+        Deletes the AccountingInvoice identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -20697,6 +21152,8 @@ class Accounting(BaseSDK):
     ) -> operations.RemoveAccountingInvoiceResponse:
         r"""Remove an invoice
 
+        Deletes the AccountingInvoice identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -20795,6 +21252,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAccountingJournalResponse:
         r"""Remove a journal
+
+        Deletes the AccountingJournal identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -20895,6 +21354,8 @@ class Accounting(BaseSDK):
     ) -> operations.RemoveAccountingJournalResponse:
         r"""Remove a journal
 
+        Deletes the AccountingJournal identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -20980,6 +21441,9 @@ class Accounting(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
+    @deprecated(
+        "warning: ** DEPRECATED ** - This will be removed in a future release, please migrate away from it as soon as possible."
+    )
     def remove_accounting_order(
         self,
         *,
@@ -20993,6 +21457,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAccountingOrderResponse:
         r"""Remove an order
+
+        Deletes the AccountingOrder identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -21077,6 +21543,9 @@ class Accounting(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
+    @deprecated(
+        "warning: ** DEPRECATED ** - This will be removed in a future release, please migrate away from it as soon as possible."
+    )
     async def remove_accounting_order_async(
         self,
         *,
@@ -21090,6 +21559,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAccountingOrderResponse:
         r"""Remove an order
+
+        Deletes the AccountingOrder identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -21187,6 +21658,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAccountingPaymenttermResponse:
         r"""Remove a paymentterm
+
+        Deletes the AccountingPaymentterm identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -21287,6 +21760,8 @@ class Accounting(BaseSDK):
     ) -> operations.RemoveAccountingPaymenttermResponse:
         r"""Remove a paymentterm
 
+        Deletes the AccountingPaymentterm identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -21385,6 +21860,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAccountingProjectResponse:
         r"""Remove a project
+
+        Deletes the AccountingProject identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -21485,6 +21962,8 @@ class Accounting(BaseSDK):
     ) -> operations.RemoveAccountingProjectResponse:
         r"""Remove a project
 
+        Deletes the AccountingProject identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -21583,6 +22062,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAccountingPurchaseorderResponse:
         r"""Remove a purchaseorder
+
+        Deletes the AccountingPurchaseorder identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -21683,6 +22164,8 @@ class Accounting(BaseSDK):
     ) -> operations.RemoveAccountingPurchaseorderResponse:
         r"""Remove a purchaseorder
 
+        Deletes the AccountingPurchaseorder identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -21782,6 +22265,8 @@ class Accounting(BaseSDK):
     ) -> operations.RemoveAccountingQuoteResponse:
         r"""Remove a quote
 
+        Deletes the AccountingQuote identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -21879,6 +22364,8 @@ class Accounting(BaseSDK):
     ) -> operations.RemoveAccountingQuoteResponse:
         r"""Remove a quote
 
+        Deletes the AccountingQuote identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -21975,6 +22462,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAccountingSalesorderResponse:
         r"""Remove a salesorder
+
+        Deletes the AccountingSalesorder identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -22075,6 +22564,8 @@ class Accounting(BaseSDK):
     ) -> operations.RemoveAccountingSalesorderResponse:
         r"""Remove a salesorder
 
+        Deletes the AccountingSalesorder identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -22173,6 +22664,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAccountingTaxrateResponse:
         r"""Remove a taxrate
+
+        Deletes the AccountingTaxrate identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -22273,6 +22766,8 @@ class Accounting(BaseSDK):
     ) -> operations.RemoveAccountingTaxrateResponse:
         r"""Remove a taxrate
 
+        Deletes the AccountingTaxrate identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -22371,6 +22866,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAccountingTransactionResponse:
         r"""Remove a transaction
+
+        Deletes the AccountingTransaction identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -22471,6 +22968,8 @@ class Accounting(BaseSDK):
     ) -> operations.RemoveAccountingTransactionResponse:
         r"""Remove a transaction
 
+        Deletes the AccountingTransaction identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -22569,6 +23068,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAccountingVendorcreditResponse:
         r"""Remove a vendorcredit
+
+        Deletes the AccountingVendorcredit identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -22669,6 +23170,8 @@ class Accounting(BaseSDK):
     ) -> operations.RemoveAccountingVendorcreditResponse:
         r"""Remove a vendorcredit
 
+        Deletes the AccountingVendorcredit identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -22767,6 +23270,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAccountingAccountResponse:
         r"""Update an account
+
+        Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -22869,6 +23374,8 @@ class Accounting(BaseSDK):
     ) -> operations.UpdateAccountingAccountResponse:
         r"""Update an account
 
+        Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -22969,6 +23476,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAccountingBankfeedaccountResponse:
         r"""Update a bankfeedaccount
+
+        Updates the AccountingBankfeedaccount identified by `id`. Provide the unified AccountingBankfeedaccount fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -23071,6 +23580,8 @@ class Accounting(BaseSDK):
     ) -> operations.UpdateAccountingBankfeedaccountResponse:
         r"""Update a bankfeedaccount
 
+        Updates the AccountingBankfeedaccount identified by `id`. Provide the unified AccountingBankfeedaccount fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -23171,6 +23682,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAccountingBankfeedtransactionResponse:
         r"""Update a bankfeedtransaction
+
+        Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified AccountingBankfeedtransaction fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -23273,6 +23786,8 @@ class Accounting(BaseSDK):
     ) -> operations.UpdateAccountingBankfeedtransactionResponse:
         r"""Update a bankfeedtransaction
 
+        Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified AccountingBankfeedtransaction fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -23374,6 +23889,8 @@ class Accounting(BaseSDK):
     ) -> operations.UpdateAccountingBillResponse:
         r"""Update a bill
 
+        Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -23469,6 +23986,8 @@ class Accounting(BaseSDK):
     ) -> operations.UpdateAccountingBillResponse:
         r"""Update a bill
 
+        Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -23563,6 +24082,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAccountingCategoryResponse:
         r"""Update a category
+
+        Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -23665,6 +24186,8 @@ class Accounting(BaseSDK):
     ) -> operations.UpdateAccountingCategoryResponse:
         r"""Update a category
 
+        Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -23765,6 +24288,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAccountingContactResponse:
         r"""Update a contact
+
+        Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -23867,6 +24392,8 @@ class Accounting(BaseSDK):
     ) -> operations.UpdateAccountingContactResponse:
         r"""Update a contact
 
+        Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -23967,6 +24494,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAccountingCreditmemoResponse:
         r"""Update a creditmemo
+
+        Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -24069,6 +24598,8 @@ class Accounting(BaseSDK):
     ) -> operations.UpdateAccountingCreditmemoResponse:
         r"""Update a creditmemo
 
+        Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -24169,6 +24700,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAccountingExpenseResponse:
         r"""Update an expense
+
+        Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -24271,6 +24804,8 @@ class Accounting(BaseSDK):
     ) -> operations.UpdateAccountingExpenseResponse:
         r"""Update an expense
 
+        Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -24371,6 +24906,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAccountingExpensereportResponse:
         r"""Update an expensereport
+
+        Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -24473,6 +25010,8 @@ class Accounting(BaseSDK):
     ) -> operations.UpdateAccountingExpensereportResponse:
         r"""Update an expensereport
 
+        Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -24573,6 +25112,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAccountingInvoiceResponse:
         r"""Update an invoice
+
+        Updates the AccountingInvoice identified by `id`. Provide the unified AccountingInvoice fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -24675,6 +25216,8 @@ class Accounting(BaseSDK):
     ) -> operations.UpdateAccountingInvoiceResponse:
         r"""Update an invoice
 
+        Updates the AccountingInvoice identified by `id`. Provide the unified AccountingInvoice fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -24775,6 +25318,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAccountingJournalResponse:
         r"""Update a journal
+
+        Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -24877,6 +25422,8 @@ class Accounting(BaseSDK):
     ) -> operations.UpdateAccountingJournalResponse:
         r"""Update a journal
 
+        Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -24964,6 +25511,9 @@ class Accounting(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
+    @deprecated(
+        "warning: ** DEPRECATED ** - This will be removed in a future release, please migrate away from it as soon as possible."
+    )
     def update_accounting_order(
         self,
         *,
@@ -24977,6 +25527,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAccountingOrderResponse:
         r"""Update an order
+
+        Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -25059,6 +25611,9 @@ class Accounting(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
+    @deprecated(
+        "warning: ** DEPRECATED ** - This will be removed in a future release, please migrate away from it as soon as possible."
+    )
     async def update_accounting_order_async(
         self,
         *,
@@ -25072,6 +25627,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAccountingOrderResponse:
         r"""Update an order
+
+        Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -25167,6 +25724,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAccountingPaymenttermResponse:
         r"""Update a paymentterm
+
+        Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -25269,6 +25828,8 @@ class Accounting(BaseSDK):
     ) -> operations.UpdateAccountingPaymenttermResponse:
         r"""Update a paymentterm
 
+        Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -25369,6 +25930,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAccountingProjectResponse:
         r"""Update a project
+
+        Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -25471,6 +26034,8 @@ class Accounting(BaseSDK):
     ) -> operations.UpdateAccountingProjectResponse:
         r"""Update a project
 
+        Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -25571,6 +26136,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAccountingPurchaseorderResponse:
         r"""Update a purchaseorder
+
+        Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -25673,6 +26240,8 @@ class Accounting(BaseSDK):
     ) -> operations.UpdateAccountingPurchaseorderResponse:
         r"""Update a purchaseorder
 
+        Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -25774,6 +26343,8 @@ class Accounting(BaseSDK):
     ) -> operations.UpdateAccountingQuoteResponse:
         r"""Update a quote
 
+        Updates the AccountingQuote identified by `id`. Provide the unified AccountingQuote fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -25869,6 +26440,8 @@ class Accounting(BaseSDK):
     ) -> operations.UpdateAccountingQuoteResponse:
         r"""Update a quote
 
+        Updates the AccountingQuote identified by `id`. Provide the unified AccountingQuote fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -25963,6 +26536,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAccountingSalesorderResponse:
         r"""Update a salesorder
+
+        Updates the AccountingSalesorder identified by `id`. Provide the unified AccountingSalesorder fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -26065,6 +26640,8 @@ class Accounting(BaseSDK):
     ) -> operations.UpdateAccountingSalesorderResponse:
         r"""Update a salesorder
 
+        Updates the AccountingSalesorder identified by `id`. Provide the unified AccountingSalesorder fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -26165,6 +26742,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAccountingTaxrateResponse:
         r"""Update a taxrate
+
+        Updates the AccountingTaxrate identified by `id`. Provide the unified AccountingTaxrate fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -26267,6 +26846,8 @@ class Accounting(BaseSDK):
     ) -> operations.UpdateAccountingTaxrateResponse:
         r"""Update a taxrate
 
+        Updates the AccountingTaxrate identified by `id`. Provide the unified AccountingTaxrate fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -26367,6 +26948,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAccountingTransactionResponse:
         r"""Update a transaction
+
+        Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -26469,6 +27052,8 @@ class Accounting(BaseSDK):
     ) -> operations.UpdateAccountingTransactionResponse:
         r"""Update a transaction
 
+        Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -26570,6 +27155,8 @@ class Accounting(BaseSDK):
     ) -> operations.UpdateAccountingVendorcreditResponse:
         r"""Update a vendorcredit
 
+        Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -26670,6 +27257,8 @@ class Accounting(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAccountingVendorcreditResponse:
         r"""Update a vendorcredit
+
+        Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

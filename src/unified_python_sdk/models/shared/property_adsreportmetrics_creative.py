@@ -79,6 +79,7 @@ class PropertyAdsReportMetricsCreativeTypedDict(TypedDict):
     r"""Destination URL for creatives with links"""
     metadata: NotRequired[List[AdsMetadataTypedDict]]
     name: NotRequired[str]
+    r"""The creative's name"""
     organization_id: NotRequired[str]
     path1: NotRequired[str]
     r"""Display URL path 1 (Microsoft RSA Path1)"""
@@ -143,6 +144,7 @@ class PropertyAdsReportMetricsCreative(BaseModel):
     metadata: Optional[List[AdsMetadata]] = None
 
     name: Optional[str] = None
+    r"""The creative's name"""
 
     organization_id: Optional[str] = None
 

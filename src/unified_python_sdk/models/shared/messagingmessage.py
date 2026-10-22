@@ -37,6 +37,7 @@ class MessagingMessageTypedDict(TypedDict):
     mentioned_members: NotRequired[List[MessagingMemberTypedDict]]
     r"""for email systems, this field represents the CC value"""
     message: NotRequired[str]
+    r"""The message body as plain text"""
     message_html: NotRequired[str]
     message_markdown: NotRequired[str]
     message_thread_identifier: NotRequired[str]
@@ -84,6 +85,7 @@ class MessagingMessage(BaseModel):
     r"""for email systems, this field represents the CC value"""
 
     message: Optional[str] = None
+    r"""The message body as plain text"""
 
     message_html: Optional[str] = None
 

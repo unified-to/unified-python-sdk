@@ -20,6 +20,7 @@ class AtsCompanyTypedDict(TypedDict):
     id: NotRequired[str]
     metadata: NotRequired[List[AtsMetadataTypedDict]]
     name: NotRequired[str]
+    r"""The company's name"""
     parent_id: NotRequired[str]
     phone: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
@@ -40,6 +41,7 @@ class AtsCompany(BaseModel):
     metadata: Optional[List[AtsMetadata]] = None
 
     name: Optional[str] = None
+    r"""The company's name"""
 
     parent_id: Optional[str] = None
 

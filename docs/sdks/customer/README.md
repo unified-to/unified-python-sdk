@@ -13,7 +13,7 @@
 
 ## create_ticketing_customer
 
-Create a customer
+Creates a TicketingCustomer. Provide the unified TicketingCustomer fields in the request body; they are mapped to the provider's API. Returns the created TicketingCustomer.
 
 ### Example Usage
 
@@ -39,7 +39,7 @@ with UnifiedTo(
                     "type": shared.TicketingEmailType.HOME,
                 },
             ],
-            "id": "a5d3c599-4dd8-4c9d-9192-83ebc443eae3",
+            "id": "38d3e52b-6c67-4c04-b23b-3bedf6eb02e3",
             "metadata": [],
             "name": "Christian Windler",
             "tags": [
@@ -60,7 +60,7 @@ with UnifiedTo(
                     "type": shared.TicketingTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2026-06-04T01:51:33.986Z"),
+            "updated_at": parse_datetime("2026-06-05T00:05:41.433Z"),
         },
         "connection_id": "<id>",
     })
@@ -91,7 +91,7 @@ with UnifiedTo(
 
 ## get_ticketing_customer
 
-Retrieve a customer
+Retrieves a single TicketingCustomer by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -138,7 +138,7 @@ with UnifiedTo(
 
 ## list_ticketing_customers
 
-List all customers
+Returns a list of TicketingCustomers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -184,7 +184,7 @@ with UnifiedTo(
 
 ## patch_ticketing_customer
 
-Update a customer
+Updates the TicketingCustomer identified by `id`. Provide the unified TicketingCustomer fields to change in the request body.
 
 ### Example Usage
 
@@ -210,7 +210,7 @@ with UnifiedTo(
                     "type": shared.TicketingEmailType.HOME,
                 },
             ],
-            "id": "9a689115-70a8-4021-a50d-b72b6ab1a018",
+            "id": "62c31562-749a-4426-b29d-11fbc7ad2b53",
             "metadata": [],
             "name": "Christian Windler",
             "tags": [
@@ -231,7 +231,7 @@ with UnifiedTo(
                     "type": shared.TicketingTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2026-06-04T01:51:34.002Z"),
+            "updated_at": parse_datetime("2026-06-05T00:05:41.449Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -263,7 +263,7 @@ with UnifiedTo(
 
 ## remove_ticketing_customer
 
-Remove a customer
+Deletes the TicketingCustomer identified by `id`.
 
 ### Example Usage
 
@@ -310,7 +310,7 @@ with UnifiedTo(
 
 ## update_ticketing_customer
 
-Update a customer
+Updates the TicketingCustomer identified by `id`. Provide the unified TicketingCustomer fields to change in the request body.
 
 ### Example Usage
 
@@ -336,7 +336,7 @@ with UnifiedTo(
                     "type": shared.TicketingEmailType.HOME,
                 },
             ],
-            "id": "9a689115-70a8-4021-a50d-b72b6ab1a018",
+            "id": "62c31562-749a-4426-b29d-11fbc7ad2b53",
             "metadata": [],
             "name": "Christian Windler",
             "tags": [
@@ -357,7 +357,7 @@ with UnifiedTo(
                     "type": shared.TicketingTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2026-06-04T01:51:34.002Z"),
+            "updated_at": parse_datetime("2026-06-05T00:05:41.449Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

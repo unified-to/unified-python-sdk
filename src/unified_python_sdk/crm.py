@@ -24,6 +24,8 @@ class Crm(BaseSDK):
     ) -> operations.CreateCrmCompanyResponse:
         r"""Create a company
 
+        Creates a CrmCompany. Provide the unified CrmCompany fields in the request body; they are mapped to the provider's API. Returns the created CrmCompany.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -118,6 +120,8 @@ class Crm(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateCrmCompanyResponse:
         r"""Create a company
+
+        Creates a CrmCompany. Provide the unified CrmCompany fields in the request body; they are mapped to the provider's API. Returns the created CrmCompany.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -214,6 +218,8 @@ class Crm(BaseSDK):
     ) -> operations.CreateCrmContactResponse:
         r"""Create a contact
 
+        Creates a CrmContact. Provide the unified CrmContact fields in the request body; they are mapped to the provider's API. Returns the created CrmContact.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -309,6 +315,8 @@ class Crm(BaseSDK):
     ) -> operations.CreateCrmContactResponse:
         r"""Create a contact
 
+        Creates a CrmContact. Provide the unified CrmContact fields in the request body; they are mapped to the provider's API. Returns the created CrmContact.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -403,6 +411,8 @@ class Crm(BaseSDK):
     ) -> operations.CreateCrmDealResponse:
         r"""Create a deal
 
+        Creates a CrmDeal. Provide the unified CrmDeal fields in the request body; they are mapped to the provider's API. Returns the created CrmDeal.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -494,6 +504,8 @@ class Crm(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateCrmDealResponse:
         r"""Create a deal
+
+        Creates a CrmDeal. Provide the unified CrmDeal fields in the request body; they are mapped to the provider's API. Returns the created CrmDeal.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -587,6 +599,8 @@ class Crm(BaseSDK):
     ) -> operations.CreateCrmEventResponse:
         r"""Create an event
 
+        Creates a CrmEvent. Provide the unified CrmEvent fields in the request body; they are mapped to the provider's API. Returns the created CrmEvent.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -678,6 +692,8 @@ class Crm(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateCrmEventResponse:
         r"""Create an event
+
+        Creates a CrmEvent. Provide the unified CrmEvent fields in the request body; they are mapped to the provider's API. Returns the created CrmEvent.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -771,6 +787,8 @@ class Crm(BaseSDK):
     ) -> operations.CreateCrmLeadResponse:
         r"""Create a lead
 
+        Creates a CrmLead. Provide the unified CrmLead fields in the request body; they are mapped to the provider's API. Returns the created CrmLead.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -862,6 +880,8 @@ class Crm(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateCrmLeadResponse:
         r"""Create a lead
+
+        Creates a CrmLead. Provide the unified CrmLead fields in the request body; they are mapped to the provider's API. Returns the created CrmLead.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -955,6 +975,8 @@ class Crm(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateCrmPipelineResponse:
         r"""Create a pipeline
+
+        Creates a CrmPipeline. Provide the unified CrmPipeline fields in the request body; they are mapped to the provider's API. Returns the created CrmPipeline.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1051,6 +1073,8 @@ class Crm(BaseSDK):
     ) -> operations.CreateCrmPipelineResponse:
         r"""Create a pipeline
 
+        Creates a CrmPipeline. Provide the unified CrmPipeline fields in the request body; they are mapped to the provider's API. Returns the created CrmPipeline.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1145,6 +1169,8 @@ class Crm(BaseSDK):
     ) -> operations.GetCrmCompanyResponse:
         r"""Retrieve a company
 
+        Retrieves a single CrmCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1235,6 +1261,8 @@ class Crm(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetCrmCompanyResponse:
         r"""Retrieve a company
+
+        Retrieves a single CrmCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1327,6 +1355,8 @@ class Crm(BaseSDK):
     ) -> operations.GetCrmContactResponse:
         r"""Retrieve a contact
 
+        Retrieves a single CrmContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1417,6 +1447,8 @@ class Crm(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetCrmContactResponse:
         r"""Retrieve a contact
+
+        Retrieves a single CrmContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1509,6 +1541,8 @@ class Crm(BaseSDK):
     ) -> operations.GetCrmDealResponse:
         r"""Retrieve a deal
 
+        Retrieves a single CrmDeal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1597,6 +1631,8 @@ class Crm(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetCrmDealResponse:
         r"""Retrieve a deal
+
+        Retrieves a single CrmDeal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1687,6 +1723,8 @@ class Crm(BaseSDK):
     ) -> operations.GetCrmEventResponse:
         r"""Retrieve an event
 
+        Retrieves a single CrmEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1775,6 +1813,8 @@ class Crm(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetCrmEventResponse:
         r"""Retrieve an event
+
+        Retrieves a single CrmEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1865,6 +1905,8 @@ class Crm(BaseSDK):
     ) -> operations.GetCrmLeadResponse:
         r"""Retrieve a lead
 
+        Retrieves a single CrmLead by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1954,6 +1996,8 @@ class Crm(BaseSDK):
     ) -> operations.GetCrmLeadResponse:
         r"""Retrieve a lead
 
+        Retrieves a single CrmLead by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2042,6 +2086,8 @@ class Crm(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetCrmPipelineResponse:
         r"""Retrieve a pipeline
+
+        Retrieves a single CrmPipeline by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2133,6 +2179,8 @@ class Crm(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetCrmPipelineResponse:
         r"""Retrieve a pipeline
+
+        Retrieves a single CrmPipeline by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2226,6 +2274,8 @@ class Crm(BaseSDK):
     ) -> operations.ListCrmCompaniesResponse:
         r"""List all companies
 
+        Returns a list of CrmCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2317,6 +2367,8 @@ class Crm(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListCrmCompaniesResponse:
         r"""List all companies
+
+        Returns a list of CrmCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2410,6 +2462,8 @@ class Crm(BaseSDK):
     ) -> operations.ListCrmContactsResponse:
         r"""List all contacts
 
+        Returns a list of CrmContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2502,6 +2556,8 @@ class Crm(BaseSDK):
     ) -> operations.ListCrmContactsResponse:
         r"""List all contacts
 
+        Returns a list of CrmContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2592,6 +2648,8 @@ class Crm(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListCrmDealsResponse:
         r"""List all deals
+
+        Returns a list of CrmDeals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2684,6 +2742,8 @@ class Crm(BaseSDK):
     ) -> operations.ListCrmDealsResponse:
         r"""List all deals
 
+        Returns a list of CrmDeals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2774,6 +2834,8 @@ class Crm(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListCrmEventsResponse:
         r"""List all events
+
+        Returns a list of CrmEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2866,6 +2928,8 @@ class Crm(BaseSDK):
     ) -> operations.ListCrmEventsResponse:
         r"""List all events
 
+        Returns a list of CrmEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2957,6 +3021,8 @@ class Crm(BaseSDK):
     ) -> operations.ListCrmLeadsResponse:
         r"""List all leads
 
+        Returns a list of CrmLeads. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3047,6 +3113,8 @@ class Crm(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListCrmLeadsResponse:
         r"""List all leads
+
+        Returns a list of CrmLeads. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3140,6 +3208,8 @@ class Crm(BaseSDK):
     ) -> operations.ListCrmPipelinesResponse:
         r"""List all pipelines
 
+        Returns a list of CrmPipelines. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3231,6 +3301,8 @@ class Crm(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListCrmPipelinesResponse:
         r"""List all pipelines
+
+        Returns a list of CrmPipelines. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3324,6 +3396,8 @@ class Crm(BaseSDK):
     ) -> operations.ListCrmTaxonomiesResponse:
         r"""List all taxonomies
 
+        Returns a list of CrmTaxonomies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3416,6 +3490,8 @@ class Crm(BaseSDK):
     ) -> operations.ListCrmTaxonomiesResponse:
         r"""List all taxonomies
 
+        Returns a list of CrmTaxonomies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3507,6 +3583,8 @@ class Crm(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchCrmCompanyResponse:
         r"""Update a company
+
+        Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3603,6 +3681,8 @@ class Crm(BaseSDK):
     ) -> operations.PatchCrmCompanyResponse:
         r"""Update a company
 
+        Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3697,6 +3777,8 @@ class Crm(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchCrmContactResponse:
         r"""Update a contact
+
+        Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3793,6 +3875,8 @@ class Crm(BaseSDK):
     ) -> operations.PatchCrmContactResponse:
         r"""Update a contact
 
+        Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3887,6 +3971,8 @@ class Crm(BaseSDK):
     ) -> operations.PatchCrmDealResponse:
         r"""Update a deal
 
+        Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3978,6 +4064,8 @@ class Crm(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchCrmDealResponse:
         r"""Update a deal
+
+        Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4071,6 +4159,8 @@ class Crm(BaseSDK):
     ) -> operations.PatchCrmEventResponse:
         r"""Update an event
 
+        Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4162,6 +4252,8 @@ class Crm(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchCrmEventResponse:
         r"""Update an event
+
+        Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4255,6 +4347,8 @@ class Crm(BaseSDK):
     ) -> operations.PatchCrmLeadResponse:
         r"""Update a lead
 
+        Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4346,6 +4440,8 @@ class Crm(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchCrmLeadResponse:
         r"""Update a lead
+
+        Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4439,6 +4535,8 @@ class Crm(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchCrmPipelineResponse:
         r"""Update a pipeline
+
+        Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4535,6 +4633,8 @@ class Crm(BaseSDK):
     ) -> operations.PatchCrmPipelineResponse:
         r"""Update a pipeline
 
+        Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4629,6 +4729,8 @@ class Crm(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveCrmCompanyResponse:
         r"""Remove a company
+
+        Deletes the CrmCompany identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4727,6 +4829,8 @@ class Crm(BaseSDK):
     ) -> operations.RemoveCrmCompanyResponse:
         r"""Remove a company
 
+        Deletes the CrmCompany identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4823,6 +4927,8 @@ class Crm(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveCrmContactResponse:
         r"""Remove a contact
+
+        Deletes the CrmContact identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4921,6 +5027,8 @@ class Crm(BaseSDK):
     ) -> operations.RemoveCrmContactResponse:
         r"""Remove a contact
 
+        Deletes the CrmContact identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5016,6 +5124,8 @@ class Crm(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveCrmDealResponse:
         r"""Remove a deal
+
+        Deletes the CrmDeal identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -5113,6 +5223,8 @@ class Crm(BaseSDK):
     ) -> operations.RemoveCrmDealResponse:
         r"""Remove a deal
 
+        Deletes the CrmDeal identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5208,6 +5320,8 @@ class Crm(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveCrmEventResponse:
         r"""Remove an event
+
+        Deletes the CrmEvent identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -5305,6 +5419,8 @@ class Crm(BaseSDK):
     ) -> operations.RemoveCrmEventResponse:
         r"""Remove an event
 
+        Deletes the CrmEvent identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5401,6 +5517,8 @@ class Crm(BaseSDK):
     ) -> operations.RemoveCrmLeadResponse:
         r"""Remove a lead
 
+        Deletes the CrmLead identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5496,6 +5614,8 @@ class Crm(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveCrmLeadResponse:
         r"""Remove a lead
+
+        Deletes the CrmLead identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -5594,6 +5714,8 @@ class Crm(BaseSDK):
     ) -> operations.RemoveCrmPipelineResponse:
         r"""Remove a pipeline
 
+        Deletes the CrmPipeline identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5690,6 +5812,8 @@ class Crm(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveCrmPipelineResponse:
         r"""Remove a pipeline
+
+        Deletes the CrmPipeline identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -5788,6 +5912,8 @@ class Crm(BaseSDK):
     ) -> operations.UpdateCrmCompanyResponse:
         r"""Update a company
 
+        Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5882,6 +6008,8 @@ class Crm(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateCrmCompanyResponse:
         r"""Update a company
+
+        Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -5978,6 +6106,8 @@ class Crm(BaseSDK):
     ) -> operations.UpdateCrmContactResponse:
         r"""Update a contact
 
+        Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6073,6 +6203,8 @@ class Crm(BaseSDK):
     ) -> operations.UpdateCrmContactResponse:
         r"""Update a contact
 
+        Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6167,6 +6299,8 @@ class Crm(BaseSDK):
     ) -> operations.UpdateCrmDealResponse:
         r"""Update a deal
 
+        Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6258,6 +6392,8 @@ class Crm(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateCrmDealResponse:
         r"""Update a deal
+
+        Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -6351,6 +6487,8 @@ class Crm(BaseSDK):
     ) -> operations.UpdateCrmEventResponse:
         r"""Update an event
 
+        Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6442,6 +6580,8 @@ class Crm(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateCrmEventResponse:
         r"""Update an event
+
+        Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -6535,6 +6675,8 @@ class Crm(BaseSDK):
     ) -> operations.UpdateCrmLeadResponse:
         r"""Update a lead
 
+        Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6626,6 +6768,8 @@ class Crm(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateCrmLeadResponse:
         r"""Update a lead
+
+        Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -6719,6 +6863,8 @@ class Crm(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateCrmPipelineResponse:
         r"""Update a pipeline
+
+        Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -6814,6 +6960,8 @@ class Crm(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateCrmPipelineResponse:
         r"""Update a pipeline
+
+        Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

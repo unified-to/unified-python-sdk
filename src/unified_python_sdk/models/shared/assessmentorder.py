@@ -39,6 +39,8 @@ class ResponseStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class AssessmentOrderStatus(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""The current state of the assessment order"""
+
     OPEN = "OPEN"
     IN_PROGRESS = "IN_PROGRESS"
     COMPLETED = "COMPLETED"
@@ -108,6 +110,7 @@ class AssessmentOrderTypedDict(TypedDict):
     response_url: NotRequired[str]
     r"""URL to view detailed results"""
     status: NotRequired[AssessmentOrderStatus]
+    r"""The current state of the assessment order"""
     target_url: NotRequired[str]
     r"""URL to redirect user to after assessment"""
     updated_at: NotRequired[datetime]
@@ -216,6 +219,7 @@ class AssessmentOrder(BaseModel):
     r"""URL to view detailed results"""
 
     status: Optional[AssessmentOrderStatus] = None
+    r"""The current state of the assessment order"""
 
     target_url: Optional[str] = None
     r"""URL to redirect user to after assessment"""

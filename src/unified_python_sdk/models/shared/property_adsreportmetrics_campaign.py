@@ -129,7 +129,9 @@ class PropertyAdsReportMetricsCampaignTypedDict(TypedDict):
     labels: NotRequired[List[str]]
     metadata: NotRequired[List[AdsMetadataTypedDict]]
     name: NotRequired[str]
+    r"""The campaign's name"""
     organization_id: NotRequired[str]
+    r"""The ID of the ad account the campaign belongs to (an AdsOrganization ID)"""
     planned_spend_amount: NotRequired[float]
     raw: NotRequired[Dict[str, Any]]
     start_at: NotRequired[datetime]
@@ -184,8 +186,10 @@ class PropertyAdsReportMetricsCampaign(BaseModel):
     metadata: Optional[List[AdsMetadata]] = None
 
     name: Optional[str] = None
+    r"""The campaign's name"""
 
     organization_id: Optional[str] = None
+    r"""The ID of the ad account the campaign belongs to (an AdsOrganization ID)"""
 
     planned_spend_amount: Optional[float] = None
 

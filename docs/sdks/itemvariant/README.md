@@ -13,7 +13,7 @@
 
 ## create_commerce_itemvariant
 
-Create an itemvariant
+Creates a CommerceItemvariant. Provide the unified CommerceItemvariant fields in the request body; they are mapped to the provider's API. Returns the created CommerceItemvariant.
 
 ### Example Usage
 
@@ -36,7 +36,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-01-20T13:49:12.968Z"),
             "description": "Stylish Salad designed to make you stand out with little looks",
             "height": 54.0,
-            "id": "a7b06f92-eb84-4f09-8fa7-5c8600e72186",
+            "id": "da268092-975a-4945-94fa-915b3ee17c31",
             "is_active": True,
             "is_featured": False,
             "is_visible": False,
@@ -45,10 +45,10 @@ with UnifiedTo(
                 {
                     "alt": "Hic desipio thorax.",
                     "height": 961.0,
-                    "id": "1c599918-a34c-40af-a96c-6d8ac210f21e",
+                    "id": "4f41d288-a7bb-4cbf-880e-b3dfa6c8540d",
                     "metadata": [
                         {
-                            "id": "98b5b5e3-7d6e-4c44-89c4-da12f0ad7c27",
+                            "id": "173c2688-c2bb-4bde-9395-9aec88431b88",
                             "slug": "ubi",
                             "value": "textus",
                         },
@@ -65,7 +65,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CommerceMetadataFormat.TEXT,
-                    "id": "9f53d5ed-d0f5-47a6-a7c3-efba725e2af0",
+                    "id": "d26cccae-de25-4c1e-8f3a-2169bc566f80",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "absens",
@@ -74,7 +74,7 @@ with UnifiedTo(
             "name": "Chair",
             "options": [
                 {
-                    "id": "43846d33-b7c1-4cf3-a810-4880311180ba",
+                    "id": "5420d690-9652-4aa1-a39c-8952aa39a9ed",
                     "name": "Color",
                     "position": 1.0,
                     "values": [
@@ -82,7 +82,7 @@ with UnifiedTo(
                     ],
                 },
                 {
-                    "id": "3d82d887-06b2-4e33-870e-b69929b3b415",
+                    "id": "f26e6d4b-3f61-44a2-ba2e-c20b72eda1f0",
                     "name": "Size",
                     "position": 2.0,
                     "values": [
@@ -105,7 +105,7 @@ with UnifiedTo(
                 "deserunt",
             ],
             "total_stock": 436.0,
-            "updated_at": parse_datetime("2026-03-09T16:16:21.097Z"),
+            "updated_at": parse_datetime("2026-03-10T13:01:42.865Z"),
             "weight": 46.0,
             "weight_unit": shared.CommerceItemvariantWeightUnit.OZ,
             "width": 40.0,
@@ -139,7 +139,7 @@ with UnifiedTo(
 
 ## get_commerce_itemvariant
 
-Retrieve an itemvariant
+Retrieves a single CommerceItemvariant by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -186,7 +186,7 @@ with UnifiedTo(
 
 ## list_commerce_itemvariants
 
-List all itemvariants
+Returns a list of CommerceItemvariants. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -232,7 +232,7 @@ with UnifiedTo(
 
 ## patch_commerce_itemvariant
 
-Update an itemvariant
+Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields to change in the request body.
 
 ### Example Usage
 
@@ -255,7 +255,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-01-20T13:49:12.968Z"),
             "description": "Stylish Salad designed to make you stand out with little looks",
             "height": 54.0,
-            "id": "28d427ee-c3f9-4cd5-b016-27dc7590f87b",
+            "id": "374f7a4f-2d84-4eb2-bf9a-eaf1a1e33543",
             "is_active": True,
             "is_featured": False,
             "is_visible": False,
@@ -264,10 +264,10 @@ with UnifiedTo(
                 {
                     "alt": "Hic desipio thorax.",
                     "height": 961.0,
-                    "id": "eb8dc124-4221-401d-8434-1c2723867164",
+                    "id": "0376e3aa-d7fa-4e75-9236-2c6ad590c3e3",
                     "metadata": [
                         {
-                            "id": "81240a40-23a3-4d16-9642-5049b8eef0f9",
+                            "id": "3ff94cc0-8697-4531-adcb-fca5d5432da6",
                             "slug": "ubi",
                             "value": "textus",
                         },
@@ -284,7 +284,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CommerceMetadataFormat.TEXT,
-                    "id": "8d7a4b93-297f-4215-bce2-e3a19bd580f3",
+                    "id": "ebde1a45-2bd9-4fda-9a4d-076114ab38fe",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "absens",
@@ -293,7 +293,7 @@ with UnifiedTo(
             "name": "Chair",
             "options": [
                 {
-                    "id": "a4c70b50-3670-4d68-b7be-1a06f01459fb",
+                    "id": "6955550c-1dfa-412a-95e0-ce7164c07f63",
                     "name": "Color",
                     "position": 1.0,
                     "values": [
@@ -301,7 +301,7 @@ with UnifiedTo(
                     ],
                 },
                 {
-                    "id": "f4b259bf-9788-424c-b5a2-d30a7983ac2a",
+                    "id": "d01dd6e8-336a-420e-be06-8a1c0cf117f4",
                     "name": "Size",
                     "position": 2.0,
                     "values": [
@@ -324,7 +324,7 @@ with UnifiedTo(
                 "deserunt",
             ],
             "total_stock": 436.0,
-            "updated_at": parse_datetime("2026-03-09T16:16:21.131Z"),
+            "updated_at": parse_datetime("2026-03-10T13:01:42.903Z"),
             "weight": 46.0,
             "weight_unit": shared.CommerceItemvariantWeightUnit.OZ,
             "width": 40.0,
@@ -359,7 +359,7 @@ with UnifiedTo(
 
 ## remove_commerce_itemvariant
 
-Remove an itemvariant
+Deletes the CommerceItemvariant identified by `id`.
 
 ### Example Usage
 
@@ -406,7 +406,7 @@ with UnifiedTo(
 
 ## update_commerce_itemvariant
 
-Update an itemvariant
+Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields to change in the request body.
 
 ### Example Usage
 
@@ -429,7 +429,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-01-20T13:49:12.968Z"),
             "description": "Stylish Salad designed to make you stand out with little looks",
             "height": 54.0,
-            "id": "28d427ee-c3f9-4cd5-b016-27dc7590f87b",
+            "id": "374f7a4f-2d84-4eb2-bf9a-eaf1a1e33543",
             "is_active": True,
             "is_featured": False,
             "is_visible": False,
@@ -438,10 +438,10 @@ with UnifiedTo(
                 {
                     "alt": "Hic desipio thorax.",
                     "height": 961.0,
-                    "id": "eb8dc124-4221-401d-8434-1c2723867164",
+                    "id": "0376e3aa-d7fa-4e75-9236-2c6ad590c3e3",
                     "metadata": [
                         {
-                            "id": "81240a40-23a3-4d16-9642-5049b8eef0f9",
+                            "id": "3ff94cc0-8697-4531-adcb-fca5d5432da6",
                             "slug": "ubi",
                             "value": "textus",
                         },
@@ -458,7 +458,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CommerceMetadataFormat.TEXT,
-                    "id": "8d7a4b93-297f-4215-bce2-e3a19bd580f3",
+                    "id": "ebde1a45-2bd9-4fda-9a4d-076114ab38fe",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "absens",
@@ -467,7 +467,7 @@ with UnifiedTo(
             "name": "Chair",
             "options": [
                 {
-                    "id": "a4c70b50-3670-4d68-b7be-1a06f01459fb",
+                    "id": "6955550c-1dfa-412a-95e0-ce7164c07f63",
                     "name": "Color",
                     "position": 1.0,
                     "values": [
@@ -475,7 +475,7 @@ with UnifiedTo(
                     ],
                 },
                 {
-                    "id": "f4b259bf-9788-424c-b5a2-d30a7983ac2a",
+                    "id": "d01dd6e8-336a-420e-be06-8a1c0cf117f4",
                     "name": "Size",
                     "position": 2.0,
                     "values": [
@@ -498,7 +498,7 @@ with UnifiedTo(
                 "deserunt",
             ],
             "total_stock": 436.0,
-            "updated_at": parse_datetime("2026-03-09T16:16:21.131Z"),
+            "updated_at": parse_datetime("2026-03-10T13:01:42.903Z"),
             "weight": 46.0,
             "weight_unit": shared.CommerceItemvariantWeightUnit.OZ,
             "width": 40.0,

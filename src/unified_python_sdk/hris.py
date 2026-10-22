@@ -24,6 +24,8 @@ class Hris(BaseSDK):
     ) -> operations.CreateHrisAttendanceResponse:
         r"""Create an attendance
 
+        Creates a HrisAttendance. Provide the unified HrisAttendance fields in the request body; they are mapped to the provider's API. Returns the created HrisAttendance.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -118,6 +120,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateHrisAttendanceResponse:
         r"""Create an attendance
+
+        Creates a HrisAttendance. Provide the unified HrisAttendance fields in the request body; they are mapped to the provider's API. Returns the created HrisAttendance.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -214,6 +218,8 @@ class Hris(BaseSDK):
     ) -> operations.CreateHrisBankaccountResponse:
         r"""Create a bankaccount
 
+        Creates a HrisBankaccount. Provide the unified HrisBankaccount fields in the request body; they are mapped to the provider's API. Returns the created HrisBankaccount.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -308,6 +314,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateHrisBankaccountResponse:
         r"""Create a bankaccount
+
+        Creates a HrisBankaccount. Provide the unified HrisBankaccount fields in the request body; they are mapped to the provider's API. Returns the created HrisBankaccount.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -404,6 +412,8 @@ class Hris(BaseSDK):
     ) -> operations.CreateHrisBenefitResponse:
         r"""Create a benefit
 
+        Creates a HrisBenefit. Provide the unified HrisBenefit fields in the request body; they are mapped to the provider's API. Returns the created HrisBenefit.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -498,6 +508,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateHrisBenefitResponse:
         r"""Create a benefit
+
+        Creates a HrisBenefit. Provide the unified HrisBenefit fields in the request body; they are mapped to the provider's API. Returns the created HrisBenefit.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -594,6 +606,8 @@ class Hris(BaseSDK):
     ) -> operations.CreateHrisCompanyResponse:
         r"""Create a company
 
+        Creates a HrisCompany. Provide the unified HrisCompany fields in the request body; they are mapped to the provider's API. Returns the created HrisCompany.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -688,6 +702,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateHrisCompanyResponse:
         r"""Create a company
+
+        Creates a HrisCompany. Provide the unified HrisCompany fields in the request body; they are mapped to the provider's API. Returns the created HrisCompany.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -784,6 +800,8 @@ class Hris(BaseSDK):
     ) -> operations.CreateHrisDeductionResponse:
         r"""Create a deduction
 
+        Creates a HrisDeduction. Provide the unified HrisDeduction fields in the request body; they are mapped to the provider's API. Returns the created HrisDeduction.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -878,6 +896,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateHrisDeductionResponse:
         r"""Create a deduction
+
+        Creates a HrisDeduction. Provide the unified HrisDeduction fields in the request body; they are mapped to the provider's API. Returns the created HrisDeduction.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -974,6 +994,8 @@ class Hris(BaseSDK):
     ) -> operations.CreateHrisDeviceResponse:
         r"""Create a device
 
+        Creates a HrisDevice. Provide the unified HrisDevice fields in the request body; they are mapped to the provider's API. Returns the created HrisDevice.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1068,6 +1090,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateHrisDeviceResponse:
         r"""Create a device
+
+        Creates a HrisDevice. Provide the unified HrisDevice fields in the request body; they are mapped to the provider's API. Returns the created HrisDevice.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1164,6 +1188,8 @@ class Hris(BaseSDK):
     ) -> operations.CreateHrisDocumentResponse:
         r"""Create a document
 
+        Creates a HrisDocument. Provide the unified HrisDocument fields in the request body; they are mapped to the provider's API. Returns the created HrisDocument.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1258,6 +1284,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateHrisDocumentResponse:
         r"""Create a document
+
+        Creates a HrisDocument. Provide the unified HrisDocument fields in the request body; they are mapped to the provider's API. Returns the created HrisDocument.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1354,6 +1382,8 @@ class Hris(BaseSDK):
     ) -> operations.CreateHrisEarningResponse:
         r"""Create an earning
 
+        Creates a HrisEarning. Provide the unified HrisEarning fields in the request body; they are mapped to the provider's API. Returns the created HrisEarning.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1448,6 +1478,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateHrisEarningResponse:
         r"""Create an earning
+
+        Creates a HrisEarning. Provide the unified HrisEarning fields in the request body; they are mapped to the provider's API. Returns the created HrisEarning.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1544,6 +1576,8 @@ class Hris(BaseSDK):
     ) -> operations.CreateHrisEmployeeResponse:
         r"""Create an employee
 
+        Creates a HrisEmployee. Provide the unified HrisEmployee fields in the request body; they are mapped to the provider's API. Returns the created HrisEmployee.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1638,6 +1672,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateHrisEmployeeResponse:
         r"""Create an employee
+
+        Creates a HrisEmployee. Provide the unified HrisEmployee fields in the request body; they are mapped to the provider's API. Returns the created HrisEmployee.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1734,6 +1770,8 @@ class Hris(BaseSDK):
     ) -> operations.CreateHrisGroupResponse:
         r"""Create a group
 
+        Creates a HrisGroup. Provide the unified HrisGroup fields in the request body; they are mapped to the provider's API. Returns the created HrisGroup.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1829,6 +1867,8 @@ class Hris(BaseSDK):
     ) -> operations.CreateHrisGroupResponse:
         r"""Create a group
 
+        Creates a HrisGroup. Provide the unified HrisGroup fields in the request body; they are mapped to the provider's API. Returns the created HrisGroup.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1923,6 +1963,8 @@ class Hris(BaseSDK):
     ) -> operations.CreateHrisJobResponse:
         r"""Create a job
 
+        Creates a HrisJob. Provide the unified HrisJob fields in the request body; they are mapped to the provider's API. Returns the created HrisJob.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2014,6 +2056,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateHrisJobResponse:
         r"""Create a job
+
+        Creates a HrisJob. Provide the unified HrisJob fields in the request body; they are mapped to the provider's API. Returns the created HrisJob.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2107,6 +2151,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateHrisLocationResponse:
         r"""Create a location
+
+        Creates a HrisLocation. Provide the unified HrisLocation fields in the request body; they are mapped to the provider's API. Returns the created HrisLocation.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2203,6 +2249,8 @@ class Hris(BaseSDK):
     ) -> operations.CreateHrisLocationResponse:
         r"""Create a location
 
+        Creates a HrisLocation. Provide the unified HrisLocation fields in the request body; they are mapped to the provider's API. Returns the created HrisLocation.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2297,6 +2345,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateHrisTaxonomyResponse:
         r"""Create a taxonomy
+
+        Creates a HrisTaxonomy. Provide the unified HrisTaxonomy fields in the request body; they are mapped to the provider's API. Returns the created HrisTaxonomy.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2393,6 +2443,8 @@ class Hris(BaseSDK):
     ) -> operations.CreateHrisTaxonomyResponse:
         r"""Create a taxonomy
 
+        Creates a HrisTaxonomy. Provide the unified HrisTaxonomy fields in the request body; they are mapped to the provider's API. Returns the created HrisTaxonomy.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2487,6 +2539,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateHrisTimeoffResponse:
         r"""Create a timeoff
+
+        Creates a HrisTimeoff. Provide the unified HrisTimeoff fields in the request body; they are mapped to the provider's API. Returns the created HrisTimeoff.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2583,6 +2637,8 @@ class Hris(BaseSDK):
     ) -> operations.CreateHrisTimeoffResponse:
         r"""Create a timeoff
 
+        Creates a HrisTimeoff. Provide the unified HrisTimeoff fields in the request body; they are mapped to the provider's API. Returns the created HrisTimeoff.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2677,6 +2733,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateHrisTimeshiftResponse:
         r"""Create a timeshift
+
+        Creates a HrisTimeshift. Provide the unified HrisTimeshift fields in the request body; they are mapped to the provider's API. Returns the created HrisTimeshift.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2773,6 +2831,8 @@ class Hris(BaseSDK):
     ) -> operations.CreateHrisTimeshiftResponse:
         r"""Create a timeshift
 
+        Creates a HrisTimeshift. Provide the unified HrisTimeshift fields in the request body; they are mapped to the provider's API. Returns the created HrisTimeshift.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2868,6 +2928,8 @@ class Hris(BaseSDK):
     ) -> operations.GetHrisAttendanceResponse:
         r"""Retrieve an attendance
 
+        Retrieves a single HrisAttendance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2959,6 +3021,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetHrisAttendanceResponse:
         r"""Retrieve an attendance
+
+        Retrieves a single HrisAttendance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3052,6 +3116,8 @@ class Hris(BaseSDK):
     ) -> operations.GetHrisBankaccountResponse:
         r"""Retrieve a bankaccount
 
+        Retrieves a single HrisBankaccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3144,6 +3210,8 @@ class Hris(BaseSDK):
     ) -> operations.GetHrisBankaccountResponse:
         r"""Retrieve a bankaccount
 
+        Retrieves a single HrisBankaccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3234,6 +3302,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetHrisBenefitResponse:
         r"""Retrieve a benefit
+
+        Retrieves a single HrisBenefit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3326,6 +3396,8 @@ class Hris(BaseSDK):
     ) -> operations.GetHrisBenefitResponse:
         r"""Retrieve a benefit
 
+        Retrieves a single HrisBenefit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3417,6 +3489,8 @@ class Hris(BaseSDK):
     ) -> operations.GetHrisCompanyResponse:
         r"""Retrieve a company
 
+        Retrieves a single HrisCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3507,6 +3581,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetHrisCompanyResponse:
         r"""Retrieve a company
+
+        Retrieves a single HrisCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3600,6 +3676,8 @@ class Hris(BaseSDK):
     ) -> operations.GetHrisDeductionResponse:
         r"""Retrieve a deduction
 
+        Retrieves a single HrisDeduction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3692,6 +3770,8 @@ class Hris(BaseSDK):
     ) -> operations.GetHrisDeductionResponse:
         r"""Retrieve a deduction
 
+        Retrieves a single HrisDeduction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3783,6 +3863,8 @@ class Hris(BaseSDK):
     ) -> operations.GetHrisDeviceResponse:
         r"""Retrieve a device
 
+        Retrieves a single HrisDevice by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3873,6 +3955,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetHrisDeviceResponse:
         r"""Retrieve a device
+
+        Retrieves a single HrisDevice by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3966,6 +4050,8 @@ class Hris(BaseSDK):
     ) -> operations.GetHrisDocumentResponse:
         r"""Retrieve a document
 
+        Retrieves a single HrisDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4058,6 +4144,8 @@ class Hris(BaseSDK):
     ) -> operations.GetHrisDocumentResponse:
         r"""Retrieve a document
 
+        Retrieves a single HrisDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4149,6 +4237,8 @@ class Hris(BaseSDK):
     ) -> operations.GetHrisEarningResponse:
         r"""Retrieve an earning
 
+        Retrieves a single HrisEarning by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4239,6 +4329,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetHrisEarningResponse:
         r"""Retrieve an earning
+
+        Retrieves a single HrisEarning by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4332,6 +4424,8 @@ class Hris(BaseSDK):
     ) -> operations.GetHrisEmployeeResponse:
         r"""Retrieve an employee
 
+        Retrieves a single HrisEmployee by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4424,6 +4518,8 @@ class Hris(BaseSDK):
     ) -> operations.GetHrisEmployeeResponse:
         r"""Retrieve an employee
 
+        Retrieves a single HrisEmployee by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4514,6 +4610,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetHrisGroupResponse:
         r"""Retrieve a group
+
+        Retrieves a single HrisGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4606,6 +4704,8 @@ class Hris(BaseSDK):
     ) -> operations.GetHrisGroupResponse:
         r"""Retrieve a group
 
+        Retrieves a single HrisGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4697,6 +4797,8 @@ class Hris(BaseSDK):
     ) -> operations.GetHrisJobResponse:
         r"""Retrieve a job
 
+        Retrieves a single HrisJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4785,6 +4887,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetHrisJobResponse:
         r"""Retrieve a job
+
+        Retrieves a single HrisJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4875,6 +4979,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetHrisLocationResponse:
         r"""Retrieve a location
+
+        Retrieves a single HrisLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4968,6 +5074,8 @@ class Hris(BaseSDK):
     ) -> operations.GetHrisLocationResponse:
         r"""Retrieve a location
 
+        Retrieves a single HrisLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5058,6 +5166,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetHrisPaycodeResponse:
         r"""Retrieve a paycode
+
+        Retrieves a single HrisPaycode by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -5150,6 +5260,8 @@ class Hris(BaseSDK):
     ) -> operations.GetHrisPaycodeResponse:
         r"""Retrieve a paycode
 
+        Retrieves a single HrisPaycode by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5240,6 +5352,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetHrisPayrollResponse:
         r"""Retrieve a payroll
+
+        Retrieves a single HrisPayroll by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -5332,6 +5446,8 @@ class Hris(BaseSDK):
     ) -> operations.GetHrisPayrollResponse:
         r"""Retrieve a payroll
 
+        Retrieves a single HrisPayroll by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5423,6 +5539,8 @@ class Hris(BaseSDK):
     ) -> operations.GetHrisPayslipResponse:
         r"""Retrieve a payslip
 
+        Retrieves a single HrisPayslip by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5513,6 +5631,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetHrisPayslipResponse:
         r"""Retrieve a payslip
+
+        Retrieves a single HrisPayslip by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -5606,6 +5726,8 @@ class Hris(BaseSDK):
     ) -> operations.GetHrisTaxonomyResponse:
         r"""Retrieve a taxonomy
 
+        Retrieves a single HrisTaxonomy by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5698,6 +5820,8 @@ class Hris(BaseSDK):
     ) -> operations.GetHrisTaxonomyResponse:
         r"""Retrieve a taxonomy
 
+        Retrieves a single HrisTaxonomy by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5789,6 +5913,8 @@ class Hris(BaseSDK):
     ) -> operations.GetHrisTimeoffResponse:
         r"""Retrieve a timeoff
 
+        Retrieves a single HrisTimeoff by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5879,6 +6005,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetHrisTimeoffResponse:
         r"""Retrieve a timeoff
+
+        Retrieves a single HrisTimeoff by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -5972,6 +6100,8 @@ class Hris(BaseSDK):
     ) -> operations.GetHrisTimeshiftResponse:
         r"""Retrieve a timeshift
 
+        Retrieves a single HrisTimeshift by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6063,6 +6193,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetHrisTimeshiftResponse:
         r"""Retrieve a timeshift
+
+        Retrieves a single HrisTimeshift by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -6156,6 +6288,8 @@ class Hris(BaseSDK):
     ) -> operations.ListHrisAttendancesResponse:
         r"""List all attendances
 
+        Returns a list of HrisAttendances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6247,6 +6381,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListHrisAttendancesResponse:
         r"""List all attendances
+
+        Returns a list of HrisAttendances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -6340,6 +6476,8 @@ class Hris(BaseSDK):
     ) -> operations.ListHrisBankaccountsResponse:
         r"""List all bankaccounts
 
+        Returns a list of HrisBankaccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6431,6 +6569,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListHrisBankaccountsResponse:
         r"""List all bankaccounts
+
+        Returns a list of HrisBankaccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -6524,6 +6664,8 @@ class Hris(BaseSDK):
     ) -> operations.ListHrisBenefitsResponse:
         r"""List all benefits
 
+        Returns a list of HrisBenefits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6615,6 +6757,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListHrisBenefitsResponse:
         r"""List all benefits
+
+        Returns a list of HrisBenefits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -6708,6 +6852,8 @@ class Hris(BaseSDK):
     ) -> operations.ListHrisCompaniesResponse:
         r"""List all companies
 
+        Returns a list of HrisCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6799,6 +6945,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListHrisCompaniesResponse:
         r"""List all companies
+
+        Returns a list of HrisCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -6892,6 +7040,8 @@ class Hris(BaseSDK):
     ) -> operations.ListHrisDeductionsResponse:
         r"""List all deductions
 
+        Returns a list of HrisDeductions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6983,6 +7133,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListHrisDeductionsResponse:
         r"""List all deductions
+
+        Returns a list of HrisDeductions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -7076,6 +7228,8 @@ class Hris(BaseSDK):
     ) -> operations.ListHrisDevicesResponse:
         r"""List all devices
 
+        Returns a list of HrisDevices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7167,6 +7321,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListHrisDevicesResponse:
         r"""List all devices
+
+        Returns a list of HrisDevices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -7260,6 +7416,8 @@ class Hris(BaseSDK):
     ) -> operations.ListHrisDocumentsResponse:
         r"""List all documents
 
+        Returns a list of HrisDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7351,6 +7509,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListHrisDocumentsResponse:
         r"""List all documents
+
+        Returns a list of HrisDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -7444,6 +7604,8 @@ class Hris(BaseSDK):
     ) -> operations.ListHrisEarningsResponse:
         r"""List all earnings
 
+        Returns a list of HrisEarnings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7535,6 +7697,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListHrisEarningsResponse:
         r"""List all earnings
+
+        Returns a list of HrisEarnings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -7628,6 +7792,8 @@ class Hris(BaseSDK):
     ) -> operations.ListHrisEmployeesResponse:
         r"""List all employees
 
+        Returns a list of HrisEmployees. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7720,6 +7886,8 @@ class Hris(BaseSDK):
     ) -> operations.ListHrisEmployeesResponse:
         r"""List all employees
 
+        Returns a list of HrisEmployees. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7810,6 +7978,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListHrisGroupsResponse:
         r"""List all groups
+
+        Returns a list of HrisGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -7902,6 +8072,8 @@ class Hris(BaseSDK):
     ) -> operations.ListHrisGroupsResponse:
         r"""List all groups
 
+        Returns a list of HrisGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7993,6 +8165,8 @@ class Hris(BaseSDK):
     ) -> operations.ListHrisJobsResponse:
         r"""List all jobs
 
+        Returns a list of HrisJobs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -8083,6 +8257,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListHrisJobsResponse:
         r"""List all jobs
+
+        Returns a list of HrisJobs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -8176,6 +8352,8 @@ class Hris(BaseSDK):
     ) -> operations.ListHrisLocationsResponse:
         r"""List all locations
 
+        Returns a list of HrisLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -8267,6 +8445,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListHrisLocationsResponse:
         r"""List all locations
+
+        Returns a list of HrisLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -8360,6 +8540,8 @@ class Hris(BaseSDK):
     ) -> operations.ListHrisPaycodesResponse:
         r"""List all paycodes
 
+        Returns a list of HrisPaycodes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -8451,6 +8633,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListHrisPaycodesResponse:
         r"""List all paycodes
+
+        Returns a list of HrisPaycodes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -8544,6 +8728,8 @@ class Hris(BaseSDK):
     ) -> operations.ListHrisPayrollsResponse:
         r"""List all payrolls
 
+        Returns a list of HrisPayrolls. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -8635,6 +8821,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListHrisPayrollsResponse:
         r"""List all payrolls
+
+        Returns a list of HrisPayrolls. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -8728,6 +8916,8 @@ class Hris(BaseSDK):
     ) -> operations.ListHrisPayslipsResponse:
         r"""List all payslips
 
+        Returns a list of HrisPayslips. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -8819,6 +9009,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListHrisPayslipsResponse:
         r"""List all payslips
+
+        Returns a list of HrisPayslips. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -8912,6 +9104,8 @@ class Hris(BaseSDK):
     ) -> operations.ListHrisTaxonomiesResponse:
         r"""List all taxonomies
 
+        Returns a list of HrisTaxonomies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -9003,6 +9197,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListHrisTaxonomiesResponse:
         r"""List all taxonomies
+
+        Returns a list of HrisTaxonomies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -9096,6 +9292,8 @@ class Hris(BaseSDK):
     ) -> operations.ListHrisTimeoffsResponse:
         r"""List all timeoffs
 
+        Returns a list of HrisTimeoffs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -9187,6 +9385,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListHrisTimeoffsResponse:
         r"""List all timeoffs
+
+        Returns a list of HrisTimeoffs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -9280,6 +9480,8 @@ class Hris(BaseSDK):
     ) -> operations.ListHrisTimeshiftsResponse:
         r"""List all timeshifts
 
+        Returns a list of HrisTimeshifts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -9372,6 +9574,8 @@ class Hris(BaseSDK):
     ) -> operations.ListHrisTimeshiftsResponse:
         r"""List all timeshifts
 
+        Returns a list of HrisTimeshifts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -9463,6 +9667,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchHrisAttendanceResponse:
         r"""Update an attendance
+
+        Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -9559,6 +9765,8 @@ class Hris(BaseSDK):
     ) -> operations.PatchHrisAttendanceResponse:
         r"""Update an attendance
 
+        Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -9653,6 +9861,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchHrisBankaccountResponse:
         r"""Update a bankaccount
+
+        Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -9749,6 +9959,8 @@ class Hris(BaseSDK):
     ) -> operations.PatchHrisBankaccountResponse:
         r"""Update a bankaccount
 
+        Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -9843,6 +10055,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchHrisBenefitResponse:
         r"""Update a benefit
+
+        Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -9939,6 +10153,8 @@ class Hris(BaseSDK):
     ) -> operations.PatchHrisBenefitResponse:
         r"""Update a benefit
 
+        Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -10033,6 +10249,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchHrisCompanyResponse:
         r"""Update a company
+
+        Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -10129,6 +10347,8 @@ class Hris(BaseSDK):
     ) -> operations.PatchHrisCompanyResponse:
         r"""Update a company
 
+        Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -10223,6 +10443,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchHrisDeductionResponse:
         r"""Update a deduction
+
+        Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -10319,6 +10541,8 @@ class Hris(BaseSDK):
     ) -> operations.PatchHrisDeductionResponse:
         r"""Update a deduction
 
+        Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -10413,6 +10637,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchHrisDeviceResponse:
         r"""Update a device
+
+        Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -10509,6 +10735,8 @@ class Hris(BaseSDK):
     ) -> operations.PatchHrisDeviceResponse:
         r"""Update a device
 
+        Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -10603,6 +10831,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchHrisDocumentResponse:
         r"""Update a document
+
+        Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -10699,6 +10929,8 @@ class Hris(BaseSDK):
     ) -> operations.PatchHrisDocumentResponse:
         r"""Update a document
 
+        Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -10793,6 +11025,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchHrisEarningResponse:
         r"""Update an earning
+
+        Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -10889,6 +11123,8 @@ class Hris(BaseSDK):
     ) -> operations.PatchHrisEarningResponse:
         r"""Update an earning
 
+        Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -10983,6 +11219,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchHrisEmployeeResponse:
         r"""Update an employee
+
+        Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -11079,6 +11317,8 @@ class Hris(BaseSDK):
     ) -> operations.PatchHrisEmployeeResponse:
         r"""Update an employee
 
+        Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -11172,6 +11412,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchHrisGroupResponse:
         r"""Update a group
+
+        Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -11267,6 +11509,8 @@ class Hris(BaseSDK):
     ) -> operations.PatchHrisGroupResponse:
         r"""Update a group
 
+        Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -11361,6 +11605,8 @@ class Hris(BaseSDK):
     ) -> operations.PatchHrisJobResponse:
         r"""Update a job
 
+        Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -11452,6 +11698,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchHrisJobResponse:
         r"""Update a job
+
+        Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -11545,6 +11793,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchHrisLocationResponse:
         r"""Update a location
+
+        Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -11641,6 +11891,8 @@ class Hris(BaseSDK):
     ) -> operations.PatchHrisLocationResponse:
         r"""Update a location
 
+        Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -11735,6 +11987,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchHrisTimeoffResponse:
         r"""Update a timeoff
+
+        Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -11831,6 +12085,8 @@ class Hris(BaseSDK):
     ) -> operations.PatchHrisTimeoffResponse:
         r"""Update a timeoff
 
+        Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -11925,6 +12181,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchHrisTimeshiftResponse:
         r"""Update a timeshift
+
+        Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -12021,6 +12279,8 @@ class Hris(BaseSDK):
     ) -> operations.PatchHrisTimeshiftResponse:
         r"""Update a timeshift
 
+        Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -12115,6 +12375,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveHrisAttendanceResponse:
         r"""Remove an attendance
+
+        Deletes the HrisAttendance identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -12213,6 +12475,8 @@ class Hris(BaseSDK):
     ) -> operations.RemoveHrisAttendanceResponse:
         r"""Remove an attendance
 
+        Deletes the HrisAttendance identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -12309,6 +12573,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveHrisBankaccountResponse:
         r"""Remove a bankaccount
+
+        Deletes the HrisBankaccount identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -12407,6 +12673,8 @@ class Hris(BaseSDK):
     ) -> operations.RemoveHrisBankaccountResponse:
         r"""Remove a bankaccount
 
+        Deletes the HrisBankaccount identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -12503,6 +12771,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveHrisBenefitResponse:
         r"""Remove a benefit
+
+        Deletes the HrisBenefit identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -12601,6 +12871,8 @@ class Hris(BaseSDK):
     ) -> operations.RemoveHrisBenefitResponse:
         r"""Remove a benefit
 
+        Deletes the HrisBenefit identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -12697,6 +12969,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveHrisCompanyResponse:
         r"""Remove a company
+
+        Deletes the HrisCompany identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -12795,6 +13069,8 @@ class Hris(BaseSDK):
     ) -> operations.RemoveHrisCompanyResponse:
         r"""Remove a company
 
+        Deletes the HrisCompany identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -12891,6 +13167,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveHrisDeductionResponse:
         r"""Remove a deduction
+
+        Deletes the HrisDeduction identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -12989,6 +13267,8 @@ class Hris(BaseSDK):
     ) -> operations.RemoveHrisDeductionResponse:
         r"""Remove a deduction
 
+        Deletes the HrisDeduction identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -13085,6 +13365,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveHrisDeviceResponse:
         r"""Remove a device
+
+        Deletes the HrisDevice identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -13183,6 +13465,8 @@ class Hris(BaseSDK):
     ) -> operations.RemoveHrisDeviceResponse:
         r"""Remove a device
 
+        Deletes the HrisDevice identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -13279,6 +13563,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveHrisDocumentResponse:
         r"""Remove a document
+
+        Deletes the HrisDocument identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -13377,6 +13663,8 @@ class Hris(BaseSDK):
     ) -> operations.RemoveHrisDocumentResponse:
         r"""Remove a document
 
+        Deletes the HrisDocument identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -13473,6 +13761,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveHrisEarningResponse:
         r"""Remove an earning
+
+        Deletes the HrisEarning identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -13571,6 +13861,8 @@ class Hris(BaseSDK):
     ) -> operations.RemoveHrisEarningResponse:
         r"""Remove an earning
 
+        Deletes the HrisEarning identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -13667,6 +13959,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveHrisEmployeeResponse:
         r"""Remove an employee
+
+        Deletes the HrisEmployee identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -13765,6 +14059,8 @@ class Hris(BaseSDK):
     ) -> operations.RemoveHrisEmployeeResponse:
         r"""Remove an employee
 
+        Deletes the HrisEmployee identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -13861,6 +14157,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveHrisGroupResponse:
         r"""Remove a group
+
+        Deletes the HrisGroup identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -13959,6 +14257,8 @@ class Hris(BaseSDK):
     ) -> operations.RemoveHrisGroupResponse:
         r"""Remove a group
 
+        Deletes the HrisGroup identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -14055,6 +14355,8 @@ class Hris(BaseSDK):
     ) -> operations.RemoveHrisJobResponse:
         r"""Remove a job
 
+        Deletes the HrisJob identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -14150,6 +14452,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveHrisJobResponse:
         r"""Remove a job
+
+        Deletes the HrisJob identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -14248,6 +14552,8 @@ class Hris(BaseSDK):
     ) -> operations.RemoveHrisLocationResponse:
         r"""Remove a location
 
+        Deletes the HrisLocation identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -14344,6 +14650,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveHrisLocationResponse:
         r"""Remove a location
+
+        Deletes the HrisLocation identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -14442,6 +14750,8 @@ class Hris(BaseSDK):
     ) -> operations.RemoveHrisTimeoffResponse:
         r"""Remove a timeoff
 
+        Deletes the HrisTimeoff identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -14538,6 +14848,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveHrisTimeoffResponse:
         r"""Remove a timeoff
+
+        Deletes the HrisTimeoff identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -14636,6 +14948,8 @@ class Hris(BaseSDK):
     ) -> operations.RemoveHrisTimeshiftResponse:
         r"""Remove a timeshift
 
+        Deletes the HrisTimeshift identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -14732,6 +15046,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveHrisTimeshiftResponse:
         r"""Remove a timeshift
+
+        Deletes the HrisTimeshift identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -14830,6 +15146,8 @@ class Hris(BaseSDK):
     ) -> operations.UpdateHrisAttendanceResponse:
         r"""Update an attendance
 
+        Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -14924,6 +15242,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateHrisAttendanceResponse:
         r"""Update an attendance
+
+        Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -15020,6 +15340,8 @@ class Hris(BaseSDK):
     ) -> operations.UpdateHrisBankaccountResponse:
         r"""Update a bankaccount
 
+        Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -15114,6 +15436,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateHrisBankaccountResponse:
         r"""Update a bankaccount
+
+        Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -15210,6 +15534,8 @@ class Hris(BaseSDK):
     ) -> operations.UpdateHrisBenefitResponse:
         r"""Update a benefit
 
+        Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -15304,6 +15630,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateHrisBenefitResponse:
         r"""Update a benefit
+
+        Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -15400,6 +15728,8 @@ class Hris(BaseSDK):
     ) -> operations.UpdateHrisCompanyResponse:
         r"""Update a company
 
+        Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -15494,6 +15824,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateHrisCompanyResponse:
         r"""Update a company
+
+        Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -15590,6 +15922,8 @@ class Hris(BaseSDK):
     ) -> operations.UpdateHrisDeductionResponse:
         r"""Update a deduction
 
+        Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -15684,6 +16018,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateHrisDeductionResponse:
         r"""Update a deduction
+
+        Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -15780,6 +16116,8 @@ class Hris(BaseSDK):
     ) -> operations.UpdateHrisDeviceResponse:
         r"""Update a device
 
+        Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -15874,6 +16212,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateHrisDeviceResponse:
         r"""Update a device
+
+        Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -15970,6 +16310,8 @@ class Hris(BaseSDK):
     ) -> operations.UpdateHrisDocumentResponse:
         r"""Update a document
 
+        Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -16064,6 +16406,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateHrisDocumentResponse:
         r"""Update a document
+
+        Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -16160,6 +16504,8 @@ class Hris(BaseSDK):
     ) -> operations.UpdateHrisEarningResponse:
         r"""Update an earning
 
+        Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -16254,6 +16600,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateHrisEarningResponse:
         r"""Update an earning
+
+        Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -16350,6 +16698,8 @@ class Hris(BaseSDK):
     ) -> operations.UpdateHrisEmployeeResponse:
         r"""Update an employee
 
+        Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -16444,6 +16794,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateHrisEmployeeResponse:
         r"""Update an employee
+
+        Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -16540,6 +16892,8 @@ class Hris(BaseSDK):
     ) -> operations.UpdateHrisGroupResponse:
         r"""Update a group
 
+        Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -16635,6 +16989,8 @@ class Hris(BaseSDK):
     ) -> operations.UpdateHrisGroupResponse:
         r"""Update a group
 
+        Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -16729,6 +17085,8 @@ class Hris(BaseSDK):
     ) -> operations.UpdateHrisJobResponse:
         r"""Update a job
 
+        Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -16820,6 +17178,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateHrisJobResponse:
         r"""Update a job
+
+        Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -16913,6 +17273,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateHrisLocationResponse:
         r"""Update a location
+
+        Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -17009,6 +17371,8 @@ class Hris(BaseSDK):
     ) -> operations.UpdateHrisLocationResponse:
         r"""Update a location
 
+        Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -17103,6 +17467,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateHrisTimeoffResponse:
         r"""Update a timeoff
+
+        Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -17199,6 +17565,8 @@ class Hris(BaseSDK):
     ) -> operations.UpdateHrisTimeoffResponse:
         r"""Update a timeoff
 
+        Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -17294,6 +17662,8 @@ class Hris(BaseSDK):
     ) -> operations.UpdateHrisTimeshiftResponse:
         r"""Update a timeshift
 
+        Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -17388,6 +17758,8 @@ class Hris(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateHrisTimeshiftResponse:
         r"""Update a timeshift
+
+        Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

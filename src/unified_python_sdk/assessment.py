@@ -24,6 +24,8 @@ class Assessment(BaseSDK):
     ) -> operations.CreateAssessmentOrderResponse:
         r"""Create an order
 
+        Creates a AssessmentOrder. Provide the unified AssessmentOrder fields in the request body; they are mapped to the provider's API. Returns the created AssessmentOrder.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -118,6 +120,8 @@ class Assessment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAssessmentOrderResponse:
         r"""Create an order
+
+        Creates a AssessmentOrder. Provide the unified AssessmentOrder fields in the request body; they are mapped to the provider's API. Returns the created AssessmentOrder.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -416,6 +420,8 @@ class Assessment(BaseSDK):
     ) -> operations.GetAssessmentOrderResponse:
         r"""Retrieve an order
 
+        Retrieves a single AssessmentOrder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -507,6 +513,8 @@ class Assessment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAssessmentOrderResponse:
         r"""Retrieve an order
+
+        Retrieves a single AssessmentOrder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -968,6 +976,8 @@ class Assessment(BaseSDK):
     ) -> operations.PatchAssessmentOrderResponse:
         r"""Update an order
 
+        Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1062,6 +1072,8 @@ class Assessment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAssessmentOrderResponse:
         r"""Update an order
+
+        Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1554,6 +1566,8 @@ class Assessment(BaseSDK):
     ) -> operations.UpdateAssessmentOrderResponse:
         r"""Update an order
 
+        Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1648,6 +1662,8 @@ class Assessment(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAssessmentOrderResponse:
         r"""Update an order
+
+        Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

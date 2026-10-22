@@ -87,6 +87,7 @@ class PaymentPaymentTypedDict(TypedDict):
     r"""normalized tender category; the provider's original label stays in payment_method"""
     tip_amount: NotRequired[float]
     total_amount: NotRequired[float]
+    r"""The amount paid, in the payment's currency"""
     type: NotRequired[PaymentPaymentType]
     updated_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
@@ -166,6 +167,7 @@ class PaymentPayment(BaseModel):
     tip_amount: Optional[float] = None
 
     total_amount: Optional[float] = None
+    r"""The amount paid, in the payment's currency"""
 
     type: Optional[PaymentPaymentType] = None
 

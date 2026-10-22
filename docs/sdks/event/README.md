@@ -32,7 +32,7 @@
 
 ## create_analytics_event
 
-Create an event
+Creates a AnalyticsEvent. Provide the unified AnalyticsEvent fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsEvent.
 
 ### Example Usage
 
@@ -53,13 +53,13 @@ with UnifiedTo(
         "analytics_event": {
             "created_at": parse_datetime("2023-06-21T03:13:22.954Z"),
             "event_type": shared.EventType.SCREEN_VIEW,
-            "id": "c6557a90-5616-4422-8e66-4c809d508613",
+            "id": "4bfc96a9-ff67-44ae-b446-152ef1a3d100",
             "metadata": {
                 "key": {},
             },
             "name": "page_view",
             "page_url": "https://golden-carboxyl.biz",
-            "updated_at": parse_datetime("2023-09-24T16:22:40.095Z"),
+            "updated_at": parse_datetime("2023-09-24T18:14:57.746Z"),
         },
         "connection_id": "<id>",
     })
@@ -90,7 +90,7 @@ with UnifiedTo(
 
 ## create_calendar_event
 
-Create an event
+Creates a CalendarEvent. Provide the unified CalendarEvent fields in the request body; they are mapped to the provider's API. Returns the created CalendarEvent.
 
 ### Example Usage
 
@@ -112,9 +112,9 @@ with UnifiedTo(
             "attachments": [],
             "conference": [],
             "created_at": "2019-08-04T14:33:51.814Z",
-            "end_at": "2020-05-24T07:00:35.560Z",
+            "end_at": "2020-05-24T09:40:09.347Z",
             "has_conference": False,
-            "id": "42471988-f95c-4e65-8e7b-d0606bae2c5c",
+            "id": "00111fbd-d5e6-4c13-9c93-be91f7154f38",
             "is_all_day": False,
             "is_free": False,
             "is_private": False,
@@ -124,15 +124,15 @@ with UnifiedTo(
             "recurrence": [
                 {
                     "count": 4.0,
-                    "end_at": parse_datetime("2025-03-24T15:37:08.979Z"),
+                    "end_at": parse_datetime("2025-03-25T10:15:51.349Z"),
                     "excluded_dates": [
-                        "2024-02-02T18:42:28.834Z",
+                        "2024-02-03T09:35:14.298Z",
                     ],
                     "frequency": shared.CalendarEventRecurrenceFrequency.YEARLY,
                     "included_dates": [
-                        "2023-07-07T01:25:25.654Z",
-                        "2025-01-23T21:36:36.563Z",
-                        "2024-04-01T23:37:57.848Z",
+                        "2023-07-07T14:23:41.891Z",
+                        "2025-01-24T15:42:51.143Z",
+                        "2024-04-02T15:02:53.330Z",
                     ],
                     "interval": 7.0,
                     "on_days": [
@@ -469,11 +469,11 @@ with UnifiedTo(
                     "week_start": shared.WeekStart.TU,
                 },
             ],
-            "start_at": "2020-05-23T21:46:58.377Z",
+            "start_at": "2020-05-24T00:26:19.631Z",
             "status": shared.CalendarEventStatus.CONFIRMED,
             "subject": "Sunt spargo tepidus bestia vigor credo coadunatio appello.",
             "timezone": "Asia/Bangkok",
-            "updated_at": "2020-06-30T05:23:07.829Z",
+            "updated_at": "2020-06-30T08:22:45.566Z",
             "web_url": "https://another-pinstripe.com",
         },
         "connection_id": "<id>",
@@ -505,7 +505,7 @@ with UnifiedTo(
 
 ## create_cdp_event
 
-Create an event
+Creates a CdpEvent. Provide the unified CdpEvent fields in the request body; they are mapped to the provider's API. Returns the created CdpEvent.
 
 ### Example Usage
 
@@ -552,7 +552,7 @@ with UnifiedTo(
 
 ## create_crm_event
 
-Create an event
+Creates a CrmEvent. Provide the unified CrmEvent fields in the request body; they are mapped to the provider's API. Returns the created CrmEvent.
 
 ### Example Usage
 
@@ -574,13 +574,13 @@ with UnifiedTo(
             "call": {
                 "description": "Arbitro aptus.",
                 "duration": 64.0,
-                "start_at": parse_datetime("2024-12-11T00:44:46.970Z"),
+                "start_at": parse_datetime("2024-12-11T17:31:41.901Z"),
             },
             "created_at": parse_datetime("2020-07-14T04:53:23.784Z"),
-            "id": "9398fe29-3988-44ce-b5dc-2b2767c9445f",
+            "id": "cb6a3ace-0074-470f-a9c3-3bd2cee96a09",
             "metadata": [],
             "type": shared.CrmEventType.CALL,
-            "updated_at": parse_datetime("2026-10-11T12:50:42.303Z"),
+            "updated_at": parse_datetime("2026-10-12T12:36:07.340Z"),
         },
         "connection_id": "<id>",
     })
@@ -611,7 +611,7 @@ with UnifiedTo(
 
 ## get_analytics_event
 
-Retrieve an event
+Retrieves a single AnalyticsEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -658,7 +658,7 @@ with UnifiedTo(
 
 ## get_calendar_event
 
-Retrieve an event
+Retrieves a single CalendarEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -705,7 +705,7 @@ with UnifiedTo(
 
 ## get_cdp_event
 
-Retrieve an event
+Retrieves a single CdpEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -752,7 +752,7 @@ with UnifiedTo(
 
 ## get_clubs_event
 
-Retrieve an event
+Retrieves a single ClubsEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -799,7 +799,7 @@ with UnifiedTo(
 
 ## get_crm_event
 
-Retrieve an event
+Retrieves a single CrmEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -846,7 +846,7 @@ with UnifiedTo(
 
 ## list_analytics_events
 
-List all events
+Returns a list of AnalyticsEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -892,7 +892,7 @@ with UnifiedTo(
 
 ## list_calendar_events
 
-List all events
+Returns a list of CalendarEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -938,7 +938,7 @@ with UnifiedTo(
 
 ## list_cdp_events
 
-List all events
+Returns a list of CdpEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -984,7 +984,7 @@ with UnifiedTo(
 
 ## list_clubs_events
 
-List all events
+Returns a list of ClubsEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1030,7 +1030,7 @@ with UnifiedTo(
 
 ## list_crm_events
 
-List all events
+Returns a list of CrmEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1076,7 +1076,7 @@ with UnifiedTo(
 
 ## patch_calendar_event
 
-Update an event
+Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -1098,9 +1098,9 @@ with UnifiedTo(
             "attachments": [],
             "conference": [],
             "created_at": "2019-08-04T14:33:51.814Z",
-            "end_at": "2020-05-24T07:00:35.566Z",
+            "end_at": "2020-05-24T09:40:09.353Z",
             "has_conference": False,
-            "id": "55bc6735-1d99-404f-aade-6d310ed99197",
+            "id": "251c8515-1230-4346-bb6c-8759c4f5fad3",
             "is_all_day": False,
             "is_free": False,
             "is_private": False,
@@ -1110,15 +1110,15 @@ with UnifiedTo(
             "recurrence": [
                 {
                     "count": 4.0,
-                    "end_at": parse_datetime("2025-03-24T15:37:09.022Z"),
+                    "end_at": parse_datetime("2025-03-25T10:15:51.393Z"),
                     "excluded_dates": [
-                        "2024-02-02T18:42:28.868Z",
+                        "2024-02-03T09:35:14.333Z",
                     ],
                     "frequency": shared.CalendarEventRecurrenceFrequency.YEARLY,
                     "included_dates": [
-                        "2023-07-07T01:25:25.684Z",
-                        "2025-01-23T21:36:36.605Z",
-                        "2024-04-01T23:37:57.883Z",
+                        "2023-07-07T14:23:41.922Z",
+                        "2025-01-24T15:42:51.186Z",
+                        "2024-04-02T15:02:53.366Z",
                     ],
                     "interval": 7.0,
                     "on_days": [
@@ -1455,11 +1455,11 @@ with UnifiedTo(
                     "week_start": shared.WeekStart.TU,
                 },
             ],
-            "start_at": "2020-05-23T21:46:58.383Z",
+            "start_at": "2020-05-24T00:26:19.637Z",
             "status": shared.CalendarEventStatus.CONFIRMED,
             "subject": "Sunt spargo tepidus bestia vigor credo coadunatio appello.",
             "timezone": "Asia/Bangkok",
-            "updated_at": "2020-06-30T05:23:07.836Z",
+            "updated_at": "2020-06-30T08:22:45.573Z",
             "web_url": "https://another-pinstripe.com",
         },
         "connection_id": "<id>",
@@ -1492,7 +1492,7 @@ with UnifiedTo(
 
 ## patch_cdp_event
 
-Update an event
+Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -1540,7 +1540,7 @@ with UnifiedTo(
 
 ## patch_crm_event
 
-Update an event
+Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -1562,13 +1562,13 @@ with UnifiedTo(
             "call": {
                 "description": "Arbitro aptus.",
                 "duration": 64.0,
-                "start_at": parse_datetime("2024-12-11T00:44:47.004Z"),
+                "start_at": parse_datetime("2024-12-11T17:31:41.949Z"),
             },
             "created_at": parse_datetime("2020-07-14T04:53:23.784Z"),
-            "id": "c0be1b9e-c952-494e-9e1e-9f7b757c2075",
+            "id": "6ee8337c-85b4-45ae-8759-aaa2e283bb04",
             "metadata": [],
             "type": shared.CrmEventType.CALL,
-            "updated_at": parse_datetime("2026-10-11T12:50:42.351Z"),
+            "updated_at": parse_datetime("2026-10-12T12:36:07.407Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1600,7 +1600,7 @@ with UnifiedTo(
 
 ## patch_messaging_event
 
-Update an event
+Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -1624,7 +1624,7 @@ with UnifiedTo(
                 "name": "",
             },
             "created_at": parse_datetime("2019-05-30T19:44:46.461Z"),
-            "id": "39795b93-1847-437f-8ed7-ff3b0d53169f",
+            "id": "21655438-a41c-4f8c-9a2e-cb9cb2a996fd",
             "is_replacing_original": False,
             "metadata": [],
             "type": shared.MessagingEventType.BUTTON_CLICK,
@@ -1659,7 +1659,7 @@ with UnifiedTo(
 
 ## remove_calendar_event
 
-Remove an event
+Deletes the CalendarEvent identified by `id`.
 
 ### Example Usage
 
@@ -1706,7 +1706,7 @@ with UnifiedTo(
 
 ## remove_cdp_event
 
-Remove an event
+Deletes the CdpEvent identified by `id`.
 
 ### Example Usage
 
@@ -1753,7 +1753,7 @@ with UnifiedTo(
 
 ## remove_crm_event
 
-Remove an event
+Deletes the CrmEvent identified by `id`.
 
 ### Example Usage
 
@@ -1800,7 +1800,7 @@ with UnifiedTo(
 
 ## update_calendar_event
 
-Update an event
+Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -1822,9 +1822,9 @@ with UnifiedTo(
             "attachments": [],
             "conference": [],
             "created_at": "2019-08-04T14:33:51.814Z",
-            "end_at": "2020-05-24T07:00:35.566Z",
+            "end_at": "2020-05-24T09:40:09.353Z",
             "has_conference": False,
-            "id": "55bc6735-1d99-404f-aade-6d310ed99197",
+            "id": "251c8515-1230-4346-bb6c-8759c4f5fad3",
             "is_all_day": False,
             "is_free": False,
             "is_private": False,
@@ -1834,15 +1834,15 @@ with UnifiedTo(
             "recurrence": [
                 {
                     "count": 4.0,
-                    "end_at": parse_datetime("2025-03-24T15:37:09.022Z"),
+                    "end_at": parse_datetime("2025-03-25T10:15:51.393Z"),
                     "excluded_dates": [
-                        "2024-02-02T18:42:28.868Z",
+                        "2024-02-03T09:35:14.333Z",
                     ],
                     "frequency": shared.CalendarEventRecurrenceFrequency.YEARLY,
                     "included_dates": [
-                        "2023-07-07T01:25:25.684Z",
-                        "2025-01-23T21:36:36.605Z",
-                        "2024-04-01T23:37:57.883Z",
+                        "2023-07-07T14:23:41.922Z",
+                        "2025-01-24T15:42:51.186Z",
+                        "2024-04-02T15:02:53.366Z",
                     ],
                     "interval": 7.0,
                     "on_days": [
@@ -2179,11 +2179,11 @@ with UnifiedTo(
                     "week_start": shared.WeekStart.TU,
                 },
             ],
-            "start_at": "2020-05-23T21:46:58.383Z",
+            "start_at": "2020-05-24T00:26:19.637Z",
             "status": shared.CalendarEventStatus.CONFIRMED,
             "subject": "Sunt spargo tepidus bestia vigor credo coadunatio appello.",
             "timezone": "Asia/Bangkok",
-            "updated_at": "2020-06-30T05:23:07.836Z",
+            "updated_at": "2020-06-30T08:22:45.573Z",
             "web_url": "https://another-pinstripe.com",
         },
         "connection_id": "<id>",
@@ -2216,7 +2216,7 @@ with UnifiedTo(
 
 ## update_cdp_event
 
-Update an event
+Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -2264,7 +2264,7 @@ with UnifiedTo(
 
 ## update_crm_event
 
-Update an event
+Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -2286,13 +2286,13 @@ with UnifiedTo(
             "call": {
                 "description": "Arbitro aptus.",
                 "duration": 64.0,
-                "start_at": parse_datetime("2024-12-11T00:44:47.004Z"),
+                "start_at": parse_datetime("2024-12-11T17:31:41.949Z"),
             },
             "created_at": parse_datetime("2020-07-14T04:53:23.784Z"),
-            "id": "c0be1b9e-c952-494e-9e1e-9f7b757c2075",
+            "id": "6ee8337c-85b4-45ae-8759-aaa2e283bb04",
             "metadata": [],
             "type": shared.CrmEventType.CALL,
-            "updated_at": parse_datetime("2026-10-11T12:50:42.351Z"),
+            "updated_at": parse_datetime("2026-10-12T12:36:07.407Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2324,7 +2324,7 @@ with UnifiedTo(
 
 ## update_messaging_event
 
-Update an event
+Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -2348,7 +2348,7 @@ with UnifiedTo(
                 "name": "",
             },
             "created_at": parse_datetime("2019-05-30T19:44:46.461Z"),
-            "id": "39795b93-1847-437f-8ed7-ff3b0d53169f",
+            "id": "21655438-a41c-4f8c-9a2e-cb9cb2a996fd",
             "is_replacing_original": False,
             "metadata": [],
             "type": shared.MessagingEventType.BUTTON_CLICK,

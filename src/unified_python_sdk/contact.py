@@ -24,6 +24,8 @@ class Contact(BaseSDK):
     ) -> operations.CreateAccountingContactResponse:
         r"""Create a contact
 
+        Creates a AccountingContact. Provide the unified AccountingContact fields in the request body; they are mapped to the provider's API. Returns the created AccountingContact.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -124,6 +126,8 @@ class Contact(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAccountingContactResponse:
         r"""Create a contact
+
+        Creates a AccountingContact. Provide the unified AccountingContact fields in the request body; they are mapped to the provider's API. Returns the created AccountingContact.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -226,6 +230,8 @@ class Contact(BaseSDK):
     ) -> operations.CreateCrmContactResponse:
         r"""Create a contact
 
+        Creates a CrmContact. Provide the unified CrmContact fields in the request body; they are mapped to the provider's API. Returns the created CrmContact.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -320,6 +326,8 @@ class Contact(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateCrmContactResponse:
         r"""Create a contact
+
+        Creates a CrmContact. Provide the unified CrmContact fields in the request body; they are mapped to the provider's API. Returns the created CrmContact.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -416,6 +424,8 @@ class Contact(BaseSDK):
     ) -> operations.CreateUcContactResponse:
         r"""Create a contact
 
+        Creates a UcContact. Provide the unified UcContact fields in the request body; they are mapped to the provider's API. Returns the created UcContact.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -510,6 +520,8 @@ class Contact(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateUcContactResponse:
         r"""Create a contact
+
+        Creates a UcContact. Provide the unified UcContact fields in the request body; they are mapped to the provider's API. Returns the created UcContact.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -606,6 +618,8 @@ class Contact(BaseSDK):
     ) -> operations.GetAccountingContactResponse:
         r"""Retrieve a contact
 
+        Retrieves a single AccountingContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -698,6 +712,8 @@ class Contact(BaseSDK):
     ) -> operations.GetAccountingContactResponse:
         r"""Retrieve a contact
 
+        Retrieves a single AccountingContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -788,6 +804,8 @@ class Contact(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetCrmContactResponse:
         r"""Retrieve a contact
+
+        Retrieves a single CrmContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -880,6 +898,8 @@ class Contact(BaseSDK):
     ) -> operations.GetCrmContactResponse:
         r"""Retrieve a contact
 
+        Retrieves a single CrmContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -971,6 +991,8 @@ class Contact(BaseSDK):
     ) -> operations.GetUcContactResponse:
         r"""Retrieve a contact
 
+        Retrieves a single UcContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1061,6 +1083,8 @@ class Contact(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetUcContactResponse:
         r"""Retrieve a contact
+
+        Retrieves a single UcContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1154,6 +1178,8 @@ class Contact(BaseSDK):
     ) -> operations.ListAccountingContactsResponse:
         r"""List all contacts
 
+        Returns a list of AccountingContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1245,6 +1271,8 @@ class Contact(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAccountingContactsResponse:
         r"""List all contacts
+
+        Returns a list of AccountingContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1338,6 +1366,8 @@ class Contact(BaseSDK):
     ) -> operations.ListCrmContactsResponse:
         r"""List all contacts
 
+        Returns a list of CrmContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1430,6 +1460,8 @@ class Contact(BaseSDK):
     ) -> operations.ListCrmContactsResponse:
         r"""List all contacts
 
+        Returns a list of CrmContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1520,6 +1552,8 @@ class Contact(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListUcContactsResponse:
         r"""List all contacts
+
+        Returns a list of UcContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1612,6 +1646,8 @@ class Contact(BaseSDK):
     ) -> operations.ListUcContactsResponse:
         r"""List all contacts
 
+        Returns a list of UcContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1703,6 +1739,8 @@ class Contact(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAccountingContactResponse:
         r"""Update a contact
+
+        Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1803,6 +1841,8 @@ class Contact(BaseSDK):
     ) -> operations.PatchAccountingContactResponse:
         r"""Update a contact
 
+        Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1902,6 +1942,8 @@ class Contact(BaseSDK):
     ) -> operations.PatchCrmContactResponse:
         r"""Update a contact
 
+        Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1997,6 +2039,8 @@ class Contact(BaseSDK):
     ) -> operations.PatchCrmContactResponse:
         r"""Update a contact
 
+        Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2090,6 +2134,8 @@ class Contact(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchUcContactResponse:
         r"""Update a contact
+
+        Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2185,6 +2231,8 @@ class Contact(BaseSDK):
     ) -> operations.PatchUcContactResponse:
         r"""Update a contact
 
+        Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2279,6 +2327,8 @@ class Contact(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAccountingContactResponse:
         r"""Remove a contact
+
+        Deletes the AccountingContact identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2379,6 +2429,8 @@ class Contact(BaseSDK):
     ) -> operations.RemoveAccountingContactResponse:
         r"""Remove a contact
 
+        Deletes the AccountingContact identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2478,6 +2530,8 @@ class Contact(BaseSDK):
     ) -> operations.RemoveCrmContactResponse:
         r"""Remove a contact
 
+        Deletes the CrmContact identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2574,6 +2628,8 @@ class Contact(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveCrmContactResponse:
         r"""Remove a contact
+
+        Deletes the CrmContact identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2672,6 +2728,8 @@ class Contact(BaseSDK):
     ) -> operations.RemoveUcContactResponse:
         r"""Remove a contact
 
+        Deletes the UcContact identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2769,6 +2827,8 @@ class Contact(BaseSDK):
     ) -> operations.RemoveUcContactResponse:
         r"""Remove a contact
 
+        Deletes the UcContact identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2865,6 +2925,8 @@ class Contact(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAccountingContactResponse:
         r"""Update a contact
+
+        Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2967,6 +3029,8 @@ class Contact(BaseSDK):
     ) -> operations.UpdateAccountingContactResponse:
         r"""Update a contact
 
+        Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3068,6 +3132,8 @@ class Contact(BaseSDK):
     ) -> operations.UpdateCrmContactResponse:
         r"""Update a contact
 
+        Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3162,6 +3228,8 @@ class Contact(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateCrmContactResponse:
         r"""Update a contact
+
+        Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3258,6 +3326,8 @@ class Contact(BaseSDK):
     ) -> operations.UpdateUcContactResponse:
         r"""Update a contact
 
+        Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3352,6 +3422,8 @@ class Contact(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateUcContactResponse:
         r"""Update a contact
+
+        Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

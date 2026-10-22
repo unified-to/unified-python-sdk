@@ -19,7 +19,7 @@
 
 ## create_accounting_category
 
-Create a category
+Creates a AccountingCategory. Provide the unified AccountingCategory fields in the request body; they are mapped to the provider's API. Returns the created AccountingCategory.
 
 ### Example Usage
 
@@ -40,11 +40,11 @@ with UnifiedTo(
         "accounting_category": {
             "created_at": parse_datetime("2023-05-30T12:29:04.257Z"),
             "description": "Textus ab thymum labore basium.",
-            "id": "1e52365d-baa8-471d-a17f-5e9226df37dd",
+            "id": "1c264a31-fc6d-404c-a395-87fd00ef7a9b",
             "is_active": False,
             "metadata": [],
             "name": "Beauty",
-            "updated_at": parse_datetime("2025-09-11T12:07:38.662Z"),
+            "updated_at": parse_datetime("2025-09-12T04:11:51.669Z"),
         },
         "connection_id": "<id>",
     })
@@ -75,7 +75,7 @@ with UnifiedTo(
 
 ## create_ticketing_category
 
-Create a category
+Creates a TicketingCategory. Provide the unified TicketingCategory fields in the request body; they are mapped to the provider's API. Returns the created TicketingCategory.
 
 ### Example Usage
 
@@ -96,11 +96,11 @@ with UnifiedTo(
         "ticketing_category": {
             "created_at": parse_datetime("2019-10-19T22:02:51.067Z"),
             "description": "Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.",
-            "id": "d6141cbe-9a26-4319-aec2-e05800c979f5",
+            "id": "9eb72447-a830-4f73-9402-f6c85f737ea2",
             "is_active": True,
             "metadata": [],
             "name": "amicitia",
-            "updated_at": parse_datetime("2026-01-14T00:29:31.738Z"),
+            "updated_at": parse_datetime("2026-01-14T21:44:12.267Z"),
         },
         "connection_id": "<id>",
     })
@@ -131,7 +131,7 @@ with UnifiedTo(
 
 ## get_accounting_category
 
-Retrieve a category
+Retrieves a single AccountingCategory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -178,7 +178,7 @@ with UnifiedTo(
 
 ## get_ticketing_category
 
-Retrieve a category
+Retrieves a single TicketingCategory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -225,7 +225,7 @@ with UnifiedTo(
 
 ## list_accounting_categories
 
-List all categories
+Returns a list of AccountingCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -271,7 +271,7 @@ with UnifiedTo(
 
 ## list_ticketing_categories
 
-List all categories
+Returns a list of TicketingCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -317,7 +317,7 @@ with UnifiedTo(
 
 ## patch_accounting_category
 
-Update a category
+Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to change in the request body.
 
 ### Example Usage
 
@@ -338,11 +338,11 @@ with UnifiedTo(
         "accounting_category": {
             "created_at": parse_datetime("2023-05-30T12:29:04.257Z"),
             "description": "Textus ab thymum labore basium.",
-            "id": "90ee0885-40a9-4987-adf1-5290274d6fce",
+            "id": "20661dee-4099-4eee-9e2e-d361dd190255",
             "is_active": False,
             "metadata": [],
             "name": "Beauty",
-            "updated_at": parse_datetime("2025-09-11T12:07:38.676Z"),
+            "updated_at": parse_datetime("2025-09-12T04:11:51.679Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -374,7 +374,7 @@ with UnifiedTo(
 
 ## patch_ticketing_category
 
-Update a category
+Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to change in the request body.
 
 ### Example Usage
 
@@ -395,11 +395,11 @@ with UnifiedTo(
         "ticketing_category": {
             "created_at": parse_datetime("2019-10-19T22:02:51.067Z"),
             "description": "Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.",
-            "id": "3c84d9c4-d5f3-4089-ad07-2bcbb2fdab98",
+            "id": "84db6781-2529-49bf-bc4a-6222a4eb1054",
             "is_active": True,
             "metadata": [],
             "name": "amicitia",
-            "updated_at": parse_datetime("2026-01-14T00:29:31.757Z"),
+            "updated_at": parse_datetime("2026-01-14T21:44:12.279Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -431,7 +431,7 @@ with UnifiedTo(
 
 ## remove_accounting_category
 
-Remove a category
+Deletes the AccountingCategory identified by `id`.
 
 ### Example Usage
 
@@ -478,7 +478,7 @@ with UnifiedTo(
 
 ## remove_ticketing_category
 
-Remove a category
+Deletes the TicketingCategory identified by `id`.
 
 ### Example Usage
 
@@ -525,7 +525,7 @@ with UnifiedTo(
 
 ## update_accounting_category
 
-Update a category
+Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to change in the request body.
 
 ### Example Usage
 
@@ -546,11 +546,11 @@ with UnifiedTo(
         "accounting_category": {
             "created_at": parse_datetime("2023-05-30T12:29:04.257Z"),
             "description": "Textus ab thymum labore basium.",
-            "id": "90ee0885-40a9-4987-adf1-5290274d6fce",
+            "id": "20661dee-4099-4eee-9e2e-d361dd190255",
             "is_active": False,
             "metadata": [],
             "name": "Beauty",
-            "updated_at": parse_datetime("2025-09-11T12:07:38.676Z"),
+            "updated_at": parse_datetime("2025-09-12T04:11:51.679Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -582,7 +582,7 @@ with UnifiedTo(
 
 ## update_ticketing_category
 
-Update a category
+Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to change in the request body.
 
 ### Example Usage
 
@@ -603,11 +603,11 @@ with UnifiedTo(
         "ticketing_category": {
             "created_at": parse_datetime("2019-10-19T22:02:51.067Z"),
             "description": "Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.",
-            "id": "3c84d9c4-d5f3-4089-ad07-2bcbb2fdab98",
+            "id": "84db6781-2529-49bf-bc4a-6222a4eb1054",
             "is_active": True,
             "metadata": [],
             "name": "amicitia",
-            "updated_at": parse_datetime("2026-01-14T00:29:31.757Z"),
+            "updated_at": parse_datetime("2026-01-14T21:44:12.279Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

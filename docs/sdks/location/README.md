@@ -23,7 +23,7 @@
 
 ## create_commerce_location
 
-Create a location
+Creates a CommerceLocation. Provide the unified CommerceLocation fields in the request body; they are mapped to the provider's API. Returns the created CommerceLocation.
 
 ### Example Usage
 
@@ -54,7 +54,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-12-29T04:15:21.195Z"),
             "currency": "XCD",
             "description": "Adsidue audentia.",
-            "id": "4497136e-663b-4dad-b1e5-9fa49a35b542",
+            "id": "8709883e-a42c-47cb-8667-a2cb41249df1",
             "image_url": "https://picsum.photos/seed/hjFt1/1036/2220",
             "is_active": False,
             "language_locale": "vulgaris",
@@ -65,10 +65,10 @@ with UnifiedTo(
                 {
                     "alt": "Addo.",
                     "height": 283.0,
-                    "id": "19ffdac3-5046-4eb2-a8dd-607393648176",
+                    "id": "569f1f0e-ac7d-449b-b76d-93adcb8e00c4",
                     "metadata": [
                         {
-                            "id": "4592d4eb-2491-4387-96ba-d46421e46283",
+                            "id": "7dcf0591-7cc3-4ea0-a31a-d0fa45b96fc0",
                             "slug": "abutor",
                             "value": "damno",
                         },
@@ -94,7 +94,7 @@ with UnifiedTo(
                     "type": shared.CommerceTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2024-04-20T17:55:06.726Z"),
+            "updated_at": parse_datetime("2024-04-21T02:07:15.519Z"),
             "web_url": "https://chilly-edge.info",
         },
         "connection_id": "<id>",
@@ -126,7 +126,7 @@ with UnifiedTo(
 
 ## create_hris_location
 
-Create a location
+Creates a HrisLocation. Provide the unified HrisLocation fields in the request body; they are mapped to the provider's API. Returns the created HrisLocation.
 
 ### Example Usage
 
@@ -157,7 +157,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-07-18T10:32:01.414Z"),
             "currency": "MNT",
             "description": "Commemoro acervus.",
-            "id": "fe9574e3-bd65-4c81-b38c-4fa56a987f6e",
+            "id": "1ecb6270-3dbb-4d0c-b876-5c1c8bb0ddef",
             "is_active": False,
             "is_hq": True,
             "language_locale": "it",
@@ -178,7 +178,7 @@ with UnifiedTo(
                 },
             ],
             "timezone": "Asia/Jerusalem",
-            "updated_at": parse_datetime("2023-06-21T02:25:43.715Z"),
+            "updated_at": parse_datetime("2023-06-21T11:09:24.068Z"),
         },
         "connection_id": "<id>",
     })
@@ -209,7 +209,7 @@ with UnifiedTo(
 
 ## get_clubs_location
 
-Retrieve a location
+Retrieves a single ClubsLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -256,7 +256,7 @@ with UnifiedTo(
 
 ## get_commerce_location
 
-Retrieve a location
+Retrieves a single CommerceLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -303,7 +303,7 @@ with UnifiedTo(
 
 ## get_healthcare_location
 
-Retrieve a location
+Retrieves a single HealthcareLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -350,7 +350,7 @@ with UnifiedTo(
 
 ## get_hris_location
 
-Retrieve a location
+Retrieves a single HrisLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -397,7 +397,7 @@ with UnifiedTo(
 
 ## list_clubs_locations
 
-List all locations
+Returns a list of ClubsLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -443,7 +443,7 @@ with UnifiedTo(
 
 ## list_commerce_locations
 
-List all locations
+Returns a list of CommerceLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -489,7 +489,7 @@ with UnifiedTo(
 
 ## list_healthcare_locations
 
-List all locations
+Returns a list of HealthcareLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -535,7 +535,7 @@ with UnifiedTo(
 
 ## list_hris_locations
 
-List all locations
+Returns a list of HrisLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -581,7 +581,7 @@ with UnifiedTo(
 
 ## patch_commerce_location
 
-Update a location
+Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to change in the request body.
 
 ### Example Usage
 
@@ -612,7 +612,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-12-29T04:15:21.195Z"),
             "currency": "XCD",
             "description": "Adsidue audentia.",
-            "id": "6aa73b8e-cc4a-4c3e-a064-456b562581de",
+            "id": "02f6ba18-90d1-4d24-b9c5-628f9067495d",
             "image_url": "https://picsum.photos/seed/hjFt1/1036/2220",
             "is_active": False,
             "language_locale": "vulgaris",
@@ -623,10 +623,10 @@ with UnifiedTo(
                 {
                     "alt": "Addo.",
                     "height": 283.0,
-                    "id": "ae3b8862-2c1e-4a14-8f4b-9d0049137d3e",
+                    "id": "aed7dbb7-9440-4f3d-b59c-2622d5a172de",
                     "metadata": [
                         {
-                            "id": "133d71f4-de92-4bc8-b0b5-11eae5066a9f",
+                            "id": "f7434651-445a-4b09-b33a-46f7af515a96",
                             "slug": "abutor",
                             "value": "damno",
                         },
@@ -652,7 +652,7 @@ with UnifiedTo(
                     "type": shared.CommerceTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2024-04-20T17:55:06.740Z"),
+            "updated_at": parse_datetime("2024-04-21T02:07:15.534Z"),
             "web_url": "https://chilly-edge.info",
         },
         "connection_id": "<id>",
@@ -685,7 +685,7 @@ with UnifiedTo(
 
 ## patch_hris_location
 
-Update a location
+Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in the request body.
 
 ### Example Usage
 
@@ -716,7 +716,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-07-18T10:32:01.414Z"),
             "currency": "MNT",
             "description": "Commemoro acervus.",
-            "id": "5d42a04c-fb9f-4965-bd74-5235d58a93be",
+            "id": "f595f8c1-17ee-4c09-9c8a-d9d6fe90e62f",
             "is_active": False,
             "is_hq": True,
             "language_locale": "it",
@@ -737,7 +737,7 @@ with UnifiedTo(
                 },
             ],
             "timezone": "Asia/Jerusalem",
-            "updated_at": parse_datetime("2023-06-21T02:25:43.725Z"),
+            "updated_at": parse_datetime("2023-06-21T11:09:24.079Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -769,7 +769,7 @@ with UnifiedTo(
 
 ## remove_commerce_location
 
-Remove a location
+Deletes the CommerceLocation identified by `id`.
 
 ### Example Usage
 
@@ -816,7 +816,7 @@ with UnifiedTo(
 
 ## remove_hris_location
 
-Remove a location
+Deletes the HrisLocation identified by `id`.
 
 ### Example Usage
 
@@ -863,7 +863,7 @@ with UnifiedTo(
 
 ## update_commerce_location
 
-Update a location
+Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to change in the request body.
 
 ### Example Usage
 
@@ -894,7 +894,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-12-29T04:15:21.195Z"),
             "currency": "XCD",
             "description": "Adsidue audentia.",
-            "id": "6aa73b8e-cc4a-4c3e-a064-456b562581de",
+            "id": "02f6ba18-90d1-4d24-b9c5-628f9067495d",
             "image_url": "https://picsum.photos/seed/hjFt1/1036/2220",
             "is_active": False,
             "language_locale": "vulgaris",
@@ -905,10 +905,10 @@ with UnifiedTo(
                 {
                     "alt": "Addo.",
                     "height": 283.0,
-                    "id": "ae3b8862-2c1e-4a14-8f4b-9d0049137d3e",
+                    "id": "aed7dbb7-9440-4f3d-b59c-2622d5a172de",
                     "metadata": [
                         {
-                            "id": "133d71f4-de92-4bc8-b0b5-11eae5066a9f",
+                            "id": "f7434651-445a-4b09-b33a-46f7af515a96",
                             "slug": "abutor",
                             "value": "damno",
                         },
@@ -934,7 +934,7 @@ with UnifiedTo(
                     "type": shared.CommerceTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2024-04-20T17:55:06.740Z"),
+            "updated_at": parse_datetime("2024-04-21T02:07:15.534Z"),
             "web_url": "https://chilly-edge.info",
         },
         "connection_id": "<id>",
@@ -967,7 +967,7 @@ with UnifiedTo(
 
 ## update_hris_location
 
-Update a location
+Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in the request body.
 
 ### Example Usage
 
@@ -998,7 +998,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-07-18T10:32:01.414Z"),
             "currency": "MNT",
             "description": "Commemoro acervus.",
-            "id": "5d42a04c-fb9f-4965-bd74-5235d58a93be",
+            "id": "f595f8c1-17ee-4c09-9c8a-d9d6fe90e62f",
             "is_active": False,
             "is_hq": True,
             "language_locale": "it",
@@ -1019,7 +1019,7 @@ with UnifiedTo(
                 },
             ],
             "timezone": "Asia/Jerusalem",
-            "updated_at": parse_datetime("2023-06-21T02:25:43.725Z"),
+            "updated_at": parse_datetime("2023-06-21T11:09:24.079Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

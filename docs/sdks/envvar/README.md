@@ -13,7 +13,7 @@
 
 ## create_compute_envvar
 
-Create an envvar
+Creates a ComputeEnvvar. Provide the unified ComputeEnvvar fields in the request body; they are mapped to the provider's API. Returns the created ComputeEnvvar.
 
 ### Example Usage
 
@@ -36,11 +36,11 @@ with UnifiedTo(
             "environments": [
                 shared.PropertyComputeEnvvarEnvironments.PREVIEW,
             ],
-            "id": "85469808-5e34-48b8-a37d-d0d50a520e06",
+            "id": "45267d80-0151-4bb4-8576-dce993a3529c",
             "is_secret": True,
             "metadata": [],
             "name": "AEGER_SUBSTANTIA",
-            "updated_at": parse_datetime("2025-07-03T14:18:21.342Z"),
+            "updated_at": parse_datetime("2025-07-04T08:10:42.741Z"),
         },
         "connection_id": "<id>",
     })
@@ -71,7 +71,7 @@ with UnifiedTo(
 
 ## get_compute_envvar
 
-Retrieve an envvar
+Retrieves a single ComputeEnvvar by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -118,7 +118,7 @@ with UnifiedTo(
 
 ## list_compute_envvars
 
-List all envvars
+Returns a list of ComputeEnvvars. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -164,7 +164,7 @@ with UnifiedTo(
 
 ## patch_compute_envvar
 
-Update an envvar
+Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in the request body.
 
 ### Example Usage
 
@@ -187,11 +187,11 @@ with UnifiedTo(
             "environments": [
                 shared.PropertyComputeEnvvarEnvironments.PREVIEW,
             ],
-            "id": "3598af98-8618-4d5b-895a-d2b5811d5b26",
+            "id": "f0db2170-df5b-4931-a32a-b0958fe98b2c",
             "is_secret": True,
             "metadata": [],
             "name": "AEGER_SUBSTANTIA",
-            "updated_at": parse_datetime("2025-07-03T14:18:21.354Z"),
+            "updated_at": parse_datetime("2025-07-04T08:10:42.750Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -223,7 +223,7 @@ with UnifiedTo(
 
 ## remove_compute_envvar
 
-Remove an envvar
+Deletes the ComputeEnvvar identified by `id`.
 
 ### Example Usage
 
@@ -270,7 +270,7 @@ with UnifiedTo(
 
 ## update_compute_envvar
 
-Update an envvar
+Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in the request body.
 
 ### Example Usage
 
@@ -293,11 +293,11 @@ with UnifiedTo(
             "environments": [
                 shared.PropertyComputeEnvvarEnvironments.PREVIEW,
             ],
-            "id": "3598af98-8618-4d5b-895a-d2b5811d5b26",
+            "id": "f0db2170-df5b-4931-a32a-b0958fe98b2c",
             "is_secret": True,
             "metadata": [],
             "name": "AEGER_SUBSTANTIA",
-            "updated_at": parse_datetime("2025-07-03T14:18:21.354Z"),
+            "updated_at": parse_datetime("2025-07-04T08:10:42.750Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

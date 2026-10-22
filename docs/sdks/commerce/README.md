@@ -56,7 +56,7 @@
 
 ## create_commerce_collection
 
-Create a collection
+Creates a CommerceCollection. Provide the unified CommerceCollection fields in the request body; they are mapped to the provider's API. Returns the created CommerceCollection.
 
 ### Example Usage
 
@@ -77,7 +77,7 @@ with UnifiedTo(
         "commerce_collection": {
             "created_at": parse_datetime("2023-07-14T00:42:54.742Z"),
             "description": "The Integrated leading edge website Cheese offers reliable performance and productive design",
-            "id": "ec8c04f2-3e00-420b-ba9a-e3d205f8ce88",
+            "id": "560e3cd0-8477-4d34-8817-5267ee4dd2e8",
             "is_active": True,
             "is_featured": False,
             "is_visible": False,
@@ -86,10 +86,10 @@ with UnifiedTo(
                 {
                     "alt": "Defungo adopto thorax.",
                     "height": 759.0,
-                    "id": "205d23e3-4520-48ef-bb91-b3d8b8d89654",
+                    "id": "ccbbc897-00c8-45af-8cfe-3f86deb56e50",
                     "metadata": [
                         {
-                            "id": "b716751f-0cca-4e40-b849-ceb32f3255d6",
+                            "id": "ddc27840-37e5-4eb7-8548-ea2dce367895",
                             "slug": "censura",
                             "value": "toties",
                         },
@@ -102,7 +102,7 @@ with UnifiedTo(
             ],
             "metadata": [
                 {
-                    "id": "f1254843-0015-40c2-8928-3b66a53c6471",
+                    "id": "ae39db6a-f878-4ab2-8db7-5b7a0d697d3e",
                     "slug": "aetas",
                     "value": "consuasor",
                 },
@@ -116,7 +116,7 @@ with UnifiedTo(
                 "contego",
             ],
             "type": shared.CommerceCollectionType.COLLECTION,
-            "updated_at": parse_datetime("2025-03-15T01:15:47.099Z"),
+            "updated_at": parse_datetime("2025-03-15T13:26:27.513Z"),
         },
         "connection_id": "<id>",
     })
@@ -147,7 +147,7 @@ with UnifiedTo(
 
 ## create_commerce_inventory
 
-Create an inventory
+Creates a CommerceInventory. Provide the unified CommerceInventory fields in the request body; they are mapped to the provider's API. Returns the created CommerceInventory.
 
 ### Example Usage
 
@@ -167,9 +167,9 @@ with UnifiedTo(
     res = unified_to.commerce.create_commerce_inventory(request={
         "commerce_inventory": {
             "available": 337.0,
-            "id": "866b763f-b9cb-4d5c-99ed-5a19f8364a82",
+            "id": "a6aa3268-f037-410f-9c86-d1e39d32c421",
             "metadata": [],
-            "updated_at": parse_datetime("2025-11-20T09:44:35.529Z"),
+            "updated_at": parse_datetime("2025-11-21T04:57:50.421Z"),
         },
         "connection_id": "<id>",
     })
@@ -200,7 +200,7 @@ with UnifiedTo(
 
 ## create_commerce_item
 
-Create an item
+Creates a CommerceItem. Provide the unified CommerceItem fields in the request body; they are mapped to the provider's API. Returns the created CommerceItem.
 
 ### Example Usage
 
@@ -224,7 +224,7 @@ with UnifiedTo(
             "description": "Decretum vulnero ustulo abeo.",
             "duration": 104.0,
             "global_code": "978-0-85270-680-0",
-            "id": "b4355650-4a6e-4ce1-9ea4-d9d1626667e6",
+            "id": "fe4c1760-dd1d-4260-96a4-bad0e53bec82",
             "is_active": False,
             "is_featured": False,
             "is_taxable": True,
@@ -233,10 +233,10 @@ with UnifiedTo(
                 {
                     "alt": "Caterva eveniet acies candidus.",
                     "height": 876.0,
-                    "id": "f5123d4d-f233-4369-bf79-817379a8b577",
+                    "id": "8759e0fd-2c61-45e3-981d-5f23256302d4",
                     "metadata": [
                         {
-                            "id": "7ce8686d-8808-4058-8cdb-44767bc6c710",
+                            "id": "553ccae7-1fa0-472b-a39f-89fa5081f0d3",
                             "slug": "doloremque",
                             "value": "allatus",
                         },
@@ -249,10 +249,10 @@ with UnifiedTo(
                 {
                     "alt": "Comedo.",
                     "height": 651.0,
-                    "id": "96f62058-f418-4ffa-9586-267f1b8ccfd9",
+                    "id": "1896f31b-fd70-4c98-95e7-199e800a8bfe",
                     "metadata": [
                         {
-                            "id": "03daeabb-d03a-4024-bc65-670485449927",
+                            "id": "6e03dc91-db6e-49a7-bbfc-e7ba7697f29e",
                             "slug": "bis",
                             "value": "somniculosus",
                         },
@@ -269,7 +269,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CommerceMetadataFormat.TEXT,
-                    "id": "dd4003f0-370d-4dfd-ba38-a26efbd98a44",
+                    "id": "daa29a61-22f3-479b-bd26-39f3809db791",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "abstergo",
@@ -292,7 +292,7 @@ with UnifiedTo(
             ],
             "total_stock": 682.0,
             "type": "SERVICE",
-            "updated_at": parse_datetime("2022-04-19T11:59:36.533Z"),
+            "updated_at": parse_datetime("2022-04-19T21:11:29.775Z"),
             "vendor_name": "Mayer - Flatley",
             "weight": 37.0,
             "weight_unit": shared.WeightUnit.OZ,
@@ -326,7 +326,7 @@ with UnifiedTo(
 
 ## create_commerce_itemvariant
 
-Create an itemvariant
+Creates a CommerceItemvariant. Provide the unified CommerceItemvariant fields in the request body; they are mapped to the provider's API. Returns the created CommerceItemvariant.
 
 ### Example Usage
 
@@ -349,7 +349,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-01-20T13:49:12.968Z"),
             "description": "Stylish Salad designed to make you stand out with little looks",
             "height": 54.0,
-            "id": "a7b06f92-eb84-4f09-8fa7-5c8600e72186",
+            "id": "da268092-975a-4945-94fa-915b3ee17c31",
             "is_active": True,
             "is_featured": False,
             "is_visible": False,
@@ -358,10 +358,10 @@ with UnifiedTo(
                 {
                     "alt": "Hic desipio thorax.",
                     "height": 961.0,
-                    "id": "1c599918-a34c-40af-a96c-6d8ac210f21e",
+                    "id": "4f41d288-a7bb-4cbf-880e-b3dfa6c8540d",
                     "metadata": [
                         {
-                            "id": "98b5b5e3-7d6e-4c44-89c4-da12f0ad7c27",
+                            "id": "173c2688-c2bb-4bde-9395-9aec88431b88",
                             "slug": "ubi",
                             "value": "textus",
                         },
@@ -378,7 +378,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CommerceMetadataFormat.TEXT,
-                    "id": "9f53d5ed-d0f5-47a6-a7c3-efba725e2af0",
+                    "id": "d26cccae-de25-4c1e-8f3a-2169bc566f80",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "absens",
@@ -387,7 +387,7 @@ with UnifiedTo(
             "name": "Chair",
             "options": [
                 {
-                    "id": "43846d33-b7c1-4cf3-a810-4880311180ba",
+                    "id": "5420d690-9652-4aa1-a39c-8952aa39a9ed",
                     "name": "Color",
                     "position": 1.0,
                     "values": [
@@ -395,7 +395,7 @@ with UnifiedTo(
                     ],
                 },
                 {
-                    "id": "3d82d887-06b2-4e33-870e-b69929b3b415",
+                    "id": "f26e6d4b-3f61-44a2-ba2e-c20b72eda1f0",
                     "name": "Size",
                     "position": 2.0,
                     "values": [
@@ -418,7 +418,7 @@ with UnifiedTo(
                 "deserunt",
             ],
             "total_stock": 436.0,
-            "updated_at": parse_datetime("2026-03-09T16:16:21.097Z"),
+            "updated_at": parse_datetime("2026-03-10T13:01:42.865Z"),
             "weight": 46.0,
             "weight_unit": shared.CommerceItemvariantWeightUnit.OZ,
             "width": 40.0,
@@ -452,7 +452,7 @@ with UnifiedTo(
 
 ## create_commerce_location
 
-Create a location
+Creates a CommerceLocation. Provide the unified CommerceLocation fields in the request body; they are mapped to the provider's API. Returns the created CommerceLocation.
 
 ### Example Usage
 
@@ -483,7 +483,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-12-29T04:15:21.195Z"),
             "currency": "XCD",
             "description": "Adsidue audentia.",
-            "id": "4497136e-663b-4dad-b1e5-9fa49a35b542",
+            "id": "8709883e-a42c-47cb-8667-a2cb41249df1",
             "image_url": "https://picsum.photos/seed/hjFt1/1036/2220",
             "is_active": False,
             "language_locale": "vulgaris",
@@ -494,10 +494,10 @@ with UnifiedTo(
                 {
                     "alt": "Addo.",
                     "height": 283.0,
-                    "id": "19ffdac3-5046-4eb2-a8dd-607393648176",
+                    "id": "569f1f0e-ac7d-449b-b76d-93adcb8e00c4",
                     "metadata": [
                         {
-                            "id": "4592d4eb-2491-4387-96ba-d46421e46283",
+                            "id": "7dcf0591-7cc3-4ea0-a31a-d0fa45b96fc0",
                             "slug": "abutor",
                             "value": "damno",
                         },
@@ -523,7 +523,7 @@ with UnifiedTo(
                     "type": shared.CommerceTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2024-04-20T17:55:06.726Z"),
+            "updated_at": parse_datetime("2024-04-21T02:07:15.519Z"),
             "web_url": "https://chilly-edge.info",
         },
         "connection_id": "<id>",
@@ -555,7 +555,7 @@ with UnifiedTo(
 
 ## create_commerce_reservation
 
-Create a reservation
+Creates a CommerceReservation. Provide the unified CommerceReservation fields in the request body; they are mapped to the provider's API. Returns the created CommerceReservation.
 
 ### Example Usage
 
@@ -579,13 +579,13 @@ with UnifiedTo(
             "guest_email": "julien.bartoletti@icloud.com",
             "guest_name": "Julien Bartoletti",
             "guest_phone": "(728) 596-2620",
-            "id": "66b9aba1-05fd-485c-9fda-81d3cb1e778a",
+            "id": "60c10133-52cf-40e4-bb0c-3c0be69d6146",
             "metadata": [],
             "notes": "Adsum textilis ipsum despecto.",
             "size": 10.0,
             "start_at": parse_datetime("2021-12-18T00:40:25.125Z"),
             "status": shared.CommerceReservationStatus.PENDING,
-            "updated_at": parse_datetime("2023-01-03T21:22:44.391Z"),
+            "updated_at": parse_datetime("2023-01-04T02:33:54.875Z"),
             "url": "https://expensive-gift.org",
         },
         "connection_id": "<id>",
@@ -617,7 +617,7 @@ with UnifiedTo(
 
 ## create_commerce_review
 
-Create a review
+Creates a CommerceReview. Provide the unified CommerceReview fields in the request body; they are mapped to the provider's API. Returns the created CommerceReview.
 
 ### Example Usage
 
@@ -644,7 +644,7 @@ with UnifiedTo(
             "content": "Taedium thymum adipiscor amicitia cui.",
             "created_at": parse_datetime("2019-12-12T18:10:22.988Z"),
             "helpful_votes": 66.0,
-            "id": "c2da663a-21b5-4ea4-a446-610757c27c56",
+            "id": "5511e647-c88b-49ec-a719-ff9102b72c8a",
             "is_featured": False,
             "is_public": True,
             "is_verified": False,
@@ -652,10 +652,10 @@ with UnifiedTo(
                 {
                     "alt": "Desipio carpo sol laudantium colo.",
                     "height": 749.0,
-                    "id": "1e3fd32a-4610-432e-9851-0d3804aaa2ea",
+                    "id": "655ee5a2-586f-49e6-b928-af0c396e311b",
                     "metadata": [
                         {
-                            "id": "5fcb2b44-de9f-4391-a383-ed870bb521e9",
+                            "id": "f431de97-875f-45bb-b368-5a2124680506",
                             "slug": "textor",
                             "value": "quos",
                         },
@@ -668,10 +668,10 @@ with UnifiedTo(
                 {
                     "alt": "Adopto teneo numquam.",
                     "height": 957.0,
-                    "id": "2aa6532b-3d54-4948-bca4-7157b1e37850",
+                    "id": "8ab75126-17bf-45c6-b025-20689efa94a0",
                     "metadata": [
                         {
-                            "id": "f2edfd61-8808-420d-9762-b42c1be5af75",
+                            "id": "37f21345-4a56-42ee-bdba-e3331ac2b3a7",
                             "slug": "bos",
                             "value": "casso",
                         },
@@ -687,7 +687,7 @@ with UnifiedTo(
             "status": shared.CommerceReviewStatus.APPROVED,
             "title": "Coepi adamo amicitia auxilium toties.",
             "unhelpful_votes": 88.0,
-            "updated_at": parse_datetime("2025-08-21T08:38:25.737Z"),
+            "updated_at": parse_datetime("2025-08-22T04:26:27.338Z"),
             "url": "https://diligent-bandwidth.biz",
             "verified_purchase": True,
         },
@@ -720,7 +720,7 @@ with UnifiedTo(
 
 ## create_commerce_saleschannel
 
-Create a saleschannel
+Creates a CommerceSaleschannel. Provide the unified CommerceSaleschannel fields in the request body; they are mapped to the provider's API. Returns the created CommerceSaleschannel.
 
 ### Example Usage
 
@@ -742,11 +742,11 @@ with UnifiedTo(
             "collections": [],
             "created_at": parse_datetime("2021-12-12T06:19:55.421Z"),
             "description": "Utroque denuncio solutio.",
-            "id": "87ad1378-25cc-48c8-942d-ef801d96a1aa",
+            "id": "f5000683-c155-418d-ba03-716ec32f7165",
             "is_active": False,
             "metadata": [],
             "slug": "amiculum-congregatio-suspendo",
-            "updated_at": parse_datetime("2025-01-27T23:58:39.784Z"),
+            "updated_at": parse_datetime("2025-01-28T15:20:47.188Z"),
         },
         "connection_id": "<id>",
     })
@@ -777,7 +777,7 @@ with UnifiedTo(
 
 ## get_commerce_collection
 
-Retrieve a collection
+Retrieves a single CommerceCollection by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -824,7 +824,7 @@ with UnifiedTo(
 
 ## get_commerce_inventory
 
-Retrieve an inventory
+Retrieves a single CommerceInventory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -871,7 +871,7 @@ with UnifiedTo(
 
 ## get_commerce_item
 
-Retrieve an item
+Retrieves a single CommerceItem by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -918,7 +918,7 @@ with UnifiedTo(
 
 ## get_commerce_itemvariant
 
-Retrieve an itemvariant
+Retrieves a single CommerceItemvariant by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -965,7 +965,7 @@ with UnifiedTo(
 
 ## get_commerce_location
 
-Retrieve a location
+Retrieves a single CommerceLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1012,7 +1012,7 @@ with UnifiedTo(
 
 ## get_commerce_reservation
 
-Retrieve a reservation
+Retrieves a single CommerceReservation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1059,7 +1059,7 @@ with UnifiedTo(
 
 ## get_commerce_review
 
-Retrieve a review
+Retrieves a single CommerceReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1106,7 +1106,7 @@ with UnifiedTo(
 
 ## get_commerce_saleschannel
 
-Retrieve a saleschannel
+Retrieves a single CommerceSaleschannel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1153,7 +1153,7 @@ with UnifiedTo(
 
 ## list_commerce_availabilities
 
-List all availabilities
+Returns a list of CommerceAvailabilities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1199,7 +1199,7 @@ with UnifiedTo(
 
 ## list_commerce_collections
 
-List all collections
+Returns a list of CommerceCollections. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1245,7 +1245,7 @@ with UnifiedTo(
 
 ## list_commerce_inventories
 
-List all inventories
+Returns a list of CommerceInventories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1291,7 +1291,7 @@ with UnifiedTo(
 
 ## list_commerce_items
 
-List all items
+Returns a list of CommerceItems. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1337,7 +1337,7 @@ with UnifiedTo(
 
 ## list_commerce_itemvariants
 
-List all itemvariants
+Returns a list of CommerceItemvariants. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1383,7 +1383,7 @@ with UnifiedTo(
 
 ## list_commerce_locations
 
-List all locations
+Returns a list of CommerceLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1429,7 +1429,7 @@ with UnifiedTo(
 
 ## list_commerce_reservations
 
-List all reservations
+Returns a list of CommerceReservations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1475,7 +1475,7 @@ with UnifiedTo(
 
 ## list_commerce_reviews
 
-List all reviews
+Returns a list of CommerceReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1521,7 +1521,7 @@ with UnifiedTo(
 
 ## list_commerce_saleschannels
 
-List all saleschannels
+Returns a list of CommerceSaleschannels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1567,7 +1567,7 @@ with UnifiedTo(
 
 ## patch_commerce_collection
 
-Update a collection
+Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to change in the request body.
 
 ### Example Usage
 
@@ -1588,7 +1588,7 @@ with UnifiedTo(
         "commerce_collection": {
             "created_at": parse_datetime("2023-07-14T00:42:54.742Z"),
             "description": "The Integrated leading edge website Cheese offers reliable performance and productive design",
-            "id": "610a035a-c254-4ac1-9b1d-5f81dac7b86f",
+            "id": "6661f3a1-7c4f-405f-b3a5-1163410c2d96",
             "is_active": True,
             "is_featured": False,
             "is_visible": False,
@@ -1597,10 +1597,10 @@ with UnifiedTo(
                 {
                     "alt": "Defungo adopto thorax.",
                     "height": 759.0,
-                    "id": "682eaeaf-21bd-43ca-858d-9f9822849173",
+                    "id": "bea5d4e2-18f3-4900-a6c6-8002a365d0d3",
                     "metadata": [
                         {
-                            "id": "2f6df4ba-91a8-46a7-a69a-332fee42fc9c",
+                            "id": "1b01c6f9-cebf-4586-b996-c6351c02781a",
                             "slug": "censura",
                             "value": "toties",
                         },
@@ -1613,7 +1613,7 @@ with UnifiedTo(
             ],
             "metadata": [
                 {
-                    "id": "004e3784-91c6-4314-baa6-7da6292dda05",
+                    "id": "05eecd1d-72a1-4c34-b80c-a9b9fc79cd03",
                     "slug": "aetas",
                     "value": "consuasor",
                 },
@@ -1627,7 +1627,7 @@ with UnifiedTo(
                 "contego",
             ],
             "type": shared.CommerceCollectionType.COLLECTION,
-            "updated_at": parse_datetime("2025-03-15T01:15:47.115Z"),
+            "updated_at": parse_datetime("2025-03-15T13:26:27.534Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1659,7 +1659,7 @@ with UnifiedTo(
 
 ## patch_commerce_inventory
 
-Update an inventory
+Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to change in the request body.
 
 ### Example Usage
 
@@ -1679,9 +1679,9 @@ with UnifiedTo(
     res = unified_to.commerce.patch_commerce_inventory(request={
         "commerce_inventory": {
             "available": 337.0,
-            "id": "ce487db4-52ee-4799-83ab-ec1dc1b80da8",
+            "id": "33d89345-882b-4ab1-b502-ad37be2a7167",
             "metadata": [],
-            "updated_at": parse_datetime("2025-11-20T09:44:35.542Z"),
+            "updated_at": parse_datetime("2025-11-21T04:57:50.432Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1713,7 +1713,7 @@ with UnifiedTo(
 
 ## patch_commerce_item
 
-Update an item
+Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in the request body.
 
 ### Example Usage
 
@@ -1737,7 +1737,7 @@ with UnifiedTo(
             "description": "Decretum vulnero ustulo abeo.",
             "duration": 104.0,
             "global_code": "978-0-85270-680-0",
-            "id": "09b515c2-7dc6-427e-b9eb-d1ab26d3d524",
+            "id": "27828a84-f47c-4d8d-b65b-9bae0b6ac3c4",
             "is_active": False,
             "is_featured": False,
             "is_taxable": True,
@@ -1746,10 +1746,10 @@ with UnifiedTo(
                 {
                     "alt": "Caterva eveniet acies candidus.",
                     "height": 876.0,
-                    "id": "b7485481-8efb-4ea0-b803-b9512d1d7c89",
+                    "id": "c6006932-3c9c-40f7-8358-67e85c54b2b4",
                     "metadata": [
                         {
-                            "id": "f26267f4-a390-4e18-94f5-dfb4716549d3",
+                            "id": "7657b784-22d3-43b7-a3b4-8b70507e45e4",
                             "slug": "doloremque",
                             "value": "allatus",
                         },
@@ -1762,10 +1762,10 @@ with UnifiedTo(
                 {
                     "alt": "Comedo.",
                     "height": 651.0,
-                    "id": "366b231e-aaa5-4223-a63b-3786036de8fd",
+                    "id": "b5a64600-20fe-4fd9-8f29-bcbce6bdf87d",
                     "metadata": [
                         {
-                            "id": "300cf771-4f64-4010-baaa-1074fc076137",
+                            "id": "9e6576a7-7aa4-4967-8996-7a533c4f95a0",
                             "slug": "bis",
                             "value": "somniculosus",
                         },
@@ -1782,7 +1782,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CommerceMetadataFormat.TEXT,
-                    "id": "e4ab767b-9bd1-4dac-95e7-caaee906e3dd",
+                    "id": "201410db-b358-4e4d-ac4c-6052277cb222",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "abstergo",
@@ -1805,7 +1805,7 @@ with UnifiedTo(
             ],
             "total_stock": 682.0,
             "type": "SERVICE",
-            "updated_at": parse_datetime("2022-04-19T11:59:36.554Z"),
+            "updated_at": parse_datetime("2022-04-19T21:11:29.792Z"),
             "vendor_name": "Mayer - Flatley",
             "weight": 37.0,
             "weight_unit": shared.WeightUnit.OZ,
@@ -1840,7 +1840,7 @@ with UnifiedTo(
 
 ## patch_commerce_itemvariant
 
-Update an itemvariant
+Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields to change in the request body.
 
 ### Example Usage
 
@@ -1863,7 +1863,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-01-20T13:49:12.968Z"),
             "description": "Stylish Salad designed to make you stand out with little looks",
             "height": 54.0,
-            "id": "28d427ee-c3f9-4cd5-b016-27dc7590f87b",
+            "id": "374f7a4f-2d84-4eb2-bf9a-eaf1a1e33543",
             "is_active": True,
             "is_featured": False,
             "is_visible": False,
@@ -1872,10 +1872,10 @@ with UnifiedTo(
                 {
                     "alt": "Hic desipio thorax.",
                     "height": 961.0,
-                    "id": "eb8dc124-4221-401d-8434-1c2723867164",
+                    "id": "0376e3aa-d7fa-4e75-9236-2c6ad590c3e3",
                     "metadata": [
                         {
-                            "id": "81240a40-23a3-4d16-9642-5049b8eef0f9",
+                            "id": "3ff94cc0-8697-4531-adcb-fca5d5432da6",
                             "slug": "ubi",
                             "value": "textus",
                         },
@@ -1892,7 +1892,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CommerceMetadataFormat.TEXT,
-                    "id": "8d7a4b93-297f-4215-bce2-e3a19bd580f3",
+                    "id": "ebde1a45-2bd9-4fda-9a4d-076114ab38fe",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "absens",
@@ -1901,7 +1901,7 @@ with UnifiedTo(
             "name": "Chair",
             "options": [
                 {
-                    "id": "a4c70b50-3670-4d68-b7be-1a06f01459fb",
+                    "id": "6955550c-1dfa-412a-95e0-ce7164c07f63",
                     "name": "Color",
                     "position": 1.0,
                     "values": [
@@ -1909,7 +1909,7 @@ with UnifiedTo(
                     ],
                 },
                 {
-                    "id": "f4b259bf-9788-424c-b5a2-d30a7983ac2a",
+                    "id": "d01dd6e8-336a-420e-be06-8a1c0cf117f4",
                     "name": "Size",
                     "position": 2.0,
                     "values": [
@@ -1932,7 +1932,7 @@ with UnifiedTo(
                 "deserunt",
             ],
             "total_stock": 436.0,
-            "updated_at": parse_datetime("2026-03-09T16:16:21.131Z"),
+            "updated_at": parse_datetime("2026-03-10T13:01:42.903Z"),
             "weight": 46.0,
             "weight_unit": shared.CommerceItemvariantWeightUnit.OZ,
             "width": 40.0,
@@ -1967,7 +1967,7 @@ with UnifiedTo(
 
 ## patch_commerce_location
 
-Update a location
+Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to change in the request body.
 
 ### Example Usage
 
@@ -1998,7 +1998,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-12-29T04:15:21.195Z"),
             "currency": "XCD",
             "description": "Adsidue audentia.",
-            "id": "6aa73b8e-cc4a-4c3e-a064-456b562581de",
+            "id": "02f6ba18-90d1-4d24-b9c5-628f9067495d",
             "image_url": "https://picsum.photos/seed/hjFt1/1036/2220",
             "is_active": False,
             "language_locale": "vulgaris",
@@ -2009,10 +2009,10 @@ with UnifiedTo(
                 {
                     "alt": "Addo.",
                     "height": 283.0,
-                    "id": "ae3b8862-2c1e-4a14-8f4b-9d0049137d3e",
+                    "id": "aed7dbb7-9440-4f3d-b59c-2622d5a172de",
                     "metadata": [
                         {
-                            "id": "133d71f4-de92-4bc8-b0b5-11eae5066a9f",
+                            "id": "f7434651-445a-4b09-b33a-46f7af515a96",
                             "slug": "abutor",
                             "value": "damno",
                         },
@@ -2038,7 +2038,7 @@ with UnifiedTo(
                     "type": shared.CommerceTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2024-04-20T17:55:06.740Z"),
+            "updated_at": parse_datetime("2024-04-21T02:07:15.534Z"),
             "web_url": "https://chilly-edge.info",
         },
         "connection_id": "<id>",
@@ -2071,7 +2071,7 @@ with UnifiedTo(
 
 ## patch_commerce_reservation
 
-Update a reservation
+Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields to change in the request body.
 
 ### Example Usage
 
@@ -2095,13 +2095,13 @@ with UnifiedTo(
             "guest_email": "julien.bartoletti@icloud.com",
             "guest_name": "Julien Bartoletti",
             "guest_phone": "(728) 596-2620",
-            "id": "e355bbf5-3201-45d4-ac1a-2c13b534b743",
+            "id": "4f525164-06a5-4358-aede-fbd19be29b8c",
             "metadata": [],
             "notes": "Adsum textilis ipsum despecto.",
             "size": 10.0,
             "start_at": parse_datetime("2021-12-18T00:40:25.125Z"),
             "status": shared.CommerceReservationStatus.PENDING,
-            "updated_at": parse_datetime("2023-01-03T21:22:44.395Z"),
+            "updated_at": parse_datetime("2023-01-04T02:33:54.879Z"),
             "url": "https://expensive-gift.org",
         },
         "connection_id": "<id>",
@@ -2134,7 +2134,7 @@ with UnifiedTo(
 
 ## patch_commerce_review
 
-Update a review
+Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change in the request body.
 
 ### Example Usage
 
@@ -2161,7 +2161,7 @@ with UnifiedTo(
             "content": "Taedium thymum adipiscor amicitia cui.",
             "created_at": parse_datetime("2019-12-12T18:10:22.988Z"),
             "helpful_votes": 66.0,
-            "id": "3042d3f8-9fbc-46b0-b868-af20ff44ed39",
+            "id": "68f33a18-c78b-4069-a9b5-44e7f13e5a51",
             "is_featured": False,
             "is_public": True,
             "is_verified": False,
@@ -2169,10 +2169,10 @@ with UnifiedTo(
                 {
                     "alt": "Desipio carpo sol laudantium colo.",
                     "height": 749.0,
-                    "id": "ce1beb97-f91c-41ec-b53f-fea949768d8a",
+                    "id": "34369488-7bac-478b-9dcd-1a33de100275",
                     "metadata": [
                         {
-                            "id": "77a98416-9dac-4170-bd7d-9086f6cb758c",
+                            "id": "54ecfb50-7895-4f9d-87d5-db6f71068c76",
                             "slug": "textor",
                             "value": "quos",
                         },
@@ -2185,10 +2185,10 @@ with UnifiedTo(
                 {
                     "alt": "Adopto teneo numquam.",
                     "height": 957.0,
-                    "id": "9c8f5a51-1fe5-447f-b2e4-d222e57e27f2",
+                    "id": "1e8a1d76-307a-42fa-aa87-d954fe49d115",
                     "metadata": [
                         {
-                            "id": "70d7c585-1287-45dc-950c-352a0b0acb5d",
+                            "id": "0cbc7a59-778a-4ad9-9e52-3788fb32cc25",
                             "slug": "bos",
                             "value": "casso",
                         },
@@ -2204,7 +2204,7 @@ with UnifiedTo(
             "status": shared.CommerceReviewStatus.APPROVED,
             "title": "Coepi adamo amicitia auxilium toties.",
             "unhelpful_votes": 88.0,
-            "updated_at": parse_datetime("2025-08-21T08:38:25.775Z"),
+            "updated_at": parse_datetime("2025-08-22T04:26:27.383Z"),
             "url": "https://diligent-bandwidth.biz",
             "verified_purchase": True,
         },
@@ -2238,7 +2238,7 @@ with UnifiedTo(
 
 ## patch_commerce_saleschannel
 
-Update a saleschannel
+Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields to change in the request body.
 
 ### Example Usage
 
@@ -2260,11 +2260,11 @@ with UnifiedTo(
             "collections": [],
             "created_at": parse_datetime("2021-12-12T06:19:55.421Z"),
             "description": "Utroque denuncio solutio.",
-            "id": "07f49938-85b7-44e9-90c1-647988fc7fb5",
+            "id": "91b0c154-d7b0-4359-9c83-044aed157d8b",
             "is_active": False,
             "metadata": [],
             "slug": "amiculum-congregatio-suspendo",
-            "updated_at": parse_datetime("2025-01-27T23:58:39.793Z"),
+            "updated_at": parse_datetime("2025-01-28T15:20:47.199Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2296,7 +2296,7 @@ with UnifiedTo(
 
 ## remove_commerce_collection
 
-Remove a collection
+Deletes the CommerceCollection identified by `id`.
 
 ### Example Usage
 
@@ -2343,7 +2343,7 @@ with UnifiedTo(
 
 ## remove_commerce_inventory
 
-Remove an inventory
+Deletes the CommerceInventory identified by `id`.
 
 ### Example Usage
 
@@ -2390,7 +2390,7 @@ with UnifiedTo(
 
 ## remove_commerce_item
 
-Remove an item
+Deletes the CommerceItem identified by `id`.
 
 ### Example Usage
 
@@ -2437,7 +2437,7 @@ with UnifiedTo(
 
 ## remove_commerce_itemvariant
 
-Remove an itemvariant
+Deletes the CommerceItemvariant identified by `id`.
 
 ### Example Usage
 
@@ -2484,7 +2484,7 @@ with UnifiedTo(
 
 ## remove_commerce_location
 
-Remove a location
+Deletes the CommerceLocation identified by `id`.
 
 ### Example Usage
 
@@ -2531,7 +2531,7 @@ with UnifiedTo(
 
 ## remove_commerce_reservation
 
-Remove a reservation
+Deletes the CommerceReservation identified by `id`.
 
 ### Example Usage
 
@@ -2578,7 +2578,7 @@ with UnifiedTo(
 
 ## remove_commerce_review
 
-Remove a review
+Deletes the CommerceReview identified by `id`.
 
 ### Example Usage
 
@@ -2625,7 +2625,7 @@ with UnifiedTo(
 
 ## remove_commerce_saleschannel
 
-Remove a saleschannel
+Deletes the CommerceSaleschannel identified by `id`.
 
 ### Example Usage
 
@@ -2672,7 +2672,7 @@ with UnifiedTo(
 
 ## update_commerce_collection
 
-Update a collection
+Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to change in the request body.
 
 ### Example Usage
 
@@ -2693,7 +2693,7 @@ with UnifiedTo(
         "commerce_collection": {
             "created_at": parse_datetime("2023-07-14T00:42:54.742Z"),
             "description": "The Integrated leading edge website Cheese offers reliable performance and productive design",
-            "id": "610a035a-c254-4ac1-9b1d-5f81dac7b86f",
+            "id": "6661f3a1-7c4f-405f-b3a5-1163410c2d96",
             "is_active": True,
             "is_featured": False,
             "is_visible": False,
@@ -2702,10 +2702,10 @@ with UnifiedTo(
                 {
                     "alt": "Defungo adopto thorax.",
                     "height": 759.0,
-                    "id": "682eaeaf-21bd-43ca-858d-9f9822849173",
+                    "id": "bea5d4e2-18f3-4900-a6c6-8002a365d0d3",
                     "metadata": [
                         {
-                            "id": "2f6df4ba-91a8-46a7-a69a-332fee42fc9c",
+                            "id": "1b01c6f9-cebf-4586-b996-c6351c02781a",
                             "slug": "censura",
                             "value": "toties",
                         },
@@ -2718,7 +2718,7 @@ with UnifiedTo(
             ],
             "metadata": [
                 {
-                    "id": "004e3784-91c6-4314-baa6-7da6292dda05",
+                    "id": "05eecd1d-72a1-4c34-b80c-a9b9fc79cd03",
                     "slug": "aetas",
                     "value": "consuasor",
                 },
@@ -2732,7 +2732,7 @@ with UnifiedTo(
                 "contego",
             ],
             "type": shared.CommerceCollectionType.COLLECTION,
-            "updated_at": parse_datetime("2025-03-15T01:15:47.115Z"),
+            "updated_at": parse_datetime("2025-03-15T13:26:27.534Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2764,7 +2764,7 @@ with UnifiedTo(
 
 ## update_commerce_inventory
 
-Update an inventory
+Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to change in the request body.
 
 ### Example Usage
 
@@ -2784,9 +2784,9 @@ with UnifiedTo(
     res = unified_to.commerce.update_commerce_inventory(request={
         "commerce_inventory": {
             "available": 337.0,
-            "id": "ce487db4-52ee-4799-83ab-ec1dc1b80da8",
+            "id": "33d89345-882b-4ab1-b502-ad37be2a7167",
             "metadata": [],
-            "updated_at": parse_datetime("2025-11-20T09:44:35.542Z"),
+            "updated_at": parse_datetime("2025-11-21T04:57:50.432Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2818,7 +2818,7 @@ with UnifiedTo(
 
 ## update_commerce_item
 
-Update an item
+Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in the request body.
 
 ### Example Usage
 
@@ -2842,7 +2842,7 @@ with UnifiedTo(
             "description": "Decretum vulnero ustulo abeo.",
             "duration": 104.0,
             "global_code": "978-0-85270-680-0",
-            "id": "09b515c2-7dc6-427e-b9eb-d1ab26d3d524",
+            "id": "27828a84-f47c-4d8d-b65b-9bae0b6ac3c4",
             "is_active": False,
             "is_featured": False,
             "is_taxable": True,
@@ -2851,10 +2851,10 @@ with UnifiedTo(
                 {
                     "alt": "Caterva eveniet acies candidus.",
                     "height": 876.0,
-                    "id": "b7485481-8efb-4ea0-b803-b9512d1d7c89",
+                    "id": "c6006932-3c9c-40f7-8358-67e85c54b2b4",
                     "metadata": [
                         {
-                            "id": "f26267f4-a390-4e18-94f5-dfb4716549d3",
+                            "id": "7657b784-22d3-43b7-a3b4-8b70507e45e4",
                             "slug": "doloremque",
                             "value": "allatus",
                         },
@@ -2867,10 +2867,10 @@ with UnifiedTo(
                 {
                     "alt": "Comedo.",
                     "height": 651.0,
-                    "id": "366b231e-aaa5-4223-a63b-3786036de8fd",
+                    "id": "b5a64600-20fe-4fd9-8f29-bcbce6bdf87d",
                     "metadata": [
                         {
-                            "id": "300cf771-4f64-4010-baaa-1074fc076137",
+                            "id": "9e6576a7-7aa4-4967-8996-7a533c4f95a0",
                             "slug": "bis",
                             "value": "somniculosus",
                         },
@@ -2887,7 +2887,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CommerceMetadataFormat.TEXT,
-                    "id": "e4ab767b-9bd1-4dac-95e7-caaee906e3dd",
+                    "id": "201410db-b358-4e4d-ac4c-6052277cb222",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "abstergo",
@@ -2910,7 +2910,7 @@ with UnifiedTo(
             ],
             "total_stock": 682.0,
             "type": "SERVICE",
-            "updated_at": parse_datetime("2022-04-19T11:59:36.554Z"),
+            "updated_at": parse_datetime("2022-04-19T21:11:29.792Z"),
             "vendor_name": "Mayer - Flatley",
             "weight": 37.0,
             "weight_unit": shared.WeightUnit.OZ,
@@ -2945,7 +2945,7 @@ with UnifiedTo(
 
 ## update_commerce_itemvariant
 
-Update an itemvariant
+Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields to change in the request body.
 
 ### Example Usage
 
@@ -2968,7 +2968,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-01-20T13:49:12.968Z"),
             "description": "Stylish Salad designed to make you stand out with little looks",
             "height": 54.0,
-            "id": "28d427ee-c3f9-4cd5-b016-27dc7590f87b",
+            "id": "374f7a4f-2d84-4eb2-bf9a-eaf1a1e33543",
             "is_active": True,
             "is_featured": False,
             "is_visible": False,
@@ -2977,10 +2977,10 @@ with UnifiedTo(
                 {
                     "alt": "Hic desipio thorax.",
                     "height": 961.0,
-                    "id": "eb8dc124-4221-401d-8434-1c2723867164",
+                    "id": "0376e3aa-d7fa-4e75-9236-2c6ad590c3e3",
                     "metadata": [
                         {
-                            "id": "81240a40-23a3-4d16-9642-5049b8eef0f9",
+                            "id": "3ff94cc0-8697-4531-adcb-fca5d5432da6",
                             "slug": "ubi",
                             "value": "textus",
                         },
@@ -2997,7 +2997,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CommerceMetadataFormat.TEXT,
-                    "id": "8d7a4b93-297f-4215-bce2-e3a19bd580f3",
+                    "id": "ebde1a45-2bd9-4fda-9a4d-076114ab38fe",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "absens",
@@ -3006,7 +3006,7 @@ with UnifiedTo(
             "name": "Chair",
             "options": [
                 {
-                    "id": "a4c70b50-3670-4d68-b7be-1a06f01459fb",
+                    "id": "6955550c-1dfa-412a-95e0-ce7164c07f63",
                     "name": "Color",
                     "position": 1.0,
                     "values": [
@@ -3014,7 +3014,7 @@ with UnifiedTo(
                     ],
                 },
                 {
-                    "id": "f4b259bf-9788-424c-b5a2-d30a7983ac2a",
+                    "id": "d01dd6e8-336a-420e-be06-8a1c0cf117f4",
                     "name": "Size",
                     "position": 2.0,
                     "values": [
@@ -3037,7 +3037,7 @@ with UnifiedTo(
                 "deserunt",
             ],
             "total_stock": 436.0,
-            "updated_at": parse_datetime("2026-03-09T16:16:21.131Z"),
+            "updated_at": parse_datetime("2026-03-10T13:01:42.903Z"),
             "weight": 46.0,
             "weight_unit": shared.CommerceItemvariantWeightUnit.OZ,
             "width": 40.0,
@@ -3072,7 +3072,7 @@ with UnifiedTo(
 
 ## update_commerce_location
 
-Update a location
+Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to change in the request body.
 
 ### Example Usage
 
@@ -3103,7 +3103,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-12-29T04:15:21.195Z"),
             "currency": "XCD",
             "description": "Adsidue audentia.",
-            "id": "6aa73b8e-cc4a-4c3e-a064-456b562581de",
+            "id": "02f6ba18-90d1-4d24-b9c5-628f9067495d",
             "image_url": "https://picsum.photos/seed/hjFt1/1036/2220",
             "is_active": False,
             "language_locale": "vulgaris",
@@ -3114,10 +3114,10 @@ with UnifiedTo(
                 {
                     "alt": "Addo.",
                     "height": 283.0,
-                    "id": "ae3b8862-2c1e-4a14-8f4b-9d0049137d3e",
+                    "id": "aed7dbb7-9440-4f3d-b59c-2622d5a172de",
                     "metadata": [
                         {
-                            "id": "133d71f4-de92-4bc8-b0b5-11eae5066a9f",
+                            "id": "f7434651-445a-4b09-b33a-46f7af515a96",
                             "slug": "abutor",
                             "value": "damno",
                         },
@@ -3143,7 +3143,7 @@ with UnifiedTo(
                     "type": shared.CommerceTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2024-04-20T17:55:06.740Z"),
+            "updated_at": parse_datetime("2024-04-21T02:07:15.534Z"),
             "web_url": "https://chilly-edge.info",
         },
         "connection_id": "<id>",
@@ -3176,7 +3176,7 @@ with UnifiedTo(
 
 ## update_commerce_reservation
 
-Update a reservation
+Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields to change in the request body.
 
 ### Example Usage
 
@@ -3200,13 +3200,13 @@ with UnifiedTo(
             "guest_email": "julien.bartoletti@icloud.com",
             "guest_name": "Julien Bartoletti",
             "guest_phone": "(728) 596-2620",
-            "id": "e355bbf5-3201-45d4-ac1a-2c13b534b743",
+            "id": "4f525164-06a5-4358-aede-fbd19be29b8c",
             "metadata": [],
             "notes": "Adsum textilis ipsum despecto.",
             "size": 10.0,
             "start_at": parse_datetime("2021-12-18T00:40:25.125Z"),
             "status": shared.CommerceReservationStatus.PENDING,
-            "updated_at": parse_datetime("2023-01-03T21:22:44.395Z"),
+            "updated_at": parse_datetime("2023-01-04T02:33:54.879Z"),
             "url": "https://expensive-gift.org",
         },
         "connection_id": "<id>",
@@ -3239,7 +3239,7 @@ with UnifiedTo(
 
 ## update_commerce_review
 
-Update a review
+Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change in the request body.
 
 ### Example Usage
 
@@ -3266,7 +3266,7 @@ with UnifiedTo(
             "content": "Taedium thymum adipiscor amicitia cui.",
             "created_at": parse_datetime("2019-12-12T18:10:22.988Z"),
             "helpful_votes": 66.0,
-            "id": "3042d3f8-9fbc-46b0-b868-af20ff44ed39",
+            "id": "68f33a18-c78b-4069-a9b5-44e7f13e5a51",
             "is_featured": False,
             "is_public": True,
             "is_verified": False,
@@ -3274,10 +3274,10 @@ with UnifiedTo(
                 {
                     "alt": "Desipio carpo sol laudantium colo.",
                     "height": 749.0,
-                    "id": "ce1beb97-f91c-41ec-b53f-fea949768d8a",
+                    "id": "34369488-7bac-478b-9dcd-1a33de100275",
                     "metadata": [
                         {
-                            "id": "77a98416-9dac-4170-bd7d-9086f6cb758c",
+                            "id": "54ecfb50-7895-4f9d-87d5-db6f71068c76",
                             "slug": "textor",
                             "value": "quos",
                         },
@@ -3290,10 +3290,10 @@ with UnifiedTo(
                 {
                     "alt": "Adopto teneo numquam.",
                     "height": 957.0,
-                    "id": "9c8f5a51-1fe5-447f-b2e4-d222e57e27f2",
+                    "id": "1e8a1d76-307a-42fa-aa87-d954fe49d115",
                     "metadata": [
                         {
-                            "id": "70d7c585-1287-45dc-950c-352a0b0acb5d",
+                            "id": "0cbc7a59-778a-4ad9-9e52-3788fb32cc25",
                             "slug": "bos",
                             "value": "casso",
                         },
@@ -3309,7 +3309,7 @@ with UnifiedTo(
             "status": shared.CommerceReviewStatus.APPROVED,
             "title": "Coepi adamo amicitia auxilium toties.",
             "unhelpful_votes": 88.0,
-            "updated_at": parse_datetime("2025-08-21T08:38:25.775Z"),
+            "updated_at": parse_datetime("2025-08-22T04:26:27.383Z"),
             "url": "https://diligent-bandwidth.biz",
             "verified_purchase": True,
         },
@@ -3343,7 +3343,7 @@ with UnifiedTo(
 
 ## update_commerce_saleschannel
 
-Update a saleschannel
+Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields to change in the request body.
 
 ### Example Usage
 
@@ -3365,11 +3365,11 @@ with UnifiedTo(
             "collections": [],
             "created_at": parse_datetime("2021-12-12T06:19:55.421Z"),
             "description": "Utroque denuncio solutio.",
-            "id": "07f49938-85b7-44e9-90c1-647988fc7fb5",
+            "id": "91b0c154-d7b0-4359-9c83-044aed157d8b",
             "is_active": False,
             "metadata": [],
             "slug": "amiculum-congregatio-suspendo",
-            "updated_at": parse_datetime("2025-01-27T23:58:39.793Z"),
+            "updated_at": parse_datetime("2025-01-28T15:20:47.199Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

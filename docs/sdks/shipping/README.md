@@ -24,7 +24,7 @@
 
 ## create_shipping_label
 
-Create a label
+Creates a ShippingLabel. Provide the unified ShippingLabel fields in the request body; they are mapped to the provider's API. Returns the created ShippingLabel.
 
 ### Example Usage
 
@@ -44,17 +44,17 @@ with UnifiedTo(
     res = unified_to.shipping.create_shipping_label(request={
         "shipping_label": {
             "created_at": parse_datetime("2022-11-18T16:45:38.067Z"),
-            "id": "ad27bb24-972f-4fbc-9897-028fe37ed8bd",
+            "id": "0a7687ba-1b2d-4861-a73f-bd0f245ecb14",
             "is_voided": False,
             "label_cost": 40.83653403213248,
             "label_cost_currency": "USD",
             "label_format": shared.LabelFormat.PNG,
-            "label_url": "https://labels.example.com/ad27bb24-972f-4fbc-9897-028fe37ed8bd.pdf",
+            "label_url": "https://labels.example.com/0a7687ba-1b2d-4861-a73f-bd0f245ecb14.pdf",
             "metadata": [],
             "service_code": "Dzy",
             "status": shared.ShippingLabelStatus.EXCEPTION,
             "tracking_number": "ZYV60FOIBUJ6",
-            "updated_at": parse_datetime("2024-04-28T21:51:59.833Z"),
+            "updated_at": parse_datetime("2024-04-29T06:38:50.663Z"),
         },
         "connection_id": "<id>",
     })
@@ -85,7 +85,7 @@ with UnifiedTo(
 
 ## create_shipping_rate
 
-Create a rate
+Creates a ShippingRate. Provide the unified ShippingRate fields in the request body; they are mapped to the provider's API. Returns the created ShippingRate.
 
 ### Example Usage
 
@@ -105,7 +105,7 @@ with UnifiedTo(
     res = unified_to.shipping.create_shipping_rate(request={
         "shipping_rate": {
             "currency": "USD",
-            "id": "daa07837-c775-44ab-8d87-f914e0f8e159",
+            "id": "36f2bf2c-0eaf-479b-9001-08394a563150",
             "metadata": [],
             "rates": [
                 {
@@ -152,7 +152,7 @@ with UnifiedTo(
 
 ## create_shipping_shipment
 
-Create a shipment
+Creates a ShippingShipment. Provide the unified ShippingShipment fields in the request body; they are mapped to the provider's API. Returns the created ShippingShipment.
 
 ### Example Usage
 
@@ -172,7 +172,7 @@ with UnifiedTo(
     res = unified_to.shipping.create_shipping_shipment(request={
         "shipping_shipment": {
             "created_at": parse_datetime("2022-09-12T03:11:28.960Z"),
-            "id": "b2318947-9282-4a84-9085-ba1a71974235",
+            "id": "0a5cf88a-9ecb-4aef-8699-32f07ffa8215",
             "is_return": False,
             "lineitems": [],
             "metadata": [],
@@ -182,7 +182,7 @@ with UnifiedTo(
             "service_code": "OVERNIGHT",
             "shipped_at": parse_datetime("2022-09-12T07:26:48.479Z"),
             "status": shared.ShippingShipmentStatus.DELIVERED,
-            "updated_at": parse_datetime("2022-11-15T06:46:07.981Z"),
+            "updated_at": parse_datetime("2022-11-15T07:47:20.988Z"),
         },
         "connection_id": "<id>",
     })
@@ -213,7 +213,7 @@ with UnifiedTo(
 
 ## get_shipping_carrier
 
-Retrieve a carrier
+Retrieves a single ShippingCarrier by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -260,7 +260,7 @@ with UnifiedTo(
 
 ## get_shipping_label
 
-Retrieve a label
+Retrieves a single ShippingLabel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -307,7 +307,7 @@ with UnifiedTo(
 
 ## get_shipping_shipment
 
-Retrieve a shipment
+Retrieves a single ShippingShipment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -354,7 +354,7 @@ with UnifiedTo(
 
 ## get_shipping_tracking
 
-Retrieve a tracking
+Retrieves a single ShippingTracking by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -401,7 +401,7 @@ with UnifiedTo(
 
 ## list_shipping_carriers
 
-List all carriers
+Returns a list of ShippingCarriers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -447,7 +447,7 @@ with UnifiedTo(
 
 ## list_shipping_labels
 
-List all labels
+Returns a list of ShippingLabels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -493,7 +493,7 @@ with UnifiedTo(
 
 ## list_shipping_shipments
 
-List all shipments
+Returns a list of ShippingShipments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -539,7 +539,7 @@ with UnifiedTo(
 
 ## list_shipping_trackings
 
-List all trackings
+Returns a list of ShippingTrackings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -585,7 +585,7 @@ with UnifiedTo(
 
 ## patch_shipping_label
 
-Update a label
+Updates the ShippingLabel identified by `id`. Provide the unified ShippingLabel fields to change in the request body.
 
 ### Example Usage
 
@@ -605,17 +605,17 @@ with UnifiedTo(
     res = unified_to.shipping.patch_shipping_label(request={
         "shipping_label": {
             "created_at": parse_datetime("2022-11-18T16:45:38.067Z"),
-            "id": "5a0182b7-9141-44ac-a5a4-d8a8d55ccc06",
+            "id": "dc4fada4-942f-4b74-95d8-576e6405865f",
             "is_voided": False,
             "label_cost": 40.83653403213248,
             "label_cost_currency": "USD",
             "label_format": shared.LabelFormat.PNG,
-            "label_url": "https://labels.example.com/5a0182b7-9141-44ac-a5a4-d8a8d55ccc06.pdf",
+            "label_url": "https://labels.example.com/dc4fada4-942f-4b74-95d8-576e6405865f.pdf",
             "metadata": [],
             "service_code": "Dzy",
             "status": shared.ShippingLabelStatus.EXCEPTION,
             "tracking_number": "ZYV60FOIBUJ6",
-            "updated_at": parse_datetime("2024-04-28T21:51:59.839Z"),
+            "updated_at": parse_datetime("2024-04-29T06:38:50.677Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -647,7 +647,7 @@ with UnifiedTo(
 
 ## patch_shipping_shipment
 
-Update a shipment
+Updates the ShippingShipment identified by `id`. Provide the unified ShippingShipment fields to change in the request body.
 
 ### Example Usage
 
@@ -667,7 +667,7 @@ with UnifiedTo(
     res = unified_to.shipping.patch_shipping_shipment(request={
         "shipping_shipment": {
             "created_at": parse_datetime("2022-09-12T03:11:28.960Z"),
-            "id": "e49a235a-10e2-41a1-9a49-c9707bbcce4e",
+            "id": "d29b9c53-a7f2-4b7c-a271-5ac5254ed575",
             "is_return": False,
             "lineitems": [],
             "metadata": [],
@@ -677,7 +677,7 @@ with UnifiedTo(
             "service_code": "OVERNIGHT",
             "shipped_at": parse_datetime("2022-09-12T07:26:48.479Z"),
             "status": shared.ShippingShipmentStatus.DELIVERED,
-            "updated_at": parse_datetime("2022-11-15T06:46:07.986Z"),
+            "updated_at": parse_datetime("2022-11-15T07:47:20.993Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -709,7 +709,7 @@ with UnifiedTo(
 
 ## remove_shipping_label
 
-Remove a label
+Deletes the ShippingLabel identified by `id`.
 
 ### Example Usage
 
@@ -756,7 +756,7 @@ with UnifiedTo(
 
 ## remove_shipping_shipment
 
-Remove a shipment
+Deletes the ShippingShipment identified by `id`.
 
 ### Example Usage
 
@@ -803,7 +803,7 @@ with UnifiedTo(
 
 ## update_shipping_label
 
-Update a label
+Updates the ShippingLabel identified by `id`. Provide the unified ShippingLabel fields to change in the request body.
 
 ### Example Usage
 
@@ -823,17 +823,17 @@ with UnifiedTo(
     res = unified_to.shipping.update_shipping_label(request={
         "shipping_label": {
             "created_at": parse_datetime("2022-11-18T16:45:38.067Z"),
-            "id": "5a0182b7-9141-44ac-a5a4-d8a8d55ccc06",
+            "id": "dc4fada4-942f-4b74-95d8-576e6405865f",
             "is_voided": False,
             "label_cost": 40.83653403213248,
             "label_cost_currency": "USD",
             "label_format": shared.LabelFormat.PNG,
-            "label_url": "https://labels.example.com/5a0182b7-9141-44ac-a5a4-d8a8d55ccc06.pdf",
+            "label_url": "https://labels.example.com/dc4fada4-942f-4b74-95d8-576e6405865f.pdf",
             "metadata": [],
             "service_code": "Dzy",
             "status": shared.ShippingLabelStatus.EXCEPTION,
             "tracking_number": "ZYV60FOIBUJ6",
-            "updated_at": parse_datetime("2024-04-28T21:51:59.839Z"),
+            "updated_at": parse_datetime("2024-04-29T06:38:50.677Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -865,7 +865,7 @@ with UnifiedTo(
 
 ## update_shipping_shipment
 
-Update a shipment
+Updates the ShippingShipment identified by `id`. Provide the unified ShippingShipment fields to change in the request body.
 
 ### Example Usage
 
@@ -885,7 +885,7 @@ with UnifiedTo(
     res = unified_to.shipping.update_shipping_shipment(request={
         "shipping_shipment": {
             "created_at": parse_datetime("2022-09-12T03:11:28.960Z"),
-            "id": "e49a235a-10e2-41a1-9a49-c9707bbcce4e",
+            "id": "d29b9c53-a7f2-4b7c-a271-5ac5254ed575",
             "is_return": False,
             "lineitems": [],
             "metadata": [],
@@ -895,7 +895,7 @@ with UnifiedTo(
             "service_code": "OVERNIGHT",
             "shipped_at": parse_datetime("2022-09-12T07:26:48.479Z"),
             "status": shared.ShippingShipmentStatus.DELIVERED,
-            "updated_at": parse_datetime("2022-11-15T06:46:07.986Z"),
+            "updated_at": parse_datetime("2022-11-15T07:47:20.993Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

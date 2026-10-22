@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 from .datastorefilter import DatastoreFilter, DatastoreFilterTypedDict
+from .datastorefiltergroup import DatastoreFilterGroup, DatastoreFilterGroupTypedDict
 from enum import Enum
 import pydantic
 from pydantic import field_serializer, model_serializer
@@ -20,23 +21,23 @@ class PropertyDatastoreQueryExpandFilterType(str, Enum, metaclass=utils.OpenEnum
 
 class PropertyDatastoreQueryExpandFilterTypedDict(TypedDict):
     type: PropertyDatastoreQueryExpandFilterType
-    and_: NotRequired[List[PropertyDatastoreQueryExpandFilterTypedDict]]
+    and_: NotRequired[List[DatastoreFilterGroupTypedDict]]
     filters: NotRequired[List[DatastoreFilterTypedDict]]
-    or_: NotRequired[List[PropertyDatastoreQueryExpandFilterTypedDict]]
+    or_: NotRequired[List[DatastoreFilterGroupTypedDict]]
 
 
 class PropertyDatastoreQueryExpandFilter(BaseModel):
     type: PropertyDatastoreQueryExpandFilterType
 
     and_: Annotated[
-        Optional[List[PropertyDatastoreQueryExpandFilter]], pydantic.Field(alias="and")
+        Optional[List[DatastoreFilterGroup]], pydantic.Field(alias="and")
     ] = None
 
     filters: Optional[List[DatastoreFilter]] = None
 
-    or_: Annotated[
-        Optional[List[PropertyDatastoreQueryExpandFilter]], pydantic.Field(alias="or")
-    ] = None
+    or_: Annotated[Optional[List[DatastoreFilterGroup]], pydantic.Field(alias="or")] = (
+        None
+    )
 
     @field_serializer("type")
     def serialize_type(self, value):

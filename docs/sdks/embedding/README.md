@@ -8,7 +8,7 @@
 
 ## create_genai_embedding
 
-Create an embedding
+Creates a GenaiEmbedding. Provide the unified GenaiEmbedding fields in the request body; they are mapped to the provider's API. Returns the created GenaiEmbedding.
 
 ### Example Usage
 
@@ -34,7 +34,7 @@ with UnifiedTo(
             "dimension": 423.0,
             "embeddings": "Est.",
             "enconding_format": shared.EncondingFormat.FLOAT,
-            "id": "43dcda99-c0f0-42f6-94c9-abd78efb412d",
+            "id": "6f64474a-e4ea-475a-a3a2-7ed4a98a77ca",
             "max_tokens": 223.0,
             "tokens_used": 836.0,
             "type": "classification",

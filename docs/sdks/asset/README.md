@@ -10,7 +10,7 @@
 
 ## create_ads_asset
 
-Create an asset
+Creates a AdsAsset. Provide the unified AdsAsset fields in the request body; they are mapped to the provider's API. Returns the created AdsAsset.
 
 ### Example Usage
 
@@ -31,12 +31,12 @@ with UnifiedTo(
         "ads_asset": {
             "created_at": parse_datetime("2020-03-27T20:14:38.603Z"),
             "height": 400.0,
-            "id": "c0ff480e-0ed4-450b-8572-2c76f7f34ef3",
+            "id": "e4b861f2-f87e-490d-bc8f-298724c180d9",
             "metadata": [],
             "mime_type": "IMAGE_PNG",
             "name": "Lockman - DuBuque",
             "type": shared.AdsAssetType.IMAGE,
-            "updated_at": parse_datetime("2022-03-25T04:37:32.453Z"),
+            "updated_at": parse_datetime("2022-03-25T11:51:38.865Z"),
             "url": "https://informal-perfection.com/",
             "width": 600.0,
         },
@@ -69,7 +69,7 @@ with UnifiedTo(
 
 ## get_ads_asset
 
-Retrieve an asset
+Retrieves a single AdsAsset by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -116,7 +116,7 @@ with UnifiedTo(
 
 ## list_ads_assets
 
-List all assets
+Returns a list of AdsAssets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 

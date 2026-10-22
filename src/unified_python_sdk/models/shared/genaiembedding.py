@@ -22,6 +22,7 @@ class EncondingFormat(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class GenaiEmbeddingTypedDict(TypedDict):
     content: NotRequired[List[GenaiEmbeddingContentTypedDict]]
+    r"""The texts to create embeddings for"""
     dimension: NotRequired[float]
     r"""256, 512, 1024, and 1536"""
     embeddings: NotRequired[str]
@@ -38,6 +39,7 @@ class GenaiEmbeddingTypedDict(TypedDict):
 
 class GenaiEmbedding(BaseModel):
     content: Optional[List[GenaiEmbeddingContent]] = None
+    r"""The texts to create embeddings for"""
 
     dimension: Optional[float] = None
     r"""256, 512, 1024, and 1536"""

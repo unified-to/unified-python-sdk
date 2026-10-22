@@ -20,6 +20,7 @@ class TaskCommentTypedDict(TypedDict):
     task_id: NotRequired[str]
     r"""(reference to TaskTask)"""
     text: NotRequired[str]
+    r"""The comment's text"""
     updated_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
@@ -45,6 +46,7 @@ class TaskComment(BaseModel):
     r"""(reference to TaskTask)"""
 
     text: Optional[str] = None
+    r"""The comment's text"""
 
     updated_at: Optional[datetime] = None
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""

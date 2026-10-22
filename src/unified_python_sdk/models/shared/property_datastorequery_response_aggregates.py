@@ -12,6 +12,7 @@ class PropertyDatastoreQueryResponseAggregatesTypedDict(TypedDict):
     avg: NotRequired[Dict[str, float]]
     count: NotRequired[float]
     groups: NotRequired[List[Dict[str, DatastoreFieldValueTypedDict]]]
+    r"""Each item is one group row: a map of field name to value"""
     max: NotRequired[Dict[str, float]]
     min: NotRequired[Dict[str, float]]
     sum: NotRequired[Dict[str, float]]
@@ -23,6 +24,7 @@ class PropertyDatastoreQueryResponseAggregates(BaseModel):
     count: Optional[float] = None
 
     groups: Optional[List[Dict[str, DatastoreFieldValue]]] = None
+    r"""Each item is one group row: a map of field name to value"""
 
     max: Optional[Dict[str, float]] = None
 

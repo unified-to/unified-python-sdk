@@ -13,7 +13,7 @@
 
 ## create_accounting_creditmemo
 
-Create a creditmemo
+Creates a AccountingCreditmemo. Provide the unified AccountingCreditmemo fields in the request body; they are mapped to the provider's API. Returns the created AccountingCreditmemo.
 
 ### Example Usage
 
@@ -39,7 +39,7 @@ with UnifiedTo(
             "creditmemo_number": "CM-99537",
             "currency": "AUD",
             "discount_amount": 0.0,
-            "id": "d36f62f7-fb72-41e0-8cb7-4aab750d2d6b",
+            "id": "abafb946-a93b-47e1-a26b-a262d14db967",
             "lineitems": [],
             "metadata": [],
             "notes": "Hic vorax dedecor amo adfero torqueo quas victoria.",
@@ -48,7 +48,7 @@ with UnifiedTo(
             "status": shared.AccountingCreditmemoStatus.AUTHORIZED,
             "tax_amount": 0.0,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2025-09-11T07:54:08.376Z"),
+            "updated_at": parse_datetime("2025-09-11T23:11:29.386Z"),
         },
         "connection_id": "<id>",
     })
@@ -79,7 +79,7 @@ with UnifiedTo(
 
 ## get_accounting_creditmemo
 
-Retrieve a creditmemo
+Retrieves a single AccountingCreditmemo by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -126,7 +126,7 @@ with UnifiedTo(
 
 ## list_accounting_creditmemoes
 
-List all creditmemoes
+Returns a list of AccountingCreditmemoes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -172,7 +172,7 @@ with UnifiedTo(
 
 ## patch_accounting_creditmemo
 
-Update a creditmemo
+Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields to change in the request body.
 
 ### Example Usage
 
@@ -198,7 +198,7 @@ with UnifiedTo(
             "creditmemo_number": "CM-99537",
             "currency": "AUD",
             "discount_amount": 0.0,
-            "id": "3ad508d5-8642-4842-906d-c6820cefea1d",
+            "id": "8a145713-1fbd-40e2-b361-bdd9b06ef0da",
             "lineitems": [],
             "metadata": [],
             "notes": "Hic vorax dedecor amo adfero torqueo quas victoria.",
@@ -207,7 +207,7 @@ with UnifiedTo(
             "status": shared.AccountingCreditmemoStatus.AUTHORIZED,
             "tax_amount": 0.0,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2025-09-11T07:54:08.437Z"),
+            "updated_at": parse_datetime("2025-09-11T23:11:29.409Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -239,7 +239,7 @@ with UnifiedTo(
 
 ## remove_accounting_creditmemo
 
-Remove a creditmemo
+Deletes the AccountingCreditmemo identified by `id`.
 
 ### Example Usage
 
@@ -286,7 +286,7 @@ with UnifiedTo(
 
 ## update_accounting_creditmemo
 
-Update a creditmemo
+Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields to change in the request body.
 
 ### Example Usage
 
@@ -312,7 +312,7 @@ with UnifiedTo(
             "creditmemo_number": "CM-99537",
             "currency": "AUD",
             "discount_amount": 0.0,
-            "id": "3ad508d5-8642-4842-906d-c6820cefea1d",
+            "id": "8a145713-1fbd-40e2-b361-bdd9b06ef0da",
             "lineitems": [],
             "metadata": [],
             "notes": "Hic vorax dedecor amo adfero torqueo quas victoria.",
@@ -321,7 +321,7 @@ with UnifiedTo(
             "status": shared.AccountingCreditmemoStatus.AUTHORIZED,
             "tax_amount": 0.0,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2025-09-11T07:54:08.437Z"),
+            "updated_at": parse_datetime("2025-09-11T23:11:29.409Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

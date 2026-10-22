@@ -24,6 +24,8 @@ class Bill(BaseSDK):
     ) -> operations.CreateAccountingBillResponse:
         r"""Create a bill
 
+        Creates a AccountingBill. Provide the unified AccountingBill fields in the request body; they are mapped to the provider's API. Returns the created AccountingBill.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -118,6 +120,8 @@ class Bill(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAccountingBillResponse:
         r"""Create a bill
+
+        Creates a AccountingBill. Provide the unified AccountingBill fields in the request body; they are mapped to the provider's API. Returns the created AccountingBill.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -214,6 +218,8 @@ class Bill(BaseSDK):
     ) -> operations.GetAccountingBillResponse:
         r"""Retrieve a bill
 
+        Retrieves a single AccountingBill by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -305,6 +311,8 @@ class Bill(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAccountingBillResponse:
         r"""Retrieve a bill
+
+        Retrieves a single AccountingBill by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -398,6 +406,8 @@ class Bill(BaseSDK):
     ) -> operations.ListAccountingBillsResponse:
         r"""List all bills
 
+        Returns a list of AccountingBills. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -490,6 +500,8 @@ class Bill(BaseSDK):
     ) -> operations.ListAccountingBillsResponse:
         r"""List all bills
 
+        Returns a list of AccountingBills. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -581,6 +593,8 @@ class Bill(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAccountingBillResponse:
         r"""Update a bill
+
+        Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -677,6 +691,8 @@ class Bill(BaseSDK):
     ) -> operations.PatchAccountingBillResponse:
         r"""Update a bill
 
+        Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -771,6 +787,8 @@ class Bill(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAccountingBillResponse:
         r"""Remove a bill
+
+        Deletes the AccountingBill identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -869,6 +887,8 @@ class Bill(BaseSDK):
     ) -> operations.RemoveAccountingBillResponse:
         r"""Remove a bill
 
+        Deletes the AccountingBill identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -966,6 +986,8 @@ class Bill(BaseSDK):
     ) -> operations.UpdateAccountingBillResponse:
         r"""Update a bill
 
+        Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1060,6 +1082,8 @@ class Bill(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAccountingBillResponse:
         r"""Update a bill
+
+        Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

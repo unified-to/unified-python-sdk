@@ -13,7 +13,7 @@
 
 ## create_lms_student
 
-Create a student
+Creates a LmsStudent. Provide the unified LmsStudent fields in the request body; they are mapped to the provider's API. Returns the created LmsStudent.
 
 ### Example Usage
 
@@ -45,7 +45,7 @@ with UnifiedTo(
                 {},
             ],
             "first_name": "Marcella",
-            "id": "dc9a9128-cdb5-4fe5-9343-fbf0b6b41816",
+            "id": "3969f57c-214d-4f0b-aa7c-8d5395c21384",
             "image_url": "https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg",
             "last_name": "Murazik",
             "metadata": [],
@@ -64,7 +64,7 @@ with UnifiedTo(
                     "type": shared.LmsTelephoneType.FAX,
                 },
             ],
-            "updated_at": parse_datetime("2022-06-30T23:25:03.916Z"),
+            "updated_at": parse_datetime("2022-07-01T07:39:18.663Z"),
         },
         "connection_id": "<id>",
     })
@@ -95,7 +95,7 @@ with UnifiedTo(
 
 ## get_lms_student
 
-Retrieve a student
+Retrieves a single LmsStudent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -142,7 +142,7 @@ with UnifiedTo(
 
 ## list_lms_students
 
-List all students
+Returns a list of LmsStudents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -188,7 +188,7 @@ with UnifiedTo(
 
 ## patch_lms_student
 
-Update a student
+Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields to change in the request body.
 
 ### Example Usage
 
@@ -220,7 +220,7 @@ with UnifiedTo(
                 {},
             ],
             "first_name": "Marcella",
-            "id": "12557e2d-6cd3-4482-9135-800594c57fec",
+            "id": "f37eded4-a6e6-482e-81be-849ac16fa098",
             "image_url": "https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg",
             "last_name": "Murazik",
             "metadata": [],
@@ -239,7 +239,7 @@ with UnifiedTo(
                     "type": shared.LmsTelephoneType.FAX,
                 },
             ],
-            "updated_at": parse_datetime("2022-06-30T23:25:03.925Z"),
+            "updated_at": parse_datetime("2022-07-01T07:39:18.672Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -271,7 +271,7 @@ with UnifiedTo(
 
 ## remove_lms_student
 
-Remove a student
+Deletes the LmsStudent identified by `id`.
 
 ### Example Usage
 
@@ -318,7 +318,7 @@ with UnifiedTo(
 
 ## update_lms_student
 
-Update a student
+Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields to change in the request body.
 
 ### Example Usage
 
@@ -350,7 +350,7 @@ with UnifiedTo(
                 {},
             ],
             "first_name": "Marcella",
-            "id": "12557e2d-6cd3-4482-9135-800594c57fec",
+            "id": "f37eded4-a6e6-482e-81be-849ac16fa098",
             "image_url": "https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg",
             "last_name": "Murazik",
             "metadata": [],
@@ -369,7 +369,7 @@ with UnifiedTo(
                     "type": shared.LmsTelephoneType.FAX,
                 },
             ],
-            "updated_at": parse_datetime("2022-06-30T23:25:03.925Z"),
+            "updated_at": parse_datetime("2022-07-01T07:39:18.672Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

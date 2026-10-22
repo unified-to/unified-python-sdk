@@ -24,6 +24,8 @@ class Source(BaseSDK):
     ) -> operations.CreateCdpSourceResponse:
         r"""Create a source
 
+        Creates a CdpSource. Provide the unified CdpSource fields in the request body; they are mapped to the provider's API. Returns the created CdpSource.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -119,6 +121,8 @@ class Source(BaseSDK):
     ) -> operations.CreateCdpSourceResponse:
         r"""Create a source
 
+        Creates a CdpSource. Provide the unified CdpSource fields in the request body; they are mapped to the provider's API. Returns the created CdpSource.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -213,6 +217,8 @@ class Source(BaseSDK):
     ) -> operations.GetCdpSourceResponse:
         r"""Retrieve a source
 
+        Retrieves a single CdpSource by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -303,6 +309,8 @@ class Source(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetCdpSourceResponse:
         r"""Retrieve a source
+
+        Retrieves a single CdpSource by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -395,6 +403,8 @@ class Source(BaseSDK):
     ) -> operations.ListCdpSourcesResponse:
         r"""List all sources
 
+        Returns a list of CdpSources. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -486,6 +496,8 @@ class Source(BaseSDK):
     ) -> operations.ListCdpSourcesResponse:
         r"""List all sources
 
+        Returns a list of CdpSources. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -576,6 +588,8 @@ class Source(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchCdpSourceResponse:
         r"""Update a source
+
+        Updates the CdpSource identified by `id`. Provide the unified CdpSource fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -671,6 +685,8 @@ class Source(BaseSDK):
     ) -> operations.PatchCdpSourceResponse:
         r"""Update a source
 
+        Updates the CdpSource identified by `id`. Provide the unified CdpSource fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -765,6 +781,8 @@ class Source(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveCdpSourceResponse:
         r"""Remove a source
+
+        Deletes the CdpSource identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -863,6 +881,8 @@ class Source(BaseSDK):
     ) -> operations.RemoveCdpSourceResponse:
         r"""Remove a source
 
+        Deletes the CdpSource identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -960,6 +980,8 @@ class Source(BaseSDK):
     ) -> operations.UpdateCdpSourceResponse:
         r"""Update a source
 
+        Updates the CdpSource identified by `id`. Provide the unified CdpSource fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1054,6 +1076,8 @@ class Source(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateCdpSourceResponse:
         r"""Update a source
+
+        Updates the CdpSource identified by `id`. Provide the unified CdpSource fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

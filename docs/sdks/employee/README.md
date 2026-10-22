@@ -13,7 +13,7 @@
 
 ## create_hris_employee
 
-Create an employee
+Creates a HrisEmployee. Provide the unified HrisEmployee fields in the request body; they are mapped to the provider's API. Returns the created HrisEmployee.
 
 ### Example Usage
 
@@ -68,7 +68,7 @@ with UnifiedTo(
             "gender": shared.HrisEmployeeGender.MALE,
             "has_mfa": True,
             "hired_at": parse_datetime("2019-09-16T15:08:53.262Z"),
-            "id": "527ad0f8-8434-48ee-bf9b-56fcdb55f917",
+            "id": "f0059d37-f7f5-475f-ba3a-ae687313ebe6",
             "image_url": "https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg",
             "language_locale": "in",
             "last_name": "Prohaska",
@@ -80,7 +80,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.HrisMetadataFormat.TEXT,
-                    "id": "0870315f-5796-4895-a227-5e5e342081f4",
+                    "id": "a100a8c6-503b-48c0-b130-a362a3c5bdad",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "tutis",
@@ -128,7 +128,7 @@ with UnifiedTo(
             "timeoff_days_used": 9.0,
             "timezone": "Europe/Ljubljana",
             "title": "District Branding Specialist",
-            "updated_at": parse_datetime("2020-07-19T04:12:07.601Z"),
+            "updated_at": parse_datetime("2020-07-19T07:01:26.701Z"),
         },
         "connection_id": "<id>",
     })
@@ -159,7 +159,7 @@ with UnifiedTo(
 
 ## get_hris_employee
 
-Retrieve an employee
+Retrieves a single HrisEmployee by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -206,7 +206,7 @@ with UnifiedTo(
 
 ## list_hris_employees
 
-List all employees
+Returns a list of HrisEmployees. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -252,7 +252,7 @@ with UnifiedTo(
 
 ## patch_hris_employee
 
-Update an employee
+Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in the request body.
 
 ### Example Usage
 
@@ -307,7 +307,7 @@ with UnifiedTo(
             "gender": shared.HrisEmployeeGender.MALE,
             "has_mfa": True,
             "hired_at": parse_datetime("2019-09-16T15:08:53.262Z"),
-            "id": "cbbb8cf4-94a8-459c-9c06-f5aea240d40b",
+            "id": "af401a62-954a-4750-b0f9-c63eb87066ea",
             "image_url": "https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg",
             "language_locale": "in",
             "last_name": "Prohaska",
@@ -319,7 +319,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.HrisMetadataFormat.TEXT,
-                    "id": "98a4ca71-9ead-4fb6-96b2-dfa10af6446c",
+                    "id": "cea3e721-d03d-409d-b8f2-ca5f08895117",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "tutis",
@@ -367,7 +367,7 @@ with UnifiedTo(
             "timeoff_days_used": 9.0,
             "timezone": "Europe/Ljubljana",
             "title": "District Branding Specialist",
-            "updated_at": parse_datetime("2020-07-19T04:12:07.614Z"),
+            "updated_at": parse_datetime("2020-07-19T07:01:26.712Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -399,7 +399,7 @@ with UnifiedTo(
 
 ## remove_hris_employee
 
-Remove an employee
+Deletes the HrisEmployee identified by `id`.
 
 ### Example Usage
 
@@ -446,7 +446,7 @@ with UnifiedTo(
 
 ## update_hris_employee
 
-Update an employee
+Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in the request body.
 
 ### Example Usage
 
@@ -501,7 +501,7 @@ with UnifiedTo(
             "gender": shared.HrisEmployeeGender.MALE,
             "has_mfa": True,
             "hired_at": parse_datetime("2019-09-16T15:08:53.262Z"),
-            "id": "cbbb8cf4-94a8-459c-9c06-f5aea240d40b",
+            "id": "af401a62-954a-4750-b0f9-c63eb87066ea",
             "image_url": "https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg",
             "language_locale": "in",
             "last_name": "Prohaska",
@@ -513,7 +513,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.HrisMetadataFormat.TEXT,
-                    "id": "98a4ca71-9ead-4fb6-96b2-dfa10af6446c",
+                    "id": "cea3e721-d03d-409d-b8f2-ca5f08895117",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "tutis",
@@ -561,7 +561,7 @@ with UnifiedTo(
             "timeoff_days_used": 9.0,
             "timezone": "Europe/Ljubljana",
             "title": "District Branding Specialist",
-            "updated_at": parse_datetime("2020-07-19T04:12:07.614Z"),
+            "updated_at": parse_datetime("2020-07-19T07:01:26.712Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

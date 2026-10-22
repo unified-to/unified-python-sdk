@@ -24,6 +24,8 @@ class Database(BaseSDK):
     ) -> operations.CreateDatastoreDatabaseResponse:
         r"""Create a database
 
+        Creates a DatastoreDatabase. Provide the unified DatastoreDatabase fields in the request body; they are mapped to the provider's API. Returns the created DatastoreDatabase.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -124,6 +126,8 @@ class Database(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateDatastoreDatabaseResponse:
         r"""Create a database
+
+        Creates a DatastoreDatabase. Provide the unified DatastoreDatabase fields in the request body; they are mapped to the provider's API. Returns the created DatastoreDatabase.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -226,6 +230,8 @@ class Database(BaseSDK):
     ) -> operations.GetDatastoreDatabaseResponse:
         r"""Retrieve a database
 
+        Retrieves a single DatastoreDatabase by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -317,6 +323,8 @@ class Database(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetDatastoreDatabaseResponse:
         r"""Retrieve a database
+
+        Retrieves a single DatastoreDatabase by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -410,6 +418,8 @@ class Database(BaseSDK):
     ) -> operations.ListDatastoreDatabasesResponse:
         r"""List all databases
 
+        Returns a list of DatastoreDatabases. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -502,6 +512,8 @@ class Database(BaseSDK):
     ) -> operations.ListDatastoreDatabasesResponse:
         r"""List all databases
 
+        Returns a list of DatastoreDatabases. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -593,6 +605,8 @@ class Database(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchDatastoreDatabaseResponse:
         r"""Update a database
+
+        Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -693,6 +707,8 @@ class Database(BaseSDK):
     ) -> operations.PatchDatastoreDatabaseResponse:
         r"""Update a database
 
+        Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -791,6 +807,8 @@ class Database(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveDatastoreDatabaseResponse:
         r"""Remove a database
+
+        Deletes the DatastoreDatabase identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -891,6 +909,8 @@ class Database(BaseSDK):
     ) -> operations.RemoveDatastoreDatabaseResponse:
         r"""Remove a database
 
+        Deletes the DatastoreDatabase identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -989,6 +1009,8 @@ class Database(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateDatastoreDatabaseResponse:
         r"""Update a database
+
+        Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1090,6 +1112,8 @@ class Database(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateDatastoreDatabaseResponse:
         r"""Update a database
+
+        Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

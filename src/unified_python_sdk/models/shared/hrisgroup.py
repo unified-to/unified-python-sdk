@@ -48,6 +48,7 @@ class HrisGroupTypedDict(TypedDict):
     manager_ids: NotRequired[List[str]]
     metadata: NotRequired[List[HrisMetadataTypedDict]]
     name: NotRequired[str]
+    r"""The name of the group (e.g. a team or department)"""
     next_paid_at: NotRequired[datetime]
     r"""next pay date when type is PAY_GROUP (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     parent_id: NotRequired[str]
@@ -78,6 +79,7 @@ class HrisGroup(BaseModel):
     metadata: Optional[List[HrisMetadata]] = None
 
     name: Optional[str] = None
+    r"""The name of the group (e.g. a team or department)"""
 
     next_paid_at: Optional[datetime] = None
     r"""next pay date when type is PAY_GROUP (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""

@@ -13,7 +13,7 @@
 
 ## create_crm_deal
 
-Create a deal
+Creates a CrmDeal. Provide the unified CrmDeal fields in the request body; they are mapped to the provider's API. Returns the created CrmDeal.
 
 ### Example Usage
 
@@ -33,19 +33,19 @@ with UnifiedTo(
     res = unified_to.deal.create_crm_deal(request={
         "crm_deal": {
             "amount": 98162.0,
-            "closed_at": parse_datetime("2024-03-10T10:05:32.936Z"),
-            "closing_at": parse_datetime("2025-08-31T12:34:35.326Z"),
+            "closed_at": parse_datetime("2024-03-10T15:02:30.290Z"),
+            "closing_at": parse_datetime("2025-09-01T04:12:11.705Z"),
             "created_at": parse_datetime("2023-07-04T12:48:48.470Z"),
             "currency": "USD",
             "description": "Comis tepidus sit cavus crustulum trans tubineus adfectus.",
-            "id": "d8a93100-6862-4009-a9e2-452e5976a617",
+            "id": "14ef397c-6011-4e50-90b6-053bbdfd46aa",
             "metadata": [
                 {
                     "extra_data": {
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CrmMetadataFormat.TEXT,
-                    "id": "02819c29-ddff-4a57-99fc-4264e853b2aa",
+                    "id": "f71d3c5e-3680-4811-8ccf-9761d634c9a0",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "conatus",
@@ -58,7 +58,7 @@ with UnifiedTo(
                 "causa",
                 "suus",
             ],
-            "updated_at": parse_datetime("2024-10-11T21:11:01.441Z"),
+            "updated_at": parse_datetime("2024-10-12T06:24:01.623Z"),
             "won_reason": "Usque libero soleo.",
         },
         "connection_id": "<id>",
@@ -90,7 +90,7 @@ with UnifiedTo(
 
 ## get_crm_deal
 
-Retrieve a deal
+Retrieves a single CrmDeal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -137,7 +137,7 @@ with UnifiedTo(
 
 ## list_crm_deals
 
-List all deals
+Returns a list of CrmDeals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -183,7 +183,7 @@ with UnifiedTo(
 
 ## patch_crm_deal
 
-Update a deal
+Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request body.
 
 ### Example Usage
 
@@ -203,19 +203,19 @@ with UnifiedTo(
     res = unified_to.deal.patch_crm_deal(request={
         "crm_deal": {
             "amount": 98162.0,
-            "closed_at": parse_datetime("2024-03-10T10:05:32.939Z"),
-            "closing_at": parse_datetime("2025-08-31T12:34:35.337Z"),
+            "closed_at": parse_datetime("2024-03-10T15:02:30.296Z"),
+            "closing_at": parse_datetime("2025-09-01T04:12:11.724Z"),
             "created_at": parse_datetime("2023-07-04T12:48:48.470Z"),
             "currency": "USD",
             "description": "Comis tepidus sit cavus crustulum trans tubineus adfectus.",
-            "id": "2f87abfb-7cab-4105-8835-3504a8954792",
+            "id": "7b95c55d-c096-4489-9655-08807542832c",
             "metadata": [
                 {
                     "extra_data": {
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CrmMetadataFormat.TEXT,
-                    "id": "83983b53-507a-41e7-aae2-dc4809f4474a",
+                    "id": "68c0b75f-f90f-4795-916c-ea0dc7f99352",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "conatus",
@@ -228,7 +228,7 @@ with UnifiedTo(
                 "causa",
                 "suus",
             ],
-            "updated_at": parse_datetime("2024-10-11T21:11:01.447Z"),
+            "updated_at": parse_datetime("2024-10-12T06:24:01.634Z"),
             "won_reason": "Usque libero soleo.",
         },
         "connection_id": "<id>",
@@ -261,7 +261,7 @@ with UnifiedTo(
 
 ## remove_crm_deal
 
-Remove a deal
+Deletes the CrmDeal identified by `id`.
 
 ### Example Usage
 
@@ -308,7 +308,7 @@ with UnifiedTo(
 
 ## update_crm_deal
 
-Update a deal
+Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request body.
 
 ### Example Usage
 
@@ -328,19 +328,19 @@ with UnifiedTo(
     res = unified_to.deal.update_crm_deal(request={
         "crm_deal": {
             "amount": 98162.0,
-            "closed_at": parse_datetime("2024-03-10T10:05:32.939Z"),
-            "closing_at": parse_datetime("2025-08-31T12:34:35.337Z"),
+            "closed_at": parse_datetime("2024-03-10T15:02:30.296Z"),
+            "closing_at": parse_datetime("2025-09-01T04:12:11.724Z"),
             "created_at": parse_datetime("2023-07-04T12:48:48.470Z"),
             "currency": "USD",
             "description": "Comis tepidus sit cavus crustulum trans tubineus adfectus.",
-            "id": "2f87abfb-7cab-4105-8835-3504a8954792",
+            "id": "7b95c55d-c096-4489-9655-08807542832c",
             "metadata": [
                 {
                     "extra_data": {
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CrmMetadataFormat.TEXT,
-                    "id": "83983b53-507a-41e7-aae2-dc4809f4474a",
+                    "id": "68c0b75f-f90f-4795-916c-ea0dc7f99352",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "conatus",
@@ -353,7 +353,7 @@ with UnifiedTo(
                 "causa",
                 "suus",
             ],
-            "updated_at": parse_datetime("2024-10-11T21:11:01.447Z"),
+            "updated_at": parse_datetime("2024-10-12T06:24:01.634Z"),
             "won_reason": "Usque libero soleo.",
         },
         "connection_id": "<id>",

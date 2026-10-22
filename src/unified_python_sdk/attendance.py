@@ -24,6 +24,8 @@ class Attendance(BaseSDK):
     ) -> operations.CreateHrisAttendanceResponse:
         r"""Create an attendance
 
+        Creates a HrisAttendance. Provide the unified HrisAttendance fields in the request body; they are mapped to the provider's API. Returns the created HrisAttendance.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -118,6 +120,8 @@ class Attendance(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateHrisAttendanceResponse:
         r"""Create an attendance
+
+        Creates a HrisAttendance. Provide the unified HrisAttendance fields in the request body; they are mapped to the provider's API. Returns the created HrisAttendance.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -214,6 +218,8 @@ class Attendance(BaseSDK):
     ) -> operations.GetHrisAttendanceResponse:
         r"""Retrieve an attendance
 
+        Retrieves a single HrisAttendance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -305,6 +311,8 @@ class Attendance(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetHrisAttendanceResponse:
         r"""Retrieve an attendance
+
+        Retrieves a single HrisAttendance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -398,6 +406,8 @@ class Attendance(BaseSDK):
     ) -> operations.ListHrisAttendancesResponse:
         r"""List all attendances
 
+        Returns a list of HrisAttendances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -490,6 +500,8 @@ class Attendance(BaseSDK):
     ) -> operations.ListHrisAttendancesResponse:
         r"""List all attendances
 
+        Returns a list of HrisAttendances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -581,6 +593,8 @@ class Attendance(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchHrisAttendanceResponse:
         r"""Update an attendance
+
+        Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -677,6 +691,8 @@ class Attendance(BaseSDK):
     ) -> operations.PatchHrisAttendanceResponse:
         r"""Update an attendance
 
+        Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -771,6 +787,8 @@ class Attendance(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveHrisAttendanceResponse:
         r"""Remove an attendance
+
+        Deletes the HrisAttendance identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -869,6 +887,8 @@ class Attendance(BaseSDK):
     ) -> operations.RemoveHrisAttendanceResponse:
         r"""Remove an attendance
 
+        Deletes the HrisAttendance identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -966,6 +986,8 @@ class Attendance(BaseSDK):
     ) -> operations.UpdateHrisAttendanceResponse:
         r"""Update an attendance
 
+        Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1060,6 +1082,8 @@ class Attendance(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateHrisAttendanceResponse:
         r"""Update an attendance
+
+        Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

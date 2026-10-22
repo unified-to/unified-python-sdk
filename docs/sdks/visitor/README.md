@@ -13,7 +13,7 @@
 
 ## create_analytics_visitor
 
-Create a visitor
+Creates a AnalyticsVisitor. Provide the unified AnalyticsVisitor fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsVisitor.
 
 ### Example Usage
 
@@ -35,13 +35,13 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-04-16T20:29:48.281Z"),
             "email": "desiree.o.hara@icloud.com",
             "first_seen_at": parse_datetime("2020-04-16T20:29:48.281Z"),
-            "id": "712c3768-b539-4e06-970a-74c5fcbb6a83",
-            "last_seen_at": parse_datetime("2025-01-11T07:28:14.693Z"),
+            "id": "dae2e726-1c98-44da-9cfc-e589e76b98a5",
+            "last_seen_at": parse_datetime("2025-01-12T00:49:43.933Z"),
             "metadata": {
                 "segment": {},
             },
             "total_events": 2916.0,
-            "updated_at": parse_datetime("2025-06-29T17:10:51.543Z"),
+            "updated_at": parse_datetime("2025-06-30T12:14:18.220Z"),
         },
         "connection_id": "<id>",
     })
@@ -72,7 +72,7 @@ with UnifiedTo(
 
 ## get_analytics_visitor
 
-Retrieve a visitor
+Retrieves a single AnalyticsVisitor by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -119,7 +119,7 @@ with UnifiedTo(
 
 ## list_analytics_visitors
 
-List all visitors
+Returns a list of AnalyticsVisitors. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -165,7 +165,7 @@ with UnifiedTo(
 
 ## patch_analytics_visitor
 
-Update a visitor
+Updates the AnalyticsVisitor identified by `id`. Provide the unified AnalyticsVisitor fields to change in the request body.
 
 ### Example Usage
 
@@ -187,13 +187,13 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-04-16T20:29:48.281Z"),
             "email": "desiree.o.hara@icloud.com",
             "first_seen_at": parse_datetime("2020-04-16T20:29:48.281Z"),
-            "id": "d0b03adb-d50a-4e09-9b33-5f8a05793297",
-            "last_seen_at": parse_datetime("2025-01-11T07:28:14.706Z"),
+            "id": "2c6290d4-84ea-40c6-aebe-f618f5fa8742",
+            "last_seen_at": parse_datetime("2025-01-12T00:49:43.951Z"),
             "metadata": {
                 "segment": {},
             },
             "total_events": 2916.0,
-            "updated_at": parse_datetime("2025-06-29T17:10:51.557Z"),
+            "updated_at": parse_datetime("2025-06-30T12:14:18.240Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -225,7 +225,7 @@ with UnifiedTo(
 
 ## remove_analytics_visitor
 
-Remove a visitor
+Deletes the AnalyticsVisitor identified by `id`.
 
 ### Example Usage
 
@@ -272,7 +272,7 @@ with UnifiedTo(
 
 ## update_analytics_visitor
 
-Update a visitor
+Updates the AnalyticsVisitor identified by `id`. Provide the unified AnalyticsVisitor fields to change in the request body.
 
 ### Example Usage
 
@@ -294,13 +294,13 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-04-16T20:29:48.281Z"),
             "email": "desiree.o.hara@icloud.com",
             "first_seen_at": parse_datetime("2020-04-16T20:29:48.281Z"),
-            "id": "d0b03adb-d50a-4e09-9b33-5f8a05793297",
-            "last_seen_at": parse_datetime("2025-01-11T07:28:14.706Z"),
+            "id": "2c6290d4-84ea-40c6-aebe-f618f5fa8742",
+            "last_seen_at": parse_datetime("2025-01-12T00:49:43.951Z"),
             "metadata": {
                 "segment": {},
             },
             "total_events": 2916.0,
-            "updated_at": parse_datetime("2025-06-29T17:10:51.557Z"),
+            "updated_at": parse_datetime("2025-06-30T12:14:18.240Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

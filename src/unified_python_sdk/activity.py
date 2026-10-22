@@ -24,6 +24,8 @@ class Activity(BaseSDK):
     ) -> operations.CreateAtsActivityResponse:
         r"""Create an activity
 
+        Creates a AtsActivity. Provide the unified AtsActivity fields in the request body; they are mapped to the provider's API. Returns the created AtsActivity.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -118,6 +120,8 @@ class Activity(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateAtsActivityResponse:
         r"""Create an activity
+
+        Creates a AtsActivity. Provide the unified AtsActivity fields in the request body; they are mapped to the provider's API. Returns the created AtsActivity.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -214,6 +218,8 @@ class Activity(BaseSDK):
     ) -> operations.CreateLmsActivityResponse:
         r"""Create an activity
 
+        Creates a LmsActivity. Provide the unified LmsActivity fields in the request body; they are mapped to the provider's API. Returns the created LmsActivity.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -309,6 +315,8 @@ class Activity(BaseSDK):
     ) -> operations.CreateLmsActivityResponse:
         r"""Create an activity
 
+        Creates a LmsActivity. Provide the unified LmsActivity fields in the request body; they are mapped to the provider's API. Returns the created LmsActivity.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -403,6 +411,8 @@ class Activity(BaseSDK):
     ) -> operations.GetAtsActivityResponse:
         r"""Retrieve an activity
 
+        Retrieves a single AtsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -493,6 +503,8 @@ class Activity(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetAtsActivityResponse:
         r"""Retrieve an activity
+
+        Retrieves a single AtsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -586,6 +598,8 @@ class Activity(BaseSDK):
     ) -> operations.GetClubsActivityResponse:
         r"""Retrieve an activity
 
+        Retrieves a single ClubsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -678,6 +692,8 @@ class Activity(BaseSDK):
     ) -> operations.GetClubsActivityResponse:
         r"""Retrieve an activity
 
+        Retrieves a single ClubsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -769,6 +785,8 @@ class Activity(BaseSDK):
     ) -> operations.GetLmsActivityResponse:
         r"""Retrieve an activity
 
+        Retrieves a single LmsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -859,6 +877,8 @@ class Activity(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetLmsActivityResponse:
         r"""Retrieve an activity
+
+        Retrieves a single LmsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -952,6 +972,8 @@ class Activity(BaseSDK):
     ) -> operations.ListAtsActivitiesResponse:
         r"""List all activities
 
+        Returns a list of AtsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1043,6 +1065,8 @@ class Activity(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListAtsActivitiesResponse:
         r"""List all activities
+
+        Returns a list of AtsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1136,6 +1160,8 @@ class Activity(BaseSDK):
     ) -> operations.ListClubsActivitiesResponse:
         r"""List all activities
 
+        Returns a list of ClubsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1227,6 +1253,8 @@ class Activity(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListClubsActivitiesResponse:
         r"""List all activities
+
+        Returns a list of ClubsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1320,6 +1348,8 @@ class Activity(BaseSDK):
     ) -> operations.ListLmsActivitiesResponse:
         r"""List all activities
 
+        Returns a list of LmsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1412,6 +1442,8 @@ class Activity(BaseSDK):
     ) -> operations.ListLmsActivitiesResponse:
         r"""List all activities
 
+        Returns a list of LmsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1503,6 +1535,8 @@ class Activity(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchAtsActivityResponse:
         r"""Update an activity
+
+        Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1599,6 +1633,8 @@ class Activity(BaseSDK):
     ) -> operations.PatchAtsActivityResponse:
         r"""Update an activity
 
+        Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1693,6 +1729,8 @@ class Activity(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchLmsActivityResponse:
         r"""Update an activity
+
+        Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1789,6 +1827,8 @@ class Activity(BaseSDK):
     ) -> operations.PatchLmsActivityResponse:
         r"""Update an activity
 
+        Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1883,6 +1923,8 @@ class Activity(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveAtsActivityResponse:
         r"""Remove an activity
+
+        Deletes the AtsActivity identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1981,6 +2023,8 @@ class Activity(BaseSDK):
     ) -> operations.RemoveAtsActivityResponse:
         r"""Remove an activity
 
+        Deletes the AtsActivity identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2077,6 +2121,8 @@ class Activity(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveLmsActivityResponse:
         r"""Remove an activity
+
+        Deletes the LmsActivity identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2175,6 +2221,8 @@ class Activity(BaseSDK):
     ) -> operations.RemoveLmsActivityResponse:
         r"""Remove an activity
 
+        Deletes the LmsActivity identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2272,6 +2320,8 @@ class Activity(BaseSDK):
     ) -> operations.UpdateAtsActivityResponse:
         r"""Update an activity
 
+        Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2366,6 +2416,8 @@ class Activity(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateAtsActivityResponse:
         r"""Update an activity
+
+        Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2462,6 +2514,8 @@ class Activity(BaseSDK):
     ) -> operations.UpdateLmsActivityResponse:
         r"""Update an activity
 
+        Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2556,6 +2610,8 @@ class Activity(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateLmsActivityResponse:
         r"""Update an activity
+
+        Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

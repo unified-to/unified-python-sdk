@@ -13,7 +13,7 @@
 
 ## create_metadata_metadata
 
-Create a metadata
+Creates a MetadataMetadata. Provide the unified MetadataMetadata fields in the request body; they are mapped to the provider's API. Returns the created MetadataMetadata.
 
 ### Example Usage
 
@@ -34,7 +34,7 @@ with UnifiedTo(
         "metadata_metadata": {
             "created_at": parse_datetime("2021-03-25T03:02:17.656Z"),
             "format_": shared.MetadataMetadataFormat.PRICE,
-            "id": "53662052-9953-43c1-94d2-1afbf934ec1b",
+            "id": "4eaedcd1-462a-4103-9427-61bfc67e9a06",
             "is_required": False,
             "name": "autem",
             "object_type": "social_review",
@@ -44,7 +44,7 @@ with UnifiedTo(
             "options": [],
             "original_format": "advoco",
             "slug": "arbustum",
-            "updated_at": parse_datetime("2025-03-21T23:08:01.903Z"),
+            "updated_at": parse_datetime("2025-03-22T16:12:57.104Z"),
         },
         "connection_id": "<id>",
     })
@@ -75,7 +75,7 @@ with UnifiedTo(
 
 ## get_metadata_metadata
 
-Retrieve a metadata
+Retrieves a single MetadataMetadata by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -122,7 +122,7 @@ with UnifiedTo(
 
 ## list_metadata_metadatas
 
-List all metadatas
+Returns a list of MetadataMetadatas. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -168,7 +168,7 @@ with UnifiedTo(
 
 ## patch_metadata_metadata
 
-Update a metadata
+Updates the MetadataMetadata identified by `id`. Provide the unified MetadataMetadata fields to change in the request body.
 
 ### Example Usage
 
@@ -189,7 +189,7 @@ with UnifiedTo(
         "metadata_metadata": {
             "created_at": parse_datetime("2021-03-25T03:02:17.656Z"),
             "format_": shared.MetadataMetadataFormat.PRICE,
-            "id": "bc35bef0-4caa-4f90-a620-99c55366090b",
+            "id": "2d55f06c-b5a3-4bcc-8c9f-8019ba671c05",
             "is_required": False,
             "name": "autem",
             "object_type": "social_review",
@@ -199,7 +199,7 @@ with UnifiedTo(
             "options": [],
             "original_format": "advoco",
             "slug": "arbustum",
-            "updated_at": parse_datetime("2025-03-21T23:08:01.912Z"),
+            "updated_at": parse_datetime("2025-03-22T16:12:57.114Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -231,7 +231,7 @@ with UnifiedTo(
 
 ## remove_metadata_metadata
 
-Remove a metadata
+Deletes the MetadataMetadata identified by `id`.
 
 ### Example Usage
 
@@ -278,7 +278,7 @@ with UnifiedTo(
 
 ## update_metadata_metadata
 
-Update a metadata
+Updates the MetadataMetadata identified by `id`. Provide the unified MetadataMetadata fields to change in the request body.
 
 ### Example Usage
 
@@ -299,7 +299,7 @@ with UnifiedTo(
         "metadata_metadata": {
             "created_at": parse_datetime("2021-03-25T03:02:17.656Z"),
             "format_": shared.MetadataMetadataFormat.PRICE,
-            "id": "bc35bef0-4caa-4f90-a620-99c55366090b",
+            "id": "2d55f06c-b5a3-4bcc-8c9f-8019ba671c05",
             "is_required": False,
             "name": "autem",
             "object_type": "social_review",
@@ -309,7 +309,7 @@ with UnifiedTo(
             "options": [],
             "original_format": "advoco",
             "slug": "arbustum",
-            "updated_at": parse_datetime("2025-03-21T23:08:01.912Z"),
+            "updated_at": parse_datetime("2025-03-22T16:12:57.114Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

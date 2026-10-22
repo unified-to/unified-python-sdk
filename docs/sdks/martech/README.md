@@ -26,7 +26,7 @@
 
 ## create_martech_campaign
 
-Create a campaign
+Creates a MarketingCampaign. Provide the unified MarketingCampaign fields in the request body; they are mapped to the provider's API. Returns the created MarketingCampaign.
 
 ### Example Usage
 
@@ -48,7 +48,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2019-05-19T11:18:15.589Z"),
             "from_email": "graham.mertz@gmail.com",
             "from_name": "Graham Mertz",
-            "id": "f70a1360-e5df-471c-83ac-71222f0ab7c2",
+            "id": "a591e56d-25b4-4c99-a14f-1f4797173d84",
             "metadata": [],
             "name": "Consequatur atqui sustineo.",
             "preview_text": "Auctus votum ver umbra corroboro turpis spoliatio tamen strues auxilium benigne tempus error eaque suasoria.",
@@ -57,7 +57,7 @@ with UnifiedTo(
             "status": shared.MarketingCampaignStatus.SCHEDULED,
             "subject_line": "Trepide utpote conculco tibi solio supplanto peior tibi.",
             "type": "absplit",
-            "updated_at": parse_datetime("2022-06-22T02:48:16.946Z"),
+            "updated_at": parse_datetime("2022-06-22T12:44:35.270Z"),
         },
         "connection_id": "<id>",
     })
@@ -88,7 +88,7 @@ with UnifiedTo(
 
 ## create_martech_list
 
-Create a list
+Creates a MarketingList. Provide the unified MarketingList fields in the request body; they are mapped to the provider's API. Returns the created MarketingList.
 
 ### Example Usage
 
@@ -117,7 +117,7 @@ with UnifiedTo(
             },
             "created_at": parse_datetime("2019-09-18T02:01:36.950Z"),
             "description": "Vilis.",
-            "id": "2e0c759c-8d98-43b0-8ac1-d859e392158c",
+            "id": "2485bd30-b777-49c0-b8f0-bddbe8d2a0fd",
             "is_active": True,
             "language": "ru",
             "metadata": [],
@@ -127,7 +127,7 @@ with UnifiedTo(
             "sender_name": "Blake Kuhn",
             "sender_phone": "359.305.7962 x28115",
             "subject": "Theca caecus copia crebro valeo ulciscor.",
-            "updated_at": parse_datetime("2022-09-13T10:06:35.117Z"),
+            "updated_at": parse_datetime("2022-09-13T20:09:43.170Z"),
         },
         "connection_id": "<id>",
     })
@@ -158,7 +158,7 @@ with UnifiedTo(
 
 ## create_martech_member
 
-Create a member
+Creates a MarketingMember. Provide the unified MarketingMember fields in the request body; they are mapped to the provider's API. Returns the created MarketingMember.
 
 ### Example Usage
 
@@ -186,7 +186,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Jude",
-            "id": "7241e828-91ec-4f89-96a1-92b757303682",
+            "id": "e53d71a3-ca93-4d27-b463-3e298d43176a",
             "last_name": "Leffler",
             "metadata": [],
             "name": "Jude Leffler",
@@ -195,7 +195,7 @@ with UnifiedTo(
                 "adnuo",
                 "verumtamen",
             ],
-            "updated_at": parse_datetime("2025-07-08T19:48:50.194Z"),
+            "updated_at": parse_datetime("2025-07-09T12:53:01.027Z"),
         },
         "connection_id": "<id>",
     })
@@ -226,7 +226,7 @@ with UnifiedTo(
 
 ## get_martech_campaign
 
-Retrieve a campaign
+Retrieves a single MarketingCampaign by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -273,7 +273,7 @@ with UnifiedTo(
 
 ## get_martech_list
 
-Retrieve a list
+Retrieves a single MarketingList by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -320,7 +320,7 @@ with UnifiedTo(
 
 ## get_martech_member
 
-Retrieve a member
+Retrieves a single MarketingMember by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -367,7 +367,7 @@ with UnifiedTo(
 
 ## list_martech_campaigns
 
-List all campaigns
+Returns a list of MarketingCampaigns. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -413,7 +413,7 @@ with UnifiedTo(
 
 ## list_martech_lists
 
-List all lists
+Returns a list of MarketingLists. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -459,7 +459,7 @@ with UnifiedTo(
 
 ## list_martech_members
 
-List all members
+Returns a list of MarketingMembers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -505,7 +505,7 @@ with UnifiedTo(
 
 ## list_martech_reports
 
-List all reports
+Returns a list of MarketingReports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -551,7 +551,7 @@ with UnifiedTo(
 
 ## patch_martech_campaign
 
-Update a campaign
+Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to change in the request body.
 
 ### Example Usage
 
@@ -573,7 +573,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2019-05-19T11:18:15.589Z"),
             "from_email": "graham.mertz@gmail.com",
             "from_name": "Graham Mertz",
-            "id": "56b0a145-4a67-48a0-a319-0aa1c1bc69b0",
+            "id": "ec8cb37b-3c54-4034-9030-b192f698c29d",
             "metadata": [],
             "name": "Consequatur atqui sustineo.",
             "preview_text": "Auctus votum ver umbra corroboro turpis spoliatio tamen strues auxilium benigne tempus error eaque suasoria.",
@@ -582,7 +582,7 @@ with UnifiedTo(
             "status": shared.MarketingCampaignStatus.SCHEDULED,
             "subject_line": "Trepide utpote conculco tibi solio supplanto peior tibi.",
             "type": "absplit",
-            "updated_at": parse_datetime("2022-06-22T02:48:16.953Z"),
+            "updated_at": parse_datetime("2022-06-22T12:44:35.278Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -614,7 +614,7 @@ with UnifiedTo(
 
 ## patch_martech_list
 
-Update a list
+Updates the MarketingList identified by `id`. Provide the unified MarketingList fields to change in the request body.
 
 ### Example Usage
 
@@ -643,7 +643,7 @@ with UnifiedTo(
             },
             "created_at": parse_datetime("2019-09-18T02:01:36.950Z"),
             "description": "Vilis.",
-            "id": "f2bb9817-e35d-41a4-8e46-84db00b27a93",
+            "id": "0032fa3c-da58-495e-9422-ab015754772d",
             "is_active": True,
             "language": "ru",
             "metadata": [],
@@ -653,7 +653,7 @@ with UnifiedTo(
             "sender_name": "Blake Kuhn",
             "sender_phone": "359.305.7962 x28115",
             "subject": "Theca caecus copia crebro valeo ulciscor.",
-            "updated_at": parse_datetime("2022-09-13T10:06:35.126Z"),
+            "updated_at": parse_datetime("2022-09-13T20:09:43.183Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -685,7 +685,7 @@ with UnifiedTo(
 
 ## patch_martech_member
 
-Update a member
+Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change in the request body.
 
 ### Example Usage
 
@@ -713,7 +713,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Jude",
-            "id": "977dbf36-0e62-492e-846f-9cd59b61866c",
+            "id": "40880c0e-6de0-452f-8e79-4d94aef8d633",
             "last_name": "Leffler",
             "metadata": [],
             "name": "Jude Leffler",
@@ -722,7 +722,7 @@ with UnifiedTo(
                 "adnuo",
                 "verumtamen",
             ],
-            "updated_at": parse_datetime("2025-07-08T19:48:50.208Z"),
+            "updated_at": parse_datetime("2025-07-09T12:53:01.040Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -754,7 +754,7 @@ with UnifiedTo(
 
 ## remove_martech_campaign
 
-Remove a campaign
+Deletes the MarketingCampaign identified by `id`.
 
 ### Example Usage
 
@@ -801,7 +801,7 @@ with UnifiedTo(
 
 ## remove_martech_list
 
-Remove a list
+Deletes the MarketingList identified by `id`.
 
 ### Example Usage
 
@@ -848,7 +848,7 @@ with UnifiedTo(
 
 ## remove_martech_member
 
-Remove a member
+Deletes the MarketingMember identified by `id`.
 
 ### Example Usage
 
@@ -895,7 +895,7 @@ with UnifiedTo(
 
 ## update_martech_campaign
 
-Update a campaign
+Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to change in the request body.
 
 ### Example Usage
 
@@ -917,7 +917,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2019-05-19T11:18:15.589Z"),
             "from_email": "graham.mertz@gmail.com",
             "from_name": "Graham Mertz",
-            "id": "56b0a145-4a67-48a0-a319-0aa1c1bc69b0",
+            "id": "ec8cb37b-3c54-4034-9030-b192f698c29d",
             "metadata": [],
             "name": "Consequatur atqui sustineo.",
             "preview_text": "Auctus votum ver umbra corroboro turpis spoliatio tamen strues auxilium benigne tempus error eaque suasoria.",
@@ -926,7 +926,7 @@ with UnifiedTo(
             "status": shared.MarketingCampaignStatus.SCHEDULED,
             "subject_line": "Trepide utpote conculco tibi solio supplanto peior tibi.",
             "type": "absplit",
-            "updated_at": parse_datetime("2022-06-22T02:48:16.953Z"),
+            "updated_at": parse_datetime("2022-06-22T12:44:35.278Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -958,7 +958,7 @@ with UnifiedTo(
 
 ## update_martech_list
 
-Update a list
+Updates the MarketingList identified by `id`. Provide the unified MarketingList fields to change in the request body.
 
 ### Example Usage
 
@@ -987,7 +987,7 @@ with UnifiedTo(
             },
             "created_at": parse_datetime("2019-09-18T02:01:36.950Z"),
             "description": "Vilis.",
-            "id": "f2bb9817-e35d-41a4-8e46-84db00b27a93",
+            "id": "0032fa3c-da58-495e-9422-ab015754772d",
             "is_active": True,
             "language": "ru",
             "metadata": [],
@@ -997,7 +997,7 @@ with UnifiedTo(
             "sender_name": "Blake Kuhn",
             "sender_phone": "359.305.7962 x28115",
             "subject": "Theca caecus copia crebro valeo ulciscor.",
-            "updated_at": parse_datetime("2022-09-13T10:06:35.126Z"),
+            "updated_at": parse_datetime("2022-09-13T20:09:43.183Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1029,7 +1029,7 @@ with UnifiedTo(
 
 ## update_martech_member
 
-Update a member
+Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change in the request body.
 
 ### Example Usage
 
@@ -1057,7 +1057,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Jude",
-            "id": "977dbf36-0e62-492e-846f-9cd59b61866c",
+            "id": "40880c0e-6de0-452f-8e79-4d94aef8d633",
             "last_name": "Leffler",
             "metadata": [],
             "name": "Jude Leffler",
@@ -1066,7 +1066,7 @@ with UnifiedTo(
                 "adnuo",
                 "verumtamen",
             ],
-            "updated_at": parse_datetime("2025-07-08T19:48:50.208Z"),
+            "updated_at": parse_datetime("2025-07-09T12:53:01.040Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

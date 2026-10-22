@@ -24,6 +24,8 @@ class Label(BaseSDK):
     ) -> operations.CreateShippingLabelResponse:
         r"""Create a label
 
+        Creates a ShippingLabel. Provide the unified ShippingLabel fields in the request body; they are mapped to the provider's API. Returns the created ShippingLabel.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -118,6 +120,8 @@ class Label(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateShippingLabelResponse:
         r"""Create a label
+
+        Creates a ShippingLabel. Provide the unified ShippingLabel fields in the request body; they are mapped to the provider's API. Returns the created ShippingLabel.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -214,6 +218,8 @@ class Label(BaseSDK):
     ) -> operations.GetShippingLabelResponse:
         r"""Retrieve a label
 
+        Retrieves a single ShippingLabel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -305,6 +311,8 @@ class Label(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetShippingLabelResponse:
         r"""Retrieve a label
+
+        Retrieves a single ShippingLabel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -398,6 +406,8 @@ class Label(BaseSDK):
     ) -> operations.ListShippingLabelsResponse:
         r"""List all labels
 
+        Returns a list of ShippingLabels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -490,6 +500,8 @@ class Label(BaseSDK):
     ) -> operations.ListShippingLabelsResponse:
         r"""List all labels
 
+        Returns a list of ShippingLabels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -581,6 +593,8 @@ class Label(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchShippingLabelResponse:
         r"""Update a label
+
+        Updates the ShippingLabel identified by `id`. Provide the unified ShippingLabel fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -677,6 +691,8 @@ class Label(BaseSDK):
     ) -> operations.PatchShippingLabelResponse:
         r"""Update a label
 
+        Updates the ShippingLabel identified by `id`. Provide the unified ShippingLabel fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -771,6 +787,8 @@ class Label(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveShippingLabelResponse:
         r"""Remove a label
+
+        Deletes the ShippingLabel identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -869,6 +887,8 @@ class Label(BaseSDK):
     ) -> operations.RemoveShippingLabelResponse:
         r"""Remove a label
 
+        Deletes the ShippingLabel identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -966,6 +986,8 @@ class Label(BaseSDK):
     ) -> operations.UpdateShippingLabelResponse:
         r"""Update a label
 
+        Updates the ShippingLabel identified by `id`. Provide the unified ShippingLabel fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1060,6 +1082,8 @@ class Label(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateShippingLabelResponse:
         r"""Update a label
+
+        Updates the ShippingLabel identified by `id`. Provide the unified ShippingLabel fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method

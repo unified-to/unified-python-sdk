@@ -24,6 +24,8 @@ class Lms(BaseSDK):
     ) -> operations.CreateLmsActivityResponse:
         r"""Create an activity
 
+        Creates a LmsActivity. Provide the unified LmsActivity fields in the request body; they are mapped to the provider's API. Returns the created LmsActivity.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -119,6 +121,8 @@ class Lms(BaseSDK):
     ) -> operations.CreateLmsActivityResponse:
         r"""Create an activity
 
+        Creates a LmsActivity. Provide the unified LmsActivity fields in the request body; they are mapped to the provider's API. Returns the created LmsActivity.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -213,6 +217,8 @@ class Lms(BaseSDK):
     ) -> operations.CreateLmsClassResponse:
         r"""Create a class
 
+        Creates a LmsClass. Provide the unified LmsClass fields in the request body; they are mapped to the provider's API. Returns the created LmsClass.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -304,6 +310,8 @@ class Lms(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateLmsClassResponse:
         r"""Create a class
+
+        Creates a LmsClass. Provide the unified LmsClass fields in the request body; they are mapped to the provider's API. Returns the created LmsClass.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -397,6 +405,8 @@ class Lms(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateLmsCollectionResponse:
         r"""Create a collection
+
+        Creates a LmsCollection. Provide the unified LmsCollection fields in the request body; they are mapped to the provider's API. Returns the created LmsCollection.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -493,6 +503,8 @@ class Lms(BaseSDK):
     ) -> operations.CreateLmsCollectionResponse:
         r"""Create a collection
 
+        Creates a LmsCollection. Provide the unified LmsCollection fields in the request body; they are mapped to the provider's API. Returns the created LmsCollection.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -587,6 +599,8 @@ class Lms(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateLmsContentResponse:
         r"""Create a content
+
+        Creates a LmsContent. Provide the unified LmsContent fields in the request body; they are mapped to the provider's API. Returns the created LmsContent.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -683,6 +697,8 @@ class Lms(BaseSDK):
     ) -> operations.CreateLmsContentResponse:
         r"""Create a content
 
+        Creates a LmsContent. Provide the unified LmsContent fields in the request body; they are mapped to the provider's API. Returns the created LmsContent.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -777,6 +793,8 @@ class Lms(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateLmsCourseResponse:
         r"""Create a course
+
+        Creates a LmsCourse. Provide the unified LmsCourse fields in the request body; they are mapped to the provider's API. Returns the created LmsCourse.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -873,6 +891,8 @@ class Lms(BaseSDK):
     ) -> operations.CreateLmsCourseResponse:
         r"""Create a course
 
+        Creates a LmsCourse. Provide the unified LmsCourse fields in the request body; they are mapped to the provider's API. Returns the created LmsCourse.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -967,6 +987,8 @@ class Lms(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateLmsInstructorResponse:
         r"""Create an instructor
+
+        Creates a LmsInstructor. Provide the unified LmsInstructor fields in the request body; they are mapped to the provider's API. Returns the created LmsInstructor.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1063,6 +1085,8 @@ class Lms(BaseSDK):
     ) -> operations.CreateLmsInstructorResponse:
         r"""Create an instructor
 
+        Creates a LmsInstructor. Provide the unified LmsInstructor fields in the request body; they are mapped to the provider's API. Returns the created LmsInstructor.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1157,6 +1181,8 @@ class Lms(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.CreateLmsStudentResponse:
         r"""Create a student
+
+        Creates a LmsStudent. Provide the unified LmsStudent fields in the request body; they are mapped to the provider's API. Returns the created LmsStudent.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1253,6 +1279,8 @@ class Lms(BaseSDK):
     ) -> operations.CreateLmsStudentResponse:
         r"""Create a student
 
+        Creates a LmsStudent. Provide the unified LmsStudent fields in the request body; they are mapped to the provider's API. Returns the created LmsStudent.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1347,6 +1375,8 @@ class Lms(BaseSDK):
     ) -> operations.GetLmsActivityResponse:
         r"""Retrieve an activity
 
+        Retrieves a single LmsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1437,6 +1467,8 @@ class Lms(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetLmsActivityResponse:
         r"""Retrieve an activity
+
+        Retrieves a single LmsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1529,6 +1561,8 @@ class Lms(BaseSDK):
     ) -> operations.GetLmsClassResponse:
         r"""Retrieve a class
 
+        Retrieves a single LmsClass by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1617,6 +1651,8 @@ class Lms(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetLmsClassResponse:
         r"""Retrieve a class
+
+        Retrieves a single LmsClass by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1707,6 +1743,8 @@ class Lms(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetLmsCollectionResponse:
         r"""Retrieve a collection
+
+        Retrieves a single LmsCollection by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1800,6 +1838,8 @@ class Lms(BaseSDK):
     ) -> operations.GetLmsCollectionResponse:
         r"""Retrieve a collection
 
+        Retrieves a single LmsCollection by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -1890,6 +1930,8 @@ class Lms(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetLmsContentResponse:
         r"""Retrieve a content
+
+        Retrieves a single LmsContent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -1982,6 +2024,8 @@ class Lms(BaseSDK):
     ) -> operations.GetLmsContentResponse:
         r"""Retrieve a content
 
+        Retrieves a single LmsContent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2073,6 +2117,8 @@ class Lms(BaseSDK):
     ) -> operations.GetLmsCourseResponse:
         r"""Retrieve a course
 
+        Retrieves a single LmsCourse by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2163,6 +2209,8 @@ class Lms(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetLmsCourseResponse:
         r"""Retrieve a course
+
+        Retrieves a single LmsCourse by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2256,6 +2304,8 @@ class Lms(BaseSDK):
     ) -> operations.GetLmsInstructorResponse:
         r"""Retrieve an instructor
 
+        Retrieves a single LmsInstructor by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2348,6 +2398,8 @@ class Lms(BaseSDK):
     ) -> operations.GetLmsInstructorResponse:
         r"""Retrieve an instructor
 
+        Retrieves a single LmsInstructor by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2439,6 +2491,8 @@ class Lms(BaseSDK):
     ) -> operations.GetLmsStudentResponse:
         r"""Retrieve a student
 
+        Retrieves a single LmsStudent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2529,6 +2583,8 @@ class Lms(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.GetLmsStudentResponse:
         r"""Retrieve a student
+
+        Retrieves a single LmsStudent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2622,6 +2678,8 @@ class Lms(BaseSDK):
     ) -> operations.ListLmsActivitiesResponse:
         r"""List all activities
 
+        Returns a list of LmsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2714,6 +2772,8 @@ class Lms(BaseSDK):
     ) -> operations.ListLmsActivitiesResponse:
         r"""List all activities
 
+        Returns a list of LmsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2805,6 +2865,8 @@ class Lms(BaseSDK):
     ) -> operations.ListLmsClassesResponse:
         r"""List all classes
 
+        Returns a list of LmsClasses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -2895,6 +2957,8 @@ class Lms(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListLmsClassesResponse:
         r"""List all classes
+
+        Returns a list of LmsClasses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -2988,6 +3052,8 @@ class Lms(BaseSDK):
     ) -> operations.ListLmsCollectionsResponse:
         r"""List all collections
 
+        Returns a list of LmsCollections. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3079,6 +3145,8 @@ class Lms(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListLmsCollectionsResponse:
         r"""List all collections
+
+        Returns a list of LmsCollections. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3172,6 +3240,8 @@ class Lms(BaseSDK):
     ) -> operations.ListLmsContentsResponse:
         r"""List all contents
 
+        Returns a list of LmsContents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3264,6 +3334,8 @@ class Lms(BaseSDK):
     ) -> operations.ListLmsContentsResponse:
         r"""List all contents
 
+        Returns a list of LmsContents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3355,6 +3427,8 @@ class Lms(BaseSDK):
     ) -> operations.ListLmsCoursesResponse:
         r"""List all courses
 
+        Returns a list of LmsCourses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3445,6 +3519,8 @@ class Lms(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListLmsCoursesResponse:
         r"""List all courses
+
+        Returns a list of LmsCourses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3538,6 +3614,8 @@ class Lms(BaseSDK):
     ) -> operations.ListLmsInstructorsResponse:
         r"""List all instructors
 
+        Returns a list of LmsInstructors. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3629,6 +3707,8 @@ class Lms(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.ListLmsInstructorsResponse:
         r"""List all instructors
+
+        Returns a list of LmsInstructors. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -3722,6 +3802,8 @@ class Lms(BaseSDK):
     ) -> operations.ListLmsStudentsResponse:
         r"""List all students
 
+        Returns a list of LmsStudents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3814,6 +3896,8 @@ class Lms(BaseSDK):
     ) -> operations.ListLmsStudentsResponse:
         r"""List all students
 
+        Returns a list of LmsStudents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -3905,6 +3989,8 @@ class Lms(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchLmsActivityResponse:
         r"""Update an activity
+
+        Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4001,6 +4087,8 @@ class Lms(BaseSDK):
     ) -> operations.PatchLmsActivityResponse:
         r"""Update an activity
 
+        Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4095,6 +4183,8 @@ class Lms(BaseSDK):
     ) -> operations.PatchLmsClassResponse:
         r"""Update a class
 
+        Updates the LmsClass identified by `id`. Provide the unified LmsClass fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4186,6 +4276,8 @@ class Lms(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchLmsClassResponse:
         r"""Update a class
+
+        Updates the LmsClass identified by `id`. Provide the unified LmsClass fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4279,6 +4371,8 @@ class Lms(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchLmsCollectionResponse:
         r"""Update a collection
+
+        Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4375,6 +4469,8 @@ class Lms(BaseSDK):
     ) -> operations.PatchLmsCollectionResponse:
         r"""Update a collection
 
+        Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4469,6 +4565,8 @@ class Lms(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchLmsContentResponse:
         r"""Update a content
+
+        Updates the LmsContent identified by `id`. Provide the unified LmsContent fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4565,6 +4663,8 @@ class Lms(BaseSDK):
     ) -> operations.PatchLmsContentResponse:
         r"""Update a content
 
+        Updates the LmsContent identified by `id`. Provide the unified LmsContent fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4659,6 +4759,8 @@ class Lms(BaseSDK):
     ) -> operations.PatchLmsCourseResponse:
         r"""Update a course
 
+        Updates the LmsCourse identified by `id`. Provide the unified LmsCourse fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4752,6 +4854,8 @@ class Lms(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchLmsCourseResponse:
         r"""Update a course
+
+        Updates the LmsCourse identified by `id`. Provide the unified LmsCourse fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -4848,6 +4952,8 @@ class Lms(BaseSDK):
     ) -> operations.PatchLmsInstructorResponse:
         r"""Update an instructor
 
+        Updates the LmsInstructor identified by `id`. Provide the unified LmsInstructor fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -4942,6 +5048,8 @@ class Lms(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.PatchLmsInstructorResponse:
         r"""Update an instructor
+
+        Updates the LmsInstructor identified by `id`. Provide the unified LmsInstructor fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -5038,6 +5146,8 @@ class Lms(BaseSDK):
     ) -> operations.PatchLmsStudentResponse:
         r"""Update a student
 
+        Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5133,6 +5243,8 @@ class Lms(BaseSDK):
     ) -> operations.PatchLmsStudentResponse:
         r"""Update a student
 
+        Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5227,6 +5339,8 @@ class Lms(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveLmsActivityResponse:
         r"""Remove an activity
+
+        Deletes the LmsActivity identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -5325,6 +5439,8 @@ class Lms(BaseSDK):
     ) -> operations.RemoveLmsActivityResponse:
         r"""Remove an activity
 
+        Deletes the LmsActivity identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5421,6 +5537,8 @@ class Lms(BaseSDK):
     ) -> operations.RemoveLmsClassResponse:
         r"""Remove a class
 
+        Deletes the LmsClass identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5516,6 +5634,8 @@ class Lms(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveLmsClassResponse:
         r"""Remove a class
+
+        Deletes the LmsClass identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -5614,6 +5734,8 @@ class Lms(BaseSDK):
     ) -> operations.RemoveLmsCollectionResponse:
         r"""Remove a collection
 
+        Deletes the LmsCollection identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5710,6 +5832,8 @@ class Lms(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveLmsCollectionResponse:
         r"""Remove a collection
+
+        Deletes the LmsCollection identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -5808,6 +5932,8 @@ class Lms(BaseSDK):
     ) -> operations.RemoveLmsContentResponse:
         r"""Remove a content
 
+        Deletes the LmsContent identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -5904,6 +6030,8 @@ class Lms(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveLmsContentResponse:
         r"""Remove a content
+
+        Deletes the LmsContent identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -6002,6 +6130,8 @@ class Lms(BaseSDK):
     ) -> operations.RemoveLmsCourseResponse:
         r"""Remove a course
 
+        Deletes the LmsCourse identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6098,6 +6228,8 @@ class Lms(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveLmsCourseResponse:
         r"""Remove a course
+
+        Deletes the LmsCourse identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -6196,6 +6328,8 @@ class Lms(BaseSDK):
     ) -> operations.RemoveLmsInstructorResponse:
         r"""Remove an instructor
 
+        Deletes the LmsInstructor identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6292,6 +6426,8 @@ class Lms(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveLmsInstructorResponse:
         r"""Remove an instructor
+
+        Deletes the LmsInstructor identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -6390,6 +6526,8 @@ class Lms(BaseSDK):
     ) -> operations.RemoveLmsStudentResponse:
         r"""Remove a student
 
+        Deletes the LmsStudent identified by `id`.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6486,6 +6624,8 @@ class Lms(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.RemoveLmsStudentResponse:
         r"""Remove a student
+
+        Deletes the LmsStudent identified by `id`.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -6584,6 +6724,8 @@ class Lms(BaseSDK):
     ) -> operations.UpdateLmsActivityResponse:
         r"""Update an activity
 
+        Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6679,6 +6821,8 @@ class Lms(BaseSDK):
     ) -> operations.UpdateLmsActivityResponse:
         r"""Update an activity
 
+        Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6773,6 +6917,8 @@ class Lms(BaseSDK):
     ) -> operations.UpdateLmsClassResponse:
         r"""Update a class
 
+        Updates the LmsClass identified by `id`. Provide the unified LmsClass fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -6864,6 +7010,8 @@ class Lms(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateLmsClassResponse:
         r"""Update a class
+
+        Updates the LmsClass identified by `id`. Provide the unified LmsClass fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -6957,6 +7105,8 @@ class Lms(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateLmsCollectionResponse:
         r"""Update a collection
+
+        Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -7053,6 +7203,8 @@ class Lms(BaseSDK):
     ) -> operations.UpdateLmsCollectionResponse:
         r"""Update a collection
 
+        Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7147,6 +7299,8 @@ class Lms(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateLmsContentResponse:
         r"""Update a content
+
+        Updates the LmsContent identified by `id`. Provide the unified LmsContent fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -7243,6 +7397,8 @@ class Lms(BaseSDK):
     ) -> operations.UpdateLmsContentResponse:
         r"""Update a content
 
+        Updates the LmsContent identified by `id`. Provide the unified LmsContent fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7337,6 +7493,8 @@ class Lms(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateLmsCourseResponse:
         r"""Update a course
+
+        Updates the LmsCourse identified by `id`. Provide the unified LmsCourse fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -7433,6 +7591,8 @@ class Lms(BaseSDK):
     ) -> operations.UpdateLmsCourseResponse:
         r"""Update a course
 
+        Updates the LmsCourse identified by `id`. Provide the unified LmsCourse fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7527,6 +7687,8 @@ class Lms(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateLmsInstructorResponse:
         r"""Update an instructor
+
+        Updates the LmsInstructor identified by `id`. Provide the unified LmsInstructor fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
@@ -7623,6 +7785,8 @@ class Lms(BaseSDK):
     ) -> operations.UpdateLmsInstructorResponse:
         r"""Update an instructor
 
+        Updates the LmsInstructor identified by `id`. Provide the unified LmsInstructor fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7718,6 +7882,8 @@ class Lms(BaseSDK):
     ) -> operations.UpdateLmsStudentResponse:
         r"""Update a student
 
+        Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields to change in the request body.
+
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
         :param server_url: Override the default server URL for this method
@@ -7812,6 +7978,8 @@ class Lms(BaseSDK):
         http_headers: Optional[Mapping[str, str]] = None,
     ) -> operations.UpdateLmsStudentResponse:
         r"""Update a student
+
+        Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields to change in the request body.
 
         :param request: The request object to send.
         :param retries: Override the default retry configuration for this method
