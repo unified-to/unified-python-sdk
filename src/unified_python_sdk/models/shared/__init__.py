@@ -2354,6 +2354,11 @@ if TYPE_CHECKING:
         PropertyUcCallTelephoneType,
         PropertyUcCallTelephoneTypedDict,
     )
+    from .property_uccallinstruction_telephone import (
+        PropertyUcCallInstructionTelephone,
+        PropertyUcCallInstructionTelephoneType,
+        PropertyUcCallInstructionTelephoneTypedDict,
+    )
     from .repobranch import RepoBranch, RepoBranchTypedDict
     from .repocommit import RepoCommit, RepoCommitTypedDict
     from .repometadata import (
@@ -2615,7 +2620,12 @@ if TYPE_CHECKING:
         TicketingTicketStatus,
         TicketingTicketTypedDict,
     )
-    from .uccall import UcCall, UcCallType, UcCallTypedDict
+    from .uccall import UcCall, UcCallStatus, UcCallType, UcCallTypedDict
+    from .uccallinstruction import (
+        UcCallInstruction,
+        UcCallInstructionType,
+        UcCallInstructionTypedDict,
+    )
     from .uccomment import UcComment, UcCommentTypedDict
     from .uccontact import UcContact, UcContactTypedDict
     from .ucemail import UcEmail, UcEmailType, UcEmailTypedDict
@@ -4690,6 +4700,9 @@ __all__ = [
     "PropertySocialReviewReply",
     "PropertySocialReviewReplyTypedDict",
     "PropertyStoragePermissionRoles",
+    "PropertyUcCallInstructionTelephone",
+    "PropertyUcCallInstructionTelephoneType",
+    "PropertyUcCallInstructionTelephoneTypedDict",
     "PropertyUcCallTelephone",
     "PropertyUcCallTelephoneType",
     "PropertyUcCallTelephoneTypedDict",
@@ -4971,6 +4984,10 @@ __all__ = [
     "Trigger",
     "Type",
     "UcCall",
+    "UcCallInstruction",
+    "UcCallInstructionType",
+    "UcCallInstructionTypedDict",
+    "UcCallStatus",
     "UcCallType",
     "UcCallTypedDict",
     "UcComment",
@@ -6931,6 +6948,9 @@ _dynamic_imports: dict[str, str] = {
     "PropertyUcCallTelephone": ".property_uccall_telephone",
     "PropertyUcCallTelephoneType": ".property_uccall_telephone",
     "PropertyUcCallTelephoneTypedDict": ".property_uccall_telephone",
+    "PropertyUcCallInstructionTelephone": ".property_uccallinstruction_telephone",
+    "PropertyUcCallInstructionTelephoneType": ".property_uccallinstruction_telephone",
+    "PropertyUcCallInstructionTelephoneTypedDict": ".property_uccallinstruction_telephone",
     "RepoBranch": ".repobranch",
     "RepoBranchTypedDict": ".repobranch",
     "RepoCommit": ".repocommit",
@@ -7181,8 +7201,12 @@ _dynamic_imports: dict[str, str] = {
     "TicketingTicketStatus": ".ticketingticket",
     "TicketingTicketTypedDict": ".ticketingticket",
     "UcCall": ".uccall",
+    "UcCallStatus": ".uccall",
     "UcCallType": ".uccall",
     "UcCallTypedDict": ".uccall",
+    "UcCallInstruction": ".uccallinstruction",
+    "UcCallInstructionType": ".uccallinstruction",
+    "UcCallInstructionTypedDict": ".uccallinstruction",
     "UcComment": ".uccomment",
     "UcCommentTypedDict": ".uccomment",
     "UcContact": ".uccontact",

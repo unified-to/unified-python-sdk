@@ -131,7 +131,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "cf355b43-f7e4-4200-abd9-da8905ac9789",
+            "id": "cb3a2ec1-34de-48ca-b8c2-f9589889220e",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -144,7 +144,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-07T03:43:27.331Z"),
+            "updated_at": parse_datetime("2023-08-07T10:10:07.093Z"),
         },
         "connection_id": "<id>",
     })
@@ -181,7 +181,7 @@ async def main():
                 "currency": "CAD",
                 "customer_defined_code": "6170",
                 "description": "Voluptatibus valde spoliatio.",
-                "id": "cf355b43-f7e4-4200-abd9-da8905ac9789",
+                "id": "cb3a2ec1-34de-48ca-b8c2-f9589889220e",
                 "is_payable": False,
                 "metadata": [],
                 "name": "Auto Loan Account",
@@ -194,7 +194,7 @@ async def main():
                     },
                 ],
                 "type": shared.Type.ACCOUNTS_RECEIVABLE,
-                "updated_at": parse_datetime("2023-08-07T03:43:27.331Z"),
+                "updated_at": parse_datetime("2023-08-07T10:10:07.093Z"),
             },
             "connection_id": "<id>",
         })
@@ -705,8 +705,11 @@ asyncio.run(main())
 
 ### [Call](docs/sdks/call/README.md)
 
+* [create_uc_call](docs/sdks/call/README.md#create_uc_call) - Create a call
 * [get_uc_call](docs/sdks/call/README.md#get_uc_call) - Retrieve a call
 * [list_uc_calls](docs/sdks/call/README.md#list_uc_calls) - List all calls
+* [patch_uc_call](docs/sdks/call/README.md#patch_uc_call) - Update a call
+* [update_uc_call](docs/sdks/call/README.md#update_uc_call) - Update a call
 
 ### [Campaign](docs/sdks/campaign/README.md)
 
@@ -2741,6 +2744,7 @@ asyncio.run(main())
 
 ### [Uc](docs/sdks/uc/README.md)
 
+* [create_uc_call](docs/sdks/uc/README.md#create_uc_call) - Create a call
 * [create_uc_comment](docs/sdks/uc/README.md#create_uc_comment) - Create a comment
 * [create_uc_contact](docs/sdks/uc/README.md#create_uc_contact) - Create a contact
 * [create_uc_recording](docs/sdks/uc/README.md#create_uc_recording) - Create a recording
@@ -2756,12 +2760,14 @@ asyncio.run(main())
 * [list_uc_recordings](docs/sdks/uc/README.md#list_uc_recordings) - List all recordings
 * [list_uc_scorecards](docs/sdks/uc/README.md#list_uc_scorecards) - List all scorecards
 * [list_uc_scorecardtemplates](docs/sdks/uc/README.md#list_uc_scorecardtemplates) - List all scorecardtemplates
+* [patch_uc_call](docs/sdks/uc/README.md#patch_uc_call) - Update a call
 * [patch_uc_comment](docs/sdks/uc/README.md#patch_uc_comment) - Update a comment
 * [patch_uc_contact](docs/sdks/uc/README.md#patch_uc_contact) - Update a contact
 * [patch_uc_recording](docs/sdks/uc/README.md#patch_uc_recording) - Update a recording
 * [remove_uc_comment](docs/sdks/uc/README.md#remove_uc_comment) - Remove a comment
 * [remove_uc_contact](docs/sdks/uc/README.md#remove_uc_contact) - Remove a contact
 * [remove_uc_recording](docs/sdks/uc/README.md#remove_uc_recording) - Remove a recording
+* [update_uc_call](docs/sdks/uc/README.md#update_uc_call) - Update a call
 * [update_uc_comment](docs/sdks/uc/README.md#update_uc_comment) - Update a comment
 * [update_uc_contact](docs/sdks/uc/README.md#update_uc_contact) - Update a contact
 * [update_uc_recording](docs/sdks/uc/README.md#update_uc_recording) - Update a recording
@@ -2940,7 +2946,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "cf355b43-f7e4-4200-abd9-da8905ac9789",
+            "id": "cb3a2ec1-34de-48ca-b8c2-f9589889220e",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -2953,7 +2959,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-07T03:43:27.331Z"),
+            "updated_at": parse_datetime("2023-08-07T10:10:07.093Z"),
         },
         "connection_id": "<id>",
     },
@@ -2987,7 +2993,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "cf355b43-f7e4-4200-abd9-da8905ac9789",
+            "id": "cb3a2ec1-34de-48ca-b8c2-f9589889220e",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3000,7 +3006,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-07T03:43:27.331Z"),
+            "updated_at": parse_datetime("2023-08-07T10:10:07.093Z"),
         },
         "connection_id": "<id>",
     })
@@ -3048,7 +3054,7 @@ with UnifiedTo(
                 "currency": "CAD",
                 "customer_defined_code": "6170",
                 "description": "Voluptatibus valde spoliatio.",
-                "id": "cf355b43-f7e4-4200-abd9-da8905ac9789",
+                "id": "cb3a2ec1-34de-48ca-b8c2-f9589889220e",
                 "is_payable": False,
                 "metadata": [],
                 "name": "Auto Loan Account",
@@ -3061,7 +3067,7 @@ with UnifiedTo(
                     },
                 ],
                 "type": shared.Type.ACCOUNTS_RECEIVABLE,
-                "updated_at": parse_datetime("2023-08-07T03:43:27.331Z"),
+                "updated_at": parse_datetime("2023-08-07T10:10:07.093Z"),
             },
             "connection_id": "<id>",
         })
@@ -3139,7 +3145,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "cf355b43-f7e4-4200-abd9-da8905ac9789",
+            "id": "cb3a2ec1-34de-48ca-b8c2-f9589889220e",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3152,7 +3158,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-07T03:43:27.331Z"),
+            "updated_at": parse_datetime("2023-08-07T10:10:07.093Z"),
         },
         "connection_id": "<id>",
     })
@@ -3187,7 +3193,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "cf355b43-f7e4-4200-abd9-da8905ac9789",
+            "id": "cb3a2ec1-34de-48ca-b8c2-f9589889220e",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3200,7 +3206,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-07T03:43:27.331Z"),
+            "updated_at": parse_datetime("2023-08-07T10:10:07.093Z"),
         },
         "connection_id": "<id>",
     })
@@ -3343,7 +3349,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "cf355b43-f7e4-4200-abd9-da8905ac9789",
+            "id": "cb3a2ec1-34de-48ca-b8c2-f9589889220e",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3356,7 +3362,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-07T03:43:27.331Z"),
+            "updated_at": parse_datetime("2023-08-07T10:10:07.093Z"),
         },
         "connection_id": "<id>",
     })

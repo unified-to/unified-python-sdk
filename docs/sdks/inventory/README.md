@@ -33,9 +33,9 @@ with UnifiedTo(
     res = unified_to.inventory.create_commerce_inventory(request={
         "commerce_inventory": {
             "available": 337.0,
-            "id": "a6aa3268-f037-410f-9c86-d1e39d32c421",
+            "id": "a5fda683-6c30-47ef-bbe5-89ae94899e37",
             "metadata": [],
-            "updated_at": parse_datetime("2025-11-21T04:57:50.421Z"),
+            "updated_at": parse_datetime("2025-11-22T01:23:26.296Z"),
         },
         "connection_id": "<id>",
     })
@@ -179,9 +179,9 @@ with UnifiedTo(
     res = unified_to.inventory.patch_commerce_inventory(request={
         "commerce_inventory": {
             "available": 337.0,
-            "id": "33d89345-882b-4ab1-b502-ad37be2a7167",
+            "id": "330dcb85-92a7-4ecb-92fc-6b7f2bb822e0",
             "metadata": [],
-            "updated_at": parse_datetime("2025-11-21T04:57:50.432Z"),
+            "updated_at": parse_datetime("2025-11-22T01:23:26.302Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -280,9 +280,9 @@ with UnifiedTo(
     res = unified_to.inventory.update_commerce_inventory(request={
         "commerce_inventory": {
             "available": 337.0,
-            "id": "33d89345-882b-4ab1-b502-ad37be2a7167",
+            "id": "330dcb85-92a7-4ecb-92fc-6b7f2bb822e0",
             "metadata": [],
-            "updated_at": parse_datetime("2025-11-21T04:57:50.432Z"),
+            "updated_at": parse_datetime("2025-11-22T01:23:26.302Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

@@ -32,6 +32,13 @@ class GetUcCallQueryParamFields(str, Enum):
     METADATA = "metadata"
     RAW = "raw"
     CONVERSATION_IDENTIFIER = "conversation_identifier"
+    STATUS = "status"
+    ANSWER_AT = "answer_at"
+    DURATION_SECONDS = "duration_seconds"
+    COST_AMOUNT = "cost_amount"
+    CURRENCY = "currency"
+    PARENT_ID = "parent_id"
+    INSTRUCTIONS = "instructions"
 
 
 class GetUcCallRequestTypedDict(TypedDict):

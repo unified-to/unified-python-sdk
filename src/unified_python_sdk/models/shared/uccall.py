@@ -5,6 +5,7 @@ from .property_uccall_telephone import (
     PropertyUcCallTelephone,
     PropertyUcCallTelephoneTypedDict,
 )
+from .uccallinstruction import UcCallInstruction, UcCallInstructionTypedDict
 from .uccontact import UcContact, UcContactTypedDict
 from .ucmetadata import UcMetadata, UcMetadataTypedDict
 from datetime import datetime
@@ -17,29 +18,57 @@ from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
 
 
+class UcCallStatus(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""The current or final status of the call"""
+
+    QUEUED = "QUEUED"
+    RINGING = "RINGING"
+    IN_PROGRESS = "IN_PROGRESS"
+    COMPLETED = "COMPLETED"
+    BUSY = "BUSY"
+    NO_ANSWER = "NO_ANSWER"
+    FAILED = "FAILED"
+    CANCELED = "CANCELED"
+    OTHER = "OTHER"
+
+
 class UcCallType(str, Enum, metaclass=utils.OpenEnumMeta):
     INBOUND = "INBOUND"
     OUTBOUND = "OUTBOUND"
 
 
 class UcCallTypedDict(TypedDict):
+    answer_at: NotRequired[datetime]
+    r"""When the call was answered (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     contact_id: NotRequired[str]
     r"""The contact ID for call (reference to UcContact)"""
     contacts: NotRequired[List[UcContactTypedDict]]
     conversation_identifier: NotRequired[str]
     r"""opaque identifier shared across legs of one interaction"""
+    cost_amount: NotRequired[float]
+    r"""What the integration charged for the call"""
     created_at: NotRequired[datetime]
     r"""The date that this call object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    currency: NotRequired[str]
+    r"""ISO 4217 currency of cost_amount"""
+    duration_seconds: NotRequired[float]
+    r"""Call length in seconds"""
     end_at: NotRequired[datetime]
     r"""The end time of the call (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
     r"""Unique identifier for this call object"""
+    instructions: NotRequired[List[UcCallInstructionTypedDict]]
+    r"""Write-only: what the call does once answered (create/update only; never returned)"""
     is_private: NotRequired[bool]
     metadata: NotRequired[List[UcMetadataTypedDict]]
+    parent_id: NotRequired[str]
+    r"""The parent call (leg) that this call belongs to"""
     raw: NotRequired[Dict[str, Any]]
     r"""The raw data returned by the integration for this call"""
     start_at: NotRequired[datetime]
     r"""The start time of the call (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    status: NotRequired[UcCallStatus]
+    r"""The current or final status of the call"""
     telephone: NotRequired[PropertyUcCallTelephoneTypedDict]
     r"""The telephone number called"""
     type: NotRequired[UcCallType]
@@ -52,6 +81,9 @@ class UcCallTypedDict(TypedDict):
 
 
 class UcCall(BaseModel):
+    answer_at: Optional[datetime] = None
+    r"""When the call was answered (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+
     contact_id: Optional[str] = None
     r"""The contact ID for call (reference to UcContact)"""
 
@@ -60,8 +92,17 @@ class UcCall(BaseModel):
     conversation_identifier: Optional[str] = None
     r"""opaque identifier shared across legs of one interaction"""
 
+    cost_amount: Optional[float] = None
+    r"""What the integration charged for the call"""
+
     created_at: Optional[datetime] = None
     r"""The date that this call object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+
+    currency: Optional[str] = None
+    r"""ISO 4217 currency of cost_amount"""
+
+    duration_seconds: Optional[float] = None
+    r"""Call length in seconds"""
 
     end_at: Optional[datetime] = None
     r"""The end time of the call (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
@@ -69,15 +110,24 @@ class UcCall(BaseModel):
     id: Optional[str] = None
     r"""Unique identifier for this call object"""
 
+    instructions: Optional[List[UcCallInstruction]] = None
+    r"""Write-only: what the call does once answered (create/update only; never returned)"""
+
     is_private: Optional[bool] = None
 
     metadata: Optional[List[UcMetadata]] = None
+
+    parent_id: Optional[str] = None
+    r"""The parent call (leg) that this call belongs to"""
 
     raw: Optional[Dict[str, Any]] = None
     r"""The raw data returned by the integration for this call"""
 
     start_at: Optional[datetime] = None
     r"""The start time of the call (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+
+    status: Optional[UcCallStatus] = None
+    r"""The current or final status of the call"""
 
     telephone: Optional[PropertyUcCallTelephone] = None
     r"""The telephone number called"""
@@ -94,6 +144,15 @@ class UcCall(BaseModel):
 
     user_phone: Optional[str] = None
 
+    @field_serializer("status")
+    def serialize_status(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.UcCallStatus(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("type")
     def serialize_type(self, value):
         if isinstance(value, str):
@@ -107,16 +166,23 @@ class UcCall(BaseModel):
     def serialize_model(self, handler):
         optional_fields = set(
             [
+                "answer_at",
                 "contact_id",
                 "contacts",
                 "conversation_identifier",
+                "cost_amount",
                 "created_at",
+                "currency",
+                "duration_seconds",
                 "end_at",
                 "id",
+                "instructions",
                 "is_private",
                 "metadata",
+                "parent_id",
                 "raw",
                 "start_at",
+                "status",
                 "telephone",
                 "type",
                 "updated_at",
