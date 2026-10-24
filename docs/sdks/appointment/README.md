@@ -35,7 +35,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2023-04-11T08:16:20.874Z"),
             "description": "clarus aptus cetera",
             "end_at": parse_datetime("2023-12-12T13:04:41.451Z"),
-            "id": "f375ba90-9dd2-4c63-aa4e-ee7144c7342a",
+            "id": "684730ea-a7fa-4868-9df4-3bdcf0844706",
             "metadata": [],
             "practitioner_ids": [],
             "reasons": [
@@ -55,7 +55,7 @@ with UnifiedTo(
             "slot_ids": [],
             "start_at": parse_datetime("2023-12-12T12:34:41.451Z"),
             "status": shared.HealthcareAppointmentStatus.BOOKED,
-            "updated_at": parse_datetime("2025-11-20T23:01:12.844Z"),
+            "updated_at": parse_datetime("2025-11-21T13:17:18.542Z"),
         },
         "connection_id": "<id>",
     })
@@ -201,7 +201,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2023-04-11T08:16:20.874Z"),
             "description": "clarus aptus cetera",
             "end_at": parse_datetime("2023-12-12T13:04:41.451Z"),
-            "id": "c7e6c8c7-a114-4e61-b19a-73ceb2ce3e7f",
+            "id": "86ecd2b0-d230-4276-9e69-ad4a4062d457",
             "metadata": [],
             "practitioner_ids": [],
             "reasons": [
@@ -221,7 +221,7 @@ with UnifiedTo(
             "slot_ids": [],
             "start_at": parse_datetime("2023-12-12T12:34:41.451Z"),
             "status": shared.HealthcareAppointmentStatus.BOOKED,
-            "updated_at": parse_datetime("2025-11-20T23:01:12.853Z"),
+            "updated_at": parse_datetime("2025-11-21T13:17:18.559Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -322,7 +322,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2023-04-11T08:16:20.874Z"),
             "description": "clarus aptus cetera",
             "end_at": parse_datetime("2023-12-12T13:04:41.451Z"),
-            "id": "c7e6c8c7-a114-4e61-b19a-73ceb2ce3e7f",
+            "id": "86ecd2b0-d230-4276-9e69-ad4a4062d457",
             "metadata": [],
             "practitioner_ids": [],
             "reasons": [
@@ -342,7 +342,7 @@ with UnifiedTo(
             "slot_ids": [],
             "start_at": parse_datetime("2023-12-12T12:34:41.451Z"),
             "status": shared.HealthcareAppointmentStatus.BOOKED,
-            "updated_at": parse_datetime("2025-11-20T23:01:12.853Z"),
+            "updated_at": parse_datetime("2025-11-21T13:17:18.559Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

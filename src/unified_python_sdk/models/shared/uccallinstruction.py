@@ -27,7 +27,7 @@ class UcCallInstructionTypedDict(TypedDict):
     audio_url: NotRequired[str]
     r"""PLAY: public MP3 or WAV URL"""
     language: NotRequired[str]
-    r"""SAY: BCP 47 language code (e.g. en-US), passed through as-is (Bandwidth maps it to its nearest locale)"""
+    r"""SAY: BCP 47 language code (e.g. en-US), passed to the integration as-is"""
     seconds: NotRequired[float]
     r"""PAUSE: length of silence"""
     sip_uri: NotRequired[str]
@@ -49,7 +49,7 @@ class UcCallInstruction(BaseModel):
     r"""PLAY: public MP3 or WAV URL"""
 
     language: Optional[str] = None
-    r"""SAY: BCP 47 language code (e.g. en-US), passed through as-is (Bandwidth maps it to its nearest locale)"""
+    r"""SAY: BCP 47 language code (e.g. en-US), passed to the integration as-is"""
 
     seconds: Optional[float] = None
     r"""PAUSE: length of silence"""
