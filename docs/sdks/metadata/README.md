@@ -34,17 +34,17 @@ with UnifiedTo(
         "metadata_metadata": {
             "created_at": parse_datetime("2021-03-25T03:02:17.656Z"),
             "format_": shared.MetadataMetadataFormat.PRICE,
-            "id": "8d6323f7-95c5-47c2-9dee-cb4712ab18af",
+            "id": "b8877975-2758-402c-b750-4b3f8f400378",
             "is_required": False,
             "name": "autem",
-            "object_type": "social_review",
+            "object_type": "legal_expense",
             "objects": {
 
             },
             "options": [],
             "original_format": "advoco",
             "slug": "arbustum",
-            "updated_at": parse_datetime("2025-03-24T00:10:59.674Z"),
+            "updated_at": parse_datetime("2025-03-24T19:34:57.724Z"),
         },
         "connection_id": "<id>",
     })
@@ -189,17 +189,17 @@ with UnifiedTo(
         "metadata_metadata": {
             "created_at": parse_datetime("2021-03-25T03:02:17.656Z"),
             "format_": shared.MetadataMetadataFormat.PRICE,
-            "id": "4e442495-255e-4b31-b1d0-ffb6ce2f51d1",
+            "id": "aea4aaa7-cd1b-4988-9e5a-1169aaa0662e",
             "is_required": False,
             "name": "autem",
-            "object_type": "social_review",
+            "object_type": "legal_expense",
             "objects": {
 
             },
             "options": [],
             "original_format": "advoco",
             "slug": "arbustum",
-            "updated_at": parse_datetime("2025-03-24T00:10:59.682Z"),
+            "updated_at": parse_datetime("2025-03-24T19:34:57.730Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -299,17 +299,17 @@ with UnifiedTo(
         "metadata_metadata": {
             "created_at": parse_datetime("2021-03-25T03:02:17.656Z"),
             "format_": shared.MetadataMetadataFormat.PRICE,
-            "id": "4e442495-255e-4b31-b1d0-ffb6ce2f51d1",
+            "id": "aea4aaa7-cd1b-4988-9e5a-1169aaa0662e",
             "is_required": False,
             "name": "autem",
-            "object_type": "social_review",
+            "object_type": "legal_expense",
             "objects": {
 
             },
             "options": [],
             "original_format": "advoco",
             "slug": "arbustum",
-            "updated_at": parse_datetime("2025-03-24T00:10:59.682Z"),
+            "updated_at": parse_datetime("2025-03-24T19:34:57.730Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

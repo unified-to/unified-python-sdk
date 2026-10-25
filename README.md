@@ -131,7 +131,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "834f9bf6-e287-4fe6-8831-2e93690e9680",
+            "id": "35a34667-2c06-4849-89ba-b66e3c059f55",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -144,7 +144,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-07T15:04:20.415Z"),
+            "updated_at": parse_datetime("2023-08-07T21:57:32.264Z"),
         },
         "connection_id": "<id>",
     })
@@ -181,7 +181,7 @@ async def main():
                 "currency": "CAD",
                 "customer_defined_code": "6170",
                 "description": "Voluptatibus valde spoliatio.",
-                "id": "834f9bf6-e287-4fe6-8831-2e93690e9680",
+                "id": "35a34667-2c06-4849-89ba-b66e3c059f55",
                 "is_payable": False,
                 "metadata": [],
                 "name": "Auto Loan Account",
@@ -194,7 +194,7 @@ async def main():
                     },
                 ],
                 "type": shared.Type.ACCOUNTS_RECEIVABLE,
-                "updated_at": parse_datetime("2023-08-07T15:04:20.415Z"),
+                "updated_at": parse_datetime("2023-08-07T21:57:32.264Z"),
             },
             "connection_id": "<id>",
         })
@@ -735,6 +735,11 @@ asyncio.run(main())
 * [remove_ats_candidate](docs/sdks/candidate/README.md#remove_ats_candidate) - Remove a candidate
 * [update_ats_candidate](docs/sdks/candidate/README.md#update_ats_candidate) - Update a candidate
 
+### [Careplan](docs/sdks/careplan/README.md)
+
+* [get_healthcare_careplan](docs/sdks/careplan/README.md#get_healthcare_careplan) - Retrieve a careplan
+* [list_healthcare_careplans](docs/sdks/careplan/README.md#list_healthcare_careplans) - List all careplans
+
 ### [Carrier](docs/sdks/carrier/README.md)
 
 * [get_shipping_carrier](docs/sdks/carrier/README.md#get_shipping_carrier) - Retrieve a carrier
@@ -1068,6 +1073,11 @@ asyncio.run(main())
 * [remove_lms_course](docs/sdks/course/README.md#remove_lms_course) - Remove a course
 * [update_lms_course](docs/sdks/course/README.md#update_lms_course) - Update a course
 
+### [Coverage](docs/sdks/coverage/README.md)
+
+* [get_healthcare_coverage](docs/sdks/coverage/README.md#get_healthcare_coverage) - Retrieve a coverage
+* [list_healthcare_coverages](docs/sdks/coverage/README.md#list_healthcare_coverages) - List all coverages
+
 ### [Creative](docs/sdks/creative/README.md)
 
 * [create_ads_creative](docs/sdks/creative/README.md#create_ads_creative) - Create a creative
@@ -1219,12 +1229,15 @@ asyncio.run(main())
 ### [Document](docs/sdks/document/README.md)
 
 * [create_ats_document](docs/sdks/document/README.md#create_ats_document) - Create a document
+* [create_healthcare_document](docs/sdks/document/README.md#create_healthcare_document) - Create a document
 * [create_hris_document](docs/sdks/document/README.md#create_hris_document) - Create a document
 * [create_signing_document](docs/sdks/document/README.md#create_signing_document) - Create a document
 * [get_ats_document](docs/sdks/document/README.md#get_ats_document) - Retrieve a document
+* [get_healthcare_document](docs/sdks/document/README.md#get_healthcare_document) - Retrieve a document
 * [get_hris_document](docs/sdks/document/README.md#get_hris_document) - Retrieve a document
 * [get_signing_document](docs/sdks/document/README.md#get_signing_document) - Retrieve a document
 * [list_ats_documents](docs/sdks/document/README.md#list_ats_documents) - List all documents
+* [list_healthcare_documents](docs/sdks/document/README.md#list_healthcare_documents) - List all documents
 * [list_hris_documents](docs/sdks/document/README.md#list_hris_documents) - List all documents
 * [list_signing_documents](docs/sdks/document/README.md#list_signing_documents) - List all documents
 * [patch_ats_document](docs/sdks/document/README.md#patch_ats_document) - Update a document
@@ -1417,7 +1430,9 @@ asyncio.run(main())
 ### [Goal](docs/sdks/goal/README.md)
 
 * [create_performance_goal](docs/sdks/goal/README.md#create_performance_goal) - Create a goal
+* [get_healthcare_goal](docs/sdks/goal/README.md#get_healthcare_goal) - Retrieve a goal
 * [get_performance_goal](docs/sdks/goal/README.md#get_performance_goal) - Retrieve a goal
+* [list_healthcare_goals](docs/sdks/goal/README.md#list_healthcare_goals) - List all goals
 * [list_performance_goals](docs/sdks/goal/README.md#list_performance_goals) - List all goals
 * [patch_performance_goal](docs/sdks/goal/README.md#patch_performance_goal) - Update a goal
 * [remove_performance_goal](docs/sdks/goal/README.md#remove_performance_goal) - Remove a goal
@@ -1454,29 +1469,42 @@ asyncio.run(main())
 ### [Healthcare](docs/sdks/healthcare/README.md)
 
 * [create_healthcare_appointment](docs/sdks/healthcare/README.md#create_healthcare_appointment) - Create an appointment
+* [create_healthcare_document](docs/sdks/healthcare/README.md#create_healthcare_document) - Create a document
 * [create_healthcare_observation](docs/sdks/healthcare/README.md#create_healthcare_observation) - Create an observation
 * [create_healthcare_patient](docs/sdks/healthcare/README.md#create_healthcare_patient) - Create a patient
 * [get_healthcare_allergy](docs/sdks/healthcare/README.md#get_healthcare_allergy) - Retrieve an allergy
 * [get_healthcare_appointment](docs/sdks/healthcare/README.md#get_healthcare_appointment) - Retrieve an appointment
+* [get_healthcare_careplan](docs/sdks/healthcare/README.md#get_healthcare_careplan) - Retrieve a careplan
 * [get_healthcare_condition](docs/sdks/healthcare/README.md#get_healthcare_condition) - Retrieve a condition
+* [get_healthcare_coverage](docs/sdks/healthcare/README.md#get_healthcare_coverage) - Retrieve a coverage
+* [get_healthcare_document](docs/sdks/healthcare/README.md#get_healthcare_document) - Retrieve a document
 * [get_healthcare_encounter](docs/sdks/healthcare/README.md#get_healthcare_encounter) - Retrieve an encounter
+* [get_healthcare_goal](docs/sdks/healthcare/README.md#get_healthcare_goal) - Retrieve a goal
 * [get_healthcare_immunization](docs/sdks/healthcare/README.md#get_healthcare_immunization) - Retrieve an immunization
 * [get_healthcare_location](docs/sdks/healthcare/README.md#get_healthcare_location) - Retrieve a location
 * [get_healthcare_medication](docs/sdks/healthcare/README.md#get_healthcare_medication) - Retrieve a medication
 * [get_healthcare_observation](docs/sdks/healthcare/README.md#get_healthcare_observation) - Retrieve an observation
 * [get_healthcare_patient](docs/sdks/healthcare/README.md#get_healthcare_patient) - Retrieve a patient
 * [get_healthcare_practitioner](docs/sdks/healthcare/README.md#get_healthcare_practitioner) - Retrieve a practitioner
+* [get_healthcare_procedure](docs/sdks/healthcare/README.md#get_healthcare_procedure) - Retrieve a procedure
+* [get_healthcare_report](docs/sdks/healthcare/README.md#get_healthcare_report) - Retrieve a report
 * [get_healthcare_slot](docs/sdks/healthcare/README.md#get_healthcare_slot) - Retrieve a slot
 * [list_healthcare_allergies](docs/sdks/healthcare/README.md#list_healthcare_allergies) - List all allergies
 * [list_healthcare_appointments](docs/sdks/healthcare/README.md#list_healthcare_appointments) - List all appointments
+* [list_healthcare_careplans](docs/sdks/healthcare/README.md#list_healthcare_careplans) - List all careplans
 * [list_healthcare_conditions](docs/sdks/healthcare/README.md#list_healthcare_conditions) - List all conditions
+* [list_healthcare_coverages](docs/sdks/healthcare/README.md#list_healthcare_coverages) - List all coverages
+* [list_healthcare_documents](docs/sdks/healthcare/README.md#list_healthcare_documents) - List all documents
 * [list_healthcare_encounters](docs/sdks/healthcare/README.md#list_healthcare_encounters) - List all encounters
+* [list_healthcare_goals](docs/sdks/healthcare/README.md#list_healthcare_goals) - List all goals
 * [list_healthcare_immunizations](docs/sdks/healthcare/README.md#list_healthcare_immunizations) - List all immunizations
 * [list_healthcare_locations](docs/sdks/healthcare/README.md#list_healthcare_locations) - List all locations
 * [list_healthcare_medications](docs/sdks/healthcare/README.md#list_healthcare_medications) - List all medications
 * [list_healthcare_observations](docs/sdks/healthcare/README.md#list_healthcare_observations) - List all observations
 * [list_healthcare_patients](docs/sdks/healthcare/README.md#list_healthcare_patients) - List all patients
 * [list_healthcare_practitioners](docs/sdks/healthcare/README.md#list_healthcare_practitioners) - List all practitioners
+* [list_healthcare_procedures](docs/sdks/healthcare/README.md#list_healthcare_procedures) - List all procedures
+* [list_healthcare_reports](docs/sdks/healthcare/README.md#list_healthcare_reports) - List all reports
 * [list_healthcare_slots](docs/sdks/healthcare/README.md#list_healthcare_slots) - List all slots
 * [patch_healthcare_appointment](docs/sdks/healthcare/README.md#patch_healthcare_appointment) - Update an appointment
 * [patch_healthcare_patient](docs/sdks/healthcare/README.md#patch_healthcare_patient) - Update a patient
@@ -2160,6 +2188,11 @@ asyncio.run(main())
 * [get_healthcare_practitioner](docs/sdks/practitioner/README.md#get_healthcare_practitioner) - Retrieve a practitioner
 * [list_healthcare_practitioners](docs/sdks/practitioner/README.md#list_healthcare_practitioners) - List all practitioners
 
+### [Procedure](docs/sdks/procedure/README.md)
+
+* [get_healthcare_procedure](docs/sdks/procedure/README.md#get_healthcare_procedure) - Retrieve a procedure
+* [list_healthcare_procedures](docs/sdks/procedure/README.md#list_healthcare_procedures) - List all procedures
+
 ### [Profile](docs/sdks/profile/README.md)
 
 * [create_cdp_profile](docs/sdks/profile/README.md#create_cdp_profile) - Create a profile
@@ -2314,8 +2347,10 @@ asyncio.run(main())
 
 ### [Report](docs/sdks/report/README.md)
 
+* [get_healthcare_report](docs/sdks/report/README.md#get_healthcare_report) - Retrieve a report
 * [list_ads_reports](docs/sdks/report/README.md#list_ads_reports) - List all reports
 * [list_analytics_reports](docs/sdks/report/README.md#list_analytics_reports) - List all reports
+* [list_healthcare_reports](docs/sdks/report/README.md#list_healthcare_reports) - List all reports
 * [list_martech_reports](docs/sdks/report/README.md#list_martech_reports) - List all reports
 
 ### [Repository](docs/sdks/repository/README.md)
@@ -2946,7 +2981,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "834f9bf6-e287-4fe6-8831-2e93690e9680",
+            "id": "35a34667-2c06-4849-89ba-b66e3c059f55",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -2959,7 +2994,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-07T15:04:20.415Z"),
+            "updated_at": parse_datetime("2023-08-07T21:57:32.264Z"),
         },
         "connection_id": "<id>",
     },
@@ -2993,7 +3028,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "834f9bf6-e287-4fe6-8831-2e93690e9680",
+            "id": "35a34667-2c06-4849-89ba-b66e3c059f55",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3006,7 +3041,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-07T15:04:20.415Z"),
+            "updated_at": parse_datetime("2023-08-07T21:57:32.264Z"),
         },
         "connection_id": "<id>",
     })
@@ -3054,7 +3089,7 @@ with UnifiedTo(
                 "currency": "CAD",
                 "customer_defined_code": "6170",
                 "description": "Voluptatibus valde spoliatio.",
-                "id": "834f9bf6-e287-4fe6-8831-2e93690e9680",
+                "id": "35a34667-2c06-4849-89ba-b66e3c059f55",
                 "is_payable": False,
                 "metadata": [],
                 "name": "Auto Loan Account",
@@ -3067,7 +3102,7 @@ with UnifiedTo(
                     },
                 ],
                 "type": shared.Type.ACCOUNTS_RECEIVABLE,
-                "updated_at": parse_datetime("2023-08-07T15:04:20.415Z"),
+                "updated_at": parse_datetime("2023-08-07T21:57:32.264Z"),
             },
             "connection_id": "<id>",
         })
@@ -3145,7 +3180,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "834f9bf6-e287-4fe6-8831-2e93690e9680",
+            "id": "35a34667-2c06-4849-89ba-b66e3c059f55",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3158,7 +3193,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-07T15:04:20.415Z"),
+            "updated_at": parse_datetime("2023-08-07T21:57:32.264Z"),
         },
         "connection_id": "<id>",
     })
@@ -3193,7 +3228,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "834f9bf6-e287-4fe6-8831-2e93690e9680",
+            "id": "35a34667-2c06-4849-89ba-b66e3c059f55",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3206,7 +3241,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-07T15:04:20.415Z"),
+            "updated_at": parse_datetime("2023-08-07T21:57:32.264Z"),
         },
         "connection_id": "<id>",
     })
@@ -3349,7 +3384,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "834f9bf6-e287-4fe6-8831-2e93690e9680",
+            "id": "35a34667-2c06-4849-89ba-b66e3c059f55",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3362,7 +3397,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-07T15:04:20.415Z"),
+            "updated_at": parse_datetime("2023-08-07T21:57:32.264Z"),
         },
         "connection_id": "<id>",
     })

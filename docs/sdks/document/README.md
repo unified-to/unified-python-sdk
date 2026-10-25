@@ -5,12 +5,15 @@
 ### Available Operations
 
 * [create_ats_document](#create_ats_document) - Create a document
+* [create_healthcare_document](#create_healthcare_document) - Create a document
 * [create_hris_document](#create_hris_document) - Create a document
 * [create_signing_document](#create_signing_document) - Create a document
 * [get_ats_document](#get_ats_document) - Retrieve a document
+* [get_healthcare_document](#get_healthcare_document) - Retrieve a document
 * [get_hris_document](#get_hris_document) - Retrieve a document
 * [get_signing_document](#get_signing_document) - Retrieve a document
 * [list_ats_documents](#list_ats_documents) - List all documents
+* [list_healthcare_documents](#list_healthcare_documents) - List all documents
 * [list_hris_documents](#list_hris_documents) - List all documents
 * [list_signing_documents](#list_signing_documents) - List all documents
 * [patch_ats_document](#patch_ats_document) - Update a document
@@ -47,10 +50,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-08-20T08:00:27.437Z"),
             "document_url": "https://vengeful-lashes.biz",
             "filename": "lonzo_schowalter_resume.pdf",
-            "id": "b9f39797-10de-47a2-8c50-4a69de1e62bc",
+            "id": "d1d6a5df-8a2c-4e9d-9f77-278e29f85261",
             "metadata": [],
             "type": shared.AtsDocumentType.COVER_LETTER,
-            "updated_at": parse_datetime("2022-12-07T22:10:22.826Z"),
+            "updated_at": parse_datetime("2022-12-08T04:58:26.312Z"),
         },
         "connection_id": "<id>",
     })
@@ -72,6 +75,73 @@ with UnifiedTo(
 ### Response
 
 **[operations.CreateAtsDocumentResponse](../../models/operations/createatsdocumentresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## create_healthcare_document
+
+Creates a HealthcareDocument. Provide the unified HealthcareDocument fields in the request body; they are mapped to the provider's API. Returns the created HealthcareDocument.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="createHealthcareDocument" method="post" path="/healthcare/{connection_id}/document" example="healthcare_document" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.document.create_healthcare_document(request={
+        "healthcare_document": {
+            "authored_at": parse_datetime("2023-07-16T04:00:25.853Z"),
+            "codes": [
+                {
+                    "code": "23671711",
+                    "display": "History and physical",
+                    "system": "http://loinc.org",
+                },
+            ],
+            "created_at": parse_datetime("2023-07-16T04:00:25.853Z"),
+            "document_url": "https://overcooked-yogurt.org",
+            "filename": "ugh_after.elc",
+            "id": "ee424a71-3436-4d21-adb9-09a37750ea99",
+            "metadata": [],
+            "mime_type": "application/pdf",
+            "name": "History and physical",
+            "status": shared.HealthcareDocumentStatus.SUPERSEDED,
+            "type": shared.HealthcareDocumentType.CONSULTATION_NOTE,
+            "updated_at": parse_datetime("2024-12-28T12:55:08.397Z"),
+        },
+        "connection_id": "<id>",
+    })
+
+    assert res.healthcare_document is not None
+
+    # Handle response
+    print(res.healthcare_document)
+
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [operations.CreateHealthcareDocumentRequest](../../models/operations/createhealthcaredocumentrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
+
+### Response
+
+**[operations.CreateHealthcareDocumentResponse](../../models/operations/createhealthcaredocumentresponse.md)**
 
 ### Errors
 
@@ -103,10 +173,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-10-27T11:47:26.086Z"),
             "document_url": "https://sore-decision.biz/",
             "filename": "ridge_forager.xsl",
-            "id": "6f713dce-7c58-4499-b1fa-d12e2dcc05b3",
+            "id": "d07f7ba2-90fa-47a5-a0af-cb477fd61bed",
             "metadata": [],
             "type": shared.HrisDocumentType.POLICY,
-            "updated_at": parse_datetime("2025-10-13T16:54:16.409Z"),
+            "updated_at": parse_datetime("2025-10-14T13:01:20.445Z"),
         },
         "connection_id": "<id>",
     })
@@ -159,12 +229,12 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-05-02T09:35:23.679Z"),
             "description": "Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.",
             "expires_at": parse_datetime("2021-06-04T01:21:34.949Z"),
-            "id": "541dc4f6-72ea-4c6f-9928-c11a82da2d1e",
+            "id": "37307d99-1f4e-4947-adc9-1c124170db53",
             "metadata": [],
             "name": "Denesik Group NDA",
-            "sent_at": parse_datetime("2022-06-30T02:35:24.197Z"),
+            "sent_at": parse_datetime("2022-06-30T08:19:41.374Z"),
             "status": shared.SigningDocumentStatus.DRAFT,
-            "updated_at": parse_datetime("2025-09-05T04:44:50.116Z"),
+            "updated_at": parse_datetime("2025-09-06T02:14:11.753Z"),
         },
         "connection_id": "<id>",
     })
@@ -233,6 +303,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.GetAtsDocumentResponse](../../models/operations/getatsdocumentresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_healthcare_document
+
+Retrieves a single HealthcareDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getHealthcareDocument" method="get" path="/healthcare/{connection_id}/document/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.document.get_healthcare_document(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.healthcare_document is not None
+
+    # Handle response
+    print(res.healthcare_document)
+
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.GetHealthcareDocumentRequest](../../models/operations/gethealthcaredocumentrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+
+### Response
+
+**[operations.GetHealthcareDocumentResponse](../../models/operations/gethealthcaredocumentresponse.md)**
 
 ### Errors
 
@@ -380,6 +497,52 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## list_healthcare_documents
+
+Returns a list of HealthcareDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listHealthcareDocuments" method="get" path="/healthcare/{connection_id}/document" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.document.list_healthcare_documents(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.healthcare_documents is not None
+
+    # Handle response
+    print(res.healthcare_documents)
+
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.ListHealthcareDocumentsRequest](../../models/operations/listhealthcaredocumentsrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+
+### Response
+
+**[operations.ListHealthcareDocumentsResponse](../../models/operations/listhealthcaredocumentsresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## list_hris_documents
 
 Returns a list of HrisDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -496,10 +659,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-08-20T08:00:27.437Z"),
             "document_url": "https://vengeful-lashes.biz",
             "filename": "lonzo_schowalter_resume.pdf",
-            "id": "6a24dafd-39f3-4f0a-a38e-ab16992fecb8",
+            "id": "2762941e-0a7c-4262-93b9-1ee0d81966ef",
             "metadata": [],
             "type": shared.AtsDocumentType.COVER_LETTER,
-            "updated_at": parse_datetime("2022-12-07T22:10:22.830Z"),
+            "updated_at": parse_datetime("2022-12-08T04:58:26.316Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -553,10 +716,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-10-27T11:47:26.086Z"),
             "document_url": "https://sore-decision.biz/",
             "filename": "ridge_forager.xsl",
-            "id": "8773d06e-6184-48a4-916e-829bcc4d963f",
+            "id": "2916294b-e0ed-42c3-8296-3f2743047101",
             "metadata": [],
             "type": shared.HrisDocumentType.POLICY,
-            "updated_at": parse_datetime("2025-10-13T16:54:16.424Z"),
+            "updated_at": parse_datetime("2025-10-14T13:01:20.458Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -610,12 +773,12 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-05-02T09:35:23.679Z"),
             "description": "Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.",
             "expires_at": parse_datetime("2021-06-04T01:21:34.949Z"),
-            "id": "276a405b-5d17-4e86-b748-601573e6e3bb",
+            "id": "7aea40f1-4ae8-4ec8-9553-723272695a33",
             "metadata": [],
             "name": "Denesik Group NDA",
-            "sent_at": parse_datetime("2022-06-30T02:35:24.200Z"),
+            "sent_at": parse_datetime("2022-06-30T08:19:41.377Z"),
             "status": shared.SigningDocumentStatus.DRAFT,
-            "updated_at": parse_datetime("2025-09-05T04:44:50.127Z"),
+            "updated_at": parse_datetime("2025-09-06T02:14:11.764Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -810,10 +973,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-08-20T08:00:27.437Z"),
             "document_url": "https://vengeful-lashes.biz",
             "filename": "lonzo_schowalter_resume.pdf",
-            "id": "6a24dafd-39f3-4f0a-a38e-ab16992fecb8",
+            "id": "2762941e-0a7c-4262-93b9-1ee0d81966ef",
             "metadata": [],
             "type": shared.AtsDocumentType.COVER_LETTER,
-            "updated_at": parse_datetime("2022-12-07T22:10:22.830Z"),
+            "updated_at": parse_datetime("2022-12-08T04:58:26.316Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -867,10 +1030,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-10-27T11:47:26.086Z"),
             "document_url": "https://sore-decision.biz/",
             "filename": "ridge_forager.xsl",
-            "id": "8773d06e-6184-48a4-916e-829bcc4d963f",
+            "id": "2916294b-e0ed-42c3-8296-3f2743047101",
             "metadata": [],
             "type": shared.HrisDocumentType.POLICY,
-            "updated_at": parse_datetime("2025-10-13T16:54:16.424Z"),
+            "updated_at": parse_datetime("2025-10-14T13:01:20.458Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -924,12 +1087,12 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-05-02T09:35:23.679Z"),
             "description": "Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.",
             "expires_at": parse_datetime("2021-06-04T01:21:34.949Z"),
-            "id": "276a405b-5d17-4e86-b748-601573e6e3bb",
+            "id": "7aea40f1-4ae8-4ec8-9553-723272695a33",
             "metadata": [],
             "name": "Denesik Group NDA",
-            "sent_at": parse_datetime("2022-06-30T02:35:24.200Z"),
+            "sent_at": parse_datetime("2022-06-30T08:19:41.377Z"),
             "status": shared.SigningDocumentStatus.DRAFT,
-            "updated_at": parse_datetime("2025-09-05T04:44:50.127Z"),
+            "updated_at": parse_datetime("2025-09-06T02:14:11.764Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

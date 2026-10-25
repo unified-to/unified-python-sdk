@@ -1,5 +1,7 @@
 # MaritalStatus
 
+Marital status of the patient
+
 ## Example Usage
 
 ```python
@@ -13,7 +15,14 @@ value = MaritalStatus.MARRIED
 
 ## Values
 
-| Name      | Value     |
-| --------- | --------- |
-| `MARRIED` | MARRIED   |
-| `SINGLE`  | SINGLE    |
+| Name               | Value              |
+| ------------------ | ------------------ |
+| `MARRIED`          | MARRIED            |
+| `SINGLE`           | SINGLE             |
+| `DOMESTIC_PARTNER` | DOMESTIC_PARTNER   |
+| `SEPARATED`        | SEPARATED          |
+| `DIVORCED`         | DIVORCED           |
+| `WIDOWED`          | WIDOWED            |
+| `ANNULLED`         | ANNULLED           |
+| `UNKNOWN`          | UNKNOWN            |
+| `OTHER`            | OTHER              |

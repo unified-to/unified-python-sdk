@@ -40,8 +40,12 @@ class HealthcareAppointmentTypedDict(TypedDict):
     r"""When the appointment ends (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     id: NotRequired[str]
     r"""Unique identifier for the appointment"""
+    is_virtual: NotRequired[bool]
+    r"""Whether the appointment is a telehealth/virtual visit"""
     location_id: NotRequired[str]
     r"""Where the appointment takes place"""
+    meeting_url: NotRequired[str]
+    r"""Join link for a telehealth/virtual visit"""
     metadata: NotRequired[List[HealthcareMetadataTypedDict]]
     r"""Custom field values"""
     notes: NotRequired[str]
@@ -82,8 +86,14 @@ class HealthcareAppointment(BaseModel):
     id: Optional[str] = None
     r"""Unique identifier for the appointment"""
 
+    is_virtual: Optional[bool] = None
+    r"""Whether the appointment is a telehealth/virtual visit"""
+
     location_id: Optional[str] = None
     r"""Where the appointment takes place"""
+
+    meeting_url: Optional[str] = None
+    r"""Join link for a telehealth/virtual visit"""
 
     metadata: Optional[List[HealthcareMetadata]] = None
     r"""Custom field values"""
@@ -136,7 +146,9 @@ class HealthcareAppointment(BaseModel):
                 "description",
                 "end_at",
                 "id",
+                "is_virtual",
                 "location_id",
+                "meeting_url",
                 "metadata",
                 "notes",
                 "patient_id",

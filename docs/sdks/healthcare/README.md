@@ -5,29 +5,42 @@
 ### Available Operations
 
 * [create_healthcare_appointment](#create_healthcare_appointment) - Create an appointment
+* [create_healthcare_document](#create_healthcare_document) - Create a document
 * [create_healthcare_observation](#create_healthcare_observation) - Create an observation
 * [create_healthcare_patient](#create_healthcare_patient) - Create a patient
 * [get_healthcare_allergy](#get_healthcare_allergy) - Retrieve an allergy
 * [get_healthcare_appointment](#get_healthcare_appointment) - Retrieve an appointment
+* [get_healthcare_careplan](#get_healthcare_careplan) - Retrieve a careplan
 * [get_healthcare_condition](#get_healthcare_condition) - Retrieve a condition
+* [get_healthcare_coverage](#get_healthcare_coverage) - Retrieve a coverage
+* [get_healthcare_document](#get_healthcare_document) - Retrieve a document
 * [get_healthcare_encounter](#get_healthcare_encounter) - Retrieve an encounter
+* [get_healthcare_goal](#get_healthcare_goal) - Retrieve a goal
 * [get_healthcare_immunization](#get_healthcare_immunization) - Retrieve an immunization
 * [get_healthcare_location](#get_healthcare_location) - Retrieve a location
 * [get_healthcare_medication](#get_healthcare_medication) - Retrieve a medication
 * [get_healthcare_observation](#get_healthcare_observation) - Retrieve an observation
 * [get_healthcare_patient](#get_healthcare_patient) - Retrieve a patient
 * [get_healthcare_practitioner](#get_healthcare_practitioner) - Retrieve a practitioner
+* [get_healthcare_procedure](#get_healthcare_procedure) - Retrieve a procedure
+* [get_healthcare_report](#get_healthcare_report) - Retrieve a report
 * [get_healthcare_slot](#get_healthcare_slot) - Retrieve a slot
 * [list_healthcare_allergies](#list_healthcare_allergies) - List all allergies
 * [list_healthcare_appointments](#list_healthcare_appointments) - List all appointments
+* [list_healthcare_careplans](#list_healthcare_careplans) - List all careplans
 * [list_healthcare_conditions](#list_healthcare_conditions) - List all conditions
+* [list_healthcare_coverages](#list_healthcare_coverages) - List all coverages
+* [list_healthcare_documents](#list_healthcare_documents) - List all documents
 * [list_healthcare_encounters](#list_healthcare_encounters) - List all encounters
+* [list_healthcare_goals](#list_healthcare_goals) - List all goals
 * [list_healthcare_immunizations](#list_healthcare_immunizations) - List all immunizations
 * [list_healthcare_locations](#list_healthcare_locations) - List all locations
 * [list_healthcare_medications](#list_healthcare_medications) - List all medications
 * [list_healthcare_observations](#list_healthcare_observations) - List all observations
 * [list_healthcare_patients](#list_healthcare_patients) - List all patients
 * [list_healthcare_practitioners](#list_healthcare_practitioners) - List all practitioners
+* [list_healthcare_procedures](#list_healthcare_procedures) - List all procedures
+* [list_healthcare_reports](#list_healthcare_reports) - List all reports
 * [list_healthcare_slots](#list_healthcare_slots) - List all slots
 * [patch_healthcare_appointment](#patch_healthcare_appointment) - Update an appointment
 * [patch_healthcare_patient](#patch_healthcare_patient) - Update a patient
@@ -59,27 +72,23 @@ with UnifiedTo(
             "created_at": parse_datetime("2023-04-11T08:16:20.874Z"),
             "description": "clarus aptus cetera",
             "end_at": parse_datetime("2023-12-12T13:04:41.451Z"),
-            "id": "684730ea-a7fa-4868-9df4-3bdcf0844706",
+            "id": "f1f241a3-6484-4240-8a29-bc1906dffda9",
+            "is_virtual": True,
+            "meeting_url": "https://expensive-slipper.name/",
             "metadata": [],
+            "notes": "Stabilis triduana colo casus anser ver alo beatus contabesco amiculum.",
             "practitioner_ids": [],
-            "reasons": [
-                {
-                    "code": "12762740",
-                    "display": "cubicularis caput",
-                    "system": "http://snomed.info/sct",
-                },
-            ],
             "service_types": [
                 {
-                    "code": "61128108",
-                    "display": "Annual physical",
+                    "code": "12762740",
+                    "display": "New patient visit",
                     "system": "http://snomed.info/sct",
                 },
             ],
             "slot_ids": [],
             "start_at": parse_datetime("2023-12-12T12:34:41.451Z"),
             "status": shared.HealthcareAppointmentStatus.BOOKED,
-            "updated_at": parse_datetime("2025-11-21T13:17:18.542Z"),
+            "updated_at": parse_datetime("2026-09-26T02:53:53.323Z"),
         },
         "connection_id": "<id>",
     })
@@ -101,6 +110,73 @@ with UnifiedTo(
 ### Response
 
 **[operations.CreateHealthcareAppointmentResponse](../../models/operations/createhealthcareappointmentresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## create_healthcare_document
+
+Creates a HealthcareDocument. Provide the unified HealthcareDocument fields in the request body; they are mapped to the provider's API. Returns the created HealthcareDocument.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="createHealthcareDocument" method="post" path="/healthcare/{connection_id}/document" example="healthcare_document" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.healthcare.create_healthcare_document(request={
+        "healthcare_document": {
+            "authored_at": parse_datetime("2023-07-16T04:00:25.853Z"),
+            "codes": [
+                {
+                    "code": "23671711",
+                    "display": "History and physical",
+                    "system": "http://loinc.org",
+                },
+            ],
+            "created_at": parse_datetime("2023-07-16T04:00:25.853Z"),
+            "document_url": "https://overcooked-yogurt.org",
+            "filename": "ugh_after.elc",
+            "id": "ee424a71-3436-4d21-adb9-09a37750ea99",
+            "metadata": [],
+            "mime_type": "application/pdf",
+            "name": "History and physical",
+            "status": shared.HealthcareDocumentStatus.SUPERSEDED,
+            "type": shared.HealthcareDocumentType.CONSULTATION_NOTE,
+            "updated_at": parse_datetime("2024-12-28T12:55:08.397Z"),
+        },
+        "connection_id": "<id>",
+    })
+
+    assert res.healthcare_document is not None
+
+    # Handle response
+    print(res.healthcare_document)
+
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [operations.CreateHealthcareDocumentRequest](../../models/operations/createhealthcaredocumentrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
+
+### Response
+
+**[operations.CreateHealthcareDocumentResponse](../../models/operations/createhealthcaredocumentresponse.md)**
 
 ### Errors
 
@@ -161,15 +237,15 @@ with UnifiedTo(
                 },
             ],
             "created_at": parse_datetime("2022-12-06T21:34:04.293Z"),
-            "id": "41e8ef2c-0745-462e-8984-3f9bc7cfc694",
+            "id": "d20f153f-29ed-430a-97f3-b861c54a7c77",
             "interpretation": shared.Interpretation.CRITICAL_HIGH,
-            "issued_at": parse_datetime("2025-05-13T05:22:58.293Z"),
+            "issued_at": parse_datetime("2025-05-13T22:22:01.766Z"),
             "metadata": [],
             "name": "Blood pressure panel",
-            "observed_at": parse_datetime("2025-01-21T17:30:46.306Z"),
+            "observed_at": parse_datetime("2025-01-22T08:21:55.605Z"),
             "status": shared.HealthcareObservationStatus.CORRECTED,
             "type": shared.HealthcareObservationType.VITAL_SIGNS,
-            "updated_at": parse_datetime("2026-03-26T16:37:50.509Z"),
+            "updated_at": parse_datetime("2026-03-27T15:41:05.358Z"),
         },
         "connection_id": "<id>",
     })
@@ -226,7 +302,20 @@ with UnifiedTo(
                 "postal_code": "54031",
                 "region": "Nebraska",
             },
-            "birthdate": "2025-02-14",
+            "birthdate": "2025-02-16",
+            "contacts": [
+                {
+                    "emails": [],
+                    "name": "Antonia Lebsack",
+                    "relationship": "Spouse",
+                    "telephones": [
+                        {
+                            "telephone": "(695) 328-7029 x4412",
+                            "type": shared.HealthcareTelephoneType.MOBILE,
+                        },
+                    ],
+                },
+            ],
             "created_at": parse_datetime("2021-06-05T21:08:04.917Z"),
             "emails": [
                 {
@@ -236,7 +325,7 @@ with UnifiedTo(
             ],
             "first_name": "Alejandrin",
             "gender": shared.HealthcarePatientGender.FEMALE,
-            "id": "9fb73473-2020-4c46-a3e0-c56f2589a6ad",
+            "id": "99b61bb5-fa44-44d5-9b44-71713c0ab8a5",
             "identifiers": [
                 {
                     "type": shared.HealthcareIdentifierType.MRN,
@@ -256,7 +345,7 @@ with UnifiedTo(
                     "type": shared.HealthcareTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2026-06-25T12:32:09.140Z"),
+            "updated_at": parse_datetime("2026-06-26T13:58:08.388Z"),
         },
         "connection_id": "<id>",
     })
@@ -379,6 +468,53 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## get_healthcare_careplan
+
+Retrieves a single HealthcareCareplan by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getHealthcareCareplan" method="get" path="/healthcare/{connection_id}/careplan/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.healthcare.get_healthcare_careplan(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.healthcare_careplan is not None
+
+    # Handle response
+    print(res.healthcare_careplan)
+
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.GetHealthcareCareplanRequest](../../models/operations/gethealthcarecareplanrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+
+### Response
+
+**[operations.GetHealthcareCareplanResponse](../../models/operations/gethealthcarecareplanresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## get_healthcare_condition
 
 Retrieves a single HealthcareCondition by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
@@ -426,6 +562,100 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## get_healthcare_coverage
+
+Retrieves a single HealthcareCoverage by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getHealthcareCoverage" method="get" path="/healthcare/{connection_id}/coverage/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.healthcare.get_healthcare_coverage(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.healthcare_coverage is not None
+
+    # Handle response
+    print(res.healthcare_coverage)
+
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.GetHealthcareCoverageRequest](../../models/operations/gethealthcarecoveragerequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+
+### Response
+
+**[operations.GetHealthcareCoverageResponse](../../models/operations/gethealthcarecoverageresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_healthcare_document
+
+Retrieves a single HealthcareDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getHealthcareDocument" method="get" path="/healthcare/{connection_id}/document/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.healthcare.get_healthcare_document(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.healthcare_document is not None
+
+    # Handle response
+    print(res.healthcare_document)
+
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.GetHealthcareDocumentRequest](../../models/operations/gethealthcaredocumentrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+
+### Response
+
+**[operations.GetHealthcareDocumentResponse](../../models/operations/gethealthcaredocumentresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## get_healthcare_encounter
 
 Retrieves a single HealthcareEncounter by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
@@ -466,6 +696,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.GetHealthcareEncounterResponse](../../models/operations/gethealthcareencounterresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_healthcare_goal
+
+Retrieves a single HealthcareGoal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getHealthcareGoal" method="get" path="/healthcare/{connection_id}/goal/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.healthcare.get_healthcare_goal(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.healthcare_goal is not None
+
+    # Handle response
+    print(res.healthcare_goal)
+
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.GetHealthcareGoalRequest](../../models/operations/gethealthcaregoalrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+
+### Response
+
+**[operations.GetHealthcareGoalResponse](../../models/operations/gethealthcaregoalresponse.md)**
 
 ### Errors
 
@@ -755,6 +1032,100 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## get_healthcare_procedure
+
+Retrieves a single HealthcareProcedure by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getHealthcareProcedure" method="get" path="/healthcare/{connection_id}/procedure/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.healthcare.get_healthcare_procedure(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.healthcare_procedure is not None
+
+    # Handle response
+    print(res.healthcare_procedure)
+
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.GetHealthcareProcedureRequest](../../models/operations/gethealthcareprocedurerequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `retries`                                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                     | :heavy_minus_sign:                                                                                   | Configuration to override the default retry behavior of the client.                                  |
+
+### Response
+
+**[operations.GetHealthcareProcedureResponse](../../models/operations/gethealthcareprocedureresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_healthcare_report
+
+Retrieves a single HealthcareReport by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getHealthcareReport" method="get" path="/healthcare/{connection_id}/report/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.healthcare.get_healthcare_report(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.healthcare_report is not None
+
+    # Handle response
+    print(res.healthcare_report)
+
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.GetHealthcareReportRequest](../../models/operations/gethealthcarereportrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+
+### Response
+
+**[operations.GetHealthcareReportResponse](../../models/operations/gethealthcarereportresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## get_healthcare_slot
 
 Retrieves a single HealthcareSlot by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
@@ -894,6 +1265,52 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## list_healthcare_careplans
+
+Returns a list of HealthcareCareplans. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listHealthcareCareplans" method="get" path="/healthcare/{connection_id}/careplan" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.healthcare.list_healthcare_careplans(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.healthcare_careplans is not None
+
+    # Handle response
+    print(res.healthcare_careplans)
+
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.ListHealthcareCareplansRequest](../../models/operations/listhealthcarecareplansrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+
+### Response
+
+**[operations.ListHealthcareCareplansResponse](../../models/operations/listhealthcarecareplansresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## list_healthcare_conditions
 
 Returns a list of HealthcareConditions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -940,6 +1357,98 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## list_healthcare_coverages
+
+Returns a list of HealthcareCoverages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listHealthcareCoverages" method="get" path="/healthcare/{connection_id}/coverage" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.healthcare.list_healthcare_coverages(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.healthcare_coverages is not None
+
+    # Handle response
+    print(res.healthcare_coverages)
+
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.ListHealthcareCoveragesRequest](../../models/operations/listhealthcarecoveragesrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+
+### Response
+
+**[operations.ListHealthcareCoveragesResponse](../../models/operations/listhealthcarecoveragesresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## list_healthcare_documents
+
+Returns a list of HealthcareDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listHealthcareDocuments" method="get" path="/healthcare/{connection_id}/document" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.healthcare.list_healthcare_documents(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.healthcare_documents is not None
+
+    # Handle response
+    print(res.healthcare_documents)
+
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.ListHealthcareDocumentsRequest](../../models/operations/listhealthcaredocumentsrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+
+### Response
+
+**[operations.ListHealthcareDocumentsResponse](../../models/operations/listhealthcaredocumentsresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## list_healthcare_encounters
 
 Returns a list of HealthcareEncounters. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -979,6 +1488,52 @@ with UnifiedTo(
 ### Response
 
 **[operations.ListHealthcareEncountersResponse](../../models/operations/listhealthcareencountersresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## list_healthcare_goals
+
+Returns a list of HealthcareGoals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listHealthcareGoals" method="get" path="/healthcare/{connection_id}/goal" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.healthcare.list_healthcare_goals(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.healthcare_goals is not None
+
+    # Handle response
+    print(res.healthcare_goals)
+
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.ListHealthcareGoalsRequest](../../models/operations/listhealthcaregoalsrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+
+### Response
+
+**[operations.ListHealthcareGoalsResponse](../../models/operations/listhealthcaregoalsresponse.md)**
 
 ### Errors
 
@@ -1262,6 +1817,98 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## list_healthcare_procedures
+
+Returns a list of HealthcareProcedures. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listHealthcareProcedures" method="get" path="/healthcare/{connection_id}/procedure" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.healthcare.list_healthcare_procedures(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.healthcare_procedures is not None
+
+    # Handle response
+    print(res.healthcare_procedures)
+
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [operations.ListHealthcareProceduresRequest](../../models/operations/listhealthcareproceduresrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
+
+### Response
+
+**[operations.ListHealthcareProceduresResponse](../../models/operations/listhealthcareproceduresresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## list_healthcare_reports
+
+Returns a list of HealthcareReports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listHealthcareReports" method="get" path="/healthcare/{connection_id}/report" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.healthcare.list_healthcare_reports(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.healthcare_reports is not None
+
+    # Handle response
+    print(res.healthcare_reports)
+
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.ListHealthcareReportsRequest](../../models/operations/listhealthcarereportsrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+
+### Response
+
+**[operations.ListHealthcareReportsResponse](../../models/operations/listhealthcarereportsresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## list_healthcare_slots
 
 Returns a list of HealthcareSlots. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -1332,27 +1979,23 @@ with UnifiedTo(
             "created_at": parse_datetime("2023-04-11T08:16:20.874Z"),
             "description": "clarus aptus cetera",
             "end_at": parse_datetime("2023-12-12T13:04:41.451Z"),
-            "id": "86ecd2b0-d230-4276-9e69-ad4a4062d457",
+            "id": "979fea47-24b1-4935-ae05-a58fb945d927",
+            "is_virtual": True,
+            "meeting_url": "https://expensive-slipper.name/",
             "metadata": [],
+            "notes": "Stabilis triduana colo casus anser ver alo beatus contabesco amiculum.",
             "practitioner_ids": [],
-            "reasons": [
-                {
-                    "code": "12762740",
-                    "display": "cubicularis caput",
-                    "system": "http://snomed.info/sct",
-                },
-            ],
             "service_types": [
                 {
-                    "code": "61128108",
-                    "display": "Annual physical",
+                    "code": "12762740",
+                    "display": "New patient visit",
                     "system": "http://snomed.info/sct",
                 },
             ],
             "slot_ids": [],
             "start_at": parse_datetime("2023-12-12T12:34:41.451Z"),
             "status": shared.HealthcareAppointmentStatus.BOOKED,
-            "updated_at": parse_datetime("2025-11-21T13:17:18.559Z"),
+            "updated_at": parse_datetime("2026-09-26T02:53:53.347Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1410,7 +2053,20 @@ with UnifiedTo(
                 "postal_code": "54031",
                 "region": "Nebraska",
             },
-            "birthdate": "2025-02-14",
+            "birthdate": "2025-02-16",
+            "contacts": [
+                {
+                    "emails": [],
+                    "name": "Antonia Lebsack",
+                    "relationship": "Spouse",
+                    "telephones": [
+                        {
+                            "telephone": "(695) 328-7029 x4412",
+                            "type": shared.HealthcareTelephoneType.MOBILE,
+                        },
+                    ],
+                },
+            ],
             "created_at": parse_datetime("2021-06-05T21:08:04.917Z"),
             "emails": [
                 {
@@ -1420,7 +2076,7 @@ with UnifiedTo(
             ],
             "first_name": "Alejandrin",
             "gender": shared.HealthcarePatientGender.FEMALE,
-            "id": "ce3a7577-ea4c-45f8-84ba-ec7716b90856",
+            "id": "162699de-eff7-47d3-a62a-ad8b7fd1f091",
             "identifiers": [
                 {
                     "type": shared.HealthcareIdentifierType.MRN,
@@ -1440,7 +2096,7 @@ with UnifiedTo(
                     "type": shared.HealthcareTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2026-06-25T12:32:09.166Z"),
+            "updated_at": parse_datetime("2026-06-26T13:58:08.435Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1541,27 +2197,23 @@ with UnifiedTo(
             "created_at": parse_datetime("2023-04-11T08:16:20.874Z"),
             "description": "clarus aptus cetera",
             "end_at": parse_datetime("2023-12-12T13:04:41.451Z"),
-            "id": "86ecd2b0-d230-4276-9e69-ad4a4062d457",
+            "id": "979fea47-24b1-4935-ae05-a58fb945d927",
+            "is_virtual": True,
+            "meeting_url": "https://expensive-slipper.name/",
             "metadata": [],
+            "notes": "Stabilis triduana colo casus anser ver alo beatus contabesco amiculum.",
             "practitioner_ids": [],
-            "reasons": [
-                {
-                    "code": "12762740",
-                    "display": "cubicularis caput",
-                    "system": "http://snomed.info/sct",
-                },
-            ],
             "service_types": [
                 {
-                    "code": "61128108",
-                    "display": "Annual physical",
+                    "code": "12762740",
+                    "display": "New patient visit",
                     "system": "http://snomed.info/sct",
                 },
             ],
             "slot_ids": [],
             "start_at": parse_datetime("2023-12-12T12:34:41.451Z"),
             "status": shared.HealthcareAppointmentStatus.BOOKED,
-            "updated_at": parse_datetime("2025-11-21T13:17:18.559Z"),
+            "updated_at": parse_datetime("2026-09-26T02:53:53.347Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1619,7 +2271,20 @@ with UnifiedTo(
                 "postal_code": "54031",
                 "region": "Nebraska",
             },
-            "birthdate": "2025-02-14",
+            "birthdate": "2025-02-16",
+            "contacts": [
+                {
+                    "emails": [],
+                    "name": "Antonia Lebsack",
+                    "relationship": "Spouse",
+                    "telephones": [
+                        {
+                            "telephone": "(695) 328-7029 x4412",
+                            "type": shared.HealthcareTelephoneType.MOBILE,
+                        },
+                    ],
+                },
+            ],
             "created_at": parse_datetime("2021-06-05T21:08:04.917Z"),
             "emails": [
                 {
@@ -1629,7 +2294,7 @@ with UnifiedTo(
             ],
             "first_name": "Alejandrin",
             "gender": shared.HealthcarePatientGender.FEMALE,
-            "id": "ce3a7577-ea4c-45f8-84ba-ec7716b90856",
+            "id": "162699de-eff7-47d3-a62a-ad8b7fd1f091",
             "identifiers": [
                 {
                     "type": shared.HealthcareIdentifierType.MRN,
@@ -1649,7 +2314,7 @@ with UnifiedTo(
                     "type": shared.HealthcareTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2026-06-25T12:32:09.166Z"),
+            "updated_at": parse_datetime("2026-06-26T13:58:08.435Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

@@ -245,6 +245,12 @@ class WebhookObjectType(str, Enum, metaclass=utils.OpenEnumMeta):
     HEALTHCARE_MEDICATION = "healthcare_medication"
     HEALTHCARE_OBSERVATION = "healthcare_observation"
     HEALTHCARE_IMMUNIZATION = "healthcare_immunization"
+    HEALTHCARE_DOCUMENT = "healthcare_document"
+    HEALTHCARE_COVERAGE = "healthcare_coverage"
+    HEALTHCARE_PROCEDURE = "healthcare_procedure"
+    HEALTHCARE_REPORT = "healthcare_report"
+    HEALTHCARE_CAREPLAN = "healthcare_careplan"
+    HEALTHCARE_GOAL = "healthcare_goal"
 
 
 class WebhookType(str, Enum, metaclass=utils.OpenEnumMeta):

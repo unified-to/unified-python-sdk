@@ -61,7 +61,7 @@ class HrisEmployeeGender(str, Enum, metaclass=utils.OpenEnumMeta):
     NON_BINARY = "NON_BINARY"
 
 
-class MaritalStatus(str, Enum, metaclass=utils.OpenEnumMeta):
+class HrisEmployeeMaritalStatus(str, Enum, metaclass=utils.OpenEnumMeta):
     MARRIED = "MARRIED"
     SINGLE = "SINGLE"
 
@@ -119,7 +119,7 @@ class HrisEmployeeTypedDict(TypedDict):
     r"""The employee's last (family) name"""
     locations: NotRequired[List[HrisLocationTypedDict]]
     manager_id: NotRequired[str]
-    marital_status: NotRequired[MaritalStatus]
+    marital_status: NotRequired[HrisEmployeeMaritalStatus]
     metadata: NotRequired[List[HrisMetadataTypedDict]]
     name: NotRequired[str]
     r"""The employee's full name"""
@@ -213,7 +213,7 @@ class HrisEmployee(BaseModel):
 
     manager_id: Optional[str] = None
 
-    marital_status: Optional[MaritalStatus] = None
+    marital_status: Optional[HrisEmployeeMaritalStatus] = None
 
     metadata: Optional[List[HrisMetadata]] = None
 
@@ -301,7 +301,7 @@ class HrisEmployee(BaseModel):
     def serialize_marital_status(self, value):
         if isinstance(value, str):
             try:
-                return shared.MaritalStatus(value)
+                return shared.HrisEmployeeMaritalStatus(value)
             except ValueError:
                 return value
         return value

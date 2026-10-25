@@ -49,6 +49,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.call import Call
     from unified_python_sdk.campaign import Campaign
     from unified_python_sdk.candidate import Candidate
+    from unified_python_sdk.careplan import Careplan
     from unified_python_sdk.carrier import Carrier
     from unified_python_sdk.cashflow import Cashflow
     from unified_python_sdk.category import Category
@@ -68,6 +69,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.contact import Contact
     from unified_python_sdk.content import Content
     from unified_python_sdk.course import Course
+    from unified_python_sdk.coverage import Coverage
     from unified_python_sdk.creative import Creative
     from unified_python_sdk.creditmemo import Creditmemo
     from unified_python_sdk.crm import Crm
@@ -156,6 +158,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.post import Post
     from unified_python_sdk.practicearea import Practicearea
     from unified_python_sdk.practitioner import Practitioner
+    from unified_python_sdk.procedure import Procedure
     from unified_python_sdk.profile import Profile
     from unified_python_sdk.profitloss import Profitloss
     from unified_python_sdk.project import Project
@@ -353,13 +356,17 @@ class UnifiedTo(BaseSDK):
     healthcare: "Healthcare"
     allergy: "Allergy"
     appointment: "Appointment"
+    careplan: "Careplan"
     condition: "Condition"
+    coverage: "Coverage"
     encounter: "Encounter"
+    goal: "Goal"
     immunization: "Immunization"
     medication: "Medication"
     observation: "Observation"
     patient: "Patient"
     practitioner: "Practitioner"
+    procedure: "Procedure"
     slot: "Slot"
     hris: "Hris"
     attendance: "Attendance"
@@ -402,7 +409,6 @@ class UnifiedTo(BaseSDK):
     performance: "Performance"
     cycle: "Cycle"
     feedback: "Feedback"
-    goal: "Goal"
     repo: "Repo"
     branch: "Branch"
     commit: "Commit"
@@ -571,13 +577,17 @@ class UnifiedTo(BaseSDK):
         "healthcare": ("unified_python_sdk.healthcare", "Healthcare"),
         "allergy": ("unified_python_sdk.allergy", "Allergy"),
         "appointment": ("unified_python_sdk.appointment", "Appointment"),
+        "careplan": ("unified_python_sdk.careplan", "Careplan"),
         "condition": ("unified_python_sdk.condition", "Condition"),
+        "coverage": ("unified_python_sdk.coverage", "Coverage"),
         "encounter": ("unified_python_sdk.encounter", "Encounter"),
+        "goal": ("unified_python_sdk.goal", "Goal"),
         "immunization": ("unified_python_sdk.immunization", "Immunization"),
         "medication": ("unified_python_sdk.medication", "Medication"),
         "observation": ("unified_python_sdk.observation", "Observation"),
         "patient": ("unified_python_sdk.patient", "Patient"),
         "practitioner": ("unified_python_sdk.practitioner", "Practitioner"),
+        "procedure": ("unified_python_sdk.procedure", "Procedure"),
         "slot": ("unified_python_sdk.slot", "Slot"),
         "hris": ("unified_python_sdk.hris", "Hris"),
         "attendance": ("unified_python_sdk.attendance", "Attendance"),
@@ -620,7 +630,6 @@ class UnifiedTo(BaseSDK):
         "performance": ("unified_python_sdk.performance", "Performance"),
         "cycle": ("unified_python_sdk.cycle", "Cycle"),
         "feedback": ("unified_python_sdk.feedback", "Feedback"),
-        "goal": ("unified_python_sdk.goal", "Goal"),
         "repo": ("unified_python_sdk.repo", "Repo"),
         "branch": ("unified_python_sdk.branch", "Branch"),
         "commit": ("unified_python_sdk.commit", "Commit"),

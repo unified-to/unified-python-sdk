@@ -36,6 +36,10 @@ class HealthcareMedicationTypedDict(TypedDict):
     r"""When the medication record was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     dosage: NotRequired[str]
     r"""Free-text dosage instructions (e.g. \"1 tablet by mouth twice daily\")"""
+    dose_number: NotRequired[float]
+    r"""Amount of medication per dose"""
+    dose_unit: NotRequired[str]
+    r"""Unit of the dose amount (e.g. mg, tablet)"""
     encounter_id: NotRequired[str]
     r"""The encounter in which the medication was ordered"""
     end_at: NotRequired[datetime]
@@ -56,6 +60,8 @@ class HealthcareMedicationTypedDict(TypedDict):
     r"""Raw data from integration"""
     refill_count: NotRequired[float]
     r"""Number of refills authorized"""
+    route: NotRequired[str]
+    r"""How the medication is taken (e.g. oral, intravenous)"""
     start_at: NotRequired[datetime]
     r"""When the patient should start taking the medication (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     status: NotRequired[HealthcareMedicationStatus]
@@ -76,6 +82,12 @@ class HealthcareMedication(BaseModel):
 
     dosage: Optional[str] = None
     r"""Free-text dosage instructions (e.g. \"1 tablet by mouth twice daily\")"""
+
+    dose_number: Optional[float] = None
+    r"""Amount of medication per dose"""
+
+    dose_unit: Optional[str] = None
+    r"""Unit of the dose amount (e.g. mg, tablet)"""
 
     encounter_id: Optional[str] = None
     r"""The encounter in which the medication was ordered"""
@@ -107,6 +119,9 @@ class HealthcareMedication(BaseModel):
     refill_count: Optional[float] = None
     r"""Number of refills authorized"""
 
+    route: Optional[str] = None
+    r"""How the medication is taken (e.g. oral, intravenous)"""
+
     start_at: Optional[datetime] = None
     r"""When the patient should start taking the medication (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
@@ -133,6 +148,8 @@ class HealthcareMedication(BaseModel):
                 "codes",
                 "created_at",
                 "dosage",
+                "dose_number",
+                "dose_unit",
                 "encounter_id",
                 "end_at",
                 "id",
@@ -143,6 +160,7 @@ class HealthcareMedication(BaseModel):
                 "practitioner_id",
                 "raw",
                 "refill_count",
+                "route",
                 "start_at",
                 "status",
                 "updated_at",

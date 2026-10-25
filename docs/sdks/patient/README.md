@@ -38,7 +38,20 @@ with UnifiedTo(
                 "postal_code": "54031",
                 "region": "Nebraska",
             },
-            "birthdate": "2025-02-14",
+            "birthdate": "2025-02-16",
+            "contacts": [
+                {
+                    "emails": [],
+                    "name": "Antonia Lebsack",
+                    "relationship": "Spouse",
+                    "telephones": [
+                        {
+                            "telephone": "(695) 328-7029 x4412",
+                            "type": shared.HealthcareTelephoneType.MOBILE,
+                        },
+                    ],
+                },
+            ],
             "created_at": parse_datetime("2021-06-05T21:08:04.917Z"),
             "emails": [
                 {
@@ -48,7 +61,7 @@ with UnifiedTo(
             ],
             "first_name": "Alejandrin",
             "gender": shared.HealthcarePatientGender.FEMALE,
-            "id": "9fb73473-2020-4c46-a3e0-c56f2589a6ad",
+            "id": "99b61bb5-fa44-44d5-9b44-71713c0ab8a5",
             "identifiers": [
                 {
                     "type": shared.HealthcareIdentifierType.MRN,
@@ -68,7 +81,7 @@ with UnifiedTo(
                     "type": shared.HealthcareTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2026-06-25T12:32:09.140Z"),
+            "updated_at": parse_datetime("2026-06-26T13:58:08.388Z"),
         },
         "connection_id": "<id>",
     })
@@ -218,7 +231,20 @@ with UnifiedTo(
                 "postal_code": "54031",
                 "region": "Nebraska",
             },
-            "birthdate": "2025-02-14",
+            "birthdate": "2025-02-16",
+            "contacts": [
+                {
+                    "emails": [],
+                    "name": "Antonia Lebsack",
+                    "relationship": "Spouse",
+                    "telephones": [
+                        {
+                            "telephone": "(695) 328-7029 x4412",
+                            "type": shared.HealthcareTelephoneType.MOBILE,
+                        },
+                    ],
+                },
+            ],
             "created_at": parse_datetime("2021-06-05T21:08:04.917Z"),
             "emails": [
                 {
@@ -228,7 +254,7 @@ with UnifiedTo(
             ],
             "first_name": "Alejandrin",
             "gender": shared.HealthcarePatientGender.FEMALE,
-            "id": "ce3a7577-ea4c-45f8-84ba-ec7716b90856",
+            "id": "162699de-eff7-47d3-a62a-ad8b7fd1f091",
             "identifiers": [
                 {
                     "type": shared.HealthcareIdentifierType.MRN,
@@ -248,7 +274,7 @@ with UnifiedTo(
                     "type": shared.HealthcareTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2026-06-25T12:32:09.166Z"),
+            "updated_at": parse_datetime("2026-06-26T13:58:08.435Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -306,7 +332,20 @@ with UnifiedTo(
                 "postal_code": "54031",
                 "region": "Nebraska",
             },
-            "birthdate": "2025-02-14",
+            "birthdate": "2025-02-16",
+            "contacts": [
+                {
+                    "emails": [],
+                    "name": "Antonia Lebsack",
+                    "relationship": "Spouse",
+                    "telephones": [
+                        {
+                            "telephone": "(695) 328-7029 x4412",
+                            "type": shared.HealthcareTelephoneType.MOBILE,
+                        },
+                    ],
+                },
+            ],
             "created_at": parse_datetime("2021-06-05T21:08:04.917Z"),
             "emails": [
                 {
@@ -316,7 +355,7 @@ with UnifiedTo(
             ],
             "first_name": "Alejandrin",
             "gender": shared.HealthcarePatientGender.FEMALE,
-            "id": "ce3a7577-ea4c-45f8-84ba-ec7716b90856",
+            "id": "162699de-eff7-47d3-a62a-ad8b7fd1f091",
             "identifiers": [
                 {
                     "type": shared.HealthcareIdentifierType.MRN,
@@ -336,7 +375,7 @@ with UnifiedTo(
                     "type": shared.HealthcareTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2026-06-25T12:32:09.166Z"),
+            "updated_at": parse_datetime("2026-06-26T13:58:08.435Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
