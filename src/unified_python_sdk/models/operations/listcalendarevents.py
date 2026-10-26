@@ -42,6 +42,7 @@ class ListCalendarEventsQueryParamFields(str, Enum):
     MATTER_ID = "matter_id"
     METADATA = "metadata"
     RAW = "raw"
+    ROOM_IDS = "room_ids"
 
 
 class ListCalendarEventsRequestTypedDict(TypedDict):
@@ -64,6 +65,8 @@ class ListCalendarEventsRequestTypedDict(TypedDict):
     r"""Query string to search. eg. email address or name"""
     raw: NotRequired[str]
     r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
+    room_id: NotRequired[str]
+    r"""The room ID to filter by. Returns the events that booked this room."""
     sort: NotRequired[str]
     start_gte: NotRequired[str]
     r"""The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
@@ -134,6 +137,12 @@ class ListCalendarEventsRequest(BaseModel):
     ] = None
     r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
 
+    room_id: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The room ID to filter by. Returns the events that booked this room."""
+
     sort: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
@@ -165,6 +174,7 @@ class ListCalendarEventsRequest(BaseModel):
                 "order",
                 "query",
                 "raw",
+                "room_id",
                 "sort",
                 "start_gte",
                 "updated_gte",

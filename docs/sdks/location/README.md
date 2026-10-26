@@ -6,10 +6,12 @@
 
 * [create_commerce_location](#create_commerce_location) - Create a location
 * [create_hris_location](#create_hris_location) - Create a location
+* [get_calendar_location](#get_calendar_location) - Retrieve a location
 * [get_clubs_location](#get_clubs_location) - Retrieve a location
 * [get_commerce_location](#get_commerce_location) - Retrieve a location
 * [get_healthcare_location](#get_healthcare_location) - Retrieve a location
 * [get_hris_location](#get_hris_location) - Retrieve a location
+* [list_calendar_locations](#list_calendar_locations) - List all locations
 * [list_clubs_locations](#list_clubs_locations) - List all locations
 * [list_commerce_locations](#list_commerce_locations) - List all locations
 * [list_healthcare_locations](#list_healthcare_locations) - List all locations
@@ -54,7 +56,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-12-29T04:15:21.195Z"),
             "currency": "XCD",
             "description": "Adsidue audentia.",
-            "id": "a9ab972c-1122-480b-bd4e-1795fa9d3e27",
+            "id": "c01a415c-3988-457c-9276-46beda51eb2e",
             "image_url": "https://picsum.photos/seed/hjFt1/1036/2220",
             "is_active": False,
             "language_locale": "vulgaris",
@@ -65,10 +67,10 @@ with UnifiedTo(
                 {
                     "alt": "Addo.",
                     "height": 283.0,
-                    "id": "492aee3d-ac82-4249-a000-b5ef2368d43e",
+                    "id": "3b315377-8615-4800-9793-24148c403eab",
                     "metadata": [
                         {
-                            "id": "3aa75956-80c3-4239-869e-b5ee7dc22cf5",
+                            "id": "e49113b4-8578-4e89-a253-55544ccacea4",
                             "slug": "abutor",
                             "value": "damno",
                         },
@@ -94,7 +96,7 @@ with UnifiedTo(
                     "type": shared.CommerceTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2024-04-22T02:47:11.141Z"),
+            "updated_at": parse_datetime("2024-04-22T11:28:27.986Z"),
             "web_url": "https://chilly-edge.info",
         },
         "connection_id": "<id>",
@@ -157,7 +159,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-07-18T10:32:01.414Z"),
             "currency": "MNT",
             "description": "Commemoro acervus.",
-            "id": "2aeb81cc-1681-4311-906b-1007ad636199",
+            "id": "a5f28369-a744-4c6e-839c-2d67a87a2335",
             "is_active": False,
             "is_hq": True,
             "language_locale": "it",
@@ -178,7 +180,7 @@ with UnifiedTo(
                 },
             ],
             "timezone": "Asia/Jerusalem",
-            "updated_at": parse_datetime("2023-06-22T13:24:05.583Z"),
+            "updated_at": parse_datetime("2023-06-22T22:38:45.291Z"),
         },
         "connection_id": "<id>",
     })
@@ -200,6 +202,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.CreateHrisLocationResponse](../../models/operations/createhrislocationresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_calendar_location
+
+Retrieves a single CalendarLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getCalendarLocation" method="get" path="/calendar/{connection_id}/location/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.location.get_calendar_location(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.calendar_location is not None
+
+    # Handle response
+    print(res.calendar_location)
+
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.GetCalendarLocationRequest](../../models/operations/getcalendarlocationrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+
+### Response
+
+**[operations.GetCalendarLocationResponse](../../models/operations/getcalendarlocationresponse.md)**
 
 ### Errors
 
@@ -388,6 +437,52 @@ with UnifiedTo(
 ### Response
 
 **[operations.GetHrisLocationResponse](../../models/operations/gethrislocationresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## list_calendar_locations
+
+Returns a list of CalendarLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listCalendarLocations" method="get" path="/calendar/{connection_id}/location" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.location.list_calendar_locations(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.calendar_locations is not None
+
+    # Handle response
+    print(res.calendar_locations)
+
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.ListCalendarLocationsRequest](../../models/operations/listcalendarlocationsrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+
+### Response
+
+**[operations.ListCalendarLocationsResponse](../../models/operations/listcalendarlocationsresponse.md)**
 
 ### Errors
 
@@ -612,7 +707,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-12-29T04:15:21.195Z"),
             "currency": "XCD",
             "description": "Adsidue audentia.",
-            "id": "73a382b0-4a83-4844-95b5-e2921758b900",
+            "id": "433fdc08-7ab5-4137-84de-2faa7676793a",
             "image_url": "https://picsum.photos/seed/hjFt1/1036/2220",
             "is_active": False,
             "language_locale": "vulgaris",
@@ -623,10 +718,10 @@ with UnifiedTo(
                 {
                     "alt": "Addo.",
                     "height": 283.0,
-                    "id": "c8e5f885-8ed5-472b-a3cb-9d5b79f331c7",
+                    "id": "52927cec-22e9-4122-b656-522ac44f9d5f",
                     "metadata": [
                         {
-                            "id": "36ef75ab-d857-4c5a-945b-081aee503741",
+                            "id": "58df83ed-3681-4da7-99e4-6e28c9ab0dfe",
                             "slug": "abutor",
                             "value": "damno",
                         },
@@ -652,7 +747,7 @@ with UnifiedTo(
                     "type": shared.CommerceTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2024-04-22T02:47:11.157Z"),
+            "updated_at": parse_datetime("2024-04-22T11:28:27.999Z"),
             "web_url": "https://chilly-edge.info",
         },
         "connection_id": "<id>",
@@ -716,7 +811,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-07-18T10:32:01.414Z"),
             "currency": "MNT",
             "description": "Commemoro acervus.",
-            "id": "39e95ca9-892a-495e-94c4-f69d1937ac5b",
+            "id": "2d71c00d-3ce3-45f1-873b-0e498f5bad7a",
             "is_active": False,
             "is_hq": True,
             "language_locale": "it",
@@ -737,7 +832,7 @@ with UnifiedTo(
                 },
             ],
             "timezone": "Asia/Jerusalem",
-            "updated_at": parse_datetime("2023-06-22T13:24:05.593Z"),
+            "updated_at": parse_datetime("2023-06-22T22:38:45.303Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -894,7 +989,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-12-29T04:15:21.195Z"),
             "currency": "XCD",
             "description": "Adsidue audentia.",
-            "id": "73a382b0-4a83-4844-95b5-e2921758b900",
+            "id": "433fdc08-7ab5-4137-84de-2faa7676793a",
             "image_url": "https://picsum.photos/seed/hjFt1/1036/2220",
             "is_active": False,
             "language_locale": "vulgaris",
@@ -905,10 +1000,10 @@ with UnifiedTo(
                 {
                     "alt": "Addo.",
                     "height": 283.0,
-                    "id": "c8e5f885-8ed5-472b-a3cb-9d5b79f331c7",
+                    "id": "52927cec-22e9-4122-b656-522ac44f9d5f",
                     "metadata": [
                         {
-                            "id": "36ef75ab-d857-4c5a-945b-081aee503741",
+                            "id": "58df83ed-3681-4da7-99e4-6e28c9ab0dfe",
                             "slug": "abutor",
                             "value": "damno",
                         },
@@ -934,7 +1029,7 @@ with UnifiedTo(
                     "type": shared.CommerceTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2024-04-22T02:47:11.157Z"),
+            "updated_at": parse_datetime("2024-04-22T11:28:27.999Z"),
             "web_url": "https://chilly-edge.info",
         },
         "connection_id": "<id>",
@@ -998,7 +1093,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-07-18T10:32:01.414Z"),
             "currency": "MNT",
             "description": "Commemoro acervus.",
-            "id": "39e95ca9-892a-495e-94c4-f69d1937ac5b",
+            "id": "2d71c00d-3ce3-45f1-873b-0e498f5bad7a",
             "is_active": False,
             "is_hq": True,
             "language_locale": "it",
@@ -1019,7 +1114,7 @@ with UnifiedTo(
                 },
             ],
             "timezone": "Asia/Jerusalem",
-            "updated_at": parse_datetime("2023-06-22T13:24:05.593Z"),
+            "updated_at": parse_datetime("2023-06-22T22:38:45.303Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

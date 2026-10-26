@@ -11,13 +11,17 @@
 * [get_calendar_calendar](#get_calendar_calendar) - Retrieve a calendar
 * [get_calendar_event](#get_calendar_event) - Retrieve an event
 * [get_calendar_link](#get_calendar_link) - Retrieve a link
+* [get_calendar_location](#get_calendar_location) - Retrieve a location
 * [get_calendar_recording](#get_calendar_recording) - Retrieve a recording
+* [get_calendar_room](#get_calendar_room) - Retrieve a room
 * [get_calendar_webinar](#get_calendar_webinar) - Retrieve a webinar
 * [list_calendar_busies](#list_calendar_busies) - List all busies
 * [list_calendar_calendars](#list_calendar_calendars) - List all calendars
 * [list_calendar_events](#list_calendar_events) - List all events
 * [list_calendar_links](#list_calendar_links) - List all links
+* [list_calendar_locations](#list_calendar_locations) - List all locations
 * [list_calendar_recordings](#list_calendar_recordings) - List all recordings
+* [list_calendar_rooms](#list_calendar_rooms) - List all rooms
 * [list_calendar_webinars](#list_calendar_webinars) - List all webinars
 * [patch_calendar_calendar](#patch_calendar_calendar) - Update a calendar
 * [patch_calendar_event](#patch_calendar_event) - Update an event
@@ -55,12 +59,12 @@ with UnifiedTo(
         "calendar_calendar": {
             "created_at": parse_datetime("2020-01-09T23:11:34.147Z"),
             "description": "Acer supra vallum suasoria thesaurus.",
-            "id": "13a11b08-b70b-47f6-a034-69f8bfd79534",
+            "id": "ea55da1b-86ff-4ce7-a960-46b6474643e8",
             "is_primary": False,
             "metadata": [],
             "name": "Interviews",
             "timezone": "Asia/Kolkata",
-            "updated_at": parse_datetime("2023-03-30T00:41:52.388Z"),
+            "updated_at": parse_datetime("2023-03-30T12:40:11.307Z"),
         },
         "connection_id": "<id>",
     })
@@ -113,9 +117,9 @@ with UnifiedTo(
             "attachments": [],
             "conference": [],
             "created_at": "2019-08-04T14:33:51.814Z",
-            "end_at": "2020-05-24T17:39:58.519Z",
+            "end_at": "2020-05-24T20:28:59.064Z",
             "has_conference": False,
-            "id": "a853b75c-fde2-4629-9bd7-417aff0d184f",
+            "id": "461af24b-1c6b-4334-9e14-be2ea71db23a",
             "is_all_day": False,
             "is_free": False,
             "is_private": False,
@@ -125,15 +129,15 @@ with UnifiedTo(
             "recurrence": [
                 {
                     "count": 4.0,
-                    "end_at": parse_datetime("2025-03-27T18:19:53.881Z"),
+                    "end_at": parse_datetime("2025-03-28T14:04:49.829Z"),
                     "excluded_dates": [
-                        "2024-02-05T06:19:50.086Z",
+                        "2024-02-05T22:05:26.572Z",
                     ],
                     "frequency": shared.CalendarEventRecurrenceFrequency.YEARLY,
                     "included_dates": [
-                        "2023-07-09T05:24:01.349Z",
-                        "2025-01-26T22:09:16.506Z",
-                        "2024-04-04T13:24:12.844Z",
+                        "2023-07-09T19:08:21.957Z",
+                        "2025-01-27T17:19:49.356Z",
+                        "2024-04-05T05:43:53.604Z",
                     ],
                     "interval": 7.0,
                     "on_days": [
@@ -470,11 +474,11 @@ with UnifiedTo(
                     "week_start": shared.WeekStart.TU,
                 },
             ],
-            "start_at": "2020-05-24T08:25:31.115Z",
+            "start_at": "2020-05-24T11:14:18.386Z",
             "status": shared.CalendarEventStatus.CONFIRMED,
             "subject": "Sunt spargo tepidus bestia vigor credo coadunatio appello.",
             "timezone": "Asia/Bangkok",
-            "updated_at": "2020-06-30T17:22:55.113Z",
+            "updated_at": "2020-06-30T20:33:10.881Z",
             "web_url": "https://another-pinstripe.com",
         },
         "connection_id": "<id>",
@@ -527,13 +531,13 @@ with UnifiedTo(
             "created_at": "2023-03-07T13:34:11.959Z",
             "description": "Vitium clibanus laboriosam uxor denuncio.",
             "duration": 74.0,
-            "id": "685ad8a3-cc38-4e33-9076-9dd332dc0681",
+            "id": "5fee69a0-accf-4c39-acf1-a7c91d57fccb",
             "is_active": True,
             "metadata": [],
             "name": "Sopor sopor ancilla animus anser dignissimos vito confero utilis.",
             "price_amount": 44.0,
             "price_currency": "USD",
-            "updated_at": "2024-03-16T16:01:14.642Z",
+            "updated_at": "2024-03-16T23:09:38.892Z",
             "url": "https://annual-apricot.info/",
         },
         "connection_id": "<id>",
@@ -586,10 +590,10 @@ with UnifiedTo(
         "calendar_webinar": {
             "conference": [],
             "created_at": parse_datetime("2022-07-06T11:45:14.631Z"),
-            "end_at": parse_datetime("2025-10-31T19:05:59.809Z"),
+            "end_at": parse_datetime("2025-11-01T14:36:29.395Z"),
             "has_polls": False,
             "has_recording": False,
-            "id": "493e69b9-4f50-4a13-93dc-5439931ec3fb",
+            "id": "02b3ed68-4bcd-4f9a-9161-c8ab8653aa29",
             "is_auto_approve": False,
             "is_enabled": True,
             "is_webcast": False,
@@ -599,13 +603,13 @@ with UnifiedTo(
             "recurrence": [
                 {
                     "count": 10.0,
-                    "end_at": parse_datetime("2023-09-01T16:27:59.336Z"),
+                    "end_at": parse_datetime("2023-09-01T23:15:17.254Z"),
                     "excluded_dates": [
-                        "2025-02-15T10:38:12.100Z",
+                        "2025-02-16T01:59:27.505Z",
                     ],
                     "frequency": shared.CalendarEventRecurrenceFrequency.MONTHLY,
                     "included_dates": [
-                        "2024-04-29T23:06:42.292Z",
+                        "2024-04-30T09:46:45.999Z",
                     ],
                     "interval": 8.0,
                     "on_days": [
@@ -996,16 +1000,16 @@ with UnifiedTo(
                 },
                 {
                     "count": 3.0,
-                    "end_at": parse_datetime("2022-09-30T21:28:43.792Z"),
+                    "end_at": parse_datetime("2022-09-30T22:52:05.169Z"),
                     "excluded_dates": [
-                        "2024-09-03T18:07:59.361Z",
-                        "2024-08-19T04:13:08.480Z",
+                        "2024-09-04T06:50:22.180Z",
+                        "2024-08-19T16:40:29.498Z",
                     ],
                     "frequency": shared.CalendarEventRecurrenceFrequency.DAILY,
                     "included_dates": [
-                        "2024-03-26T18:26:54.562Z",
-                        "2026-01-16T16:05:32.981Z",
-                        "2023-08-15T06:58:24.841Z",
+                        "2024-03-27T04:33:59.006Z",
+                        "2026-01-17T12:50:12.291Z",
+                        "2023-08-15T13:28:55.856Z",
                     ],
                     "interval": 1.0,
                     "on_days": [
@@ -1149,16 +1153,16 @@ with UnifiedTo(
                 },
                 {
                     "count": 8.0,
-                    "end_at": parse_datetime("2026-07-30T07:03:40.908Z"),
+                    "end_at": parse_datetime("2026-07-31T06:56:05.588Z"),
                     "excluded_dates": [
-                        "2023-06-19T11:38:26.563Z",
-                        "2023-06-08T11:48:50.495Z",
+                        "2023-06-19T17:14:09.514Z",
+                        "2023-06-08T17:13:57.153Z",
                     ],
                     "frequency": shared.CalendarEventRecurrenceFrequency.WEEKLY,
                     "included_dates": [
-                        "2024-04-03T19:48:36.172Z",
-                        "2023-08-21T02:45:16.794Z",
-                        "2024-09-29T00:27:02.670Z",
+                        "2024-04-04T06:03:26.962Z",
+                        "2023-08-21T09:21:24.931Z",
+                        "2024-09-29T13:33:47.796Z",
                     ],
                     "interval": 8.0,
                     "on_days": [
@@ -1311,11 +1315,11 @@ with UnifiedTo(
             "registrant_password": "W7J6DhkM",
             "require_address": False,
             "require_job_title": False,
-            "start_at": parse_datetime("2025-05-03T04:30:54.185Z"),
+            "start_at": parse_datetime("2025-05-03T21:06:11.803Z"),
             "status": shared.CalendarWebinarStatus.TENTATIVE,
             "subject": "Harum culpa decipio ex cubo ancilla cresco.",
             "timezone": "Europe/Kaliningrad",
-            "updated_at": parse_datetime("2026-10-04T10:21:01.650Z"),
+            "updated_at": parse_datetime("2026-10-05T11:17:14.529Z"),
             "web_url": "https://quiet-permafrost.name",
         },
         "connection_id": "<id>",
@@ -1486,6 +1490,53 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## get_calendar_location
+
+Retrieves a single CalendarLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getCalendarLocation" method="get" path="/calendar/{connection_id}/location/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.calendar.get_calendar_location(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.calendar_location is not None
+
+    # Handle response
+    print(res.calendar_location)
+
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.GetCalendarLocationRequest](../../models/operations/getcalendarlocationrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+
+### Response
+
+**[operations.GetCalendarLocationResponse](../../models/operations/getcalendarlocationresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## get_calendar_recording
 
 Retrieves a single CalendarRecording by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
@@ -1526,6 +1577,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.GetCalendarRecordingResponse](../../models/operations/getcalendarrecordingresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_calendar_room
+
+Retrieves a single CalendarRoom by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getCalendarRoom" method="get" path="/calendar/{connection_id}/room/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.calendar.get_calendar_room(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.calendar_room is not None
+
+    # Handle response
+    print(res.calendar_room)
+
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.GetCalendarRoomRequest](../../models/operations/getcalendarroomrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+
+### Response
+
+**[operations.GetCalendarRoomResponse](../../models/operations/getcalendarroomresponse.md)**
 
 ### Errors
 
@@ -1764,6 +1862,52 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## list_calendar_locations
+
+Returns a list of CalendarLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listCalendarLocations" method="get" path="/calendar/{connection_id}/location" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.calendar.list_calendar_locations(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.calendar_locations is not None
+
+    # Handle response
+    print(res.calendar_locations)
+
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.ListCalendarLocationsRequest](../../models/operations/listcalendarlocationsrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+
+### Response
+
+**[operations.ListCalendarLocationsResponse](../../models/operations/listcalendarlocationsresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## list_calendar_recordings
 
 Returns a list of CalendarRecordings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -1803,6 +1947,52 @@ with UnifiedTo(
 ### Response
 
 **[operations.ListCalendarRecordingsResponse](../../models/operations/listcalendarrecordingsresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## list_calendar_rooms
+
+Returns a list of CalendarRooms. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listCalendarRooms" method="get" path="/calendar/{connection_id}/room" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.calendar.list_calendar_rooms(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.calendar_rooms is not None
+
+    # Handle response
+    print(res.calendar_rooms)
+
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.ListCalendarRoomsRequest](../../models/operations/listcalendarroomsrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+
+### Response
+
+**[operations.ListCalendarRoomsResponse](../../models/operations/listcalendarroomsresponse.md)**
 
 ### Errors
 
@@ -1879,12 +2069,12 @@ with UnifiedTo(
         "calendar_calendar": {
             "created_at": parse_datetime("2020-01-09T23:11:34.147Z"),
             "description": "Acer supra vallum suasoria thesaurus.",
-            "id": "3e2da99c-b96b-4c3b-a801-c95b6cee4c7a",
+            "id": "7f183103-0c1f-47cc-bbb4-22a5e010c368",
             "is_primary": False,
             "metadata": [],
             "name": "Interviews",
             "timezone": "Asia/Kolkata",
-            "updated_at": parse_datetime("2023-03-30T00:41:52.391Z"),
+            "updated_at": parse_datetime("2023-03-30T12:40:11.314Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1938,9 +2128,9 @@ with UnifiedTo(
             "attachments": [],
             "conference": [],
             "created_at": "2019-08-04T14:33:51.814Z",
-            "end_at": "2020-05-24T17:39:58.523Z",
+            "end_at": "2020-05-24T20:28:59.073Z",
             "has_conference": False,
-            "id": "750311b1-b394-43c8-83ed-050d51a4192e",
+            "id": "db4de87f-e8e3-4607-acd8-fa729ae72e40",
             "is_all_day": False,
             "is_free": False,
             "is_private": False,
@@ -1950,15 +2140,15 @@ with UnifiedTo(
             "recurrence": [
                 {
                     "count": 4.0,
-                    "end_at": parse_datetime("2025-03-27T18:19:53.905Z"),
+                    "end_at": parse_datetime("2025-03-28T14:04:49.887Z"),
                     "excluded_dates": [
-                        "2024-02-05T06:19:50.105Z",
+                        "2024-02-05T22:05:26.619Z",
                     ],
                     "frequency": shared.CalendarEventRecurrenceFrequency.YEARLY,
                     "included_dates": [
-                        "2023-07-09T05:24:01.366Z",
-                        "2025-01-26T22:09:16.530Z",
-                        "2024-04-04T13:24:12.864Z",
+                        "2023-07-09T19:08:21.998Z",
+                        "2025-01-27T17:19:49.413Z",
+                        "2024-04-05T05:43:53.652Z",
                     ],
                     "interval": 7.0,
                     "on_days": [
@@ -2295,11 +2485,11 @@ with UnifiedTo(
                     "week_start": shared.WeekStart.TU,
                 },
             ],
-            "start_at": "2020-05-24T08:25:31.119Z",
+            "start_at": "2020-05-24T11:14:18.395Z",
             "status": shared.CalendarEventStatus.CONFIRMED,
             "subject": "Sunt spargo tepidus bestia vigor credo coadunatio appello.",
             "timezone": "Asia/Bangkok",
-            "updated_at": "2020-06-30T17:22:55.117Z",
+            "updated_at": "2020-06-30T20:33:10.890Z",
             "web_url": "https://another-pinstripe.com",
         },
         "connection_id": "<id>",
@@ -2353,13 +2543,13 @@ with UnifiedTo(
             "created_at": "2023-03-07T13:34:11.959Z",
             "description": "Vitium clibanus laboriosam uxor denuncio.",
             "duration": 74.0,
-            "id": "9efc97ca-b884-460c-8b1f-20d8b706b686",
+            "id": "e5b64ad7-b936-42ab-82b3-295efc66670e",
             "is_active": True,
             "metadata": [],
             "name": "Sopor sopor ancilla animus anser dignissimos vito confero utilis.",
             "price_amount": 44.0,
             "price_currency": "USD",
-            "updated_at": "2024-03-16T16:01:14.645Z",
+            "updated_at": "2024-03-16T23:09:38.896Z",
             "url": "https://annual-apricot.info/",
         },
         "connection_id": "<id>",
@@ -2413,10 +2603,10 @@ with UnifiedTo(
         "calendar_webinar": {
             "conference": [],
             "created_at": parse_datetime("2022-07-06T11:45:14.631Z"),
-            "end_at": parse_datetime("2025-10-31T19:05:59.838Z"),
+            "end_at": parse_datetime("2025-11-01T14:36:29.439Z"),
             "has_polls": False,
             "has_recording": False,
-            "id": "72d33530-e273-4b4f-b3e1-6e54fc5912cb",
+            "id": "9535037e-a564-4a1c-9c7e-4d9a60bac5e2",
             "is_auto_approve": False,
             "is_enabled": True,
             "is_webcast": False,
@@ -2426,13 +2616,13 @@ with UnifiedTo(
             "recurrence": [
                 {
                     "count": 10.0,
-                    "end_at": parse_datetime("2023-09-01T16:27:59.346Z"),
+                    "end_at": parse_datetime("2023-09-01T23:15:17.270Z"),
                     "excluded_dates": [
-                        "2025-02-15T10:38:12.122Z",
+                        "2025-02-16T01:59:27.540Z",
                     ],
                     "frequency": shared.CalendarEventRecurrenceFrequency.MONTHLY,
                     "included_dates": [
-                        "2024-04-29T23:06:42.308Z",
+                        "2024-04-30T09:46:46.023Z",
                     ],
                     "interval": 8.0,
                     "on_days": [
@@ -2823,16 +3013,16 @@ with UnifiedTo(
                 },
                 {
                     "count": 3.0,
-                    "end_at": parse_datetime("2022-09-30T21:28:43.794Z"),
+                    "end_at": parse_datetime("2022-09-30T22:52:05.172Z"),
                     "excluded_dates": [
-                        "2024-09-03T18:07:59.380Z",
-                        "2024-08-19T04:13:08.498Z",
+                        "2024-09-04T06:50:22.208Z",
+                        "2024-08-19T16:40:29.526Z",
                     ],
                     "frequency": shared.CalendarEventRecurrenceFrequency.DAILY,
                     "included_dates": [
-                        "2024-03-26T18:26:54.577Z",
-                        "2026-01-16T16:05:33.012Z",
-                        "2023-08-15T06:58:24.850Z",
+                        "2024-03-27T04:33:59.029Z",
+                        "2026-01-17T12:50:12.338Z",
+                        "2023-08-15T13:28:55.871Z",
                     ],
                     "interval": 1.0,
                     "on_days": [
@@ -2976,16 +3166,16 @@ with UnifiedTo(
                 },
                 {
                     "count": 8.0,
-                    "end_at": parse_datetime("2026-07-30T07:03:40.943Z"),
+                    "end_at": parse_datetime("2026-07-31T06:56:05.642Z"),
                     "excluded_dates": [
-                        "2023-06-19T11:38:26.572Z",
-                        "2023-06-08T11:48:50.503Z",
+                        "2023-06-19T17:14:09.527Z",
+                        "2023-06-08T17:13:57.165Z",
                     ],
                     "frequency": shared.CalendarEventRecurrenceFrequency.WEEKLY,
                     "included_dates": [
-                        "2024-04-03T19:48:36.187Z",
-                        "2023-08-21T02:45:16.804Z",
-                        "2024-09-29T00:27:02.690Z",
+                        "2024-04-04T06:03:26.985Z",
+                        "2023-08-21T09:21:24.946Z",
+                        "2024-09-29T13:33:47.826Z",
                     ],
                     "interval": 8.0,
                     "on_days": [
@@ -3138,11 +3328,11 @@ with UnifiedTo(
             "registrant_password": "W7J6DhkM",
             "require_address": False,
             "require_job_title": False,
-            "start_at": parse_datetime("2025-05-03T04:30:54.209Z"),
+            "start_at": parse_datetime("2025-05-03T21:06:11.840Z"),
             "status": shared.CalendarWebinarStatus.TENTATIVE,
             "subject": "Harum culpa decipio ex cubo ancilla cresco.",
             "timezone": "Europe/Kaliningrad",
-            "updated_at": parse_datetime("2026-10-04T10:21:01.687Z"),
+            "updated_at": parse_datetime("2026-10-05T11:17:14.587Z"),
             "web_url": "https://quiet-permafrost.name",
         },
         "connection_id": "<id>",
@@ -3384,12 +3574,12 @@ with UnifiedTo(
         "calendar_calendar": {
             "created_at": parse_datetime("2020-01-09T23:11:34.147Z"),
             "description": "Acer supra vallum suasoria thesaurus.",
-            "id": "3e2da99c-b96b-4c3b-a801-c95b6cee4c7a",
+            "id": "7f183103-0c1f-47cc-bbb4-22a5e010c368",
             "is_primary": False,
             "metadata": [],
             "name": "Interviews",
             "timezone": "Asia/Kolkata",
-            "updated_at": parse_datetime("2023-03-30T00:41:52.391Z"),
+            "updated_at": parse_datetime("2023-03-30T12:40:11.314Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -3443,9 +3633,9 @@ with UnifiedTo(
             "attachments": [],
             "conference": [],
             "created_at": "2019-08-04T14:33:51.814Z",
-            "end_at": "2020-05-24T17:39:58.523Z",
+            "end_at": "2020-05-24T20:28:59.073Z",
             "has_conference": False,
-            "id": "750311b1-b394-43c8-83ed-050d51a4192e",
+            "id": "db4de87f-e8e3-4607-acd8-fa729ae72e40",
             "is_all_day": False,
             "is_free": False,
             "is_private": False,
@@ -3455,15 +3645,15 @@ with UnifiedTo(
             "recurrence": [
                 {
                     "count": 4.0,
-                    "end_at": parse_datetime("2025-03-27T18:19:53.905Z"),
+                    "end_at": parse_datetime("2025-03-28T14:04:49.887Z"),
                     "excluded_dates": [
-                        "2024-02-05T06:19:50.105Z",
+                        "2024-02-05T22:05:26.619Z",
                     ],
                     "frequency": shared.CalendarEventRecurrenceFrequency.YEARLY,
                     "included_dates": [
-                        "2023-07-09T05:24:01.366Z",
-                        "2025-01-26T22:09:16.530Z",
-                        "2024-04-04T13:24:12.864Z",
+                        "2023-07-09T19:08:21.998Z",
+                        "2025-01-27T17:19:49.413Z",
+                        "2024-04-05T05:43:53.652Z",
                     ],
                     "interval": 7.0,
                     "on_days": [
@@ -3800,11 +3990,11 @@ with UnifiedTo(
                     "week_start": shared.WeekStart.TU,
                 },
             ],
-            "start_at": "2020-05-24T08:25:31.119Z",
+            "start_at": "2020-05-24T11:14:18.395Z",
             "status": shared.CalendarEventStatus.CONFIRMED,
             "subject": "Sunt spargo tepidus bestia vigor credo coadunatio appello.",
             "timezone": "Asia/Bangkok",
-            "updated_at": "2020-06-30T17:22:55.117Z",
+            "updated_at": "2020-06-30T20:33:10.890Z",
             "web_url": "https://another-pinstripe.com",
         },
         "connection_id": "<id>",
@@ -3858,13 +4048,13 @@ with UnifiedTo(
             "created_at": "2023-03-07T13:34:11.959Z",
             "description": "Vitium clibanus laboriosam uxor denuncio.",
             "duration": 74.0,
-            "id": "9efc97ca-b884-460c-8b1f-20d8b706b686",
+            "id": "e5b64ad7-b936-42ab-82b3-295efc66670e",
             "is_active": True,
             "metadata": [],
             "name": "Sopor sopor ancilla animus anser dignissimos vito confero utilis.",
             "price_amount": 44.0,
             "price_currency": "USD",
-            "updated_at": "2024-03-16T16:01:14.645Z",
+            "updated_at": "2024-03-16T23:09:38.896Z",
             "url": "https://annual-apricot.info/",
         },
         "connection_id": "<id>",
@@ -3918,10 +4108,10 @@ with UnifiedTo(
         "calendar_webinar": {
             "conference": [],
             "created_at": parse_datetime("2022-07-06T11:45:14.631Z"),
-            "end_at": parse_datetime("2025-10-31T19:05:59.838Z"),
+            "end_at": parse_datetime("2025-11-01T14:36:29.439Z"),
             "has_polls": False,
             "has_recording": False,
-            "id": "72d33530-e273-4b4f-b3e1-6e54fc5912cb",
+            "id": "9535037e-a564-4a1c-9c7e-4d9a60bac5e2",
             "is_auto_approve": False,
             "is_enabled": True,
             "is_webcast": False,
@@ -3931,13 +4121,13 @@ with UnifiedTo(
             "recurrence": [
                 {
                     "count": 10.0,
-                    "end_at": parse_datetime("2023-09-01T16:27:59.346Z"),
+                    "end_at": parse_datetime("2023-09-01T23:15:17.270Z"),
                     "excluded_dates": [
-                        "2025-02-15T10:38:12.122Z",
+                        "2025-02-16T01:59:27.540Z",
                     ],
                     "frequency": shared.CalendarEventRecurrenceFrequency.MONTHLY,
                     "included_dates": [
-                        "2024-04-29T23:06:42.308Z",
+                        "2024-04-30T09:46:46.023Z",
                     ],
                     "interval": 8.0,
                     "on_days": [
@@ -4328,16 +4518,16 @@ with UnifiedTo(
                 },
                 {
                     "count": 3.0,
-                    "end_at": parse_datetime("2022-09-30T21:28:43.794Z"),
+                    "end_at": parse_datetime("2022-09-30T22:52:05.172Z"),
                     "excluded_dates": [
-                        "2024-09-03T18:07:59.380Z",
-                        "2024-08-19T04:13:08.498Z",
+                        "2024-09-04T06:50:22.208Z",
+                        "2024-08-19T16:40:29.526Z",
                     ],
                     "frequency": shared.CalendarEventRecurrenceFrequency.DAILY,
                     "included_dates": [
-                        "2024-03-26T18:26:54.577Z",
-                        "2026-01-16T16:05:33.012Z",
-                        "2023-08-15T06:58:24.850Z",
+                        "2024-03-27T04:33:59.029Z",
+                        "2026-01-17T12:50:12.338Z",
+                        "2023-08-15T13:28:55.871Z",
                     ],
                     "interval": 1.0,
                     "on_days": [
@@ -4481,16 +4671,16 @@ with UnifiedTo(
                 },
                 {
                     "count": 8.0,
-                    "end_at": parse_datetime("2026-07-30T07:03:40.943Z"),
+                    "end_at": parse_datetime("2026-07-31T06:56:05.642Z"),
                     "excluded_dates": [
-                        "2023-06-19T11:38:26.572Z",
-                        "2023-06-08T11:48:50.503Z",
+                        "2023-06-19T17:14:09.527Z",
+                        "2023-06-08T17:13:57.165Z",
                     ],
                     "frequency": shared.CalendarEventRecurrenceFrequency.WEEKLY,
                     "included_dates": [
-                        "2024-04-03T19:48:36.187Z",
-                        "2023-08-21T02:45:16.804Z",
-                        "2024-09-29T00:27:02.690Z",
+                        "2024-04-04T06:03:26.985Z",
+                        "2023-08-21T09:21:24.946Z",
+                        "2024-09-29T13:33:47.826Z",
                     ],
                     "interval": 8.0,
                     "on_days": [
@@ -4643,11 +4833,11 @@ with UnifiedTo(
             "registrant_password": "W7J6DhkM",
             "require_address": False,
             "require_job_title": False,
-            "start_at": parse_datetime("2025-05-03T04:30:54.209Z"),
+            "start_at": parse_datetime("2025-05-03T21:06:11.840Z"),
             "status": shared.CalendarWebinarStatus.TENTATIVE,
             "subject": "Harum culpa decipio ex cubo ancilla cresco.",
             "timezone": "Europe/Kaliningrad",
-            "updated_at": parse_datetime("2026-10-04T10:21:01.687Z"),
+            "updated_at": parse_datetime("2026-10-05T11:17:14.587Z"),
             "web_url": "https://quiet-permafrost.name",
         },
         "connection_id": "<id>",

@@ -53,6 +53,8 @@ class CalendarEventTypedDict(TypedDict):
     recurrence: NotRequired[List[CalendarEventRecurrenceTypedDict]]
     recurring_event_id: NotRequired[str]
     r"""(reference to CalendarEvent)"""
+    room_ids: NotRequired[List[str]]
+    r"""pointers to Calendar Rooms booked for this event"""
     send_notifications: NotRequired[bool]
     start_at: NotRequired[str]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
@@ -108,6 +110,9 @@ class CalendarEvent(BaseModel):
     recurring_event_id: Optional[str] = None
     r"""(reference to CalendarEvent)"""
 
+    room_ids: Optional[List[str]] = None
+    r"""pointers to Calendar Rooms booked for this event"""
+
     send_notifications: Optional[bool] = None
 
     start_at: Optional[str] = None
@@ -156,6 +161,7 @@ class CalendarEvent(BaseModel):
                 "raw",
                 "recurrence",
                 "recurring_event_id",
+                "room_ids",
                 "send_notifications",
                 "start_at",
                 "status",

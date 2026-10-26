@@ -39,3 +39,4 @@ value = GetCalendarEventQueryParamFields.ID
 | `MATTER_ID`          | matter_id            |
 | `METADATA`           | metadata             |
 | `RAW`                | raw                  |
+| `ROOM_IDS`           | room_ids             |

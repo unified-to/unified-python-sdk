@@ -155,6 +155,8 @@ value = WebhookObjectType.ACCOUNTING_ACCOUNT
 | `CALENDAR_LINK`                  | calendar_link                    |
 | `CALENDAR_RECORDING`             | calendar_recording               |
 | `CALENDAR_WEBINAR`               | calendar_webinar                 |
+| `CALENDAR_ROOM`                  | calendar_room                    |
+| `CALENDAR_LOCATION`              | calendar_location                |
 | `ADS_ORGANIZATION`               | ads_organization                 |
 | `ADS_AD`                         | ads_ad                           |
 | `ADS_CAMPAIGN`                   | ads_campaign                     |

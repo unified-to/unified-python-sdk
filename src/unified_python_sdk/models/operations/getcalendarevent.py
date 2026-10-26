@@ -42,6 +42,7 @@ class GetCalendarEventQueryParamFields(str, Enum):
     MATTER_ID = "matter_id"
     METADATA = "metadata"
     RAW = "raw"
+    ROOM_IDS = "room_ids"
 
 
 class GetCalendarEventRequestTypedDict(TypedDict):

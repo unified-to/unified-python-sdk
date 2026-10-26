@@ -131,7 +131,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "35a34667-2c06-4849-89ba-b66e3c059f55",
+            "id": "0984b5ed-5379-42e9-81a6-08ac7ee499fd",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -144,7 +144,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-07T21:57:32.264Z"),
+            "updated_at": parse_datetime("2023-08-08T04:22:54.721Z"),
         },
         "connection_id": "<id>",
     })
@@ -181,7 +181,7 @@ async def main():
                 "currency": "CAD",
                 "customer_defined_code": "6170",
                 "description": "Voluptatibus valde spoliatio.",
-                "id": "35a34667-2c06-4849-89ba-b66e3c059f55",
+                "id": "0984b5ed-5379-42e9-81a6-08ac7ee499fd",
                 "is_payable": False,
                 "metadata": [],
                 "name": "Auto Loan Account",
@@ -194,7 +194,7 @@ async def main():
                     },
                 ],
                 "type": shared.Type.ACCOUNTS_RECEIVABLE,
-                "updated_at": parse_datetime("2023-08-07T21:57:32.264Z"),
+                "updated_at": parse_datetime("2023-08-08T04:22:54.721Z"),
             },
             "connection_id": "<id>",
         })
@@ -682,13 +682,17 @@ asyncio.run(main())
 * [get_calendar_calendar](docs/sdks/calendar/README.md#get_calendar_calendar) - Retrieve a calendar
 * [get_calendar_event](docs/sdks/calendar/README.md#get_calendar_event) - Retrieve an event
 * [get_calendar_link](docs/sdks/calendar/README.md#get_calendar_link) - Retrieve a link
+* [get_calendar_location](docs/sdks/calendar/README.md#get_calendar_location) - Retrieve a location
 * [get_calendar_recording](docs/sdks/calendar/README.md#get_calendar_recording) - Retrieve a recording
+* [get_calendar_room](docs/sdks/calendar/README.md#get_calendar_room) - Retrieve a room
 * [get_calendar_webinar](docs/sdks/calendar/README.md#get_calendar_webinar) - Retrieve a webinar
 * [list_calendar_busies](docs/sdks/calendar/README.md#list_calendar_busies) - List all busies
 * [list_calendar_calendars](docs/sdks/calendar/README.md#list_calendar_calendars) - List all calendars
 * [list_calendar_events](docs/sdks/calendar/README.md#list_calendar_events) - List all events
 * [list_calendar_links](docs/sdks/calendar/README.md#list_calendar_links) - List all links
+* [list_calendar_locations](docs/sdks/calendar/README.md#list_calendar_locations) - List all locations
 * [list_calendar_recordings](docs/sdks/calendar/README.md#list_calendar_recordings) - List all recordings
+* [list_calendar_rooms](docs/sdks/calendar/README.md#list_calendar_rooms) - List all rooms
 * [list_calendar_webinars](docs/sdks/calendar/README.md#list_calendar_webinars) - List all webinars
 * [patch_calendar_calendar](docs/sdks/calendar/README.md#patch_calendar_calendar) - Update a calendar
 * [patch_calendar_event](docs/sdks/calendar/README.md#patch_calendar_event) - Update an event
@@ -1873,10 +1877,12 @@ asyncio.run(main())
 
 * [create_commerce_location](docs/sdks/location/README.md#create_commerce_location) - Create a location
 * [create_hris_location](docs/sdks/location/README.md#create_hris_location) - Create a location
+* [get_calendar_location](docs/sdks/location/README.md#get_calendar_location) - Retrieve a location
 * [get_clubs_location](docs/sdks/location/README.md#get_clubs_location) - Retrieve a location
 * [get_commerce_location](docs/sdks/location/README.md#get_commerce_location) - Retrieve a location
 * [get_healthcare_location](docs/sdks/location/README.md#get_healthcare_location) - Retrieve a location
 * [get_hris_location](docs/sdks/location/README.md#get_hris_location) - Retrieve a location
+* [list_calendar_locations](docs/sdks/location/README.md#list_calendar_locations) - List all locations
 * [list_clubs_locations](docs/sdks/location/README.md#list_clubs_locations) - List all locations
 * [list_commerce_locations](docs/sdks/location/README.md#list_commerce_locations) - List all locations
 * [list_healthcare_locations](docs/sdks/location/README.md#list_healthcare_locations) - List all locations
@@ -2394,6 +2400,11 @@ asyncio.run(main())
 * [remove_commerce_review](docs/sdks/review/README.md#remove_commerce_review) - Remove a review
 * [update_commerce_review](docs/sdks/review/README.md#update_commerce_review) - Update a review
 * [update_social_review](docs/sdks/review/README.md#update_social_review) - Update a review
+
+### [Room](docs/sdks/room/README.md)
+
+* [get_calendar_room](docs/sdks/room/README.md#get_calendar_room) - Retrieve a room
+* [list_calendar_rooms](docs/sdks/room/README.md#list_calendar_rooms) - List all rooms
 
 ### [Saleschannel](docs/sdks/saleschannel/README.md)
 
@@ -2981,7 +2992,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "35a34667-2c06-4849-89ba-b66e3c059f55",
+            "id": "0984b5ed-5379-42e9-81a6-08ac7ee499fd",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -2994,7 +3005,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-07T21:57:32.264Z"),
+            "updated_at": parse_datetime("2023-08-08T04:22:54.721Z"),
         },
         "connection_id": "<id>",
     },
@@ -3028,7 +3039,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "35a34667-2c06-4849-89ba-b66e3c059f55",
+            "id": "0984b5ed-5379-42e9-81a6-08ac7ee499fd",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3041,7 +3052,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-07T21:57:32.264Z"),
+            "updated_at": parse_datetime("2023-08-08T04:22:54.721Z"),
         },
         "connection_id": "<id>",
     })
@@ -3089,7 +3100,7 @@ with UnifiedTo(
                 "currency": "CAD",
                 "customer_defined_code": "6170",
                 "description": "Voluptatibus valde spoliatio.",
-                "id": "35a34667-2c06-4849-89ba-b66e3c059f55",
+                "id": "0984b5ed-5379-42e9-81a6-08ac7ee499fd",
                 "is_payable": False,
                 "metadata": [],
                 "name": "Auto Loan Account",
@@ -3102,7 +3113,7 @@ with UnifiedTo(
                     },
                 ],
                 "type": shared.Type.ACCOUNTS_RECEIVABLE,
-                "updated_at": parse_datetime("2023-08-07T21:57:32.264Z"),
+                "updated_at": parse_datetime("2023-08-08T04:22:54.721Z"),
             },
             "connection_id": "<id>",
         })
@@ -3180,7 +3191,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "35a34667-2c06-4849-89ba-b66e3c059f55",
+            "id": "0984b5ed-5379-42e9-81a6-08ac7ee499fd",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3193,7 +3204,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-07T21:57:32.264Z"),
+            "updated_at": parse_datetime("2023-08-08T04:22:54.721Z"),
         },
         "connection_id": "<id>",
     })
@@ -3228,7 +3239,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "35a34667-2c06-4849-89ba-b66e3c059f55",
+            "id": "0984b5ed-5379-42e9-81a6-08ac7ee499fd",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3241,7 +3252,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-07T21:57:32.264Z"),
+            "updated_at": parse_datetime("2023-08-08T04:22:54.721Z"),
         },
         "connection_id": "<id>",
     })
@@ -3384,7 +3395,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "35a34667-2c06-4849-89ba-b66e3c059f55",
+            "id": "0984b5ed-5379-42e9-81a6-08ac7ee499fd",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3397,7 +3408,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-07T21:57:32.264Z"),
+            "updated_at": parse_datetime("2023-08-08T04:22:54.721Z"),
         },
         "connection_id": "<id>",
     })

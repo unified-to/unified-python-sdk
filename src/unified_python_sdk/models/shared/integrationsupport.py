@@ -5,7 +5,7 @@ from .property_integrationsupport_webhook_events import (
     PropertyIntegrationSupportWebhookEvents,
     PropertyIntegrationSupportWebhookEventsTypedDict,
 )
-from .virtual_webhook_channel_id import (
+from .virtual_webhook_carrier_id import (
     FromWebhook,
     ListAccountID,
     ListAdID,
@@ -86,6 +86,7 @@ from .virtual_webhook_channel_id import (
     ListRegionID,
     ListRepoID,
     ListRoleID,
+    ListRoomID,
     ListRootID,
     ListSaleschannelID,
     ListSegmentID,
@@ -155,7 +156,6 @@ from .virtual_webhook_channel_id import (
     VirtualWebhookCampaignID,
     VirtualWebhookCandidateID,
     VirtualWebhookCarrierID,
-    VirtualWebhookChannelID,
 )
 from enum import Enum
 from pydantic import field_serializer, model_serializer
@@ -164,6 +164,12 @@ from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
 from unified_python_sdk.types import BaseModel, UNSET_SENTINEL
+
+
+class VirtualWebhookChannelID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
 
 
 class VirtualWebhookCollectionID(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -604,6 +610,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_region_id: NotRequired[ListRegionID]
     list_repo_id: NotRequired[ListRepoID]
     list_role_id: NotRequired[ListRoleID]
+    list_room_id: NotRequired[ListRoomID]
     list_root_id: NotRequired[ListRootID]
     list_saleschannel_id: NotRequired[ListSaleschannelID]
     list_segment_id: NotRequired[ListSegmentID]
@@ -904,6 +911,8 @@ class IntegrationSupport(BaseModel):
     list_repo_id: Optional[ListRepoID] = None
 
     list_role_id: Optional[ListRoleID] = None
+
+    list_room_id: Optional[ListRoomID] = None
 
     list_root_id: Optional[ListRootID] = None
 
@@ -1887,6 +1896,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.ListRoleID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("list_room_id")
+    def serialize_list_room_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListRoomID(value)
             except ValueError:
                 return value
         return value
@@ -3137,6 +3155,7 @@ class IntegrationSupport(BaseModel):
                 "list_region_id",
                 "list_repo_id",
                 "list_role_id",
+                "list_room_id",
                 "list_root_id",
                 "list_saleschannel_id",
                 "list_segment_id",

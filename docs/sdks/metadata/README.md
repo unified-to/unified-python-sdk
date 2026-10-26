@@ -34,7 +34,7 @@ with UnifiedTo(
         "metadata_metadata": {
             "created_at": parse_datetime("2021-03-25T03:02:17.656Z"),
             "format_": shared.MetadataMetadataFormat.PRICE,
-            "id": "b8877975-2758-402c-b750-4b3f8f400378",
+            "id": "19770a54-6c84-43af-93b0-65236c3aca0c",
             "is_required": False,
             "name": "autem",
             "object_type": "legal_expense",
@@ -44,7 +44,7 @@ with UnifiedTo(
             "options": [],
             "original_format": "advoco",
             "slug": "arbustum",
-            "updated_at": parse_datetime("2025-03-24T19:34:57.724Z"),
+            "updated_at": parse_datetime("2025-03-25T13:40:34.044Z"),
         },
         "connection_id": "<id>",
     })
@@ -189,7 +189,7 @@ with UnifiedTo(
         "metadata_metadata": {
             "created_at": parse_datetime("2021-03-25T03:02:17.656Z"),
             "format_": shared.MetadataMetadataFormat.PRICE,
-            "id": "aea4aaa7-cd1b-4988-9e5a-1169aaa0662e",
+            "id": "f56df935-ceff-42d4-957b-e89acd9fa743",
             "is_required": False,
             "name": "autem",
             "object_type": "legal_expense",
@@ -199,7 +199,7 @@ with UnifiedTo(
             "options": [],
             "original_format": "advoco",
             "slug": "arbustum",
-            "updated_at": parse_datetime("2025-03-24T19:34:57.730Z"),
+            "updated_at": parse_datetime("2025-03-25T13:40:34.053Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -299,7 +299,7 @@ with UnifiedTo(
         "metadata_metadata": {
             "created_at": parse_datetime("2021-03-25T03:02:17.656Z"),
             "format_": shared.MetadataMetadataFormat.PRICE,
-            "id": "aea4aaa7-cd1b-4988-9e5a-1169aaa0662e",
+            "id": "f56df935-ceff-42d4-957b-e89acd9fa743",
             "is_required": False,
             "name": "autem",
             "object_type": "legal_expense",
@@ -309,7 +309,7 @@ with UnifiedTo(
             "options": [],
             "original_format": "advoco",
             "slug": "arbustum",
-            "updated_at": parse_datetime("2025-03-24T19:34:57.730Z"),
+            "updated_at": parse_datetime("2025-03-25T13:40:34.053Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

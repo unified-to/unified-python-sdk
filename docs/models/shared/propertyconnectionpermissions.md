@@ -271,6 +271,8 @@ value = PropertyConnectionPermissions.ACCOUNTING_ACCOUNT_READ
 | `CALENDAR_RECORDING_WRITE`             | calendar_recording_write               |
 | `CALENDAR_WEBINAR_READ`                | calendar_webinar_read                  |
 | `CALENDAR_WEBINAR_WRITE`               | calendar_webinar_write                 |
+| `CALENDAR_ROOM_READ`                   | calendar_room_read                     |
+| `CALENDAR_LOCATION_READ`               | calendar_location_read                 |
 | `ENRICH_PERSON_READ`                   | enrich_person_read                     |
 | `ENRICH_COMPANY_READ`                  | enrich_company_read                    |
 | `ADS_AD_READ`                          | ads_ad_read                            |

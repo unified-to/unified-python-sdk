@@ -485,6 +485,12 @@ class ListRoleID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class ListRoomID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class ListRootID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -894,12 +900,6 @@ class VirtualWebhookCandidateID(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class VirtualWebhookCarrierID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class VirtualWebhookChannelID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
     NOT_SUPPORTED = "not-supported"

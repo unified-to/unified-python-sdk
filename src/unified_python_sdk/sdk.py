@@ -181,6 +181,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.request import Request
     from unified_python_sdk.reservation import Reservation
     from unified_python_sdk.review import Review
+    from unified_python_sdk.room import Room
     from unified_python_sdk.saleschannel import Saleschannel
     from unified_python_sdk.salesorder import Salesorder
     from unified_python_sdk.salesreceipt import Salesreceipt
@@ -297,7 +298,9 @@ class UnifiedTo(BaseSDK):
     calendar: "Calendar"
     busy: "Busy"
     link: "Link"
+    location: "Location"
     recording: "Recording"
+    room: "Room"
     webinar: "Webinar"
     cdp: "Cdp"
     activation: "Activation"
@@ -306,7 +309,6 @@ class UnifiedTo(BaseSDK):
     segment: "Segment"
     source: "Source"
     clubs: "Clubs"
-    location: "Location"
     member: "Member"
     commerce: "Commerce"
     availability: "Availability"
@@ -518,7 +520,9 @@ class UnifiedTo(BaseSDK):
         "calendar": ("unified_python_sdk.calendar", "Calendar"),
         "busy": ("unified_python_sdk.busy", "Busy"),
         "link": ("unified_python_sdk.link", "Link"),
+        "location": ("unified_python_sdk.location", "Location"),
         "recording": ("unified_python_sdk.recording", "Recording"),
+        "room": ("unified_python_sdk.room", "Room"),
         "webinar": ("unified_python_sdk.webinar", "Webinar"),
         "cdp": ("unified_python_sdk.cdp", "Cdp"),
         "activation": ("unified_python_sdk.activation", "Activation"),
@@ -527,7 +531,6 @@ class UnifiedTo(BaseSDK):
         "segment": ("unified_python_sdk.segment", "Segment"),
         "source": ("unified_python_sdk.source", "Source"),
         "clubs": ("unified_python_sdk.clubs", "Clubs"),
-        "location": ("unified_python_sdk.location", "Location"),
         "member": ("unified_python_sdk.member", "Member"),
         "commerce": ("unified_python_sdk.commerce", "Commerce"),
         "availability": ("unified_python_sdk.availability", "Availability"),
