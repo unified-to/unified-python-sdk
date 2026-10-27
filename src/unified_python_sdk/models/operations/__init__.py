@@ -5196,6 +5196,12 @@ if TYPE_CHECKING:
         PatchUnifiedWebhookResponse,
         PatchUnifiedWebhookResponseTypedDict,
     )
+    from .patchunifiedwebhookresume import (
+        PatchUnifiedWebhookResumeRequest,
+        PatchUnifiedWebhookResumeRequestTypedDict,
+        PatchUnifiedWebhookResumeResponse,
+        PatchUnifiedWebhookResumeResponseTypedDict,
+    )
     from .patchunifiedwebhooktrigger import (
         PatchUnifiedWebhookTriggerRequest,
         PatchUnifiedWebhookTriggerRequestTypedDict,
@@ -7119,6 +7125,12 @@ if TYPE_CHECKING:
         UpdateUnifiedWebhookRequestTypedDict,
         UpdateUnifiedWebhookResponse,
         UpdateUnifiedWebhookResponseTypedDict,
+    )
+    from .updateunifiedwebhookresume import (
+        UpdateUnifiedWebhookResumeRequest,
+        UpdateUnifiedWebhookResumeRequestTypedDict,
+        UpdateUnifiedWebhookResumeResponse,
+        UpdateUnifiedWebhookResumeResponseTypedDict,
     )
     from .updateunifiedwebhooktrigger import (
         UpdateUnifiedWebhookTriggerRequest,
@@ -10826,6 +10838,10 @@ __all__ = [
     "PatchUnifiedWebhookRequestTypedDict",
     "PatchUnifiedWebhookResponse",
     "PatchUnifiedWebhookResponseTypedDict",
+    "PatchUnifiedWebhookResumeRequest",
+    "PatchUnifiedWebhookResumeRequestTypedDict",
+    "PatchUnifiedWebhookResumeResponse",
+    "PatchUnifiedWebhookResumeResponseTypedDict",
     "PatchUnifiedWebhookTriggerRequest",
     "PatchUnifiedWebhookTriggerRequestTypedDict",
     "PatchUnifiedWebhookTriggerResponse",
@@ -12158,6 +12174,10 @@ __all__ = [
     "UpdateUnifiedWebhookRequestTypedDict",
     "UpdateUnifiedWebhookResponse",
     "UpdateUnifiedWebhookResponseTypedDict",
+    "UpdateUnifiedWebhookResumeRequest",
+    "UpdateUnifiedWebhookResumeRequestTypedDict",
+    "UpdateUnifiedWebhookResumeResponse",
+    "UpdateUnifiedWebhookResumeResponseTypedDict",
     "UpdateUnifiedWebhookTriggerRequest",
     "UpdateUnifiedWebhookTriggerRequestTypedDict",
     "UpdateUnifiedWebhookTriggerResponse",
@@ -15863,6 +15883,10 @@ _dynamic_imports: dict[str, str] = {
     "PatchUnifiedWebhookRequestTypedDict": ".patchunifiedwebhook",
     "PatchUnifiedWebhookResponse": ".patchunifiedwebhook",
     "PatchUnifiedWebhookResponseTypedDict": ".patchunifiedwebhook",
+    "PatchUnifiedWebhookResumeRequest": ".patchunifiedwebhookresume",
+    "PatchUnifiedWebhookResumeRequestTypedDict": ".patchunifiedwebhookresume",
+    "PatchUnifiedWebhookResumeResponse": ".patchunifiedwebhookresume",
+    "PatchUnifiedWebhookResumeResponseTypedDict": ".patchunifiedwebhookresume",
     "PatchUnifiedWebhookTriggerRequest": ".patchunifiedwebhooktrigger",
     "PatchUnifiedWebhookTriggerRequestTypedDict": ".patchunifiedwebhooktrigger",
     "PatchUnifiedWebhookTriggerResponse": ".patchunifiedwebhooktrigger",
@@ -17193,6 +17217,10 @@ _dynamic_imports: dict[str, str] = {
     "UpdateUnifiedWebhookRequestTypedDict": ".updateunifiedwebhook",
     "UpdateUnifiedWebhookResponse": ".updateunifiedwebhook",
     "UpdateUnifiedWebhookResponseTypedDict": ".updateunifiedwebhook",
+    "UpdateUnifiedWebhookResumeRequest": ".updateunifiedwebhookresume",
+    "UpdateUnifiedWebhookResumeRequestTypedDict": ".updateunifiedwebhookresume",
+    "UpdateUnifiedWebhookResumeResponse": ".updateunifiedwebhookresume",
+    "UpdateUnifiedWebhookResumeResponseTypedDict": ".updateunifiedwebhookresume",
     "UpdateUnifiedWebhookTriggerRequest": ".updateunifiedwebhooktrigger",
     "UpdateUnifiedWebhookTriggerRequestTypedDict": ".updateunifiedwebhooktrigger",
     "UpdateUnifiedWebhookTriggerResponse": ".updateunifiedwebhooktrigger",

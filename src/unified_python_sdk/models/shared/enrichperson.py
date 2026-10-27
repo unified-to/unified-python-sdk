@@ -38,7 +38,7 @@ class EnrichPersonTypedDict(TypedDict):
     birthdate: NotRequired[str]
     r"""The birth date of the person"""
     company: NotRequired[str]
-    r"""The companyorganization name  of the person"""
+    r"""The company/organization name  of the person"""
     company_domain: NotRequired[str]
     r"""The company's domain"""
     created_at: NotRequired[datetime]
@@ -95,7 +95,7 @@ class EnrichPerson(BaseModel):
     r"""The birth date of the person"""
 
     company: Optional[str] = None
-    r"""The companyorganization name  of the person"""
+    r"""The company/organization name  of the person"""
 
     company_domain: Optional[str] = None
     r"""The company's domain"""

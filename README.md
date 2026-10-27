@@ -131,7 +131,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "0984b5ed-5379-42e9-81a6-08ac7ee499fd",
+            "id": "082664c6-628f-401d-807c-38619c2f4eab",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -144,7 +144,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-08T04:22:54.721Z"),
+            "updated_at": parse_datetime("2023-08-08T09:31:32.279Z"),
         },
         "connection_id": "<id>",
     })
@@ -181,7 +181,7 @@ async def main():
                 "currency": "CAD",
                 "customer_defined_code": "6170",
                 "description": "Voluptatibus valde spoliatio.",
-                "id": "0984b5ed-5379-42e9-81a6-08ac7ee499fd",
+                "id": "082664c6-628f-401d-807c-38619c2f4eab",
                 "is_payable": False,
                 "metadata": [],
                 "name": "Auto Loan Account",
@@ -194,7 +194,7 @@ async def main():
                     },
                 ],
                 "type": shared.Type.ACCOUNTS_RECEIVABLE,
-                "updated_at": parse_datetime("2023-08-08T04:22:54.721Z"),
+                "updated_at": parse_datetime("2023-08-08T09:31:32.279Z"),
             },
             "connection_id": "<id>",
         })
@@ -2844,6 +2844,7 @@ asyncio.run(main())
 * [list_unified_webhooks](docs/sdks/unified/README.md#list_unified_webhooks) - Returns all registered webhooks
 * [patch_unified_connection](docs/sdks/unified/README.md#patch_unified_connection) - Update connection
 * [patch_unified_webhook](docs/sdks/unified/README.md#patch_unified_webhook) - Update webhook subscription
+* [patch_unified_webhook_resume](docs/sdks/unified/README.md#patch_unified_webhook_resume) - Resume an unhealthy webhook subscription
 * [patch_unified_webhook_trigger](docs/sdks/unified/README.md#patch_unified_webhook_trigger) - Trigger webhook
 * [remove_unified_connection](docs/sdks/unified/README.md#remove_unified_connection) - Remove connection
 * [remove_unified_environment](docs/sdks/unified/README.md#remove_unified_environment) - Remove an environment
@@ -2851,6 +2852,7 @@ asyncio.run(main())
 * [remove_unified_webhook](docs/sdks/unified/README.md#remove_unified_webhook) - Remove webhook subscription
 * [update_unified_connection](docs/sdks/unified/README.md#update_unified_connection) - Update connection
 * [update_unified_webhook](docs/sdks/unified/README.md#update_unified_webhook) - Update webhook subscription
+* [update_unified_webhook_resume](docs/sdks/unified/README.md#update_unified_webhook_resume) - Resume an unhealthy webhook subscription
 * [update_unified_webhook_trigger](docs/sdks/unified/README.md#update_unified_webhook_trigger) - Trigger webhook
 
 ### [Usage](docs/sdks/usage/README.md)
@@ -2910,9 +2912,11 @@ asyncio.run(main())
 * [get_unified_webhook](docs/sdks/webhook/README.md#get_unified_webhook) - Retrieve webhook by its ID
 * [list_unified_webhooks](docs/sdks/webhook/README.md#list_unified_webhooks) - Returns all registered webhooks
 * [patch_unified_webhook](docs/sdks/webhook/README.md#patch_unified_webhook) - Update webhook subscription
+* [patch_unified_webhook_resume](docs/sdks/webhook/README.md#patch_unified_webhook_resume) - Resume an unhealthy webhook subscription
 * [patch_unified_webhook_trigger](docs/sdks/webhook/README.md#patch_unified_webhook_trigger) - Trigger webhook
 * [remove_unified_webhook](docs/sdks/webhook/README.md#remove_unified_webhook) - Remove webhook subscription
 * [update_unified_webhook](docs/sdks/webhook/README.md#update_unified_webhook) - Update webhook subscription
+* [update_unified_webhook_resume](docs/sdks/webhook/README.md#update_unified_webhook_resume) - Resume an unhealthy webhook subscription
 * [update_unified_webhook_trigger](docs/sdks/webhook/README.md#update_unified_webhook_trigger) - Trigger webhook
 
 ### [Webinar](docs/sdks/webinar/README.md)
@@ -2992,7 +2996,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "0984b5ed-5379-42e9-81a6-08ac7ee499fd",
+            "id": "082664c6-628f-401d-807c-38619c2f4eab",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3005,7 +3009,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-08T04:22:54.721Z"),
+            "updated_at": parse_datetime("2023-08-08T09:31:32.279Z"),
         },
         "connection_id": "<id>",
     },
@@ -3039,7 +3043,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "0984b5ed-5379-42e9-81a6-08ac7ee499fd",
+            "id": "082664c6-628f-401d-807c-38619c2f4eab",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3052,7 +3056,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-08T04:22:54.721Z"),
+            "updated_at": parse_datetime("2023-08-08T09:31:32.279Z"),
         },
         "connection_id": "<id>",
     })
@@ -3100,7 +3104,7 @@ with UnifiedTo(
                 "currency": "CAD",
                 "customer_defined_code": "6170",
                 "description": "Voluptatibus valde spoliatio.",
-                "id": "0984b5ed-5379-42e9-81a6-08ac7ee499fd",
+                "id": "082664c6-628f-401d-807c-38619c2f4eab",
                 "is_payable": False,
                 "metadata": [],
                 "name": "Auto Loan Account",
@@ -3113,7 +3117,7 @@ with UnifiedTo(
                     },
                 ],
                 "type": shared.Type.ACCOUNTS_RECEIVABLE,
-                "updated_at": parse_datetime("2023-08-08T04:22:54.721Z"),
+                "updated_at": parse_datetime("2023-08-08T09:31:32.279Z"),
             },
             "connection_id": "<id>",
         })
@@ -3191,7 +3195,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "0984b5ed-5379-42e9-81a6-08ac7ee499fd",
+            "id": "082664c6-628f-401d-807c-38619c2f4eab",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3204,7 +3208,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-08T04:22:54.721Z"),
+            "updated_at": parse_datetime("2023-08-08T09:31:32.279Z"),
         },
         "connection_id": "<id>",
     })
@@ -3239,7 +3243,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "0984b5ed-5379-42e9-81a6-08ac7ee499fd",
+            "id": "082664c6-628f-401d-807c-38619c2f4eab",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3252,7 +3256,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-08T04:22:54.721Z"),
+            "updated_at": parse_datetime("2023-08-08T09:31:32.279Z"),
         },
         "connection_id": "<id>",
     })
@@ -3395,7 +3399,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "0984b5ed-5379-42e9-81a6-08ac7ee499fd",
+            "id": "082664c6-628f-401d-807c-38619c2f4eab",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3408,7 +3412,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-08T04:22:54.721Z"),
+            "updated_at": parse_datetime("2023-08-08T09:31:32.279Z"),
         },
         "connection_id": "<id>",
     })

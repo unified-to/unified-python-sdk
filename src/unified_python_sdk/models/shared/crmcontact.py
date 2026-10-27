@@ -20,7 +20,7 @@ class CrmContactTypedDict(TypedDict):
 
     address: NotRequired[PropertyCrmContactAddressTypedDict]
     company: NotRequired[str]
-    r"""The companyorganization name  of the contact"""
+    r"""The company/organization name  of the contact"""
     company_ids: NotRequired[List[str]]
     r"""An array of company IDs associated with this contact"""
     created_at: NotRequired[datetime]
@@ -31,10 +31,12 @@ class CrmContactTypedDict(TypedDict):
     emails: NotRequired[List[CrmEmailTypedDict]]
     r"""An array of email addresses for this contact"""
     first_name: NotRequired[str]
+    r"""The contact's first (given) name"""
     id: NotRequired[str]
     r"""Unique identifier for this contact object"""
     image_url: NotRequired[str]
     last_name: NotRequired[str]
+    r"""The contact's last (family) name"""
     link_urls: NotRequired[List[str]]
     r"""Additional URLs associated with the contact e.g., LinkedIn, website, etc"""
     metadata: NotRequired[List[CrmMetadataTypedDict]]
@@ -58,7 +60,7 @@ class CrmContact(BaseModel):
     address: Optional[PropertyCrmContactAddress] = None
 
     company: Optional[str] = None
-    r"""The companyorganization name  of the contact"""
+    r"""The company/organization name  of the contact"""
 
     company_ids: Optional[List[str]] = None
     r"""An array of company IDs associated with this contact"""
@@ -75,6 +77,7 @@ class CrmContact(BaseModel):
     r"""An array of email addresses for this contact"""
 
     first_name: Optional[str] = None
+    r"""The contact's first (given) name"""
 
     id: Optional[str] = None
     r"""Unique identifier for this contact object"""
@@ -82,6 +85,7 @@ class CrmContact(BaseModel):
     image_url: Optional[str] = None
 
     last_name: Optional[str] = None
+    r"""The contact's last (family) name"""
 
     link_urls: Optional[List[str]] = None
     r"""Additional URLs associated with the contact e.g., LinkedIn, website, etc"""
