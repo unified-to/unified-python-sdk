@@ -131,7 +131,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "082664c6-628f-401d-807c-38619c2f4eab",
+            "id": "63e44d64-e00e-4cd7-b108-ab85ab24130a",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -144,7 +144,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-08T09:31:32.279Z"),
+            "updated_at": parse_datetime("2023-08-08T16:35:53.829Z"),
         },
         "connection_id": "<id>",
     })
@@ -181,7 +181,7 @@ async def main():
                 "currency": "CAD",
                 "customer_defined_code": "6170",
                 "description": "Voluptatibus valde spoliatio.",
-                "id": "082664c6-628f-401d-807c-38619c2f4eab",
+                "id": "63e44d64-e00e-4cd7-b108-ab85ab24130a",
                 "is_payable": False,
                 "metadata": [],
                 "name": "Auto Loan Account",
@@ -194,7 +194,7 @@ async def main():
                     },
                 ],
                 "type": shared.Type.ACCOUNTS_RECEIVABLE,
-                "updated_at": parse_datetime("2023-08-08T09:31:32.279Z"),
+                "updated_at": parse_datetime("2023-08-08T16:35:53.829Z"),
             },
             "connection_id": "<id>",
         })
@@ -2996,7 +2996,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "082664c6-628f-401d-807c-38619c2f4eab",
+            "id": "63e44d64-e00e-4cd7-b108-ab85ab24130a",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3009,7 +3009,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-08T09:31:32.279Z"),
+            "updated_at": parse_datetime("2023-08-08T16:35:53.829Z"),
         },
         "connection_id": "<id>",
     },
@@ -3043,7 +3043,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "082664c6-628f-401d-807c-38619c2f4eab",
+            "id": "63e44d64-e00e-4cd7-b108-ab85ab24130a",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3056,7 +3056,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-08T09:31:32.279Z"),
+            "updated_at": parse_datetime("2023-08-08T16:35:53.829Z"),
         },
         "connection_id": "<id>",
     })
@@ -3104,7 +3104,7 @@ with UnifiedTo(
                 "currency": "CAD",
                 "customer_defined_code": "6170",
                 "description": "Voluptatibus valde spoliatio.",
-                "id": "082664c6-628f-401d-807c-38619c2f4eab",
+                "id": "63e44d64-e00e-4cd7-b108-ab85ab24130a",
                 "is_payable": False,
                 "metadata": [],
                 "name": "Auto Loan Account",
@@ -3117,7 +3117,7 @@ with UnifiedTo(
                     },
                 ],
                 "type": shared.Type.ACCOUNTS_RECEIVABLE,
-                "updated_at": parse_datetime("2023-08-08T09:31:32.279Z"),
+                "updated_at": parse_datetime("2023-08-08T16:35:53.829Z"),
             },
             "connection_id": "<id>",
         })
@@ -3195,7 +3195,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "082664c6-628f-401d-807c-38619c2f4eab",
+            "id": "63e44d64-e00e-4cd7-b108-ab85ab24130a",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3208,7 +3208,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-08T09:31:32.279Z"),
+            "updated_at": parse_datetime("2023-08-08T16:35:53.829Z"),
         },
         "connection_id": "<id>",
     })
@@ -3243,7 +3243,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "082664c6-628f-401d-807c-38619c2f4eab",
+            "id": "63e44d64-e00e-4cd7-b108-ab85ab24130a",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3256,7 +3256,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-08T09:31:32.279Z"),
+            "updated_at": parse_datetime("2023-08-08T16:35:53.829Z"),
         },
         "connection_id": "<id>",
     })
@@ -3399,7 +3399,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "082664c6-628f-401d-807c-38619c2f4eab",
+            "id": "63e44d64-e00e-4cd7-b108-ab85ab24130a",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3412,7 +3412,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-08T09:31:32.279Z"),
+            "updated_at": parse_datetime("2023-08-08T16:35:53.829Z"),
         },
         "connection_id": "<id>",
     })
@@ -3443,6 +3443,7 @@ def main():
         ),
     ) as unified_to:
         # Rest of application here...
+        pass
 
 
 # Or when using async:
@@ -3454,6 +3455,7 @@ async def amain():
         ),
     ) as unified_to:
         # Rest of application here...
+        pass
 ```
 <!-- End Resource Management [resource-management] -->
 

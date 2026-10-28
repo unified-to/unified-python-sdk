@@ -42,8 +42,8 @@ class CreateCalendarEventQueryParamFields(str, Enum):
     SEND_NOTIFICATIONS = "send_notifications"
     MATTER_ID = "matter_id"
     METADATA = "metadata"
-    RAW = "raw"
     ROOM_IDS = "room_ids"
+    RAW = "raw"
 
 
 class CreateCalendarEventRequestTypedDict(TypedDict):

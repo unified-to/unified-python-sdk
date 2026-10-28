@@ -25,7 +25,7 @@ class GetUnifiedIntegrationLoginRequestTypedDict(TypedDict):
     state: NotRequired[str]
     r"""Extra state to send back to your success URL"""
     success_redirect: NotRequired[str]
-    r"""The URL where you want the user to be redirect to after a successful authentication/sign-in.  A \"jwt\" parameter will be appended to the URL which will contain a name and email of the user who just signed-in."""
+    r"""The URL where you want the user to be redirect to after a successful authentication/sign-in.  A \"jwt\" parameter will be appended to the URL which will contain a name and email of the user who just signed-in (and a redirect claim matching this URL). When the workspace has trusted_domains configured, this host must be on that list."""
 
 
 class GetUnifiedIntegrationLoginRequest(BaseModel):
@@ -65,7 +65,7 @@ class GetUnifiedIntegrationLoginRequest(BaseModel):
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
-    r"""The URL where you want the user to be redirect to after a successful authentication/sign-in.  A \"jwt\" parameter will be appended to the URL which will contain a name and email of the user who just signed-in."""
+    r"""The URL where you want the user to be redirect to after a successful authentication/sign-in.  A \"jwt\" parameter will be appended to the URL which will contain a name and email of the user who just signed-in (and a redirect claim matching this URL). When the workspace has trusted_domains configured, this host must be on that list."""
 
     @model_serializer(mode="wrap")
     def serialize_model(self, handler):

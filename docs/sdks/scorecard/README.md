@@ -36,7 +36,7 @@ with UnifiedTo(
         "ats_scorecard": {
             "comment": "Maiores enim.",
             "created_at": parse_datetime("2022-02-20T17:09:45.498Z"),
-            "id": "cc32ce22-ae1f-418c-9486-58f170f4892d",
+            "id": "156009a4-ea65-46d4-bf3d-c6d5f5c412f0",
             "metadata": [],
             "questions": [
                 {
@@ -50,7 +50,7 @@ with UnifiedTo(
                 },
             ],
             "recommendation": shared.Recommendation.STRONG_YES,
-            "updated_at": parse_datetime("2023-06-07T04:33:54.546Z"),
+            "updated_at": parse_datetime("2023-06-07T12:14:24.972Z"),
         },
         "connection_id": "<id>",
     })
@@ -288,7 +288,7 @@ with UnifiedTo(
         "ats_scorecard": {
             "comment": "Maiores enim.",
             "created_at": parse_datetime("2022-02-20T17:09:45.498Z"),
-            "id": "38de1e51-6f5a-4dcb-a23b-53a12795467b",
+            "id": "b3ee555b-aacf-4e0f-9abf-4632c552123b",
             "metadata": [],
             "questions": [
                 {
@@ -302,7 +302,7 @@ with UnifiedTo(
                 },
             ],
             "recommendation": shared.Recommendation.STRONG_YES,
-            "updated_at": parse_datetime("2023-06-07T04:33:54.549Z"),
+            "updated_at": parse_datetime("2023-06-07T12:14:24.975Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -402,7 +402,7 @@ with UnifiedTo(
         "ats_scorecard": {
             "comment": "Maiores enim.",
             "created_at": parse_datetime("2022-02-20T17:09:45.498Z"),
-            "id": "38de1e51-6f5a-4dcb-a23b-53a12795467b",
+            "id": "b3ee555b-aacf-4e0f-9abf-4632c552123b",
             "metadata": [],
             "questions": [
                 {
@@ -416,7 +416,7 @@ with UnifiedTo(
                 },
             ],
             "recommendation": shared.Recommendation.STRONG_YES,
-            "updated_at": parse_datetime("2023-06-07T04:33:54.549Z"),
+            "updated_at": parse_datetime("2023-06-07T12:14:24.975Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

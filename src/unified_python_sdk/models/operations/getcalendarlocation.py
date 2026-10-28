@@ -17,15 +17,15 @@ from unified_python_sdk.utils import (
 
 class GetCalendarLocationQueryParamFields(str, Enum):
     ID = "id"
+    CREATED_AT = "created_at"
+    UPDATED_AT = "updated_at"
     NAME = "name"
     PARENT_ID = "parent_id"
     TYPE = "type"
     ADDRESS = "address"
-    RAW = "raw"
-    CREATED_AT = "created_at"
-    UPDATED_AT = "updated_at"
     TIMEZONE = "timezone"
     METADATA = "metadata"
+    RAW = "raw"
 
 
 class GetCalendarLocationRequestTypedDict(TypedDict):
