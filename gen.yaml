@@ -30,7 +30,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 python:
-  version: 0.61.6
+  version: 0.61.7
   additionalDependencies:
     dev: {}
     main: {}
@@ -80,6 +80,7 @@ python:
   methodArguments: require-security-and-request
   methodTimeoutArgument: timeout-ms
   methodTimeoutUnits: milliseconds
+  modelSerializationMethods: false
   moduleName: ""
   multipartArrayFormat: legacy
   optionalDependencies: {}
@@ -87,6 +88,7 @@ python:
   packageManager: poetry
   packageName: Unified-python-sdk
   preApplyUnionDiscriminators: false
+  preserveUnknownFields: false
   projectUrls: {}
   pytestFilterWarnings: []
   pytestTimeout: 0
