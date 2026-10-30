@@ -51,3 +51,4 @@ value = ListUnifiedIntegrationsQueryParamCategories.PASSTHROUGH
 | `LEGAL`        | legal          |
 | `COMPUTE`      | compute        |
 | `HEALTHCARE`   | healthcare     |
+| `PROPERTY`     | property       |

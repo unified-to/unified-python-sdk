@@ -216,6 +216,1000 @@ class Property(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
+    def create_property_conversation(
+        self,
+        *,
+        request: Union[
+            operations.CreatePropertyConversationRequest,
+            operations.CreatePropertyConversationRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.CreatePropertyConversationResponse:
+        r"""Create a conversation
+
+        Creates a PropertyConversation. Provide the unified PropertyConversation fields in the request body; they are mapped to the provider's API. Returns the created PropertyConversation.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(
+                request, operations.CreatePropertyConversationRequest
+            )
+        request = cast(operations.CreatePropertyConversationRequest, request)
+
+        req = self._build_request(
+            method="POST",
+            path="/property/{connection_id}/conversation",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=True,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.property_conversation,
+                False,
+                False,
+                "json",
+                shared.PropertyConversation,
+            ),
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="createPropertyConversation",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "conversation"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.CreatePropertyConversationResponse(
+                property_conversation=unmarshal_json_response(
+                    Optional[shared.PropertyConversation], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def create_property_conversation_async(
+        self,
+        *,
+        request: Union[
+            operations.CreatePropertyConversationRequest,
+            operations.CreatePropertyConversationRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.CreatePropertyConversationResponse:
+        r"""Create a conversation
+
+        Creates a PropertyConversation. Provide the unified PropertyConversation fields in the request body; they are mapped to the provider's API. Returns the created PropertyConversation.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(
+                request, operations.CreatePropertyConversationRequest
+            )
+        request = cast(operations.CreatePropertyConversationRequest, request)
+
+        req = self._build_request_async(
+            method="POST",
+            path="/property/{connection_id}/conversation",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=True,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.property_conversation,
+                False,
+                False,
+                "json",
+                shared.PropertyConversation,
+            ),
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="createPropertyConversation",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "conversation"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.CreatePropertyConversationResponse(
+                property_conversation=unmarshal_json_response(
+                    Optional[shared.PropertyConversation], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    def create_property_guest(
+        self,
+        *,
+        request: Union[
+            operations.CreatePropertyGuestRequest,
+            operations.CreatePropertyGuestRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.CreatePropertyGuestResponse:
+        r"""Create a guest
+
+        Creates a PropertyGuest. Provide the unified PropertyGuest fields in the request body; they are mapped to the provider's API. Returns the created PropertyGuest.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.CreatePropertyGuestRequest)
+        request = cast(operations.CreatePropertyGuestRequest, request)
+
+        req = self._build_request(
+            method="POST",
+            path="/property/{connection_id}/guest",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=True,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.property_guest, False, False, "json", shared.PropertyGuest
+            ),
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="createPropertyGuest",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "guest"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.CreatePropertyGuestResponse(
+                property_guest=unmarshal_json_response(
+                    Optional[shared.PropertyGuest], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def create_property_guest_async(
+        self,
+        *,
+        request: Union[
+            operations.CreatePropertyGuestRequest,
+            operations.CreatePropertyGuestRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.CreatePropertyGuestResponse:
+        r"""Create a guest
+
+        Creates a PropertyGuest. Provide the unified PropertyGuest fields in the request body; they are mapped to the provider's API. Returns the created PropertyGuest.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.CreatePropertyGuestRequest)
+        request = cast(operations.CreatePropertyGuestRequest, request)
+
+        req = self._build_request_async(
+            method="POST",
+            path="/property/{connection_id}/guest",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=True,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.property_guest, False, False, "json", shared.PropertyGuest
+            ),
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="createPropertyGuest",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "guest"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.CreatePropertyGuestResponse(
+                property_guest=unmarshal_json_response(
+                    Optional[shared.PropertyGuest], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    def create_property_listing(
+        self,
+        *,
+        request: Union[
+            operations.CreatePropertyListingRequest,
+            operations.CreatePropertyListingRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.CreatePropertyListingResponse:
+        r"""Create a listing
+
+        Creates a PropertyListing. Provide the unified PropertyListing fields in the request body; they are mapped to the provider's API. Returns the created PropertyListing.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.CreatePropertyListingRequest)
+        request = cast(operations.CreatePropertyListingRequest, request)
+
+        req = self._build_request(
+            method="POST",
+            path="/property/{connection_id}/listing",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=True,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.property_listing, False, False, "json", shared.PropertyListing
+            ),
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="createPropertyListing",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "listing"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.CreatePropertyListingResponse(
+                property_listing=unmarshal_json_response(
+                    Optional[shared.PropertyListing], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def create_property_listing_async(
+        self,
+        *,
+        request: Union[
+            operations.CreatePropertyListingRequest,
+            operations.CreatePropertyListingRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.CreatePropertyListingResponse:
+        r"""Create a listing
+
+        Creates a PropertyListing. Provide the unified PropertyListing fields in the request body; they are mapped to the provider's API. Returns the created PropertyListing.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.CreatePropertyListingRequest)
+        request = cast(operations.CreatePropertyListingRequest, request)
+
+        req = self._build_request_async(
+            method="POST",
+            path="/property/{connection_id}/listing",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=True,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.property_listing, False, False, "json", shared.PropertyListing
+            ),
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="createPropertyListing",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "listing"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.CreatePropertyListingResponse(
+                property_listing=unmarshal_json_response(
+                    Optional[shared.PropertyListing], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    def create_property_quote(
+        self,
+        *,
+        request: Union[
+            operations.CreatePropertyQuoteRequest,
+            operations.CreatePropertyQuoteRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.CreatePropertyQuoteResponse:
+        r"""Create a quote
+
+        Creates a PropertyQuote. Provide the unified PropertyQuote fields in the request body; they are mapped to the provider's API. Returns the created PropertyQuote.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.CreatePropertyQuoteRequest)
+        request = cast(operations.CreatePropertyQuoteRequest, request)
+
+        req = self._build_request(
+            method="POST",
+            path="/property/{connection_id}/quote",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=True,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.property_quote, False, False, "json", shared.PropertyQuote
+            ),
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="createPropertyQuote",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "quote"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.CreatePropertyQuoteResponse(
+                property_quote=unmarshal_json_response(
+                    Optional[shared.PropertyQuote], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def create_property_quote_async(
+        self,
+        *,
+        request: Union[
+            operations.CreatePropertyQuoteRequest,
+            operations.CreatePropertyQuoteRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.CreatePropertyQuoteResponse:
+        r"""Create a quote
+
+        Creates a PropertyQuote. Provide the unified PropertyQuote fields in the request body; they are mapped to the provider's API. Returns the created PropertyQuote.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.CreatePropertyQuoteRequest)
+        request = cast(operations.CreatePropertyQuoteRequest, request)
+
+        req = self._build_request_async(
+            method="POST",
+            path="/property/{connection_id}/quote",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=True,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.property_quote, False, False, "json", shared.PropertyQuote
+            ),
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="createPropertyQuote",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "quote"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.CreatePropertyQuoteResponse(
+                property_quote=unmarshal_json_response(
+                    Optional[shared.PropertyQuote], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    def create_property_reservation(
+        self,
+        *,
+        request: Union[
+            operations.CreatePropertyReservationRequest,
+            operations.CreatePropertyReservationRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.CreatePropertyReservationResponse:
+        r"""Create a reservation
+
+        Creates a PropertyReservation. Provide the unified PropertyReservation fields in the request body; they are mapped to the provider's API. Returns the created PropertyReservation.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(
+                request, operations.CreatePropertyReservationRequest
+            )
+        request = cast(operations.CreatePropertyReservationRequest, request)
+
+        req = self._build_request(
+            method="POST",
+            path="/property/{connection_id}/reservation",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=True,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.property_reservation,
+                False,
+                False,
+                "json",
+                shared.PropertyReservation,
+            ),
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="createPropertyReservation",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "reservation"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.CreatePropertyReservationResponse(
+                property_reservation=unmarshal_json_response(
+                    Optional[shared.PropertyReservation], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def create_property_reservation_async(
+        self,
+        *,
+        request: Union[
+            operations.CreatePropertyReservationRequest,
+            operations.CreatePropertyReservationRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.CreatePropertyReservationResponse:
+        r"""Create a reservation
+
+        Creates a PropertyReservation. Provide the unified PropertyReservation fields in the request body; they are mapped to the provider's API. Returns the created PropertyReservation.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(
+                request, operations.CreatePropertyReservationRequest
+            )
+        request = cast(operations.CreatePropertyReservationRequest, request)
+
+        req = self._build_request_async(
+            method="POST",
+            path="/property/{connection_id}/reservation",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=True,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.property_reservation,
+                False,
+                False,
+                "json",
+                shared.PropertyReservation,
+            ),
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="createPropertyReservation",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "reservation"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.CreatePropertyReservationResponse(
+                property_reservation=unmarshal_json_response(
+                    Optional[shared.PropertyReservation], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
     def get_analytics_property(
         self,
         *,
@@ -390,6 +1384,1138 @@ class Property(BaseSDK):
             return operations.GetAnalyticsPropertyResponse(
                 analytics_property=unmarshal_json_response(
                     Optional[shared.AnalyticsProperty], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    def get_property_conversation(
+        self,
+        *,
+        request: Union[
+            operations.GetPropertyConversationRequest,
+            operations.GetPropertyConversationRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.GetPropertyConversationResponse:
+        r"""Retrieve a conversation
+
+        Retrieves a single PropertyConversation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(
+                request, operations.GetPropertyConversationRequest
+            )
+        request = cast(operations.GetPropertyConversationRequest, request)
+
+        req = self._build_request(
+            method="GET",
+            path="/property/{connection_id}/conversation/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="getPropertyConversation",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "conversation"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.GetPropertyConversationResponse(
+                property_conversation=unmarshal_json_response(
+                    Optional[shared.PropertyConversation], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def get_property_conversation_async(
+        self,
+        *,
+        request: Union[
+            operations.GetPropertyConversationRequest,
+            operations.GetPropertyConversationRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.GetPropertyConversationResponse:
+        r"""Retrieve a conversation
+
+        Retrieves a single PropertyConversation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(
+                request, operations.GetPropertyConversationRequest
+            )
+        request = cast(operations.GetPropertyConversationRequest, request)
+
+        req = self._build_request_async(
+            method="GET",
+            path="/property/{connection_id}/conversation/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="getPropertyConversation",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "conversation"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.GetPropertyConversationResponse(
+                property_conversation=unmarshal_json_response(
+                    Optional[shared.PropertyConversation], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    def get_property_guest(
+        self,
+        *,
+        request: Union[
+            operations.GetPropertyGuestRequest,
+            operations.GetPropertyGuestRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.GetPropertyGuestResponse:
+        r"""Retrieve a guest
+
+        Retrieves a single PropertyGuest by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.GetPropertyGuestRequest)
+        request = cast(operations.GetPropertyGuestRequest, request)
+
+        req = self._build_request(
+            method="GET",
+            path="/property/{connection_id}/guest/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="getPropertyGuest",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "guest"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.GetPropertyGuestResponse(
+                property_guest=unmarshal_json_response(
+                    Optional[shared.PropertyGuest], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def get_property_guest_async(
+        self,
+        *,
+        request: Union[
+            operations.GetPropertyGuestRequest,
+            operations.GetPropertyGuestRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.GetPropertyGuestResponse:
+        r"""Retrieve a guest
+
+        Retrieves a single PropertyGuest by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.GetPropertyGuestRequest)
+        request = cast(operations.GetPropertyGuestRequest, request)
+
+        req = self._build_request_async(
+            method="GET",
+            path="/property/{connection_id}/guest/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="getPropertyGuest",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "guest"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.GetPropertyGuestResponse(
+                property_guest=unmarshal_json_response(
+                    Optional[shared.PropertyGuest], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    def get_property_listing(
+        self,
+        *,
+        request: Union[
+            operations.GetPropertyListingRequest,
+            operations.GetPropertyListingRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.GetPropertyListingResponse:
+        r"""Retrieve a listing
+
+        Retrieves a single PropertyListing by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.GetPropertyListingRequest)
+        request = cast(operations.GetPropertyListingRequest, request)
+
+        req = self._build_request(
+            method="GET",
+            path="/property/{connection_id}/listing/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="getPropertyListing",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "listing"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.GetPropertyListingResponse(
+                property_listing=unmarshal_json_response(
+                    Optional[shared.PropertyListing], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def get_property_listing_async(
+        self,
+        *,
+        request: Union[
+            operations.GetPropertyListingRequest,
+            operations.GetPropertyListingRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.GetPropertyListingResponse:
+        r"""Retrieve a listing
+
+        Retrieves a single PropertyListing by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.GetPropertyListingRequest)
+        request = cast(operations.GetPropertyListingRequest, request)
+
+        req = self._build_request_async(
+            method="GET",
+            path="/property/{connection_id}/listing/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="getPropertyListing",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "listing"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.GetPropertyListingResponse(
+                property_listing=unmarshal_json_response(
+                    Optional[shared.PropertyListing], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    def get_property_reservation(
+        self,
+        *,
+        request: Union[
+            operations.GetPropertyReservationRequest,
+            operations.GetPropertyReservationRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.GetPropertyReservationResponse:
+        r"""Retrieve a reservation
+
+        Retrieves a single PropertyReservation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.GetPropertyReservationRequest)
+        request = cast(operations.GetPropertyReservationRequest, request)
+
+        req = self._build_request(
+            method="GET",
+            path="/property/{connection_id}/reservation/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="getPropertyReservation",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "reservation"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.GetPropertyReservationResponse(
+                property_reservation=unmarshal_json_response(
+                    Optional[shared.PropertyReservation], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def get_property_reservation_async(
+        self,
+        *,
+        request: Union[
+            operations.GetPropertyReservationRequest,
+            operations.GetPropertyReservationRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.GetPropertyReservationResponse:
+        r"""Retrieve a reservation
+
+        Retrieves a single PropertyReservation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.GetPropertyReservationRequest)
+        request = cast(operations.GetPropertyReservationRequest, request)
+
+        req = self._build_request_async(
+            method="GET",
+            path="/property/{connection_id}/reservation/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="getPropertyReservation",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "reservation"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.GetPropertyReservationResponse(
+                property_reservation=unmarshal_json_response(
+                    Optional[shared.PropertyReservation], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    def get_property_review(
+        self,
+        *,
+        request: Union[
+            operations.GetPropertyReviewRequest,
+            operations.GetPropertyReviewRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.GetPropertyReviewResponse:
+        r"""Retrieve a review
+
+        Retrieves a single PropertyReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.GetPropertyReviewRequest)
+        request = cast(operations.GetPropertyReviewRequest, request)
+
+        req = self._build_request(
+            method="GET",
+            path="/property/{connection_id}/review/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="getPropertyReview",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "review"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.GetPropertyReviewResponse(
+                property_review=unmarshal_json_response(
+                    Optional[shared.PropertyReview], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def get_property_review_async(
+        self,
+        *,
+        request: Union[
+            operations.GetPropertyReviewRequest,
+            operations.GetPropertyReviewRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.GetPropertyReviewResponse:
+        r"""Retrieve a review
+
+        Retrieves a single PropertyReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.GetPropertyReviewRequest)
+        request = cast(operations.GetPropertyReviewRequest, request)
+
+        req = self._build_request_async(
+            method="GET",
+            path="/property/{connection_id}/review/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="getPropertyReview",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "review"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.GetPropertyReviewResponse(
+                property_review=unmarshal_json_response(
+                    Optional[shared.PropertyReview], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    def get_property_unittype(
+        self,
+        *,
+        request: Union[
+            operations.GetPropertyUnittypeRequest,
+            operations.GetPropertyUnittypeRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.GetPropertyUnittypeResponse:
+        r"""Retrieve an unittype
+
+        Retrieves a single PropertyUnittype by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.GetPropertyUnittypeRequest)
+        request = cast(operations.GetPropertyUnittypeRequest, request)
+
+        req = self._build_request(
+            method="GET",
+            path="/property/{connection_id}/unittype/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="getPropertyUnittype",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "unittype"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.GetPropertyUnittypeResponse(
+                property_unittype=unmarshal_json_response(
+                    Optional[shared.PropertyUnittype], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def get_property_unittype_async(
+        self,
+        *,
+        request: Union[
+            operations.GetPropertyUnittypeRequest,
+            operations.GetPropertyUnittypeRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.GetPropertyUnittypeResponse:
+        r"""Retrieve an unittype
+
+        Retrieves a single PropertyUnittype by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.GetPropertyUnittypeRequest)
+        request = cast(operations.GetPropertyUnittypeRequest, request)
+
+        req = self._build_request_async(
+            method="GET",
+            path="/property/{connection_id}/unittype/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="getPropertyUnittype",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "unittype"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.GetPropertyUnittypeResponse(
+                property_unittype=unmarshal_json_response(
+                    Optional[shared.PropertyUnittype], http_res
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -582,6 +2708,1334 @@ class Property(BaseSDK):
             return operations.ListAnalyticsPropertiesResponse(
                 analytics_properties=unmarshal_json_response(
                     Optional[List[shared.AnalyticsProperty]], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    def list_property_availabilities(
+        self,
+        *,
+        request: Union[
+            operations.ListPropertyAvailabilitiesRequest,
+            operations.ListPropertyAvailabilitiesRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.ListPropertyAvailabilitiesResponse:
+        r"""List all availabilities
+
+        Returns a list of PropertyAvailabilities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(
+                request, operations.ListPropertyAvailabilitiesRequest
+            )
+        request = cast(operations.ListPropertyAvailabilitiesRequest, request)
+
+        req = self._build_request(
+            method="GET",
+            path="/property/{connection_id}/availability",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="listPropertyAvailabilities",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "availability"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.ListPropertyAvailabilitiesResponse(
+                property_availabilities=unmarshal_json_response(
+                    Optional[List[shared.PropertyAvailability]], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def list_property_availabilities_async(
+        self,
+        *,
+        request: Union[
+            operations.ListPropertyAvailabilitiesRequest,
+            operations.ListPropertyAvailabilitiesRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.ListPropertyAvailabilitiesResponse:
+        r"""List all availabilities
+
+        Returns a list of PropertyAvailabilities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(
+                request, operations.ListPropertyAvailabilitiesRequest
+            )
+        request = cast(operations.ListPropertyAvailabilitiesRequest, request)
+
+        req = self._build_request_async(
+            method="GET",
+            path="/property/{connection_id}/availability",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="listPropertyAvailabilities",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "availability"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.ListPropertyAvailabilitiesResponse(
+                property_availabilities=unmarshal_json_response(
+                    Optional[List[shared.PropertyAvailability]], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    def list_property_conversations(
+        self,
+        *,
+        request: Union[
+            operations.ListPropertyConversationsRequest,
+            operations.ListPropertyConversationsRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.ListPropertyConversationsResponse:
+        r"""List all conversations
+
+        Returns a list of PropertyConversations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(
+                request, operations.ListPropertyConversationsRequest
+            )
+        request = cast(operations.ListPropertyConversationsRequest, request)
+
+        req = self._build_request(
+            method="GET",
+            path="/property/{connection_id}/conversation",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="listPropertyConversations",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "conversation"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.ListPropertyConversationsResponse(
+                property_conversations=unmarshal_json_response(
+                    Optional[List[shared.PropertyConversation]], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def list_property_conversations_async(
+        self,
+        *,
+        request: Union[
+            operations.ListPropertyConversationsRequest,
+            operations.ListPropertyConversationsRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.ListPropertyConversationsResponse:
+        r"""List all conversations
+
+        Returns a list of PropertyConversations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(
+                request, operations.ListPropertyConversationsRequest
+            )
+        request = cast(operations.ListPropertyConversationsRequest, request)
+
+        req = self._build_request_async(
+            method="GET",
+            path="/property/{connection_id}/conversation",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="listPropertyConversations",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "conversation"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.ListPropertyConversationsResponse(
+                property_conversations=unmarshal_json_response(
+                    Optional[List[shared.PropertyConversation]], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    def list_property_guests(
+        self,
+        *,
+        request: Union[
+            operations.ListPropertyGuestsRequest,
+            operations.ListPropertyGuestsRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.ListPropertyGuestsResponse:
+        r"""List all guests
+
+        Returns a list of PropertyGuests. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.ListPropertyGuestsRequest)
+        request = cast(operations.ListPropertyGuestsRequest, request)
+
+        req = self._build_request(
+            method="GET",
+            path="/property/{connection_id}/guest",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="listPropertyGuests",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "guest"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.ListPropertyGuestsResponse(
+                property_guests=unmarshal_json_response(
+                    Optional[List[shared.PropertyGuest]], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def list_property_guests_async(
+        self,
+        *,
+        request: Union[
+            operations.ListPropertyGuestsRequest,
+            operations.ListPropertyGuestsRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.ListPropertyGuestsResponse:
+        r"""List all guests
+
+        Returns a list of PropertyGuests. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.ListPropertyGuestsRequest)
+        request = cast(operations.ListPropertyGuestsRequest, request)
+
+        req = self._build_request_async(
+            method="GET",
+            path="/property/{connection_id}/guest",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="listPropertyGuests",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "guest"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.ListPropertyGuestsResponse(
+                property_guests=unmarshal_json_response(
+                    Optional[List[shared.PropertyGuest]], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    def list_property_listings(
+        self,
+        *,
+        request: Union[
+            operations.ListPropertyListingsRequest,
+            operations.ListPropertyListingsRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.ListPropertyListingsResponse:
+        r"""List all listings
+
+        Returns a list of PropertyListings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.ListPropertyListingsRequest)
+        request = cast(operations.ListPropertyListingsRequest, request)
+
+        req = self._build_request(
+            method="GET",
+            path="/property/{connection_id}/listing",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="listPropertyListings",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "listing"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.ListPropertyListingsResponse(
+                property_listings=unmarshal_json_response(
+                    Optional[List[shared.PropertyListing]], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def list_property_listings_async(
+        self,
+        *,
+        request: Union[
+            operations.ListPropertyListingsRequest,
+            operations.ListPropertyListingsRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.ListPropertyListingsResponse:
+        r"""List all listings
+
+        Returns a list of PropertyListings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.ListPropertyListingsRequest)
+        request = cast(operations.ListPropertyListingsRequest, request)
+
+        req = self._build_request_async(
+            method="GET",
+            path="/property/{connection_id}/listing",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="listPropertyListings",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "listing"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.ListPropertyListingsResponse(
+                property_listings=unmarshal_json_response(
+                    Optional[List[shared.PropertyListing]], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    def list_property_reservations(
+        self,
+        *,
+        request: Union[
+            operations.ListPropertyReservationsRequest,
+            operations.ListPropertyReservationsRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.ListPropertyReservationsResponse:
+        r"""List all reservations
+
+        Returns a list of PropertyReservations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(
+                request, operations.ListPropertyReservationsRequest
+            )
+        request = cast(operations.ListPropertyReservationsRequest, request)
+
+        req = self._build_request(
+            method="GET",
+            path="/property/{connection_id}/reservation",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="listPropertyReservations",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "reservation"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.ListPropertyReservationsResponse(
+                property_reservations=unmarshal_json_response(
+                    Optional[List[shared.PropertyReservation]], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def list_property_reservations_async(
+        self,
+        *,
+        request: Union[
+            operations.ListPropertyReservationsRequest,
+            operations.ListPropertyReservationsRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.ListPropertyReservationsResponse:
+        r"""List all reservations
+
+        Returns a list of PropertyReservations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(
+                request, operations.ListPropertyReservationsRequest
+            )
+        request = cast(operations.ListPropertyReservationsRequest, request)
+
+        req = self._build_request_async(
+            method="GET",
+            path="/property/{connection_id}/reservation",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="listPropertyReservations",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "reservation"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.ListPropertyReservationsResponse(
+                property_reservations=unmarshal_json_response(
+                    Optional[List[shared.PropertyReservation]], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    def list_property_reviews(
+        self,
+        *,
+        request: Union[
+            operations.ListPropertyReviewsRequest,
+            operations.ListPropertyReviewsRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.ListPropertyReviewsResponse:
+        r"""List all reviews
+
+        Returns a list of PropertyReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.ListPropertyReviewsRequest)
+        request = cast(operations.ListPropertyReviewsRequest, request)
+
+        req = self._build_request(
+            method="GET",
+            path="/property/{connection_id}/review",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="listPropertyReviews",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "review"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.ListPropertyReviewsResponse(
+                property_reviews=unmarshal_json_response(
+                    Optional[List[shared.PropertyReview]], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def list_property_reviews_async(
+        self,
+        *,
+        request: Union[
+            operations.ListPropertyReviewsRequest,
+            operations.ListPropertyReviewsRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.ListPropertyReviewsResponse:
+        r"""List all reviews
+
+        Returns a list of PropertyReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.ListPropertyReviewsRequest)
+        request = cast(operations.ListPropertyReviewsRequest, request)
+
+        req = self._build_request_async(
+            method="GET",
+            path="/property/{connection_id}/review",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="listPropertyReviews",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "review"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.ListPropertyReviewsResponse(
+                property_reviews=unmarshal_json_response(
+                    Optional[List[shared.PropertyReview]], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    def list_property_unittypes(
+        self,
+        *,
+        request: Union[
+            operations.ListPropertyUnittypesRequest,
+            operations.ListPropertyUnittypesRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.ListPropertyUnittypesResponse:
+        r"""List all unittypes
+
+        Returns a list of PropertyUnittypes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.ListPropertyUnittypesRequest)
+        request = cast(operations.ListPropertyUnittypesRequest, request)
+
+        req = self._build_request(
+            method="GET",
+            path="/property/{connection_id}/unittype",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="listPropertyUnittypes",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "unittype"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.ListPropertyUnittypesResponse(
+                property_unittypes=unmarshal_json_response(
+                    Optional[List[shared.PropertyUnittype]], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def list_property_unittypes_async(
+        self,
+        *,
+        request: Union[
+            operations.ListPropertyUnittypesRequest,
+            operations.ListPropertyUnittypesRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.ListPropertyUnittypesResponse:
+        r"""List all unittypes
+
+        Returns a list of PropertyUnittypes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.ListPropertyUnittypesRequest)
+        request = cast(operations.ListPropertyUnittypesRequest, request)
+
+        req = self._build_request_async(
+            method="GET",
+            path="/property/{connection_id}/unittype",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="listPropertyUnittypes",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "unittype"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.ListPropertyUnittypesResponse(
+                property_unittypes=unmarshal_json_response(
+                    Optional[List[shared.PropertyUnittype]], http_res
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",
@@ -798,6 +4252,794 @@ class Property(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
+    def patch_property_guest(
+        self,
+        *,
+        request: Union[
+            operations.PatchPropertyGuestRequest,
+            operations.PatchPropertyGuestRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.PatchPropertyGuestResponse:
+        r"""Update a guest
+
+        Updates the PropertyGuest identified by `id`. Provide the unified PropertyGuest fields to change in the request body.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.PatchPropertyGuestRequest)
+        request = cast(operations.PatchPropertyGuestRequest, request)
+
+        req = self._build_request(
+            method="PATCH",
+            path="/property/{connection_id}/guest/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=True,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.property_guest, False, False, "json", shared.PropertyGuest
+            ),
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="patchPropertyGuest",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "guest"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.PatchPropertyGuestResponse(
+                property_guest=unmarshal_json_response(
+                    Optional[shared.PropertyGuest], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def patch_property_guest_async(
+        self,
+        *,
+        request: Union[
+            operations.PatchPropertyGuestRequest,
+            operations.PatchPropertyGuestRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.PatchPropertyGuestResponse:
+        r"""Update a guest
+
+        Updates the PropertyGuest identified by `id`. Provide the unified PropertyGuest fields to change in the request body.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.PatchPropertyGuestRequest)
+        request = cast(operations.PatchPropertyGuestRequest, request)
+
+        req = self._build_request_async(
+            method="PATCH",
+            path="/property/{connection_id}/guest/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=True,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.property_guest, False, False, "json", shared.PropertyGuest
+            ),
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="patchPropertyGuest",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "guest"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.PatchPropertyGuestResponse(
+                property_guest=unmarshal_json_response(
+                    Optional[shared.PropertyGuest], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    def patch_property_listing(
+        self,
+        *,
+        request: Union[
+            operations.PatchPropertyListingRequest,
+            operations.PatchPropertyListingRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.PatchPropertyListingResponse:
+        r"""Update a listing
+
+        Updates the PropertyListing identified by `id`. Provide the unified PropertyListing fields to change in the request body.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.PatchPropertyListingRequest)
+        request = cast(operations.PatchPropertyListingRequest, request)
+
+        req = self._build_request(
+            method="PATCH",
+            path="/property/{connection_id}/listing/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=True,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.property_listing, False, False, "json", shared.PropertyListing
+            ),
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="patchPropertyListing",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "listing"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.PatchPropertyListingResponse(
+                property_listing=unmarshal_json_response(
+                    Optional[shared.PropertyListing], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def patch_property_listing_async(
+        self,
+        *,
+        request: Union[
+            operations.PatchPropertyListingRequest,
+            operations.PatchPropertyListingRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.PatchPropertyListingResponse:
+        r"""Update a listing
+
+        Updates the PropertyListing identified by `id`. Provide the unified PropertyListing fields to change in the request body.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.PatchPropertyListingRequest)
+        request = cast(operations.PatchPropertyListingRequest, request)
+
+        req = self._build_request_async(
+            method="PATCH",
+            path="/property/{connection_id}/listing/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=True,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.property_listing, False, False, "json", shared.PropertyListing
+            ),
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="patchPropertyListing",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "listing"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.PatchPropertyListingResponse(
+                property_listing=unmarshal_json_response(
+                    Optional[shared.PropertyListing], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    def patch_property_reservation(
+        self,
+        *,
+        request: Union[
+            operations.PatchPropertyReservationRequest,
+            operations.PatchPropertyReservationRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.PatchPropertyReservationResponse:
+        r"""Update a reservation
+
+        Updates the PropertyReservation identified by `id`. Provide the unified PropertyReservation fields to change in the request body.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(
+                request, operations.PatchPropertyReservationRequest
+            )
+        request = cast(operations.PatchPropertyReservationRequest, request)
+
+        req = self._build_request(
+            method="PATCH",
+            path="/property/{connection_id}/reservation/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=True,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.property_reservation,
+                False,
+                False,
+                "json",
+                shared.PropertyReservation,
+            ),
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="patchPropertyReservation",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "reservation"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.PatchPropertyReservationResponse(
+                property_reservation=unmarshal_json_response(
+                    Optional[shared.PropertyReservation], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def patch_property_reservation_async(
+        self,
+        *,
+        request: Union[
+            operations.PatchPropertyReservationRequest,
+            operations.PatchPropertyReservationRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.PatchPropertyReservationResponse:
+        r"""Update a reservation
+
+        Updates the PropertyReservation identified by `id`. Provide the unified PropertyReservation fields to change in the request body.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(
+                request, operations.PatchPropertyReservationRequest
+            )
+        request = cast(operations.PatchPropertyReservationRequest, request)
+
+        req = self._build_request_async(
+            method="PATCH",
+            path="/property/{connection_id}/reservation/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=True,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.property_reservation,
+                False,
+                False,
+                "json",
+                shared.PropertyReservation,
+            ),
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="patchPropertyReservation",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "reservation"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.PatchPropertyReservationResponse(
+                property_reservation=unmarshal_json_response(
+                    Optional[shared.PropertyReservation], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    def patch_property_review(
+        self,
+        *,
+        request: Union[
+            operations.PatchPropertyReviewRequest,
+            operations.PatchPropertyReviewRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.PatchPropertyReviewResponse:
+        r"""Update a review
+
+        Updates the PropertyReview identified by `id`. Provide the unified PropertyReview fields to change in the request body.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.PatchPropertyReviewRequest)
+        request = cast(operations.PatchPropertyReviewRequest, request)
+
+        req = self._build_request(
+            method="PATCH",
+            path="/property/{connection_id}/review/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=True,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.property_review, False, False, "json", shared.PropertyReview
+            ),
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="patchPropertyReview",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "review"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.PatchPropertyReviewResponse(
+                property_review=unmarshal_json_response(
+                    Optional[shared.PropertyReview], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def patch_property_review_async(
+        self,
+        *,
+        request: Union[
+            operations.PatchPropertyReviewRequest,
+            operations.PatchPropertyReviewRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.PatchPropertyReviewResponse:
+        r"""Update a review
+
+        Updates the PropertyReview identified by `id`. Provide the unified PropertyReview fields to change in the request body.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.PatchPropertyReviewRequest)
+        request = cast(operations.PatchPropertyReviewRequest, request)
+
+        req = self._build_request_async(
+            method="PATCH",
+            path="/property/{connection_id}/review/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=True,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.property_review, False, False, "json", shared.PropertyReview
+            ),
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="patchPropertyReview",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "review"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.PatchPropertyReviewResponse(
+                property_review=unmarshal_json_response(
+                    Optional[shared.PropertyReview], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
     def remove_analytics_property(
         self,
         *,
@@ -1000,6 +5242,204 @@ class Property(BaseSDK):
 
         raise errors.SDKError("Unexpected response received", http_res)
 
+    def remove_property_listing(
+        self,
+        *,
+        request: Union[
+            operations.RemovePropertyListingRequest,
+            operations.RemovePropertyListingRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.RemovePropertyListingResponse:
+        r"""Remove a listing
+
+        Deletes the PropertyListing identified by `id`.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.RemovePropertyListingRequest)
+        request = cast(operations.RemovePropertyListingRequest, request)
+
+        req = self._build_request(
+            method="DELETE",
+            path="/property/{connection_id}/listing/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="*/*",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="removePropertyListing",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "listing"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "*"):
+            return operations.RemovePropertyListingResponse(
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+                headers={},
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "default", "*"):
+            return operations.RemovePropertyListingResponse(
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+                headers=utils.get_response_headers(http_res.headers),
+            )
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def remove_property_listing_async(
+        self,
+        *,
+        request: Union[
+            operations.RemovePropertyListingRequest,
+            operations.RemovePropertyListingRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.RemovePropertyListingResponse:
+        r"""Remove a listing
+
+        Deletes the PropertyListing identified by `id`.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.RemovePropertyListingRequest)
+        request = cast(operations.RemovePropertyListingRequest, request)
+
+        req = self._build_request_async(
+            method="DELETE",
+            path="/property/{connection_id}/listing/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=False,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="*/*",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="removePropertyListing",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "listing"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "*"):
+            return operations.RemovePropertyListingResponse(
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+                headers={},
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "default", "*"):
+            return operations.RemovePropertyListingResponse(
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+                headers=utils.get_response_headers(http_res.headers),
+            )
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
     def update_analytics_property(
         self,
         *,
@@ -1192,6 +5632,794 @@ class Property(BaseSDK):
             return operations.UpdateAnalyticsPropertyResponse(
                 analytics_property=unmarshal_json_response(
                     Optional[shared.AnalyticsProperty], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    def update_property_guest(
+        self,
+        *,
+        request: Union[
+            operations.UpdatePropertyGuestRequest,
+            operations.UpdatePropertyGuestRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.UpdatePropertyGuestResponse:
+        r"""Update a guest
+
+        Updates the PropertyGuest identified by `id`. Provide the unified PropertyGuest fields to change in the request body.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.UpdatePropertyGuestRequest)
+        request = cast(operations.UpdatePropertyGuestRequest, request)
+
+        req = self._build_request(
+            method="PUT",
+            path="/property/{connection_id}/guest/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=True,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.property_guest, False, False, "json", shared.PropertyGuest
+            ),
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="updatePropertyGuest",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "guest"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.UpdatePropertyGuestResponse(
+                property_guest=unmarshal_json_response(
+                    Optional[shared.PropertyGuest], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def update_property_guest_async(
+        self,
+        *,
+        request: Union[
+            operations.UpdatePropertyGuestRequest,
+            operations.UpdatePropertyGuestRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.UpdatePropertyGuestResponse:
+        r"""Update a guest
+
+        Updates the PropertyGuest identified by `id`. Provide the unified PropertyGuest fields to change in the request body.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.UpdatePropertyGuestRequest)
+        request = cast(operations.UpdatePropertyGuestRequest, request)
+
+        req = self._build_request_async(
+            method="PUT",
+            path="/property/{connection_id}/guest/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=True,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.property_guest, False, False, "json", shared.PropertyGuest
+            ),
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="updatePropertyGuest",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "guest"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.UpdatePropertyGuestResponse(
+                property_guest=unmarshal_json_response(
+                    Optional[shared.PropertyGuest], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    def update_property_listing(
+        self,
+        *,
+        request: Union[
+            operations.UpdatePropertyListingRequest,
+            operations.UpdatePropertyListingRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.UpdatePropertyListingResponse:
+        r"""Update a listing
+
+        Updates the PropertyListing identified by `id`. Provide the unified PropertyListing fields to change in the request body.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.UpdatePropertyListingRequest)
+        request = cast(operations.UpdatePropertyListingRequest, request)
+
+        req = self._build_request(
+            method="PUT",
+            path="/property/{connection_id}/listing/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=True,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.property_listing, False, False, "json", shared.PropertyListing
+            ),
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="updatePropertyListing",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "listing"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.UpdatePropertyListingResponse(
+                property_listing=unmarshal_json_response(
+                    Optional[shared.PropertyListing], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def update_property_listing_async(
+        self,
+        *,
+        request: Union[
+            operations.UpdatePropertyListingRequest,
+            operations.UpdatePropertyListingRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.UpdatePropertyListingResponse:
+        r"""Update a listing
+
+        Updates the PropertyListing identified by `id`. Provide the unified PropertyListing fields to change in the request body.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.UpdatePropertyListingRequest)
+        request = cast(operations.UpdatePropertyListingRequest, request)
+
+        req = self._build_request_async(
+            method="PUT",
+            path="/property/{connection_id}/listing/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=True,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.property_listing, False, False, "json", shared.PropertyListing
+            ),
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="updatePropertyListing",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "listing"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.UpdatePropertyListingResponse(
+                property_listing=unmarshal_json_response(
+                    Optional[shared.PropertyListing], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    def update_property_reservation(
+        self,
+        *,
+        request: Union[
+            operations.UpdatePropertyReservationRequest,
+            operations.UpdatePropertyReservationRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.UpdatePropertyReservationResponse:
+        r"""Update a reservation
+
+        Updates the PropertyReservation identified by `id`. Provide the unified PropertyReservation fields to change in the request body.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(
+                request, operations.UpdatePropertyReservationRequest
+            )
+        request = cast(operations.UpdatePropertyReservationRequest, request)
+
+        req = self._build_request(
+            method="PUT",
+            path="/property/{connection_id}/reservation/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=True,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.property_reservation,
+                False,
+                False,
+                "json",
+                shared.PropertyReservation,
+            ),
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="updatePropertyReservation",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "reservation"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.UpdatePropertyReservationResponse(
+                property_reservation=unmarshal_json_response(
+                    Optional[shared.PropertyReservation], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def update_property_reservation_async(
+        self,
+        *,
+        request: Union[
+            operations.UpdatePropertyReservationRequest,
+            operations.UpdatePropertyReservationRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.UpdatePropertyReservationResponse:
+        r"""Update a reservation
+
+        Updates the PropertyReservation identified by `id`. Provide the unified PropertyReservation fields to change in the request body.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(
+                request, operations.UpdatePropertyReservationRequest
+            )
+        request = cast(operations.UpdatePropertyReservationRequest, request)
+
+        req = self._build_request_async(
+            method="PUT",
+            path="/property/{connection_id}/reservation/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=True,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.property_reservation,
+                False,
+                False,
+                "json",
+                shared.PropertyReservation,
+            ),
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="updatePropertyReservation",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "reservation"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.UpdatePropertyReservationResponse(
+                property_reservation=unmarshal_json_response(
+                    Optional[shared.PropertyReservation], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = await utils.stream_to_text_async(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    def update_property_review(
+        self,
+        *,
+        request: Union[
+            operations.UpdatePropertyReviewRequest,
+            operations.UpdatePropertyReviewRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.UpdatePropertyReviewResponse:
+        r"""Update a review
+
+        Updates the PropertyReview identified by `id`. Provide the unified PropertyReview fields to change in the request body.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.UpdatePropertyReviewRequest)
+        request = cast(operations.UpdatePropertyReviewRequest, request)
+
+        req = self._build_request(
+            method="PUT",
+            path="/property/{connection_id}/review/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=True,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.property_review, False, False, "json", shared.PropertyReview
+            ),
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = self.do_request(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="updatePropertyReview",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "review"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.UpdatePropertyReviewResponse(
+                property_review=unmarshal_json_response(
+                    Optional[shared.PropertyReview], http_res
+                ),
+                status_code=http_res.status_code,
+                content_type=http_res.headers.get("Content-Type") or "",
+                raw_response=http_res,
+            )
+        if utils.match_response(http_res, "4XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+        if utils.match_response(http_res, "5XX", "*"):
+            http_res_text = utils.stream_to_text(http_res)
+            raise errors.SDKError("API error occurred", http_res, http_res_text)
+
+        raise errors.SDKError("Unexpected response received", http_res)
+
+    async def update_property_review_async(
+        self,
+        *,
+        request: Union[
+            operations.UpdatePropertyReviewRequest,
+            operations.UpdatePropertyReviewRequestTypedDict,
+        ],
+        retries: OptionalNullable[utils.RetryConfig] = UNSET,
+        server_url: Optional[str] = None,
+        timeout_ms: Optional[int] = None,
+        http_headers: Optional[Mapping[str, str]] = None,
+    ) -> operations.UpdatePropertyReviewResponse:
+        r"""Update a review
+
+        Updates the PropertyReview identified by `id`. Provide the unified PropertyReview fields to change in the request body.
+
+        :param request: The request object to send.
+        :param retries: Override the default retry configuration for this method
+        :param server_url: Override the default server URL for this method
+        :param timeout_ms: Override the default request timeout configuration for this method in milliseconds
+        :param http_headers: Additional headers to set or replace on requests.
+        """
+        base_url = None
+        url_variables = None
+        if timeout_ms is None:
+            timeout_ms = self.sdk_configuration.timeout_ms
+
+        if server_url is not None:
+            base_url = server_url
+        else:
+            base_url = self._get_url(base_url, url_variables)
+
+        if not isinstance(request, BaseModel):
+            request = utils.unmarshal(request, operations.UpdatePropertyReviewRequest)
+        request = cast(operations.UpdatePropertyReviewRequest, request)
+
+        req = self._build_request_async(
+            method="PUT",
+            path="/property/{connection_id}/review/{id}",
+            base_url=base_url,
+            url_variables=url_variables,
+            request=request,
+            request_body_required=True,
+            request_has_path_params=True,
+            request_has_query_params=True,
+            user_agent_header="user-agent",
+            accept_header_value="application/json",
+            http_headers=http_headers,
+            security=self.sdk_configuration.security,
+            get_serialized_body=lambda: utils.serialize_request_body(
+                request.property_review, False, False, "json", shared.PropertyReview
+            ),
+            allow_empty_value=None,
+            timeout_ms=timeout_ms,
+        )
+
+        if retries == UNSET:
+            if self.sdk_configuration.retry_config is not UNSET:
+                retries = self.sdk_configuration.retry_config
+
+        retry_config = None
+        if isinstance(retries, utils.RetryConfig):
+            retry_config = (retries, ["429", "500", "502", "503", "504"])
+
+        http_res = await self.do_request_async(
+            hook_ctx=HookContext(
+                config=self.sdk_configuration,
+                base_url=base_url or "",
+                operation_id="updatePropertyReview",
+                oauth2_scopes=None,
+                security_source=self.sdk_configuration.security,
+                tags=["property", "review"],
+                extensions=None,
+            ),
+            request=req,
+            is_error_status_code=lambda c: utils.match_status_codes(["4XX", "5XX"], c),
+            retry_config=retry_config,
+        )
+
+        if utils.match_response(http_res, "200", "application/json"):
+            return operations.UpdatePropertyReviewResponse(
+                property_review=unmarshal_json_response(
+                    Optional[shared.PropertyReview], http_res
                 ),
                 status_code=http_res.status_code,
                 content_type=http_res.headers.get("Content-Type") or "",

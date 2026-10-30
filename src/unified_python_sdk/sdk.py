@@ -68,6 +68,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.connection import Connection
     from unified_python_sdk.contact import Contact
     from unified_python_sdk.content import Content
+    from unified_python_sdk.conversation import Conversation
     from unified_python_sdk.course import Course
     from unified_python_sdk.coverage import Coverage
     from unified_python_sdk.creative import Creative
@@ -102,6 +103,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.goal import Goal
     from unified_python_sdk.gputype import Gputype
     from unified_python_sdk.group import Group
+    from unified_python_sdk.guest import Guest
     from unified_python_sdk.healthcare import Healthcare
     from unified_python_sdk.hris import Hris
     from unified_python_sdk.immunization import Immunization
@@ -125,6 +127,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.legal import Legal
     from unified_python_sdk.link import Link
     from unified_python_sdk.list import ListT
+    from unified_python_sdk.listing import Listing
     from unified_python_sdk.lms import Lms
     from unified_python_sdk.location import Location
     from unified_python_sdk.login import Login
@@ -223,6 +226,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.trialbalance import Trialbalance
     from unified_python_sdk.uc import Uc
     from unified_python_sdk.unified import Unified
+    from unified_python_sdk.unittype import Unittype
     from unified_python_sdk.usage import Usage
     from unified_python_sdk.user import User
     from unified_python_sdk.vendorcredit import Vendorcredit
@@ -411,6 +415,10 @@ class UnifiedTo(BaseSDK):
     performance: "Performance"
     cycle: "Cycle"
     feedback: "Feedback"
+    conversation: "Conversation"
+    guest: "Guest"
+    listing: "Listing"
+    unittype: "Unittype"
     repo: "Repo"
     branch: "Branch"
     commit: "Commit"
@@ -633,6 +641,10 @@ class UnifiedTo(BaseSDK):
         "performance": ("unified_python_sdk.performance", "Performance"),
         "cycle": ("unified_python_sdk.cycle", "Cycle"),
         "feedback": ("unified_python_sdk.feedback", "Feedback"),
+        "conversation": ("unified_python_sdk.conversation", "Conversation"),
+        "guest": ("unified_python_sdk.guest", "Guest"),
+        "listing": ("unified_python_sdk.listing", "Listing"),
+        "unittype": ("unified_python_sdk.unittype", "Unittype"),
         "repo": ("unified_python_sdk.repo", "Repo"),
         "branch": ("unified_python_sdk.branch", "Branch"),
         "commit": ("unified_python_sdk.commit", "Commit"),

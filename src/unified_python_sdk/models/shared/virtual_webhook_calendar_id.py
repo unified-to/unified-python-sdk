@@ -245,6 +245,12 @@ class ListGroupID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class ListGuestID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class ListInstanceID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -318,6 +324,12 @@ class ListLinkID(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class ListListID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
+class ListListingID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
     NOT_SUPPORTED = "not-supported"
@@ -479,6 +491,12 @@ class ListRepoID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class ListReservationID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class ListRoleID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -612,6 +630,12 @@ class ListTicketID(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class ListType(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
+class ListUnittypeID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
     NOT_SUPPORTED = "not-supported"
@@ -876,30 +900,6 @@ class VirtualWebhookBranchID(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class VirtualWebhookCalendarID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class VirtualWebhookCallID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class VirtualWebhookCampaignID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class VirtualWebhookCandidateID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class VirtualWebhookCarrierID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
     NOT_SUPPORTED = "not-supported"

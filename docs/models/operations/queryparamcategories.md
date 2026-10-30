@@ -51,3 +51,4 @@ value = QueryParamCategories.PASSTHROUGH
 | `LEGAL`        | legal          |
 | `COMPUTE`      | compute        |
 | `HEALTHCARE`   | healthcare     |
+| `PROPERTY`     | property       |

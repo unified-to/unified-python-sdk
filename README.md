@@ -131,7 +131,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "10d91247-ded1-4d1d-9568-80e29a471e72",
+            "id": "427e8dd8-1c54-4931-b853-9b3c8b5596a6",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -144,7 +144,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-08T20:25:09.921Z"),
+            "updated_at": parse_datetime("2023-08-09T04:48:43.304Z"),
         },
         "connection_id": "<id>",
     })
@@ -181,7 +181,7 @@ async def main():
                 "currency": "CAD",
                 "customer_defined_code": "6170",
                 "description": "Voluptatibus valde spoliatio.",
-                "id": "10d91247-ded1-4d1d-9568-80e29a471e72",
+                "id": "427e8dd8-1c54-4931-b853-9b3c8b5596a6",
                 "is_payable": False,
                 "metadata": [],
                 "name": "Auto Loan Account",
@@ -194,7 +194,7 @@ async def main():
                     },
                 ],
                 "type": shared.Type.ACCOUNTS_RECEIVABLE,
-                "updated_at": parse_datetime("2023-08-08T20:25:09.921Z"),
+                "updated_at": parse_datetime("2023-08-09T04:48:43.304Z"),
             },
             "connection_id": "<id>",
         })
@@ -609,6 +609,7 @@ asyncio.run(main())
 ### [Availability](docs/sdks/availability/README.md)
 
 * [list_commerce_availabilities](docs/sdks/availability/README.md#list_commerce_availabilities) - List all availabilities
+* [list_property_availabilities](docs/sdks/availability/README.md#list_property_availabilities) - List all availabilities
 
 ### [Balancesheet](docs/sdks/balancesheet/README.md)
 
@@ -1068,6 +1069,12 @@ asyncio.run(main())
 * [remove_lms_content](docs/sdks/content/README.md#remove_lms_content) - Remove a content
 * [update_lms_content](docs/sdks/content/README.md#update_lms_content) - Update a content
 
+### [Conversation](docs/sdks/conversation/README.md)
+
+* [create_property_conversation](docs/sdks/conversation/README.md#create_property_conversation) - Create a conversation
+* [get_property_conversation](docs/sdks/conversation/README.md#get_property_conversation) - Retrieve a conversation
+* [list_property_conversations](docs/sdks/conversation/README.md#list_property_conversations) - List all conversations
+
 ### [Course](docs/sdks/course/README.md)
 
 * [create_lms_course](docs/sdks/course/README.md#create_lms_course) - Create a course
@@ -1470,6 +1477,14 @@ asyncio.run(main())
 * [update_hris_group](docs/sdks/group/README.md#update_hris_group) - Update a group
 * [update_scim_groups](docs/sdks/group/README.md#update_scim_groups) - Update group
 
+### [Guest](docs/sdks/guest/README.md)
+
+* [create_property_guest](docs/sdks/guest/README.md#create_property_guest) - Create a guest
+* [get_property_guest](docs/sdks/guest/README.md#get_property_guest) - Retrieve a guest
+* [list_property_guests](docs/sdks/guest/README.md#list_property_guests) - List all guests
+* [patch_property_guest](docs/sdks/guest/README.md#patch_property_guest) - Update a guest
+* [update_property_guest](docs/sdks/guest/README.md#update_property_guest) - Update a guest
+
 ### [Healthcare](docs/sdks/healthcare/README.md)
 
 * [create_healthcare_appointment](docs/sdks/healthcare/README.md#create_healthcare_appointment) - Create an appointment
@@ -1827,6 +1842,15 @@ asyncio.run(main())
 * [patch_martech_list](docs/sdks/list/README.md#patch_martech_list) - Update a list
 * [remove_martech_list](docs/sdks/list/README.md#remove_martech_list) - Remove a list
 * [update_martech_list](docs/sdks/list/README.md#update_martech_list) - Update a list
+
+### [Listing](docs/sdks/listing/README.md)
+
+* [create_property_listing](docs/sdks/listing/README.md#create_property_listing) - Create a listing
+* [get_property_listing](docs/sdks/listing/README.md#get_property_listing) - Retrieve a listing
+* [list_property_listings](docs/sdks/listing/README.md#list_property_listings) - List all listings
+* [patch_property_listing](docs/sdks/listing/README.md#patch_property_listing) - Update a listing
+* [remove_property_listing](docs/sdks/listing/README.md#remove_property_listing) - Remove a listing
+* [update_property_listing](docs/sdks/listing/README.md#update_property_listing) - Update a listing
 
 ### [Lms](docs/sdks/lms/README.md)
 
@@ -2242,11 +2266,38 @@ asyncio.run(main())
 ### [Property](docs/sdks/property/README.md)
 
 * [create_analytics_property](docs/sdks/property/README.md#create_analytics_property) - Create a property
+* [create_property_conversation](docs/sdks/property/README.md#create_property_conversation) - Create a conversation
+* [create_property_guest](docs/sdks/property/README.md#create_property_guest) - Create a guest
+* [create_property_listing](docs/sdks/property/README.md#create_property_listing) - Create a listing
+* [create_property_quote](docs/sdks/property/README.md#create_property_quote) - Create a quote
+* [create_property_reservation](docs/sdks/property/README.md#create_property_reservation) - Create a reservation
 * [get_analytics_property](docs/sdks/property/README.md#get_analytics_property) - Retrieve a property
+* [get_property_conversation](docs/sdks/property/README.md#get_property_conversation) - Retrieve a conversation
+* [get_property_guest](docs/sdks/property/README.md#get_property_guest) - Retrieve a guest
+* [get_property_listing](docs/sdks/property/README.md#get_property_listing) - Retrieve a listing
+* [get_property_reservation](docs/sdks/property/README.md#get_property_reservation) - Retrieve a reservation
+* [get_property_review](docs/sdks/property/README.md#get_property_review) - Retrieve a review
+* [get_property_unittype](docs/sdks/property/README.md#get_property_unittype) - Retrieve an unittype
 * [list_analytics_properties](docs/sdks/property/README.md#list_analytics_properties) - List all properties
+* [list_property_availabilities](docs/sdks/property/README.md#list_property_availabilities) - List all availabilities
+* [list_property_conversations](docs/sdks/property/README.md#list_property_conversations) - List all conversations
+* [list_property_guests](docs/sdks/property/README.md#list_property_guests) - List all guests
+* [list_property_listings](docs/sdks/property/README.md#list_property_listings) - List all listings
+* [list_property_reservations](docs/sdks/property/README.md#list_property_reservations) - List all reservations
+* [list_property_reviews](docs/sdks/property/README.md#list_property_reviews) - List all reviews
+* [list_property_unittypes](docs/sdks/property/README.md#list_property_unittypes) - List all unittypes
 * [patch_analytics_property](docs/sdks/property/README.md#patch_analytics_property) - Update a property
+* [patch_property_guest](docs/sdks/property/README.md#patch_property_guest) - Update a guest
+* [patch_property_listing](docs/sdks/property/README.md#patch_property_listing) - Update a listing
+* [patch_property_reservation](docs/sdks/property/README.md#patch_property_reservation) - Update a reservation
+* [patch_property_review](docs/sdks/property/README.md#patch_property_review) - Update a review
 * [remove_analytics_property](docs/sdks/property/README.md#remove_analytics_property) - Remove a property
+* [remove_property_listing](docs/sdks/property/README.md#remove_property_listing) - Remove a listing
 * [update_analytics_property](docs/sdks/property/README.md#update_analytics_property) - Update a property
+* [update_property_guest](docs/sdks/property/README.md#update_property_guest) - Update a guest
+* [update_property_listing](docs/sdks/property/README.md#update_property_listing) - Update a listing
+* [update_property_reservation](docs/sdks/property/README.md#update_property_reservation) - Update a reservation
+* [update_property_review](docs/sdks/property/README.md#update_property_review) - Update a review
 
 ### [Pullrequest](docs/sdks/pullrequest/README.md)
 
@@ -2278,6 +2329,7 @@ asyncio.run(main())
 ### [Quote](docs/sdks/quote/README.md)
 
 * [create_accounting_quote](docs/sdks/quote/README.md#create_accounting_quote) - Create a quote
+* [create_property_quote](docs/sdks/quote/README.md#create_property_quote) - Create a quote
 * [get_accounting_quote](docs/sdks/quote/README.md#get_accounting_quote) - Retrieve a quote
 * [list_accounting_quotes](docs/sdks/quote/README.md#list_accounting_quotes) - List all quotes
 * [patch_accounting_quote](docs/sdks/quote/README.md#patch_accounting_quote) - Update a quote
@@ -2380,25 +2432,34 @@ asyncio.run(main())
 ### [Reservation](docs/sdks/reservation/README.md)
 
 * [create_commerce_reservation](docs/sdks/reservation/README.md#create_commerce_reservation) - Create a reservation
+* [create_property_reservation](docs/sdks/reservation/README.md#create_property_reservation) - Create a reservation
 * [get_commerce_reservation](docs/sdks/reservation/README.md#get_commerce_reservation) - Retrieve a reservation
+* [get_property_reservation](docs/sdks/reservation/README.md#get_property_reservation) - Retrieve a reservation
 * [list_commerce_reservations](docs/sdks/reservation/README.md#list_commerce_reservations) - List all reservations
+* [list_property_reservations](docs/sdks/reservation/README.md#list_property_reservations) - List all reservations
 * [patch_commerce_reservation](docs/sdks/reservation/README.md#patch_commerce_reservation) - Update a reservation
+* [patch_property_reservation](docs/sdks/reservation/README.md#patch_property_reservation) - Update a reservation
 * [remove_commerce_reservation](docs/sdks/reservation/README.md#remove_commerce_reservation) - Remove a reservation
 * [update_commerce_reservation](docs/sdks/reservation/README.md#update_commerce_reservation) - Update a reservation
+* [update_property_reservation](docs/sdks/reservation/README.md#update_property_reservation) - Update a reservation
 
 ### [Review](docs/sdks/review/README.md)
 
 * [create_commerce_review](docs/sdks/review/README.md#create_commerce_review) - Create a review
 * [get_commerce_review](docs/sdks/review/README.md#get_commerce_review) - Retrieve a review
 * [get_performance_review](docs/sdks/review/README.md#get_performance_review) - Retrieve a review
+* [get_property_review](docs/sdks/review/README.md#get_property_review) - Retrieve a review
 * [get_social_review](docs/sdks/review/README.md#get_social_review) - Retrieve a review
 * [list_commerce_reviews](docs/sdks/review/README.md#list_commerce_reviews) - List all reviews
 * [list_performance_reviews](docs/sdks/review/README.md#list_performance_reviews) - List all reviews
+* [list_property_reviews](docs/sdks/review/README.md#list_property_reviews) - List all reviews
 * [list_social_reviews](docs/sdks/review/README.md#list_social_reviews) - List all reviews
 * [patch_commerce_review](docs/sdks/review/README.md#patch_commerce_review) - Update a review
+* [patch_property_review](docs/sdks/review/README.md#patch_property_review) - Update a review
 * [patch_social_review](docs/sdks/review/README.md#patch_social_review) - Update a review
 * [remove_commerce_review](docs/sdks/review/README.md#remove_commerce_review) - Remove a review
 * [update_commerce_review](docs/sdks/review/README.md#update_commerce_review) - Update a review
+* [update_property_review](docs/sdks/review/README.md#update_property_review) - Update a review
 * [update_social_review](docs/sdks/review/README.md#update_social_review) - Update a review
 
 ### [Room](docs/sdks/room/README.md)
@@ -2855,6 +2916,11 @@ asyncio.run(main())
 * [update_unified_webhook_resume](docs/sdks/unified/README.md#update_unified_webhook_resume) - Resume an unhealthy webhook subscription
 * [update_unified_webhook_trigger](docs/sdks/unified/README.md#update_unified_webhook_trigger) - Trigger webhook
 
+### [Unittype](docs/sdks/unittype/README.md)
+
+* [get_property_unittype](docs/sdks/unittype/README.md#get_property_unittype) - Retrieve an unittype
+* [list_property_unittypes](docs/sdks/unittype/README.md#list_property_unittypes) - List all unittypes
+
 ### [Usage](docs/sdks/usage/README.md)
 
 * [list_compute_usages](docs/sdks/usage/README.md#list_compute_usages) - List all usages
@@ -2996,7 +3062,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "10d91247-ded1-4d1d-9568-80e29a471e72",
+            "id": "427e8dd8-1c54-4931-b853-9b3c8b5596a6",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3009,7 +3075,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-08T20:25:09.921Z"),
+            "updated_at": parse_datetime("2023-08-09T04:48:43.304Z"),
         },
         "connection_id": "<id>",
     },
@@ -3043,7 +3109,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "10d91247-ded1-4d1d-9568-80e29a471e72",
+            "id": "427e8dd8-1c54-4931-b853-9b3c8b5596a6",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3056,7 +3122,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-08T20:25:09.921Z"),
+            "updated_at": parse_datetime("2023-08-09T04:48:43.304Z"),
         },
         "connection_id": "<id>",
     })
@@ -3104,7 +3170,7 @@ with UnifiedTo(
                 "currency": "CAD",
                 "customer_defined_code": "6170",
                 "description": "Voluptatibus valde spoliatio.",
-                "id": "10d91247-ded1-4d1d-9568-80e29a471e72",
+                "id": "427e8dd8-1c54-4931-b853-9b3c8b5596a6",
                 "is_payable": False,
                 "metadata": [],
                 "name": "Auto Loan Account",
@@ -3117,7 +3183,7 @@ with UnifiedTo(
                     },
                 ],
                 "type": shared.Type.ACCOUNTS_RECEIVABLE,
-                "updated_at": parse_datetime("2023-08-08T20:25:09.921Z"),
+                "updated_at": parse_datetime("2023-08-09T04:48:43.304Z"),
             },
             "connection_id": "<id>",
         })
@@ -3195,7 +3261,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "10d91247-ded1-4d1d-9568-80e29a471e72",
+            "id": "427e8dd8-1c54-4931-b853-9b3c8b5596a6",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3208,7 +3274,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-08T20:25:09.921Z"),
+            "updated_at": parse_datetime("2023-08-09T04:48:43.304Z"),
         },
         "connection_id": "<id>",
     })
@@ -3243,7 +3309,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "10d91247-ded1-4d1d-9568-80e29a471e72",
+            "id": "427e8dd8-1c54-4931-b853-9b3c8b5596a6",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3256,7 +3322,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-08T20:25:09.921Z"),
+            "updated_at": parse_datetime("2023-08-09T04:48:43.304Z"),
         },
         "connection_id": "<id>",
     })
@@ -3399,7 +3465,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "10d91247-ded1-4d1d-9568-80e29a471e72",
+            "id": "427e8dd8-1c54-4931-b853-9b3c8b5596a6",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3412,7 +3478,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-08T20:25:09.921Z"),
+            "updated_at": parse_datetime("2023-08-09T04:48:43.304Z"),
         },
         "connection_id": "<id>",
     })

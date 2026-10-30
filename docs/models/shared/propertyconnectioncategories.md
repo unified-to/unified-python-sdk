@@ -53,3 +53,4 @@ value = PropertyConnectionCategories.PASSTHROUGH
 | `LEGAL`        | legal          |
 | `COMPUTE`      | compute        |
 | `HEALTHCARE`   | healthcare     |
+| `PROPERTY`     | property       |

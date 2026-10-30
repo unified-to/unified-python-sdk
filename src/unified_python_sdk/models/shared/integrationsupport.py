@@ -5,7 +5,7 @@ from .property_integrationsupport_webhook_events import (
     PropertyIntegrationSupportWebhookEvents,
     PropertyIntegrationSupportWebhookEventsTypedDict,
 )
-from .virtual_webhook_carrier_id import (
+from .virtual_webhook_calendar_id import (
     FromWebhook,
     ListAccountID,
     ListAdID,
@@ -46,6 +46,7 @@ from .virtual_webhook_carrier_id import (
     ListFulltext,
     ListGoal,
     ListGroupID,
+    ListGuestID,
     ListInstanceID,
     ListInstructorID,
     ListInterviewID,
@@ -59,6 +60,7 @@ from .virtual_webhook_carrier_id import (
     ListLimit,
     ListLinkID,
     ListListID,
+    ListListingID,
     ListLocationID,
     ListMatterID,
     ListMedium,
@@ -85,6 +87,7 @@ from .virtual_webhook_carrier_id import (
     ListReference,
     ListRegionID,
     ListRepoID,
+    ListReservationID,
     ListRoleID,
     ListRoomID,
     ListRootID,
@@ -108,6 +111,7 @@ from .virtual_webhook_carrier_id import (
     ListTemplateID,
     ListTicketID,
     ListType,
+    ListUnittypeID,
     ListUpdatedGte,
     ListUserID,
     ListUserMentionedID,
@@ -152,10 +156,6 @@ from .virtual_webhook_carrier_id import (
     VirtualWebhookBillID,
     VirtualWebhookBranchID,
     VirtualWebhookCalendarID,
-    VirtualWebhookCallID,
-    VirtualWebhookCampaignID,
-    VirtualWebhookCandidateID,
-    VirtualWebhookCarrierID,
 )
 from enum import Enum
 from pydantic import field_serializer, model_serializer
@@ -169,6 +169,30 @@ from unified_python_sdk.types import (
     current_exclude_none,
     serialize_with_info,
 )
+
+
+class VirtualWebhookCallID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
+class VirtualWebhookCampaignID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
+class VirtualWebhookCandidateID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
+class VirtualWebhookCarrierID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
 
 
 class VirtualWebhookChannelID(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -267,6 +291,12 @@ class VirtualWebhookGroupID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class VirtualWebhookGuestID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class VirtualWebhookInvoiceID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -322,6 +352,12 @@ class VirtualWebhookLinkID(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class VirtualWebhookListID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
+class VirtualWebhookListingID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
     NOT_SUPPORTED = "not-supported"
@@ -430,6 +466,12 @@ class VirtualWebhookReference(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class VirtualWebhookRepoID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
+class VirtualWebhookReservationID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
     NOT_SUPPORTED = "not-supported"
@@ -575,6 +617,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_fulltext: NotRequired[ListFulltext]
     list_goal: NotRequired[ListGoal]
     list_group_id: NotRequired[ListGroupID]
+    list_guest_id: NotRequired[ListGuestID]
     list_instance_id: NotRequired[ListInstanceID]
     list_instructor_id: NotRequired[ListInstructorID]
     list_interview_id: NotRequired[ListInterviewID]
@@ -588,6 +631,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_limit: NotRequired[ListLimit]
     list_link_id: NotRequired[ListLinkID]
     list_list_id: NotRequired[ListListID]
+    list_listing_id: NotRequired[ListListingID]
     list_location_id: NotRequired[ListLocationID]
     list_matter_id: NotRequired[ListMatterID]
     list_medium: NotRequired[ListMedium]
@@ -614,6 +658,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_reference: NotRequired[ListReference]
     list_region_id: NotRequired[ListRegionID]
     list_repo_id: NotRequired[ListRepoID]
+    list_reservation_id: NotRequired[ListReservationID]
     list_role_id: NotRequired[ListRoleID]
     list_room_id: NotRequired[ListRoomID]
     list_root_id: NotRequired[ListRootID]
@@ -637,6 +682,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_template_id: NotRequired[ListTemplateID]
     list_ticket_id: NotRequired[ListTicketID]
     list_type: NotRequired[ListType]
+    list_unittype_id: NotRequired[ListUnittypeID]
     list_updated_gte: NotRequired[ListUpdatedGte]
     list_user_id: NotRequired[ListUserID]
     list_user_mentioned_id: NotRequired[ListUserMentionedID]
@@ -704,6 +750,7 @@ class IntegrationSupportTypedDict(TypedDict):
     virtual_webhook_fields: NotRequired[VirtualWebhookFields]
     virtual_webhook_form_id: NotRequired[VirtualWebhookFormID]
     virtual_webhook_group_id: NotRequired[VirtualWebhookGroupID]
+    virtual_webhook_guest_id: NotRequired[VirtualWebhookGuestID]
     virtual_webhook_invoice_id: NotRequired[VirtualWebhookInvoiceID]
     virtual_webhook_io_id: NotRequired[VirtualWebhookIoID]
     virtual_webhook_item_id: NotRequired[VirtualWebhookItemID]
@@ -714,6 +761,7 @@ class IntegrationSupportTypedDict(TypedDict):
     virtual_webhook_limit: NotRequired[VirtualWebhookLimit]
     virtual_webhook_link_id: NotRequired[VirtualWebhookLinkID]
     virtual_webhook_list_id: NotRequired[VirtualWebhookListID]
+    virtual_webhook_listing_id: NotRequired[VirtualWebhookListingID]
     virtual_webhook_location_id: NotRequired[VirtualWebhookLocationID]
     virtual_webhook_matter_id: NotRequired[VirtualWebhookMatterID]
     virtual_webhook_member_id: NotRequired[VirtualWebhookMemberID]
@@ -732,6 +780,7 @@ class IntegrationSupportTypedDict(TypedDict):
     virtual_webhook_property_id: NotRequired[VirtualWebhookPropertyID]
     virtual_webhook_reference: NotRequired[VirtualWebhookReference]
     virtual_webhook_repo_id: NotRequired[VirtualWebhookRepoID]
+    virtual_webhook_reservation_id: NotRequired[VirtualWebhookReservationID]
     virtual_webhook_saleschannel_id: NotRequired[VirtualWebhookSaleschannelID]
     virtual_webhook_session_id: NotRequired[VirtualWebhookSessionID]
     virtual_webhook_shipment_id: NotRequired[VirtualWebhookShipmentID]
@@ -837,6 +886,8 @@ class IntegrationSupport(BaseModel):
 
     list_group_id: Optional[ListGroupID] = None
 
+    list_guest_id: Optional[ListGuestID] = None
+
     list_instance_id: Optional[ListInstanceID] = None
 
     list_instructor_id: Optional[ListInstructorID] = None
@@ -862,6 +913,8 @@ class IntegrationSupport(BaseModel):
     list_link_id: Optional[ListLinkID] = None
 
     list_list_id: Optional[ListListID] = None
+
+    list_listing_id: Optional[ListListingID] = None
 
     list_location_id: Optional[ListLocationID] = None
 
@@ -915,6 +968,8 @@ class IntegrationSupport(BaseModel):
 
     list_repo_id: Optional[ListRepoID] = None
 
+    list_reservation_id: Optional[ListReservationID] = None
+
     list_role_id: Optional[ListRoleID] = None
 
     list_room_id: Optional[ListRoomID] = None
@@ -960,6 +1015,8 @@ class IntegrationSupport(BaseModel):
     list_ticket_id: Optional[ListTicketID] = None
 
     list_type: Optional[ListType] = None
+
+    list_unittype_id: Optional[ListUnittypeID] = None
 
     list_updated_gte: Optional[ListUpdatedGte] = None
 
@@ -1095,6 +1152,8 @@ class IntegrationSupport(BaseModel):
 
     virtual_webhook_group_id: Optional[VirtualWebhookGroupID] = None
 
+    virtual_webhook_guest_id: Optional[VirtualWebhookGuestID] = None
+
     virtual_webhook_invoice_id: Optional[VirtualWebhookInvoiceID] = None
 
     virtual_webhook_io_id: Optional[VirtualWebhookIoID] = None
@@ -1114,6 +1173,8 @@ class IntegrationSupport(BaseModel):
     virtual_webhook_link_id: Optional[VirtualWebhookLinkID] = None
 
     virtual_webhook_list_id: Optional[VirtualWebhookListID] = None
+
+    virtual_webhook_listing_id: Optional[VirtualWebhookListingID] = None
 
     virtual_webhook_location_id: Optional[VirtualWebhookLocationID] = None
 
@@ -1150,6 +1211,8 @@ class IntegrationSupport(BaseModel):
     virtual_webhook_reference: Optional[VirtualWebhookReference] = None
 
     virtual_webhook_repo_id: Optional[VirtualWebhookRepoID] = None
+
+    virtual_webhook_reservation_id: Optional[VirtualWebhookReservationID] = None
 
     virtual_webhook_saleschannel_id: Optional[VirtualWebhookSaleschannelID] = None
 
@@ -1545,6 +1608,15 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
+    @field_serializer("list_guest_id")
+    def serialize_list_guest_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListGuestID(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("list_instance_id")
     def serialize_list_instance_id(self, value):
         if isinstance(value, str):
@@ -1658,6 +1730,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.ListListID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("list_listing_id")
+    def serialize_list_listing_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListListingID(value)
             except ValueError:
                 return value
         return value
@@ -1896,6 +1977,15 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
+    @field_serializer("list_reservation_id")
+    def serialize_list_reservation_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListReservationID(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("list_role_id")
     def serialize_list_role_id(self, value):
         if isinstance(value, str):
@@ -2099,6 +2189,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.ListType(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("list_unittype_id")
+    def serialize_list_unittype_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListUnittypeID(value)
             except ValueError:
                 return value
         return value
@@ -2679,6 +2778,15 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
+    @field_serializer("virtual_webhook_guest_id")
+    def serialize_virtual_webhook_guest_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.VirtualWebhookGuestID(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("virtual_webhook_invoice_id")
     def serialize_virtual_webhook_invoice_id(self, value):
         if isinstance(value, str):
@@ -2765,6 +2873,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.VirtualWebhookListID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("virtual_webhook_listing_id")
+    def serialize_virtual_webhook_listing_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.VirtualWebhookListingID(value)
             except ValueError:
                 return value
         return value
@@ -2927,6 +3044,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.VirtualWebhookRepoID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("virtual_webhook_reservation_id")
+    def serialize_virtual_webhook_reservation_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.VirtualWebhookReservationID(value)
             except ValueError:
                 return value
         return value
@@ -3123,6 +3249,7 @@ class IntegrationSupport(BaseModel):
                 "list_fulltext",
                 "list_goal",
                 "list_group_id",
+                "list_guest_id",
                 "list_instance_id",
                 "list_instructor_id",
                 "list_interview_id",
@@ -3136,6 +3263,7 @@ class IntegrationSupport(BaseModel):
                 "list_limit",
                 "list_link_id",
                 "list_list_id",
+                "list_listing_id",
                 "list_location_id",
                 "list_matter_id",
                 "list_medium",
@@ -3162,6 +3290,7 @@ class IntegrationSupport(BaseModel):
                 "list_reference",
                 "list_region_id",
                 "list_repo_id",
+                "list_reservation_id",
                 "list_role_id",
                 "list_room_id",
                 "list_root_id",
@@ -3185,6 +3314,7 @@ class IntegrationSupport(BaseModel):
                 "list_template_id",
                 "list_ticket_id",
                 "list_type",
+                "list_unittype_id",
                 "list_updated_gte",
                 "list_user_id",
                 "list_user_mentioned_id",
@@ -3252,6 +3382,7 @@ class IntegrationSupport(BaseModel):
                 "virtual_webhook_fields",
                 "virtual_webhook_form_id",
                 "virtual_webhook_group_id",
+                "virtual_webhook_guest_id",
                 "virtual_webhook_invoice_id",
                 "virtual_webhook_io_id",
                 "virtual_webhook_item_id",
@@ -3262,6 +3393,7 @@ class IntegrationSupport(BaseModel):
                 "virtual_webhook_limit",
                 "virtual_webhook_link_id",
                 "virtual_webhook_list_id",
+                "virtual_webhook_listing_id",
                 "virtual_webhook_location_id",
                 "virtual_webhook_matter_id",
                 "virtual_webhook_member_id",
@@ -3280,6 +3412,7 @@ class IntegrationSupport(BaseModel):
                 "virtual_webhook_property_id",
                 "virtual_webhook_reference",
                 "virtual_webhook_repo_id",
+                "virtual_webhook_reservation_id",
                 "virtual_webhook_saleschannel_id",
                 "virtual_webhook_session_id",
                 "virtual_webhook_shipment_id",

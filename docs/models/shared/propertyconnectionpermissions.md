@@ -426,3 +426,17 @@ value = PropertyConnectionPermissions.ACCOUNTING_ACCOUNT_READ
 | `HEALTHCARE_CAREPLAN_WRITE`            | healthcare_careplan_write              |
 | `HEALTHCARE_GOAL_READ`                 | healthcare_goal_read                   |
 | `HEALTHCARE_GOAL_WRITE`                | healthcare_goal_write                  |
+| `PROPERTY_LISTING_READ`                | property_listing_read                  |
+| `PROPERTY_LISTING_WRITE`               | property_listing_write                 |
+| `PROPERTY_UNITTYPE_READ`               | property_unittype_read                 |
+| `PROPERTY_GUEST_READ`                  | property_guest_read                    |
+| `PROPERTY_GUEST_WRITE`                 | property_guest_write                   |
+| `PROPERTY_RESERVATION_READ`            | property_reservation_read              |
+| `PROPERTY_RESERVATION_WRITE`           | property_reservation_write             |
+| `PROPERTY_AVAILABILITY_READ`           | property_availability_read             |
+| `PROPERTY_QUOTE_READ`                  | property_quote_read                    |
+| `PROPERTY_QUOTE_WRITE`                 | property_quote_write                   |
+| `PROPERTY_REVIEW_READ`                 | property_review_read                   |
+| `PROPERTY_REVIEW_WRITE`                | property_review_write                  |
+| `PROPERTY_CONVERSATION_READ`           | property_conversation_read             |
+| `PROPERTY_CONVERSATION_WRITE`          | property_conversation_write            |

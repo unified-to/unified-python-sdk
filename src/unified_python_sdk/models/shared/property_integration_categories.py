@@ -44,3 +44,4 @@ class PropertyIntegrationCategories(str, Enum, metaclass=utils.OpenEnumMeta):
     LEGAL = "legal"
     COMPUTE = "compute"
     HEALTHCARE = "healthcare"
+    PROPERTY = "property"
