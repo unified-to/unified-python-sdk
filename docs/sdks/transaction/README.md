@@ -33,12 +33,12 @@ with UnifiedTo(
     res = unified_to.transaction.create_accounting_transaction(request={
         "accounting_transaction": {
             "created_at": parse_datetime("2019-09-25T11:40:42.574Z"),
-            "id": "f0634022-0e12-4e27-b12c-dbdd6247f209",
+            "id": "4c84fa49-eea4-49e5-9c74-4b54872b99ed",
             "lineitems": [
                 {
                     "category_ids": [],
                     "description": "The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability",
-                    "id": "ff71cbbe-2519-4037-8210-cefdace8123d",
+                    "id": "657ba2fa-ea12-4053-b333-6aef9714e10f",
                     "name": "Shirt",
                     "total_amount": 10184.0,
                     "unit_amount": 536.0,
@@ -50,7 +50,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "total_amount": 10184.0,
             "transaction_at": parse_datetime("2019-09-25T11:40:42.574Z"),
-            "updated_at": parse_datetime("2019-10-14T07:43:03.868Z"),
+            "updated_at": parse_datetime("2019-10-14T07:52:05.010Z"),
         },
         "connection_id": "<id>",
     })
@@ -194,12 +194,12 @@ with UnifiedTo(
     res = unified_to.transaction.patch_accounting_transaction(request={
         "accounting_transaction": {
             "created_at": parse_datetime("2019-09-25T11:40:42.574Z"),
-            "id": "6404e236-8b5f-433c-baf4-ef2e83e29e04",
+            "id": "0d814d44-c2c4-4582-a8d2-075a1c9680e3",
             "lineitems": [
                 {
                     "category_ids": [],
                     "description": "The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability",
-                    "id": "0b19483a-cf22-46a5-b869-756618577b39",
+                    "id": "c310547b-6484-45f6-a437-04f3efdb4724",
                     "name": "Shirt",
                     "total_amount": 10184.0,
                     "unit_amount": 536.0,
@@ -211,7 +211,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "total_amount": 10184.0,
             "transaction_at": parse_datetime("2019-09-25T11:40:42.574Z"),
-            "updated_at": parse_datetime("2019-10-14T07:43:03.868Z"),
+            "updated_at": parse_datetime("2019-10-14T07:52:05.010Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -310,12 +310,12 @@ with UnifiedTo(
     res = unified_to.transaction.update_accounting_transaction(request={
         "accounting_transaction": {
             "created_at": parse_datetime("2019-09-25T11:40:42.574Z"),
-            "id": "6404e236-8b5f-433c-baf4-ef2e83e29e04",
+            "id": "0d814d44-c2c4-4582-a8d2-075a1c9680e3",
             "lineitems": [
                 {
                     "category_ids": [],
                     "description": "The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability",
-                    "id": "0b19483a-cf22-46a5-b869-756618577b39",
+                    "id": "c310547b-6484-45f6-a437-04f3efdb4724",
                     "name": "Shirt",
                     "total_amount": 10184.0,
                     "unit_amount": 536.0,
@@ -327,7 +327,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "total_amount": 10184.0,
             "transaction_at": parse_datetime("2019-09-25T11:40:42.574Z"),
-            "updated_at": parse_datetime("2019-10-14T07:43:03.868Z"),
+            "updated_at": parse_datetime("2019-10-14T07:52:05.010Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

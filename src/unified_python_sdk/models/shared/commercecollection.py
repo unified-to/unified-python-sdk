@@ -28,6 +28,7 @@ class CommerceCollectionTypedDict(TypedDict):
     r"""A collection of items/products/services"""
 
     name: str
+    r"""The collection's name"""
     created_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     description: NotRequired[str]
@@ -52,6 +53,7 @@ class CommerceCollection(BaseModel):
     r"""A collection of items/products/services"""
 
     name: str
+    r"""The collection's name"""
 
     created_at: Optional[datetime] = None
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""

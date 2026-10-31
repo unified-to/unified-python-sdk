@@ -49,6 +49,7 @@ class CommerceItemTypedDict(TypedDict):
     media: NotRequired[List[CommerceItemMediaTypedDict]]
     metadata: NotRequired[List[CommerceMetadataTypedDict]]
     name: NotRequired[str]
+    r"""The item's (product's) name"""
     prices: NotRequired[List[CommerceItemPriceTypedDict]]
     public_description: NotRequired[str]
     public_name: NotRequired[str]
@@ -105,6 +106,7 @@ class CommerceItem(BaseModel):
     metadata: Optional[List[CommerceMetadata]] = None
 
     name: Optional[str] = None
+    r"""The item's (product's) name"""
 
     prices: Optional[List[CommerceItemPrice]] = None
 

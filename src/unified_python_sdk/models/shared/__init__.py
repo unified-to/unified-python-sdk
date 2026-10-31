@@ -687,6 +687,15 @@ if TYPE_CHECKING:
         CommerceReservationStatus,
         CommerceReservationTypedDict,
     )
+    from .commercereturn import (
+        CommerceReturn,
+        CommerceReturnStatus,
+        CommerceReturnTypedDict,
+    )
+    from .commercereturnlineitem import (
+        CommerceReturnLineitem,
+        CommerceReturnLineitemTypedDict,
+    )
     from .commercereview import (
         CommerceReview,
         CommerceReviewStatus,
@@ -3529,6 +3538,11 @@ __all__ = [
     "CommerceReservation",
     "CommerceReservationStatus",
     "CommerceReservationTypedDict",
+    "CommerceReturn",
+    "CommerceReturnLineitem",
+    "CommerceReturnLineitemTypedDict",
+    "CommerceReturnStatus",
+    "CommerceReturnTypedDict",
     "CommerceReview",
     "CommerceReviewComment",
     "CommerceReviewCommentStatus",
@@ -5958,6 +5972,11 @@ _dynamic_imports: dict[str, str] = {
     "CommerceReservation": ".commercereservation",
     "CommerceReservationStatus": ".commercereservation",
     "CommerceReservationTypedDict": ".commercereservation",
+    "CommerceReturn": ".commercereturn",
+    "CommerceReturnStatus": ".commercereturn",
+    "CommerceReturnTypedDict": ".commercereturn",
+    "CommerceReturnLineitem": ".commercereturnlineitem",
+    "CommerceReturnLineitemTypedDict": ".commercereturnlineitem",
     "CommerceReview": ".commercereview",
     "CommerceReviewStatus": ".commercereview",
     "CommerceReviewTypedDict": ".commercereview",

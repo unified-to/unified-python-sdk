@@ -183,6 +183,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.repository import Repository
     from unified_python_sdk.request import Request
     from unified_python_sdk.reservation import Reservation
+    from unified_python_sdk.return_ import Return
     from unified_python_sdk.review import Review
     from unified_python_sdk.room import Room
     from unified_python_sdk.saleschannel import Saleschannel
@@ -321,6 +322,7 @@ class UnifiedTo(BaseSDK):
     item: "Item"
     itemvariant: "Itemvariant"
     reservation: "Reservation"
+    return_: "Return"
     review: "Review"
     saleschannel: "Saleschannel"
     compute: "Compute"
@@ -547,6 +549,7 @@ class UnifiedTo(BaseSDK):
         "item": ("unified_python_sdk.item", "Item"),
         "itemvariant": ("unified_python_sdk.itemvariant", "Itemvariant"),
         "reservation": ("unified_python_sdk.reservation", "Reservation"),
+        "return_": ("unified_python_sdk.return_", "Return"),
         "review": ("unified_python_sdk.review", "Review"),
         "saleschannel": ("unified_python_sdk.saleschannel", "Saleschannel"),
         "compute": ("unified_python_sdk.compute", "Compute"),
