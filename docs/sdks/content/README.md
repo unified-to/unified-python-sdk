@@ -39,7 +39,7 @@ with UnifiedTo(
             "description": "Usque laboriosam ventosus adflicto.",
             "difficulty": "Beginner",
             "duration_minutes": 19.0,
-            "id": "a65ded83-9f63-4242-a47e-1182855d16be",
+            "id": "3f0569cb-187d-4dc0-b4dc-a7e50b1ebc88",
             "instructors": [],
             "is_active": True,
             "languages": [
@@ -99,7 +99,7 @@ with UnifiedTo(
             "metadata": [],
             "name": "ut",
             "provider_name": "Bins LLC",
-            "published_at": parse_datetime("2022-09-06T08:08:23.199Z"),
+            "published_at": parse_datetime("2022-09-06T15:42:21.560Z"),
             "short_description": "Caritas.",
             "skills": [
                 "trucido",
@@ -114,7 +114,7 @@ with UnifiedTo(
             "tags": [
                 "dens",
             ],
-            "updated_at": parse_datetime("2022-10-07T09:46:05.244Z"),
+            "updated_at": parse_datetime("2022-10-07T17:40:41.879Z"),
         },
         "connection_id": "<id>",
     })
@@ -264,7 +264,7 @@ with UnifiedTo(
             "description": "Usque laboriosam ventosus adflicto.",
             "difficulty": "Beginner",
             "duration_minutes": 19.0,
-            "id": "ecc5a9b2-90e2-452b-876c-4433fb2e4146",
+            "id": "804617f7-1d18-4f5b-abcf-f421e912f7fa",
             "instructors": [],
             "is_active": True,
             "languages": [
@@ -324,7 +324,7 @@ with UnifiedTo(
             "metadata": [],
             "name": "ut",
             "provider_name": "Bins LLC",
-            "published_at": parse_datetime("2022-09-06T08:08:23.205Z"),
+            "published_at": parse_datetime("2022-09-06T15:42:21.567Z"),
             "short_description": "Caritas.",
             "skills": [
                 "trucido",
@@ -339,7 +339,7 @@ with UnifiedTo(
             "tags": [
                 "dens",
             ],
-            "updated_at": parse_datetime("2022-10-07T09:46:05.250Z"),
+            "updated_at": parse_datetime("2022-10-07T17:40:41.886Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -444,7 +444,7 @@ with UnifiedTo(
             "description": "Usque laboriosam ventosus adflicto.",
             "difficulty": "Beginner",
             "duration_minutes": 19.0,
-            "id": "ecc5a9b2-90e2-452b-876c-4433fb2e4146",
+            "id": "804617f7-1d18-4f5b-abcf-f421e912f7fa",
             "instructors": [],
             "is_active": True,
             "languages": [
@@ -504,7 +504,7 @@ with UnifiedTo(
             "metadata": [],
             "name": "ut",
             "provider_name": "Bins LLC",
-            "published_at": parse_datetime("2022-09-06T08:08:23.205Z"),
+            "published_at": parse_datetime("2022-09-06T15:42:21.567Z"),
             "short_description": "Caritas.",
             "skills": [
                 "trucido",
@@ -519,7 +519,7 @@ with UnifiedTo(
             "tags": [
                 "dens",
             ],
-            "updated_at": parse_datetime("2022-10-07T09:46:05.250Z"),
+            "updated_at": parse_datetime("2022-10-07T17:40:41.886Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
