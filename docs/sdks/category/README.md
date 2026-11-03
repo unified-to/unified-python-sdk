@@ -7,8 +7,10 @@
 * [create_accounting_category](#create_accounting_category) - Create a category
 * [create_ticketing_category](#create_ticketing_category) - Create a category
 * [get_accounting_category](#get_accounting_category) - Retrieve a category
+* [get_plm_category](#get_plm_category) - Retrieve a category
 * [get_ticketing_category](#get_ticketing_category) - Retrieve a category
 * [list_accounting_categories](#list_accounting_categories) - List all categories
+* [list_plm_categories](#list_plm_categories) - List all categories
 * [list_ticketing_categories](#list_ticketing_categories) - List all categories
 * [patch_accounting_category](#patch_accounting_category) - Update a category
 * [patch_ticketing_category](#patch_ticketing_category) - Update a category
@@ -40,11 +42,11 @@ with UnifiedTo(
         "accounting_category": {
             "created_at": parse_datetime("2023-05-30T12:29:04.257Z"),
             "description": "Textus ab thymum labore basium.",
-            "id": "84178df0-da97-4525-a5ab-8d519dbdb752",
+            "id": "e233516d-78eb-4384-ad3f-66c0ec843ff5",
             "is_active": False,
             "metadata": [],
             "name": "Beauty",
-            "updated_at": parse_datetime("2025-09-19T14:20:23.579Z"),
+            "updated_at": parse_datetime("2025-09-20T06:01:51.278Z"),
         },
         "connection_id": "<id>",
     })
@@ -96,11 +98,11 @@ with UnifiedTo(
         "ticketing_category": {
             "created_at": parse_datetime("2019-10-19T22:02:51.067Z"),
             "description": "Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.",
-            "id": "935c8e81-cb73-4533-86e6-e23f01678df3",
+            "id": "76b8aa56-213a-46b7-b2ce-5560348963a2",
             "is_active": True,
             "metadata": [],
             "name": "amicitia",
-            "updated_at": parse_datetime("2026-01-24T17:13:56.822Z"),
+            "updated_at": parse_datetime("2026-01-25T13:58:31.536Z"),
         },
         "connection_id": "<id>",
     })
@@ -169,6 +171,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.GetAccountingCategoryResponse](../../models/operations/getaccountingcategoryresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_plm_category
+
+Retrieves a single PlmCategory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getPlmCategory" method="get" path="/plm/{connection_id}/category/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.category.get_plm_category(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.plm_category is not None
+
+    # Handle response
+    print(res.plm_category)
+
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.GetPlmCategoryRequest](../../models/operations/getplmcategoryrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+
+### Response
+
+**[operations.GetPlmCategoryResponse](../../models/operations/getplmcategoryresponse.md)**
 
 ### Errors
 
@@ -269,6 +318,52 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## list_plm_categories
+
+Returns a list of PlmCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listPlmCategories" method="get" path="/plm/{connection_id}/category" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.category.list_plm_categories(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.plm_categories is not None
+
+    # Handle response
+    print(res.plm_categories)
+
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.ListPlmCategoriesRequest](../../models/operations/listplmcategoriesrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+
+### Response
+
+**[operations.ListPlmCategoriesResponse](../../models/operations/listplmcategoriesresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## list_ticketing_categories
 
 Returns a list of TicketingCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -338,11 +433,11 @@ with UnifiedTo(
         "accounting_category": {
             "created_at": parse_datetime("2023-05-30T12:29:04.257Z"),
             "description": "Textus ab thymum labore basium.",
-            "id": "c7d69a6e-3f99-4f3e-a19b-2ec9afa0db5c",
+            "id": "d07f25aa-7d1e-49a3-bf10-5c808577e9a7",
             "is_active": False,
             "metadata": [],
             "name": "Beauty",
-            "updated_at": parse_datetime("2025-09-19T14:20:23.588Z"),
+            "updated_at": parse_datetime("2025-09-20T06:01:51.284Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -395,11 +490,11 @@ with UnifiedTo(
         "ticketing_category": {
             "created_at": parse_datetime("2019-10-19T22:02:51.067Z"),
             "description": "Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.",
-            "id": "296b4579-b2c3-41af-8007-8df79f86ef60",
+            "id": "3978fbad-656b-4af2-8cec-ebbc3baaf26a",
             "is_active": True,
             "metadata": [],
             "name": "amicitia",
-            "updated_at": parse_datetime("2026-01-24T17:13:56.829Z"),
+            "updated_at": parse_datetime("2026-01-25T13:58:31.543Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -546,11 +641,11 @@ with UnifiedTo(
         "accounting_category": {
             "created_at": parse_datetime("2023-05-30T12:29:04.257Z"),
             "description": "Textus ab thymum labore basium.",
-            "id": "c7d69a6e-3f99-4f3e-a19b-2ec9afa0db5c",
+            "id": "d07f25aa-7d1e-49a3-bf10-5c808577e9a7",
             "is_active": False,
             "metadata": [],
             "name": "Beauty",
-            "updated_at": parse_datetime("2025-09-19T14:20:23.588Z"),
+            "updated_at": parse_datetime("2025-09-20T06:01:51.284Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -603,11 +698,11 @@ with UnifiedTo(
         "ticketing_category": {
             "created_at": parse_datetime("2019-10-19T22:02:51.067Z"),
             "description": "Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.",
-            "id": "296b4579-b2c3-41af-8007-8df79f86ef60",
+            "id": "3978fbad-656b-4af2-8cec-ebbc3baaf26a",
             "is_active": True,
             "metadata": [],
             "name": "amicitia",
-            "updated_at": parse_datetime("2026-01-24T17:13:56.829Z"),
+            "updated_at": parse_datetime("2026-01-25T13:58:31.543Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

@@ -56,6 +56,7 @@ class ListUnifiedIntegrationsQueryParamCategories(str, Enum):
     COMPUTE = "compute"
     HEALTHCARE = "healthcare"
     PROPERTY = "property"
+    PLM = "plm"
 
 
 class ListUnifiedIntegrationsRequestTypedDict(TypedDict):

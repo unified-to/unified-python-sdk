@@ -31,15 +31,15 @@ with UnifiedTo(
 
     res = unified_to.call.create_uc_call(request={
         "uc_call": {
-            "answer_at": parse_datetime("2025-05-20T17:00:12.885Z"),
+            "answer_at": parse_datetime("2025-05-21T06:42:53.872Z"),
             "contacts": [],
-            "conversation_identifier": "3cdc672d-7cb6-41a1-b877-845dab1fc408",
+            "conversation_identifier": "1ece00f1-65d4-45c3-b7af-abaedfae55f4",
             "cost_amount": 1.564,
             "created_at": parse_datetime("2023-04-22T19:05:34.882Z"),
             "currency": "USD",
             "duration_seconds": 2556.0,
-            "end_at": parse_datetime("2024-06-02T20:34:58.353Z"),
-            "id": "3cdc672d-7cb6-41a1-b877-845dab1fc408",
+            "end_at": parse_datetime("2024-06-03T03:56:14.362Z"),
+            "id": "1ece00f1-65d4-45c3-b7af-abaedfae55f4",
             "is_private": False,
             "metadata": [
                 {
@@ -47,20 +47,20 @@ with UnifiedTo(
 
                     },
                     "format_": shared.UcMetadataFormat.PRICE,
-                    "id": "113bbbbc-f0e1-4417-a9aa-2a8a0d90e1e9",
+                    "id": "40a1494a-1993-41e7-babb-4475f540bd3e",
                     "namespace": "custom",
                     "slug": "custom_field",
                     "value": "tui",
                 },
             ],
-            "start_at": parse_datetime("2023-12-19T15:52:19.654Z"),
+            "start_at": parse_datetime("2023-12-19T20:13:25.975Z"),
             "status": shared.UcCallStatus.IN_PROGRESS,
             "telephone": {
                 "telephone": "(493) 534-0768",
                 "type": shared.PropertyUcCallTelephoneType.MOBILE,
             },
             "type": shared.UcCallType.INBOUND,
-            "updated_at": parse_datetime("2023-08-04T07:43:16.271Z"),
+            "updated_at": parse_datetime("2023-08-04T09:35:29.789Z"),
             "user_phone": "819-894-3317 x163",
         },
         "connection_id": "<id>",
@@ -204,15 +204,15 @@ with UnifiedTo(
 
     res = unified_to.call.patch_uc_call(request={
         "uc_call": {
-            "answer_at": parse_datetime("2025-05-20T17:00:12.916Z"),
+            "answer_at": parse_datetime("2025-05-21T06:42:53.926Z"),
             "contacts": [],
-            "conversation_identifier": "b70bba4d-b5a8-4d73-b69f-526d82cb779d",
+            "conversation_identifier": "1998b2fa-4dcb-4835-a87f-aaf63c1ff4a0",
             "cost_amount": 1.564,
             "created_at": parse_datetime("2023-04-22T19:05:34.882Z"),
             "currency": "USD",
             "duration_seconds": 2556.0,
-            "end_at": parse_datetime("2024-06-02T20:34:58.369Z"),
-            "id": "b70bba4d-b5a8-4d73-b69f-526d82cb779d",
+            "end_at": parse_datetime("2024-06-03T03:56:14.390Z"),
+            "id": "1998b2fa-4dcb-4835-a87f-aaf63c1ff4a0",
             "is_private": False,
             "metadata": [
                 {
@@ -220,20 +220,20 @@ with UnifiedTo(
 
                     },
                     "format_": shared.UcMetadataFormat.PRICE,
-                    "id": "1071cbe1-900a-47ca-bd2e-49d628065017",
+                    "id": "03acf3f6-afd7-4e62-83e2-38c21d782a5f",
                     "namespace": "custom",
                     "slug": "custom_field",
                     "value": "tui",
                 },
             ],
-            "start_at": parse_datetime("2023-12-19T15:52:19.664Z"),
+            "start_at": parse_datetime("2023-12-19T20:13:25.992Z"),
             "status": shared.UcCallStatus.IN_PROGRESS,
             "telephone": {
                 "telephone": "(493) 534-0768",
                 "type": shared.PropertyUcCallTelephoneType.MOBILE,
             },
             "type": shared.UcCallType.INBOUND,
-            "updated_at": parse_datetime("2023-08-04T07:43:16.275Z"),
+            "updated_at": parse_datetime("2023-08-04T09:35:29.796Z"),
             "user_phone": "819-894-3317 x163",
         },
         "connection_id": "<id>",
@@ -285,15 +285,15 @@ with UnifiedTo(
 
     res = unified_to.call.update_uc_call(request={
         "uc_call": {
-            "answer_at": parse_datetime("2025-05-20T17:00:12.916Z"),
+            "answer_at": parse_datetime("2025-05-21T06:42:53.926Z"),
             "contacts": [],
-            "conversation_identifier": "b70bba4d-b5a8-4d73-b69f-526d82cb779d",
+            "conversation_identifier": "1998b2fa-4dcb-4835-a87f-aaf63c1ff4a0",
             "cost_amount": 1.564,
             "created_at": parse_datetime("2023-04-22T19:05:34.882Z"),
             "currency": "USD",
             "duration_seconds": 2556.0,
-            "end_at": parse_datetime("2024-06-02T20:34:58.369Z"),
-            "id": "b70bba4d-b5a8-4d73-b69f-526d82cb779d",
+            "end_at": parse_datetime("2024-06-03T03:56:14.390Z"),
+            "id": "1998b2fa-4dcb-4835-a87f-aaf63c1ff4a0",
             "is_private": False,
             "metadata": [
                 {
@@ -301,20 +301,20 @@ with UnifiedTo(
 
                     },
                     "format_": shared.UcMetadataFormat.PRICE,
-                    "id": "1071cbe1-900a-47ca-bd2e-49d628065017",
+                    "id": "03acf3f6-afd7-4e62-83e2-38c21d782a5f",
                     "namespace": "custom",
                     "slug": "custom_field",
                     "value": "tui",
                 },
             ],
-            "start_at": parse_datetime("2023-12-19T15:52:19.664Z"),
+            "start_at": parse_datetime("2023-12-19T20:13:25.992Z"),
             "status": shared.UcCallStatus.IN_PROGRESS,
             "telephone": {
                 "telephone": "(493) 534-0768",
                 "type": shared.PropertyUcCallTelephoneType.MOBILE,
             },
             "type": shared.UcCallType.INBOUND,
-            "updated_at": parse_datetime("2023-08-04T07:43:16.275Z"),
+            "updated_at": parse_datetime("2023-08-04T09:35:29.796Z"),
             "user_phone": "819-894-3317 x163",
         },
         "connection_id": "<id>",

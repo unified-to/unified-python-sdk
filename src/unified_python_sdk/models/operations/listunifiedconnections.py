@@ -56,6 +56,7 @@ class Categories(str, Enum):
     COMPUTE = "compute"
     HEALTHCARE = "healthcare"
     PROPERTY = "property"
+    PLM = "plm"
 
 
 class ListUnifiedConnectionsRequestTypedDict(TypedDict):

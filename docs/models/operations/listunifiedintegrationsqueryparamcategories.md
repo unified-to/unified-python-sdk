@@ -52,3 +52,4 @@ value = ListUnifiedIntegrationsQueryParamCategories.PASSTHROUGH
 | `COMPUTE`      | compute        |
 | `HEALTHCARE`   | healthcare     |
 | `PROPERTY`     | property       |
+| `PLM`          | plm            |

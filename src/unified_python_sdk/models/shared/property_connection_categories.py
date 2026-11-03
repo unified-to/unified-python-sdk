@@ -45,3 +45,4 @@ class PropertyConnectionCategories(str, Enum, metaclass=utils.OpenEnumMeta):
     COMPUTE = "compute"
     HEALTHCARE = "healthcare"
     PROPERTY = "property"
+    PLM = "plm"

@@ -34,7 +34,7 @@ with UnifiedTo(
             "dimension": 423.0,
             "embeddings": "Est.",
             "enconding_format": shared.EncondingFormat.FLOAT,
-            "id": "d7f28d38-cd1b-4615-b372-ef52b368982f",
+            "id": "abcdc8ca-e2ac-436b-9a7f-25472d23c0a2",
             "max_tokens": 223.0,
             "tokens_used": 836.0,
             "type": "classification",

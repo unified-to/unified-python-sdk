@@ -46,7 +46,7 @@ class ListCalendarEventsQueryParamFields(str, Enum):
     SEND_NOTIFICATIONS = "send_notifications"
     MATTER_ID = "matter_id"
     METADATA = "metadata"
-    ROOM_IDS = "room_ids"
+    ROOMS = "rooms"
     RAW = "raw"
 
 

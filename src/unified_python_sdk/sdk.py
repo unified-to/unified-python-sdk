@@ -43,6 +43,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.bankfeedtransaction import Bankfeedtransaction
     from unified_python_sdk.benefit import Benefit
     from unified_python_sdk.bill import Bill
+    from unified_python_sdk.bomline import Bomline
     from unified_python_sdk.branch import Branch
     from unified_python_sdk.busy import Busy
     from unified_python_sdk.calendar import Calendar
@@ -147,6 +148,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.organization import Organization
     from unified_python_sdk.package import Package
     from unified_python_sdk.page import Page
+    from unified_python_sdk.part import Part
     from unified_python_sdk.passthrough import Passthrough
     from unified_python_sdk.patient import Patient
     from unified_python_sdk.paycode import Paycode
@@ -158,6 +160,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.performance import Performance
     from unified_python_sdk.person import Person
     from unified_python_sdk.pipeline import Pipeline
+    from unified_python_sdk.plm import Plm
     from unified_python_sdk.post import Post
     from unified_python_sdk.practicearea import Practicearea
     from unified_python_sdk.practitioner import Practitioner
@@ -417,6 +420,10 @@ class UnifiedTo(BaseSDK):
     performance: "Performance"
     cycle: "Cycle"
     feedback: "Feedback"
+    plm: "Plm"
+    bomline: "Bomline"
+    change: "Change"
+    part: "Part"
     conversation: "Conversation"
     guest: "Guest"
     listing: "Listing"
@@ -441,7 +448,6 @@ class UnifiedTo(BaseSDK):
     post: "Post"
     storage: "Storage"
     file: "File"
-    change: "Change"
     ticketing: "Ticketing"
     customer: "Customer"
     note: "Note"
@@ -644,6 +650,10 @@ class UnifiedTo(BaseSDK):
         "performance": ("unified_python_sdk.performance", "Performance"),
         "cycle": ("unified_python_sdk.cycle", "Cycle"),
         "feedback": ("unified_python_sdk.feedback", "Feedback"),
+        "plm": ("unified_python_sdk.plm", "Plm"),
+        "bomline": ("unified_python_sdk.bomline", "Bomline"),
+        "change": ("unified_python_sdk.change", "Change"),
+        "part": ("unified_python_sdk.part", "Part"),
         "conversation": ("unified_python_sdk.conversation", "Conversation"),
         "guest": ("unified_python_sdk.guest", "Guest"),
         "listing": ("unified_python_sdk.listing", "Listing"),
@@ -668,7 +678,6 @@ class UnifiedTo(BaseSDK):
         "post": ("unified_python_sdk.post", "Post"),
         "storage": ("unified_python_sdk.storage", "Storage"),
         "file": ("unified_python_sdk.file", "File"),
-        "change": ("unified_python_sdk.change", "Change"),
         "ticketing": ("unified_python_sdk.ticketing", "Ticketing"),
         "customer": ("unified_python_sdk.customer", "Customer"),
         "note": ("unified_python_sdk.note", "Note"),

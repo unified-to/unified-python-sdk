@@ -1,0 +1,23 @@
+# PlmBomline
+
+One parent to child usage in a bill of materials
+
+
+## Fields
+
+| Field                                                                | Type                                                                 | Required                                                             | Description                                                          |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `child_part_id`                                                      | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | The component's PlmPart ID (a revision ID)                           |
+| `child_revision`                                                     | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | Pinned child revision, when the line pins one                        |
+| `created_at`                                                         | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_minus_sign:                                                   | (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)                             |
+| `effective_at`                                                       | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_minus_sign:                                                   | (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)                             |
+| `expires_at`                                                         | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_minus_sign:                                                   | (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)                             |
+| `id`                                                                 | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `line_number`                                                        | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | Find or item number on the BOM                                       |
+| `notes`                                                              | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `parent_part_id`                                                     | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | The assembly                                                         |
+| `quantity`                                                           | *Optional[float]*                                                    | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `raw`                                                                | Dict[str, *Any*]                                                     | :heavy_minus_sign:                                                   | Raw data from integration                                            |
+| `reference_designators`                                              | List[*str*]                                                          | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `unit_of_measure`                                                    | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `updated_at`                                                         | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_minus_sign:                                                   | (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)                             |

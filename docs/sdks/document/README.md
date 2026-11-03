@@ -7,23 +7,28 @@
 * [create_ats_document](#create_ats_document) - Create a document
 * [create_healthcare_document](#create_healthcare_document) - Create a document
 * [create_hris_document](#create_hris_document) - Create a document
+* [create_plm_document](#create_plm_document) - Create a document
 * [create_signing_document](#create_signing_document) - Create a document
 * [get_ats_document](#get_ats_document) - Retrieve a document
 * [get_healthcare_document](#get_healthcare_document) - Retrieve a document
 * [get_hris_document](#get_hris_document) - Retrieve a document
+* [get_plm_document](#get_plm_document) - Retrieve a document
 * [get_signing_document](#get_signing_document) - Retrieve a document
 * [list_ats_documents](#list_ats_documents) - List all documents
 * [list_healthcare_documents](#list_healthcare_documents) - List all documents
 * [list_hris_documents](#list_hris_documents) - List all documents
+* [list_plm_documents](#list_plm_documents) - List all documents
 * [list_signing_documents](#list_signing_documents) - List all documents
 * [patch_ats_document](#patch_ats_document) - Update a document
 * [patch_hris_document](#patch_hris_document) - Update a document
+* [patch_plm_document](#patch_plm_document) - Update a document
 * [patch_signing_document](#patch_signing_document) - Update a document
 * [remove_ats_document](#remove_ats_document) - Remove a document
 * [remove_hris_document](#remove_hris_document) - Remove a document
 * [remove_signing_document](#remove_signing_document) - Remove a document
 * [update_ats_document](#update_ats_document) - Update a document
 * [update_hris_document](#update_hris_document) - Update a document
+* [update_plm_document](#update_plm_document) - Update a document
 * [update_signing_document](#update_signing_document) - Update a document
 
 ## create_ats_document
@@ -50,10 +55,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-08-20T08:00:27.437Z"),
             "document_url": "https://vengeful-lashes.biz",
             "filename": "lonzo_schowalter_resume.pdf",
-            "id": "21bc0d92-41c0-4e1e-b06e-ea9f57238047",
+            "id": "d9e45b03-8d57-4014-99f6-dc4faa94f700",
             "metadata": [],
             "type": shared.AtsDocumentType.COVER_LETTER,
-            "updated_at": parse_datetime("2022-12-10T05:20:59.839Z"),
+            "updated_at": parse_datetime("2022-12-10T11:11:49.949Z"),
         },
         "connection_id": "<id>",
     })
@@ -114,13 +119,13 @@ with UnifiedTo(
             "created_at": parse_datetime("2023-07-16T04:00:25.853Z"),
             "document_url": "https://overcooked-yogurt.org",
             "filename": "ugh_after.elc",
-            "id": "a3cd450b-67f3-40d8-bfc9-06ed1e8e77b7",
+            "id": "e5cde01d-009d-418a-8ff2-7f7d4fd05c50",
             "metadata": [],
             "mime_type": "application/pdf",
             "name": "History and physical",
             "status": shared.HealthcareDocumentStatus.SUPERSEDED,
             "type": shared.HealthcareDocumentType.CONSULTATION_NOTE,
-            "updated_at": parse_datetime("2025-01-01T02:28:41.011Z"),
+            "updated_at": parse_datetime("2025-01-01T12:49:09.677Z"),
         },
         "connection_id": "<id>",
     })
@@ -173,10 +178,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-10-27T11:47:26.086Z"),
             "document_url": "https://sore-decision.biz/",
             "filename": "ridge_forager.xsl",
-            "id": "1c91157b-d316-4b18-9543-0dcb19c06500",
+            "id": "3d7955a7-b98f-4ed6-9dfa-70cd6ba9a577",
             "metadata": [],
             "type": shared.HrisDocumentType.POLICY,
-            "updated_at": parse_datetime("2025-10-20T12:07:19.287Z"),
+            "updated_at": parse_datetime("2025-10-21T05:25:06.672Z"),
         },
         "connection_id": "<id>",
     })
@@ -198,6 +203,69 @@ with UnifiedTo(
 ### Response
 
 **[operations.CreateHrisDocumentResponse](../../models/operations/createhrisdocumentresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## create_plm_document
+
+Creates a PlmDocument. Provide the unified PlmDocument fields in the request body; they are mapped to the provider's API. Returns the created PlmDocument.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="createPlmDocument" method="post" path="/plm/{connection_id}/document" example="plm_document" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.document.create_plm_document(request={
+        "plm_document": {
+            "created_at": parse_datetime("2020-10-16T01:44:30.293Z"),
+            "file_ids": [],
+            "id": "a7052898-fdf4-42d2-ba09-65c8eddbefe8",
+            "lifecycle_state": "Under Review",
+            "master_identifier": "84ae4ec4-45ad-4afc-834a-0f5e6161fcda",
+            "metadata": [],
+            "name": "Procedure taxicab",
+            "number": "DOC-086886",
+            "original_type": "Procedure",
+            "revision": "C",
+            "status": shared.PlmDocumentStatus.IN_REVIEW,
+            "type": shared.PlmDocumentType.PROCEDURE,
+            "updated_at": parse_datetime("2026-08-28T10:53:39.894Z"),
+            "url": "https://uncommon-guide.info/",
+        },
+        "connection_id": "<id>",
+    })
+
+    assert res.plm_document is not None
+
+    # Handle response
+    print(res.plm_document)
+
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.CreatePlmDocumentRequest](../../models/operations/createplmdocumentrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+
+### Response
+
+**[operations.CreatePlmDocumentResponse](../../models/operations/createplmdocumentresponse.md)**
 
 ### Errors
 
@@ -229,12 +297,12 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-05-02T09:35:23.679Z"),
             "description": "Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.",
             "expires_at": parse_datetime("2021-06-04T01:21:34.949Z"),
-            "id": "c28323e2-856e-4d6e-8af8-49848ee47eae",
+            "id": "79ae7f0f-f064-4dd3-9713-2f8119d22a3e",
             "metadata": [],
             "name": "Denesik Group NDA",
-            "sent_at": parse_datetime("2022-07-02T01:08:39.226Z"),
+            "sent_at": parse_datetime("2022-07-02T06:04:39.224Z"),
             "status": shared.SigningDocumentStatus.DRAFT,
-            "updated_at": parse_datetime("2025-09-12T11:05:37.649Z"),
+            "updated_at": parse_datetime("2025-09-13T05:34:09.282Z"),
         },
         "connection_id": "<id>",
     })
@@ -397,6 +465,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.GetHrisDocumentResponse](../../models/operations/gethrisdocumentresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_plm_document
+
+Retrieves a single PlmDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getPlmDocument" method="get" path="/plm/{connection_id}/document/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.document.get_plm_document(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.plm_document is not None
+
+    # Handle response
+    print(res.plm_document)
+
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.GetPlmDocumentRequest](../../models/operations/getplmdocumentrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+
+### Response
+
+**[operations.GetPlmDocumentResponse](../../models/operations/getplmdocumentresponse.md)**
 
 ### Errors
 
@@ -589,6 +704,52 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## list_plm_documents
+
+Returns a list of PlmDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listPlmDocuments" method="get" path="/plm/{connection_id}/document" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.document.list_plm_documents(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.plm_documents is not None
+
+    # Handle response
+    print(res.plm_documents)
+
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.ListPlmDocumentsRequest](../../models/operations/listplmdocumentsrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+
+### Response
+
+**[operations.ListPlmDocumentsResponse](../../models/operations/listplmdocumentsresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## list_signing_documents
 
 Returns a list of SigningDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -659,10 +820,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-08-20T08:00:27.437Z"),
             "document_url": "https://vengeful-lashes.biz",
             "filename": "lonzo_schowalter_resume.pdf",
-            "id": "8ab565b0-5986-4eba-a6ec-39e4fa3f6853",
+            "id": "6f9ef2f3-eb5f-46bb-b9e8-e6c39538c8a6",
             "metadata": [],
             "type": shared.AtsDocumentType.COVER_LETTER,
-            "updated_at": parse_datetime("2022-12-10T05:20:59.842Z"),
+            "updated_at": parse_datetime("2022-12-10T11:11:49.953Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -716,10 +877,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-10-27T11:47:26.086Z"),
             "document_url": "https://sore-decision.biz/",
             "filename": "ridge_forager.xsl",
-            "id": "243a56f3-7e91-42a8-8d03-747d367327c0",
+            "id": "0044a90e-7fc9-40f7-ac05-919b393c2f71",
             "metadata": [],
             "type": shared.HrisDocumentType.POLICY,
-            "updated_at": parse_datetime("2025-10-20T12:07:19.300Z"),
+            "updated_at": parse_datetime("2025-10-21T05:25:06.683Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -742,6 +903,70 @@ with UnifiedTo(
 ### Response
 
 **[operations.PatchHrisDocumentResponse](../../models/operations/patchhrisdocumentresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## patch_plm_document
+
+Updates the PlmDocument identified by `id`. Provide the unified PlmDocument fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchPlmDocument" method="patch" path="/plm/{connection_id}/document/{id}" example="plm_document" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.document.patch_plm_document(request={
+        "plm_document": {
+            "created_at": parse_datetime("2020-10-16T01:44:30.293Z"),
+            "file_ids": [],
+            "id": "117ee6b1-3a16-4025-915f-3fa4b57a2ebe",
+            "lifecycle_state": "Under Review",
+            "master_identifier": "5cc271af-3988-40ae-b616-a87d0cc71234",
+            "metadata": [],
+            "name": "Procedure taxicab",
+            "number": "DOC-086886",
+            "original_type": "Procedure",
+            "revision": "C",
+            "status": shared.PlmDocumentStatus.IN_REVIEW,
+            "type": shared.PlmDocumentType.PROCEDURE,
+            "updated_at": parse_datetime("2026-08-28T10:53:39.916Z"),
+            "url": "https://uncommon-guide.info/",
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.plm_document is not None
+
+    # Handle response
+    print(res.plm_document)
+
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.PatchPlmDocumentRequest](../../models/operations/patchplmdocumentrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+
+### Response
+
+**[operations.PatchPlmDocumentResponse](../../models/operations/patchplmdocumentresponse.md)**
 
 ### Errors
 
@@ -773,12 +998,12 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-05-02T09:35:23.679Z"),
             "description": "Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.",
             "expires_at": parse_datetime("2021-06-04T01:21:34.949Z"),
-            "id": "940f1b9d-319c-45ab-85fc-2fa410f29438",
+            "id": "be5dc526-98bc-4b26-bb02-8137b23f7432",
             "metadata": [],
             "name": "Denesik Group NDA",
-            "sent_at": parse_datetime("2022-07-02T01:08:39.230Z"),
+            "sent_at": parse_datetime("2022-07-02T06:04:39.227Z"),
             "status": shared.SigningDocumentStatus.DRAFT,
-            "updated_at": parse_datetime("2025-09-12T11:05:37.662Z"),
+            "updated_at": parse_datetime("2025-09-13T05:34:09.290Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -973,10 +1198,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-08-20T08:00:27.437Z"),
             "document_url": "https://vengeful-lashes.biz",
             "filename": "lonzo_schowalter_resume.pdf",
-            "id": "8ab565b0-5986-4eba-a6ec-39e4fa3f6853",
+            "id": "6f9ef2f3-eb5f-46bb-b9e8-e6c39538c8a6",
             "metadata": [],
             "type": shared.AtsDocumentType.COVER_LETTER,
-            "updated_at": parse_datetime("2022-12-10T05:20:59.842Z"),
+            "updated_at": parse_datetime("2022-12-10T11:11:49.953Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1030,10 +1255,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-10-27T11:47:26.086Z"),
             "document_url": "https://sore-decision.biz/",
             "filename": "ridge_forager.xsl",
-            "id": "243a56f3-7e91-42a8-8d03-747d367327c0",
+            "id": "0044a90e-7fc9-40f7-ac05-919b393c2f71",
             "metadata": [],
             "type": shared.HrisDocumentType.POLICY,
-            "updated_at": parse_datetime("2025-10-20T12:07:19.300Z"),
+            "updated_at": parse_datetime("2025-10-21T05:25:06.683Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1056,6 +1281,70 @@ with UnifiedTo(
 ### Response
 
 **[operations.UpdateHrisDocumentResponse](../../models/operations/updatehrisdocumentresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## update_plm_document
+
+Updates the PlmDocument identified by `id`. Provide the unified PlmDocument fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="updatePlmDocument" method="put" path="/plm/{connection_id}/document/{id}" example="plm_document" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.document.update_plm_document(request={
+        "plm_document": {
+            "created_at": parse_datetime("2020-10-16T01:44:30.293Z"),
+            "file_ids": [],
+            "id": "117ee6b1-3a16-4025-915f-3fa4b57a2ebe",
+            "lifecycle_state": "Under Review",
+            "master_identifier": "5cc271af-3988-40ae-b616-a87d0cc71234",
+            "metadata": [],
+            "name": "Procedure taxicab",
+            "number": "DOC-086886",
+            "original_type": "Procedure",
+            "revision": "C",
+            "status": shared.PlmDocumentStatus.IN_REVIEW,
+            "type": shared.PlmDocumentType.PROCEDURE,
+            "updated_at": parse_datetime("2026-08-28T10:53:39.916Z"),
+            "url": "https://uncommon-guide.info/",
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.plm_document is not None
+
+    # Handle response
+    print(res.plm_document)
+
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.UpdatePlmDocumentRequest](../../models/operations/updateplmdocumentrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+
+### Response
+
+**[operations.UpdatePlmDocumentResponse](../../models/operations/updateplmdocumentresponse.md)**
 
 ### Errors
 
@@ -1087,12 +1376,12 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-05-02T09:35:23.679Z"),
             "description": "Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.",
             "expires_at": parse_datetime("2021-06-04T01:21:34.949Z"),
-            "id": "940f1b9d-319c-45ab-85fc-2fa410f29438",
+            "id": "be5dc526-98bc-4b26-bb02-8137b23f7432",
             "metadata": [],
             "name": "Denesik Group NDA",
-            "sent_at": parse_datetime("2022-07-02T01:08:39.230Z"),
+            "sent_at": parse_datetime("2022-07-02T06:04:39.227Z"),
             "status": shared.SigningDocumentStatus.DRAFT,
-            "updated_at": parse_datetime("2025-09-12T11:05:37.662Z"),
+            "updated_at": parse_datetime("2025-09-13T05:34:09.290Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

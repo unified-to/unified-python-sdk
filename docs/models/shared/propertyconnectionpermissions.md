@@ -442,3 +442,13 @@ value = PropertyConnectionPermissions.ACCOUNTING_ACCOUNT_READ
 | `PROPERTY_REVIEW_WRITE`                | property_review_write                  |
 | `PROPERTY_CONVERSATION_READ`           | property_conversation_read             |
 | `PROPERTY_CONVERSATION_WRITE`          | property_conversation_write            |
+| `PLM_PART_READ`                        | plm_part_read                          |
+| `PLM_PART_WRITE`                       | plm_part_write                         |
+| `PLM_BOMLINE_READ`                     | plm_bomline_read                       |
+| `PLM_BOMLINE_WRITE`                    | plm_bomline_write                      |
+| `PLM_DOCUMENT_READ`                    | plm_document_read                      |
+| `PLM_DOCUMENT_WRITE`                   | plm_document_write                     |
+| `PLM_CHANGE_READ`                      | plm_change_read                        |
+| `PLM_CHANGE_WRITE`                     | plm_change_write                       |
+| `PLM_CATEGORY_READ`                    | plm_category_read                      |
+| `PLM_CATEGORY_WRITE`                   | plm_category_write                     |

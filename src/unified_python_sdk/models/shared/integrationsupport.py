@@ -5,7 +5,7 @@ from .property_integrationsupport_webhook_events import (
     PropertyIntegrationSupportWebhookEvents,
     PropertyIntegrationSupportWebhookEventsTypedDict,
 )
-from .virtual_webhook_calendar_id import (
+from .virtual_webhook_branch_id import (
     FromWebhook,
     ListAccountID,
     ListAdID,
@@ -72,6 +72,7 @@ from .virtual_webhook_calendar_id import (
     ListPackageID,
     ListPageID,
     ListParentID,
+    ListPartID,
     ListPatientID,
     ListPaymentID,
     ListPayslipID,
@@ -155,7 +156,6 @@ from .virtual_webhook_calendar_id import (
     VirtualWebhookBenefitID,
     VirtualWebhookBillID,
     VirtualWebhookBranchID,
-    VirtualWebhookCalendarID,
 )
 from enum import Enum
 from pydantic import field_serializer, model_serializer
@@ -169,6 +169,12 @@ from unified_python_sdk.types import (
     current_exclude_none,
     serialize_with_info,
 )
+
+
+class VirtualWebhookCalendarID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
 
 
 class VirtualWebhookCallID(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -400,6 +406,12 @@ class VirtualWebhookPageID(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class VirtualWebhookParentID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
+class VirtualWebhookPartID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
     NOT_SUPPORTED = "not-supported"
@@ -643,6 +655,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_package_id: NotRequired[ListPackageID]
     list_page_id: NotRequired[ListPageID]
     list_parent_id: NotRequired[ListParentID]
+    list_part_id: NotRequired[ListPartID]
     list_patient_id: NotRequired[ListPatientID]
     list_payment_id: NotRequired[ListPaymentID]
     list_payslip_id: NotRequired[ListPayslipID]
@@ -769,6 +782,7 @@ class IntegrationSupportTypedDict(TypedDict):
     virtual_webhook_org_id: NotRequired[VirtualWebhookOrgID]
     virtual_webhook_page_id: NotRequired[VirtualWebhookPageID]
     virtual_webhook_parent_id: NotRequired[VirtualWebhookParentID]
+    virtual_webhook_part_id: NotRequired[VirtualWebhookPartID]
     virtual_webhook_patient_id: NotRequired[VirtualWebhookPatientID]
     virtual_webhook_payment_id: NotRequired[VirtualWebhookPaymentID]
     virtual_webhook_pipeline_id: NotRequired[VirtualWebhookPipelineID]
@@ -937,6 +951,8 @@ class IntegrationSupport(BaseModel):
     list_page_id: Optional[ListPageID] = None
 
     list_parent_id: Optional[ListParentID] = None
+
+    list_part_id: Optional[ListPartID] = None
 
     list_patient_id: Optional[ListPatientID] = None
 
@@ -1189,6 +1205,8 @@ class IntegrationSupport(BaseModel):
     virtual_webhook_page_id: Optional[VirtualWebhookPageID] = None
 
     virtual_webhook_parent_id: Optional[VirtualWebhookParentID] = None
+
+    virtual_webhook_part_id: Optional[VirtualWebhookPartID] = None
 
     virtual_webhook_patient_id: Optional[VirtualWebhookPatientID] = None
 
@@ -1838,6 +1856,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.ListParentID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("list_part_id")
+    def serialize_list_part_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListPartID(value)
             except ValueError:
                 return value
         return value
@@ -2949,6 +2976,15 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
+    @field_serializer("virtual_webhook_part_id")
+    def serialize_virtual_webhook_part_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.VirtualWebhookPartID(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("virtual_webhook_patient_id")
     def serialize_virtual_webhook_patient_id(self, value):
         if isinstance(value, str):
@@ -3275,6 +3311,7 @@ class IntegrationSupport(BaseModel):
                 "list_package_id",
                 "list_page_id",
                 "list_parent_id",
+                "list_part_id",
                 "list_patient_id",
                 "list_payment_id",
                 "list_payslip_id",
@@ -3401,6 +3438,7 @@ class IntegrationSupport(BaseModel):
                 "virtual_webhook_org_id",
                 "virtual_webhook_page_id",
                 "virtual_webhook_parent_id",
+                "virtual_webhook_part_id",
                 "virtual_webhook_patient_id",
                 "virtual_webhook_payment_id",
                 "virtual_webhook_pipeline_id",

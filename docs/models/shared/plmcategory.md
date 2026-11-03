@@ -1,0 +1,19 @@
+# PlmCategory
+
+A category that parts, documents or changes are filed under
+
+
+## Fields
+
+| Field                                                                      | Type                                                                       | Required                                                                   | Description                                                                |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `created_at`                                                               | [date](https://docs.python.org/3/library/datetime.html#date-objects)       | :heavy_minus_sign:                                                         | (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)                                   |
+| `description`                                                              | *Optional[str]*                                                            | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `id`                                                                       | *Optional[str]*                                                            | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `is_active`                                                                | *Optional[bool]*                                                           | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `metadata`                                                                 | List[[shared.PlmMetadata](../../models/shared/plmmetadata.md)]             | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `name`                                                                     | *Optional[str]*                                                            | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `parent_id`                                                                | *Optional[str]*                                                            | :heavy_minus_sign:                                                         | The parent PlmCategory, for nested categories                              |
+| `raw`                                                                      | Dict[str, *Any*]                                                           | :heavy_minus_sign:                                                         | Raw data from integration                                                  |
+| `type`                                                                     | [Optional[shared.PlmCategoryType]](../../models/shared/plmcategorytype.md) | :heavy_minus_sign:                                                         | Which records the category classifies                                      |
+| `updated_at`                                                               | [date](https://docs.python.org/3/library/datetime.html#date-objects)       | :heavy_minus_sign:                                                         | (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)                                   |

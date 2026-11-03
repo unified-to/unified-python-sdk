@@ -267,6 +267,11 @@ class WebhookObjectType(str, Enum, metaclass=utils.OpenEnumMeta):
     PROPERTY_QUOTE = "property_quote"
     PROPERTY_REVIEW = "property_review"
     PROPERTY_CONVERSATION = "property_conversation"
+    PLM_PART = "plm_part"
+    PLM_BOMLINE = "plm_bomline"
+    PLM_DOCUMENT = "plm_document"
+    PLM_CHANGE = "plm_change"
+    PLM_CATEGORY = "plm_category"
 
 
 class WebhookType(str, Enum, metaclass=utils.OpenEnumMeta):

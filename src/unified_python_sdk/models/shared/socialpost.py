@@ -68,7 +68,7 @@ class SocialPostTypedDict(TypedDict):
     metadata: NotRequired[List[SocialMetadataTypedDict]]
     metrics: NotRequired[PropertySocialPostMetricsTypedDict]
     r"""Engagement metrics for the post"""
-    parent_post_id: NotRequired[str]
+    parent_id: NotRequired[str]
     r"""The post this one replies to or references"""
     profile_id: NotRequired[str]
     r"""The social profile (page/handle/listing) that owns this post"""
@@ -112,7 +112,7 @@ class SocialPost(BaseModel):
     metrics: Optional[PropertySocialPostMetrics] = None
     r"""Engagement metrics for the post"""
 
-    parent_post_id: Optional[str] = None
+    parent_id: Optional[str] = None
     r"""The post this one replies to or references"""
 
     profile_id: Optional[str] = None
@@ -172,7 +172,7 @@ class SocialPost(BaseModel):
                 "media",
                 "metadata",
                 "metrics",
-                "parent_post_id",
+                "parent_id",
                 "profile_id",
                 "raw",
                 "scheduled_at",

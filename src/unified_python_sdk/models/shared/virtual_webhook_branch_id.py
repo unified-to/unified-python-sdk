@@ -401,6 +401,12 @@ class ListParentID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class ListPartID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class ListPatientID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -894,12 +900,6 @@ class VirtualWebhookBillID(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class VirtualWebhookBranchID(str, Enum, metaclass=utils.OpenEnumMeta):
-    SUPPORTED_REQUIRED = "supported-required"
-    SUPPORTED = "supported"
-    NOT_SUPPORTED = "not-supported"
-
-
-class VirtualWebhookCalendarID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
     NOT_SUPPORTED = "not-supported"
