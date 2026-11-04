@@ -13,6 +13,7 @@ from unified_python_sdk.types import (
     current_exclude_none,
     serialize_with_info,
 )
+from unified_python_sdk.types.basemodel import current_filtered_dump
 from unified_python_sdk.utils import FieldMetadata, QueryParamMetadata
 
 
@@ -66,10 +67,14 @@ class ListUnifiedIntegrationsRequestTypedDict(TypedDict):
     r"""Filter the results on these categories"""
     env: NotRequired[str]
     limit: NotRequired[float]
+    object_types: NotRequired[List[str]]
+    r"""Only return support and OAuth2 scopes for these object types (e.g. crm_contact,crm_deal), to keep the response small"""
     offset: NotRequired[float]
     summary: NotRequired[bool]
     type: NotRequired[str]
     r"""Filter the results for only this integration type"""
+    types: NotRequired[List[str]]
+    r"""Filter the results for only these integration types (e.g. hubspot,salesforce)"""
     updated_gte: NotRequired[str]
 
 
@@ -96,6 +101,12 @@ class ListUnifiedIntegrationsRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
 
+    object_types: Annotated[
+        Optional[List[str]],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""Only return support and OAuth2 scopes for these object types (e.g. crm_contact,crm_deal), to keep the response small"""
+
     offset: Annotated[
         Optional[float],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
@@ -111,6 +122,12 @@ class ListUnifiedIntegrationsRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
     r"""Filter the results for only this integration type"""
+
+    types: Annotated[
+        Optional[List[str]],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""Filter the results for only these integration types (e.g. hubspot,salesforce)"""
 
     updated_gte: Annotated[
         Optional[str],
@@ -128,19 +145,22 @@ class ListUnifiedIntegrationsRequest(BaseModel):
                 "categories",
                 "env",
                 "limit",
+                "object_types",
                 "offset",
                 "summary",
                 "type",
+                "types",
                 "updated_gte",
             ]
         )
         exclude_none = current_exclude_none()
+        skip_filtered = exclude_none is False or current_filtered_dump()
         serialized = handler(self)
         m = {}
 
         for n, f in type(self).model_fields.items():
             k = f.alias if f.alias is not None else n
-            if k not in serialized and n not in serialized and exclude_none is False:
+            if k not in serialized and n not in serialized and skip_filtered:
                 continue
             val = serialized.get(k, serialized.get(n))
 
@@ -182,12 +202,13 @@ class ListUnifiedIntegrationsResponse(BaseModel):
     def serialize_model(self, handler):
         optional_fields = set(["Integrations"])
         exclude_none = current_exclude_none()
+        skip_filtered = exclude_none is False or current_filtered_dump()
         serialized = handler(self)
         m = {}
 
         for n, f in type(self).model_fields.items():
             k = f.alias if f.alias is not None else n
-            if k not in serialized and n not in serialized and exclude_none is False:
+            if k not in serialized and n not in serialized and skip_filtered:
                 continue
             val = serialized.get(k, serialized.get(n))
 

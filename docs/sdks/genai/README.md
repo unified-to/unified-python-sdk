@@ -59,11 +59,11 @@ with UnifiedTo(
         "genai_agent": {
             "created_at": parse_datetime("2020-12-18T02:23:33.723Z"),
             "description": "Assentator tero sequi.",
-            "id": "c5319817-856b-44af-ba6b-813c31e055d7",
+            "id": "055fd16b-058e-4f83-9ed6-e915949143d4",
             "instructions": "Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.",
             "is_active": False,
             "name": "daughter with",
-            "updated_at": parse_datetime("2025-10-26T04:10:51.225Z"),
+            "updated_at": parse_datetime("2025-10-27T00:42:21.003Z"),
         },
         "connection_id": "<id>",
     })
@@ -120,7 +120,7 @@ with UnifiedTo(
             "dimension": 423.0,
             "embeddings": "Est.",
             "enconding_format": shared.EncondingFormat.FLOAT,
-            "id": "abcdc8ca-e2ac-436b-9a7f-25472d23c0a2",
+            "id": "aade96f1-6946-45b9-a308-f00692898cd3",
             "max_tokens": 223.0,
             "tokens_used": 836.0,
             "type": "classification",
@@ -175,7 +175,7 @@ with UnifiedTo(
         "genai_memory": {
             "content": "Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.",
             "created_at": parse_datetime("2021-10-22T04:14:41.668Z"),
-            "id": "8e407ef0-fa12-420d-b0a0-954959e22dbc",
+            "id": "541adfe8-7f61-4206-b622-db077fa32f9f",
             "metadata": [
                 {
                     "extra_data": {
@@ -190,7 +190,7 @@ with UnifiedTo(
             ],
             "name": "sponte.md",
             "type": shared.GenaiMemoryType.MEMORY,
-            "updated_at": parse_datetime("2023-04-29T19:29:29.421Z"),
+            "updated_at": parse_datetime("2023-04-30T02:59:17.499Z"),
             "user_identifier": "9d170613-4338-447d-bdb6-8ea96a2d7513",
         },
         "connection_id": "<id>",
@@ -243,10 +243,10 @@ with UnifiedTo(
         "genai_organization": {
             "created_at": parse_datetime("2020-10-27T16:03:47.122Z"),
             "description": "Voluptates abeo subseco.",
-            "id": "1b0061ff-313b-4bc0-8ae0-abfff8b4ee0c",
+            "id": "cb7ab240-ce09-4769-a1e1-5f0dc0e5b0f3",
             "is_active": False,
             "name": "officially about",
-            "updated_at": parse_datetime("2023-01-31T07:41:28.695Z"),
+            "updated_at": parse_datetime("2023-01-31T17:01:30.915Z"),
         },
         "connection_id": "<id>",
     })
@@ -416,10 +416,10 @@ with UnifiedTo(
 
     res = unified_to.genai.create_genai_task(request={
         "genai_task": {
-            "completed_at": parse_datetime("2025-10-11T23:21:19.804Z"),
+            "completed_at": parse_datetime("2025-10-12T19:49:28.298Z"),
             "created_at": parse_datetime("2020-10-25T20:19:33.247Z"),
             "files_changed": 19.0,
-            "id": "95eaeba4-3425-4418-ac8c-30c81791b6ff",
+            "id": "73701f9a-940e-4815-aab8-e3eed08ac550",
             "instructions": "Benigne canonicus officiis solvo adsidue deleo angustus.",
             "lines_added": 244.0,
             "lines_deleted": 118.0,
@@ -434,12 +434,12 @@ with UnifiedTo(
             "pullrequest_url": "https://github.com/berenice.satterfield/joshingly-ignorance/pull/383",
             "repo_url": "https://github.com/berenice.satterfield/joshingly-ignorance",
             "source_branch_identifier": "main",
-            "started_at": parse_datetime("2024-05-29T04:14:42.290Z"),
+            "started_at": parse_datetime("2024-05-29T19:03:26.351Z"),
             "status": shared.GenaiTaskStatus.BLOCKED,
             "summary": "Cur aeternus cogito vesper.",
             "target_branch_identifier": "agent/joshingly-ignorance",
             "tokens_used": 2165.0,
-            "updated_at": parse_datetime("2023-03-03T08:51:38.206Z"),
+            "updated_at": parse_datetime("2023-03-03T18:33:29.247Z"),
             "web_url": "https://inexperienced-adrenalin.biz/",
         },
         "connection_id": "<id>",
@@ -1050,11 +1050,11 @@ with UnifiedTo(
         "genai_agent": {
             "created_at": parse_datetime("2020-12-18T02:23:33.723Z"),
             "description": "Assentator tero sequi.",
-            "id": "89b6c64c-926d-41a6-81f8-002f728e4b40",
+            "id": "3b500056-4cb7-4392-8bdb-03318c25c5a0",
             "instructions": "Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.",
             "is_active": False,
             "name": "daughter with",
-            "updated_at": parse_datetime("2025-10-26T04:10:51.230Z"),
+            "updated_at": parse_datetime("2025-10-27T00:42:21.009Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1107,7 +1107,7 @@ with UnifiedTo(
         "genai_memory": {
             "content": "Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.",
             "created_at": parse_datetime("2021-10-22T04:14:41.668Z"),
-            "id": "44d6b14f-f77b-48be-a93f-ce2071b06eec",
+            "id": "f12c845d-127a-4b8a-a883-f6c4d3de0adf",
             "metadata": [
                 {
                     "extra_data": {
@@ -1122,7 +1122,7 @@ with UnifiedTo(
             ],
             "name": "sponte.md",
             "type": shared.GenaiMemoryType.MEMORY,
-            "updated_at": parse_datetime("2023-04-29T19:29:29.424Z"),
+            "updated_at": parse_datetime("2023-04-30T02:59:17.504Z"),
             "user_identifier": "9d170613-4338-447d-bdb6-8ea96a2d7513",
         },
         "connection_id": "<id>",
@@ -1176,10 +1176,10 @@ with UnifiedTo(
         "genai_organization": {
             "created_at": parse_datetime("2020-10-27T16:03:47.122Z"),
             "description": "Voluptates abeo subseco.",
-            "id": "3e5a8fc1-953b-4066-bb90-dc6fa056fa21",
+            "id": "6e35a16d-820a-4549-b76f-b870693c9528",
             "is_active": False,
             "name": "officially about",
-            "updated_at": parse_datetime("2023-01-31T07:41:28.696Z"),
+            "updated_at": parse_datetime("2023-01-31T17:01:30.917Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1230,10 +1230,10 @@ with UnifiedTo(
 
     res = unified_to.genai.patch_genai_task(request={
         "genai_task": {
-            "completed_at": parse_datetime("2025-10-11T23:21:19.817Z"),
+            "completed_at": parse_datetime("2025-10-12T19:49:28.314Z"),
             "created_at": parse_datetime("2020-10-25T20:19:33.247Z"),
             "files_changed": 19.0,
-            "id": "1451f1ac-e2cd-4129-af33-3150ba8d02de",
+            "id": "a23d8e32-0eb2-499f-a28c-e924dec87c76",
             "instructions": "Benigne canonicus officiis solvo adsidue deleo angustus.",
             "lines_added": 244.0,
             "lines_deleted": 118.0,
@@ -1248,12 +1248,12 @@ with UnifiedTo(
             "pullrequest_url": "https://github.com/berenice.satterfield/joshingly-ignorance/pull/383",
             "repo_url": "https://github.com/berenice.satterfield/joshingly-ignorance",
             "source_branch_identifier": "main",
-            "started_at": parse_datetime("2024-05-29T04:14:42.299Z"),
+            "started_at": parse_datetime("2024-05-29T19:03:26.363Z"),
             "status": shared.GenaiTaskStatus.BLOCKED,
             "summary": "Cur aeternus cogito vesper.",
             "target_branch_identifier": "agent/joshingly-ignorance",
             "tokens_used": 2165.0,
-            "updated_at": parse_datetime("2023-03-03T08:51:38.212Z"),
+            "updated_at": parse_datetime("2023-03-03T18:33:29.255Z"),
             "web_url": "https://inexperienced-adrenalin.biz/",
         },
         "connection_id": "<id>",
@@ -1542,11 +1542,11 @@ with UnifiedTo(
         "genai_agent": {
             "created_at": parse_datetime("2020-12-18T02:23:33.723Z"),
             "description": "Assentator tero sequi.",
-            "id": "89b6c64c-926d-41a6-81f8-002f728e4b40",
+            "id": "3b500056-4cb7-4392-8bdb-03318c25c5a0",
             "instructions": "Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.",
             "is_active": False,
             "name": "daughter with",
-            "updated_at": parse_datetime("2025-10-26T04:10:51.230Z"),
+            "updated_at": parse_datetime("2025-10-27T00:42:21.009Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1599,7 +1599,7 @@ with UnifiedTo(
         "genai_memory": {
             "content": "Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.",
             "created_at": parse_datetime("2021-10-22T04:14:41.668Z"),
-            "id": "44d6b14f-f77b-48be-a93f-ce2071b06eec",
+            "id": "f12c845d-127a-4b8a-a883-f6c4d3de0adf",
             "metadata": [
                 {
                     "extra_data": {
@@ -1614,7 +1614,7 @@ with UnifiedTo(
             ],
             "name": "sponte.md",
             "type": shared.GenaiMemoryType.MEMORY,
-            "updated_at": parse_datetime("2023-04-29T19:29:29.424Z"),
+            "updated_at": parse_datetime("2023-04-30T02:59:17.504Z"),
             "user_identifier": "9d170613-4338-447d-bdb6-8ea96a2d7513",
         },
         "connection_id": "<id>",
@@ -1668,10 +1668,10 @@ with UnifiedTo(
         "genai_organization": {
             "created_at": parse_datetime("2020-10-27T16:03:47.122Z"),
             "description": "Voluptates abeo subseco.",
-            "id": "3e5a8fc1-953b-4066-bb90-dc6fa056fa21",
+            "id": "6e35a16d-820a-4549-b76f-b870693c9528",
             "is_active": False,
             "name": "officially about",
-            "updated_at": parse_datetime("2023-01-31T07:41:28.696Z"),
+            "updated_at": parse_datetime("2023-01-31T17:01:30.917Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1722,10 +1722,10 @@ with UnifiedTo(
 
     res = unified_to.genai.update_genai_task(request={
         "genai_task": {
-            "completed_at": parse_datetime("2025-10-11T23:21:19.817Z"),
+            "completed_at": parse_datetime("2025-10-12T19:49:28.314Z"),
             "created_at": parse_datetime("2020-10-25T20:19:33.247Z"),
             "files_changed": 19.0,
-            "id": "1451f1ac-e2cd-4129-af33-3150ba8d02de",
+            "id": "a23d8e32-0eb2-499f-a28c-e924dec87c76",
             "instructions": "Benigne canonicus officiis solvo adsidue deleo angustus.",
             "lines_added": 244.0,
             "lines_deleted": 118.0,
@@ -1740,12 +1740,12 @@ with UnifiedTo(
             "pullrequest_url": "https://github.com/berenice.satterfield/joshingly-ignorance/pull/383",
             "repo_url": "https://github.com/berenice.satterfield/joshingly-ignorance",
             "source_branch_identifier": "main",
-            "started_at": parse_datetime("2024-05-29T04:14:42.299Z"),
+            "started_at": parse_datetime("2024-05-29T19:03:26.363Z"),
             "status": shared.GenaiTaskStatus.BLOCKED,
             "summary": "Cur aeternus cogito vesper.",
             "target_branch_identifier": "agent/joshingly-ignorance",
             "tokens_used": 2165.0,
-            "updated_at": parse_datetime("2023-03-03T08:51:38.212Z"),
+            "updated_at": parse_datetime("2023-03-03T18:33:29.255Z"),
             "web_url": "https://inexperienced-adrenalin.biz/",
         },
         "connection_id": "<id>",

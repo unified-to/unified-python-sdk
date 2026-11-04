@@ -33,19 +33,19 @@ with UnifiedTo(
     res = unified_to.deal.create_crm_deal(request={
         "crm_deal": {
             "amount": 98162.0,
-            "closed_at": parse_datetime("2024-03-13T02:44:12.202Z"),
-            "closing_at": parse_datetime("2025-09-09T00:41:01.362Z"),
+            "closed_at": parse_datetime("2024-03-13T07:53:25.060Z"),
+            "closing_at": parse_datetime("2025-09-09T16:57:20.016Z"),
             "created_at": parse_datetime("2023-07-04T12:48:48.470Z"),
             "currency": "USD",
             "description": "Comis tepidus sit cavus crustulum trans tubineus adfectus.",
-            "id": "9a4069fe-a74b-4515-a10c-ecc16d7bb210",
+            "id": "46dda115-13a1-4dea-8ee8-91e63c66dafb",
             "metadata": [
                 {
                     "extra_data": {
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CrmMetadataFormat.TEXT,
-                    "id": "6a2984ef-0fc5-46b3-a198-b4c97dbc5111",
+                    "id": "fccd8e03-20e5-43ea-9266-1602634f7eba",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "conatus",
@@ -58,7 +58,7 @@ with UnifiedTo(
                 "causa",
                 "suus",
             ],
-            "updated_at": parse_datetime("2024-10-16T21:34:00.466Z"),
+            "updated_at": parse_datetime("2024-10-17T07:09:50.332Z"),
             "won_reason": "Usque libero soleo.",
         },
         "connection_id": "<id>",
@@ -203,19 +203,19 @@ with UnifiedTo(
     res = unified_to.deal.patch_crm_deal(request={
         "crm_deal": {
             "amount": 98162.0,
-            "closed_at": parse_datetime("2024-03-13T02:44:12.205Z"),
-            "closing_at": parse_datetime("2025-09-09T00:41:01.372Z"),
+            "closed_at": parse_datetime("2024-03-13T07:53:25.066Z"),
+            "closing_at": parse_datetime("2025-09-09T16:57:20.032Z"),
             "created_at": parse_datetime("2023-07-04T12:48:48.470Z"),
             "currency": "USD",
             "description": "Comis tepidus sit cavus crustulum trans tubineus adfectus.",
-            "id": "c644b3c7-6216-433b-8eea-019e106cf3f1",
+            "id": "8eb4805f-f1d3-4dd1-bba6-dc7c246c1047",
             "metadata": [
                 {
                     "extra_data": {
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CrmMetadataFormat.TEXT,
-                    "id": "77a51f9e-02a6-4d80-802c-17539923dc6a",
+                    "id": "40b6589e-e67a-4722-935e-85d5bfb32936",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "conatus",
@@ -228,7 +228,7 @@ with UnifiedTo(
                 "causa",
                 "suus",
             ],
-            "updated_at": parse_datetime("2024-10-16T21:34:00.471Z"),
+            "updated_at": parse_datetime("2024-10-17T07:09:50.343Z"),
             "won_reason": "Usque libero soleo.",
         },
         "connection_id": "<id>",
@@ -328,19 +328,19 @@ with UnifiedTo(
     res = unified_to.deal.update_crm_deal(request={
         "crm_deal": {
             "amount": 98162.0,
-            "closed_at": parse_datetime("2024-03-13T02:44:12.205Z"),
-            "closing_at": parse_datetime("2025-09-09T00:41:01.372Z"),
+            "closed_at": parse_datetime("2024-03-13T07:53:25.066Z"),
+            "closing_at": parse_datetime("2025-09-09T16:57:20.032Z"),
             "created_at": parse_datetime("2023-07-04T12:48:48.470Z"),
             "currency": "USD",
             "description": "Comis tepidus sit cavus crustulum trans tubineus adfectus.",
-            "id": "c644b3c7-6216-433b-8eea-019e106cf3f1",
+            "id": "8eb4805f-f1d3-4dd1-bba6-dc7c246c1047",
             "metadata": [
                 {
                     "extra_data": {
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CrmMetadataFormat.TEXT,
-                    "id": "77a51f9e-02a6-4d80-802c-17539923dc6a",
+                    "id": "40b6589e-e67a-4722-935e-85d5bfb32936",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "conatus",
@@ -353,7 +353,7 @@ with UnifiedTo(
                 "causa",
                 "suus",
             ],
-            "updated_at": parse_datetime("2024-10-16T21:34:00.471Z"),
+            "updated_at": parse_datetime("2024-10-17T07:09:50.343Z"),
             "won_reason": "Usque libero soleo.",
         },
         "connection_id": "<id>",

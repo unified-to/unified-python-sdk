@@ -41,7 +41,7 @@ with UnifiedTo(
             "description": "Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.",
             "has_redirect_url": True,
             "has_target_url": False,
-            "id": "f44bde3a-f04d-490e-a94b-dbdc0ea6a2bc",
+            "id": "1dada215-464c-4d28-9851-cacd0c055c18",
             "info_url": "https://ugly-instance.biz/",
             "integration_types": [
                 "viridis",
@@ -56,7 +56,7 @@ with UnifiedTo(
                 "clamo",
             ],
             "type": shared.AssessmentPackageType.VIDEO_INTERVIEW,
-            "updated_at": parse_datetime("2023-09-28T04:47:25.537Z"),
+            "updated_at": parse_datetime("2023-09-28T10:10:36.935Z"),
         },
         "connection_id": "<id>",
     })
@@ -299,7 +299,7 @@ with UnifiedTo(
             "description": "Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.",
             "has_redirect_url": True,
             "has_target_url": False,
-            "id": "e5c677b9-36f1-4314-ae91-dbfce7d45cd1",
+            "id": "450a7e79-9afb-4ecb-a157-27e341625748",
             "info_url": "https://ugly-instance.biz/",
             "integration_types": [
                 "viridis",
@@ -314,7 +314,7 @@ with UnifiedTo(
                 "clamo",
             ],
             "type": shared.AssessmentPackageType.VIDEO_INTERVIEW,
-            "updated_at": parse_datetime("2023-09-28T04:47:25.540Z"),
+            "updated_at": parse_datetime("2023-09-28T10:10:36.939Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -419,7 +419,7 @@ with UnifiedTo(
             "description": "Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.",
             "has_redirect_url": True,
             "has_target_url": False,
-            "id": "e5c677b9-36f1-4314-ae91-dbfce7d45cd1",
+            "id": "450a7e79-9afb-4ecb-a157-27e341625748",
             "info_url": "https://ugly-instance.biz/",
             "integration_types": [
                 "viridis",
@@ -434,7 +434,7 @@ with UnifiedTo(
                 "clamo",
             ],
             "type": shared.AssessmentPackageType.VIDEO_INTERVIEW,
-            "updated_at": parse_datetime("2023-09-28T04:47:25.540Z"),
+            "updated_at": parse_datetime("2023-09-28T10:10:36.939Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

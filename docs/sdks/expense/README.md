@@ -41,13 +41,13 @@ with UnifiedTo(
             "attachments": [
                 {
                     "download_url": "https://rubbery-couch.biz/",
-                    "id": "c67c0e09-9e66-45a7-b2c9-2293b8042634",
+                    "id": "0e2dd540-1893-4432-a5cf-f9c0ce7a0b94",
                     "mime_type": "application/pdf",
                     "name": "receipt-9696.pdf",
                 },
                 {
                     "download_url": "https://appropriate-smog.biz/",
-                    "id": "9cf5fd14-d83e-43de-87d3-943dfb7c7b4b",
+                    "id": "769ebadb-758a-447b-ad69-17c41b6a7d60",
                     "mime_type": "application/pdf",
                     "name": "receipt-9696-1.pdf",
                 },
@@ -56,10 +56,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-06-11T03:39:37.305Z"),
             "currency": "GBP",
             "external_number": "EXP-38303",
-            "id": "159ac270-247c-496e-9b96-5e9088b3e252",
+            "id": "6cd746ac-adc5-452b-8335-b2c0dd735f45",
             "lineitems": [
                 {
-                    "id": "c5f0f210-9960-4ebe-9783-a2523be5d3e6",
+                    "id": "27d77132-a4e2-4e82-90d7-d6489f688697",
                     "item_name": "Client dinner",
                     "tax_amount": 0.0,
                     "total_amount": 364.74,
@@ -67,7 +67,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "971f4805-ad2c-4259-8c72-bbcb86110cbd",
+                    "id": "aa5c93ad-a5c2-4be7-8209-a93df73bfe6e",
                     "item_name": "Client dinner",
                     "tax_amount": 0.0,
                     "total_amount": 258.35,
@@ -75,7 +75,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "46977edd-3c70-4043-a327-4190e1ef5f55",
+                    "id": "536ef576-50a7-4ca0-9ccb-65453c40127e",
                     "item_name": "Conference ticket",
                     "notes": "Casus umquam conicio cinis demitto sint.",
                     "tax_amount": 0.0,
@@ -84,7 +84,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "2385fc06-a0ec-47b7-8000-86e213a683ff",
+                    "id": "f8c18f68-6f69-459a-83f9-aa3d4e0410a7",
                     "item_name": "Hotel",
                     "tax_amount": 0.0,
                     "total_amount": 157.04,
@@ -92,7 +92,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "8084237e-d03e-4987-9b29-26411a838ce5",
+                    "id": "150ddc1f-0632-478a-89ef-85198264dfc3",
                     "item_name": "Hotel",
                     "tax_amount": 0.0,
                     "total_amount": 164.02,
@@ -108,7 +108,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "total_amount": 972.29,
             "type": shared.AccountingExpenseType.COMPANY,
-            "updated_at": parse_datetime("2020-09-02T18:26:15.103Z"),
+            "updated_at": parse_datetime("2020-09-02T19:19:36.274Z"),
         },
         "connection_id": "<id>",
     })
@@ -162,7 +162,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-11-08T00:41:42.356Z"),
             "currency": "MVR",
             "description": "Temporibus agnitio sui.",
-            "id": "7477c8b8-08e1-4f50-92ff-0ed7274b42bc",
+            "id": "da67f220-0961-4373-8151-32b360ebae6e",
             "incurred_at": parse_datetime("2020-11-08T00:41:42.356Z"),
             "is_billed": False,
             "metadata": [],
@@ -170,7 +170,7 @@ with UnifiedTo(
             "quantity": 3.0,
             "total_amount": 300.0,
             "type": shared.LegalExpenseType.OTHER,
-            "updated_at": parse_datetime("2024-04-07T08:57:34.272Z"),
+            "updated_at": parse_datetime("2024-04-07T23:07:21.726Z"),
         },
         "connection_id": "<id>",
     })
@@ -409,13 +409,13 @@ with UnifiedTo(
             "attachments": [
                 {
                     "download_url": "https://rubbery-couch.biz/",
-                    "id": "84839c10-3e65-4a1d-abd7-a854c17e28ee",
+                    "id": "2c7b4538-ac5d-4345-863f-dc972e381162",
                     "mime_type": "application/pdf",
                     "name": "receipt-9696.pdf",
                 },
                 {
                     "download_url": "https://appropriate-smog.biz/",
-                    "id": "836994c2-f292-430d-adf0-7f3f0ba50aa9",
+                    "id": "a487577c-82b3-4443-9188-f5dfe13f8b14",
                     "mime_type": "application/pdf",
                     "name": "receipt-9696-1.pdf",
                 },
@@ -424,10 +424,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-06-11T03:39:37.305Z"),
             "currency": "GBP",
             "external_number": "EXP-38303",
-            "id": "487e799d-da86-48d0-8f51-bf4ad87992bc",
+            "id": "b0e30026-3016-44fd-8e2d-026c9a7c49cd",
             "lineitems": [
                 {
-                    "id": "35c411dd-1cb2-4de0-bc0b-031a08c182ea",
+                    "id": "1f99f1bf-bd5d-4c4a-a296-769207c3add4",
                     "item_name": "Client dinner",
                     "tax_amount": 0.0,
                     "total_amount": 364.74,
@@ -435,7 +435,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "c8457676-814a-4ed0-b36b-86d030ee1737",
+                    "id": "eecb265e-f9b7-4f57-bc9d-a2acea8811d9",
                     "item_name": "Client dinner",
                     "tax_amount": 0.0,
                     "total_amount": 258.35,
@@ -443,7 +443,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "a05a9995-c89e-44f1-b64a-aa21f202094e",
+                    "id": "2c2b883a-cb0b-4458-bb03-ff8647857360",
                     "item_name": "Conference ticket",
                     "notes": "Casus umquam conicio cinis demitto sint.",
                     "tax_amount": 0.0,
@@ -452,7 +452,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "710a9856-c717-46a8-98c3-504d7f3fdd9c",
+                    "id": "dd28abd4-a8d8-4376-be36-adbe04185d43",
                     "item_name": "Hotel",
                     "tax_amount": 0.0,
                     "total_amount": 157.04,
@@ -460,7 +460,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "d5482e14-5517-42ab-9bb9-3653724caa8b",
+                    "id": "233c2d69-b18b-4183-ab21-026044a1dc03",
                     "item_name": "Hotel",
                     "tax_amount": 0.0,
                     "total_amount": 164.02,
@@ -476,7 +476,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "total_amount": 972.29,
             "type": shared.AccountingExpenseType.COMPANY,
-            "updated_at": parse_datetime("2020-09-02T18:26:15.104Z"),
+            "updated_at": parse_datetime("2020-09-02T19:19:36.275Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -531,7 +531,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-11-08T00:41:42.356Z"),
             "currency": "MVR",
             "description": "Temporibus agnitio sui.",
-            "id": "4c08af45-e2c3-4ec7-b3b1-16db1f768ad7",
+            "id": "d190da41-c409-4928-8ccd-09cfa83736b5",
             "incurred_at": parse_datetime("2020-11-08T00:41:42.356Z"),
             "is_billed": False,
             "metadata": [],
@@ -539,7 +539,7 @@ with UnifiedTo(
             "quantity": 3.0,
             "total_amount": 300.0,
             "type": shared.LegalExpenseType.OTHER,
-            "updated_at": parse_datetime("2024-04-07T08:57:34.281Z"),
+            "updated_at": parse_datetime("2024-04-07T23:07:21.734Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -687,13 +687,13 @@ with UnifiedTo(
             "attachments": [
                 {
                     "download_url": "https://rubbery-couch.biz/",
-                    "id": "84839c10-3e65-4a1d-abd7-a854c17e28ee",
+                    "id": "2c7b4538-ac5d-4345-863f-dc972e381162",
                     "mime_type": "application/pdf",
                     "name": "receipt-9696.pdf",
                 },
                 {
                     "download_url": "https://appropriate-smog.biz/",
-                    "id": "836994c2-f292-430d-adf0-7f3f0ba50aa9",
+                    "id": "a487577c-82b3-4443-9188-f5dfe13f8b14",
                     "mime_type": "application/pdf",
                     "name": "receipt-9696-1.pdf",
                 },
@@ -702,10 +702,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-06-11T03:39:37.305Z"),
             "currency": "GBP",
             "external_number": "EXP-38303",
-            "id": "487e799d-da86-48d0-8f51-bf4ad87992bc",
+            "id": "b0e30026-3016-44fd-8e2d-026c9a7c49cd",
             "lineitems": [
                 {
-                    "id": "35c411dd-1cb2-4de0-bc0b-031a08c182ea",
+                    "id": "1f99f1bf-bd5d-4c4a-a296-769207c3add4",
                     "item_name": "Client dinner",
                     "tax_amount": 0.0,
                     "total_amount": 364.74,
@@ -713,7 +713,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "c8457676-814a-4ed0-b36b-86d030ee1737",
+                    "id": "eecb265e-f9b7-4f57-bc9d-a2acea8811d9",
                     "item_name": "Client dinner",
                     "tax_amount": 0.0,
                     "total_amount": 258.35,
@@ -721,7 +721,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "a05a9995-c89e-44f1-b64a-aa21f202094e",
+                    "id": "2c2b883a-cb0b-4458-bb03-ff8647857360",
                     "item_name": "Conference ticket",
                     "notes": "Casus umquam conicio cinis demitto sint.",
                     "tax_amount": 0.0,
@@ -730,7 +730,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "710a9856-c717-46a8-98c3-504d7f3fdd9c",
+                    "id": "dd28abd4-a8d8-4376-be36-adbe04185d43",
                     "item_name": "Hotel",
                     "tax_amount": 0.0,
                     "total_amount": 157.04,
@@ -738,7 +738,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "d5482e14-5517-42ab-9bb9-3653724caa8b",
+                    "id": "233c2d69-b18b-4183-ab21-026044a1dc03",
                     "item_name": "Hotel",
                     "tax_amount": 0.0,
                     "total_amount": 164.02,
@@ -754,7 +754,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "total_amount": 972.29,
             "type": shared.AccountingExpenseType.COMPANY,
-            "updated_at": parse_datetime("2020-09-02T18:26:15.104Z"),
+            "updated_at": parse_datetime("2020-09-02T19:19:36.275Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -809,7 +809,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-11-08T00:41:42.356Z"),
             "currency": "MVR",
             "description": "Temporibus agnitio sui.",
-            "id": "4c08af45-e2c3-4ec7-b3b1-16db1f768ad7",
+            "id": "d190da41-c409-4928-8ccd-09cfa83736b5",
             "incurred_at": parse_datetime("2020-11-08T00:41:42.356Z"),
             "is_billed": False,
             "metadata": [],
@@ -817,7 +817,7 @@ with UnifiedTo(
             "quantity": 3.0,
             "total_amount": 300.0,
             "type": shared.LegalExpenseType.OTHER,
-            "updated_at": parse_datetime("2024-04-07T08:57:34.281Z"),
+            "updated_at": parse_datetime("2024-04-07T23:07:21.734Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
