@@ -131,7 +131,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "0f1b3d33-9aef-47c3-a841-8dc6a8043fac",
+            "id": "627337fe-c3b2-42cc-aa3c-1e92f5d4daf8",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -144,7 +144,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-10T11:10:45.842Z"),
+            "updated_at": parse_datetime("2023-08-10T17:19:30.077Z"),
         },
         "connection_id": "<id>",
     })
@@ -181,7 +181,7 @@ async def main():
                 "currency": "CAD",
                 "customer_defined_code": "6170",
                 "description": "Voluptatibus valde spoliatio.",
-                "id": "0f1b3d33-9aef-47c3-a841-8dc6a8043fac",
+                "id": "627337fe-c3b2-42cc-aa3c-1e92f5d4daf8",
                 "is_payable": False,
                 "metadata": [],
                 "name": "Auto Loan Account",
@@ -194,7 +194,7 @@ async def main():
                     },
                 ],
                 "type": shared.Type.ACCOUNTS_RECEIVABLE,
-                "updated_at": parse_datetime("2023-08-10T11:10:45.842Z"),
+                "updated_at": parse_datetime("2023-08-10T17:19:30.077Z"),
             },
             "connection_id": "<id>",
         })
@@ -670,6 +670,15 @@ asyncio.run(main())
 * [remove_plm_bomline](docs/sdks/bomline/README.md#remove_plm_bomline) - Remove a bomline
 * [update_plm_bomline](docs/sdks/bomline/README.md#update_plm_bomline) - Update a bomline
 
+### [Bot](docs/sdks/bot/README.md)
+
+* [create_calendar_bot](docs/sdks/bot/README.md#create_calendar_bot) - Create a bot
+* [get_calendar_bot](docs/sdks/bot/README.md#get_calendar_bot) - Retrieve a bot
+* [list_calendar_bots](docs/sdks/bot/README.md#list_calendar_bots) - List all bots
+* [patch_calendar_bot](docs/sdks/bot/README.md#patch_calendar_bot) - Update a bot
+* [remove_calendar_bot](docs/sdks/bot/README.md#remove_calendar_bot) - Remove a bot
+* [update_calendar_bot](docs/sdks/bot/README.md#update_calendar_bot) - Update a bot
+
 ### [Branch](docs/sdks/branch/README.md)
 
 * [create_repo_branch](docs/sdks/branch/README.md#create_repo_branch) - Create a branch
@@ -685,10 +694,12 @@ asyncio.run(main())
 
 ### [Calendar](docs/sdks/calendar/README.md)
 
+* [create_calendar_bot](docs/sdks/calendar/README.md#create_calendar_bot) - Create a bot
 * [create_calendar_calendar](docs/sdks/calendar/README.md#create_calendar_calendar) - Create a calendar
 * [create_calendar_event](docs/sdks/calendar/README.md#create_calendar_event) - Create an event
 * [create_calendar_link](docs/sdks/calendar/README.md#create_calendar_link) - Create a link
 * [create_calendar_webinar](docs/sdks/calendar/README.md#create_calendar_webinar) - Create a webinar
+* [get_calendar_bot](docs/sdks/calendar/README.md#get_calendar_bot) - Retrieve a bot
 * [get_calendar_calendar](docs/sdks/calendar/README.md#get_calendar_calendar) - Retrieve a calendar
 * [get_calendar_event](docs/sdks/calendar/README.md#get_calendar_event) - Retrieve an event
 * [get_calendar_link](docs/sdks/calendar/README.md#get_calendar_link) - Retrieve a link
@@ -696,6 +707,7 @@ asyncio.run(main())
 * [get_calendar_recording](docs/sdks/calendar/README.md#get_calendar_recording) - Retrieve a recording
 * [get_calendar_room](docs/sdks/calendar/README.md#get_calendar_room) - Retrieve a room
 * [get_calendar_webinar](docs/sdks/calendar/README.md#get_calendar_webinar) - Retrieve a webinar
+* [list_calendar_bots](docs/sdks/calendar/README.md#list_calendar_bots) - List all bots
 * [list_calendar_busies](docs/sdks/calendar/README.md#list_calendar_busies) - List all busies
 * [list_calendar_calendars](docs/sdks/calendar/README.md#list_calendar_calendars) - List all calendars
 * [list_calendar_events](docs/sdks/calendar/README.md#list_calendar_events) - List all events
@@ -704,14 +716,17 @@ asyncio.run(main())
 * [list_calendar_recordings](docs/sdks/calendar/README.md#list_calendar_recordings) - List all recordings
 * [list_calendar_rooms](docs/sdks/calendar/README.md#list_calendar_rooms) - List all rooms
 * [list_calendar_webinars](docs/sdks/calendar/README.md#list_calendar_webinars) - List all webinars
+* [patch_calendar_bot](docs/sdks/calendar/README.md#patch_calendar_bot) - Update a bot
 * [patch_calendar_calendar](docs/sdks/calendar/README.md#patch_calendar_calendar) - Update a calendar
 * [patch_calendar_event](docs/sdks/calendar/README.md#patch_calendar_event) - Update an event
 * [patch_calendar_link](docs/sdks/calendar/README.md#patch_calendar_link) - Update a link
 * [patch_calendar_webinar](docs/sdks/calendar/README.md#patch_calendar_webinar) - Update a webinar
+* [remove_calendar_bot](docs/sdks/calendar/README.md#remove_calendar_bot) - Remove a bot
 * [remove_calendar_calendar](docs/sdks/calendar/README.md#remove_calendar_calendar) - Remove a calendar
 * [remove_calendar_event](docs/sdks/calendar/README.md#remove_calendar_event) - Remove an event
 * [remove_calendar_link](docs/sdks/calendar/README.md#remove_calendar_link) - Remove a link
 * [remove_calendar_webinar](docs/sdks/calendar/README.md#remove_calendar_webinar) - Remove a webinar
+* [update_calendar_bot](docs/sdks/calendar/README.md#update_calendar_bot) - Update a bot
 * [update_calendar_calendar](docs/sdks/calendar/README.md#update_calendar_calendar) - Update a calendar
 * [update_calendar_event](docs/sdks/calendar/README.md#update_calendar_event) - Update an event
 * [update_calendar_link](docs/sdks/calendar/README.md#update_calendar_link) - Update a link
@@ -3124,7 +3139,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "0f1b3d33-9aef-47c3-a841-8dc6a8043fac",
+            "id": "627337fe-c3b2-42cc-aa3c-1e92f5d4daf8",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3137,7 +3152,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-10T11:10:45.842Z"),
+            "updated_at": parse_datetime("2023-08-10T17:19:30.077Z"),
         },
         "connection_id": "<id>",
     },
@@ -3171,7 +3186,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "0f1b3d33-9aef-47c3-a841-8dc6a8043fac",
+            "id": "627337fe-c3b2-42cc-aa3c-1e92f5d4daf8",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3184,7 +3199,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-10T11:10:45.842Z"),
+            "updated_at": parse_datetime("2023-08-10T17:19:30.077Z"),
         },
         "connection_id": "<id>",
     })
@@ -3232,7 +3247,7 @@ with UnifiedTo(
                 "currency": "CAD",
                 "customer_defined_code": "6170",
                 "description": "Voluptatibus valde spoliatio.",
-                "id": "0f1b3d33-9aef-47c3-a841-8dc6a8043fac",
+                "id": "627337fe-c3b2-42cc-aa3c-1e92f5d4daf8",
                 "is_payable": False,
                 "metadata": [],
                 "name": "Auto Loan Account",
@@ -3245,7 +3260,7 @@ with UnifiedTo(
                     },
                 ],
                 "type": shared.Type.ACCOUNTS_RECEIVABLE,
-                "updated_at": parse_datetime("2023-08-10T11:10:45.842Z"),
+                "updated_at": parse_datetime("2023-08-10T17:19:30.077Z"),
             },
             "connection_id": "<id>",
         })
@@ -3323,7 +3338,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "0f1b3d33-9aef-47c3-a841-8dc6a8043fac",
+            "id": "627337fe-c3b2-42cc-aa3c-1e92f5d4daf8",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3336,7 +3351,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-10T11:10:45.842Z"),
+            "updated_at": parse_datetime("2023-08-10T17:19:30.077Z"),
         },
         "connection_id": "<id>",
     })
@@ -3371,7 +3386,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "0f1b3d33-9aef-47c3-a841-8dc6a8043fac",
+            "id": "627337fe-c3b2-42cc-aa3c-1e92f5d4daf8",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3384,7 +3399,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-10T11:10:45.842Z"),
+            "updated_at": parse_datetime("2023-08-10T17:19:30.077Z"),
         },
         "connection_id": "<id>",
     })
@@ -3527,7 +3542,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "0f1b3d33-9aef-47c3-a841-8dc6a8043fac",
+            "id": "627337fe-c3b2-42cc-aa3c-1e92f5d4daf8",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3540,7 +3555,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-10T11:10:45.842Z"),
+            "updated_at": parse_datetime("2023-08-10T17:19:30.077Z"),
         },
         "connection_id": "<id>",
     })

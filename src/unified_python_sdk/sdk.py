@@ -44,6 +44,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.benefit import Benefit
     from unified_python_sdk.bill import Bill
     from unified_python_sdk.bomline import Bomline
+    from unified_python_sdk.bot import Bot
     from unified_python_sdk.branch import Branch
     from unified_python_sdk.busy import Busy
     from unified_python_sdk.calendar import Calendar
@@ -304,6 +305,7 @@ class UnifiedTo(BaseSDK):
     job: "Job"
     scorecard: "Scorecard"
     calendar: "Calendar"
+    bot: "Bot"
     busy: "Busy"
     link: "Link"
     location: "Location"
@@ -534,6 +536,7 @@ class UnifiedTo(BaseSDK):
         "job": ("unified_python_sdk.job", "Job"),
         "scorecard": ("unified_python_sdk.scorecard", "Scorecard"),
         "calendar": ("unified_python_sdk.calendar", "Calendar"),
+        "bot": ("unified_python_sdk.bot", "Bot"),
         "busy": ("unified_python_sdk.busy", "Busy"),
         "link": ("unified_python_sdk.link", "Link"),
         "location": ("unified_python_sdk.location", "Location"),

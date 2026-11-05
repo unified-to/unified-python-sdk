@@ -505,6 +505,22 @@ if TYPE_CHECKING:
         CalendarAttendeeStatus,
         CalendarAttendeeTypedDict,
     )
+    from .calendarbot import CalendarBot, CalendarBotStatus, CalendarBotTypedDict
+    from .calendarbotparticipant import (
+        CalendarBotParticipant,
+        CalendarBotParticipant1,
+        CalendarBotParticipant1TypedDict,
+        CalendarBotParticipant5,
+        CalendarBotParticipant5TypedDict,
+        CalendarBotParticipantTypedDict,
+        PlatformMetadata,
+        PlatformMetadataTypedDict,
+    )
+    from .calendarbotstatuschange import (
+        CalendarBotStatusChange,
+        CalendarBotStatusChangeStatus,
+        CalendarBotStatusChangeTypedDict,
+    )
     from .calendarbusy import CalendarBusy, CalendarBusyTypedDict
     from .calendarcalendar import CalendarCalendar, CalendarCalendarTypedDict
     from .calendarconference import CalendarConference, CalendarConferenceTypedDict
@@ -2055,6 +2071,24 @@ if TYPE_CHECKING:
         PropertyAtsJobPostingAddress,
         PropertyAtsJobPostingAddressTypedDict,
     )
+    from .property_calendarbot_automatic_leave import (
+        PropertyCalendarBotAutomaticLeave,
+        PropertyCalendarBotAutomaticLeaveTypedDict,
+    )
+    from .property_calendarbot_meeting_metadata import (
+        PropertyCalendarBotMeetingMetadata,
+        PropertyCalendarBotMeetingMetadataTypedDict,
+    )
+    from .property_calendarbot_recording_config import (
+        PropertyCalendarBotRecordingConfig,
+        PropertyCalendarBotRecordingConfigTypedDict,
+    )
+    from .property_calendarbot_recording_config_transcription import (
+        PropertyCalendarBotRecordingConfigTranscription,
+        PropertyCalendarBotRecordingConfigTranscriptionMode,
+        PropertyCalendarBotRecordingConfigTranscriptionTypedDict,
+        Provider,
+    )
     from .property_calendarevent_organizer import (
         PropertyCalendarEventOrganizer,
         PropertyCalendarEventOrganizerStatus,
@@ -3407,6 +3441,18 @@ __all__ = [
     "CalendarAttendee",
     "CalendarAttendeeStatus",
     "CalendarAttendeeTypedDict",
+    "CalendarBot",
+    "CalendarBotParticipant",
+    "CalendarBotParticipant1",
+    "CalendarBotParticipant1TypedDict",
+    "CalendarBotParticipant5",
+    "CalendarBotParticipant5TypedDict",
+    "CalendarBotParticipantTypedDict",
+    "CalendarBotStatus",
+    "CalendarBotStatusChange",
+    "CalendarBotStatusChangeStatus",
+    "CalendarBotStatusChangeTypedDict",
+    "CalendarBotTypedDict",
     "CalendarBusy",
     "CalendarBusyTypedDict",
     "CalendarCalendar",
@@ -4466,6 +4512,8 @@ __all__ = [
     "PerformanceReviewType",
     "PerformanceReviewTypedDict",
     "Period",
+    "PlatformMetadata",
+    "PlatformMetadataTypedDict",
     "PlmAffectedItem",
     "PlmAffectedItemTypedDict",
     "PlmBomline",
@@ -4751,6 +4799,15 @@ __all__ = [
     "PropertyAvailability",
     "PropertyAvailabilityStatus",
     "PropertyAvailabilityTypedDict",
+    "PropertyCalendarBotAutomaticLeave",
+    "PropertyCalendarBotAutomaticLeaveTypedDict",
+    "PropertyCalendarBotMeetingMetadata",
+    "PropertyCalendarBotMeetingMetadataTypedDict",
+    "PropertyCalendarBotRecordingConfig",
+    "PropertyCalendarBotRecordingConfigTranscription",
+    "PropertyCalendarBotRecordingConfigTranscriptionMode",
+    "PropertyCalendarBotRecordingConfigTranscriptionTypedDict",
+    "PropertyCalendarBotRecordingConfigTypedDict",
     "PropertyCalendarEventOrganizer",
     "PropertyCalendarEventOrganizerStatus",
     "PropertyCalendarEventOrganizerTypedDict",
@@ -5012,6 +5069,7 @@ __all__ = [
     "PropertyUnittype",
     "PropertyUnittypeTypedDict",
     "Protocol",
+    "Provider",
     "RadiusUnit",
     "Reason",
     "Recommendation",
@@ -5870,6 +5928,20 @@ _dynamic_imports: dict[str, str] = {
     "CalendarAttendee": ".calendarattendee",
     "CalendarAttendeeStatus": ".calendarattendee",
     "CalendarAttendeeTypedDict": ".calendarattendee",
+    "CalendarBot": ".calendarbot",
+    "CalendarBotStatus": ".calendarbot",
+    "CalendarBotTypedDict": ".calendarbot",
+    "CalendarBotParticipant": ".calendarbotparticipant",
+    "CalendarBotParticipant1": ".calendarbotparticipant",
+    "CalendarBotParticipant1TypedDict": ".calendarbotparticipant",
+    "CalendarBotParticipant5": ".calendarbotparticipant",
+    "CalendarBotParticipant5TypedDict": ".calendarbotparticipant",
+    "CalendarBotParticipantTypedDict": ".calendarbotparticipant",
+    "PlatformMetadata": ".calendarbotparticipant",
+    "PlatformMetadataTypedDict": ".calendarbotparticipant",
+    "CalendarBotStatusChange": ".calendarbotstatuschange",
+    "CalendarBotStatusChangeStatus": ".calendarbotstatuschange",
+    "CalendarBotStatusChangeTypedDict": ".calendarbotstatuschange",
     "CalendarBusy": ".calendarbusy",
     "CalendarBusyTypedDict": ".calendarbusy",
     "CalendarCalendar": ".calendarcalendar",
@@ -7131,6 +7203,16 @@ _dynamic_imports: dict[str, str] = {
     "PropertyAtsCompanyAddressTypedDict": ".property_atscompany_address",
     "PropertyAtsJobPostingAddress": ".property_atsjobposting_address",
     "PropertyAtsJobPostingAddressTypedDict": ".property_atsjobposting_address",
+    "PropertyCalendarBotAutomaticLeave": ".property_calendarbot_automatic_leave",
+    "PropertyCalendarBotAutomaticLeaveTypedDict": ".property_calendarbot_automatic_leave",
+    "PropertyCalendarBotMeetingMetadata": ".property_calendarbot_meeting_metadata",
+    "PropertyCalendarBotMeetingMetadataTypedDict": ".property_calendarbot_meeting_metadata",
+    "PropertyCalendarBotRecordingConfig": ".property_calendarbot_recording_config",
+    "PropertyCalendarBotRecordingConfigTypedDict": ".property_calendarbot_recording_config",
+    "PropertyCalendarBotRecordingConfigTranscription": ".property_calendarbot_recording_config_transcription",
+    "PropertyCalendarBotRecordingConfigTranscriptionMode": ".property_calendarbot_recording_config_transcription",
+    "PropertyCalendarBotRecordingConfigTranscriptionTypedDict": ".property_calendarbot_recording_config_transcription",
+    "Provider": ".property_calendarbot_recording_config_transcription",
     "PropertyCalendarEventOrganizer": ".property_calendarevent_organizer",
     "PropertyCalendarEventOrganizerStatus": ".property_calendarevent_organizer",
     "PropertyCalendarEventOrganizerTypedDict": ".property_calendarevent_organizer",
