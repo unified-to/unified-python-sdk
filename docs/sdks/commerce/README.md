@@ -79,7 +79,7 @@ with UnifiedTo(
         "commerce_collection": {
             "created_at": parse_datetime("2023-07-14T00:42:54.742Z"),
             "description": "The Integrated leading edge website Cheese offers reliable performance and productive design",
-            "id": "f0631d9c-64bd-4e05-b57d-ef1a9ca689fc",
+            "id": "530d619f-674b-4f84-b36f-e5987f3e4e77",
             "is_active": True,
             "is_featured": False,
             "is_visible": False,
@@ -88,10 +88,10 @@ with UnifiedTo(
                 {
                     "alt": "Defungo adopto thorax.",
                     "height": 759.0,
-                    "id": "c8cb1970-c98d-4d27-974a-b28a131e229a",
+                    "id": "3dbd9080-ebd0-41b6-a11b-4f4ffe89a496",
                     "metadata": [
                         {
-                            "id": "88188d44-7ba2-420f-a0a2-f6da00c6a3c8",
+                            "id": "12d82b6b-f004-4a3f-b3ed-a976a2a8e653",
                             "slug": "censura",
                             "value": "toties",
                         },
@@ -104,7 +104,7 @@ with UnifiedTo(
             ],
             "metadata": [
                 {
-                    "id": "696008ac-4619-46d3-b1fc-ac875752681b",
+                    "id": "c8228347-0385-4479-9b3f-948b26564023",
                     "slug": "aetas",
                     "value": "consuasor",
                 },
@@ -118,7 +118,7 @@ with UnifiedTo(
                 "contego",
             ],
             "type": shared.CommerceCollectionType.COLLECTION,
-            "updated_at": parse_datetime("2025-03-22T17:20:56.796Z"),
+            "updated_at": parse_datetime("2025-03-23T02:43:13.748Z"),
         },
         "connection_id": "<id>",
     })
@@ -169,9 +169,9 @@ with UnifiedTo(
     res = unified_to.commerce.create_commerce_inventory(request={
         "commerce_inventory": {
             "available": 337.0,
-            "id": "c10940b9-6f69-4158-b430-321531f21eff",
+            "id": "02fdcd9f-7d92-4ff1-8af5-b9863ed645c6",
             "metadata": [],
-            "updated_at": parse_datetime("2025-12-02T12:17:33.821Z"),
+            "updated_at": parse_datetime("2025-12-03T03:05:02.053Z"),
         },
         "connection_id": "<id>",
     })
@@ -226,7 +226,7 @@ with UnifiedTo(
             "description": "Decretum vulnero ustulo abeo.",
             "duration": 104.0,
             "global_code": "978-0-85270-680-0",
-            "id": "c0b08751-16d7-4339-bca5-6e6bdedad527",
+            "id": "eb96ece7-7411-4cff-9985-cc712ad5bd4d",
             "is_active": False,
             "is_featured": False,
             "is_taxable": True,
@@ -235,10 +235,10 @@ with UnifiedTo(
                 {
                     "alt": "Caterva eveniet acies candidus.",
                     "height": 876.0,
-                    "id": "93e1f8e2-7b06-4499-9ee3-b56fa3682179",
+                    "id": "a54e4e41-9ece-44e8-b94e-d8b31bbb5936",
                     "metadata": [
                         {
-                            "id": "8a4275b4-28fa-4409-92da-e9b20204676d",
+                            "id": "8bc11b61-6fd8-4e66-81e7-5bc180112aec",
                             "slug": "doloremque",
                             "value": "allatus",
                         },
@@ -251,10 +251,10 @@ with UnifiedTo(
                 {
                     "alt": "Comedo.",
                     "height": 651.0,
-                    "id": "5d7fba3e-a641-4e98-978a-74a32fdcb92a",
+                    "id": "bf4fbc08-a48d-4066-b1cd-f1e80312072b",
                     "metadata": [
                         {
-                            "id": "84a2e069-41a0-4d96-a552-3c91a3616c59",
+                            "id": "ada88a31-c022-4bff-a9f7-ff72763e2145",
                             "slug": "bis",
                             "value": "somniculosus",
                         },
@@ -271,7 +271,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CommerceMetadataFormat.TEXT,
-                    "id": "a26aa026-5a32-4f48-8845-fa53aa2b9e38",
+                    "id": "e3c1468a-90ec-4544-94bd-f49160c007f4",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "abstergo",
@@ -294,7 +294,7 @@ with UnifiedTo(
             ],
             "total_stock": 682.0,
             "type": "SERVICE",
-            "updated_at": parse_datetime("2022-04-25T07:02:09.862Z"),
+            "updated_at": parse_datetime("2022-04-25T14:06:51.815Z"),
             "vendor_name": "Mayer - Flatley",
             "weight": 37.0,
             "weight_unit": shared.WeightUnit.OZ,
@@ -351,7 +351,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-01-20T13:49:12.968Z"),
             "description": "Stylish Salad designed to make you stand out with little looks",
             "height": 54.0,
-            "id": "1703d662-5dae-47c7-b91f-1c685f2af429",
+            "id": "b8646017-886b-4603-9bfd-6c892087bb31",
             "is_active": True,
             "is_featured": False,
             "is_visible": False,
@@ -360,10 +360,10 @@ with UnifiedTo(
                 {
                     "alt": "Hic desipio thorax.",
                     "height": 961.0,
-                    "id": "ee7eb90d-57b7-4308-bdfb-18ab0f7fe9ce",
+                    "id": "1211c682-0dee-4c39-95aa-11a134f0c960",
                     "metadata": [
                         {
-                            "id": "6627c2da-b9c0-4042-921f-433f7f323f4c",
+                            "id": "dd1341bc-63a3-4fa7-a7ff-613b70dc7ea1",
                             "slug": "ubi",
                             "value": "textus",
                         },
@@ -380,7 +380,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CommerceMetadataFormat.TEXT,
-                    "id": "87af875d-0144-4a70-b652-ae1c4f0358d9",
+                    "id": "d21e456a-e0e2-4d9c-92eb-7451738dacf2",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "absens",
@@ -389,7 +389,7 @@ with UnifiedTo(
             "name": "Chair",
             "options": [
                 {
-                    "id": "15255f88-29df-47fd-ab3e-30f8a7bf4dd5",
+                    "id": "da572adc-9ae0-4a1f-ab07-b75414a2c8cb",
                     "name": "Color",
                     "position": 1.0,
                     "values": [
@@ -397,7 +397,7 @@ with UnifiedTo(
                     ],
                 },
                 {
-                    "id": "5253a718-5fb9-429e-ad7b-845c1bf1ed95",
+                    "id": "e123b4f0-66b0-4864-8b34-bf34c33241eb",
                     "name": "Size",
                     "position": 2.0,
                     "values": [
@@ -420,7 +420,7 @@ with UnifiedTo(
                 "deserunt",
             ],
             "total_stock": 436.0,
-            "updated_at": parse_datetime("2026-03-22T18:01:45.620Z"),
+            "updated_at": parse_datetime("2026-03-23T10:00:07.008Z"),
             "weight": 46.0,
             "weight_unit": shared.CommerceItemvariantWeightUnit.OZ,
             "width": 40.0,
@@ -485,7 +485,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-12-29T04:15:21.195Z"),
             "currency": "XCD",
             "description": "Adsidue audentia.",
-            "id": "96da6c14-6995-4a91-8ab3-b275aec1defa",
+            "id": "e5dd8624-2953-4401-8989-78fc05917158",
             "image_url": "https://picsum.photos/seed/hjFt1/1036/2220",
             "is_active": False,
             "language_locale": "vulgaris",
@@ -496,10 +496,10 @@ with UnifiedTo(
                 {
                     "alt": "Addo.",
                     "height": 283.0,
-                    "id": "d896d134-80c8-431b-9dad-c70132e1b801",
+                    "id": "3c7416c7-d38d-4367-bc3a-4769b080877b",
                     "metadata": [
                         {
-                            "id": "2c7f4276-3e58-4ee1-90f3-eeb475ad118d",
+                            "id": "96af9c51-0db6-478d-b914-c35f3c48ff3f",
                             "slug": "abutor",
                             "value": "damno",
                         },
@@ -525,7 +525,7 @@ with UnifiedTo(
                     "type": shared.CommerceTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2024-04-25T21:54:36.028Z"),
+            "updated_at": parse_datetime("2024-04-26T04:13:19.619Z"),
             "web_url": "https://chilly-edge.info",
         },
         "connection_id": "<id>",
@@ -581,13 +581,13 @@ with UnifiedTo(
             "guest_email": "julien.bartoletti@icloud.com",
             "guest_name": "Julien Bartoletti",
             "guest_phone": "(728) 596-2620",
-            "id": "c5fd8764-506f-4708-8ffa-d8c3df803b34",
+            "id": "99ff8bf4-7708-473d-aa63-8082f59ed656",
             "metadata": [],
             "notes": "Adsum textilis ipsum despecto.",
             "size": 10.0,
             "start_at": parse_datetime("2021-12-18T00:40:25.125Z"),
             "status": shared.CommerceReservationStatus.PENDING,
-            "updated_at": parse_datetime("2023-01-07T03:46:35.030Z"),
+            "updated_at": parse_datetime("2023-01-07T07:46:02.720Z"),
             "url": "https://expensive-gift.org",
         },
         "connection_id": "<id>",
@@ -646,7 +646,7 @@ with UnifiedTo(
             "content": "Taedium thymum adipiscor amicitia cui.",
             "created_at": parse_datetime("2019-12-12T18:10:22.988Z"),
             "helpful_votes": 66.0,
-            "id": "a93d206c-5ee1-40e5-9290-6a9a79384ad7",
+            "id": "743fc078-8418-4de8-87db-e989aea67684",
             "is_featured": False,
             "is_public": True,
             "is_verified": False,
@@ -654,10 +654,10 @@ with UnifiedTo(
                 {
                     "alt": "Desipio carpo sol laudantium colo.",
                     "height": 749.0,
-                    "id": "f7a4cbe3-4e20-427d-ab0b-cfc0a17e9fc0",
+                    "id": "bb341546-f165-423f-8bbf-4ea1f7e16725",
                     "metadata": [
                         {
-                            "id": "652a0795-b30a-46da-a613-7498af764bbd",
+                            "id": "b1845fb2-5eff-4c1b-a4ac-8e32bf02112b",
                             "slug": "textor",
                             "value": "quos",
                         },
@@ -670,10 +670,10 @@ with UnifiedTo(
                 {
                     "alt": "Adopto teneo numquam.",
                     "height": 957.0,
-                    "id": "28d84937-5aa6-444b-9fc7-2dc82413ebc0",
+                    "id": "f5a0bd8b-3807-4439-83a9-26b441ee75db",
                     "metadata": [
                         {
-                            "id": "f00e6584-2b13-4572-8626-7b80c2fb4eff",
+                            "id": "414b7987-8409-4fb8-8723-1db1e79f1c49",
                             "slug": "bos",
                             "value": "casso",
                         },
@@ -689,7 +689,7 @@ with UnifiedTo(
             "status": shared.CommerceReviewStatus.APPROVED,
             "title": "Coepi adamo amicitia auxilium toties.",
             "unhelpful_votes": 88.0,
-            "updated_at": parse_datetime("2025-09-02T19:57:07.572Z"),
+            "updated_at": parse_datetime("2025-09-03T11:11:21.633Z"),
             "url": "https://diligent-bandwidth.biz",
             "verified_purchase": True,
         },
@@ -744,11 +744,11 @@ with UnifiedTo(
             "collections": [],
             "created_at": parse_datetime("2021-12-12T06:19:55.421Z"),
             "description": "Utroque denuncio solutio.",
-            "id": "ba6d0551-7f02-478d-b863-3d36bf769432",
+            "id": "40496879-1300-4f4a-accd-1ffd01c9f9c5",
             "is_active": False,
             "metadata": [],
             "slug": "amiculum-congregatio-suspendo",
-            "updated_at": parse_datetime("2025-02-06T16:17:51.266Z"),
+            "updated_at": parse_datetime("2025-02-07T04:07:27.928Z"),
         },
         "connection_id": "<id>",
     })
@@ -1683,7 +1683,7 @@ with UnifiedTo(
         "commerce_collection": {
             "created_at": parse_datetime("2023-07-14T00:42:54.742Z"),
             "description": "The Integrated leading edge website Cheese offers reliable performance and productive design",
-            "id": "fe7e278f-88b0-4c0b-85d8-968c9f3dab86",
+            "id": "c74cec5f-3eca-4946-b7d3-3130f0ca05de",
             "is_active": True,
             "is_featured": False,
             "is_visible": False,
@@ -1692,10 +1692,10 @@ with UnifiedTo(
                 {
                     "alt": "Defungo adopto thorax.",
                     "height": 759.0,
-                    "id": "f9b17b32-a02a-4361-8f7f-cdce14a76f03",
+                    "id": "9532ceff-1e27-4720-afa5-c46fed053739",
                     "metadata": [
                         {
-                            "id": "f058e791-24a1-4424-9c55-f7d931440b03",
+                            "id": "6468b120-628b-4acd-b073-08fe16c111c4",
                             "slug": "censura",
                             "value": "toties",
                         },
@@ -1708,7 +1708,7 @@ with UnifiedTo(
             ],
             "metadata": [
                 {
-                    "id": "81e2bcd9-33f1-423f-9e69-d06691808a63",
+                    "id": "99f5b5e3-05c8-44d8-b553-30ba986096b2",
                     "slug": "aetas",
                     "value": "consuasor",
                 },
@@ -1722,7 +1722,7 @@ with UnifiedTo(
                 "contego",
             ],
             "type": shared.CommerceCollectionType.COLLECTION,
-            "updated_at": parse_datetime("2025-03-22T17:20:56.809Z"),
+            "updated_at": parse_datetime("2025-03-23T02:43:13.760Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1774,9 +1774,9 @@ with UnifiedTo(
     res = unified_to.commerce.patch_commerce_inventory(request={
         "commerce_inventory": {
             "available": 337.0,
-            "id": "2ab81f52-c397-42eb-84f1-789fd8e99848",
+            "id": "124322e7-be76-4a0a-a628-67758fbc5fdb",
             "metadata": [],
-            "updated_at": parse_datetime("2025-12-02T12:17:33.829Z"),
+            "updated_at": parse_datetime("2025-12-03T03:05:02.067Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1832,7 +1832,7 @@ with UnifiedTo(
             "description": "Decretum vulnero ustulo abeo.",
             "duration": 104.0,
             "global_code": "978-0-85270-680-0",
-            "id": "b863a47c-a290-48ca-8b36-66c760399cee",
+            "id": "232bc4bf-e116-46af-acb8-eaf456c3a0ae",
             "is_active": False,
             "is_featured": False,
             "is_taxable": True,
@@ -1841,10 +1841,10 @@ with UnifiedTo(
                 {
                     "alt": "Caterva eveniet acies candidus.",
                     "height": 876.0,
-                    "id": "7e2abb52-db6c-45f7-812f-bd5121e364e2",
+                    "id": "1eb0abe1-6d0e-4f87-a09c-22d90c3eb7ee",
                     "metadata": [
                         {
-                            "id": "6bdd85a4-3261-46f0-9711-a63422977214",
+                            "id": "3f70afad-58d9-4c0e-baf9-6c11eacc6713",
                             "slug": "doloremque",
                             "value": "allatus",
                         },
@@ -1857,10 +1857,10 @@ with UnifiedTo(
                 {
                     "alt": "Comedo.",
                     "height": 651.0,
-                    "id": "6dffbce0-f220-4809-8478-01401b9bcac9",
+                    "id": "603d69bf-4802-4a99-ba8e-cc397308fe82",
                     "metadata": [
                         {
-                            "id": "0d399e44-b23b-4313-800f-92acce840b32",
+                            "id": "a10133b0-b4eb-4ecb-83f7-c2dac192991d",
                             "slug": "bis",
                             "value": "somniculosus",
                         },
@@ -1877,7 +1877,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CommerceMetadataFormat.TEXT,
-                    "id": "725385ba-6a3e-4492-bab5-0052ffac135d",
+                    "id": "b96218e2-3bc5-43b8-a0af-bc25e463b0cc",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "abstergo",
@@ -1900,7 +1900,7 @@ with UnifiedTo(
             ],
             "total_stock": 682.0,
             "type": "SERVICE",
-            "updated_at": parse_datetime("2022-04-25T07:02:09.876Z"),
+            "updated_at": parse_datetime("2022-04-25T14:06:51.828Z"),
             "vendor_name": "Mayer - Flatley",
             "weight": 37.0,
             "weight_unit": shared.WeightUnit.OZ,
@@ -1958,7 +1958,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-01-20T13:49:12.968Z"),
             "description": "Stylish Salad designed to make you stand out with little looks",
             "height": 54.0,
-            "id": "54a9b7ff-3c48-44fa-bce3-3ef830e73e79",
+            "id": "76a1dd3d-9c5b-4f43-82d3-b9ed543c1c11",
             "is_active": True,
             "is_featured": False,
             "is_visible": False,
@@ -1967,10 +1967,10 @@ with UnifiedTo(
                 {
                     "alt": "Hic desipio thorax.",
                     "height": 961.0,
-                    "id": "10b3f171-5e52-49c7-a090-df9955677117",
+                    "id": "5453ad12-620e-4c53-a228-ce1e489997ec",
                     "metadata": [
                         {
-                            "id": "9b28e049-4319-4c12-a770-484c92c787f2",
+                            "id": "019285a1-362e-45df-b942-d86140f10b9e",
                             "slug": "ubi",
                             "value": "textus",
                         },
@@ -1987,7 +1987,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CommerceMetadataFormat.TEXT,
-                    "id": "d9e3db78-3981-4e9d-82e5-f236d3c3447c",
+                    "id": "3a5cb9dc-dd2b-4142-bc1c-2c3b13f1ee05",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "absens",
@@ -1996,7 +1996,7 @@ with UnifiedTo(
             "name": "Chair",
             "options": [
                 {
-                    "id": "9cbd4d8c-2945-4307-818e-91f1a8bbceef",
+                    "id": "e6756dee-9e3b-4bb3-b9eb-8c47f5432845",
                     "name": "Color",
                     "position": 1.0,
                     "values": [
@@ -2004,7 +2004,7 @@ with UnifiedTo(
                     ],
                 },
                 {
-                    "id": "0bae0b7b-f438-48dc-a813-509b71bd2d89",
+                    "id": "2869565d-d0c1-4fb8-b011-94414d9f2a51",
                     "name": "Size",
                     "position": 2.0,
                     "values": [
@@ -2027,7 +2027,7 @@ with UnifiedTo(
                 "deserunt",
             ],
             "total_stock": 436.0,
-            "updated_at": parse_datetime("2026-03-22T18:01:45.660Z"),
+            "updated_at": parse_datetime("2026-03-23T10:00:07.028Z"),
             "weight": 46.0,
             "weight_unit": shared.CommerceItemvariantWeightUnit.OZ,
             "width": 40.0,
@@ -2093,7 +2093,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-12-29T04:15:21.195Z"),
             "currency": "XCD",
             "description": "Adsidue audentia.",
-            "id": "163abfe2-2a90-4249-ab6b-298afa1eaccf",
+            "id": "35b6ef7a-ac3d-4244-90f9-27cb1c00ab06",
             "image_url": "https://picsum.photos/seed/hjFt1/1036/2220",
             "is_active": False,
             "language_locale": "vulgaris",
@@ -2104,10 +2104,10 @@ with UnifiedTo(
                 {
                     "alt": "Addo.",
                     "height": 283.0,
-                    "id": "c4d5053b-fc38-452c-834e-143a629b1555",
+                    "id": "b042ef3c-eab6-498f-8cbd-e971c4557bb4",
                     "metadata": [
                         {
-                            "id": "90896d45-3d7c-422a-80e1-7c7b81907775",
+                            "id": "bf6a7b85-3535-45f5-8ab2-d08dcc4caa71",
                             "slug": "abutor",
                             "value": "damno",
                         },
@@ -2133,7 +2133,7 @@ with UnifiedTo(
                     "type": shared.CommerceTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2024-04-25T21:54:36.042Z"),
+            "updated_at": parse_datetime("2024-04-26T04:13:19.631Z"),
             "web_url": "https://chilly-edge.info",
         },
         "connection_id": "<id>",
@@ -2190,13 +2190,13 @@ with UnifiedTo(
             "guest_email": "julien.bartoletti@icloud.com",
             "guest_name": "Julien Bartoletti",
             "guest_phone": "(728) 596-2620",
-            "id": "12cf293d-f689-4cf4-ab77-c59fcb196994",
+            "id": "1c15c3e6-c509-4c01-9e1f-9fd4832e68eb",
             "metadata": [],
             "notes": "Adsum textilis ipsum despecto.",
             "size": 10.0,
             "start_at": parse_datetime("2021-12-18T00:40:25.125Z"),
             "status": shared.CommerceReservationStatus.PENDING,
-            "updated_at": parse_datetime("2023-01-07T03:46:35.034Z"),
+            "updated_at": parse_datetime("2023-01-07T07:46:02.724Z"),
             "url": "https://expensive-gift.org",
         },
         "connection_id": "<id>",
@@ -2256,7 +2256,7 @@ with UnifiedTo(
             "content": "Taedium thymum adipiscor amicitia cui.",
             "created_at": parse_datetime("2019-12-12T18:10:22.988Z"),
             "helpful_votes": 66.0,
-            "id": "9d1ef2ce-ce23-4dbf-85e5-59411bc11ca3",
+            "id": "77d9bac6-7514-4860-848f-79756c33e581",
             "is_featured": False,
             "is_public": True,
             "is_verified": False,
@@ -2264,10 +2264,10 @@ with UnifiedTo(
                 {
                     "alt": "Desipio carpo sol laudantium colo.",
                     "height": 749.0,
-                    "id": "4b97635a-24aa-4f09-888e-99303ac51b30",
+                    "id": "43db5874-44d8-4159-ac22-d0da878a9188",
                     "metadata": [
                         {
-                            "id": "732d0de9-35c0-4e81-82aa-b4fc2548c83e",
+                            "id": "785dccc2-ec64-4bad-8101-f259e22368db",
                             "slug": "textor",
                             "value": "quos",
                         },
@@ -2280,10 +2280,10 @@ with UnifiedTo(
                 {
                     "alt": "Adopto teneo numquam.",
                     "height": 957.0,
-                    "id": "4134e249-a583-432f-a84a-65d1104dd43c",
+                    "id": "f00c36b9-9219-4905-ab08-d6f553c00091",
                     "metadata": [
                         {
-                            "id": "2f30167e-af2e-4dc7-9e5b-8bda38cab0d5",
+                            "id": "a2ba4900-d98d-406c-9614-5cbc6cbf06ec",
                             "slug": "bos",
                             "value": "casso",
                         },
@@ -2299,7 +2299,7 @@ with UnifiedTo(
             "status": shared.CommerceReviewStatus.APPROVED,
             "title": "Coepi adamo amicitia auxilium toties.",
             "unhelpful_votes": 88.0,
-            "updated_at": parse_datetime("2025-09-02T19:57:07.598Z"),
+            "updated_at": parse_datetime("2025-09-03T11:11:21.669Z"),
             "url": "https://diligent-bandwidth.biz",
             "verified_purchase": True,
         },
@@ -2355,11 +2355,11 @@ with UnifiedTo(
             "collections": [],
             "created_at": parse_datetime("2021-12-12T06:19:55.421Z"),
             "description": "Utroque denuncio solutio.",
-            "id": "9d2ea9a5-c782-4520-b493-03f00e86af0d",
+            "id": "00cd790b-2007-4b52-9002-88df3f8834a7",
             "is_active": False,
             "metadata": [],
             "slug": "amiculum-congregatio-suspendo",
-            "updated_at": parse_datetime("2025-02-06T16:17:51.277Z"),
+            "updated_at": parse_datetime("2025-02-07T04:07:27.938Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2788,7 +2788,7 @@ with UnifiedTo(
         "commerce_collection": {
             "created_at": parse_datetime("2023-07-14T00:42:54.742Z"),
             "description": "The Integrated leading edge website Cheese offers reliable performance and productive design",
-            "id": "fe7e278f-88b0-4c0b-85d8-968c9f3dab86",
+            "id": "c74cec5f-3eca-4946-b7d3-3130f0ca05de",
             "is_active": True,
             "is_featured": False,
             "is_visible": False,
@@ -2797,10 +2797,10 @@ with UnifiedTo(
                 {
                     "alt": "Defungo adopto thorax.",
                     "height": 759.0,
-                    "id": "f9b17b32-a02a-4361-8f7f-cdce14a76f03",
+                    "id": "9532ceff-1e27-4720-afa5-c46fed053739",
                     "metadata": [
                         {
-                            "id": "f058e791-24a1-4424-9c55-f7d931440b03",
+                            "id": "6468b120-628b-4acd-b073-08fe16c111c4",
                             "slug": "censura",
                             "value": "toties",
                         },
@@ -2813,7 +2813,7 @@ with UnifiedTo(
             ],
             "metadata": [
                 {
-                    "id": "81e2bcd9-33f1-423f-9e69-d06691808a63",
+                    "id": "99f5b5e3-05c8-44d8-b553-30ba986096b2",
                     "slug": "aetas",
                     "value": "consuasor",
                 },
@@ -2827,7 +2827,7 @@ with UnifiedTo(
                 "contego",
             ],
             "type": shared.CommerceCollectionType.COLLECTION,
-            "updated_at": parse_datetime("2025-03-22T17:20:56.809Z"),
+            "updated_at": parse_datetime("2025-03-23T02:43:13.760Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2879,9 +2879,9 @@ with UnifiedTo(
     res = unified_to.commerce.update_commerce_inventory(request={
         "commerce_inventory": {
             "available": 337.0,
-            "id": "2ab81f52-c397-42eb-84f1-789fd8e99848",
+            "id": "124322e7-be76-4a0a-a628-67758fbc5fdb",
             "metadata": [],
-            "updated_at": parse_datetime("2025-12-02T12:17:33.829Z"),
+            "updated_at": parse_datetime("2025-12-03T03:05:02.067Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2937,7 +2937,7 @@ with UnifiedTo(
             "description": "Decretum vulnero ustulo abeo.",
             "duration": 104.0,
             "global_code": "978-0-85270-680-0",
-            "id": "b863a47c-a290-48ca-8b36-66c760399cee",
+            "id": "232bc4bf-e116-46af-acb8-eaf456c3a0ae",
             "is_active": False,
             "is_featured": False,
             "is_taxable": True,
@@ -2946,10 +2946,10 @@ with UnifiedTo(
                 {
                     "alt": "Caterva eveniet acies candidus.",
                     "height": 876.0,
-                    "id": "7e2abb52-db6c-45f7-812f-bd5121e364e2",
+                    "id": "1eb0abe1-6d0e-4f87-a09c-22d90c3eb7ee",
                     "metadata": [
                         {
-                            "id": "6bdd85a4-3261-46f0-9711-a63422977214",
+                            "id": "3f70afad-58d9-4c0e-baf9-6c11eacc6713",
                             "slug": "doloremque",
                             "value": "allatus",
                         },
@@ -2962,10 +2962,10 @@ with UnifiedTo(
                 {
                     "alt": "Comedo.",
                     "height": 651.0,
-                    "id": "6dffbce0-f220-4809-8478-01401b9bcac9",
+                    "id": "603d69bf-4802-4a99-ba8e-cc397308fe82",
                     "metadata": [
                         {
-                            "id": "0d399e44-b23b-4313-800f-92acce840b32",
+                            "id": "a10133b0-b4eb-4ecb-83f7-c2dac192991d",
                             "slug": "bis",
                             "value": "somniculosus",
                         },
@@ -2982,7 +2982,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CommerceMetadataFormat.TEXT,
-                    "id": "725385ba-6a3e-4492-bab5-0052ffac135d",
+                    "id": "b96218e2-3bc5-43b8-a0af-bc25e463b0cc",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "abstergo",
@@ -3005,7 +3005,7 @@ with UnifiedTo(
             ],
             "total_stock": 682.0,
             "type": "SERVICE",
-            "updated_at": parse_datetime("2022-04-25T07:02:09.876Z"),
+            "updated_at": parse_datetime("2022-04-25T14:06:51.828Z"),
             "vendor_name": "Mayer - Flatley",
             "weight": 37.0,
             "weight_unit": shared.WeightUnit.OZ,
@@ -3063,7 +3063,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-01-20T13:49:12.968Z"),
             "description": "Stylish Salad designed to make you stand out with little looks",
             "height": 54.0,
-            "id": "54a9b7ff-3c48-44fa-bce3-3ef830e73e79",
+            "id": "76a1dd3d-9c5b-4f43-82d3-b9ed543c1c11",
             "is_active": True,
             "is_featured": False,
             "is_visible": False,
@@ -3072,10 +3072,10 @@ with UnifiedTo(
                 {
                     "alt": "Hic desipio thorax.",
                     "height": 961.0,
-                    "id": "10b3f171-5e52-49c7-a090-df9955677117",
+                    "id": "5453ad12-620e-4c53-a228-ce1e489997ec",
                     "metadata": [
                         {
-                            "id": "9b28e049-4319-4c12-a770-484c92c787f2",
+                            "id": "019285a1-362e-45df-b942-d86140f10b9e",
                             "slug": "ubi",
                             "value": "textus",
                         },
@@ -3092,7 +3092,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CommerceMetadataFormat.TEXT,
-                    "id": "d9e3db78-3981-4e9d-82e5-f236d3c3447c",
+                    "id": "3a5cb9dc-dd2b-4142-bc1c-2c3b13f1ee05",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "absens",
@@ -3101,7 +3101,7 @@ with UnifiedTo(
             "name": "Chair",
             "options": [
                 {
-                    "id": "9cbd4d8c-2945-4307-818e-91f1a8bbceef",
+                    "id": "e6756dee-9e3b-4bb3-b9eb-8c47f5432845",
                     "name": "Color",
                     "position": 1.0,
                     "values": [
@@ -3109,7 +3109,7 @@ with UnifiedTo(
                     ],
                 },
                 {
-                    "id": "0bae0b7b-f438-48dc-a813-509b71bd2d89",
+                    "id": "2869565d-d0c1-4fb8-b011-94414d9f2a51",
                     "name": "Size",
                     "position": 2.0,
                     "values": [
@@ -3132,7 +3132,7 @@ with UnifiedTo(
                 "deserunt",
             ],
             "total_stock": 436.0,
-            "updated_at": parse_datetime("2026-03-22T18:01:45.660Z"),
+            "updated_at": parse_datetime("2026-03-23T10:00:07.028Z"),
             "weight": 46.0,
             "weight_unit": shared.CommerceItemvariantWeightUnit.OZ,
             "width": 40.0,
@@ -3198,7 +3198,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-12-29T04:15:21.195Z"),
             "currency": "XCD",
             "description": "Adsidue audentia.",
-            "id": "163abfe2-2a90-4249-ab6b-298afa1eaccf",
+            "id": "35b6ef7a-ac3d-4244-90f9-27cb1c00ab06",
             "image_url": "https://picsum.photos/seed/hjFt1/1036/2220",
             "is_active": False,
             "language_locale": "vulgaris",
@@ -3209,10 +3209,10 @@ with UnifiedTo(
                 {
                     "alt": "Addo.",
                     "height": 283.0,
-                    "id": "c4d5053b-fc38-452c-834e-143a629b1555",
+                    "id": "b042ef3c-eab6-498f-8cbd-e971c4557bb4",
                     "metadata": [
                         {
-                            "id": "90896d45-3d7c-422a-80e1-7c7b81907775",
+                            "id": "bf6a7b85-3535-45f5-8ab2-d08dcc4caa71",
                             "slug": "abutor",
                             "value": "damno",
                         },
@@ -3238,7 +3238,7 @@ with UnifiedTo(
                     "type": shared.CommerceTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2024-04-25T21:54:36.042Z"),
+            "updated_at": parse_datetime("2024-04-26T04:13:19.631Z"),
             "web_url": "https://chilly-edge.info",
         },
         "connection_id": "<id>",
@@ -3295,13 +3295,13 @@ with UnifiedTo(
             "guest_email": "julien.bartoletti@icloud.com",
             "guest_name": "Julien Bartoletti",
             "guest_phone": "(728) 596-2620",
-            "id": "12cf293d-f689-4cf4-ab77-c59fcb196994",
+            "id": "1c15c3e6-c509-4c01-9e1f-9fd4832e68eb",
             "metadata": [],
             "notes": "Adsum textilis ipsum despecto.",
             "size": 10.0,
             "start_at": parse_datetime("2021-12-18T00:40:25.125Z"),
             "status": shared.CommerceReservationStatus.PENDING,
-            "updated_at": parse_datetime("2023-01-07T03:46:35.034Z"),
+            "updated_at": parse_datetime("2023-01-07T07:46:02.724Z"),
             "url": "https://expensive-gift.org",
         },
         "connection_id": "<id>",
@@ -3361,7 +3361,7 @@ with UnifiedTo(
             "content": "Taedium thymum adipiscor amicitia cui.",
             "created_at": parse_datetime("2019-12-12T18:10:22.988Z"),
             "helpful_votes": 66.0,
-            "id": "9d1ef2ce-ce23-4dbf-85e5-59411bc11ca3",
+            "id": "77d9bac6-7514-4860-848f-79756c33e581",
             "is_featured": False,
             "is_public": True,
             "is_verified": False,
@@ -3369,10 +3369,10 @@ with UnifiedTo(
                 {
                     "alt": "Desipio carpo sol laudantium colo.",
                     "height": 749.0,
-                    "id": "4b97635a-24aa-4f09-888e-99303ac51b30",
+                    "id": "43db5874-44d8-4159-ac22-d0da878a9188",
                     "metadata": [
                         {
-                            "id": "732d0de9-35c0-4e81-82aa-b4fc2548c83e",
+                            "id": "785dccc2-ec64-4bad-8101-f259e22368db",
                             "slug": "textor",
                             "value": "quos",
                         },
@@ -3385,10 +3385,10 @@ with UnifiedTo(
                 {
                     "alt": "Adopto teneo numquam.",
                     "height": 957.0,
-                    "id": "4134e249-a583-432f-a84a-65d1104dd43c",
+                    "id": "f00c36b9-9219-4905-ab08-d6f553c00091",
                     "metadata": [
                         {
-                            "id": "2f30167e-af2e-4dc7-9e5b-8bda38cab0d5",
+                            "id": "a2ba4900-d98d-406c-9614-5cbc6cbf06ec",
                             "slug": "bos",
                             "value": "casso",
                         },
@@ -3404,7 +3404,7 @@ with UnifiedTo(
             "status": shared.CommerceReviewStatus.APPROVED,
             "title": "Coepi adamo amicitia auxilium toties.",
             "unhelpful_votes": 88.0,
-            "updated_at": parse_datetime("2025-09-02T19:57:07.598Z"),
+            "updated_at": parse_datetime("2025-09-03T11:11:21.669Z"),
             "url": "https://diligent-bandwidth.biz",
             "verified_purchase": True,
         },
@@ -3460,11 +3460,11 @@ with UnifiedTo(
             "collections": [],
             "created_at": parse_datetime("2021-12-12T06:19:55.421Z"),
             "description": "Utroque denuncio solutio.",
-            "id": "9d2ea9a5-c782-4520-b493-03f00e86af0d",
+            "id": "00cd790b-2007-4b52-9002-88df3f8834a7",
             "is_active": False,
             "metadata": [],
             "slug": "amiculum-congregatio-suspendo",
-            "updated_at": parse_datetime("2025-02-06T16:17:51.277Z"),
+            "updated_at": parse_datetime("2025-02-07T04:07:27.938Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

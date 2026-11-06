@@ -34,18 +34,24 @@ class Provider(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class PropertyCalendarBotRecordingConfigTranscriptionTypedDict(TypedDict):
     enable_speaker_labels: NotRequired[bool]
+    r"""Whether to identify speakers in transcript"""
     enable_word_timestamps: NotRequired[bool]
+    r"""Whether to include word-level timestamps"""
     language: NotRequired[str]
+    r"""ISO language code (e.g., 'en-US')"""
     mode: NotRequired[PropertyCalendarBotRecordingConfigTranscriptionMode]
     provider: NotRequired[Provider]
 
 
 class PropertyCalendarBotRecordingConfigTranscription(BaseModel):
     enable_speaker_labels: Optional[bool] = None
+    r"""Whether to identify speakers in transcript"""
 
     enable_word_timestamps: Optional[bool] = None
+    r"""Whether to include word-level timestamps"""
 
     language: Optional[str] = None
+    r"""ISO language code (e.g., 'en-US')"""
 
     mode: Optional[PropertyCalendarBotRecordingConfigTranscriptionMode] = None
 

@@ -15,16 +15,22 @@ from unified_python_sdk.types.basemodel import current_filtered_dump
 
 class PropertyCalendarBotAutomaticLeaveTypedDict(TypedDict):
     detect_bots: NotRequired[bool]
+    r"""Whether to leave if only bots remain"""
     no_participants_timeout: NotRequired[float]
+    r"""Seconds to wait when no other participants before leaving (default: 2)"""
     waiting_room_timeout: NotRequired[float]
+    r"""Seconds to wait in waiting room before leaving (default: 1200)"""
 
 
 class PropertyCalendarBotAutomaticLeave(BaseModel):
     detect_bots: Optional[bool] = None
+    r"""Whether to leave if only bots remain"""
 
     no_participants_timeout: Optional[float] = None
+    r"""Seconds to wait when no other participants before leaving (default: 2)"""
 
     waiting_room_timeout: Optional[float] = None
+    r"""Seconds to wait in waiting room before leaving (default: 1200)"""
 
     @model_serializer(mode="wrap")
     def _serialize_model_with_info(self, handler, info):

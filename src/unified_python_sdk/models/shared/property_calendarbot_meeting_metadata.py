@@ -20,8 +20,10 @@ class PropertyCalendarBotMeetingMetadataTypedDict(TypedDict):
     host_email: NotRequired[str]
     host_name: NotRequired[str]
     meeting_identifier: NotRequired[str]
+    r"""Platform-specific meeting identifier (not a unified object ref)"""
     participant_count: NotRequired[float]
     platform: NotRequired[str]
+    r"""'zoom', 'webex', 'google_meet', etc."""
     started_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     title: NotRequired[str]
@@ -36,10 +38,12 @@ class PropertyCalendarBotMeetingMetadata(BaseModel):
     host_name: Optional[str] = None
 
     meeting_identifier: Optional[str] = None
+    r"""Platform-specific meeting identifier (not a unified object ref)"""
 
     participant_count: Optional[float] = None
 
     platform: Optional[str] = None
+    r"""'zoom', 'webex', 'google_meet', etc."""
 
     started_at: Optional[datetime] = None
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""

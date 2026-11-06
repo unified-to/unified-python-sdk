@@ -37,31 +37,40 @@ PlatformMetadataTypedDict = TypeAliasType(
     "PlatformMetadataTypedDict",
     Union[Dict[str, Any], str, float, bool, List[CalendarBotParticipant5TypedDict]],
 )
+r"""Platform-specific metadata"""
 
 
 PlatformMetadata = TypeAliasType(
     "PlatformMetadata",
     Union[Dict[str, Any], str, float, bool, List[CalendarBotParticipant5]],
 )
+r"""Platform-specific metadata"""
 
 
 class CalendarBotParticipantTypedDict(TypedDict):
     email: NotRequired[str]
     id: NotRequired[str]
     is_bot: NotRequired[bool]
+    r"""Whether this participant is a bot"""
     is_cohost: NotRequired[bool]
     is_host: NotRequired[bool]
     is_self: NotRequired[bool]
+    r"""Whether this participant is the current bot"""
     joined_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     left_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     name: NotRequired[str]
     platform: NotRequired[str]
+    r"""Platform-specific participant identifier"""
     platform_metadata: NotRequired[PlatformMetadataTypedDict]
+    r"""Platform-specific metadata"""
     screenshare_on: NotRequired[bool]
+    r"""Whether participant is sharing screen"""
     speaking: NotRequired[bool]
+    r"""Whether participant is currently speaking"""
     webcam_on: NotRequired[bool]
+    r"""Whether participant's webcam is on"""
 
 
 class CalendarBotParticipant(BaseModel):
@@ -70,12 +79,14 @@ class CalendarBotParticipant(BaseModel):
     id: Optional[str] = None
 
     is_bot: Optional[bool] = None
+    r"""Whether this participant is a bot"""
 
     is_cohost: Optional[bool] = None
 
     is_host: Optional[bool] = None
 
     is_self: Optional[bool] = None
+    r"""Whether this participant is the current bot"""
 
     joined_at: Optional[datetime] = None
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
@@ -86,14 +97,19 @@ class CalendarBotParticipant(BaseModel):
     name: Optional[str] = None
 
     platform: Optional[str] = None
+    r"""Platform-specific participant identifier"""
 
     platform_metadata: Optional[PlatformMetadata] = None
+    r"""Platform-specific metadata"""
 
     screenshare_on: Optional[bool] = None
+    r"""Whether participant is sharing screen"""
 
     speaking: Optional[bool] = None
+    r"""Whether participant is currently speaking"""
 
     webcam_on: Optional[bool] = None
+    r"""Whether participant's webcam is on"""
 
     @model_serializer(mode="wrap")
     def _serialize_model_with_info(self, handler, info):

@@ -34,8 +34,10 @@ class CalendarBotStatusChangeTypedDict(TypedDict):
     changed_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     message: NotRequired[str]
+    r"""Human-readable status message"""
     status: NotRequired[CalendarBotStatusChangeStatus]
     sub_code: NotRequired[str]
+    r"""Platform-specific status sub-code"""
 
 
 class CalendarBotStatusChange(BaseModel):
@@ -43,10 +45,12 @@ class CalendarBotStatusChange(BaseModel):
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     message: Optional[str] = None
+    r"""Human-readable status message"""
 
     status: Optional[CalendarBotStatusChangeStatus] = None
 
     sub_code: Optional[str] = None
+    r"""Platform-specific status sub-code"""
 
     @field_serializer("status")
     def serialize_status(self, value):

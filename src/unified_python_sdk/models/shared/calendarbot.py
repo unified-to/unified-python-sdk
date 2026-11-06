@@ -55,23 +55,27 @@ class CalendarBotTypedDict(TypedDict):
     created_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     ended_at: NotRequired[datetime]
-    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    r"""When the bot left (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     event_id: NotRequired[str]
-    r"""(reference to CalendarEvent)"""
+    r"""Reference to calendar_event if scheduled via calendar (reference to CalendarEvent)"""
     id: NotRequired[str]
     join_at: NotRequired[datetime]
-    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    r"""When to join the meeting (for scheduled bots) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     meeting_metadata: NotRequired[PropertyCalendarBotMeetingMetadataTypedDict]
     meeting_url: NotRequired[str]
+    r"""URL of the meeting to join"""
     name: NotRequired[str]
+    r"""Display name for the bot in the meeting"""
     participants: NotRequired[List[CalendarBotParticipantTypedDict]]
     raw: NotRequired[Dict[str, Any]]
     recording_config: NotRequired[PropertyCalendarBotRecordingConfigTypedDict]
     recording_id: NotRequired[str]
+    r"""Reference to calendar_recording when ready"""
     started_at: NotRequired[datetime]
-    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    r"""When the bot actually joined (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     status: NotRequired[CalendarBotStatus]
     status_changes: NotRequired[List[CalendarBotStatusChangeTypedDict]]
+    r"""History of status changes"""
     updated_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
@@ -83,21 +87,23 @@ class CalendarBot(BaseModel):
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     ended_at: Optional[datetime] = None
-    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    r"""When the bot left (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     event_id: Optional[str] = None
-    r"""(reference to CalendarEvent)"""
+    r"""Reference to calendar_event if scheduled via calendar (reference to CalendarEvent)"""
 
     id: Optional[str] = None
 
     join_at: Optional[datetime] = None
-    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    r"""When to join the meeting (for scheduled bots) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     meeting_metadata: Optional[PropertyCalendarBotMeetingMetadata] = None
 
     meeting_url: Optional[str] = None
+    r"""URL of the meeting to join"""
 
     name: Optional[str] = None
+    r"""Display name for the bot in the meeting"""
 
     participants: Optional[List[CalendarBotParticipant]] = None
 
@@ -106,13 +112,15 @@ class CalendarBot(BaseModel):
     recording_config: Optional[PropertyCalendarBotRecordingConfig] = None
 
     recording_id: Optional[str] = None
+    r"""Reference to calendar_recording when ready"""
 
     started_at: Optional[datetime] = None
-    r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    r"""When the bot actually joined (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     status: Optional[CalendarBotStatus] = None
 
     status_changes: Optional[List[CalendarBotStatusChange]] = None
+    r"""History of status changes"""
 
     updated_at: Optional[datetime] = None
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
