@@ -7,16 +7,19 @@
 * [create_uc_call](#create_uc_call) - Create a call
 * [create_uc_comment](#create_uc_comment) - Create a comment
 * [create_uc_contact](#create_uc_contact) - Create a contact
+* [create_uc_fax](#create_uc_fax) - Create a fax
 * [create_uc_recording](#create_uc_recording) - Create a recording
 * [get_uc_call](#get_uc_call) - Retrieve a call
 * [get_uc_comment](#get_uc_comment) - Retrieve a comment
 * [get_uc_contact](#get_uc_contact) - Retrieve a contact
+* [get_uc_fax](#get_uc_fax) - Retrieve a fax
 * [get_uc_recording](#get_uc_recording) - Retrieve a recording
 * [get_uc_scorecard](#get_uc_scorecard) - Retrieve a scorecard
 * [get_uc_scorecardtemplate](#get_uc_scorecardtemplate) - Retrieve a scorecardtemplate
 * [list_uc_calls](#list_uc_calls) - List all calls
 * [list_uc_comments](#list_uc_comments) - List all comments
 * [list_uc_contacts](#list_uc_contacts) - List all contacts
+* [list_uc_faxes](#list_uc_faxes) - List all faxes
 * [list_uc_recordings](#list_uc_recordings) - List all recordings
 * [list_uc_scorecards](#list_uc_scorecards) - List all scorecards
 * [list_uc_scorecardtemplates](#list_uc_scorecardtemplates) - List all scorecardtemplates
@@ -26,6 +29,7 @@
 * [patch_uc_recording](#patch_uc_recording) - Update a recording
 * [remove_uc_comment](#remove_uc_comment) - Remove a comment
 * [remove_uc_contact](#remove_uc_contact) - Remove a contact
+* [remove_uc_fax](#remove_uc_fax) - Remove a fax
 * [remove_uc_recording](#remove_uc_recording) - Remove a recording
 * [update_uc_call](#update_uc_call) - Update a call
 * [update_uc_comment](#update_uc_comment) - Update a comment
@@ -53,15 +57,15 @@ with UnifiedTo(
 
     res = unified_to.uc.create_uc_call(request={
         "uc_call": {
-            "answer_at": parse_datetime("2025-05-22T22:22:33.332Z"),
+            "answer_at": parse_datetime("2025-05-25T09:45:19.274Z"),
             "contacts": [],
-            "conversation_identifier": "2b9be224-88ac-4c41-90d9-53ecb189f973",
+            "conversation_identifier": "6e12e2d5-0750-42b3-baee-b680f241f02e",
             "cost_amount": 1.564,
             "created_at": parse_datetime("2023-04-22T19:05:34.882Z"),
             "currency": "USD",
             "duration_seconds": 2556.0,
-            "end_at": parse_datetime("2024-06-04T01:12:37.722Z"),
-            "id": "2b9be224-88ac-4c41-90d9-53ecb189f973",
+            "end_at": parse_datetime("2024-06-05T09:03:36.471Z"),
+            "id": "6e12e2d5-0750-42b3-baee-b680f241f02e",
             "is_private": False,
             "metadata": [
                 {
@@ -69,20 +73,20 @@ with UnifiedTo(
 
                     },
                     "format_": shared.UcMetadataFormat.PRICE,
-                    "id": "56c66547-3b7f-40de-b07c-067235163507",
+                    "id": "f66d6ea4-b9a0-4365-9cec-c038f0690870",
                     "namespace": "custom",
                     "slug": "custom_field",
                     "value": "tui",
                 },
             ],
-            "start_at": parse_datetime("2023-12-20T08:48:41.697Z"),
+            "start_at": parse_datetime("2023-12-21T03:39:27.297Z"),
             "status": shared.UcCallStatus.IN_PROGRESS,
             "telephone": {
                 "telephone": "(493) 534-0768",
                 "type": shared.PropertyUcCallTelephoneType.MOBILE,
             },
             "type": shared.UcCallType.INBOUND,
-            "updated_at": parse_datetime("2023-08-04T15:00:06.873Z"),
+            "updated_at": parse_datetime("2023-08-04T23:06:07.491Z"),
             "user_phone": "819-894-3317 x163",
         },
         "connection_id": "<id>",
@@ -134,9 +138,9 @@ with UnifiedTo(
         "uc_comment": {
             "content": "Vociferor vitiosus.",
             "created_at": "2023-04-02T23:42:31.571Z",
-            "id": "3cdadd44-6978-4c4d-a633-e30d9fb653f2",
+            "id": "c26b3e8d-0628-4e91-85b0-99cb4cee5f8c",
             "metadata": [],
-            "updated_at": "2024-02-13T13:52:11.354Z",
+            "updated_at": "2024-02-14T14:11:44.386Z",
         },
         "connection_id": "<id>",
     })
@@ -195,7 +199,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Luther",
-            "id": "d93dc557-2db0-46b9-89f8-72363cd67547",
+            "id": "2e11b1f4-c03a-46bd-ab43-bc089dc81c9b",
             "last_name": "Rogahn",
             "metadata": [],
             "name": "Luther Rogahn",
@@ -214,7 +218,7 @@ with UnifiedTo(
                 },
             ],
             "title": "Chief Optimization Executive",
-            "updated_at": parse_datetime("2023-12-17T16:18:15.051Z"),
+            "updated_at": parse_datetime("2023-12-20T03:43:36.061Z"),
         },
         "connection_id": "<id>",
     })
@@ -236,6 +240,67 @@ with UnifiedTo(
 ### Response
 
 **[operations.CreateUcContactResponse](../../models/operations/createuccontactresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## create_uc_fax
+
+Creates a UcFax. Provide the unified UcFax fields in the request body; they are mapped to the provider's API. Returns the created UcFax.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="createUcFax" method="post" path="/uc/{connection_id}/fax" example="uc_fax" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.uc.create_uc_fax(request={
+        "uc_fax": {
+            "cost_amount": 1.2207,
+            "created_at": parse_datetime("2022-10-25T13:37:51.431Z"),
+            "currency": "USD",
+            "from_telephone": "+13605107540",
+            "id": "3809991b-d0f3-45fa-9b5f-44d92af522ec",
+            "media_url": "https://doting-jump.biz",
+            "metadata": [],
+            "pages": 20.0,
+            "status": shared.UcFaxStatus.DELIVERED,
+            "to_telephone": "+19083998866",
+            "type": shared.UcFaxType.INBOUND,
+            "updated_at": parse_datetime("2023-04-16T03:07:08.507Z"),
+        },
+        "connection_id": "<id>",
+    })
+
+    assert res.uc_fax is not None
+
+    # Handle response
+    print(res.uc_fax)
+
+```
+
+### Parameters
+
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `request`                                                                      | [operations.CreateUcFaxRequest](../../models/operations/createucfaxrequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| `retries`                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)               | :heavy_minus_sign:                                                             | Configuration to override the default retry behavior of the client.            |
+
+### Response
+
+**[operations.CreateUcFaxResponse](../../models/operations/createucfaxresponse.md)**
 
 ### Errors
 
@@ -265,36 +330,36 @@ with UnifiedTo(
     res = unified_to.uc.create_uc_recording(request={
         "uc_recording": {
             "contacts": [],
-            "conversation_identifier": "acc9f851-b3bf-484d-860a-93892b0c0cf3",
+            "conversation_identifier": "d8cc4552-460e-437b-bd0f-7a0ed2f33d18",
             "created_at": parse_datetime("2022-09-17T19:41:46.956Z"),
-            "end_at": parse_datetime("2024-05-11T06:50:51.813Z"),
-            "expires_at": parse_datetime("2026-05-10T16:25:03.622Z"),
-            "id": "acc9f851-b3bf-484d-860a-93892b0c0cf3",
+            "end_at": parse_datetime("2024-05-12T23:01:40.211Z"),
+            "expires_at": parse_datetime("2026-05-14T09:19:27.754Z"),
+            "id": "d8cc4552-460e-437b-bd0f-7a0ed2f33d18",
             "media": [
                 {
-                    "end_at": parse_datetime("2024-04-07T18:06:08.949Z"),
+                    "end_at": parse_datetime("2024-04-09T08:02:33.344Z"),
                     "language": "en",
                     "recording_download_url": "https://parched-wasabi.com/",
-                    "start_at": parse_datetime("2026-05-29T13:13:00.163Z"),
+                    "start_at": parse_datetime("2026-06-02T07:23:01.598Z"),
                     "transcript_download_url": "https://colossal-cuckoo.name",
                     "transcripts": [
                         {
-                            "end_at": parse_datetime("2026-03-09T18:42:25.321Z"),
-                            "start_at": parse_datetime("2024-06-08T20:09:18.402Z"),
+                            "end_at": parse_datetime("2026-03-13T07:28:41.790Z"),
+                            "start_at": parse_datetime("2024-06-10T14:14:33.969Z"),
                             "text": "Turpis maiores ducimus tero speculum.",
                         },
                         {
-                            "end_at": parse_datetime("2024-10-20T12:50:19.326Z"),
-                            "start_at": parse_datetime("2026-08-17T19:56:22.551Z"),
+                            "end_at": parse_datetime("2024-10-22T15:51:27.722Z"),
+                            "start_at": parse_datetime("2026-08-21T19:28:10.841Z"),
                             "text": "Magnam consuasor uxor tergiversatio subseco.",
                         },
                     ],
                 },
             ],
             "metadata": [],
-            "start_at": parse_datetime("2023-04-30T02:20:48.394Z"),
+            "start_at": parse_datetime("2023-04-30T17:19:45.602Z"),
             "type": shared.UcRecordingType.OUTBOUND,
-            "updated_at": parse_datetime("2025-03-26T02:02:57.601Z"),
+            "updated_at": parse_datetime("2025-03-28T15:31:35.376Z"),
             "user_phone": "1-915-327-0429 x509",
             "web_url": "https://spherical-comparison.org",
         },
@@ -459,6 +524,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.GetUcContactResponse](../../models/operations/getuccontactresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_uc_fax
+
+Retrieves a single UcFax by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getUcFax" method="get" path="/uc/{connection_id}/fax/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.uc.get_uc_fax(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.uc_fax is not None
+
+    # Handle response
+    print(res.uc_fax)
+
+```
+
+### Parameters
+
+| Parameter                                                                | Type                                                                     | Required                                                                 | Description                                                              |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| `request`                                                                | [operations.GetUcFaxRequest](../../models/operations/getucfaxrequest.md) | :heavy_check_mark:                                                       | The request object to use for the request.                               |
+| `retries`                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)         | :heavy_minus_sign:                                                       | Configuration to override the default retry behavior of the client.      |
+
+### Response
+
+**[operations.GetUcFaxResponse](../../models/operations/getucfaxresponse.md)**
 
 ### Errors
 
@@ -745,6 +857,52 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## list_uc_faxes
+
+Returns a list of UcFaxes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listUcFaxes" method="get" path="/uc/{connection_id}/fax" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.uc.list_uc_faxes(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.uc_faxes is not None
+
+    # Handle response
+    print(res.uc_faxes)
+
+```
+
+### Parameters
+
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `request`                                                                      | [operations.ListUcFaxesRequest](../../models/operations/listucfaxesrequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| `retries`                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)               | :heavy_minus_sign:                                                             | Configuration to override the default retry behavior of the client.            |
+
+### Response
+
+**[operations.ListUcFaxesResponse](../../models/operations/listucfaxesresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## list_uc_recordings
 
 Returns a list of UcRecordings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -904,15 +1062,15 @@ with UnifiedTo(
 
     res = unified_to.uc.patch_uc_call(request={
         "uc_call": {
-            "answer_at": parse_datetime("2025-05-22T22:22:33.348Z"),
+            "answer_at": parse_datetime("2025-05-25T09:45:19.291Z"),
             "contacts": [],
-            "conversation_identifier": "820bc35a-6263-466a-8957-5c34bf6eab58",
+            "conversation_identifier": "8ecd810d-90b7-4670-9b0d-f0429fe5d394",
             "cost_amount": 1.564,
             "created_at": parse_datetime("2023-04-22T19:05:34.882Z"),
             "currency": "USD",
             "duration_seconds": 2556.0,
-            "end_at": parse_datetime("2024-06-04T01:12:37.731Z"),
-            "id": "820bc35a-6263-466a-8957-5c34bf6eab58",
+            "end_at": parse_datetime("2024-06-05T09:03:36.481Z"),
+            "id": "8ecd810d-90b7-4670-9b0d-f0429fe5d394",
             "is_private": False,
             "metadata": [
                 {
@@ -920,20 +1078,20 @@ with UnifiedTo(
 
                     },
                     "format_": shared.UcMetadataFormat.PRICE,
-                    "id": "74f8bf70-bc2b-42ff-9c07-c733e3ad6ccb",
+                    "id": "44ae8862-d2dd-4a5c-9c7e-86b28047761b",
                     "namespace": "custom",
                     "slug": "custom_field",
                     "value": "tui",
                 },
             ],
-            "start_at": parse_datetime("2023-12-20T08:48:41.702Z"),
+            "start_at": parse_datetime("2023-12-21T03:39:27.303Z"),
             "status": shared.UcCallStatus.IN_PROGRESS,
             "telephone": {
                 "telephone": "(493) 534-0768",
                 "type": shared.PropertyUcCallTelephoneType.MOBILE,
             },
             "type": shared.UcCallType.INBOUND,
-            "updated_at": parse_datetime("2023-08-04T15:00:06.875Z"),
+            "updated_at": parse_datetime("2023-08-04T23:06:07.493Z"),
             "user_phone": "819-894-3317 x163",
         },
         "connection_id": "<id>",
@@ -986,9 +1144,9 @@ with UnifiedTo(
         "uc_comment": {
             "content": "Vociferor vitiosus.",
             "created_at": "2023-04-02T23:42:31.571Z",
-            "id": "baa4be56-4454-4576-ba94-e7fe9ae7ef35",
+            "id": "1481baa8-1438-41d8-b636-546e6e490adc",
             "metadata": [],
-            "updated_at": "2024-02-13T13:52:11.356Z",
+            "updated_at": "2024-02-14T14:11:44.388Z",
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1048,7 +1206,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Luther",
-            "id": "a45e5f76-4f14-4b28-8c98-84fc073ec894",
+            "id": "44755fff-c17e-4fd7-ae72-e7536cb290c7",
             "last_name": "Rogahn",
             "metadata": [],
             "name": "Luther Rogahn",
@@ -1067,7 +1225,7 @@ with UnifiedTo(
                 },
             ],
             "title": "Chief Optimization Executive",
-            "updated_at": parse_datetime("2023-12-17T16:18:15.057Z"),
+            "updated_at": parse_datetime("2023-12-20T03:43:36.074Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1119,36 +1277,36 @@ with UnifiedTo(
     res = unified_to.uc.patch_uc_recording(request={
         "uc_recording": {
             "contacts": [],
-            "conversation_identifier": "273a42be-72cb-441a-a1ee-c0f35f7ef50e",
+            "conversation_identifier": "96deb680-b142-4e34-882e-9d7b01671e3f",
             "created_at": parse_datetime("2022-09-17T19:41:46.956Z"),
-            "end_at": parse_datetime("2024-05-11T06:50:51.822Z"),
-            "expires_at": parse_datetime("2026-05-10T16:25:03.642Z"),
-            "id": "273a42be-72cb-441a-a1ee-c0f35f7ef50e",
+            "end_at": parse_datetime("2024-05-12T23:01:40.220Z"),
+            "expires_at": parse_datetime("2026-05-14T09:19:27.774Z"),
+            "id": "96deb680-b142-4e34-882e-9d7b01671e3f",
             "media": [
                 {
-                    "end_at": parse_datetime("2024-04-07T18:06:08.958Z"),
+                    "end_at": parse_datetime("2024-04-09T08:02:33.353Z"),
                     "language": "en",
                     "recording_download_url": "https://parched-wasabi.com/",
-                    "start_at": parse_datetime("2026-05-29T13:13:00.184Z"),
+                    "start_at": parse_datetime("2026-06-02T07:23:01.618Z"),
                     "transcript_download_url": "https://colossal-cuckoo.name",
                     "transcripts": [
                         {
-                            "end_at": parse_datetime("2026-03-09T18:42:25.341Z"),
-                            "start_at": parse_datetime("2024-06-08T20:09:18.412Z"),
+                            "end_at": parse_datetime("2026-03-13T07:28:41.810Z"),
+                            "start_at": parse_datetime("2024-06-10T14:14:33.979Z"),
                             "text": "Turpis maiores ducimus tero speculum.",
                         },
                         {
-                            "end_at": parse_datetime("2024-10-20T12:50:19.338Z"),
-                            "start_at": parse_datetime("2026-08-17T19:56:22.573Z"),
+                            "end_at": parse_datetime("2024-10-22T15:51:27.733Z"),
+                            "start_at": parse_datetime("2026-08-21T19:28:10.863Z"),
                             "text": "Magnam consuasor uxor tergiversatio subseco.",
                         },
                     ],
                 },
             ],
             "metadata": [],
-            "start_at": parse_datetime("2023-04-30T02:20:48.397Z"),
+            "start_at": parse_datetime("2023-04-30T17:19:45.605Z"),
             "type": shared.UcRecordingType.OUTBOUND,
-            "updated_at": parse_datetime("2025-03-26T02:02:57.615Z"),
+            "updated_at": parse_datetime("2025-03-28T15:31:35.390Z"),
             "user_phone": "1-915-327-0429 x509",
             "web_url": "https://spherical-comparison.org",
         },
@@ -1274,6 +1432,53 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## remove_uc_fax
+
+Deletes the UcFax identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeUcFax" method="delete" path="/uc/{connection_id}/fax/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.uc.remove_uc_fax(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `request`                                                                      | [operations.RemoveUcFaxRequest](../../models/operations/removeucfaxrequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| `retries`                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)               | :heavy_minus_sign:                                                             | Configuration to override the default retry behavior of the client.            |
+
+### Response
+
+**[operations.RemoveUcFaxResponse](../../models/operations/removeucfaxresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## remove_uc_recording
 
 Deletes the UcRecording identified by `id`.
@@ -1342,15 +1547,15 @@ with UnifiedTo(
 
     res = unified_to.uc.update_uc_call(request={
         "uc_call": {
-            "answer_at": parse_datetime("2025-05-22T22:22:33.348Z"),
+            "answer_at": parse_datetime("2025-05-25T09:45:19.291Z"),
             "contacts": [],
-            "conversation_identifier": "820bc35a-6263-466a-8957-5c34bf6eab58",
+            "conversation_identifier": "8ecd810d-90b7-4670-9b0d-f0429fe5d394",
             "cost_amount": 1.564,
             "created_at": parse_datetime("2023-04-22T19:05:34.882Z"),
             "currency": "USD",
             "duration_seconds": 2556.0,
-            "end_at": parse_datetime("2024-06-04T01:12:37.731Z"),
-            "id": "820bc35a-6263-466a-8957-5c34bf6eab58",
+            "end_at": parse_datetime("2024-06-05T09:03:36.481Z"),
+            "id": "8ecd810d-90b7-4670-9b0d-f0429fe5d394",
             "is_private": False,
             "metadata": [
                 {
@@ -1358,20 +1563,20 @@ with UnifiedTo(
 
                     },
                     "format_": shared.UcMetadataFormat.PRICE,
-                    "id": "74f8bf70-bc2b-42ff-9c07-c733e3ad6ccb",
+                    "id": "44ae8862-d2dd-4a5c-9c7e-86b28047761b",
                     "namespace": "custom",
                     "slug": "custom_field",
                     "value": "tui",
                 },
             ],
-            "start_at": parse_datetime("2023-12-20T08:48:41.702Z"),
+            "start_at": parse_datetime("2023-12-21T03:39:27.303Z"),
             "status": shared.UcCallStatus.IN_PROGRESS,
             "telephone": {
                 "telephone": "(493) 534-0768",
                 "type": shared.PropertyUcCallTelephoneType.MOBILE,
             },
             "type": shared.UcCallType.INBOUND,
-            "updated_at": parse_datetime("2023-08-04T15:00:06.875Z"),
+            "updated_at": parse_datetime("2023-08-04T23:06:07.493Z"),
             "user_phone": "819-894-3317 x163",
         },
         "connection_id": "<id>",
@@ -1424,9 +1629,9 @@ with UnifiedTo(
         "uc_comment": {
             "content": "Vociferor vitiosus.",
             "created_at": "2023-04-02T23:42:31.571Z",
-            "id": "baa4be56-4454-4576-ba94-e7fe9ae7ef35",
+            "id": "1481baa8-1438-41d8-b636-546e6e490adc",
             "metadata": [],
-            "updated_at": "2024-02-13T13:52:11.356Z",
+            "updated_at": "2024-02-14T14:11:44.388Z",
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1486,7 +1691,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Luther",
-            "id": "a45e5f76-4f14-4b28-8c98-84fc073ec894",
+            "id": "44755fff-c17e-4fd7-ae72-e7536cb290c7",
             "last_name": "Rogahn",
             "metadata": [],
             "name": "Luther Rogahn",
@@ -1505,7 +1710,7 @@ with UnifiedTo(
                 },
             ],
             "title": "Chief Optimization Executive",
-            "updated_at": parse_datetime("2023-12-17T16:18:15.057Z"),
+            "updated_at": parse_datetime("2023-12-20T03:43:36.074Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1557,36 +1762,36 @@ with UnifiedTo(
     res = unified_to.uc.update_uc_recording(request={
         "uc_recording": {
             "contacts": [],
-            "conversation_identifier": "273a42be-72cb-441a-a1ee-c0f35f7ef50e",
+            "conversation_identifier": "96deb680-b142-4e34-882e-9d7b01671e3f",
             "created_at": parse_datetime("2022-09-17T19:41:46.956Z"),
-            "end_at": parse_datetime("2024-05-11T06:50:51.822Z"),
-            "expires_at": parse_datetime("2026-05-10T16:25:03.642Z"),
-            "id": "273a42be-72cb-441a-a1ee-c0f35f7ef50e",
+            "end_at": parse_datetime("2024-05-12T23:01:40.220Z"),
+            "expires_at": parse_datetime("2026-05-14T09:19:27.774Z"),
+            "id": "96deb680-b142-4e34-882e-9d7b01671e3f",
             "media": [
                 {
-                    "end_at": parse_datetime("2024-04-07T18:06:08.958Z"),
+                    "end_at": parse_datetime("2024-04-09T08:02:33.353Z"),
                     "language": "en",
                     "recording_download_url": "https://parched-wasabi.com/",
-                    "start_at": parse_datetime("2026-05-29T13:13:00.184Z"),
+                    "start_at": parse_datetime("2026-06-02T07:23:01.618Z"),
                     "transcript_download_url": "https://colossal-cuckoo.name",
                     "transcripts": [
                         {
-                            "end_at": parse_datetime("2026-03-09T18:42:25.341Z"),
-                            "start_at": parse_datetime("2024-06-08T20:09:18.412Z"),
+                            "end_at": parse_datetime("2026-03-13T07:28:41.810Z"),
+                            "start_at": parse_datetime("2024-06-10T14:14:33.979Z"),
                             "text": "Turpis maiores ducimus tero speculum.",
                         },
                         {
-                            "end_at": parse_datetime("2024-10-20T12:50:19.338Z"),
-                            "start_at": parse_datetime("2026-08-17T19:56:22.573Z"),
+                            "end_at": parse_datetime("2024-10-22T15:51:27.733Z"),
+                            "start_at": parse_datetime("2026-08-21T19:28:10.863Z"),
                             "text": "Magnam consuasor uxor tergiversatio subseco.",
                         },
                     ],
                 },
             ],
             "metadata": [],
-            "start_at": parse_datetime("2023-04-30T02:20:48.397Z"),
+            "start_at": parse_datetime("2023-04-30T17:19:45.605Z"),
             "type": shared.UcRecordingType.OUTBOUND,
-            "updated_at": parse_datetime("2025-03-26T02:02:57.615Z"),
+            "updated_at": parse_datetime("2025-03-28T15:31:35.390Z"),
             "user_phone": "1-915-327-0429 x509",
             "web_url": "https://spherical-comparison.org",
         },

@@ -5,21 +5,27 @@
 ### Available Operations
 
 * [create_kms_comment](#create_kms_comment) - Create a comment
+* [create_social_comment](#create_social_comment) - Create a comment
 * [create_task_comment](#create_task_comment) - Create a comment
 * [create_uc_comment](#create_uc_comment) - Create a comment
 * [get_kms_comment](#get_kms_comment) - Retrieve a comment
+* [get_social_comment](#get_social_comment) - Retrieve a comment
 * [get_task_comment](#get_task_comment) - Retrieve a comment
 * [get_uc_comment](#get_uc_comment) - Retrieve a comment
 * [list_kms_comments](#list_kms_comments) - List all comments
+* [list_social_comments](#list_social_comments) - List all comments
 * [list_task_comments](#list_task_comments) - List all comments
 * [list_uc_comments](#list_uc_comments) - List all comments
 * [patch_kms_comment](#patch_kms_comment) - Update a comment
+* [patch_social_comment](#patch_social_comment) - Update a comment
 * [patch_task_comment](#patch_task_comment) - Update a comment
 * [patch_uc_comment](#patch_uc_comment) - Update a comment
 * [remove_kms_comment](#remove_kms_comment) - Remove a comment
+* [remove_social_comment](#remove_social_comment) - Remove a comment
 * [remove_task_comment](#remove_task_comment) - Remove a comment
 * [remove_uc_comment](#remove_uc_comment) - Remove a comment
 * [update_kms_comment](#update_kms_comment) - Update a comment
+* [update_social_comment](#update_social_comment) - Update a comment
 * [update_task_comment](#update_task_comment) - Update a comment
 * [update_uc_comment](#update_uc_comment) - Update a comment
 
@@ -47,10 +53,10 @@ with UnifiedTo(
             "content": "Decimus tolero viriliter usque.",
             "content_type": shared.ContentType.HTML,
             "created_at": parse_datetime("2022-08-26T14:40:49.732Z"),
-            "id": "a1cb0d99-04f2-4d11-bc68-61c79ec9b51e",
+            "id": "d2a1e184-032d-4d9b-b6be-e742fb62e838",
             "metadata": [],
             "type": shared.KmsCommentType.PAGE,
-            "updated_at": parse_datetime("2023-12-01T00:53:45.106Z"),
+            "updated_at": parse_datetime("2023-12-02T07:16:26.607Z"),
         },
         "connection_id": "<id>",
     })
@@ -72,6 +78,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.CreateKmsCommentResponse](../../models/operations/createkmscommentresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## create_social_comment
+
+Creates a SocialComment. Provide the unified SocialComment fields in the request body; they are mapped to the provider's API. Returns the created SocialComment.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="createSocialComment" method="post" path="/social/{connection_id}/comment" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.comment.create_social_comment(request={
+        "social_comment": {},
+        "connection_id": "<id>",
+    })
+
+    assert res.social_comment is not None
+
+    # Handle response
+    print(res.social_comment)
+
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.CreateSocialCommentRequest](../../models/operations/createsocialcommentrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+
+### Response
+
+**[operations.CreateSocialCommentResponse](../../models/operations/createsocialcommentresponse.md)**
 
 ### Errors
 
@@ -102,10 +155,10 @@ with UnifiedTo(
         "task_comment": {
             "created_at": parse_datetime("2019-10-12T20:33:37.879Z"),
             "has_children": True,
-            "id": "58818899-737e-4455-b447-b231621ffbec",
+            "id": "25bbc994-1a46-4491-9e83-269d3f875002",
             "metadata": [],
             "text": "Colo ulciscor sublime tabernus.",
-            "updated_at": parse_datetime("2021-10-07T18:33:22.514Z"),
+            "updated_at": parse_datetime("2021-10-08T22:55:38.769Z"),
         },
         "connection_id": "<id>",
     })
@@ -156,9 +209,9 @@ with UnifiedTo(
         "uc_comment": {
             "content": "Vociferor vitiosus.",
             "created_at": "2023-04-02T23:42:31.571Z",
-            "id": "3cdadd44-6978-4c4d-a633-e30d9fb653f2",
+            "id": "c26b3e8d-0628-4e91-85b0-99cb4cee5f8c",
             "metadata": [],
-            "updated_at": "2024-02-13T13:52:11.354Z",
+            "updated_at": "2024-02-14T14:11:44.386Z",
         },
         "connection_id": "<id>",
     })
@@ -227,6 +280,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.GetKmsCommentResponse](../../models/operations/getkmscommentresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_social_comment
+
+Retrieves a single SocialComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getSocialComment" method="get" path="/social/{connection_id}/comment/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.comment.get_social_comment(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.social_comment is not None
+
+    # Handle response
+    print(res.social_comment)
+
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.GetSocialCommentRequest](../../models/operations/getsocialcommentrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+
+### Response
+
+**[operations.GetSocialCommentResponse](../../models/operations/getsocialcommentresponse.md)**
 
 ### Errors
 
@@ -374,6 +474,52 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## list_social_comments
+
+Returns a list of SocialComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listSocialComments" method="get" path="/social/{connection_id}/comment" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.comment.list_social_comments(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.social_comments is not None
+
+    # Handle response
+    print(res.social_comments)
+
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.ListSocialCommentsRequest](../../models/operations/listsocialcommentsrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+
+### Response
+
+**[operations.ListSocialCommentsResponse](../../models/operations/listsocialcommentsresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## list_task_comments
 
 Returns a list of TaskComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -490,10 +636,10 @@ with UnifiedTo(
             "content": "Decimus tolero viriliter usque.",
             "content_type": shared.ContentType.HTML,
             "created_at": parse_datetime("2022-08-26T14:40:49.732Z"),
-            "id": "aaf11fcf-af9e-47ba-b7a0-1962af24b7ed",
+            "id": "2a9772c2-c9c0-4813-849c-70a8c9daa113",
             "metadata": [],
             "type": shared.KmsCommentType.PAGE,
-            "updated_at": parse_datetime("2023-12-01T00:53:45.108Z"),
+            "updated_at": parse_datetime("2023-12-02T07:16:26.609Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -516,6 +662,54 @@ with UnifiedTo(
 ### Response
 
 **[operations.PatchKmsCommentResponse](../../models/operations/patchkmscommentresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## patch_social_comment
+
+Updates the SocialComment identified by `id`. Provide the unified SocialComment fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchSocialComment" method="patch" path="/social/{connection_id}/comment/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.comment.patch_social_comment(request={
+        "social_comment": {},
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.social_comment is not None
+
+    # Handle response
+    print(res.social_comment)
+
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.PatchSocialCommentRequest](../../models/operations/patchsocialcommentrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+
+### Response
+
+**[operations.PatchSocialCommentResponse](../../models/operations/patchsocialcommentresponse.md)**
 
 ### Errors
 
@@ -546,10 +740,10 @@ with UnifiedTo(
         "task_comment": {
             "created_at": parse_datetime("2019-10-12T20:33:37.879Z"),
             "has_children": True,
-            "id": "42bf4e9b-66d9-4caf-a7e6-79ad2750b5cf",
+            "id": "e99b1521-4215-4366-9bc3-c1c39ccd152b",
             "metadata": [],
             "text": "Colo ulciscor sublime tabernus.",
-            "updated_at": parse_datetime("2021-10-07T18:33:22.517Z"),
+            "updated_at": parse_datetime("2021-10-08T22:55:38.772Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -601,9 +795,9 @@ with UnifiedTo(
         "uc_comment": {
             "content": "Vociferor vitiosus.",
             "created_at": "2023-04-02T23:42:31.571Z",
-            "id": "baa4be56-4454-4576-ba94-e7fe9ae7ef35",
+            "id": "1481baa8-1438-41d8-b636-546e6e490adc",
             "metadata": [],
-            "updated_at": "2024-02-13T13:52:11.356Z",
+            "updated_at": "2024-02-14T14:11:44.388Z",
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -673,6 +867,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.RemoveKmsCommentResponse](../../models/operations/removekmscommentresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## remove_social_comment
+
+Deletes the SocialComment identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeSocialComment" method="delete" path="/social/{connection_id}/comment/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.comment.remove_social_comment(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.RemoveSocialCommentRequest](../../models/operations/removesocialcommentrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+
+### Response
+
+**[operations.RemoveSocialCommentResponse](../../models/operations/removesocialcommentresponse.md)**
 
 ### Errors
 
@@ -798,10 +1039,10 @@ with UnifiedTo(
             "content": "Decimus tolero viriliter usque.",
             "content_type": shared.ContentType.HTML,
             "created_at": parse_datetime("2022-08-26T14:40:49.732Z"),
-            "id": "aaf11fcf-af9e-47ba-b7a0-1962af24b7ed",
+            "id": "2a9772c2-c9c0-4813-849c-70a8c9daa113",
             "metadata": [],
             "type": shared.KmsCommentType.PAGE,
-            "updated_at": parse_datetime("2023-12-01T00:53:45.108Z"),
+            "updated_at": parse_datetime("2023-12-02T07:16:26.609Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -824,6 +1065,54 @@ with UnifiedTo(
 ### Response
 
 **[operations.UpdateKmsCommentResponse](../../models/operations/updatekmscommentresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## update_social_comment
+
+Updates the SocialComment identified by `id`. Provide the unified SocialComment fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="updateSocialComment" method="put" path="/social/{connection_id}/comment/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.comment.update_social_comment(request={
+        "social_comment": {},
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.social_comment is not None
+
+    # Handle response
+    print(res.social_comment)
+
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.UpdateSocialCommentRequest](../../models/operations/updatesocialcommentrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+
+### Response
+
+**[operations.UpdateSocialCommentResponse](../../models/operations/updatesocialcommentresponse.md)**
 
 ### Errors
 
@@ -854,10 +1143,10 @@ with UnifiedTo(
         "task_comment": {
             "created_at": parse_datetime("2019-10-12T20:33:37.879Z"),
             "has_children": True,
-            "id": "42bf4e9b-66d9-4caf-a7e6-79ad2750b5cf",
+            "id": "e99b1521-4215-4366-9bc3-c1c39ccd152b",
             "metadata": [],
             "text": "Colo ulciscor sublime tabernus.",
-            "updated_at": parse_datetime("2021-10-07T18:33:22.517Z"),
+            "updated_at": parse_datetime("2021-10-08T22:55:38.772Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -909,9 +1198,9 @@ with UnifiedTo(
         "uc_comment": {
             "content": "Vociferor vitiosus.",
             "created_at": "2023-04-02T23:42:31.571Z",
-            "id": "baa4be56-4454-4576-ba94-e7fe9ae7ef35",
+            "id": "1481baa8-1438-41d8-b636-546e6e490adc",
             "metadata": [],
-            "updated_at": "2024-02-13T13:52:11.356Z",
+            "updated_at": "2024-02-14T14:11:44.388Z",
         },
         "connection_id": "<id>",
         "id": "<id>",

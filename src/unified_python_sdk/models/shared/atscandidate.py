@@ -53,8 +53,12 @@ class AtsCandidateTypedDict(TypedDict):
     experiences: NotRequired[List[AtsCandidateExperienceTypedDict]]
     external_identifier: NotRequired[str]
     first_name: NotRequired[str]
+    has_do_not_contact: NotRequired[bool]
+    r"""Whether the candidate must not be contacted for outreach"""
     id: NotRequired[str]
     image_url: NotRequired[str]
+    is_private: NotRequired[bool]
+    r"""Whether the candidate is confidential / private (visible only to permitted users)"""
     job_ids: NotRequired[List[str]]
     last_name: NotRequired[str]
     link_urls: NotRequired[List[str]]
@@ -106,9 +110,15 @@ class AtsCandidate(BaseModel):
 
     first_name: Optional[str] = None
 
+    has_do_not_contact: Optional[bool] = None
+    r"""Whether the candidate must not be contacted for outreach"""
+
     id: Optional[str] = None
 
     image_url: Optional[str] = None
+
+    is_private: Optional[bool] = None
+    r"""Whether the candidate is confidential / private (visible only to permitted users)"""
 
     job_ids: Optional[List[str]] = None
 
@@ -177,8 +187,10 @@ class AtsCandidate(BaseModel):
                 "experiences",
                 "external_identifier",
                 "first_name",
+                "has_do_not_contact",
                 "id",
                 "image_url",
+                "is_private",
                 "job_ids",
                 "last_name",
                 "link_urls",

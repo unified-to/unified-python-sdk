@@ -5,7 +5,7 @@ from .property_integrationsupport_webhook_events import (
     PropertyIntegrationSupportWebhookEvents,
     PropertyIntegrationSupportWebhookEventsTypedDict,
 )
-from .virtual_webhook_branch_id import (
+from .virtual_webhook_bill_id import (
     FromWebhook,
     ListAccountID,
     ListAdID,
@@ -64,6 +64,7 @@ from .virtual_webhook_branch_id import (
     ListLocationID,
     ListMatterID,
     ListMedium,
+    ListMeetingURL,
     ListMemberID,
     ListOffset,
     ListOrder,
@@ -155,7 +156,6 @@ from .virtual_webhook_branch_id import (
     VirtualWebhookBankfeedaccountID,
     VirtualWebhookBenefitID,
     VirtualWebhookBillID,
-    VirtualWebhookBranchID,
 )
 from enum import Enum
 from pydantic import field_serializer, model_serializer
@@ -170,6 +170,12 @@ from unified_python_sdk.types import (
     serialize_with_info,
 )
 from unified_python_sdk.types.basemodel import current_filtered_dump
+
+
+class VirtualWebhookBranchID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
 
 
 class VirtualWebhookCalendarID(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -648,6 +654,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_location_id: NotRequired[ListLocationID]
     list_matter_id: NotRequired[ListMatterID]
     list_medium: NotRequired[ListMedium]
+    list_meeting_url: NotRequired[ListMeetingURL]
     list_member_id: NotRequired[ListMemberID]
     list_offset: NotRequired[ListOffset]
     list_order: NotRequired[ListOrder]
@@ -936,6 +943,8 @@ class IntegrationSupport(BaseModel):
     list_matter_id: Optional[ListMatterID] = None
 
     list_medium: Optional[ListMedium] = None
+
+    list_meeting_url: Optional[ListMeetingURL] = None
 
     list_member_id: Optional[ListMemberID] = None
 
@@ -1785,6 +1794,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.ListMedium(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("list_meeting_url")
+    def serialize_list_meeting_url(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListMeetingURL(value)
             except ValueError:
                 return value
         return value
@@ -3304,6 +3322,7 @@ class IntegrationSupport(BaseModel):
                 "list_location_id",
                 "list_matter_id",
                 "list_medium",
+                "list_meeting_url",
                 "list_member_id",
                 "list_offset",
                 "list_order",

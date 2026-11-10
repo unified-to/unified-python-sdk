@@ -97,6 +97,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.event import Event
     from unified_python_sdk.expense import Expense
     from unified_python_sdk.expensereport import Expensereport
+    from unified_python_sdk.fax import Fax
     from unified_python_sdk.feedback import Feedback
     from unified_python_sdk.file import File
     from unified_python_sdk.form import Form
@@ -240,6 +241,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.volume import Volume
     from unified_python_sdk.webhook import Webhook
     from unified_python_sdk.webinar import Webinar
+    from unified_python_sdk.workspaceintegration import Workspaceintegration
 
 
 class UnifiedTo(BaseSDK):
@@ -330,6 +332,7 @@ class UnifiedTo(BaseSDK):
     return_: "Return"
     review: "Review"
     saleschannel: "Saleschannel"
+    table: "Table"
     compute: "Compute"
     deployment: "Deployment"
     domain: "Domain"
@@ -352,7 +355,6 @@ class UnifiedTo(BaseSDK):
     database: "Database"
     query: "Query"
     record: "Record"
-    table: "Table"
     enrich: "Enrich"
     person: "Person"
     forms: "Forms"
@@ -456,6 +458,7 @@ class UnifiedTo(BaseSDK):
     ticket: "Ticket"
     uc: "Uc"
     call: "Call"
+    fax: "Fax"
     scorecardtemplate: "Scorecardtemplate"
     unified: "Unified"
     apicall: "Apicall"
@@ -469,6 +472,7 @@ class UnifiedTo(BaseSDK):
     notification: "Notification"
     secretsmanager: "Secretsmanager"
     webhook: "Webhook"
+    workspaceintegration: "Workspaceintegration"
     verification: "Verification"
     request: "Request"
     _sub_sdk_map = {
@@ -561,6 +565,7 @@ class UnifiedTo(BaseSDK):
         "return_": ("unified_python_sdk.return_", "Return"),
         "review": ("unified_python_sdk.review", "Review"),
         "saleschannel": ("unified_python_sdk.saleschannel", "Saleschannel"),
+        "table": ("unified_python_sdk.table", "Table"),
         "compute": ("unified_python_sdk.compute", "Compute"),
         "deployment": ("unified_python_sdk.deployment", "Deployment"),
         "domain": ("unified_python_sdk.domain", "Domain"),
@@ -583,7 +588,6 @@ class UnifiedTo(BaseSDK):
         "database": ("unified_python_sdk.database", "Database"),
         "query": ("unified_python_sdk.query", "Query"),
         "record": ("unified_python_sdk.record", "Record"),
-        "table": ("unified_python_sdk.table", "Table"),
         "enrich": ("unified_python_sdk.enrich", "Enrich"),
         "person": ("unified_python_sdk.person", "Person"),
         "forms": ("unified_python_sdk.forms", "Forms"),
@@ -687,6 +691,7 @@ class UnifiedTo(BaseSDK):
         "ticket": ("unified_python_sdk.ticket", "Ticket"),
         "uc": ("unified_python_sdk.uc", "Uc"),
         "call": ("unified_python_sdk.call", "Call"),
+        "fax": ("unified_python_sdk.fax", "Fax"),
         "scorecardtemplate": (
             "unified_python_sdk.scorecardtemplate",
             "Scorecardtemplate",
@@ -703,6 +708,10 @@ class UnifiedTo(BaseSDK):
         "notification": ("unified_python_sdk.notification", "Notification"),
         "secretsmanager": ("unified_python_sdk.secretsmanager", "Secretsmanager"),
         "webhook": ("unified_python_sdk.webhook", "Webhook"),
+        "workspaceintegration": (
+            "unified_python_sdk.workspaceintegration",
+            "Workspaceintegration",
+        ),
         "verification": ("unified_python_sdk.verification", "Verification"),
         "request": ("unified_python_sdk.request", "Request"),
     }

@@ -32,16 +32,16 @@ with UnifiedTo(
 
     res = unified_to.expensereport.create_accounting_expensereport(request={
         "accounting_expensereport": {
-            "approved_at": parse_datetime("2021-04-21T16:15:51.688Z"),
+            "approved_at": parse_datetime("2021-04-22T06:18:56.451Z"),
             "attachments": [],
             "category_ids": [],
             "created_at": parse_datetime("2020-05-29T02:04:59.078Z"),
             "currency": "GBP",
             "external_number": "ER-31240",
-            "id": "f4061377-e046-41d0-92b4-83516182dda7",
+            "id": "c2c13815-ae6b-4a00-8469-8e89e1ed8976",
             "lineitems": [
                 {
-                    "id": "564ae601-24d7-48ad-a3c2-b166fafca97c",
+                    "id": "a8f3fc5f-26e1-479b-ad15-7c4f152d15f9",
                     "item_name": "Conference ticket",
                     "tax_amount": 0.0,
                     "total_amount": 39.9,
@@ -49,7 +49,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "42024558-50f4-4865-832a-39e5d31daca9",
+                    "id": "1de192da-806d-4971-b262-706b0a085587",
                     "item_name": "Flight",
                     "notes": "Soluta omnis dolor.",
                     "tax_amount": 0.0,
@@ -58,7 +58,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "a43fb0d5-c80c-4e05-9d87-ec0ae1b9ff93",
+                    "id": "c25f029a-4ec1-4612-9dde-8d92b9bd1469",
                     "item_name": "Client dinner",
                     "notes": "Altus caveo capio.",
                     "tax_amount": 0.0,
@@ -67,7 +67,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "4bb27b40-910a-4023-a6eb-b934a12f4032",
+                    "id": "aa87a897-ae91-48a4-822f-536b41cb9cba",
                     "item_name": "Flight",
                     "tax_amount": 0.0,
                     "total_amount": 445.27,
@@ -79,11 +79,11 @@ with UnifiedTo(
             "name": "Lolita Kunde - October expenses",
             "posted_at": parse_datetime("2020-05-29T02:04:59.078Z"),
             "reimbursed_amount": 908.46,
-            "reimbursed_at": parse_datetime("2021-04-21T16:15:51.688Z"),
+            "reimbursed_at": parse_datetime("2021-04-22T06:18:56.451Z"),
             "status": shared.AccountingExpensereportStatus.PAID,
             "tax_amount": 0.0,
             "total_amount": 908.46,
-            "updated_at": parse_datetime("2021-04-21T16:15:51.688Z"),
+            "updated_at": parse_datetime("2021-04-22T06:18:56.451Z"),
         },
         "connection_id": "<id>",
     })
@@ -226,16 +226,16 @@ with UnifiedTo(
 
     res = unified_to.expensereport.patch_accounting_expensereport(request={
         "accounting_expensereport": {
-            "approved_at": parse_datetime("2021-04-21T16:15:51.694Z"),
+            "approved_at": parse_datetime("2021-04-22T06:18:56.456Z"),
             "attachments": [],
             "category_ids": [],
             "created_at": parse_datetime("2020-05-29T02:04:59.078Z"),
             "currency": "GBP",
             "external_number": "ER-31240",
-            "id": "f7f7d2df-5576-45c4-8c3a-b252b40f6962",
+            "id": "0fac5bb9-9251-4d0f-98f6-a44ac12f7fa2",
             "lineitems": [
                 {
-                    "id": "bae2ede3-f5c2-4011-b5b1-2bf16ed463b7",
+                    "id": "f28e0ca0-98cd-4ef3-925f-b35847818e28",
                     "item_name": "Conference ticket",
                     "tax_amount": 0.0,
                     "total_amount": 39.9,
@@ -243,7 +243,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "4ae3dc16-527c-4c10-8176-6c6ad96bdb09",
+                    "id": "3ec7f592-9839-42d7-9509-8bdcc9977008",
                     "item_name": "Flight",
                     "notes": "Soluta omnis dolor.",
                     "tax_amount": 0.0,
@@ -252,7 +252,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "68f46f55-0e29-4ff2-9e02-8113bc82add1",
+                    "id": "d39c9460-1d0a-4cc3-8353-1ad1f2b8b486",
                     "item_name": "Client dinner",
                     "notes": "Altus caveo capio.",
                     "tax_amount": 0.0,
@@ -261,7 +261,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "337b004f-395d-47eb-b4bb-d21057feb13c",
+                    "id": "527bac45-b2e2-41cb-9e2a-aa1b133cfbae",
                     "item_name": "Flight",
                     "tax_amount": 0.0,
                     "total_amount": 445.27,
@@ -273,11 +273,11 @@ with UnifiedTo(
             "name": "Lolita Kunde - October expenses",
             "posted_at": parse_datetime("2020-05-29T02:04:59.078Z"),
             "reimbursed_amount": 908.46,
-            "reimbursed_at": parse_datetime("2021-04-21T16:15:51.694Z"),
+            "reimbursed_at": parse_datetime("2021-04-22T06:18:56.456Z"),
             "status": shared.AccountingExpensereportStatus.PAID,
             "tax_amount": 0.0,
             "total_amount": 908.46,
-            "updated_at": parse_datetime("2021-04-21T16:15:51.694Z"),
+            "updated_at": parse_datetime("2021-04-22T06:18:56.456Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -375,16 +375,16 @@ with UnifiedTo(
 
     res = unified_to.expensereport.update_accounting_expensereport(request={
         "accounting_expensereport": {
-            "approved_at": parse_datetime("2021-04-21T16:15:51.694Z"),
+            "approved_at": parse_datetime("2021-04-22T06:18:56.456Z"),
             "attachments": [],
             "category_ids": [],
             "created_at": parse_datetime("2020-05-29T02:04:59.078Z"),
             "currency": "GBP",
             "external_number": "ER-31240",
-            "id": "f7f7d2df-5576-45c4-8c3a-b252b40f6962",
+            "id": "0fac5bb9-9251-4d0f-98f6-a44ac12f7fa2",
             "lineitems": [
                 {
-                    "id": "bae2ede3-f5c2-4011-b5b1-2bf16ed463b7",
+                    "id": "f28e0ca0-98cd-4ef3-925f-b35847818e28",
                     "item_name": "Conference ticket",
                     "tax_amount": 0.0,
                     "total_amount": 39.9,
@@ -392,7 +392,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "4ae3dc16-527c-4c10-8176-6c6ad96bdb09",
+                    "id": "3ec7f592-9839-42d7-9509-8bdcc9977008",
                     "item_name": "Flight",
                     "notes": "Soluta omnis dolor.",
                     "tax_amount": 0.0,
@@ -401,7 +401,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "68f46f55-0e29-4ff2-9e02-8113bc82add1",
+                    "id": "d39c9460-1d0a-4cc3-8353-1ad1f2b8b486",
                     "item_name": "Client dinner",
                     "notes": "Altus caveo capio.",
                     "tax_amount": 0.0,
@@ -410,7 +410,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "337b004f-395d-47eb-b4bb-d21057feb13c",
+                    "id": "527bac45-b2e2-41cb-9e2a-aa1b133cfbae",
                     "item_name": "Flight",
                     "tax_amount": 0.0,
                     "total_amount": 445.27,
@@ -422,11 +422,11 @@ with UnifiedTo(
             "name": "Lolita Kunde - October expenses",
             "posted_at": parse_datetime("2020-05-29T02:04:59.078Z"),
             "reimbursed_amount": 908.46,
-            "reimbursed_at": parse_datetime("2021-04-21T16:15:51.694Z"),
+            "reimbursed_at": parse_datetime("2021-04-22T06:18:56.456Z"),
             "status": shared.AccountingExpensereportStatus.PAID,
             "tax_amount": 0.0,
             "total_amount": 908.46,
-            "updated_at": parse_datetime("2021-04-21T16:15:51.694Z"),
+            "updated_at": parse_datetime("2021-04-22T06:18:56.456Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

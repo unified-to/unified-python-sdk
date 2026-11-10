@@ -66,7 +66,7 @@ class HrisBankaccountTypedDict(TypedDict):
     updated_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
-    r"""employee ID (required for listcreate) (reference to HrisEmployee)"""
+    r"""employee ID (required for list and create) (reference to HrisEmployee)"""
 
 
 class HrisBankaccount(BaseModel):
@@ -124,7 +124,7 @@ class HrisBankaccount(BaseModel):
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     user_id: Optional[str] = None
-    r"""employee ID (required for listcreate) (reference to HrisEmployee)"""
+    r"""employee ID (required for list and create) (reference to HrisEmployee)"""
 
     @field_serializer("account_type")
     def serialize_account_type(self, value):

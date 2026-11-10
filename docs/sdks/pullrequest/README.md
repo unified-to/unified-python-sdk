@@ -32,9 +32,9 @@ with UnifiedTo(
 
     res = unified_to.pullrequest.create_repo_pullrequest(request={
         "repo_pullrequest": {
-            "closed_at": parse_datetime("2025-05-10T23:50:52.794Z"),
+            "closed_at": parse_datetime("2025-05-13T12:00:31.476Z"),
             "created_at": parse_datetime("2023-02-27T09:37:13.663Z"),
-            "id": "47514e02-26b5-4eb9-a0a4-581fd1d8bf48",
+            "id": "f6b4a19d-5fbb-4916-86f9-940ed8c1ee5b",
             "labels": [
                 "creptio",
                 "tutamen",
@@ -43,7 +43,7 @@ with UnifiedTo(
             "notes": "Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.",
             "status": shared.RepoPullrequestStatus.APPROVED,
             "title": "reboot mobile application",
-            "updated_at": parse_datetime("2026-01-29T19:14:53.447Z"),
+            "updated_at": parse_datetime("2026-02-02T03:09:31.896Z"),
         },
         "connection_id": "<id>",
     })
@@ -186,9 +186,9 @@ with UnifiedTo(
 
     res = unified_to.pullrequest.patch_repo_pullrequest(request={
         "repo_pullrequest": {
-            "closed_at": parse_datetime("2025-05-10T23:50:52.800Z"),
+            "closed_at": parse_datetime("2025-05-13T12:00:31.496Z"),
             "created_at": parse_datetime("2023-02-27T09:37:13.663Z"),
-            "id": "b61f228b-90e3-4001-abcd-18cc63a60fe4",
+            "id": "c71c1959-48fe-465d-9765-0c6eb63a9b23",
             "labels": [
                 "creptio",
                 "tutamen",
@@ -197,7 +197,7 @@ with UnifiedTo(
             "notes": "Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.",
             "status": shared.RepoPullrequestStatus.APPROVED,
             "title": "reboot mobile application",
-            "updated_at": parse_datetime("2026-01-29T19:14:53.454Z"),
+            "updated_at": parse_datetime("2026-02-02T03:09:31.923Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -295,9 +295,9 @@ with UnifiedTo(
 
     res = unified_to.pullrequest.update_repo_pullrequest(request={
         "repo_pullrequest": {
-            "closed_at": parse_datetime("2025-05-10T23:50:52.800Z"),
+            "closed_at": parse_datetime("2025-05-13T12:00:31.496Z"),
             "created_at": parse_datetime("2023-02-27T09:37:13.663Z"),
-            "id": "b61f228b-90e3-4001-abcd-18cc63a60fe4",
+            "id": "c71c1959-48fe-465d-9765-0c6eb63a9b23",
             "labels": [
                 "creptio",
                 "tutamen",
@@ -306,7 +306,7 @@ with UnifiedTo(
             "notes": "Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.",
             "status": shared.RepoPullrequestStatus.APPROVED,
             "title": "reboot mobile application",
-            "updated_at": parse_datetime("2026-01-29T19:14:53.454Z"),
+            "updated_at": parse_datetime("2026-02-02T03:09:31.923Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

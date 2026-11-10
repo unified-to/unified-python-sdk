@@ -131,7 +131,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "6995bedb-246d-4f91-934f-12685bd8908d",
+            "id": "f2f67d2d-fae1-4bac-9531-61778dcafbc4",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -144,7 +144,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-10T21:59:29.221Z"),
+            "updated_at": parse_datetime("2023-08-11T23:37:58.124Z"),
         },
         "connection_id": "<id>",
     })
@@ -181,7 +181,7 @@ async def main():
                 "currency": "CAD",
                 "customer_defined_code": "6170",
                 "description": "Voluptatibus valde spoliatio.",
-                "id": "6995bedb-246d-4f91-934f-12685bd8908d",
+                "id": "f2f67d2d-fae1-4bac-9531-61778dcafbc4",
                 "is_payable": False,
                 "metadata": [],
                 "name": "Auto Loan Account",
@@ -194,7 +194,7 @@ async def main():
                     },
                 ],
                 "type": shared.Type.ACCOUNTS_RECEIVABLE,
-                "updated_at": parse_datetime("2023-08-10T21:59:29.221Z"),
+                "updated_at": parse_datetime("2023-08-11T23:37:58.124Z"),
             },
             "connection_id": "<id>",
         })
@@ -894,21 +894,27 @@ asyncio.run(main())
 ### [Comment](docs/sdks/comment/README.md)
 
 * [create_kms_comment](docs/sdks/comment/README.md#create_kms_comment) - Create a comment
+* [create_social_comment](docs/sdks/comment/README.md#create_social_comment) - Create a comment
 * [create_task_comment](docs/sdks/comment/README.md#create_task_comment) - Create a comment
 * [create_uc_comment](docs/sdks/comment/README.md#create_uc_comment) - Create a comment
 * [get_kms_comment](docs/sdks/comment/README.md#get_kms_comment) - Retrieve a comment
+* [get_social_comment](docs/sdks/comment/README.md#get_social_comment) - Retrieve a comment
 * [get_task_comment](docs/sdks/comment/README.md#get_task_comment) - Retrieve a comment
 * [get_uc_comment](docs/sdks/comment/README.md#get_uc_comment) - Retrieve a comment
 * [list_kms_comments](docs/sdks/comment/README.md#list_kms_comments) - List all comments
+* [list_social_comments](docs/sdks/comment/README.md#list_social_comments) - List all comments
 * [list_task_comments](docs/sdks/comment/README.md#list_task_comments) - List all comments
 * [list_uc_comments](docs/sdks/comment/README.md#list_uc_comments) - List all comments
 * [patch_kms_comment](docs/sdks/comment/README.md#patch_kms_comment) - Update a comment
+* [patch_social_comment](docs/sdks/comment/README.md#patch_social_comment) - Update a comment
 * [patch_task_comment](docs/sdks/comment/README.md#patch_task_comment) - Update a comment
 * [patch_uc_comment](docs/sdks/comment/README.md#patch_uc_comment) - Update a comment
 * [remove_kms_comment](docs/sdks/comment/README.md#remove_kms_comment) - Remove a comment
+* [remove_social_comment](docs/sdks/comment/README.md#remove_social_comment) - Remove a comment
 * [remove_task_comment](docs/sdks/comment/README.md#remove_task_comment) - Remove a comment
 * [remove_uc_comment](docs/sdks/comment/README.md#remove_uc_comment) - Remove a comment
 * [update_kms_comment](docs/sdks/comment/README.md#update_kms_comment) - Update a comment
+* [update_social_comment](docs/sdks/comment/README.md#update_social_comment) - Update a comment
 * [update_task_comment](docs/sdks/comment/README.md#update_task_comment) - Update a comment
 * [update_uc_comment](docs/sdks/comment/README.md#update_uc_comment) - Update a comment
 
@@ -931,6 +937,7 @@ asyncio.run(main())
 * [get_commerce_return](docs/sdks/commerce/README.md#get_commerce_return) - Retrieve a return
 * [get_commerce_review](docs/sdks/commerce/README.md#get_commerce_review) - Retrieve a review
 * [get_commerce_saleschannel](docs/sdks/commerce/README.md#get_commerce_saleschannel) - Retrieve a saleschannel
+* [get_commerce_table](docs/sdks/commerce/README.md#get_commerce_table) - Retrieve a table
 * [list_commerce_availabilities](docs/sdks/commerce/README.md#list_commerce_availabilities) - List all availabilities
 * [list_commerce_collections](docs/sdks/commerce/README.md#list_commerce_collections) - List all collections
 * [list_commerce_inventories](docs/sdks/commerce/README.md#list_commerce_inventories) - List all inventories
@@ -941,6 +948,7 @@ asyncio.run(main())
 * [list_commerce_returns](docs/sdks/commerce/README.md#list_commerce_returns) - List all returns
 * [list_commerce_reviews](docs/sdks/commerce/README.md#list_commerce_reviews) - List all reviews
 * [list_commerce_saleschannels](docs/sdks/commerce/README.md#list_commerce_saleschannels) - List all saleschannels
+* [list_commerce_tables](docs/sdks/commerce/README.md#list_commerce_tables) - List all tables
 * [patch_commerce_collection](docs/sdks/commerce/README.md#patch_commerce_collection) - Update a collection
 * [patch_commerce_inventory](docs/sdks/commerce/README.md#patch_commerce_inventory) - Update an inventory
 * [patch_commerce_item](docs/sdks/commerce/README.md#patch_commerce_item) - Update an item
@@ -1406,6 +1414,13 @@ asyncio.run(main())
 * [patch_accounting_expensereport](docs/sdks/expensereport/README.md#patch_accounting_expensereport) - Update an expensereport
 * [remove_accounting_expensereport](docs/sdks/expensereport/README.md#remove_accounting_expensereport) - Remove an expensereport
 * [update_accounting_expensereport](docs/sdks/expensereport/README.md#update_accounting_expensereport) - Update an expensereport
+
+### [Fax](docs/sdks/fax/README.md)
+
+* [create_uc_fax](docs/sdks/fax/README.md#create_uc_fax) - Create a fax
+* [get_uc_fax](docs/sdks/fax/README.md#get_uc_fax) - Retrieve a fax
+* [list_uc_faxes](docs/sdks/fax/README.md#list_uc_faxes) - List all faxes
+* [remove_uc_fax](docs/sdks/fax/README.md#remove_uc_fax) - Remove a fax
 
 ### [Feedback](docs/sdks/feedback/README.md)
 
@@ -2709,18 +2724,24 @@ asyncio.run(main())
 
 ### [Social](docs/sdks/social/README.md)
 
+* [create_social_comment](docs/sdks/social/README.md#create_social_comment) - Create a comment
 * [create_social_post](docs/sdks/social/README.md#create_social_post) - Create a post
+* [get_social_comment](docs/sdks/social/README.md#get_social_comment) - Retrieve a comment
 * [get_social_insight](docs/sdks/social/README.md#get_social_insight) - Retrieve an insight
 * [get_social_post](docs/sdks/social/README.md#get_social_post) - Retrieve a post
 * [get_social_profile](docs/sdks/social/README.md#get_social_profile) - Retrieve a profile
 * [get_social_review](docs/sdks/social/README.md#get_social_review) - Retrieve a review
+* [list_social_comments](docs/sdks/social/README.md#list_social_comments) - List all comments
 * [list_social_insights](docs/sdks/social/README.md#list_social_insights) - List all insights
 * [list_social_posts](docs/sdks/social/README.md#list_social_posts) - List all posts
 * [list_social_profiles](docs/sdks/social/README.md#list_social_profiles) - List all profiles
 * [list_social_reviews](docs/sdks/social/README.md#list_social_reviews) - List all reviews
+* [patch_social_comment](docs/sdks/social/README.md#patch_social_comment) - Update a comment
 * [patch_social_post](docs/sdks/social/README.md#patch_social_post) - Update a post
 * [patch_social_review](docs/sdks/social/README.md#patch_social_review) - Update a review
+* [remove_social_comment](docs/sdks/social/README.md#remove_social_comment) - Remove a comment
 * [remove_social_post](docs/sdks/social/README.md#remove_social_post) - Remove a post
+* [update_social_comment](docs/sdks/social/README.md#update_social_comment) - Update a comment
 * [update_social_post](docs/sdks/social/README.md#update_social_post) - Update a post
 * [update_social_review](docs/sdks/social/README.md#update_social_review) - Update a review
 
@@ -2777,7 +2798,9 @@ asyncio.run(main())
 ### [Table](docs/sdks/table/README.md)
 
 * [create_datastore_table](docs/sdks/table/README.md#create_datastore_table) - Create a table
+* [get_commerce_table](docs/sdks/table/README.md#get_commerce_table) - Retrieve a table
 * [get_datastore_table](docs/sdks/table/README.md#get_datastore_table) - Retrieve a table
+* [list_commerce_tables](docs/sdks/table/README.md#list_commerce_tables) - List all tables
 * [list_datastore_tables](docs/sdks/table/README.md#list_datastore_tables) - List all tables
 * [patch_datastore_table](docs/sdks/table/README.md#patch_datastore_table) - Update a table
 * [remove_datastore_table](docs/sdks/table/README.md#remove_datastore_table) - Remove a table
@@ -2931,16 +2954,19 @@ asyncio.run(main())
 * [create_uc_call](docs/sdks/uc/README.md#create_uc_call) - Create a call
 * [create_uc_comment](docs/sdks/uc/README.md#create_uc_comment) - Create a comment
 * [create_uc_contact](docs/sdks/uc/README.md#create_uc_contact) - Create a contact
+* [create_uc_fax](docs/sdks/uc/README.md#create_uc_fax) - Create a fax
 * [create_uc_recording](docs/sdks/uc/README.md#create_uc_recording) - Create a recording
 * [get_uc_call](docs/sdks/uc/README.md#get_uc_call) - Retrieve a call
 * [get_uc_comment](docs/sdks/uc/README.md#get_uc_comment) - Retrieve a comment
 * [get_uc_contact](docs/sdks/uc/README.md#get_uc_contact) - Retrieve a contact
+* [get_uc_fax](docs/sdks/uc/README.md#get_uc_fax) - Retrieve a fax
 * [get_uc_recording](docs/sdks/uc/README.md#get_uc_recording) - Retrieve a recording
 * [get_uc_scorecard](docs/sdks/uc/README.md#get_uc_scorecard) - Retrieve a scorecard
 * [get_uc_scorecardtemplate](docs/sdks/uc/README.md#get_uc_scorecardtemplate) - Retrieve a scorecardtemplate
 * [list_uc_calls](docs/sdks/uc/README.md#list_uc_calls) - List all calls
 * [list_uc_comments](docs/sdks/uc/README.md#list_uc_comments) - List all comments
 * [list_uc_contacts](docs/sdks/uc/README.md#list_uc_contacts) - List all contacts
+* [list_uc_faxes](docs/sdks/uc/README.md#list_uc_faxes) - List all faxes
 * [list_uc_recordings](docs/sdks/uc/README.md#list_uc_recordings) - List all recordings
 * [list_uc_scorecards](docs/sdks/uc/README.md#list_uc_scorecards) - List all scorecards
 * [list_uc_scorecardtemplates](docs/sdks/uc/README.md#list_uc_scorecardtemplates) - List all scorecardtemplates
@@ -2950,6 +2976,7 @@ asyncio.run(main())
 * [patch_uc_recording](docs/sdks/uc/README.md#patch_uc_recording) - Update a recording
 * [remove_uc_comment](docs/sdks/uc/README.md#remove_uc_comment) - Remove a comment
 * [remove_uc_contact](docs/sdks/uc/README.md#remove_uc_contact) - Remove a contact
+* [remove_uc_fax](docs/sdks/uc/README.md#remove_uc_fax) - Remove a fax
 * [remove_uc_recording](docs/sdks/uc/README.md#remove_uc_recording) - Remove a recording
 * [update_uc_call](docs/sdks/uc/README.md#update_uc_call) - Update a call
 * [update_uc_comment](docs/sdks/uc/README.md#update_uc_comment) - Update a comment
@@ -2963,12 +2990,14 @@ asyncio.run(main())
 * [create_unified_environment](docs/sdks/unified/README.md#create_unified_environment) - Create new environments
 * [create_unified_secretsmanager](docs/sdks/unified/README.md#create_unified_secretsmanager) - Create secrets manager
 * [create_unified_webhook](docs/sdks/unified/README.md#create_unified_webhook) - Create webhook subscription
+* [create_unified_workspaceintegration](docs/sdks/unified/README.md#create_unified_workspaceintegration) - Create workspace integration
 * [get_unified_apicall](docs/sdks/unified/README.md#get_unified_apicall) - Retrieve specific API Call by its ID
 * [get_unified_connection](docs/sdks/unified/README.md#get_unified_connection) - Retrieve connection
 * [get_unified_integration_auth](docs/sdks/unified/README.md#get_unified_integration_auth) - Authorize or re-authorize a connection
 * [get_unified_issue](docs/sdks/unified/README.md#get_unified_issue) - Retrieve support issue
 * [get_unified_secretsmanager](docs/sdks/unified/README.md#get_unified_secretsmanager) - Retrieve secrets manager
 * [get_unified_webhook](docs/sdks/unified/README.md#get_unified_webhook) - Retrieve webhook by its ID
+* [get_unified_workspaceintegration](docs/sdks/unified/README.md#get_unified_workspaceintegration) - Retrieve workspace integration
 * [list_unified_apicalls](docs/sdks/unified/README.md#list_unified_apicalls) - Returns API Calls
 * [list_unified_connections](docs/sdks/unified/README.md#list_unified_connections) - List all connections
 * [list_unified_environments](docs/sdks/unified/README.md#list_unified_environments) - Returns all environments
@@ -2980,18 +3009,22 @@ asyncio.run(main())
 * [list_unified_secretsmanager_secrets](docs/sdks/unified/README.md#list_unified_secretsmanager_secrets) - List secrets in a secrets manager
 * [list_unified_secretsmanagers](docs/sdks/unified/README.md#list_unified_secretsmanagers) - List secrets managers
 * [list_unified_webhooks](docs/sdks/unified/README.md#list_unified_webhooks) - Returns all registered webhooks
+* [list_unified_workspaceintegrations](docs/sdks/unified/README.md#list_unified_workspaceintegrations) - List workspace integrations
 * [patch_unified_connection](docs/sdks/unified/README.md#patch_unified_connection) - Update connection
 * [patch_unified_webhook](docs/sdks/unified/README.md#patch_unified_webhook) - Update webhook subscription
 * [patch_unified_webhook_resume](docs/sdks/unified/README.md#patch_unified_webhook_resume) - Resume an unhealthy webhook subscription
 * [patch_unified_webhook_trigger](docs/sdks/unified/README.md#patch_unified_webhook_trigger) - Trigger webhook
+* [patch_unified_workspaceintegration](docs/sdks/unified/README.md#patch_unified_workspaceintegration) - Update workspace integration
 * [remove_unified_connection](docs/sdks/unified/README.md#remove_unified_connection) - Remove connection
 * [remove_unified_environment](docs/sdks/unified/README.md#remove_unified_environment) - Remove an environment
 * [remove_unified_secretsmanager](docs/sdks/unified/README.md#remove_unified_secretsmanager) - Remove secrets manager
 * [remove_unified_webhook](docs/sdks/unified/README.md#remove_unified_webhook) - Remove webhook subscription
+* [remove_unified_workspaceintegration](docs/sdks/unified/README.md#remove_unified_workspaceintegration) - Remove workspace integration
 * [update_unified_connection](docs/sdks/unified/README.md#update_unified_connection) - Update connection
 * [update_unified_webhook](docs/sdks/unified/README.md#update_unified_webhook) - Update webhook subscription
 * [update_unified_webhook_resume](docs/sdks/unified/README.md#update_unified_webhook_resume) - Resume an unhealthy webhook subscription
 * [update_unified_webhook_trigger](docs/sdks/unified/README.md#update_unified_webhook_trigger) - Trigger webhook
+* [update_unified_workspaceintegration](docs/sdks/unified/README.md#update_unified_workspaceintegration) - Update workspace integration
 
 ### [Unittype](docs/sdks/unittype/README.md)
 
@@ -3071,6 +3104,15 @@ asyncio.run(main())
 * [remove_calendar_webinar](docs/sdks/webinar/README.md#remove_calendar_webinar) - Remove a webinar
 * [update_calendar_webinar](docs/sdks/webinar/README.md#update_calendar_webinar) - Update a webinar
 
+### [Workspaceintegration](docs/sdks/workspaceintegration/README.md)
+
+* [create_unified_workspaceintegration](docs/sdks/workspaceintegration/README.md#create_unified_workspaceintegration) - Create workspace integration
+* [get_unified_workspaceintegration](docs/sdks/workspaceintegration/README.md#get_unified_workspaceintegration) - Retrieve workspace integration
+* [list_unified_workspaceintegrations](docs/sdks/workspaceintegration/README.md#list_unified_workspaceintegrations) - List workspace integrations
+* [patch_unified_workspaceintegration](docs/sdks/workspaceintegration/README.md#patch_unified_workspaceintegration) - Update workspace integration
+* [remove_unified_workspaceintegration](docs/sdks/workspaceintegration/README.md#remove_unified_workspaceintegration) - Remove workspace integration
+* [update_unified_workspaceintegration](docs/sdks/workspaceintegration/README.md#update_unified_workspaceintegration) - Update workspace integration
+
 </details>
 <!-- End Available Resources and Operations [operations] -->
 
@@ -3139,7 +3181,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "6995bedb-246d-4f91-934f-12685bd8908d",
+            "id": "f2f67d2d-fae1-4bac-9531-61778dcafbc4",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3152,7 +3194,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-10T21:59:29.221Z"),
+            "updated_at": parse_datetime("2023-08-11T23:37:58.124Z"),
         },
         "connection_id": "<id>",
     },
@@ -3186,7 +3228,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "6995bedb-246d-4f91-934f-12685bd8908d",
+            "id": "f2f67d2d-fae1-4bac-9531-61778dcafbc4",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3199,7 +3241,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-10T21:59:29.221Z"),
+            "updated_at": parse_datetime("2023-08-11T23:37:58.124Z"),
         },
         "connection_id": "<id>",
     })
@@ -3247,7 +3289,7 @@ with UnifiedTo(
                 "currency": "CAD",
                 "customer_defined_code": "6170",
                 "description": "Voluptatibus valde spoliatio.",
-                "id": "6995bedb-246d-4f91-934f-12685bd8908d",
+                "id": "f2f67d2d-fae1-4bac-9531-61778dcafbc4",
                 "is_payable": False,
                 "metadata": [],
                 "name": "Auto Loan Account",
@@ -3260,7 +3302,7 @@ with UnifiedTo(
                     },
                 ],
                 "type": shared.Type.ACCOUNTS_RECEIVABLE,
-                "updated_at": parse_datetime("2023-08-10T21:59:29.221Z"),
+                "updated_at": parse_datetime("2023-08-11T23:37:58.124Z"),
             },
             "connection_id": "<id>",
         })
@@ -3338,7 +3380,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "6995bedb-246d-4f91-934f-12685bd8908d",
+            "id": "f2f67d2d-fae1-4bac-9531-61778dcafbc4",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3351,7 +3393,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-10T21:59:29.221Z"),
+            "updated_at": parse_datetime("2023-08-11T23:37:58.124Z"),
         },
         "connection_id": "<id>",
     })
@@ -3386,7 +3428,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "6995bedb-246d-4f91-934f-12685bd8908d",
+            "id": "f2f67d2d-fae1-4bac-9531-61778dcafbc4",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3399,7 +3441,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-10T21:59:29.221Z"),
+            "updated_at": parse_datetime("2023-08-11T23:37:58.124Z"),
         },
         "connection_id": "<id>",
     })
@@ -3542,7 +3584,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "6995bedb-246d-4f91-934f-12685bd8908d",
+            "id": "f2f67d2d-fae1-4bac-9531-61778dcafbc4",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3555,7 +3597,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-10T21:59:29.221Z"),
+            "updated_at": parse_datetime("2023-08-11T23:37:58.124Z"),
         },
         "connection_id": "<id>",
     })

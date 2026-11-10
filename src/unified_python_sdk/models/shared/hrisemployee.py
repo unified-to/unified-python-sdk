@@ -96,7 +96,7 @@ class HrisEmployeeTypedDict(TypedDict):
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     currency: NotRequired[str]
     date_of_birth: NotRequired[datetime]
-    r"""YYYYMM/DD"""
+    r"""YYYY-MM-DD"""
     emails: NotRequired[List[HrisEmailTypedDict]]
     r"""The employee's email addresses"""
     employee_number: NotRequired[str]
@@ -171,7 +171,7 @@ class HrisEmployee(BaseModel):
     currency: Optional[str] = None
 
     date_of_birth: Optional[datetime] = None
-    r"""YYYYMM/DD"""
+    r"""YYYY-MM-DD"""
 
     emails: Optional[List[HrisEmail]] = None
     r"""The employee's email addresses"""

@@ -45,4 +45,6 @@ value = GetAccountingSalesorderQueryParamFields.ID
 | `CLOSED_AT`             | closed_at               |
 | `SUBSCRIPTION_ID`       | subscription_id         |
 | `PAYMENTS`              | payments                |
+| `TABLE_ID`              | table_id                |
+| `PAID_AMOUNT`           | paid_amount             |
 | `RAW`                   | raw                     |

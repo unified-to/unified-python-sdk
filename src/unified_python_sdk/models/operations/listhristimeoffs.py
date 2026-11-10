@@ -39,6 +39,7 @@ class ListHrisTimeoffsQueryParamFields(str, Enum):
     TYPE = "type"
     DURATION = "duration"
     DURATION_TYPE = "duration_type"
+    ATTACHMENTS = "attachments"
     METADATA = "metadata"
     RAW = "raw"
 

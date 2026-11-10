@@ -56,6 +56,8 @@ class ListAccountingSalesordersQueryParamFields(str, Enum):
     CLOSED_AT = "closed_at"
     SUBSCRIPTION_ID = "subscription_id"
     PAYMENTS = "payments"
+    TABLE_ID = "table_id"
+    PAID_AMOUNT = "paid_amount"
     RAW = "raw"
 
 
@@ -76,6 +78,8 @@ class ListAccountingSalesordersRequestTypedDict(TypedDict):
     raw: NotRequired[str]
     r"""Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar"""
     sort: NotRequired[str]
+    status: NotRequired[str]
+    r"""The status to filter by"""
     updated_gte: NotRequired[str]
     r"""Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
@@ -136,6 +140,12 @@ class ListAccountingSalesordersRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
 
+    status: Annotated[
+        Optional[str],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""The status to filter by"""
+
     updated_gte: Annotated[
         Optional[str],
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
@@ -158,6 +168,7 @@ class ListAccountingSalesordersRequest(BaseModel):
                 "query",
                 "raw",
                 "sort",
+                "status",
                 "updated_gte",
             ]
         )

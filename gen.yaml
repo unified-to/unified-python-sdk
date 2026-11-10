@@ -30,7 +30,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 python:
-  version: 0.61.15
+  version: 0.61.16
   additionalDependencies:
     dev: {}
     main: {}

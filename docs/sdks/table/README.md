@@ -5,7 +5,9 @@
 ### Available Operations
 
 * [create_datastore_table](#create_datastore_table) - Create a table
+* [get_commerce_table](#get_commerce_table) - Retrieve a table
 * [get_datastore_table](#get_datastore_table) - Retrieve a table
+* [list_commerce_tables](#list_commerce_tables) - List all tables
 * [list_datastore_tables](#list_datastore_tables) - List all tables
 * [patch_datastore_table](#patch_datastore_table) - Update a table
 * [remove_datastore_table](#remove_datastore_table) - Remove a table
@@ -37,7 +39,7 @@ with UnifiedTo(
             "fields": [
                 {
                     "description": "Antea soluta itaque clamo despecto basium accendo.",
-                    "id": "370da5e1-a5ac-4e33-a4ce-c1601a1c4dce",
+                    "id": "95680c9d-7a14-4384-b94c-5ef2bb219a22",
                     "is_indexed": True,
                     "is_unique": True,
                     "name": "Ferry LLC",
@@ -47,7 +49,7 @@ with UnifiedTo(
                 },
                 {
                     "description": "Nulla cattus aequus sumo neque alter cauda subseco.",
-                    "id": "93c4c6b6-13c4-474a-9ac5-908bfa848a09",
+                    "id": "c2f18cff-4a29-4c0c-902a-d5e96461725c",
                     "is_nullable": True,
                     "is_unique": True,
                     "name": "Hand - Nader",
@@ -57,7 +59,7 @@ with UnifiedTo(
                 },
                 {
                     "description": "Utilis callide adhuc verumtamen doloremque ceno sui sint.",
-                    "id": "29c3b457-e5a0-4400-8063-a7675eaae4ae",
+                    "id": "97b38f39-4edb-456a-92f8-caf049050e2e",
                     "is_indexed": True,
                     "is_nullable": True,
                     "is_unique": True,
@@ -69,7 +71,7 @@ with UnifiedTo(
                 },
                 {
                     "description": "Audax articulus triumphus tametsi cura tenetur colligo arcesso bestia.",
-                    "id": "68d729ae-6988-4edd-a773-e52a3aba5842",
+                    "id": "96681409-baf5-4dc3-9085-32a4a8fb2b02",
                     "name": "Gislason, Gorczany and Hegmann",
                     "original_type": "tego",
                     "precision": 94.0,
@@ -78,7 +80,7 @@ with UnifiedTo(
                 },
                 {
                     "description": "Communis coma cura audio aduro acer canis expedita.",
-                    "id": "cf4de105-348a-405a-9fc4-0fa80f1816de",
+                    "id": "9cba2d92-5be1-496a-a7de-dda50792d440",
                     "is_indexed": True,
                     "is_primary_key": True,
                     "is_required": True,
@@ -88,18 +90,18 @@ with UnifiedTo(
                     "type": shared.DatastoreFieldType.EMAIL,
                 },
             ],
-            "id": "d2ebccdc-8a8a-4c3b-99d2-fd814a8e2d83",
+            "id": "93743536-1d12-4b9f-a1b6-7db259835916",
             "metadata": [],
             "name": "Rogahn, Lowe and Heller",
             "relationships": [
                 {
                     "field": "Macejkovic - Shields",
                     "name": "Hyatt, Ryan and Nienow",
-                    "table_id": "d2ebccdc-8a8a-4c3b-99d2-fd814a8e2d83",
+                    "table_id": "93743536-1d12-4b9f-a1b6-7db259835916",
                     "type": shared.DatastoreRelationshipType.MANY,
                 },
             ],
-            "updated_at": parse_datetime("2022-08-13T15:50:48.020Z"),
+            "updated_at": parse_datetime("2022-08-13T21:00:57.592Z"),
             "web_url": "https://nervous-deck.com",
         },
         "connection_id": "<id>",
@@ -122,6 +124,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.CreateDatastoreTableResponse](../../models/operations/createdatastoretableresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_commerce_table
+
+Retrieves a single CommerceTable by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getCommerceTable" method="get" path="/commerce/{connection_id}/table/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.table.get_commerce_table(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.commerce_table is not None
+
+    # Handle response
+    print(res.commerce_table)
+
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.GetCommerceTableRequest](../../models/operations/getcommercetablerequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+
+### Response
+
+**[operations.GetCommerceTableResponse](../../models/operations/getcommercetableresponse.md)**
 
 ### Errors
 
@@ -169,6 +218,52 @@ with UnifiedTo(
 ### Response
 
 **[operations.GetDatastoreTableResponse](../../models/operations/getdatastoretableresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## list_commerce_tables
+
+Returns a list of CommerceTables. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listCommerceTables" method="get" path="/commerce/{connection_id}/table" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.table.list_commerce_tables(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.commerce_tables is not None
+
+    # Handle response
+    print(res.commerce_tables)
+
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.ListCommerceTablesRequest](../../models/operations/listcommercetablesrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+
+### Response
+
+**[operations.ListCommerceTablesResponse](../../models/operations/listcommercetablesresponse.md)**
 
 ### Errors
 
@@ -248,7 +343,7 @@ with UnifiedTo(
             "fields": [
                 {
                     "description": "Antea soluta itaque clamo despecto basium accendo.",
-                    "id": "92ad8b4a-598a-496f-8e94-833b8705f9ca",
+                    "id": "8c780552-1c6f-4705-bbe8-c72df0f39177",
                     "is_indexed": True,
                     "is_unique": True,
                     "name": "Ferry LLC",
@@ -258,7 +353,7 @@ with UnifiedTo(
                 },
                 {
                     "description": "Nulla cattus aequus sumo neque alter cauda subseco.",
-                    "id": "a9676f1c-8586-415c-bce3-2f7debf7ac06",
+                    "id": "3a280d64-8823-4ca1-a393-a52e39be6ec3",
                     "is_nullable": True,
                     "is_unique": True,
                     "name": "Hand - Nader",
@@ -268,7 +363,7 @@ with UnifiedTo(
                 },
                 {
                     "description": "Utilis callide adhuc verumtamen doloremque ceno sui sint.",
-                    "id": "52082786-fa4d-4f83-a750-921a20b74c6b",
+                    "id": "70d5ef86-563a-4665-9e1a-19b924f9f17b",
                     "is_indexed": True,
                     "is_nullable": True,
                     "is_unique": True,
@@ -280,7 +375,7 @@ with UnifiedTo(
                 },
                 {
                     "description": "Audax articulus triumphus tametsi cura tenetur colligo arcesso bestia.",
-                    "id": "a8a0c416-7e3b-4732-9f15-0ecd4fde54e1",
+                    "id": "b6685b1d-aed4-4daa-85c7-9b6e00185ec7",
                     "name": "Gislason, Gorczany and Hegmann",
                     "original_type": "tego",
                     "precision": 94.0,
@@ -289,7 +384,7 @@ with UnifiedTo(
                 },
                 {
                     "description": "Communis coma cura audio aduro acer canis expedita.",
-                    "id": "fbca62af-0e01-46e0-9ba8-b53f032ad7c7",
+                    "id": "cf8dd404-5481-4553-a4c0-ae9b43ae6a69",
                     "is_indexed": True,
                     "is_primary_key": True,
                     "is_required": True,
@@ -299,18 +394,18 @@ with UnifiedTo(
                     "type": shared.DatastoreFieldType.EMAIL,
                 },
             ],
-            "id": "e988f608-c6c2-4109-9c0a-3d59eabce45c",
+            "id": "0937e9ae-c6a2-4617-b43c-a32d599f546a",
             "metadata": [],
             "name": "Rogahn, Lowe and Heller",
             "relationships": [
                 {
                     "field": "Macejkovic - Shields",
                     "name": "Hyatt, Ryan and Nienow",
-                    "table_id": "e988f608-c6c2-4109-9c0a-3d59eabce45c",
+                    "table_id": "0937e9ae-c6a2-4617-b43c-a32d599f546a",
                     "type": shared.DatastoreRelationshipType.MANY,
                 },
             ],
-            "updated_at": parse_datetime("2022-08-13T15:50:48.021Z"),
+            "updated_at": parse_datetime("2022-08-13T21:00:57.593Z"),
             "web_url": "https://nervous-deck.com",
         },
         "connection_id": "<id>",
@@ -414,7 +509,7 @@ with UnifiedTo(
             "fields": [
                 {
                     "description": "Antea soluta itaque clamo despecto basium accendo.",
-                    "id": "92ad8b4a-598a-496f-8e94-833b8705f9ca",
+                    "id": "8c780552-1c6f-4705-bbe8-c72df0f39177",
                     "is_indexed": True,
                     "is_unique": True,
                     "name": "Ferry LLC",
@@ -424,7 +519,7 @@ with UnifiedTo(
                 },
                 {
                     "description": "Nulla cattus aequus sumo neque alter cauda subseco.",
-                    "id": "a9676f1c-8586-415c-bce3-2f7debf7ac06",
+                    "id": "3a280d64-8823-4ca1-a393-a52e39be6ec3",
                     "is_nullable": True,
                     "is_unique": True,
                     "name": "Hand - Nader",
@@ -434,7 +529,7 @@ with UnifiedTo(
                 },
                 {
                     "description": "Utilis callide adhuc verumtamen doloremque ceno sui sint.",
-                    "id": "52082786-fa4d-4f83-a750-921a20b74c6b",
+                    "id": "70d5ef86-563a-4665-9e1a-19b924f9f17b",
                     "is_indexed": True,
                     "is_nullable": True,
                     "is_unique": True,
@@ -446,7 +541,7 @@ with UnifiedTo(
                 },
                 {
                     "description": "Audax articulus triumphus tametsi cura tenetur colligo arcesso bestia.",
-                    "id": "a8a0c416-7e3b-4732-9f15-0ecd4fde54e1",
+                    "id": "b6685b1d-aed4-4daa-85c7-9b6e00185ec7",
                     "name": "Gislason, Gorczany and Hegmann",
                     "original_type": "tego",
                     "precision": 94.0,
@@ -455,7 +550,7 @@ with UnifiedTo(
                 },
                 {
                     "description": "Communis coma cura audio aduro acer canis expedita.",
-                    "id": "fbca62af-0e01-46e0-9ba8-b53f032ad7c7",
+                    "id": "cf8dd404-5481-4553-a4c0-ae9b43ae6a69",
                     "is_indexed": True,
                     "is_primary_key": True,
                     "is_required": True,
@@ -465,18 +560,18 @@ with UnifiedTo(
                     "type": shared.DatastoreFieldType.EMAIL,
                 },
             ],
-            "id": "e988f608-c6c2-4109-9c0a-3d59eabce45c",
+            "id": "0937e9ae-c6a2-4617-b43c-a32d599f546a",
             "metadata": [],
             "name": "Rogahn, Lowe and Heller",
             "relationships": [
                 {
                     "field": "Macejkovic - Shields",
                     "name": "Hyatt, Ryan and Nienow",
-                    "table_id": "e988f608-c6c2-4109-9c0a-3d59eabce45c",
+                    "table_id": "0937e9ae-c6a2-4617-b43c-a32d599f546a",
                     "type": shared.DatastoreRelationshipType.MANY,
                 },
             ],
-            "updated_at": parse_datetime("2022-08-13T15:50:48.021Z"),
+            "updated_at": parse_datetime("2022-08-13T21:00:57.593Z"),
             "web_url": "https://nervous-deck.com",
         },
         "connection_id": "<id>",

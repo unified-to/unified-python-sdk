@@ -59,6 +59,7 @@ value = WebhookObjectType.ACCOUNTING_ACCOUNT
 | `COMMERCE_SALESCHANNEL`          | commerce_saleschannel            |
 | `COMMERCE_ITEMVARIANT`           | commerce_itemvariant             |
 | `COMMERCE_RESERVATION`           | commerce_reservation             |
+| `COMMERCE_TABLE`                 | commerce_table                   |
 | `COMMERCE_RETURN`                | commerce_return                  |
 | `COMMERCE_AVAILABILITY`          | commerce_availability            |
 | `VERIFICATION_PACKAGE`           | verification_package             |
@@ -109,6 +110,7 @@ value = WebhookObjectType.ACCOUNTING_ACCOUNT
 | `TICKETING_CUSTOMER`             | ticketing_customer               |
 | `TICKETING_CATEGORY`             | ticketing_category               |
 | `UC_CONTACT`                     | uc_contact                       |
+| `UC_FAX`                         | uc_fax                           |
 | `UC_CALL`                        | uc_call                          |
 | `UC_COMMENT`                     | uc_comment                       |
 | `UC_RECORDING`                   | uc_recording                     |
@@ -208,6 +210,7 @@ value = WebhookObjectType.ACCOUNTING_ACCOUNT
 | `SOCIAL_PROFILE`                 | social_profile                   |
 | `SOCIAL_REVIEW`                  | social_review                    |
 | `SOCIAL_INSIGHT`                 | social_insight                   |
+| `SOCIAL_COMMENT`                 | social_comment                   |
 | `LEGAL_MATTER`                   | legal_matter                     |
 | `LEGAL_PRACTICEAREA`             | legal_practicearea               |
 | `LEGAL_TIMEENTRY`                | legal_timeentry                  |

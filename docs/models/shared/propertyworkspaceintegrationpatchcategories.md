@@ -1,0 +1,57 @@
+# PropertyWorkspaceIntegrationPatchCategories
+
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import PropertyWorkspaceIntegrationPatchCategories
+
+value = PropertyWorkspaceIntegrationPatchCategories.PASSTHROUGH
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
+
+## Values
+
+| Name           | Value          |
+| -------------- | -------------- |
+| `PASSTHROUGH`  | passthrough    |
+| `HRIS`         | hris           |
+| `ATS`          | ats            |
+| `AUTH`         | auth           |
+| `SAML`         | saml           |
+| `CRM`          | crm            |
+| `ENRICH`       | enrich         |
+| `MARTECH`      | martech        |
+| `TICKETING`    | ticketing      |
+| `UC`           | uc             |
+| `ACCOUNTING`   | accounting     |
+| `STORAGE`      | storage        |
+| `COMMERCE`     | commerce       |
+| `PAYMENT`      | payment        |
+| `GENAI`        | genai          |
+| `MESSAGING`    | messaging      |
+| `KMS`          | kms            |
+| `TASK`         | task           |
+| `SCIM`         | scim           |
+| `LMS`          | lms            |
+| `REPO`         | repo           |
+| `METADATA`     | metadata       |
+| `CALENDAR`     | calendar       |
+| `VERIFICATION` | verification   |
+| `ADS`          | ads            |
+| `ANALYTICS`    | analytics      |
+| `FORMS`        | forms          |
+| `SHIPPING`     | shipping       |
+| `ASSESSMENT`   | assessment     |
+| `SIGNING`      | signing        |
+| `CLUBS`        | clubs          |
+| `DATASTORE`    | datastore      |
+| `CDP`          | cdp            |
+| `PERFORMANCE`  | performance    |
+| `SOCIAL`       | social         |
+| `LEGAL`        | legal          |
+| `COMPUTE`      | compute        |
+| `HEALTHCARE`   | healthcare     |
+| `PROPERTY`     | property       |
+| `PLM`          | plm            |

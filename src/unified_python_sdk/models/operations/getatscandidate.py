@@ -50,6 +50,8 @@ class GetAtsCandidateQueryParamFields(str, Enum):
     JOB_IDS = "job_ids"
     METADATA = "metadata"
     SUMMARY = "summary"
+    IS_PRIVATE = "is_private"
+    HAS_DO_NOT_CONTACT = "has_do_not_contact"
     RAW = "raw"
 
 

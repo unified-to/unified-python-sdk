@@ -86,6 +86,8 @@ class AccountingSalesorderTypedDict(TypedDict):
     order_number: NotRequired[str]
     r"""human-facing receipt/ticket/check number, distinct from id"""
     organization_id: NotRequired[str]
+    paid_amount: NotRequired[float]
+    r"""total of the payments applied so far"""
     payments: NotRequired[List[AccountingPaymentReferenceTypedDict]]
     r"""read-only reciprocal of PaymentPayment.allocations; payments applied to this sales order"""
     posted_at: NotRequired[datetime]
@@ -100,6 +102,8 @@ class AccountingSalesorderTypedDict(TypedDict):
     r"""payment_subscription that generated this order, if recurring"""
     subtotal_amount: NotRequired[float]
     r"""pre-tax, pre-tip amount"""
+    table_id: NotRequired[str]
+    r"""reference to a commerce_table (restaurant table) the order is seated at"""
     tax_amount: NotRequired[float]
     tip_amount: NotRequired[float]
     total_amount: NotRequired[float]
@@ -154,6 +158,9 @@ class AccountingSalesorder(BaseModel):
 
     organization_id: Optional[str] = None
 
+    paid_amount: Optional[float] = None
+    r"""total of the payments applied so far"""
+
     payments: Optional[List[AccountingPaymentReference]] = None
     r"""read-only reciprocal of PaymentPayment.allocations; payments applied to this sales order"""
 
@@ -177,6 +184,9 @@ class AccountingSalesorder(BaseModel):
 
     subtotal_amount: Optional[float] = None
     r"""pre-tax, pre-tip amount"""
+
+    table_id: Optional[str] = None
+    r"""reference to a commerce_table (restaurant table) the order is seated at"""
 
     tax_amount: Optional[float] = None
 
@@ -231,6 +241,7 @@ class AccountingSalesorder(BaseModel):
                 "metadata",
                 "order_number",
                 "organization_id",
+                "paid_amount",
                 "payments",
                 "posted_at",
                 "raw",
@@ -241,6 +252,7 @@ class AccountingSalesorder(BaseModel):
                 "status",
                 "subscription_id",
                 "subtotal_amount",
+                "table_id",
                 "tax_amount",
                 "tip_amount",
                 "total_amount",

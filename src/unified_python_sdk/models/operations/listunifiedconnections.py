@@ -60,12 +60,34 @@ class Categories(str, Enum):
     PLM = "plm"
 
 
+class ListUnifiedConnectionsQueryParamFields(str, Enum):
+    ID = "id"
+    CREATED_AT = "created_at"
+    UPDATED_AT = "updated_at"
+    WORKSPACE_ID = "workspace_id"
+    INTEGRATION_TYPE = "integration_type"
+    INTEGRATION_NAME = "integration_name"
+    EXTERNAL_XREF = "external_xref"
+    PERMISSIONS = "permissions"
+    CATEGORIES = "categories"
+    AUTH = "auth"
+    IS_PAUSED = "is_paused"
+    ENVIRONMENT = "environment"
+    LAST_HEALTHY_AT = "last_healthy_at"
+    LAST_UNHEALTHY_AT = "last_unhealthy_at"
+    LAST_UNHEALTHY_CODE = "last_unhealthy_code"
+    SECRETSMANAGER_ID = "secretsmanager_id"
+    SECRETSMANAGER_KEY = "secretsmanager_key"
+
+
 class ListUnifiedConnectionsRequestTypedDict(TypedDict):
     categories: NotRequired[List[Categories]]
     r"""Filter the results on these categories"""
     env: NotRequired[str]
     external_xref: NotRequired[str]
     r"""Filter the results to only those integrations for your user referenced by this value"""
+    fields: NotRequired[List[ListUnifiedConnectionsQueryParamFields]]
+    r"""Fields to return. Leave out auth to get connection metadata without credentials"""
     limit: NotRequired[float]
     offset: NotRequired[float]
     order: NotRequired[str]
@@ -91,6 +113,12 @@ class ListUnifiedConnectionsRequest(BaseModel):
         FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
     ] = None
     r"""Filter the results to only those integrations for your user referenced by this value"""
+
+    fields: Annotated[
+        Optional[List[ListUnifiedConnectionsQueryParamFields]],
+        FieldMetadata(query=QueryParamMetadata(style="form", explode=True)),
+    ] = None
+    r"""Fields to return. Leave out auth to get connection metadata without credentials"""
 
     limit: Annotated[
         Optional[float],
@@ -128,6 +156,7 @@ class ListUnifiedConnectionsRequest(BaseModel):
                 "categories",
                 "env",
                 "external_xref",
+                "fields",
                 "limit",
                 "offset",
                 "order",

@@ -4,20 +4,73 @@
 
 ### Available Operations
 
+* [create_social_comment](#create_social_comment) - Create a comment
 * [create_social_post](#create_social_post) - Create a post
+* [get_social_comment](#get_social_comment) - Retrieve a comment
 * [get_social_insight](#get_social_insight) - Retrieve an insight
 * [get_social_post](#get_social_post) - Retrieve a post
 * [get_social_profile](#get_social_profile) - Retrieve a profile
 * [get_social_review](#get_social_review) - Retrieve a review
+* [list_social_comments](#list_social_comments) - List all comments
 * [list_social_insights](#list_social_insights) - List all insights
 * [list_social_posts](#list_social_posts) - List all posts
 * [list_social_profiles](#list_social_profiles) - List all profiles
 * [list_social_reviews](#list_social_reviews) - List all reviews
+* [patch_social_comment](#patch_social_comment) - Update a comment
 * [patch_social_post](#patch_social_post) - Update a post
 * [patch_social_review](#patch_social_review) - Update a review
+* [remove_social_comment](#remove_social_comment) - Remove a comment
 * [remove_social_post](#remove_social_post) - Remove a post
+* [update_social_comment](#update_social_comment) - Update a comment
 * [update_social_post](#update_social_post) - Update a post
 * [update_social_review](#update_social_review) - Update a review
+
+## create_social_comment
+
+Creates a SocialComment. Provide the unified SocialComment fields in the request body; they are mapped to the provider's API. Returns the created SocialComment.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="createSocialComment" method="post" path="/social/{connection_id}/comment" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.social.create_social_comment(request={
+        "social_comment": {},
+        "connection_id": "<id>",
+    })
+
+    assert res.social_comment is not None
+
+    # Handle response
+    print(res.social_comment)
+
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.CreateSocialCommentRequest](../../models/operations/createsocialcommentrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+
+### Response
+
+**[operations.CreateSocialCommentResponse](../../models/operations/createsocialcommentresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## create_social_post
 
@@ -59,6 +112,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.CreateSocialPostResponse](../../models/operations/createsocialpostresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_social_comment
+
+Retrieves a single SocialComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getSocialComment" method="get" path="/social/{connection_id}/comment/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.social.get_social_comment(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.social_comment is not None
+
+    # Handle response
+    print(res.social_comment)
+
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.GetSocialCommentRequest](../../models/operations/getsocialcommentrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+
+### Response
+
+**[operations.GetSocialCommentResponse](../../models/operations/getsocialcommentresponse.md)**
 
 ### Errors
 
@@ -254,6 +354,52 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## list_social_comments
+
+Returns a list of SocialComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listSocialComments" method="get" path="/social/{connection_id}/comment" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.social.list_social_comments(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.social_comments is not None
+
+    # Handle response
+    print(res.social_comments)
+
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.ListSocialCommentsRequest](../../models/operations/listsocialcommentsrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+
+### Response
+
+**[operations.ListSocialCommentsResponse](../../models/operations/listsocialcommentsresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## list_social_insights
 
 Returns a list of SocialInsights. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -438,6 +584,54 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## patch_social_comment
+
+Updates the SocialComment identified by `id`. Provide the unified SocialComment fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchSocialComment" method="patch" path="/social/{connection_id}/comment/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.social.patch_social_comment(request={
+        "social_comment": {},
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.social_comment is not None
+
+    # Handle response
+    print(res.social_comment)
+
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.PatchSocialCommentRequest](../../models/operations/patchsocialcommentrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+
+### Response
+
+**[operations.PatchSocialCommentResponse](../../models/operations/patchsocialcommentresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## patch_social_post
 
 Updates the SocialPost identified by `id`. Provide the unified SocialPost fields to change in the request body.
@@ -534,6 +728,53 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## remove_social_comment
+
+Deletes the SocialComment identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeSocialComment" method="delete" path="/social/{connection_id}/comment/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.social.remove_social_comment(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.RemoveSocialCommentRequest](../../models/operations/removesocialcommentrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+
+### Response
+
+**[operations.RemoveSocialCommentResponse](../../models/operations/removesocialcommentresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## remove_social_post
 
 Deletes the SocialPost identified by `id`.
@@ -574,6 +815,54 @@ with UnifiedTo(
 ### Response
 
 **[operations.RemoveSocialPostResponse](../../models/operations/removesocialpostresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## update_social_comment
+
+Updates the SocialComment identified by `id`. Provide the unified SocialComment fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="updateSocialComment" method="put" path="/social/{connection_id}/comment/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.social.update_social_comment(request={
+        "social_comment": {},
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.social_comment is not None
+
+    # Handle response
+    print(res.social_comment)
+
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.UpdateSocialCommentRequest](../../models/operations/updatesocialcommentrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+
+### Response
+
+**[operations.UpdateSocialCommentResponse](../../models/operations/updatesocialcommentresponse.md)**
 
 ### Errors
 
