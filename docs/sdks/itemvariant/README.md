@@ -36,7 +36,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-01-20T13:49:12.968Z"),
             "description": "Stylish Salad designed to make you stand out with little looks",
             "height": 54.0,
-            "id": "d8446c85-82c4-47f6-9f53-d9a3bee8474d",
+            "id": "af359f82-69e0-468f-82a5-4e87481c561d",
             "is_active": True,
             "is_featured": False,
             "is_visible": False,
@@ -45,10 +45,10 @@ with UnifiedTo(
                 {
                     "alt": "Hic desipio thorax.",
                     "height": 961.0,
-                    "id": "c7701e2f-2b5b-42fb-b3ed-c902cd428842",
+                    "id": "0301ebf7-8e30-4de4-bc26-4f7e68441783",
                     "metadata": [
                         {
-                            "id": "b698c6a8-a330-456c-9877-ec2ee8da3b38",
+                            "id": "c46e7a9a-72b5-47f3-b509-b9ab303fed16",
                             "slug": "ubi",
                             "value": "textus",
                         },
@@ -65,7 +65,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CommerceMetadataFormat.TEXT,
-                    "id": "37e3bd0c-d5af-4efd-9f67-cb95519afbdb",
+                    "id": "506caf24-2077-4505-8415-565a38ad547e",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "absens",
@@ -74,7 +74,7 @@ with UnifiedTo(
             "name": "Chair",
             "options": [
                 {
-                    "id": "13dcc5ef-607d-491f-a376-bf82f6e2a7f8",
+                    "id": "a5e0d008-94ad-4189-b8ca-131b74a2f86e",
                     "name": "Color",
                     "position": 1.0,
                     "values": [
@@ -82,7 +82,7 @@ with UnifiedTo(
                     ],
                 },
                 {
-                    "id": "8e959cfe-4a05-43b5-9c35-0b209431689f",
+                    "id": "467df0fe-46bd-48e8-96c9-f931edf13159",
                     "name": "Size",
                     "position": 2.0,
                     "values": [
@@ -105,7 +105,7 @@ with UnifiedTo(
                 "deserunt",
             ],
             "total_stock": 436.0,
-            "updated_at": parse_datetime("2026-03-27T01:46:08.974Z"),
+            "updated_at": parse_datetime("2026-03-27T20:53:10.426Z"),
             "weight": 46.0,
             "weight_unit": shared.CommerceItemvariantWeightUnit.OZ,
             "width": 40.0,
@@ -255,7 +255,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-01-20T13:49:12.968Z"),
             "description": "Stylish Salad designed to make you stand out with little looks",
             "height": 54.0,
-            "id": "f3dc974f-f9d4-4ac3-acb2-d46ed3f93750",
+            "id": "4f733dea-829f-40c1-b464-5a0a66560938",
             "is_active": True,
             "is_featured": False,
             "is_visible": False,
@@ -264,10 +264,10 @@ with UnifiedTo(
                 {
                     "alt": "Hic desipio thorax.",
                     "height": 961.0,
-                    "id": "baac9516-e84b-4396-8750-96526c439bb9",
+                    "id": "7662ff5b-16b1-41aa-a6c1-d31180fe6f02",
                     "metadata": [
                         {
-                            "id": "f2411291-1ef4-4eab-a6fe-11aefc4dd39d",
+                            "id": "67e83c59-f1d0-4c94-9ec9-bcd3d6a5b67e",
                             "slug": "ubi",
                             "value": "textus",
                         },
@@ -284,7 +284,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CommerceMetadataFormat.TEXT,
-                    "id": "f98198ff-fa36-40f7-9b6c-3d12c1e6ad1a",
+                    "id": "d6c38e1d-8dd5-4607-b3be-01b73cc6ec23",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "absens",
@@ -293,7 +293,7 @@ with UnifiedTo(
             "name": "Chair",
             "options": [
                 {
-                    "id": "753c823b-7059-4725-a803-77430c21abd2",
+                    "id": "2f5237b1-5b0a-4a36-b28a-9c855d935bdc",
                     "name": "Color",
                     "position": 1.0,
                     "values": [
@@ -301,7 +301,7 @@ with UnifiedTo(
                     ],
                 },
                 {
-                    "id": "b4a31199-c837-4874-b5d5-ec387cc55675",
+                    "id": "1700b933-22df-495c-b2f6-f22e0827190b",
                     "name": "Size",
                     "position": 2.0,
                     "values": [
@@ -324,7 +324,7 @@ with UnifiedTo(
                 "deserunt",
             ],
             "total_stock": 436.0,
-            "updated_at": parse_datetime("2026-03-27T01:46:08.998Z"),
+            "updated_at": parse_datetime("2026-03-27T20:53:10.452Z"),
             "weight": 46.0,
             "weight_unit": shared.CommerceItemvariantWeightUnit.OZ,
             "width": 40.0,
@@ -429,7 +429,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-01-20T13:49:12.968Z"),
             "description": "Stylish Salad designed to make you stand out with little looks",
             "height": 54.0,
-            "id": "f3dc974f-f9d4-4ac3-acb2-d46ed3f93750",
+            "id": "4f733dea-829f-40c1-b464-5a0a66560938",
             "is_active": True,
             "is_featured": False,
             "is_visible": False,
@@ -438,10 +438,10 @@ with UnifiedTo(
                 {
                     "alt": "Hic desipio thorax.",
                     "height": 961.0,
-                    "id": "baac9516-e84b-4396-8750-96526c439bb9",
+                    "id": "7662ff5b-16b1-41aa-a6c1-d31180fe6f02",
                     "metadata": [
                         {
-                            "id": "f2411291-1ef4-4eab-a6fe-11aefc4dd39d",
+                            "id": "67e83c59-f1d0-4c94-9ec9-bcd3d6a5b67e",
                             "slug": "ubi",
                             "value": "textus",
                         },
@@ -458,7 +458,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CommerceMetadataFormat.TEXT,
-                    "id": "f98198ff-fa36-40f7-9b6c-3d12c1e6ad1a",
+                    "id": "d6c38e1d-8dd5-4607-b3be-01b73cc6ec23",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "absens",
@@ -467,7 +467,7 @@ with UnifiedTo(
             "name": "Chair",
             "options": [
                 {
-                    "id": "753c823b-7059-4725-a803-77430c21abd2",
+                    "id": "2f5237b1-5b0a-4a36-b28a-9c855d935bdc",
                     "name": "Color",
                     "position": 1.0,
                     "values": [
@@ -475,7 +475,7 @@ with UnifiedTo(
                     ],
                 },
                 {
-                    "id": "b4a31199-c837-4874-b5d5-ec387cc55675",
+                    "id": "1700b933-22df-495c-b2f6-f22e0827190b",
                     "name": "Size",
                     "position": 2.0,
                     "values": [
@@ -498,7 +498,7 @@ with UnifiedTo(
                 "deserunt",
             ],
             "total_stock": 436.0,
-            "updated_at": parse_datetime("2026-03-27T01:46:08.998Z"),
+            "updated_at": parse_datetime("2026-03-27T20:53:10.452Z"),
             "weight": 46.0,
             "weight_unit": shared.CommerceItemvariantWeightUnit.OZ,
             "width": 40.0,
