@@ -85,9 +85,9 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-12-18T19:14:11.415Z"),
             "currency": "USD",
             "deposit_amount": 594.54,
-            "end_at": parse_datetime("2026-11-25"),
+            "end_at": parse_datetime("2026-11-26"),
             "guests": 2.0,
-            "id": "4bb55106-4e6f-4ccc-8dec-d496fcd2238a",
+            "id": "b3ee957c-0eca-4b6e-9330-4e1caeb645c6",
             "line_items": [
                 {
                     "amount": 1665.0,
@@ -109,7 +109,7 @@ with UnifiedTo(
                     "type": shared.PropertyLineitemType.TAX,
                 },
             ],
-            "start_at": parse_datetime("2026-11-16"),
+            "start_at": parse_datetime("2026-11-17"),
             "total_amount": 1981.8,
         },
         "connection_id": "<id>",
