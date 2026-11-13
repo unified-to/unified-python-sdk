@@ -292,6 +292,7 @@ class PropertyConnectionPermissions(str, Enum, metaclass=utils.OpenEnumMeta):
     ADS_INSERTIONORDER_WRITE = "ads_insertionorder_write"
     ADS_TARGET_READ = "ads_target_read"
     ADS_PROMOTED_READ = "ads_promoted_read"
+    ADS_INVENTORY_READ = "ads_inventory_read"
     ANALYTICS_PROPERTY_READ = "analytics_property_read"
     ANALYTICS_PROPERTY_WRITE = "analytics_property_write"
     ANALYTICS_EVENT_READ = "analytics_event_read"

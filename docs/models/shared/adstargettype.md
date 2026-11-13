@@ -15,18 +15,23 @@ value = AdsTargetType.INTEREST
 
 ## Values
 
-| Name           | Value          |
-| -------------- | -------------- |
-| `INTEREST`     | INTEREST       |
-| `BEHAVIOR`     | BEHAVIOR       |
-| `LOCALE`       | LOCALE         |
-| `COUNTRY`      | COUNTRY        |
-| `REGION`       | REGION         |
-| `CITY`         | CITY           |
-| `ZIP`          | ZIP            |
-| `US_DMA`       | US_DMA         |
-| `TOPIC`        | TOPIC          |
-| `USER_LIST`    | USER_LIST      |
-| `CARRIER`      | CARRIER        |
-| `DEVICE_MODEL` | DEVICE_MODEL   |
-| `OS_VERSION`   | OS_VERSION     |
+| Name               | Value              |
+| ------------------ | ------------------ |
+| `INTEREST`         | INTEREST           |
+| `BEHAVIOR`         | BEHAVIOR           |
+| `LOCALE`           | LOCALE             |
+| `COUNTRY`          | COUNTRY            |
+| `REGION`           | REGION             |
+| `CITY`             | CITY               |
+| `ZIP`              | ZIP                |
+| `US_DMA`           | US_DMA             |
+| `TOPIC`            | TOPIC              |
+| `USER_LIST`        | USER_LIST          |
+| `CARRIER`          | CARRIER            |
+| `DEVICE_MODEL`     | DEVICE_MODEL       |
+| `OS_VERSION`       | OS_VERSION         |
+| `CUSTOM_KEY`       | CUSTOM_KEY         |
+| `CUSTOM_VALUE`     | CUSTOM_VALUE       |
+| `BROWSER`          | BROWSER            |
+| `OPERATING_SYSTEM` | OPERATING_SYSTEM   |
+| `DEVICE_CATEGORY`  | DEVICE_CATEGORY    |

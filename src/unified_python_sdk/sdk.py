@@ -286,6 +286,7 @@ class UnifiedTo(BaseSDK):
     creative: "Creative"
     group: "Group"
     insertionorder: "Insertionorder"
+    inventory: "Inventory"
     promoted: "Promoted"
     report: "Report"
     target: "Target"
@@ -325,7 +326,6 @@ class UnifiedTo(BaseSDK):
     commerce: "Commerce"
     availability: "Availability"
     collection: "Collection"
-    inventory: "Inventory"
     item: "Item"
     itemvariant: "Itemvariant"
     reservation: "Reservation"
@@ -516,6 +516,7 @@ class UnifiedTo(BaseSDK):
         "creative": ("unified_python_sdk.creative", "Creative"),
         "group": ("unified_python_sdk.group", "Group"),
         "insertionorder": ("unified_python_sdk.insertionorder", "Insertionorder"),
+        "inventory": ("unified_python_sdk.inventory", "Inventory"),
         "promoted": ("unified_python_sdk.promoted", "Promoted"),
         "report": ("unified_python_sdk.report", "Report"),
         "target": ("unified_python_sdk.target", "Target"),
@@ -558,7 +559,6 @@ class UnifiedTo(BaseSDK):
         "commerce": ("unified_python_sdk.commerce", "Commerce"),
         "availability": ("unified_python_sdk.availability", "Availability"),
         "collection": ("unified_python_sdk.collection", "Collection"),
-        "inventory": ("unified_python_sdk.inventory", "Inventory"),
         "item": ("unified_python_sdk.item", "Item"),
         "itemvariant": ("unified_python_sdk.itemvariant", "Itemvariant"),
         "reservation": ("unified_python_sdk.reservation", "Reservation"),

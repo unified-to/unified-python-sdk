@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 from .adschedule import AdSchedule, AdScheduleTypedDict
+from .customtargeting import CustomTargeting, CustomTargetingTypedDict
 from .property_adsreportmetrics_campaign_targeting_audience import (
     PropertyAdsReportMetricsCampaignTargetingAudience,
     PropertyAdsReportMetricsCampaignTargetingAudienceTypedDict,
@@ -25,6 +26,10 @@ from .property_adsreportmetrics_campaign_targeting_device import (
 from .property_adsreportmetrics_campaign_targeting_geographic import (
     PropertyAdsReportMetricsCampaignTargetingGeographic,
     PropertyAdsReportMetricsCampaignTargetingGeographicTypedDict,
+)
+from .property_adsreportmetrics_campaign_targeting_inventory import (
+    PropertyAdsReportMetricsCampaignTargetingInventory,
+    PropertyAdsReportMetricsCampaignTargetingInventoryTypedDict,
 )
 from .property_adsreportmetrics_campaign_targeting_optimization import (
     PropertyAdsReportMetricsCampaignTargetingOptimization,
@@ -54,6 +59,8 @@ class PropertyAdsReportMetricsCampaignTargetingTypedDict(TypedDict):
     ]
     r"""Brand safety (Meta: excluded_publisher_categories, etc.; Google"""
     content: NotRequired[PropertyAdsReportMetricsCampaignTargetingContentTypedDict]
+    custom: NotRequired[List[CustomTargetingTypedDict]]
+    r"""Key-value targeting; clauses are ANDed"""
     demographic: NotRequired[
         PropertyAdsReportMetricsCampaignTargetingDemographicTypedDict
     ]
@@ -62,6 +69,8 @@ class PropertyAdsReportMetricsCampaignTargetingTypedDict(TypedDict):
     geographic: NotRequired[
         PropertyAdsReportMetricsCampaignTargetingGeographicTypedDict
     ]
+    inventory: NotRequired[PropertyAdsReportMetricsCampaignTargetingInventoryTypedDict]
+    r"""Publisher inventory (ad units, placements) to include / exclude"""
     language: NotRequired[List[TargetRefTypedDict]]
     optimization: NotRequired[
         PropertyAdsReportMetricsCampaignTargetingOptimizationTypedDict
@@ -79,12 +88,18 @@ class PropertyAdsReportMetricsCampaignTargeting(BaseModel):
 
     content: Optional[PropertyAdsReportMetricsCampaignTargetingContent] = None
 
+    custom: Optional[List[CustomTargeting]] = None
+    r"""Key-value targeting; clauses are ANDed"""
+
     demographic: Optional[PropertyAdsReportMetricsCampaignTargetingDemographic] = None
     r"""Demographic targeting (Meta: age_min, age_max, genders)"""
 
     device: Optional[PropertyAdsReportMetricsCampaignTargetingDevice] = None
 
     geographic: Optional[PropertyAdsReportMetricsCampaignTargetingGeographic] = None
+
+    inventory: Optional[PropertyAdsReportMetricsCampaignTargetingInventory] = None
+    r"""Publisher inventory (ad units, placements) to include / exclude"""
 
     language: Optional[List[TargetRef]] = None
 
@@ -105,9 +120,11 @@ class PropertyAdsReportMetricsCampaignTargeting(BaseModel):
                 "audience",
                 "brand_safety",
                 "content",
+                "custom",
                 "demographic",
                 "device",
                 "geographic",
+                "inventory",
                 "language",
                 "optimization",
                 "placement",

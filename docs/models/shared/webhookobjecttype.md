@@ -172,6 +172,7 @@ value = WebhookObjectType.ACCOUNTING_ACCOUNT
 | `ADS_INSERTIONORDER`             | ads_insertionorder               |
 | `ADS_TARGET`                     | ads_target                       |
 | `ADS_PROMOTED`                   | ads_promoted                     |
+| `ADS_INVENTORY`                  | ads_inventory                    |
 | `ANALYTICS_PROPERTY`             | analytics_property               |
 | `ANALYTICS_EVENT`                | analytics_event                  |
 | `ANALYTICS_SESSION`              | analytics_session                |

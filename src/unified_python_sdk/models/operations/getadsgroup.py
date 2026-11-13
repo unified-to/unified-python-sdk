@@ -55,6 +55,11 @@ class GetAdsGroupQueryParamFields(str, Enum):
     CREATIVE_SELECTION = "creative_selection"
     METADATA = "metadata"
     RAW = "raw"
+    DELIVERY_TYPE = "delivery_type"
+    PRIORITY = "priority"
+    COST_TYPE = "cost_type"
+    DELIVERY_GOAL = "delivery_goal"
+    CREATIVE_SIZES = "creative_sizes"
 
 
 class GetAdsGroupRequestTypedDict(TypedDict):

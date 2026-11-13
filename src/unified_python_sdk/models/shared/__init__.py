@@ -301,7 +301,9 @@ if TYPE_CHECKING:
         AdsGroupTypedDict,
         BillingEvent,
         BudgetAllocationType,
+        CostType,
         CreativeSelection,
+        DeliveryType,
         OptimizationGoal,
     )
     from .adsinsertionorder import (
@@ -313,6 +315,12 @@ if TYPE_CHECKING:
     from .adsinsertionorderbudgetsegment import (
         AdsInsertionorderBudgetSegment,
         AdsInsertionorderBudgetSegmentTypedDict,
+    )
+    from .adsinventory import (
+        AdsInventory,
+        AdsInventoryStatus,
+        AdsInventoryType,
+        AdsInventoryTypedDict,
     )
     from .adskeyword import AdsKeyword, AdsKeywordTypedDict, MatchType
     from .adsmanager import AdsManager, AdsManagerTypedDict
@@ -346,6 +354,7 @@ if TYPE_CHECKING:
         AdsReportMetricsTypedDict,
         Dimension,
     )
+    from .adssize import AdsSize, AdsSizeTypedDict
     from .adstarget import AdsTarget, AdsTargetType, AdsTargetTypedDict
     from .analyticsevent import AnalyticsEvent, AnalyticsEventTypedDict, EventType
     from .analyticsmetadata import (
@@ -867,6 +876,7 @@ if TYPE_CHECKING:
     from .crmstage import CrmStage, CrmStageTypedDict
     from .crmtaxonomy import CrmTaxonomy, CrmTaxonomyType, CrmTaxonomyTypedDict
     from .crmtelephone import CrmTelephone, CrmTelephoneType, CrmTelephoneTypedDict
+    from .customtargeting import CustomTargeting, CustomTargetingTypedDict
     from .datastoredatabase import DatastoreDatabase, DatastoreDatabaseTypedDict
     from .datastorefield import (
         DatastoreField,
@@ -1735,6 +1745,10 @@ if TYPE_CHECKING:
     from .property_adscampaign_targeting_geographic_location_types import (
         PropertyAdsCampaignTargetingGeographicLocationTypes,
     )
+    from .property_adscampaign_targeting_inventory import (
+        PropertyAdsCampaignTargetingInventory,
+        PropertyAdsCampaignTargetingInventoryTypedDict,
+    )
     from .property_adscampaign_targeting_optimization import (
         Mode,
         PropertyAdsCampaignTargetingOptimization,
@@ -1750,6 +1764,12 @@ if TYPE_CHECKING:
         PropertyAdsGroupBidStrategyType,
         PropertyAdsGroupBidStrategyTypedDict,
         YoutubeAndPartnersType,
+    )
+    from .property_adsgroup_delivery_goal import (
+        PropertyAdsGroupDeliveryGoal,
+        PropertyAdsGroupDeliveryGoalPeriod,
+        PropertyAdsGroupDeliveryGoalTypedDict,
+        PropertyAdsGroupDeliveryGoalUnit,
     )
     from .property_adsgroup_frequency_cap import (
         PropertyAdsGroupFrequencyCap,
@@ -1808,6 +1828,10 @@ if TYPE_CHECKING:
     )
     from .property_adsgroup_targeting_geographic_location_types import (
         PropertyAdsGroupTargetingGeographicLocationTypes,
+    )
+    from .property_adsgroup_targeting_inventory import (
+        PropertyAdsGroupTargetingInventory,
+        PropertyAdsGroupTargetingInventoryTypedDict,
     )
     from .property_adsgroup_targeting_optimization import (
         PropertyAdsGroupTargetingOptimization,
@@ -1914,6 +1938,10 @@ if TYPE_CHECKING:
     from .property_adsreportmetrics_campaign_targeting_geographic_location_types import (
         PropertyAdsReportMetricsCampaignTargetingGeographicLocationTypes,
     )
+    from .property_adsreportmetrics_campaign_targeting_inventory import (
+        PropertyAdsReportMetricsCampaignTargetingInventory,
+        PropertyAdsReportMetricsCampaignTargetingInventoryTypedDict,
+    )
     from .property_adsreportmetrics_campaign_targeting_optimization import (
         PropertyAdsReportMetricsCampaignTargetingOptimization,
         PropertyAdsReportMetricsCampaignTargetingOptimizationMode,
@@ -1936,7 +1964,9 @@ if TYPE_CHECKING:
         PropertyAdsReportMetricsGroupBudgetAllocationType,
         PropertyAdsReportMetricsGroupBudgetPeriod,
         PropertyAdsReportMetricsGroupBudgetUnit,
+        PropertyAdsReportMetricsGroupCostType,
         PropertyAdsReportMetricsGroupCreativeSelection,
+        PropertyAdsReportMetricsGroupDeliveryType,
         PropertyAdsReportMetricsGroupEffectiveStatus,
         PropertyAdsReportMetricsGroupOptimizationGoal,
         PropertyAdsReportMetricsGroupStatus,
@@ -1949,6 +1979,12 @@ if TYPE_CHECKING:
         PropertyAdsReportMetricsGroupBidStrategyType,
         PropertyAdsReportMetricsGroupBidStrategyTypedDict,
         PropertyAdsReportMetricsGroupBidStrategyYoutubeAndPartnersType,
+    )
+    from .property_adsreportmetrics_group_delivery_goal import (
+        PropertyAdsReportMetricsGroupDeliveryGoal,
+        PropertyAdsReportMetricsGroupDeliveryGoalPeriod,
+        PropertyAdsReportMetricsGroupDeliveryGoalTypedDict,
+        PropertyAdsReportMetricsGroupDeliveryGoalUnit,
     )
     from .property_adsreportmetrics_group_frequency_cap import (
         PropertyAdsReportMetricsGroupFrequencyCap,
@@ -2007,6 +2043,10 @@ if TYPE_CHECKING:
     )
     from .property_adsreportmetrics_group_targeting_geographic_location_types import (
         PropertyAdsReportMetricsGroupTargetingGeographicLocationTypes,
+    )
+    from .property_adsreportmetrics_group_targeting_inventory import (
+        PropertyAdsReportMetricsGroupTargetingInventory,
+        PropertyAdsReportMetricsGroupTargetingInventoryTypedDict,
     )
     from .property_adsreportmetrics_group_targeting_optimization import (
         PropertyAdsReportMetricsGroupTargetingOptimization,
@@ -3316,6 +3356,10 @@ __all__ = [
     "AdsInsertionorderBudgetUnit",
     "AdsInsertionorderStatus",
     "AdsInsertionorderTypedDict",
+    "AdsInventory",
+    "AdsInventoryStatus",
+    "AdsInventoryType",
+    "AdsInventoryTypedDict",
     "AdsKeyword",
     "AdsKeywordTypedDict",
     "AdsManager",
@@ -3346,6 +3390,8 @@ __all__ = [
     "AdsReportMetricsType",
     "AdsReportMetricsTypedDict",
     "AdsReportTypedDict",
+    "AdsSize",
+    "AdsSizeTypedDict",
     "AdsTarget",
     "AdsTargetType",
     "AdsTargetTypedDict",
@@ -3771,6 +3817,7 @@ __all__ = [
     "ConnectionTypedDict",
     "ContentType",
     "ContentsType",
+    "CostType",
     "CoverageLevel",
     "CoverageType",
     "CreativeSelection",
@@ -3822,6 +3869,8 @@ __all__ = [
     "CrmTelephone",
     "CrmTelephoneType",
     "CrmTelephoneTypedDict",
+    "CustomTargeting",
+    "CustomTargetingTypedDict",
     "DatastoreDatabase",
     "DatastoreDatabaseTypedDict",
     "DatastoreField",
@@ -3862,6 +3911,7 @@ __all__ = [
     "DatastoreTableTypedDict",
     "DayOfWeek",
     "DbType",
+    "DeliveryType",
     "DetailType",
     "Dimension",
     "Direction",
@@ -4674,6 +4724,8 @@ __all__ = [
     "PropertyAdsCampaignTargetingGeographic",
     "PropertyAdsCampaignTargetingGeographicLocationTypes",
     "PropertyAdsCampaignTargetingGeographicTypedDict",
+    "PropertyAdsCampaignTargetingInventory",
+    "PropertyAdsCampaignTargetingInventoryTypedDict",
     "PropertyAdsCampaignTargetingOptimization",
     "PropertyAdsCampaignTargetingOptimizationTypedDict",
     "PropertyAdsCampaignTargetingPlacement",
@@ -4682,6 +4734,10 @@ __all__ = [
     "PropertyAdsGroupBidStrategy",
     "PropertyAdsGroupBidStrategyType",
     "PropertyAdsGroupBidStrategyTypedDict",
+    "PropertyAdsGroupDeliveryGoal",
+    "PropertyAdsGroupDeliveryGoalPeriod",
+    "PropertyAdsGroupDeliveryGoalTypedDict",
+    "PropertyAdsGroupDeliveryGoalUnit",
     "PropertyAdsGroupFrequencyCap",
     "PropertyAdsGroupFrequencyCapTimeUnit",
     "PropertyAdsGroupFrequencyCapTypedDict",
@@ -4709,6 +4765,8 @@ __all__ = [
     "PropertyAdsGroupTargetingGeographicLocationTypes",
     "PropertyAdsGroupTargetingGeographicPresenceType",
     "PropertyAdsGroupTargetingGeographicTypedDict",
+    "PropertyAdsGroupTargetingInventory",
+    "PropertyAdsGroupTargetingInventoryTypedDict",
     "PropertyAdsGroupTargetingOptimization",
     "PropertyAdsGroupTargetingOptimizationMode",
     "PropertyAdsGroupTargetingOptimizationTypedDict",
@@ -4767,6 +4825,8 @@ __all__ = [
     "PropertyAdsReportMetricsCampaignTargetingGeographicLocationTypes",
     "PropertyAdsReportMetricsCampaignTargetingGeographicPresenceType",
     "PropertyAdsReportMetricsCampaignTargetingGeographicTypedDict",
+    "PropertyAdsReportMetricsCampaignTargetingInventory",
+    "PropertyAdsReportMetricsCampaignTargetingInventoryTypedDict",
     "PropertyAdsReportMetricsCampaignTargetingOptimization",
     "PropertyAdsReportMetricsCampaignTargetingOptimizationMode",
     "PropertyAdsReportMetricsCampaignTargetingOptimizationTypedDict",
@@ -4789,7 +4849,13 @@ __all__ = [
     "PropertyAdsReportMetricsGroupBudgetAllocationType",
     "PropertyAdsReportMetricsGroupBudgetPeriod",
     "PropertyAdsReportMetricsGroupBudgetUnit",
+    "PropertyAdsReportMetricsGroupCostType",
     "PropertyAdsReportMetricsGroupCreativeSelection",
+    "PropertyAdsReportMetricsGroupDeliveryGoal",
+    "PropertyAdsReportMetricsGroupDeliveryGoalPeriod",
+    "PropertyAdsReportMetricsGroupDeliveryGoalTypedDict",
+    "PropertyAdsReportMetricsGroupDeliveryGoalUnit",
+    "PropertyAdsReportMetricsGroupDeliveryType",
     "PropertyAdsReportMetricsGroupEffectiveStatus",
     "PropertyAdsReportMetricsGroupFrequencyCap",
     "PropertyAdsReportMetricsGroupFrequencyCapTimeUnit",
@@ -4820,6 +4886,8 @@ __all__ = [
     "PropertyAdsReportMetricsGroupTargetingGeographicLocationTypes",
     "PropertyAdsReportMetricsGroupTargetingGeographicPresenceType",
     "PropertyAdsReportMetricsGroupTargetingGeographicTypedDict",
+    "PropertyAdsReportMetricsGroupTargetingInventory",
+    "PropertyAdsReportMetricsGroupTargetingInventoryTypedDict",
     "PropertyAdsReportMetricsGroupTargetingOptimization",
     "PropertyAdsReportMetricsGroupTargetingOptimizationMode",
     "PropertyAdsReportMetricsGroupTargetingOptimizationTypedDict",
@@ -5829,7 +5897,9 @@ _dynamic_imports: dict[str, str] = {
     "AdsGroupTypedDict": ".adsgroup",
     "BillingEvent": ".adsgroup",
     "BudgetAllocationType": ".adsgroup",
+    "CostType": ".adsgroup",
     "CreativeSelection": ".adsgroup",
+    "DeliveryType": ".adsgroup",
     "OptimizationGoal": ".adsgroup",
     "AdsInsertionorder": ".adsinsertionorder",
     "AdsInsertionorderBudgetUnit": ".adsinsertionorder",
@@ -5837,6 +5907,10 @@ _dynamic_imports: dict[str, str] = {
     "AdsInsertionorderTypedDict": ".adsinsertionorder",
     "AdsInsertionorderBudgetSegment": ".adsinsertionorderbudgetsegment",
     "AdsInsertionorderBudgetSegmentTypedDict": ".adsinsertionorderbudgetsegment",
+    "AdsInventory": ".adsinventory",
+    "AdsInventoryStatus": ".adsinventory",
+    "AdsInventoryType": ".adsinventory",
+    "AdsInventoryTypedDict": ".adsinventory",
     "AdsKeyword": ".adskeyword",
     "AdsKeywordTypedDict": ".adskeyword",
     "MatchType": ".adskeyword",
@@ -5869,6 +5943,8 @@ _dynamic_imports: dict[str, str] = {
     "AdsReportMetricsType": ".adsreportmetrics",
     "AdsReportMetricsTypedDict": ".adsreportmetrics",
     "Dimension": ".adsreportmetrics",
+    "AdsSize": ".adssize",
+    "AdsSizeTypedDict": ".adssize",
     "AdsTarget": ".adstarget",
     "AdsTargetType": ".adstarget",
     "AdsTargetTypedDict": ".adstarget",
@@ -6363,6 +6439,8 @@ _dynamic_imports: dict[str, str] = {
     "CrmTelephone": ".crmtelephone",
     "CrmTelephoneType": ".crmtelephone",
     "CrmTelephoneTypedDict": ".crmtelephone",
+    "CustomTargeting": ".customtargeting",
+    "CustomTargetingTypedDict": ".customtargeting",
     "DatastoreDatabase": ".datastoredatabase",
     "DatastoreDatabaseTypedDict": ".datastoredatabase",
     "DatastoreField": ".datastorefield",
@@ -7119,6 +7197,8 @@ _dynamic_imports: dict[str, str] = {
     "PropertyAdsCampaignTargetingGeographic": ".property_adscampaign_targeting_geographic",
     "PropertyAdsCampaignTargetingGeographicTypedDict": ".property_adscampaign_targeting_geographic",
     "PropertyAdsCampaignTargetingGeographicLocationTypes": ".property_adscampaign_targeting_geographic_location_types",
+    "PropertyAdsCampaignTargetingInventory": ".property_adscampaign_targeting_inventory",
+    "PropertyAdsCampaignTargetingInventoryTypedDict": ".property_adscampaign_targeting_inventory",
     "Mode": ".property_adscampaign_targeting_optimization",
     "PropertyAdsCampaignTargetingOptimization": ".property_adscampaign_targeting_optimization",
     "PropertyAdsCampaignTargetingOptimizationTypedDict": ".property_adscampaign_targeting_optimization",
@@ -7129,6 +7209,10 @@ _dynamic_imports: dict[str, str] = {
     "PropertyAdsGroupBidStrategyType": ".property_adsgroup_bid_strategy",
     "PropertyAdsGroupBidStrategyTypedDict": ".property_adsgroup_bid_strategy",
     "YoutubeAndPartnersType": ".property_adsgroup_bid_strategy",
+    "PropertyAdsGroupDeliveryGoal": ".property_adsgroup_delivery_goal",
+    "PropertyAdsGroupDeliveryGoalPeriod": ".property_adsgroup_delivery_goal",
+    "PropertyAdsGroupDeliveryGoalTypedDict": ".property_adsgroup_delivery_goal",
+    "PropertyAdsGroupDeliveryGoalUnit": ".property_adsgroup_delivery_goal",
     "PropertyAdsGroupFrequencyCap": ".property_adsgroup_frequency_cap",
     "PropertyAdsGroupFrequencyCapTimeUnit": ".property_adsgroup_frequency_cap",
     "PropertyAdsGroupFrequencyCapTypedDict": ".property_adsgroup_frequency_cap",
@@ -7157,6 +7241,8 @@ _dynamic_imports: dict[str, str] = {
     "PropertyAdsGroupTargetingGeographicPresenceType": ".property_adsgroup_targeting_geographic",
     "PropertyAdsGroupTargetingGeographicTypedDict": ".property_adsgroup_targeting_geographic",
     "PropertyAdsGroupTargetingGeographicLocationTypes": ".property_adsgroup_targeting_geographic_location_types",
+    "PropertyAdsGroupTargetingInventory": ".property_adsgroup_targeting_inventory",
+    "PropertyAdsGroupTargetingInventoryTypedDict": ".property_adsgroup_targeting_inventory",
     "PropertyAdsGroupTargetingOptimization": ".property_adsgroup_targeting_optimization",
     "PropertyAdsGroupTargetingOptimizationMode": ".property_adsgroup_targeting_optimization",
     "PropertyAdsGroupTargetingOptimizationTypedDict": ".property_adsgroup_targeting_optimization",
@@ -7216,6 +7302,8 @@ _dynamic_imports: dict[str, str] = {
     "PropertyAdsReportMetricsCampaignTargetingGeographicPresenceType": ".property_adsreportmetrics_campaign_targeting_geographic",
     "PropertyAdsReportMetricsCampaignTargetingGeographicTypedDict": ".property_adsreportmetrics_campaign_targeting_geographic",
     "PropertyAdsReportMetricsCampaignTargetingGeographicLocationTypes": ".property_adsreportmetrics_campaign_targeting_geographic_location_types",
+    "PropertyAdsReportMetricsCampaignTargetingInventory": ".property_adsreportmetrics_campaign_targeting_inventory",
+    "PropertyAdsReportMetricsCampaignTargetingInventoryTypedDict": ".property_adsreportmetrics_campaign_targeting_inventory",
     "PropertyAdsReportMetricsCampaignTargetingOptimization": ".property_adsreportmetrics_campaign_targeting_optimization",
     "PropertyAdsReportMetricsCampaignTargetingOptimizationMode": ".property_adsreportmetrics_campaign_targeting_optimization",
     "PropertyAdsReportMetricsCampaignTargetingOptimizationTypedDict": ".property_adsreportmetrics_campaign_targeting_optimization",
@@ -7231,7 +7319,9 @@ _dynamic_imports: dict[str, str] = {
     "PropertyAdsReportMetricsGroupBudgetAllocationType": ".property_adsreportmetrics_group",
     "PropertyAdsReportMetricsGroupBudgetPeriod": ".property_adsreportmetrics_group",
     "PropertyAdsReportMetricsGroupBudgetUnit": ".property_adsreportmetrics_group",
+    "PropertyAdsReportMetricsGroupCostType": ".property_adsreportmetrics_group",
     "PropertyAdsReportMetricsGroupCreativeSelection": ".property_adsreportmetrics_group",
+    "PropertyAdsReportMetricsGroupDeliveryType": ".property_adsreportmetrics_group",
     "PropertyAdsReportMetricsGroupEffectiveStatus": ".property_adsreportmetrics_group",
     "PropertyAdsReportMetricsGroupOptimizationGoal": ".property_adsreportmetrics_group",
     "PropertyAdsReportMetricsGroupStatus": ".property_adsreportmetrics_group",
@@ -7242,6 +7332,10 @@ _dynamic_imports: dict[str, str] = {
     "PropertyAdsReportMetricsGroupBidStrategyType": ".property_adsreportmetrics_group_bid_strategy",
     "PropertyAdsReportMetricsGroupBidStrategyTypedDict": ".property_adsreportmetrics_group_bid_strategy",
     "PropertyAdsReportMetricsGroupBidStrategyYoutubeAndPartnersType": ".property_adsreportmetrics_group_bid_strategy",
+    "PropertyAdsReportMetricsGroupDeliveryGoal": ".property_adsreportmetrics_group_delivery_goal",
+    "PropertyAdsReportMetricsGroupDeliveryGoalPeriod": ".property_adsreportmetrics_group_delivery_goal",
+    "PropertyAdsReportMetricsGroupDeliveryGoalTypedDict": ".property_adsreportmetrics_group_delivery_goal",
+    "PropertyAdsReportMetricsGroupDeliveryGoalUnit": ".property_adsreportmetrics_group_delivery_goal",
     "PropertyAdsReportMetricsGroupFrequencyCap": ".property_adsreportmetrics_group_frequency_cap",
     "PropertyAdsReportMetricsGroupFrequencyCapTimeUnit": ".property_adsreportmetrics_group_frequency_cap",
     "PropertyAdsReportMetricsGroupFrequencyCapTypedDict": ".property_adsreportmetrics_group_frequency_cap",
@@ -7270,6 +7364,8 @@ _dynamic_imports: dict[str, str] = {
     "PropertyAdsReportMetricsGroupTargetingGeographicPresenceType": ".property_adsreportmetrics_group_targeting_geographic",
     "PropertyAdsReportMetricsGroupTargetingGeographicTypedDict": ".property_adsreportmetrics_group_targeting_geographic",
     "PropertyAdsReportMetricsGroupTargetingGeographicLocationTypes": ".property_adsreportmetrics_group_targeting_geographic_location_types",
+    "PropertyAdsReportMetricsGroupTargetingInventory": ".property_adsreportmetrics_group_targeting_inventory",
+    "PropertyAdsReportMetricsGroupTargetingInventoryTypedDict": ".property_adsreportmetrics_group_targeting_inventory",
     "PropertyAdsReportMetricsGroupTargetingOptimization": ".property_adsreportmetrics_group_targeting_optimization",
     "PropertyAdsReportMetricsGroupTargetingOptimizationMode": ".property_adsreportmetrics_group_targeting_optimization",
     "PropertyAdsReportMetricsGroupTargetingOptimizationTypedDict": ".property_adsreportmetrics_group_targeting_optimization",

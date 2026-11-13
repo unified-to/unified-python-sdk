@@ -81,6 +81,7 @@ class PropertyWorkspaceIntegrationOverridenScopesTypedDict(TypedDict):
     ads_group_write: NotRequired[str]
     ads_insertionorder_read: NotRequired[str]
     ads_insertionorder_write: NotRequired[str]
+    ads_inventory_read: NotRequired[str]
     ads_organization_read: NotRequired[str]
     ads_organization_write: NotRequired[str]
     ads_promoted_read: NotRequired[str]
@@ -596,6 +597,8 @@ class PropertyWorkspaceIntegrationOverridenScopes(BaseModel):
     ads_insertionorder_read: Optional[str] = None
 
     ads_insertionorder_write: Optional[str] = None
+
+    ads_inventory_read: Optional[str] = None
 
     ads_organization_read: Optional[str] = None
 
@@ -1429,6 +1432,7 @@ class PropertyWorkspaceIntegrationOverridenScopes(BaseModel):
                 "ads_group_write",
                 "ads_insertionorder_read",
                 "ads_insertionorder_write",
+                "ads_inventory_read",
                 "ads_organization_read",
                 "ads_organization_write",
                 "ads_promoted_read",

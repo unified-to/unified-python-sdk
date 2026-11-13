@@ -5,7 +5,9 @@
 ### Available Operations
 
 * [create_commerce_inventory](#create_commerce_inventory) - Create an inventory
+* [get_ads_inventory](#get_ads_inventory) - Retrieve an inventory
 * [get_commerce_inventory](#get_commerce_inventory) - Retrieve an inventory
+* [list_ads_inventories](#list_ads_inventories) - List all inventories
 * [list_commerce_inventories](#list_commerce_inventories) - List all inventories
 * [patch_commerce_inventory](#patch_commerce_inventory) - Update an inventory
 * [remove_commerce_inventory](#remove_commerce_inventory) - Remove an inventory
@@ -33,9 +35,9 @@ with UnifiedTo(
     res = unified_to.inventory.create_commerce_inventory(request={
         "commerce_inventory": {
             "available": 337.0,
-            "id": "467abf18-851e-46a0-bbab-1dfc865482ba",
+            "id": "ee229332-9c07-48eb-8e75-1ebab2d759d9",
             "metadata": [],
-            "updated_at": parse_datetime("2025-12-07T23:37:48.323Z"),
+            "updated_at": parse_datetime("2025-12-08T22:49:40.151Z"),
         },
         "connection_id": "<id>",
     })
@@ -57,6 +59,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.CreateCommerceInventoryResponse](../../models/operations/createcommerceinventoryresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_ads_inventory
+
+Retrieves a single AdsInventory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getAdsInventory" method="get" path="/ads/{connection_id}/inventory/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.inventory.get_ads_inventory(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.ads_inventory is not None
+
+    # Handle response
+    print(res.ads_inventory)
+
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.GetAdsInventoryRequest](../../models/operations/getadsinventoryrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+
+### Response
+
+**[operations.GetAdsInventoryResponse](../../models/operations/getadsinventoryresponse.md)**
 
 ### Errors
 
@@ -104,6 +153,52 @@ with UnifiedTo(
 ### Response
 
 **[operations.GetCommerceInventoryResponse](../../models/operations/getcommerceinventoryresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## list_ads_inventories
+
+Returns a list of AdsInventories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listAdsInventories" method="get" path="/ads/{connection_id}/inventory" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.inventory.list_ads_inventories(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.ads_inventories is not None
+
+    # Handle response
+    print(res.ads_inventories)
+
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.ListAdsInventoriesRequest](../../models/operations/listadsinventoriesrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+
+### Response
+
+**[operations.ListAdsInventoriesResponse](../../models/operations/listadsinventoriesresponse.md)**
 
 ### Errors
 
@@ -179,9 +274,9 @@ with UnifiedTo(
     res = unified_to.inventory.patch_commerce_inventory(request={
         "commerce_inventory": {
             "available": 337.0,
-            "id": "8c58db7e-b4d4-4917-a5b8-8454bbeff568",
+            "id": "b7d3eddc-c189-439a-aafb-efe3395d0245",
             "metadata": [],
-            "updated_at": parse_datetime("2025-12-07T23:37:48.329Z"),
+            "updated_at": parse_datetime("2025-12-08T22:49:40.160Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -280,9 +375,9 @@ with UnifiedTo(
     res = unified_to.inventory.update_commerce_inventory(request={
         "commerce_inventory": {
             "available": 337.0,
-            "id": "8c58db7e-b4d4-4917-a5b8-8454bbeff568",
+            "id": "b7d3eddc-c189-439a-aafb-efe3395d0245",
             "metadata": [],
-            "updated_at": parse_datetime("2025-12-07T23:37:48.329Z"),
+            "updated_at": parse_datetime("2025-12-08T22:49:40.160Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

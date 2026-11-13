@@ -33,7 +33,7 @@ with UnifiedTo(
     res = unified_to.creative.create_ads_creative(request={
         "ads_creative": {
             "created_at": parse_datetime("2020-02-17T11:24:51.093Z"),
-            "id": "4d865ab5-48dd-4955-9f3d-74ee7a1f1b2a",
+            "id": "0b77c38b-ee2e-4137-853c-7069ec314fca",
             "labels": [
                 "coma",
                 "accedo",
@@ -42,7 +42,7 @@ with UnifiedTo(
             "metadata": [],
             "name": "Brekke, Bradtke and Robel",
             "status": shared.AdsCreativeStatus.PAUSED,
-            "updated_at": parse_datetime("2021-07-02T04:52:57.631Z"),
+            "updated_at": parse_datetime("2021-07-02T10:44:40.428Z"),
         },
         "connection_id": "<id>",
     })
@@ -186,7 +186,7 @@ with UnifiedTo(
     res = unified_to.creative.patch_ads_creative(request={
         "ads_creative": {
             "created_at": parse_datetime("2020-02-17T11:24:51.093Z"),
-            "id": "d5950434-3d8a-47b4-b3c7-01cf9353d871",
+            "id": "f9a964f0-89b1-4fbe-a66a-270b95cfce2e",
             "labels": [
                 "coma",
                 "accedo",
@@ -195,7 +195,7 @@ with UnifiedTo(
             "metadata": [],
             "name": "Brekke, Bradtke and Robel",
             "status": shared.AdsCreativeStatus.PAUSED,
-            "updated_at": parse_datetime("2021-07-02T04:52:57.638Z"),
+            "updated_at": parse_datetime("2021-07-02T10:44:40.434Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -294,7 +294,7 @@ with UnifiedTo(
     res = unified_to.creative.update_ads_creative(request={
         "ads_creative": {
             "created_at": parse_datetime("2020-02-17T11:24:51.093Z"),
-            "id": "d5950434-3d8a-47b4-b3c7-01cf9353d871",
+            "id": "f9a964f0-89b1-4fbe-a66a-270b95cfce2e",
             "labels": [
                 "coma",
                 "accedo",
@@ -303,7 +303,7 @@ with UnifiedTo(
             "metadata": [],
             "name": "Brekke, Bradtke and Robel",
             "status": shared.AdsCreativeStatus.PAUSED,
-            "updated_at": parse_datetime("2021-07-02T04:52:57.638Z"),
+            "updated_at": parse_datetime("2021-07-02T10:44:40.434Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

@@ -17,6 +17,7 @@
 * [get_ads_creative](#get_ads_creative) - Retrieve a creative
 * [get_ads_group](#get_ads_group) - Retrieve a group
 * [get_ads_insertionorder](#get_ads_insertionorder) - Retrieve an insertionorder
+* [get_ads_inventory](#get_ads_inventory) - Retrieve an inventory
 * [get_ads_organization](#get_ads_organization) - Retrieve an organization
 * [get_ads_promoted](#get_ads_promoted) - Retrieve a promoted
 * [get_ads_target](#get_ads_target) - Retrieve a target
@@ -26,6 +27,7 @@
 * [list_ads_creatives](#list_ads_creatives) - List all creatives
 * [list_ads_groups](#list_ads_groups) - List all groups
 * [list_ads_insertionorders](#list_ads_insertionorders) - List all insertionorders
+* [list_ads_inventories](#list_ads_inventories) - List all inventories
 * [list_ads_organizations](#list_ads_organizations) - List all organizations
 * [list_ads_promoteds](#list_ads_promoteds) - List all promoteds
 * [list_ads_reports](#list_ads_reports) - List all reports
@@ -77,11 +79,11 @@ with UnifiedTo(
             "creative_asset_url": "https://picsum.photos/seed/LwOzrpr9/948/2793",
             "description": "Accedo vespillo carpo dolor decet stillicidium comptus tenuis.",
             "final_url": "https://improbable-sanity.com",
-            "id": "a65749fb-d77d-45a4-8f32-a6d61572de89",
+            "id": "013d4455-e878-47ad-91f5-3bc05e4def49",
             "metadata": [],
             "name": "Hermiston Group",
             "status": shared.AdsAdStatus.ARCHIVED,
-            "updated_at": parse_datetime("2024-06-27T11:09:42.615Z"),
+            "updated_at": parse_datetime("2024-06-27T22:54:11.741Z"),
         },
         "connection_id": "<id>",
     })
@@ -133,12 +135,12 @@ with UnifiedTo(
         "ads_asset": {
             "created_at": parse_datetime("2020-03-27T20:14:38.603Z"),
             "height": 400.0,
-            "id": "9da0537d-bd58-4082-90c9-987dd14716c9",
+            "id": "22376dec-2522-4e8e-9a62-0a31dfd6d809",
             "metadata": [],
             "mime_type": "IMAGE_PNG",
             "name": "Lockman - DuBuque",
             "type": shared.AdsAssetType.IMAGE,
-            "updated_at": parse_datetime("2022-03-31T19:25:57.979Z"),
+            "updated_at": parse_datetime("2022-04-01T04:09:53.636Z"),
             "url": "https://informal-perfection.com/",
             "width": 600.0,
         },
@@ -196,18 +198,18 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-05-21T08:51:41.868Z"),
             "currency": "USD",
             "effective_status": shared.EffectiveStatus.NOT_ELIGIBLE,
-            "end_at": parse_datetime("2025-06-15T22:31:57.479Z"),
-            "id": "f266878d-6454-46ea-b34b-5d65b7451a36",
+            "end_at": parse_datetime("2025-06-16T18:16:37.649Z"),
+            "id": "8c3dac6c-0ab3-465c-8697-1960a32c13d5",
             "labels": [
                 "comedo",
             ],
             "metadata": [],
             "name": "Emard Inc",
-            "start_at": parse_datetime("2022-07-22T06:39:24.098Z"),
+            "start_at": parse_datetime("2022-07-22T07:44:47.564Z"),
             "status": shared.AdsCampaignStatus.PROCESSING_FAILED,
             "targeting": {},
             "total_spend_amount": 2349.8642875347286,
-            "updated_at": parse_datetime("2026-01-19T10:47:02.218Z"),
+            "updated_at": parse_datetime("2026-01-20T10:21:27.249Z"),
         },
         "connection_id": "<id>",
     })
@@ -258,7 +260,7 @@ with UnifiedTo(
     res = unified_to.ads.create_ads_creative(request={
         "ads_creative": {
             "created_at": parse_datetime("2020-02-17T11:24:51.093Z"),
-            "id": "4d865ab5-48dd-4955-9f3d-74ee7a1f1b2a",
+            "id": "0b77c38b-ee2e-4137-853c-7069ec314fca",
             "labels": [
                 "coma",
                 "accedo",
@@ -267,7 +269,7 @@ with UnifiedTo(
             "metadata": [],
             "name": "Brekke, Bradtke and Robel",
             "status": shared.AdsCreativeStatus.PAUSED,
-            "updated_at": parse_datetime("2021-07-02T04:52:57.631Z"),
+            "updated_at": parse_datetime("2021-07-02T10:44:40.428Z"),
         },
         "connection_id": "<id>",
     })
@@ -323,15 +325,15 @@ with UnifiedTo(
             "created_at": parse_datetime("2019-08-29T17:59:41.045Z"),
             "currency": "USD",
             "effective_status": shared.AdsGroupEffectiveStatus.PAUSED,
-            "end_at": parse_datetime("2026-07-15T21:26:22.936Z"),
-            "id": "4e9d7034-ed1e-41ae-8842-642f0fc94039",
+            "end_at": parse_datetime("2026-07-17T00:55:45.139Z"),
+            "id": "415e5fb3-72c0-4eaf-8de1-d73bf1f1ba91",
             "language_locale": "fr-FR",
             "metadata": [],
             "name": "Stark - Baumbach",
-            "start_at": parse_datetime("2026-01-28T17:12:54.968Z"),
+            "start_at": parse_datetime("2026-01-29T18:51:52.123Z"),
             "status": shared.AdsGroupStatus.PROCESSING,
             "targeting": {},
-            "updated_at": parse_datetime("2022-01-20T22:22:29.149Z"),
+            "updated_at": parse_datetime("2022-01-21T07:57:05.678Z"),
         },
         "connection_id": "<id>",
     })
@@ -382,11 +384,11 @@ with UnifiedTo(
     res = unified_to.ads.create_ads_insertionorder(request={
         "ads_insertionorder": {
             "created_at": parse_datetime("2021-04-10T06:57:36.611Z"),
-            "id": "48eb7978-d38a-4a47-bd68-e1e890f97381",
+            "id": "1c4243ea-0525-4498-a18c-bc6b1a0d5163",
             "metadata": [],
             "name": "Kunde, Smith and Reinger",
             "status": shared.AdsInsertionorderStatus.UNSPECIFIED,
-            "updated_at": parse_datetime("2021-04-29T00:35:45.101Z"),
+            "updated_at": parse_datetime("2021-04-29T00:51:36.258Z"),
         },
         "connection_id": "<id>",
     })
@@ -439,13 +441,13 @@ with UnifiedTo(
             "account_number": "LQUJx8zQBW",
             "created_at": parse_datetime("2020-07-23T21:47:11.440Z"),
             "currency": "USD",
-            "id": "a153e133-29db-429d-8949-a4b3fb5e2f7e",
+            "id": "fdde3584-0f1d-4096-9afc-cb0ed2ffdf3b",
             "managers": [],
             "metadata": [],
             "name": "Ankunding Inc",
             "status": shared.AdsOrganizationStatus.PROCESSING,
             "timezone": "Europe/Chisinau",
-            "updated_at": parse_datetime("2026-04-17T23:19:54.648Z"),
+            "updated_at": parse_datetime("2026-04-19T01:31:23.314Z"),
         },
         "connection_id": "<id>",
     })
@@ -749,6 +751,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.GetAdsInsertionorderResponse](../../models/operations/getadsinsertionorderresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_ads_inventory
+
+Retrieves a single AdsInventory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getAdsInventory" method="get" path="/ads/{connection_id}/inventory/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.ads.get_ads_inventory(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.ads_inventory is not None
+
+    # Handle response
+    print(res.ads_inventory)
+
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `request`                                                                              | [operations.GetAdsInventoryRequest](../../models/operations/getadsinventoryrequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+| `retries`                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                       | :heavy_minus_sign:                                                                     | Configuration to override the default retry behavior of the client.                    |
+
+### Response
+
+**[operations.GetAdsInventoryResponse](../../models/operations/getadsinventoryresponse.md)**
 
 ### Errors
 
@@ -1173,6 +1222,52 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## list_ads_inventories
+
+Returns a list of AdsInventories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listAdsInventories" method="get" path="/ads/{connection_id}/inventory" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.ads.list_ads_inventories(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.ads_inventories is not None
+
+    # Handle response
+    print(res.ads_inventories)
+
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.ListAdsInventoriesRequest](../../models/operations/listadsinventoriesrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+
+### Response
+
+**[operations.ListAdsInventoriesResponse](../../models/operations/listadsinventoriesresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## list_ads_organizations
 
 Returns a list of AdsOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -1385,11 +1480,11 @@ with UnifiedTo(
             "creative_asset_url": "https://picsum.photos/seed/LwOzrpr9/948/2793",
             "description": "Accedo vespillo carpo dolor decet stillicidium comptus tenuis.",
             "final_url": "https://improbable-sanity.com",
-            "id": "d4f253c9-9bd2-44c0-a945-3a175003d427",
+            "id": "23152f4c-537e-4434-8eb6-6288bfe12816",
             "metadata": [],
             "name": "Hermiston Group",
             "status": shared.AdsAdStatus.ARCHIVED,
-            "updated_at": parse_datetime("2024-06-27T11:09:42.624Z"),
+            "updated_at": parse_datetime("2024-06-27T22:54:11.752Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1446,18 +1541,18 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-05-21T08:51:41.868Z"),
             "currency": "USD",
             "effective_status": shared.EffectiveStatus.NOT_ELIGIBLE,
-            "end_at": parse_datetime("2025-06-15T22:31:57.566Z"),
-            "id": "ffb167ca-809f-48f7-8f69-c1fb0a3cec72",
+            "end_at": parse_datetime("2025-06-16T18:16:37.717Z"),
+            "id": "66547afa-76a8-48db-92e6-895d17112fd8",
             "labels": [
                 "comedo",
             ],
             "metadata": [],
             "name": "Emard Inc",
-            "start_at": parse_datetime("2022-07-22T06:39:24.102Z"),
+            "start_at": parse_datetime("2022-07-22T07:44:47.567Z"),
             "status": shared.AdsCampaignStatus.PROCESSING_FAILED,
             "targeting": {},
             "total_spend_amount": 2349.8642875347286,
-            "updated_at": parse_datetime("2026-01-19T10:47:02.322Z"),
+            "updated_at": parse_datetime("2026-01-20T10:21:27.330Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1509,7 +1604,7 @@ with UnifiedTo(
     res = unified_to.ads.patch_ads_creative(request={
         "ads_creative": {
             "created_at": parse_datetime("2020-02-17T11:24:51.093Z"),
-            "id": "d5950434-3d8a-47b4-b3c7-01cf9353d871",
+            "id": "f9a964f0-89b1-4fbe-a66a-270b95cfce2e",
             "labels": [
                 "coma",
                 "accedo",
@@ -1518,7 +1613,7 @@ with UnifiedTo(
             "metadata": [],
             "name": "Brekke, Bradtke and Robel",
             "status": shared.AdsCreativeStatus.PAUSED,
-            "updated_at": parse_datetime("2021-07-02T04:52:57.638Z"),
+            "updated_at": parse_datetime("2021-07-02T10:44:40.434Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1575,15 +1670,15 @@ with UnifiedTo(
             "created_at": parse_datetime("2019-08-29T17:59:41.045Z"),
             "currency": "USD",
             "effective_status": shared.AdsGroupEffectiveStatus.PAUSED,
-            "end_at": parse_datetime("2026-07-15T21:26:23.055Z"),
-            "id": "5d8149c4-1343-44b8-ba08-1812243d7cc4",
+            "end_at": parse_datetime("2026-07-17T00:55:45.271Z"),
+            "id": "f961d3a5-72b9-4abc-93fd-20d0973b5b16",
             "language_locale": "fr-FR",
             "metadata": [],
             "name": "Stark - Baumbach",
-            "start_at": parse_datetime("2026-01-28T17:12:55.079Z"),
+            "start_at": parse_datetime("2026-01-29T18:51:52.246Z"),
             "status": shared.AdsGroupStatus.PROCESSING,
             "targeting": {},
-            "updated_at": parse_datetime("2022-01-20T22:22:29.191Z"),
+            "updated_at": parse_datetime("2022-01-21T07:57:05.724Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1635,11 +1730,11 @@ with UnifiedTo(
     res = unified_to.ads.patch_ads_insertionorder(request={
         "ads_insertionorder": {
             "created_at": parse_datetime("2021-04-10T06:57:36.611Z"),
-            "id": "71e7bcdd-33ec-4d57-b2c4-50d4a0f01c8c",
+            "id": "df0c1025-532a-47c9-a707-351f71c9ce5b",
             "metadata": [],
             "name": "Kunde, Smith and Reinger",
             "status": shared.AdsInsertionorderStatus.UNSPECIFIED,
-            "updated_at": parse_datetime("2021-04-29T00:35:45.102Z"),
+            "updated_at": parse_datetime("2021-04-29T00:51:36.258Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1693,13 +1788,13 @@ with UnifiedTo(
             "account_number": "LQUJx8zQBW",
             "created_at": parse_datetime("2020-07-23T21:47:11.440Z"),
             "currency": "USD",
-            "id": "500ca32e-6c13-4be1-8933-b6ee82e963ed",
+            "id": "c446705c-0ae7-4ded-bd8d-93b478fe0462",
             "managers": [],
             "metadata": [],
             "name": "Ankunding Inc",
             "status": shared.AdsOrganizationStatus.PROCESSING,
             "timezone": "Europe/Chisinau",
-            "updated_at": parse_datetime("2026-04-17T23:19:54.663Z"),
+            "updated_at": parse_datetime("2026-04-19T01:31:23.327Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2039,11 +2134,11 @@ with UnifiedTo(
             "creative_asset_url": "https://picsum.photos/seed/LwOzrpr9/948/2793",
             "description": "Accedo vespillo carpo dolor decet stillicidium comptus tenuis.",
             "final_url": "https://improbable-sanity.com",
-            "id": "d4f253c9-9bd2-44c0-a945-3a175003d427",
+            "id": "23152f4c-537e-4434-8eb6-6288bfe12816",
             "metadata": [],
             "name": "Hermiston Group",
             "status": shared.AdsAdStatus.ARCHIVED,
-            "updated_at": parse_datetime("2024-06-27T11:09:42.624Z"),
+            "updated_at": parse_datetime("2024-06-27T22:54:11.752Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2100,18 +2195,18 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-05-21T08:51:41.868Z"),
             "currency": "USD",
             "effective_status": shared.EffectiveStatus.NOT_ELIGIBLE,
-            "end_at": parse_datetime("2025-06-15T22:31:57.566Z"),
-            "id": "ffb167ca-809f-48f7-8f69-c1fb0a3cec72",
+            "end_at": parse_datetime("2025-06-16T18:16:37.717Z"),
+            "id": "66547afa-76a8-48db-92e6-895d17112fd8",
             "labels": [
                 "comedo",
             ],
             "metadata": [],
             "name": "Emard Inc",
-            "start_at": parse_datetime("2022-07-22T06:39:24.102Z"),
+            "start_at": parse_datetime("2022-07-22T07:44:47.567Z"),
             "status": shared.AdsCampaignStatus.PROCESSING_FAILED,
             "targeting": {},
             "total_spend_amount": 2349.8642875347286,
-            "updated_at": parse_datetime("2026-01-19T10:47:02.322Z"),
+            "updated_at": parse_datetime("2026-01-20T10:21:27.330Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2163,7 +2258,7 @@ with UnifiedTo(
     res = unified_to.ads.update_ads_creative(request={
         "ads_creative": {
             "created_at": parse_datetime("2020-02-17T11:24:51.093Z"),
-            "id": "d5950434-3d8a-47b4-b3c7-01cf9353d871",
+            "id": "f9a964f0-89b1-4fbe-a66a-270b95cfce2e",
             "labels": [
                 "coma",
                 "accedo",
@@ -2172,7 +2267,7 @@ with UnifiedTo(
             "metadata": [],
             "name": "Brekke, Bradtke and Robel",
             "status": shared.AdsCreativeStatus.PAUSED,
-            "updated_at": parse_datetime("2021-07-02T04:52:57.638Z"),
+            "updated_at": parse_datetime("2021-07-02T10:44:40.434Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2229,15 +2324,15 @@ with UnifiedTo(
             "created_at": parse_datetime("2019-08-29T17:59:41.045Z"),
             "currency": "USD",
             "effective_status": shared.AdsGroupEffectiveStatus.PAUSED,
-            "end_at": parse_datetime("2026-07-15T21:26:23.055Z"),
-            "id": "5d8149c4-1343-44b8-ba08-1812243d7cc4",
+            "end_at": parse_datetime("2026-07-17T00:55:45.271Z"),
+            "id": "f961d3a5-72b9-4abc-93fd-20d0973b5b16",
             "language_locale": "fr-FR",
             "metadata": [],
             "name": "Stark - Baumbach",
-            "start_at": parse_datetime("2026-01-28T17:12:55.079Z"),
+            "start_at": parse_datetime("2026-01-29T18:51:52.246Z"),
             "status": shared.AdsGroupStatus.PROCESSING,
             "targeting": {},
-            "updated_at": parse_datetime("2022-01-20T22:22:29.191Z"),
+            "updated_at": parse_datetime("2022-01-21T07:57:05.724Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2289,11 +2384,11 @@ with UnifiedTo(
     res = unified_to.ads.update_ads_insertionorder(request={
         "ads_insertionorder": {
             "created_at": parse_datetime("2021-04-10T06:57:36.611Z"),
-            "id": "71e7bcdd-33ec-4d57-b2c4-50d4a0f01c8c",
+            "id": "df0c1025-532a-47c9-a707-351f71c9ce5b",
             "metadata": [],
             "name": "Kunde, Smith and Reinger",
             "status": shared.AdsInsertionorderStatus.UNSPECIFIED,
-            "updated_at": parse_datetime("2021-04-29T00:35:45.102Z"),
+            "updated_at": parse_datetime("2021-04-29T00:51:36.258Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2347,13 +2442,13 @@ with UnifiedTo(
             "account_number": "LQUJx8zQBW",
             "created_at": parse_datetime("2020-07-23T21:47:11.440Z"),
             "currency": "USD",
-            "id": "500ca32e-6c13-4be1-8933-b6ee82e963ed",
+            "id": "c446705c-0ae7-4ded-bd8d-93b478fe0462",
             "managers": [],
             "metadata": [],
             "name": "Ankunding Inc",
             "status": shared.AdsOrganizationStatus.PROCESSING,
             "timezone": "Europe/Chisinau",
-            "updated_at": parse_datetime("2026-04-17T23:19:54.663Z"),
+            "updated_at": parse_datetime("2026-04-19T01:31:23.327Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

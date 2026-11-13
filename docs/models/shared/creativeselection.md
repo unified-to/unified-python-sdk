@@ -19,3 +19,5 @@ value = CreativeSelection.OPTIMIZED
 | ------------- | ------------- |
 | `OPTIMIZED`   | OPTIMIZED     |
 | `ROUND_ROBIN` | ROUND_ROBIN   |
+| `WEIGHTED`    | WEIGHTED      |
+| `SEQUENTIAL`  | SEQUENTIAL    |

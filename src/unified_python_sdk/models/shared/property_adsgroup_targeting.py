@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 from .adschedule import AdSchedule, AdScheduleTypedDict
+from .customtargeting import CustomTargeting, CustomTargetingTypedDict
 from .property_adsgroup_targeting_audience import (
     PropertyAdsGroupTargetingAudience,
     PropertyAdsGroupTargetingAudienceTypedDict,
@@ -25,6 +26,10 @@ from .property_adsgroup_targeting_device import (
 from .property_adsgroup_targeting_geographic import (
     PropertyAdsGroupTargetingGeographic,
     PropertyAdsGroupTargetingGeographicTypedDict,
+)
+from .property_adsgroup_targeting_inventory import (
+    PropertyAdsGroupTargetingInventory,
+    PropertyAdsGroupTargetingInventoryTypedDict,
 )
 from .property_adsgroup_targeting_optimization import (
     PropertyAdsGroupTargetingOptimization,
@@ -52,10 +57,14 @@ class PropertyAdsGroupTargetingTypedDict(TypedDict):
     brand_safety: NotRequired[PropertyAdsGroupTargetingBrandSafetyTypedDict]
     r"""Brand safety (Meta: excluded_publisher_categories, etc.; Google"""
     content: NotRequired[PropertyAdsGroupTargetingContentTypedDict]
+    custom: NotRequired[List[CustomTargetingTypedDict]]
+    r"""Key-value targeting; clauses are ANDed"""
     demographic: NotRequired[PropertyAdsGroupTargetingDemographicTypedDict]
     r"""Demographic targeting (Meta: age_min, age_max, genders)"""
     device: NotRequired[PropertyAdsGroupTargetingDeviceTypedDict]
     geographic: NotRequired[PropertyAdsGroupTargetingGeographicTypedDict]
+    inventory: NotRequired[PropertyAdsGroupTargetingInventoryTypedDict]
+    r"""Publisher inventory (ad units, placements) to include / exclude"""
     language: NotRequired[List[TargetRefTypedDict]]
     optimization: NotRequired[PropertyAdsGroupTargetingOptimizationTypedDict]
     r"""Optimization (Meta: targeting_automation; Google: observation vs targeting mode)"""
@@ -71,12 +80,18 @@ class PropertyAdsGroupTargeting(BaseModel):
 
     content: Optional[PropertyAdsGroupTargetingContent] = None
 
+    custom: Optional[List[CustomTargeting]] = None
+    r"""Key-value targeting; clauses are ANDed"""
+
     demographic: Optional[PropertyAdsGroupTargetingDemographic] = None
     r"""Demographic targeting (Meta: age_min, age_max, genders)"""
 
     device: Optional[PropertyAdsGroupTargetingDevice] = None
 
     geographic: Optional[PropertyAdsGroupTargetingGeographic] = None
+
+    inventory: Optional[PropertyAdsGroupTargetingInventory] = None
+    r"""Publisher inventory (ad units, placements) to include / exclude"""
 
     language: Optional[List[TargetRef]] = None
 
@@ -97,9 +112,11 @@ class PropertyAdsGroupTargeting(BaseModel):
                 "audience",
                 "brand_safety",
                 "content",
+                "custom",
                 "demographic",
                 "device",
                 "geographic",
+                "inventory",
                 "language",
                 "optimization",
                 "placement",

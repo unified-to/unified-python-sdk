@@ -3,9 +3,14 @@
 from __future__ import annotations
 from .adsmetadata import AdsMetadata, AdsMetadataTypedDict
 from .adspromoted import AdsPromoted, AdsPromotedTypedDict
+from .adssize import AdsSize, AdsSizeTypedDict
 from .property_adsreportmetrics_group_bid_strategy import (
     PropertyAdsReportMetricsGroupBidStrategy,
     PropertyAdsReportMetricsGroupBidStrategyTypedDict,
+)
+from .property_adsreportmetrics_group_delivery_goal import (
+    PropertyAdsReportMetricsGroupDeliveryGoal,
+    PropertyAdsReportMetricsGroupDeliveryGoalTypedDict,
 )
 from .property_adsreportmetrics_group_frequency_cap import (
     PropertyAdsReportMetricsGroupFrequencyCap,
@@ -76,6 +81,18 @@ class PropertyAdsReportMetricsGroupBudgetUnit(str, Enum, metaclass=utils.OpenEnu
     IMPRESSIONS = "IMPRESSIONS"
 
 
+class PropertyAdsReportMetricsGroupCostType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""How the line item is priced (Google Ad Manager costType)"""
+
+    CPM = "CPM"
+    VIEWABLE_CPM = "VIEWABLE_CPM"
+    CPC = "CPC"
+    CPD = "CPD"
+    CPA = "CPA"
+    CPCV = "CPCV"
+    OTHER = "OTHER"
+
+
 class PropertyAdsReportMetricsGroupCreativeSelection(
     str, Enum, metaclass=utils.OpenEnumMeta
 ):
@@ -83,6 +100,25 @@ class PropertyAdsReportMetricsGroupCreativeSelection(
 
     OPTIMIZED = "OPTIMIZED"
     ROUND_ROBIN = "ROUND_ROBIN"
+    WEIGHTED = "WEIGHTED"
+    SEQUENTIAL = "SEQUENTIAL"
+
+
+class PropertyAdsReportMetricsGroupDeliveryType(
+    str, Enum, metaclass=utils.OpenEnumMeta
+):
+    r"""Ad server line item type / delivery class (Google Ad Manager lineItemType)"""
+
+    STANDARD = "STANDARD"
+    SPONSORSHIP = "SPONSORSHIP"
+    NETWORK = "NETWORK"
+    BULK = "BULK"
+    PRICE_PRIORITY = "PRICE_PRIORITY"
+    HOUSE = "HOUSE"
+    PREFERRED_DEAL = "PREFERRED_DEAL"
+    AD_EXCHANGE = "AD_EXCHANGE"
+    CLICK_TRACKING = "CLICK_TRACKING"
+    OTHER = "OTHER"
 
 
 class PropertyAdsReportMetricsGroupEffectiveStatus(
@@ -166,12 +202,20 @@ class PropertyAdsReportMetricsGroupTypedDict(TypedDict):
     budget_unit: NotRequired[PropertyAdsReportMetricsGroupBudgetUnit]
     campaign_id: NotRequired[str]
     r"""The ID of the campaign the ad group belongs to (an AdsCampaign ID)"""
+    cost_type: NotRequired[PropertyAdsReportMetricsGroupCostType]
+    r"""How the line item is priced (Google Ad Manager costType)"""
     created_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     creative_ids: NotRequired[List[str]]
     creative_selection: NotRequired[PropertyAdsReportMetricsGroupCreativeSelection]
     r"""Creative rotation strategy (LinkedIn creativeSelection)"""
+    creative_sizes: NotRequired[List[AdsSizeTypedDict]]
+    r"""Expected creative sizes (Google Ad Manager creativePlaceholders)"""
     currency: NotRequired[str]
+    delivery_goal: NotRequired[PropertyAdsReportMetricsGroupDeliveryGoalTypedDict]
+    r"""Booked delivery goal (Google Ad Manager goal)"""
+    delivery_type: NotRequired[PropertyAdsReportMetricsGroupDeliveryType]
+    r"""Ad server line item type / delivery class (Google Ad Manager lineItemType)"""
     effective_status: NotRequired[PropertyAdsReportMetricsGroupEffectiveStatus]
     end_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
@@ -189,6 +233,8 @@ class PropertyAdsReportMetricsGroupTypedDict(TypedDict):
     organization_id: NotRequired[str]
     pacing: NotRequired[PropertyAdsReportMetricsGroupPacingTypedDict]
     parent_id: NotRequired[str]
+    priority: NotRequired[float]
+    r"""Ad server delivery priority, lower serves first (Google Ad Manager priority, Kevel priority)"""
     promoted: NotRequired[List[AdsPromotedTypedDict]]
     raw: NotRequired[Dict[str, Any]]
     start_at: NotRequired[datetime]
@@ -224,6 +270,9 @@ class PropertyAdsReportMetricsGroup(BaseModel):
     campaign_id: Optional[str] = None
     r"""The ID of the campaign the ad group belongs to (an AdsCampaign ID)"""
 
+    cost_type: Optional[PropertyAdsReportMetricsGroupCostType] = None
+    r"""How the line item is priced (Google Ad Manager costType)"""
+
     created_at: Optional[datetime] = None
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
@@ -232,7 +281,16 @@ class PropertyAdsReportMetricsGroup(BaseModel):
     creative_selection: Optional[PropertyAdsReportMetricsGroupCreativeSelection] = None
     r"""Creative rotation strategy (LinkedIn creativeSelection)"""
 
+    creative_sizes: Optional[List[AdsSize]] = None
+    r"""Expected creative sizes (Google Ad Manager creativePlaceholders)"""
+
     currency: Optional[str] = None
+
+    delivery_goal: Optional[PropertyAdsReportMetricsGroupDeliveryGoal] = None
+    r"""Booked delivery goal (Google Ad Manager goal)"""
+
+    delivery_type: Optional[PropertyAdsReportMetricsGroupDeliveryType] = None
+    r"""Ad server line item type / delivery class (Google Ad Manager lineItemType)"""
 
     effective_status: Optional[PropertyAdsReportMetricsGroupEffectiveStatus] = None
 
@@ -263,6 +321,9 @@ class PropertyAdsReportMetricsGroup(BaseModel):
     pacing: Optional[PropertyAdsReportMetricsGroupPacing] = None
 
     parent_id: Optional[str] = None
+
+    priority: Optional[float] = None
+    r"""Ad server delivery priority, lower serves first (Google Ad Manager priority, Kevel priority)"""
 
     promoted: Optional[List[AdsPromoted]] = None
 
@@ -316,11 +377,29 @@ class PropertyAdsReportMetricsGroup(BaseModel):
                 return value
         return value
 
+    @field_serializer("cost_type")
+    def serialize_cost_type(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.PropertyAdsReportMetricsGroupCostType(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("creative_selection")
     def serialize_creative_selection(self, value):
         if isinstance(value, str):
             try:
                 return shared.PropertyAdsReportMetricsGroupCreativeSelection(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("delivery_type")
+    def serialize_delivery_type(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.PropertyAdsReportMetricsGroupDeliveryType(value)
             except ValueError:
                 return value
         return value
@@ -377,10 +456,14 @@ class PropertyAdsReportMetricsGroup(BaseModel):
                 "budget_period",
                 "budget_unit",
                 "campaign_id",
+                "cost_type",
                 "created_at",
                 "creative_ids",
                 "creative_selection",
+                "creative_sizes",
                 "currency",
+                "delivery_goal",
+                "delivery_type",
                 "effective_status",
                 "end_at",
                 "frequency_cap",
@@ -394,6 +477,7 @@ class PropertyAdsReportMetricsGroup(BaseModel):
                 "organization_id",
                 "pacing",
                 "parent_id",
+                "priority",
                 "promoted",
                 "raw",
                 "start_at",

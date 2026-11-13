@@ -33,6 +33,11 @@ class AdsTargetType(str, Enum, metaclass=utils.OpenEnumMeta):
     CARRIER = "CARRIER"
     DEVICE_MODEL = "DEVICE_MODEL"
     OS_VERSION = "OS_VERSION"
+    CUSTOM_KEY = "CUSTOM_KEY"
+    CUSTOM_VALUE = "CUSTOM_VALUE"
+    BROWSER = "BROWSER"
+    OPERATING_SYSTEM = "OPERATING_SYSTEM"
+    DEVICE_CATEGORY = "DEVICE_CATEGORY"
 
 
 class AdsTargetTypedDict(TypedDict):

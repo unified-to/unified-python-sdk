@@ -3,9 +3,14 @@
 from __future__ import annotations
 from .adsmetadata import AdsMetadata, AdsMetadataTypedDict
 from .adspromoted import AdsPromoted, AdsPromotedTypedDict
+from .adssize import AdsSize, AdsSizeTypedDict
 from .property_adsgroup_bid_strategy import (
     PropertyAdsGroupBidStrategy,
     PropertyAdsGroupBidStrategyTypedDict,
+)
+from .property_adsgroup_delivery_goal import (
+    PropertyAdsGroupDeliveryGoal,
+    PropertyAdsGroupDeliveryGoalTypedDict,
 )
 from .property_adsgroup_frequency_cap import (
     PropertyAdsGroupFrequencyCap,
@@ -70,11 +75,40 @@ class AdsGroupBudgetUnit(str, Enum, metaclass=utils.OpenEnumMeta):
     IMPRESSIONS = "IMPRESSIONS"
 
 
+class CostType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""How the line item is priced (Google Ad Manager costType)"""
+
+    CPM = "CPM"
+    VIEWABLE_CPM = "VIEWABLE_CPM"
+    CPC = "CPC"
+    CPD = "CPD"
+    CPA = "CPA"
+    CPCV = "CPCV"
+    OTHER = "OTHER"
+
+
 class CreativeSelection(str, Enum, metaclass=utils.OpenEnumMeta):
     r"""Creative rotation strategy (LinkedIn creativeSelection)"""
 
     OPTIMIZED = "OPTIMIZED"
     ROUND_ROBIN = "ROUND_ROBIN"
+    WEIGHTED = "WEIGHTED"
+    SEQUENTIAL = "SEQUENTIAL"
+
+
+class DeliveryType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""Ad server line item type / delivery class (Google Ad Manager lineItemType)"""
+
+    STANDARD = "STANDARD"
+    SPONSORSHIP = "SPONSORSHIP"
+    NETWORK = "NETWORK"
+    BULK = "BULK"
+    PRICE_PRIORITY = "PRICE_PRIORITY"
+    HOUSE = "HOUSE"
+    PREFERRED_DEAL = "PREFERRED_DEAL"
+    AD_EXCHANGE = "AD_EXCHANGE"
+    CLICK_TRACKING = "CLICK_TRACKING"
+    OTHER = "OTHER"
 
 
 class AdsGroupEffectiveStatus(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -152,12 +186,20 @@ class AdsGroupTypedDict(TypedDict):
     budget_unit: NotRequired[AdsGroupBudgetUnit]
     campaign_id: NotRequired[str]
     r"""The ID of the campaign the ad group belongs to (an AdsCampaign ID)"""
+    cost_type: NotRequired[CostType]
+    r"""How the line item is priced (Google Ad Manager costType)"""
     created_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     creative_ids: NotRequired[List[str]]
     creative_selection: NotRequired[CreativeSelection]
     r"""Creative rotation strategy (LinkedIn creativeSelection)"""
+    creative_sizes: NotRequired[List[AdsSizeTypedDict]]
+    r"""Expected creative sizes (Google Ad Manager creativePlaceholders)"""
     currency: NotRequired[str]
+    delivery_goal: NotRequired[PropertyAdsGroupDeliveryGoalTypedDict]
+    r"""Booked delivery goal (Google Ad Manager goal)"""
+    delivery_type: NotRequired[DeliveryType]
+    r"""Ad server line item type / delivery class (Google Ad Manager lineItemType)"""
     effective_status: NotRequired[AdsGroupEffectiveStatus]
     end_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
@@ -175,6 +217,8 @@ class AdsGroupTypedDict(TypedDict):
     organization_id: NotRequired[str]
     pacing: NotRequired[PropertyAdsGroupPacingTypedDict]
     parent_id: NotRequired[str]
+    priority: NotRequired[float]
+    r"""Ad server delivery priority, lower serves first (Google Ad Manager priority, Kevel priority)"""
     promoted: NotRequired[List[AdsPromotedTypedDict]]
     raw: NotRequired[Dict[str, Any]]
     start_at: NotRequired[datetime]
@@ -208,6 +252,9 @@ class AdsGroup(BaseModel):
     campaign_id: Optional[str] = None
     r"""The ID of the campaign the ad group belongs to (an AdsCampaign ID)"""
 
+    cost_type: Optional[CostType] = None
+    r"""How the line item is priced (Google Ad Manager costType)"""
+
     created_at: Optional[datetime] = None
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
@@ -216,7 +263,16 @@ class AdsGroup(BaseModel):
     creative_selection: Optional[CreativeSelection] = None
     r"""Creative rotation strategy (LinkedIn creativeSelection)"""
 
+    creative_sizes: Optional[List[AdsSize]] = None
+    r"""Expected creative sizes (Google Ad Manager creativePlaceholders)"""
+
     currency: Optional[str] = None
+
+    delivery_goal: Optional[PropertyAdsGroupDeliveryGoal] = None
+    r"""Booked delivery goal (Google Ad Manager goal)"""
+
+    delivery_type: Optional[DeliveryType] = None
+    r"""Ad server line item type / delivery class (Google Ad Manager lineItemType)"""
 
     effective_status: Optional[AdsGroupEffectiveStatus] = None
 
@@ -247,6 +303,9 @@ class AdsGroup(BaseModel):
     pacing: Optional[PropertyAdsGroupPacing] = None
 
     parent_id: Optional[str] = None
+
+    priority: Optional[float] = None
+    r"""Ad server delivery priority, lower serves first (Google Ad Manager priority, Kevel priority)"""
 
     promoted: Optional[List[AdsPromoted]] = None
 
@@ -300,11 +359,29 @@ class AdsGroup(BaseModel):
                 return value
         return value
 
+    @field_serializer("cost_type")
+    def serialize_cost_type(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.CostType(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("creative_selection")
     def serialize_creative_selection(self, value):
         if isinstance(value, str):
             try:
                 return shared.CreativeSelection(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("delivery_type")
+    def serialize_delivery_type(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.DeliveryType(value)
             except ValueError:
                 return value
         return value
@@ -361,10 +438,14 @@ class AdsGroup(BaseModel):
                 "budget_period",
                 "budget_unit",
                 "campaign_id",
+                "cost_type",
                 "created_at",
                 "creative_ids",
                 "creative_selection",
+                "creative_sizes",
                 "currency",
+                "delivery_goal",
+                "delivery_type",
                 "effective_status",
                 "end_at",
                 "frequency_cap",
@@ -378,6 +459,7 @@ class AdsGroup(BaseModel):
                 "organization_id",
                 "pacing",
                 "parent_id",
+                "priority",
                 "promoted",
                 "raw",
                 "start_at",
