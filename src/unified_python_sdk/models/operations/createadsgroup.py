@@ -61,6 +61,7 @@ class CreateAdsGroupQueryParamFields(str, Enum):
     COST_TYPE = "cost_type"
     DELIVERY_GOAL = "delivery_goal"
     CREATIVE_SIZES = "creative_sizes"
+    CONVERSION_TRACKING = "conversion_tracking"
 
 
 class CreateAdsGroupRequestTypedDict(TypedDict):

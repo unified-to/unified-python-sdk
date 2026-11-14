@@ -53,3 +53,4 @@ value = QueryParamCategories.PASSTHROUGH
 | `HEALTHCARE`   | healthcare     |
 | `PROPERTY`     | property       |
 | `PLM`          | plm            |
+| `QMS`          | qms            |

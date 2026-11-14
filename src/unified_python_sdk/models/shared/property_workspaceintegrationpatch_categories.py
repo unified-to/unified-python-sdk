@@ -48,3 +48,4 @@ class PropertyWorkspaceIntegrationPatchCategories(
     HEALTHCARE = "healthcare"
     PROPERTY = "property"
     PLM = "plm"
+    QMS = "qms"

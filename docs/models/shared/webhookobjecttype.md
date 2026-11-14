@@ -258,3 +258,7 @@ value = WebhookObjectType.ACCOUNTING_ACCOUNT
 | `PLM_DOCUMENT`                   | plm_document                     |
 | `PLM_CHANGE`                     | plm_change                       |
 | `PLM_CATEGORY`                   | plm_category                     |
+| `QMS_ISSUE`                      | qms_issue                        |
+| `QMS_ACTION`                     | qms_action                       |
+| `QMS_INSPECTION`                 | qms_inspection                   |
+| `QMS_AUDIT`                      | qms_audit                        |

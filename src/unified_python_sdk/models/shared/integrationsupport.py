@@ -5,7 +5,7 @@ from .property_integrationsupport_webhook_events import (
     PropertyIntegrationSupportWebhookEvents,
     PropertyIntegrationSupportWebhookEventsTypedDict,
 )
-from .virtual_webhook_bill_id import (
+from .virtual_webhook_benefit_id import (
     FromWebhook,
     ListAccountID,
     ListAdID,
@@ -52,6 +52,7 @@ from .virtual_webhook_bill_id import (
     ListInterviewID,
     ListInvoiceID,
     ListIoID,
+    ListIssueID,
     ListItemID,
     ListItemVariantID,
     ListJobID,
@@ -155,7 +156,6 @@ from .virtual_webhook_bill_id import (
     VirtualWebhookAssignedUserID,
     VirtualWebhookBankfeedaccountID,
     VirtualWebhookBenefitID,
-    VirtualWebhookBillID,
 )
 from enum import Enum
 from pydantic import field_serializer, model_serializer
@@ -170,6 +170,12 @@ from unified_python_sdk.types import (
     serialize_with_info,
 )
 from unified_python_sdk.types.basemodel import current_filtered_dump
+
+
+class VirtualWebhookBillID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
 
 
 class VirtualWebhookBranchID(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -317,6 +323,12 @@ class VirtualWebhookInvoiceID(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class VirtualWebhookIoID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
+class VirtualWebhookIssueID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
     NOT_SUPPORTED = "not-supported"
@@ -642,6 +654,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_interview_id: NotRequired[ListInterviewID]
     list_invoice_id: NotRequired[ListInvoiceID]
     list_io_id: NotRequired[ListIoID]
+    list_issue_id: NotRequired[ListIssueID]
     list_item_id: NotRequired[ListItemID]
     list_item_variant_id: NotRequired[ListItemVariantID]
     list_job_id: NotRequired[ListJobID]
@@ -774,6 +787,7 @@ class IntegrationSupportTypedDict(TypedDict):
     virtual_webhook_guest_id: NotRequired[VirtualWebhookGuestID]
     virtual_webhook_invoice_id: NotRequired[VirtualWebhookInvoiceID]
     virtual_webhook_io_id: NotRequired[VirtualWebhookIoID]
+    virtual_webhook_issue_id: NotRequired[VirtualWebhookIssueID]
     virtual_webhook_item_id: NotRequired[VirtualWebhookItemID]
     virtual_webhook_item_variant_id: NotRequired[VirtualWebhookItemVariantID]
     virtual_webhook_job_id: NotRequired[VirtualWebhookJobID]
@@ -919,6 +933,8 @@ class IntegrationSupport(BaseModel):
     list_invoice_id: Optional[ListInvoiceID] = None
 
     list_io_id: Optional[ListIoID] = None
+
+    list_issue_id: Optional[ListIssueID] = None
 
     list_item_id: Optional[ListItemID] = None
 
@@ -1183,6 +1199,8 @@ class IntegrationSupport(BaseModel):
     virtual_webhook_invoice_id: Optional[VirtualWebhookInvoiceID] = None
 
     virtual_webhook_io_id: Optional[VirtualWebhookIoID] = None
+
+    virtual_webhook_issue_id: Optional[VirtualWebhookIssueID] = None
 
     virtual_webhook_item_id: Optional[VirtualWebhookItemID] = None
 
@@ -1686,6 +1704,15 @@ class IntegrationSupport(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.ListIoID(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("list_issue_id")
+    def serialize_list_issue_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListIssueID(value)
             except ValueError:
                 return value
         return value
@@ -2851,6 +2878,15 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
+    @field_serializer("virtual_webhook_issue_id")
+    def serialize_virtual_webhook_issue_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.VirtualWebhookIssueID(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("virtual_webhook_item_id")
     def serialize_virtual_webhook_item_id(self, value):
         if isinstance(value, str):
@@ -3310,6 +3346,7 @@ class IntegrationSupport(BaseModel):
                 "list_interview_id",
                 "list_invoice_id",
                 "list_io_id",
+                "list_issue_id",
                 "list_item_id",
                 "list_item_variant_id",
                 "list_job_id",
@@ -3442,6 +3479,7 @@ class IntegrationSupport(BaseModel):
                 "virtual_webhook_guest_id",
                 "virtual_webhook_invoice_id",
                 "virtual_webhook_io_id",
+                "virtual_webhook_issue_id",
                 "virtual_webhook_item_id",
                 "virtual_webhook_item_variant_id",
                 "virtual_webhook_job_id",

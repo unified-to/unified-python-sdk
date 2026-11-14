@@ -18,6 +18,7 @@ import weakref
 if TYPE_CHECKING:
     from unified_python_sdk.account import Account
     from unified_python_sdk.accounting import Accounting
+    from unified_python_sdk.action import Action
     from unified_python_sdk.activation import Activation
     from unified_python_sdk.activity import Activity
     from unified_python_sdk.ad import Ad
@@ -35,6 +36,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.asset import Asset
     from unified_python_sdk.ats import Ats
     from unified_python_sdk.attendance import Attendance
+    from unified_python_sdk.audit import Audit
     from unified_python_sdk.auth import Auth
     from unified_python_sdk.availability import Availability
     from unified_python_sdk.balancesheet import Balancesheet
@@ -112,6 +114,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.immunization import Immunization
     from unified_python_sdk.insertionorder import Insertionorder
     from unified_python_sdk.insight import Insight
+    from unified_python_sdk.inspection import Inspection
     from unified_python_sdk.instance import Instance
     from unified_python_sdk.instructor import Instructor
     from unified_python_sdk.integration import Integration
@@ -176,6 +179,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.pullrequest import Pullrequest
     from unified_python_sdk.purchaseorder import Purchaseorder
     from unified_python_sdk.purchasereceipt import Purchasereceipt
+    from unified_python_sdk.qms import Qms
     from unified_python_sdk.query import Query
     from unified_python_sdk.quote import Quote
     from unified_python_sdk.rate import Rate
@@ -432,6 +436,11 @@ class UnifiedTo(BaseSDK):
     guest: "Guest"
     listing: "Listing"
     unittype: "Unittype"
+    qms: "Qms"
+    action: "Action"
+    audit: "Audit"
+    inspection: "Inspection"
+    issue: "Issue"
     repo: "Repo"
     branch: "Branch"
     commit: "Commit"
@@ -468,7 +477,6 @@ class UnifiedTo(BaseSDK):
     auth: "Auth"
     login: "Login"
     saml: "Saml"
-    issue: "Issue"
     notification: "Notification"
     secretsmanager: "Secretsmanager"
     webhook: "Webhook"
@@ -665,6 +673,11 @@ class UnifiedTo(BaseSDK):
         "guest": ("unified_python_sdk.guest", "Guest"),
         "listing": ("unified_python_sdk.listing", "Listing"),
         "unittype": ("unified_python_sdk.unittype", "Unittype"),
+        "qms": ("unified_python_sdk.qms", "Qms"),
+        "action": ("unified_python_sdk.action", "Action"),
+        "audit": ("unified_python_sdk.audit", "Audit"),
+        "inspection": ("unified_python_sdk.inspection", "Inspection"),
+        "issue": ("unified_python_sdk.issue", "Issue"),
         "repo": ("unified_python_sdk.repo", "Repo"),
         "branch": ("unified_python_sdk.branch", "Branch"),
         "commit": ("unified_python_sdk.commit", "Commit"),
@@ -704,7 +717,6 @@ class UnifiedTo(BaseSDK):
         "auth": ("unified_python_sdk.auth", "Auth"),
         "login": ("unified_python_sdk.login", "Login"),
         "saml": ("unified_python_sdk.saml", "Saml"),
-        "issue": ("unified_python_sdk.issue", "Issue"),
         "notification": ("unified_python_sdk.notification", "Notification"),
         "secretsmanager": ("unified_python_sdk.secretsmanager", "Secretsmanager"),
         "webhook": ("unified_python_sdk.webhook", "Webhook"),

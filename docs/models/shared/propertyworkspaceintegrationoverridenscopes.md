@@ -382,6 +382,14 @@
 | `property_review_read`                 | *Optional[str]*                        | :heavy_minus_sign:                     | N/A                                    |
 | `property_review_write`                | *Optional[str]*                        | :heavy_minus_sign:                     | N/A                                    |
 | `property_unittype_read`               | *Optional[str]*                        | :heavy_minus_sign:                     | N/A                                    |
+| `qms_action_read`                      | *Optional[str]*                        | :heavy_minus_sign:                     | N/A                                    |
+| `qms_action_write`                     | *Optional[str]*                        | :heavy_minus_sign:                     | N/A                                    |
+| `qms_audit_read`                       | *Optional[str]*                        | :heavy_minus_sign:                     | N/A                                    |
+| `qms_audit_write`                      | *Optional[str]*                        | :heavy_minus_sign:                     | N/A                                    |
+| `qms_inspection_read`                  | *Optional[str]*                        | :heavy_minus_sign:                     | N/A                                    |
+| `qms_inspection_write`                 | *Optional[str]*                        | :heavy_minus_sign:                     | N/A                                    |
+| `qms_issue_read`                       | *Optional[str]*                        | :heavy_minus_sign:                     | N/A                                    |
+| `qms_issue_write`                      | *Optional[str]*                        | :heavy_minus_sign:                     | N/A                                    |
 | `repo_branch_read`                     | *Optional[str]*                        | :heavy_minus_sign:                     | N/A                                    |
 | `repo_branch_write`                    | *Optional[str]*                        | :heavy_minus_sign:                     | N/A                                    |
 | `repo_commit_read`                     | *Optional[str]*                        | :heavy_minus_sign:                     | N/A                                    |

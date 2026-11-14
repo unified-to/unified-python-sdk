@@ -391,6 +391,14 @@ class PropertyWorkspaceIntegrationPatchOverridenScopesTypedDict(TypedDict):
     property_review_read: NotRequired[str]
     property_review_write: NotRequired[str]
     property_unittype_read: NotRequired[str]
+    qms_action_read: NotRequired[str]
+    qms_action_write: NotRequired[str]
+    qms_audit_read: NotRequired[str]
+    qms_audit_write: NotRequired[str]
+    qms_inspection_read: NotRequired[str]
+    qms_inspection_write: NotRequired[str]
+    qms_issue_read: NotRequired[str]
+    qms_issue_write: NotRequired[str]
     repo_branch_read: NotRequired[str]
     repo_branch_write: NotRequired[str]
     repo_commit_read: NotRequired[str]
@@ -1218,6 +1226,22 @@ class PropertyWorkspaceIntegrationPatchOverridenScopes(BaseModel):
 
     property_unittype_read: Optional[str] = None
 
+    qms_action_read: Optional[str] = None
+
+    qms_action_write: Optional[str] = None
+
+    qms_audit_read: Optional[str] = None
+
+    qms_audit_write: Optional[str] = None
+
+    qms_inspection_read: Optional[str] = None
+
+    qms_inspection_write: Optional[str] = None
+
+    qms_issue_read: Optional[str] = None
+
+    qms_issue_write: Optional[str] = None
+
     repo_branch_read: Optional[str] = None
 
     repo_branch_write: Optional[str] = None
@@ -1742,6 +1766,14 @@ class PropertyWorkspaceIntegrationPatchOverridenScopes(BaseModel):
                 "property_review_read",
                 "property_review_write",
                 "property_unittype_read",
+                "qms_action_read",
+                "qms_action_write",
+                "qms_audit_read",
+                "qms_audit_write",
+                "qms_inspection_read",
+                "qms_inspection_write",
+                "qms_issue_read",
+                "qms_issue_write",
                 "repo_branch_read",
                 "repo_branch_write",
                 "repo_commit_read",

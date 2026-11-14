@@ -39,6 +39,10 @@ from .property_adsreportmetrics_group_targeting_placement import (
     PropertyAdsReportMetricsGroupTargetingPlacement,
     PropertyAdsReportMetricsGroupTargetingPlacementTypedDict,
 )
+from .property_adsreportmetrics_group_targeting_supply import (
+    PropertyAdsReportMetricsGroupTargetingSupply,
+    PropertyAdsReportMetricsGroupTargetingSupplyTypedDict,
+)
 from .targetref import TargetRef, TargetRefTypedDict
 from pydantic import model_serializer
 from typing import List, Optional
@@ -74,6 +78,8 @@ class PropertyAdsReportMetricsGroupTargetingTypedDict(TypedDict):
     r"""Optimization (Meta: targeting_automation; Google: observation vs targeting mode)"""
     placement: NotRequired[PropertyAdsReportMetricsGroupTargetingPlacementTypedDict]
     schedule: NotRequired[List[AdScheduleTypedDict]]
+    supply: NotRequired[PropertyAdsReportMetricsGroupTargetingSupplyTypedDict]
+    r"""Buy-side inventory: exchanges, deals, deal groups and seller authorization (DSPs)"""
 
 
 class PropertyAdsReportMetricsGroupTargeting(BaseModel):
@@ -106,6 +112,9 @@ class PropertyAdsReportMetricsGroupTargeting(BaseModel):
 
     schedule: Optional[List[AdSchedule]] = None
 
+    supply: Optional[PropertyAdsReportMetricsGroupTargetingSupply] = None
+    r"""Buy-side inventory: exchanges, deals, deal groups and seller authorization (DSPs)"""
+
     @model_serializer(mode="wrap")
     def _serialize_model_with_info(self, handler, info):
         return serialize_with_info(self.serialize_model, handler, info)
@@ -125,6 +134,7 @@ class PropertyAdsReportMetricsGroupTargeting(BaseModel):
                 "optimization",
                 "placement",
                 "schedule",
+                "supply",
             ]
         )
         exclude_none = current_exclude_none()

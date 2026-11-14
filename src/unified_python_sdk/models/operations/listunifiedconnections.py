@@ -58,6 +58,7 @@ class Categories(str, Enum):
     HEALTHCARE = "healthcare"
     PROPERTY = "property"
     PLM = "plm"
+    QMS = "qms"
 
 
 class ListUnifiedConnectionsQueryParamFields(str, Enum):

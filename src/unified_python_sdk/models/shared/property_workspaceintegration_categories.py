@@ -46,3 +46,4 @@ class PropertyWorkspaceIntegrationCategories(str, Enum, metaclass=utils.OpenEnum
     HEALTHCARE = "healthcare"
     PROPERTY = "property"
     PLM = "plm"
+    QMS = "qms"

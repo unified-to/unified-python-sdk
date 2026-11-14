@@ -60,6 +60,7 @@ class ListUnifiedWorkspaceintegrationsQueryParamCategories(str, Enum):
     HEALTHCARE = "healthcare"
     PROPERTY = "property"
     PLM = "plm"
+    QMS = "qms"
 
 
 class ListUnifiedWorkspaceintegrationsRequestTypedDict(TypedDict):
