@@ -34,10 +34,10 @@ with UnifiedTo(
         "calendar_webinar": {
             "conference": [],
             "created_at": parse_datetime("2022-07-06T11:45:14.631Z"),
-            "end_at": parse_datetime("2025-11-16T06:38:01.858Z"),
+            "end_at": parse_datetime("2025-11-17T01:19:08.193Z"),
             "has_polls": False,
             "has_recording": False,
-            "id": "6f8b9c78-a7a1-49a8-a861-c60cbce1ee74",
+            "id": "b004deee-fa33-4691-a500-b60316be4dcc",
             "is_auto_approve": False,
             "is_enabled": True,
             "is_webcast": False,
@@ -47,13 +47,13 @@ with UnifiedTo(
             "recurrence": [
                 {
                     "count": 10.0,
-                    "end_at": parse_datetime("2023-09-07T01:44:59.347Z"),
+                    "end_at": parse_datetime("2023-09-07T08:15:06.137Z"),
                     "excluded_dates": [
-                        "2025-02-27T15:03:31.861Z",
+                        "2025-02-28T05:45:54.988Z",
                     ],
                     "frequency": shared.CalendarEventRecurrenceFrequency.MONTHLY,
                     "included_dates": [
-                        "2024-05-08T10:16:40.658Z",
+                        "2024-05-08T20:29:43.967Z",
                     ],
                     "interval": 8.0,
                     "on_days": [
@@ -444,16 +444,16 @@ with UnifiedTo(
                 },
                 {
                     "count": 3.0,
-                    "end_at": parse_datetime("2022-10-01T23:56:14.990Z"),
+                    "end_at": parse_datetime("2022-10-02T01:16:05.340Z"),
                     "excluded_dates": [
-                        "2024-09-13T20:07:31.067Z",
-                        "2024-08-29T01:26:25.404Z",
+                        "2024-09-14T08:17:43.823Z",
+                        "2024-08-29T13:22:14.411Z",
                     ],
                     "frequency": shared.CalendarEventRecurrenceFrequency.DAILY,
                     "included_dates": [
-                        "2024-04-03T19:08:37.878Z",
-                        "2026-02-02T03:10:00.004Z",
-                        "2023-08-20T10:55:48.391Z",
+                        "2024-04-04T04:50:05.437Z",
+                        "2026-02-02T23:02:08.312Z",
+                        "2023-08-20T17:09:50.763Z",
                     ],
                     "interval": 1.0,
                     "on_days": [
@@ -597,16 +597,16 @@ with UnifiedTo(
                 },
                 {
                     "count": 8.0,
-                    "end_at": parse_datetime("2026-08-18T05:43:56.838Z"),
+                    "end_at": parse_datetime("2026-08-19T04:35:55.189Z"),
                     "excluded_dates": [
-                        "2023-06-23T22:12:08.935Z",
-                        "2023-06-12T19:00:34.669Z",
+                        "2023-06-24T03:33:41.979Z",
+                        "2023-06-13T00:11:58.267Z",
                     ],
                     "frequency": shared.CalendarEventRecurrenceFrequency.WEEKLY,
                     "included_dates": [
-                        "2024-04-11T22:58:21.052Z",
-                        "2023-08-26T08:29:40.829Z",
-                        "2024-10-09T10:10:44.010Z",
+                        "2024-04-12T08:47:15.280Z",
+                        "2023-08-26T14:49:06.098Z",
+                        "2024-10-09T22:44:17.374Z",
                     ],
                     "interval": 8.0,
                     "on_days": [
@@ -759,11 +759,11 @@ with UnifiedTo(
             "registrant_password": "W7J6DhkM",
             "require_address": False,
             "require_job_title": False,
-            "start_at": parse_datetime("2025-05-16T08:26:15.878Z"),
+            "start_at": parse_datetime("2025-05-17T00:19:33.785Z"),
             "status": shared.CalendarWebinarStatus.TENTATIVE,
             "subject": "Harum culpa decipio ex cubo ancilla cresco.",
             "timezone": "Europe/Kaliningrad",
-            "updated_at": parse_datetime("2026-10-24T05:16:25.612Z"),
+            "updated_at": parse_datetime("2026-10-25T05:09:30.634Z"),
             "web_url": "https://quiet-permafrost.name",
         },
         "connection_id": "<id>",
@@ -909,10 +909,10 @@ with UnifiedTo(
         "calendar_webinar": {
             "conference": [],
             "created_at": parse_datetime("2022-07-06T11:45:14.631Z"),
-            "end_at": parse_datetime("2025-11-16T06:38:01.883Z"),
+            "end_at": parse_datetime("2025-11-17T01:19:08.226Z"),
             "has_polls": False,
             "has_recording": False,
-            "id": "2eb2dc57-8b7d-46d4-94b6-4d0188034130",
+            "id": "d4f6d07d-94bd-4795-98fb-43e9e97fa610",
             "is_auto_approve": False,
             "is_enabled": True,
             "is_webcast": False,
@@ -922,13 +922,13 @@ with UnifiedTo(
             "recurrence": [
                 {
                     "count": 10.0,
-                    "end_at": parse_datetime("2023-09-07T01:44:59.355Z"),
+                    "end_at": parse_datetime("2023-09-07T08:15:06.148Z"),
                     "excluded_dates": [
-                        "2025-02-27T15:03:31.881Z",
+                        "2025-02-28T05:45:55.015Z",
                     ],
                     "frequency": shared.CalendarEventRecurrenceFrequency.MONTHLY,
                     "included_dates": [
-                        "2024-05-08T10:16:40.672Z",
+                        "2024-05-08T20:29:43.986Z",
                     ],
                     "interval": 8.0,
                     "on_days": [
@@ -1319,16 +1319,16 @@ with UnifiedTo(
                 },
                 {
                     "count": 3.0,
-                    "end_at": parse_datetime("2022-10-01T23:56:14.992Z"),
+                    "end_at": parse_datetime("2022-10-02T01:16:05.343Z"),
                     "excluded_dates": [
-                        "2024-09-13T20:07:31.083Z",
-                        "2024-08-29T01:26:25.420Z",
+                        "2024-09-14T08:17:43.845Z",
+                        "2024-08-29T13:22:14.432Z",
                     ],
                     "frequency": shared.CalendarEventRecurrenceFrequency.DAILY,
                     "included_dates": [
-                        "2024-04-03T19:08:37.891Z",
-                        "2026-02-02T03:10:00.030Z",
-                        "2023-08-20T10:55:48.399Z",
+                        "2024-04-04T04:50:05.454Z",
+                        "2026-02-02T23:02:08.347Z",
+                        "2023-08-20T17:09:50.775Z",
                     ],
                     "interval": 1.0,
                     "on_days": [
@@ -1472,16 +1472,16 @@ with UnifiedTo(
                 },
                 {
                     "count": 8.0,
-                    "end_at": parse_datetime("2026-08-18T05:43:56.869Z"),
+                    "end_at": parse_datetime("2026-08-19T04:35:55.229Z"),
                     "excluded_dates": [
-                        "2023-06-23T22:12:08.943Z",
-                        "2023-06-12T19:00:34.676Z",
+                        "2023-06-24T03:33:41.988Z",
+                        "2023-06-13T00:11:58.276Z",
                     ],
                     "frequency": shared.CalendarEventRecurrenceFrequency.WEEKLY,
                     "included_dates": [
-                        "2024-04-11T22:58:21.065Z",
-                        "2023-08-26T08:29:40.837Z",
-                        "2024-10-09T10:10:44.027Z",
+                        "2024-04-12T08:47:15.298Z",
+                        "2023-08-26T14:49:06.110Z",
+                        "2024-10-09T22:44:17.396Z",
                     ],
                     "interval": 8.0,
                     "on_days": [
@@ -1634,11 +1634,11 @@ with UnifiedTo(
             "registrant_password": "W7J6DhkM",
             "require_address": False,
             "require_job_title": False,
-            "start_at": parse_datetime("2025-05-16T08:26:15.899Z"),
+            "start_at": parse_datetime("2025-05-17T00:19:33.813Z"),
             "status": shared.CalendarWebinarStatus.TENTATIVE,
             "subject": "Harum culpa decipio ex cubo ancilla cresco.",
             "timezone": "Europe/Kaliningrad",
-            "updated_at": parse_datetime("2026-10-24T05:16:25.643Z"),
+            "updated_at": parse_datetime("2026-10-25T05:09:30.676Z"),
             "web_url": "https://quiet-permafrost.name",
         },
         "connection_id": "<id>",
@@ -1739,10 +1739,10 @@ with UnifiedTo(
         "calendar_webinar": {
             "conference": [],
             "created_at": parse_datetime("2022-07-06T11:45:14.631Z"),
-            "end_at": parse_datetime("2025-11-16T06:38:01.883Z"),
+            "end_at": parse_datetime("2025-11-17T01:19:08.226Z"),
             "has_polls": False,
             "has_recording": False,
-            "id": "2eb2dc57-8b7d-46d4-94b6-4d0188034130",
+            "id": "d4f6d07d-94bd-4795-98fb-43e9e97fa610",
             "is_auto_approve": False,
             "is_enabled": True,
             "is_webcast": False,
@@ -1752,13 +1752,13 @@ with UnifiedTo(
             "recurrence": [
                 {
                     "count": 10.0,
-                    "end_at": parse_datetime("2023-09-07T01:44:59.355Z"),
+                    "end_at": parse_datetime("2023-09-07T08:15:06.148Z"),
                     "excluded_dates": [
-                        "2025-02-27T15:03:31.881Z",
+                        "2025-02-28T05:45:55.015Z",
                     ],
                     "frequency": shared.CalendarEventRecurrenceFrequency.MONTHLY,
                     "included_dates": [
-                        "2024-05-08T10:16:40.672Z",
+                        "2024-05-08T20:29:43.986Z",
                     ],
                     "interval": 8.0,
                     "on_days": [
@@ -2149,16 +2149,16 @@ with UnifiedTo(
                 },
                 {
                     "count": 3.0,
-                    "end_at": parse_datetime("2022-10-01T23:56:14.992Z"),
+                    "end_at": parse_datetime("2022-10-02T01:16:05.343Z"),
                     "excluded_dates": [
-                        "2024-09-13T20:07:31.083Z",
-                        "2024-08-29T01:26:25.420Z",
+                        "2024-09-14T08:17:43.845Z",
+                        "2024-08-29T13:22:14.432Z",
                     ],
                     "frequency": shared.CalendarEventRecurrenceFrequency.DAILY,
                     "included_dates": [
-                        "2024-04-03T19:08:37.891Z",
-                        "2026-02-02T03:10:00.030Z",
-                        "2023-08-20T10:55:48.399Z",
+                        "2024-04-04T04:50:05.454Z",
+                        "2026-02-02T23:02:08.347Z",
+                        "2023-08-20T17:09:50.775Z",
                     ],
                     "interval": 1.0,
                     "on_days": [
@@ -2302,16 +2302,16 @@ with UnifiedTo(
                 },
                 {
                     "count": 8.0,
-                    "end_at": parse_datetime("2026-08-18T05:43:56.869Z"),
+                    "end_at": parse_datetime("2026-08-19T04:35:55.229Z"),
                     "excluded_dates": [
-                        "2023-06-23T22:12:08.943Z",
-                        "2023-06-12T19:00:34.676Z",
+                        "2023-06-24T03:33:41.988Z",
+                        "2023-06-13T00:11:58.276Z",
                     ],
                     "frequency": shared.CalendarEventRecurrenceFrequency.WEEKLY,
                     "included_dates": [
-                        "2024-04-11T22:58:21.065Z",
-                        "2023-08-26T08:29:40.837Z",
-                        "2024-10-09T10:10:44.027Z",
+                        "2024-04-12T08:47:15.298Z",
+                        "2023-08-26T14:49:06.110Z",
+                        "2024-10-09T22:44:17.396Z",
                     ],
                     "interval": 8.0,
                     "on_days": [
@@ -2464,11 +2464,11 @@ with UnifiedTo(
             "registrant_password": "W7J6DhkM",
             "require_address": False,
             "require_job_title": False,
-            "start_at": parse_datetime("2025-05-16T08:26:15.899Z"),
+            "start_at": parse_datetime("2025-05-17T00:19:33.813Z"),
             "status": shared.CalendarWebinarStatus.TENTATIVE,
             "subject": "Harum culpa decipio ex cubo ancilla cresco.",
             "timezone": "Europe/Kaliningrad",
-            "updated_at": parse_datetime("2026-10-24T05:16:25.643Z"),
+            "updated_at": parse_datetime("2026-10-25T05:09:30.676Z"),
             "web_url": "https://quiet-permafrost.name",
         },
         "connection_id": "<id>",
