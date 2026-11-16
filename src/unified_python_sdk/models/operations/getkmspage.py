@@ -36,6 +36,7 @@ class GetKmsPageQueryParamFields(str, Enum):
     HAS_CHILDREN = "has_children"
     WEB_URL = "web_url"
     RAW = "raw"
+    CONTENT = "content"
 
 
 class GetKmsPageRequestTypedDict(TypedDict):

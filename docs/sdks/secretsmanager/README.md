@@ -9,7 +9,9 @@
 * [list_unified_secretsmanager_instructions](#list_unified_secretsmanager_instructions) - List secrets manager setup instructions
 * [list_unified_secretsmanager_secrets](#list_unified_secretsmanager_secrets) - List secrets in a secrets manager
 * [list_unified_secretsmanagers](#list_unified_secretsmanagers) - List secrets managers
+* [patch_unified_secretsmanager](#patch_unified_secretsmanager) - Update secrets manager
 * [remove_unified_secretsmanager](#remove_unified_secretsmanager) - Remove secrets manager
+* [update_unified_secretsmanager](#update_unified_secretsmanager) - Update secrets manager
 
 ## create_unified_secretsmanager
 
@@ -241,6 +243,60 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## patch_unified_secretsmanager
+
+Update secrets manager
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchUnifiedSecretsmanager" method="patch" path="/unified/secretsmanager/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.secretsmanager.patch_unified_secretsmanager(request={
+        "secrets_manager": {
+            "auth": {
+                "key": "<value>",
+                "key1": "<value>",
+            },
+            "name": "<value>",
+            "type": shared.SecretsManagerType.AKEYLESS,
+        },
+        "id": "<id>",
+    })
+
+    assert res.secrets_manager is not None
+
+    # Handle response
+    print(res.secrets_manager)
+
+```
+
+### Parameters
+
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                    | [operations.PatchUnifiedSecretsmanagerRequest](../../models/operations/patchunifiedsecretsmanagerrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `retries`                                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                             | :heavy_minus_sign:                                                                                           | Configuration to override the default retry behavior of the client.                                          |
+
+### Response
+
+**[operations.PatchUnifiedSecretsmanagerResponse](../../models/operations/patchunifiedsecretsmanagerresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## remove_unified_secretsmanager
 
 Remove secrets manager
@@ -280,6 +336,59 @@ with UnifiedTo(
 ### Response
 
 **[operations.RemoveUnifiedSecretsmanagerResponse](../../models/operations/removeunifiedsecretsmanagerresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## update_unified_secretsmanager
+
+Update secrets manager
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="updateUnifiedSecretsmanager" method="put" path="/unified/secretsmanager/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.secretsmanager.update_unified_secretsmanager(request={
+        "secrets_manager": {
+            "auth": {
+                "key": "<value>",
+            },
+            "name": "<value>",
+            "type": shared.SecretsManagerType.ALIBABACLOUD,
+        },
+        "id": "<id>",
+    })
+
+    assert res.secrets_manager is not None
+
+    # Handle response
+    print(res.secrets_manager)
+
+```
+
+### Parameters
+
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                      | [operations.UpdateUnifiedSecretsmanagerRequest](../../models/operations/updateunifiedsecretsmanagerrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| `retries`                                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                               | :heavy_minus_sign:                                                                                             | Configuration to override the default retry behavior of the client.                                            |
+
+### Response
+
+**[operations.UpdateUnifiedSecretsmanagerResponse](../../models/operations/updateunifiedsecretsmanagerresponse.md)**
 
 ### Errors
 

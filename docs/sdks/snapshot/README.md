@@ -7,7 +7,9 @@
 * [create_compute_snapshot](#create_compute_snapshot) - Create a snapshot
 * [get_compute_snapshot](#get_compute_snapshot) - Retrieve a snapshot
 * [list_compute_snapshots](#list_compute_snapshots) - List all snapshots
+* [patch_compute_snapshot](#patch_compute_snapshot) - Update a snapshot
 * [remove_compute_snapshot](#remove_compute_snapshot) - Remove a snapshot
+* [update_compute_snapshot](#update_compute_snapshot) - Update a snapshot
 
 ## create_compute_snapshot
 
@@ -31,13 +33,13 @@ with UnifiedTo(
     res = unified_to.snapshot.create_compute_snapshot(request={
         "compute_snapshot": {
             "created_at": parse_datetime("2021-09-24T14:40:06.110Z"),
-            "id": "793c2204-d5e4-40a7-9ed7-5aa3243cec05",
+            "id": "8051edc7-5e22-4bb3-922d-c18ed28f7bba",
             "metadata": [],
             "name": "snap-alius",
             "size_mb": 169984.0,
             "status": shared.ComputeSnapshotStatus.DELETING,
             "type": shared.ComputeSnapshotType.DISK,
-            "updated_at": parse_datetime("2026-04-22T04:06:53.794Z"),
+            "updated_at": parse_datetime("2026-04-23T00:58:54.499Z"),
         },
         "connection_id": "<id>",
     })
@@ -159,6 +161,64 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## patch_compute_snapshot
+
+Updates the ComputeSnapshot identified by `id`. Provide the unified ComputeSnapshot fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchComputeSnapshot" method="patch" path="/compute/{connection_id}/snapshot/{id}" example="compute_snapshot" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.snapshot.patch_compute_snapshot(request={
+        "compute_snapshot": {
+            "created_at": parse_datetime("2021-09-24T14:40:06.110Z"),
+            "id": "61f1ee1a-e728-466c-ac34-d1ac62844197",
+            "metadata": [],
+            "name": "snap-alius",
+            "size_mb": 169984.0,
+            "status": shared.ComputeSnapshotStatus.DELETING,
+            "type": shared.ComputeSnapshotType.DISK,
+            "updated_at": parse_datetime("2026-04-23T00:58:54.506Z"),
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.compute_snapshot is not None
+
+    # Handle response
+    print(res.compute_snapshot)
+
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.PatchComputeSnapshotRequest](../../models/operations/patchcomputesnapshotrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+
+### Response
+
+**[operations.PatchComputeSnapshotResponse](../../models/operations/patchcomputesnapshotresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## remove_compute_snapshot
 
 Deletes the ComputeSnapshot identified by `id`.
@@ -199,6 +259,64 @@ with UnifiedTo(
 ### Response
 
 **[operations.RemoveComputeSnapshotResponse](../../models/operations/removecomputesnapshotresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## update_compute_snapshot
+
+Updates the ComputeSnapshot identified by `id`. Provide the unified ComputeSnapshot fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="updateComputeSnapshot" method="put" path="/compute/{connection_id}/snapshot/{id}" example="compute_snapshot" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.snapshot.update_compute_snapshot(request={
+        "compute_snapshot": {
+            "created_at": parse_datetime("2021-09-24T14:40:06.110Z"),
+            "id": "61f1ee1a-e728-466c-ac34-d1ac62844197",
+            "metadata": [],
+            "name": "snap-alius",
+            "size_mb": 169984.0,
+            "status": shared.ComputeSnapshotStatus.DELETING,
+            "type": shared.ComputeSnapshotType.DISK,
+            "updated_at": parse_datetime("2026-04-23T00:58:54.506Z"),
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.compute_snapshot is not None
+
+    # Handle response
+    print(res.compute_snapshot)
+
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.UpdateComputeSnapshotRequest](../../models/operations/updatecomputesnapshotrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+
+### Response
+
+**[operations.UpdateComputeSnapshotResponse](../../models/operations/updatecomputesnapshotresponse.md)**
 
 ### Errors
 

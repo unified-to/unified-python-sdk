@@ -42,6 +42,7 @@
 * [patch_compute_instance](#patch_compute_instance) - Update an instance
 * [patch_compute_key](#patch_compute_key) - Update a key
 * [patch_compute_service](#patch_compute_service) - Update a service
+* [patch_compute_snapshot](#patch_compute_snapshot) - Update a snapshot
 * [patch_compute_template](#patch_compute_template) - Update a template
 * [patch_compute_volume](#patch_compute_volume) - Update a volume
 * [remove_compute_deployment](#remove_compute_deployment) - Remove a deployment
@@ -59,6 +60,7 @@
 * [update_compute_instance](#update_compute_instance) - Update an instance
 * [update_compute_key](#update_compute_key) - Update a key
 * [update_compute_service](#update_compute_service) - Update a service
+* [update_compute_snapshot](#update_compute_snapshot) - Update a snapshot
 * [update_compute_template](#update_compute_template) - Update a template
 * [update_compute_volume](#update_compute_volume) - Update a volume
 
@@ -88,13 +90,13 @@ with UnifiedTo(
             "commit_message": "copy primary pixel",
             "created_at": parse_datetime("2022-06-07T03:52:04.613Z"),
             "environment": shared.Environment.PREVIEW,
-            "finished_at": parse_datetime("2025-09-17T02:57:16.305Z"),
-            "id": "81e9500e-3969-4776-a745-1ee6e9a04fbf",
+            "finished_at": parse_datetime("2025-09-17T20:16:33.431Z"),
+            "id": "135399bd-4afc-4085-994f-5d4b4e8d70ba",
             "metadata": [],
-            "started_at": parse_datetime("2025-04-26T14:10:48.764Z"),
+            "started_at": parse_datetime("2025-04-27T05:25:34.652Z"),
             "status": shared.ComputeDeploymentStatus.LIVE,
             "trigger": shared.Trigger.API,
-            "updated_at": parse_datetime("2026-03-22T02:49:24.283Z"),
+            "updated_at": parse_datetime("2026-03-22T22:50:02.924Z"),
             "url": "https://comfortable-petal.name",
         },
         "connection_id": "<id>",
@@ -146,12 +148,12 @@ with UnifiedTo(
     res = unified_to.compute.create_compute_domain(request={
         "compute_domain": {
             "created_at": parse_datetime("2019-11-22T16:38:26.009Z"),
-            "id": "14221169-e490-4b16-91e1-5cfce1ae3a14",
+            "id": "5eb498a8-94e4-4462-a50a-3eb13db80486",
             "is_primary": False,
             "metadata": [],
             "name": "mysterious-republican.usable-section.info",
             "status": shared.ComputeDomainStatus.PENDING,
-            "updated_at": parse_datetime("2023-11-17T22:27:21.792Z"),
+            "updated_at": parse_datetime("2023-11-18T11:51:05.949Z"),
         },
         "connection_id": "<id>",
     })
@@ -205,11 +207,11 @@ with UnifiedTo(
             "environments": [
                 shared.PropertyComputeEnvvarEnvironments.PREVIEW,
             ],
-            "id": "75801ea8-1b67-4636-bd49-c4b3b488c6f1",
+            "id": "23776726-d0b4-4dae-bf98-b934d4ade924",
             "is_secret": True,
             "metadata": [],
             "name": "AEGER_SUBSTANTIA",
-            "updated_at": parse_datetime("2025-07-22T08:35:17.216Z"),
+            "updated_at": parse_datetime("2025-07-23T02:09:28.210Z"),
         },
         "connection_id": "<id>",
     })
@@ -277,7 +279,7 @@ with UnifiedTo(
             ],
             "gpu_count": 0.0,
             "has_internet_access": True,
-            "id": "348ba7a5-adde-4e8d-ae63-174faee56835",
+            "id": "ce016187-322c-4cf2-a073-90934db3d860",
             "image": "ubuntu:24.04",
             "market": shared.Market.SPOT,
             "memory_mb": 2048.0,
@@ -292,11 +294,11 @@ with UnifiedTo(
                 "port": 22.0,
                 "username": "root",
             },
-            "started_at": parse_datetime("2025-04-08T05:27:11.709Z"),
+            "started_at": parse_datetime("2025-04-08T19:44:31.896Z"),
             "status": shared.ComputeInstanceStatus.ERROR,
             "status_reason": "Sponte quasi adversus alioqui reiciendis arca carmen canis.",
             "type": shared.ComputeInstanceType.BAREMETAL,
-            "updated_at": parse_datetime("2025-07-02T21:19:33.282Z"),
+            "updated_at": parse_datetime("2025-07-03T12:57:16.464Z"),
         },
         "connection_id": "<id>",
     })
@@ -347,11 +349,11 @@ with UnifiedTo(
     res = unified_to.compute.create_compute_key(request={
         "compute_key": {
             "created_at": parse_datetime("2023-08-19T14:31:46.492Z"),
-            "id": "000f1b8b-e1cc-4c16-86e8-b706868a89cd",
+            "id": "a06ce0f1-be56-4760-a5d9-817ae05732b4",
             "metadata": [],
             "name": "nienow-secret",
             "type": shared.ComputeKeyType.SECRET,
-            "updated_at": parse_datetime("2024-10-15T22:18:03.503Z"),
+            "updated_at": parse_datetime("2024-10-16T06:41:22.429Z"),
         },
         "connection_id": "<id>",
     })
@@ -404,7 +406,7 @@ with UnifiedTo(
             "branch": "main",
             "build_command": "npm run build",
             "created_at": parse_datetime("2023-10-04T02:06:29.391Z"),
-            "id": "c5fb2d57-0809-455e-8c8c-d107584c8619",
+            "id": "9f98cf23-69bd-4981-810f-c1d3e2a80133",
             "instance_count": 6.0,
             "max_instance_count": 6.0,
             "metadata": [],
@@ -415,7 +417,7 @@ with UnifiedTo(
             "runtime": "python",
             "status": shared.ComputeServiceStatus.SUSPENDED,
             "type": shared.ComputeServiceType.OTHER,
-            "updated_at": parse_datetime("2025-04-17T00:43:39.127Z"),
+            "updated_at": parse_datetime("2025-04-17T12:17:14.868Z"),
             "url": "https://tame-sideboard.rotating-shoulder.biz",
         },
         "connection_id": "<id>",
@@ -467,13 +469,13 @@ with UnifiedTo(
     res = unified_to.compute.create_compute_snapshot(request={
         "compute_snapshot": {
             "created_at": parse_datetime("2021-09-24T14:40:06.110Z"),
-            "id": "793c2204-d5e4-40a7-9ed7-5aa3243cec05",
+            "id": "8051edc7-5e22-4bb3-922d-c18ed28f7bba",
             "metadata": [],
             "name": "snap-alius",
             "size_mb": 169984.0,
             "status": shared.ComputeSnapshotStatus.DELETING,
             "type": shared.ComputeSnapshotType.DISK,
-            "updated_at": parse_datetime("2026-04-22T04:06:53.794Z"),
+            "updated_at": parse_datetime("2026-04-23T00:58:54.499Z"),
         },
         "connection_id": "<id>",
     })
@@ -529,10 +531,10 @@ with UnifiedTo(
             "dockerfile": "FROM ubuntu:24.04\nRUN apt-get update",
             "gpu_count": 2.0,
             "gpu_model": shared.ComputeTemplateGpuModel.NVIDIA_GH200,
-            "id": "a0b0005f-28f3-4656-aeea-2f3458d42681",
+            "id": "c07ed1af-a728-43d4-aaee-6a67f028e2bc",
             "image": "perfumed-molasses/cohibeo:5.2",
             "is_public": False,
-            "last_used_at": parse_datetime("2026-04-13T22:23:39.131Z"),
+            "last_used_at": parse_datetime("2026-04-14T18:08:18.265Z"),
             "memory_mb": 8192.0,
             "metadata": [],
             "name": "multi-byte-card",
@@ -540,7 +542,7 @@ with UnifiedTo(
                 8080.0,
             ],
             "status": shared.ComputeTemplateStatus.OTHER,
-            "updated_at": parse_datetime("2025-02-26T06:49:03.335Z"),
+            "updated_at": parse_datetime("2025-02-26T19:28:05.758Z"),
         },
         "connection_id": "<id>",
     })
@@ -591,14 +593,14 @@ with UnifiedTo(
     res = unified_to.compute.create_compute_volume(request={
         "compute_volume": {
             "created_at": parse_datetime("2022-11-15T15:12:48.055Z"),
-            "id": "e7af6226-f7de-4565-b425-bafe8d4b6836",
+            "id": "6256cebb-39ac-4636-af0c-325eec114c25",
             "instance_ids": [],
             "metadata": [],
             "name": "vol-solum",
             "size_mb": 1024000.0,
             "status": shared.ComputeVolumeStatus.OTHER,
             "type": shared.ComputeVolumeType.HIGH_PERFORMANCE,
-            "updated_at": parse_datetime("2024-02-17T18:46:57.118Z"),
+            "updated_at": parse_datetime("2024-02-18T02:09:19.617Z"),
             "used_mb": 524986.0,
         },
         "connection_id": "<id>",
@@ -1723,13 +1725,13 @@ with UnifiedTo(
             "commit_message": "copy primary pixel",
             "created_at": parse_datetime("2022-06-07T03:52:04.613Z"),
             "environment": shared.Environment.PREVIEW,
-            "finished_at": parse_datetime("2025-09-17T02:57:16.319Z"),
-            "id": "877f46f4-14a2-44f2-8afa-c87eeb619235",
+            "finished_at": parse_datetime("2025-09-17T20:16:33.439Z"),
+            "id": "7b0a6e04-0bfb-4b15-bdf5-4c6eeb437e56",
             "metadata": [],
-            "started_at": parse_datetime("2025-04-26T14:10:48.777Z"),
+            "started_at": parse_datetime("2025-04-27T05:25:34.659Z"),
             "status": shared.ComputeDeploymentStatus.LIVE,
             "trigger": shared.Trigger.API,
-            "updated_at": parse_datetime("2026-03-22T02:49:24.301Z"),
+            "updated_at": parse_datetime("2026-03-22T22:50:02.933Z"),
             "url": "https://comfortable-petal.name",
         },
         "connection_id": "<id>",
@@ -1782,12 +1784,12 @@ with UnifiedTo(
     res = unified_to.compute.patch_compute_domain(request={
         "compute_domain": {
             "created_at": parse_datetime("2019-11-22T16:38:26.009Z"),
-            "id": "1a4235c9-bd48-4915-89d7-4bafd3068d56",
+            "id": "980fdb16-3b38-478b-a5a7-f2e0a031b32a",
             "is_primary": False,
             "metadata": [],
             "name": "mysterious-republican.usable-section.info",
             "status": shared.ComputeDomainStatus.PENDING,
-            "updated_at": parse_datetime("2023-11-17T22:27:21.796Z"),
+            "updated_at": parse_datetime("2023-11-18T11:51:05.954Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1842,11 +1844,11 @@ with UnifiedTo(
             "environments": [
                 shared.PropertyComputeEnvvarEnvironments.PREVIEW,
             ],
-            "id": "1a0d4689-2192-4254-a8d3-cec4f6f7574f",
+            "id": "0ccb1825-0c5c-44e9-b079-6dd748b86887",
             "is_secret": True,
             "metadata": [],
             "name": "AEGER_SUBSTANTIA",
-            "updated_at": parse_datetime("2025-07-22T08:35:17.232Z"),
+            "updated_at": parse_datetime("2025-07-23T02:09:28.218Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1915,7 +1917,7 @@ with UnifiedTo(
             ],
             "gpu_count": 0.0,
             "has_internet_access": True,
-            "id": "32574808-7b54-4b13-ac95-a306c80f5605",
+            "id": "f69f301b-06c9-4982-a425-854c3c11a865",
             "image": "ubuntu:24.04",
             "market": shared.Market.SPOT,
             "memory_mb": 2048.0,
@@ -1930,11 +1932,11 @@ with UnifiedTo(
                 "port": 22.0,
                 "username": "root",
             },
-            "started_at": parse_datetime("2025-04-08T05:27:11.730Z"),
+            "started_at": parse_datetime("2025-04-08T19:44:31.920Z"),
             "status": shared.ComputeInstanceStatus.ERROR,
             "status_reason": "Sponte quasi adversus alioqui reiciendis arca carmen canis.",
             "type": shared.ComputeInstanceType.BAREMETAL,
-            "updated_at": parse_datetime("2025-07-02T21:19:33.305Z"),
+            "updated_at": parse_datetime("2025-07-03T12:57:16.490Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1986,11 +1988,11 @@ with UnifiedTo(
     res = unified_to.compute.patch_compute_key(request={
         "compute_key": {
             "created_at": parse_datetime("2023-08-19T14:31:46.492Z"),
-            "id": "117e68fa-c0dc-4002-9f49-600542678f5a",
+            "id": "ccde1163-3fea-4d23-9961-4e06047ae481",
             "metadata": [],
             "name": "nienow-secret",
             "type": shared.ComputeKeyType.SECRET,
-            "updated_at": parse_datetime("2024-10-15T22:18:03.506Z"),
+            "updated_at": parse_datetime("2024-10-16T06:41:22.433Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2044,7 +2046,7 @@ with UnifiedTo(
             "branch": "main",
             "build_command": "npm run build",
             "created_at": parse_datetime("2023-10-04T02:06:29.391Z"),
-            "id": "1d0f094c-fe4d-4612-a4cc-f88a1e930a01",
+            "id": "428adcb5-327d-4861-adfa-57dbfcfadc22",
             "instance_count": 6.0,
             "max_instance_count": 6.0,
             "metadata": [],
@@ -2055,7 +2057,7 @@ with UnifiedTo(
             "runtime": "python",
             "status": shared.ComputeServiceStatus.SUSPENDED,
             "type": shared.ComputeServiceType.OTHER,
-            "updated_at": parse_datetime("2025-04-17T00:43:39.135Z"),
+            "updated_at": parse_datetime("2025-04-17T12:17:14.876Z"),
             "url": "https://tame-sideboard.rotating-shoulder.biz",
         },
         "connection_id": "<id>",
@@ -2079,6 +2081,64 @@ with UnifiedTo(
 ### Response
 
 **[operations.PatchComputeServiceResponse](../../models/operations/patchcomputeserviceresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## patch_compute_snapshot
+
+Updates the ComputeSnapshot identified by `id`. Provide the unified ComputeSnapshot fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchComputeSnapshot" method="patch" path="/compute/{connection_id}/snapshot/{id}" example="compute_snapshot" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.compute.patch_compute_snapshot(request={
+        "compute_snapshot": {
+            "created_at": parse_datetime("2021-09-24T14:40:06.110Z"),
+            "id": "61f1ee1a-e728-466c-ac34-d1ac62844197",
+            "metadata": [],
+            "name": "snap-alius",
+            "size_mb": 169984.0,
+            "status": shared.ComputeSnapshotStatus.DELETING,
+            "type": shared.ComputeSnapshotType.DISK,
+            "updated_at": parse_datetime("2026-04-23T00:58:54.506Z"),
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.compute_snapshot is not None
+
+    # Handle response
+    print(res.compute_snapshot)
+
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.PatchComputeSnapshotRequest](../../models/operations/patchcomputesnapshotrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+
+### Response
+
+**[operations.PatchComputeSnapshotResponse](../../models/operations/patchcomputesnapshotresponse.md)**
 
 ### Errors
 
@@ -2113,10 +2173,10 @@ with UnifiedTo(
             "dockerfile": "FROM ubuntu:24.04\nRUN apt-get update",
             "gpu_count": 2.0,
             "gpu_model": shared.ComputeTemplateGpuModel.NVIDIA_GH200,
-            "id": "11364eb1-9473-48e8-9c7d-610610cedcc9",
+            "id": "01ca295d-74d0-4b69-b523-f681cf79008a",
             "image": "perfumed-molasses/cohibeo:5.2",
             "is_public": False,
-            "last_used_at": parse_datetime("2026-04-13T22:23:39.149Z"),
+            "last_used_at": parse_datetime("2026-04-14T18:08:18.282Z"),
             "memory_mb": 8192.0,
             "metadata": [],
             "name": "multi-byte-card",
@@ -2124,7 +2184,7 @@ with UnifiedTo(
                 8080.0,
             ],
             "status": shared.ComputeTemplateStatus.OTHER,
-            "updated_at": parse_datetime("2025-02-26T06:49:03.346Z"),
+            "updated_at": parse_datetime("2025-02-26T19:28:05.768Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2176,14 +2236,14 @@ with UnifiedTo(
     res = unified_to.compute.patch_compute_volume(request={
         "compute_volume": {
             "created_at": parse_datetime("2022-11-15T15:12:48.055Z"),
-            "id": "16bf1b4f-1110-4750-9355-26ba8e739dd7",
+            "id": "859ffe27-713a-42cd-9d5e-0e3ffab1e5ab",
             "instance_ids": [],
             "metadata": [],
             "name": "vol-solum",
             "size_mb": 1024000.0,
             "status": shared.ComputeVolumeStatus.OTHER,
             "type": shared.ComputeVolumeType.HIGH_PERFORMANCE,
-            "updated_at": parse_datetime("2024-02-17T18:46:57.123Z"),
+            "updated_at": parse_datetime("2024-02-18T02:09:19.621Z"),
             "used_mb": 524986.0,
         },
         "connection_id": "<id>",
@@ -2663,13 +2723,13 @@ with UnifiedTo(
             "commit_message": "copy primary pixel",
             "created_at": parse_datetime("2022-06-07T03:52:04.613Z"),
             "environment": shared.Environment.PREVIEW,
-            "finished_at": parse_datetime("2025-09-17T02:57:16.319Z"),
-            "id": "877f46f4-14a2-44f2-8afa-c87eeb619235",
+            "finished_at": parse_datetime("2025-09-17T20:16:33.439Z"),
+            "id": "7b0a6e04-0bfb-4b15-bdf5-4c6eeb437e56",
             "metadata": [],
-            "started_at": parse_datetime("2025-04-26T14:10:48.777Z"),
+            "started_at": parse_datetime("2025-04-27T05:25:34.659Z"),
             "status": shared.ComputeDeploymentStatus.LIVE,
             "trigger": shared.Trigger.API,
-            "updated_at": parse_datetime("2026-03-22T02:49:24.301Z"),
+            "updated_at": parse_datetime("2026-03-22T22:50:02.933Z"),
             "url": "https://comfortable-petal.name",
         },
         "connection_id": "<id>",
@@ -2722,12 +2782,12 @@ with UnifiedTo(
     res = unified_to.compute.update_compute_domain(request={
         "compute_domain": {
             "created_at": parse_datetime("2019-11-22T16:38:26.009Z"),
-            "id": "1a4235c9-bd48-4915-89d7-4bafd3068d56",
+            "id": "980fdb16-3b38-478b-a5a7-f2e0a031b32a",
             "is_primary": False,
             "metadata": [],
             "name": "mysterious-republican.usable-section.info",
             "status": shared.ComputeDomainStatus.PENDING,
-            "updated_at": parse_datetime("2023-11-17T22:27:21.796Z"),
+            "updated_at": parse_datetime("2023-11-18T11:51:05.954Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2782,11 +2842,11 @@ with UnifiedTo(
             "environments": [
                 shared.PropertyComputeEnvvarEnvironments.PREVIEW,
             ],
-            "id": "1a0d4689-2192-4254-a8d3-cec4f6f7574f",
+            "id": "0ccb1825-0c5c-44e9-b079-6dd748b86887",
             "is_secret": True,
             "metadata": [],
             "name": "AEGER_SUBSTANTIA",
-            "updated_at": parse_datetime("2025-07-22T08:35:17.232Z"),
+            "updated_at": parse_datetime("2025-07-23T02:09:28.218Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2855,7 +2915,7 @@ with UnifiedTo(
             ],
             "gpu_count": 0.0,
             "has_internet_access": True,
-            "id": "32574808-7b54-4b13-ac95-a306c80f5605",
+            "id": "f69f301b-06c9-4982-a425-854c3c11a865",
             "image": "ubuntu:24.04",
             "market": shared.Market.SPOT,
             "memory_mb": 2048.0,
@@ -2870,11 +2930,11 @@ with UnifiedTo(
                 "port": 22.0,
                 "username": "root",
             },
-            "started_at": parse_datetime("2025-04-08T05:27:11.730Z"),
+            "started_at": parse_datetime("2025-04-08T19:44:31.920Z"),
             "status": shared.ComputeInstanceStatus.ERROR,
             "status_reason": "Sponte quasi adversus alioqui reiciendis arca carmen canis.",
             "type": shared.ComputeInstanceType.BAREMETAL,
-            "updated_at": parse_datetime("2025-07-02T21:19:33.305Z"),
+            "updated_at": parse_datetime("2025-07-03T12:57:16.490Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2926,11 +2986,11 @@ with UnifiedTo(
     res = unified_to.compute.update_compute_key(request={
         "compute_key": {
             "created_at": parse_datetime("2023-08-19T14:31:46.492Z"),
-            "id": "117e68fa-c0dc-4002-9f49-600542678f5a",
+            "id": "ccde1163-3fea-4d23-9961-4e06047ae481",
             "metadata": [],
             "name": "nienow-secret",
             "type": shared.ComputeKeyType.SECRET,
-            "updated_at": parse_datetime("2024-10-15T22:18:03.506Z"),
+            "updated_at": parse_datetime("2024-10-16T06:41:22.433Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2984,7 +3044,7 @@ with UnifiedTo(
             "branch": "main",
             "build_command": "npm run build",
             "created_at": parse_datetime("2023-10-04T02:06:29.391Z"),
-            "id": "1d0f094c-fe4d-4612-a4cc-f88a1e930a01",
+            "id": "428adcb5-327d-4861-adfa-57dbfcfadc22",
             "instance_count": 6.0,
             "max_instance_count": 6.0,
             "metadata": [],
@@ -2995,7 +3055,7 @@ with UnifiedTo(
             "runtime": "python",
             "status": shared.ComputeServiceStatus.SUSPENDED,
             "type": shared.ComputeServiceType.OTHER,
-            "updated_at": parse_datetime("2025-04-17T00:43:39.135Z"),
+            "updated_at": parse_datetime("2025-04-17T12:17:14.876Z"),
             "url": "https://tame-sideboard.rotating-shoulder.biz",
         },
         "connection_id": "<id>",
@@ -3019,6 +3079,64 @@ with UnifiedTo(
 ### Response
 
 **[operations.UpdateComputeServiceResponse](../../models/operations/updatecomputeserviceresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## update_compute_snapshot
+
+Updates the ComputeSnapshot identified by `id`. Provide the unified ComputeSnapshot fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="updateComputeSnapshot" method="put" path="/compute/{connection_id}/snapshot/{id}" example="compute_snapshot" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.compute.update_compute_snapshot(request={
+        "compute_snapshot": {
+            "created_at": parse_datetime("2021-09-24T14:40:06.110Z"),
+            "id": "61f1ee1a-e728-466c-ac34-d1ac62844197",
+            "metadata": [],
+            "name": "snap-alius",
+            "size_mb": 169984.0,
+            "status": shared.ComputeSnapshotStatus.DELETING,
+            "type": shared.ComputeSnapshotType.DISK,
+            "updated_at": parse_datetime("2026-04-23T00:58:54.506Z"),
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.compute_snapshot is not None
+
+    # Handle response
+    print(res.compute_snapshot)
+
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.UpdateComputeSnapshotRequest](../../models/operations/updatecomputesnapshotrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+
+### Response
+
+**[operations.UpdateComputeSnapshotResponse](../../models/operations/updatecomputesnapshotresponse.md)**
 
 ### Errors
 
@@ -3053,10 +3171,10 @@ with UnifiedTo(
             "dockerfile": "FROM ubuntu:24.04\nRUN apt-get update",
             "gpu_count": 2.0,
             "gpu_model": shared.ComputeTemplateGpuModel.NVIDIA_GH200,
-            "id": "11364eb1-9473-48e8-9c7d-610610cedcc9",
+            "id": "01ca295d-74d0-4b69-b523-f681cf79008a",
             "image": "perfumed-molasses/cohibeo:5.2",
             "is_public": False,
-            "last_used_at": parse_datetime("2026-04-13T22:23:39.149Z"),
+            "last_used_at": parse_datetime("2026-04-14T18:08:18.282Z"),
             "memory_mb": 8192.0,
             "metadata": [],
             "name": "multi-byte-card",
@@ -3064,7 +3182,7 @@ with UnifiedTo(
                 8080.0,
             ],
             "status": shared.ComputeTemplateStatus.OTHER,
-            "updated_at": parse_datetime("2025-02-26T06:49:03.346Z"),
+            "updated_at": parse_datetime("2025-02-26T19:28:05.768Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -3116,14 +3234,14 @@ with UnifiedTo(
     res = unified_to.compute.update_compute_volume(request={
         "compute_volume": {
             "created_at": parse_datetime("2022-11-15T15:12:48.055Z"),
-            "id": "16bf1b4f-1110-4750-9355-26ba8e739dd7",
+            "id": "859ffe27-713a-42cd-9d5e-0e3ffab1e5ab",
             "instance_ids": [],
             "metadata": [],
             "name": "vol-solum",
             "size_mb": 1024000.0,
             "status": shared.ComputeVolumeStatus.OTHER,
             "type": shared.ComputeVolumeType.HIGH_PERFORMANCE,
-            "updated_at": parse_datetime("2024-02-17T18:46:57.123Z"),
+            "updated_at": parse_datetime("2024-02-18T02:09:19.621Z"),
             "used_mb": 524986.0,
         },
         "connection_id": "<id>",

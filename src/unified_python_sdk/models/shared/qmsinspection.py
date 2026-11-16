@@ -26,8 +26,6 @@ class QmsInspectionResult(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class QmsInspectionStatus(str, Enum, metaclass=utils.OpenEnumMeta):
-    r"""Normalized status of a quality record"""
-
     OPEN = "OPEN"
     IN_PROGRESS = "IN_PROGRESS"
     IN_REVIEW = "IN_REVIEW"
@@ -79,7 +77,6 @@ class QmsInspectionTypedDict(TypedDict):
     revision: NotRequired[str]
     serial_number: NotRequired[str]
     status: NotRequired[QmsInspectionStatus]
-    r"""Normalized status of a quality record"""
     supplier_name: NotRequired[str]
     type: NotRequired[QmsInspectionType]
     updated_at: NotRequired[datetime]
@@ -147,7 +144,6 @@ class QmsInspection(BaseModel):
     serial_number: Optional[str] = None
 
     status: Optional[QmsInspectionStatus] = None
-    r"""Normalized status of a quality record"""
 
     supplier_name: Optional[str] = None
 

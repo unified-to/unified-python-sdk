@@ -27,6 +27,8 @@ class KmsPageType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 class KmsPageTypedDict(TypedDict):
     type: KmsPageType
+    content: NotRequired[str]
+    r"""The page body, in the format given by `type`. Used to create/update only; read a page's body from `download_url`."""
     created_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     download_url: NotRequired[str]
@@ -49,6 +51,9 @@ class KmsPageTypedDict(TypedDict):
 
 class KmsPage(BaseModel):
     type: KmsPageType
+
+    content: Optional[str] = None
+    r"""The page body, in the format given by `type`. Used to create/update only; read a page's body from `download_url`."""
 
     created_at: Optional[datetime] = None
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
@@ -97,6 +102,7 @@ class KmsPage(BaseModel):
     def serialize_model(self, handler):
         optional_fields = set(
             [
+                "content",
                 "created_at",
                 "download_url",
                 "has_children",

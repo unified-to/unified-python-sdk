@@ -8,6 +8,7 @@
 * [get_plm_part](#get_plm_part) - Retrieve a part
 * [list_plm_parts](#list_plm_parts) - List all parts
 * [patch_plm_part](#patch_plm_part) - Update a part
+* [remove_plm_part](#remove_plm_part) - Remove a part
 * [update_plm_part](#update_plm_part) - Update a part
 
 ## create_plm_part
@@ -35,10 +36,10 @@ with UnifiedTo(
             "description": "Pectus tero ulterius aestivus talis tero ullam cruciamentum.",
             "document_ids": [],
             "file_ids": [],
-            "id": "60b7efd1-3c86-434c-b4ae-ae7ce4b0ce35",
+            "id": "5fd45e3c-4a77-4ace-8d9d-e1e91f54bc9a",
             "is_assembly": False,
             "lifecycle_state": "Design",
-            "master_identifier": "36adf09d-eb88-42ca-a467-b3d80b9bdcba",
+            "master_identifier": "124a759f-5d74-4b7d-92c0-090f1e40e953",
             "metadata": [],
             "name": "grumpy PCB",
             "number": "PRT-009154",
@@ -48,7 +49,7 @@ with UnifiedTo(
             "status": shared.PlmPartStatus.IN_WORK,
             "type": shared.PlmPartType.SOFTWARE,
             "unit_of_measure": "EA",
-            "updated_at": parse_datetime("2021-04-12T16:48:43.652Z"),
+            "updated_at": parse_datetime("2021-04-12T22:59:23.166Z"),
             "url": "https://inborn-independence.info",
         },
         "connection_id": "<id>",
@@ -196,10 +197,10 @@ with UnifiedTo(
             "description": "Pectus tero ulterius aestivus talis tero ullam cruciamentum.",
             "document_ids": [],
             "file_ids": [],
-            "id": "551c9fef-abb9-4605-b384-1ffbbc140223",
+            "id": "9bc76715-50e1-46ac-af71-3a2d6eb32abc",
             "is_assembly": False,
             "lifecycle_state": "Design",
-            "master_identifier": "92bf2b9a-5949-4fb2-85ab-f10e84bfe2df",
+            "master_identifier": "46b87da6-e098-45d4-aa18-e68077fa14c2",
             "metadata": [],
             "name": "grumpy PCB",
             "number": "PRT-009154",
@@ -209,7 +210,7 @@ with UnifiedTo(
             "status": shared.PlmPartStatus.IN_WORK,
             "type": shared.PlmPartType.SOFTWARE,
             "unit_of_measure": "EA",
-            "updated_at": parse_datetime("2021-04-12T16:48:43.656Z"),
+            "updated_at": parse_datetime("2021-04-12T22:59:23.171Z"),
             "url": "https://inborn-independence.info",
         },
         "connection_id": "<id>",
@@ -233,6 +234,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.PatchPlmPartResponse](../../models/operations/patchplmpartresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## remove_plm_part
+
+Deletes the PlmPart identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removePlmPart" method="delete" path="/plm/{connection_id}/part/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.part.remove_plm_part(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.RemovePlmPartRequest](../../models/operations/removeplmpartrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
+
+### Response
+
+**[operations.RemovePlmPartResponse](../../models/operations/removeplmpartresponse.md)**
 
 ### Errors
 
@@ -265,10 +313,10 @@ with UnifiedTo(
             "description": "Pectus tero ulterius aestivus talis tero ullam cruciamentum.",
             "document_ids": [],
             "file_ids": [],
-            "id": "551c9fef-abb9-4605-b384-1ffbbc140223",
+            "id": "9bc76715-50e1-46ac-af71-3a2d6eb32abc",
             "is_assembly": False,
             "lifecycle_state": "Design",
-            "master_identifier": "92bf2b9a-5949-4fb2-85ab-f10e84bfe2df",
+            "master_identifier": "46b87da6-e098-45d4-aa18-e68077fa14c2",
             "metadata": [],
             "name": "grumpy PCB",
             "number": "PRT-009154",
@@ -278,7 +326,7 @@ with UnifiedTo(
             "status": shared.PlmPartStatus.IN_WORK,
             "type": shared.PlmPartType.SOFTWARE,
             "unit_of_measure": "EA",
-            "updated_at": parse_datetime("2021-04-12T16:48:43.656Z"),
+            "updated_at": parse_datetime("2021-04-12T22:59:23.171Z"),
             "url": "https://inborn-independence.info",
         },
         "connection_id": "<id>",

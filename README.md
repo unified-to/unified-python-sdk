@@ -131,7 +131,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "7ece6c9b-e3c0-4525-9100-b32542f47b14",
+            "id": "df1bea93-664a-4d46-b35a-e13d1abfcc69",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -144,7 +144,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-13T06:26:06.313Z"),
+            "updated_at": parse_datetime("2023-08-13T12:23:46.273Z"),
         },
         "connection_id": "<id>",
     })
@@ -181,7 +181,7 @@ async def main():
                 "currency": "CAD",
                 "customer_defined_code": "6170",
                 "description": "Voluptatibus valde spoliatio.",
-                "id": "7ece6c9b-e3c0-4525-9100-b32542f47b14",
+                "id": "df1bea93-664a-4d46-b35a-e13d1abfcc69",
                 "is_payable": False,
                 "metadata": [],
                 "name": "Auto Loan Account",
@@ -194,7 +194,7 @@ async def main():
                     },
                 ],
                 "type": shared.Type.ACCOUNTS_RECEIVABLE,
-                "updated_at": parse_datetime("2023-08-13T06:26:06.313Z"),
+                "updated_at": parse_datetime("2023-08-13T12:23:46.273Z"),
             },
             "connection_id": "<id>",
         })
@@ -1063,6 +1063,7 @@ asyncio.run(main())
 * [patch_compute_instance](docs/sdks/compute/README.md#patch_compute_instance) - Update an instance
 * [patch_compute_key](docs/sdks/compute/README.md#patch_compute_key) - Update a key
 * [patch_compute_service](docs/sdks/compute/README.md#patch_compute_service) - Update a service
+* [patch_compute_snapshot](docs/sdks/compute/README.md#patch_compute_snapshot) - Update a snapshot
 * [patch_compute_template](docs/sdks/compute/README.md#patch_compute_template) - Update a template
 * [patch_compute_volume](docs/sdks/compute/README.md#patch_compute_volume) - Update a volume
 * [remove_compute_deployment](docs/sdks/compute/README.md#remove_compute_deployment) - Remove a deployment
@@ -1080,6 +1081,7 @@ asyncio.run(main())
 * [update_compute_instance](docs/sdks/compute/README.md#update_compute_instance) - Update an instance
 * [update_compute_key](docs/sdks/compute/README.md#update_compute_key) - Update a key
 * [update_compute_service](docs/sdks/compute/README.md#update_compute_service) - Update a service
+* [update_compute_snapshot](docs/sdks/compute/README.md#update_compute_snapshot) - Update a snapshot
 * [update_compute_template](docs/sdks/compute/README.md#update_compute_template) - Update a template
 * [update_compute_volume](docs/sdks/compute/README.md#update_compute_volume) - Update a volume
 
@@ -1554,6 +1556,7 @@ asyncio.run(main())
 * [get_property_guest](docs/sdks/guest/README.md#get_property_guest) - Retrieve a guest
 * [list_property_guests](docs/sdks/guest/README.md#list_property_guests) - List all guests
 * [patch_property_guest](docs/sdks/guest/README.md#patch_property_guest) - Update a guest
+* [remove_property_guest](docs/sdks/guest/README.md#remove_property_guest) - Remove a guest
 * [update_property_guest](docs/sdks/guest/README.md#update_property_guest) - Update a guest
 
 ### [Healthcare](docs/sdks/healthcare/README.md)
@@ -1667,6 +1670,7 @@ asyncio.run(main())
 * [patch_hris_group](docs/sdks/hris/README.md#patch_hris_group) - Update a group
 * [patch_hris_job](docs/sdks/hris/README.md#patch_hris_job) - Update a job
 * [patch_hris_location](docs/sdks/hris/README.md#patch_hris_location) - Update a location
+* [patch_hris_taxonomy](docs/sdks/hris/README.md#patch_hris_taxonomy) - Update a taxonomy
 * [patch_hris_timeoff](docs/sdks/hris/README.md#patch_hris_timeoff) - Update a timeoff
 * [patch_hris_timeshift](docs/sdks/hris/README.md#patch_hris_timeshift) - Update a timeshift
 * [remove_hris_attendance](docs/sdks/hris/README.md#remove_hris_attendance) - Remove an attendance
@@ -1681,6 +1685,7 @@ asyncio.run(main())
 * [remove_hris_group](docs/sdks/hris/README.md#remove_hris_group) - Remove a group
 * [remove_hris_job](docs/sdks/hris/README.md#remove_hris_job) - Remove a job
 * [remove_hris_location](docs/sdks/hris/README.md#remove_hris_location) - Remove a location
+* [remove_hris_taxonomy](docs/sdks/hris/README.md#remove_hris_taxonomy) - Remove a taxonomy
 * [remove_hris_timeoff](docs/sdks/hris/README.md#remove_hris_timeoff) - Remove a timeoff
 * [remove_hris_timeshift](docs/sdks/hris/README.md#remove_hris_timeshift) - Remove a timeshift
 * [update_hris_attendance](docs/sdks/hris/README.md#update_hris_attendance) - Update an attendance
@@ -1695,6 +1700,7 @@ asyncio.run(main())
 * [update_hris_group](docs/sdks/hris/README.md#update_hris_group) - Update a group
 * [update_hris_job](docs/sdks/hris/README.md#update_hris_job) - Update a job
 * [update_hris_location](docs/sdks/hris/README.md#update_hris_location) - Update a location
+* [update_hris_taxonomy](docs/sdks/hris/README.md#update_hris_taxonomy) - Update a taxonomy
 * [update_hris_timeoff](docs/sdks/hris/README.md#update_hris_timeoff) - Update a timeoff
 * [update_hris_timeshift](docs/sdks/hris/README.md#update_hris_timeshift) - Update a timeshift
 
@@ -2185,6 +2191,7 @@ asyncio.run(main())
 * [get_plm_part](docs/sdks/part/README.md#get_plm_part) - Retrieve a part
 * [list_plm_parts](docs/sdks/part/README.md#list_plm_parts) - List all parts
 * [patch_plm_part](docs/sdks/part/README.md#patch_plm_part) - Update a part
+* [remove_plm_part](docs/sdks/part/README.md#remove_plm_part) - Remove a part
 * [update_plm_part](docs/sdks/part/README.md#update_plm_part) - Update a part
 
 ### [Passthrough](docs/sdks/passthrough/README.md)
@@ -2310,6 +2317,7 @@ asyncio.run(main())
 * [patch_plm_document](docs/sdks/plm/README.md#patch_plm_document) - Update a document
 * [patch_plm_part](docs/sdks/plm/README.md#patch_plm_part) - Update a part
 * [remove_plm_bomline](docs/sdks/plm/README.md#remove_plm_bomline) - Remove a bomline
+* [remove_plm_part](docs/sdks/plm/README.md#remove_plm_part) - Remove a part
 * [update_plm_bomline](docs/sdks/plm/README.md#update_plm_bomline) - Update a bomline
 * [update_plm_change](docs/sdks/plm/README.md#update_plm_change) - Update a change
 * [update_plm_document](docs/sdks/plm/README.md#update_plm_document) - Update a document
@@ -2412,7 +2420,9 @@ asyncio.run(main())
 * [patch_property_reservation](docs/sdks/property/README.md#patch_property_reservation) - Update a reservation
 * [patch_property_review](docs/sdks/property/README.md#patch_property_review) - Update a review
 * [remove_analytics_property](docs/sdks/property/README.md#remove_analytics_property) - Remove a property
+* [remove_property_guest](docs/sdks/property/README.md#remove_property_guest) - Remove a guest
 * [remove_property_listing](docs/sdks/property/README.md#remove_property_listing) - Remove a listing
+* [remove_property_reservation](docs/sdks/property/README.md#remove_property_reservation) - Remove a reservation
 * [update_analytics_property](docs/sdks/property/README.md#update_analytics_property) - Update a property
 * [update_property_guest](docs/sdks/property/README.md#update_property_guest) - Update a guest
 * [update_property_listing](docs/sdks/property/README.md#update_property_listing) - Update a listing
@@ -2583,6 +2593,7 @@ asyncio.run(main())
 * [patch_commerce_reservation](docs/sdks/reservation/README.md#patch_commerce_reservation) - Update a reservation
 * [patch_property_reservation](docs/sdks/reservation/README.md#patch_property_reservation) - Update a reservation
 * [remove_commerce_reservation](docs/sdks/reservation/README.md#remove_commerce_reservation) - Remove a reservation
+* [remove_property_reservation](docs/sdks/reservation/README.md#remove_property_reservation) - Remove a reservation
 * [update_commerce_reservation](docs/sdks/reservation/README.md#update_commerce_reservation) - Update a reservation
 * [update_property_reservation](docs/sdks/reservation/README.md#update_property_reservation) - Update a reservation
 
@@ -2680,7 +2691,9 @@ asyncio.run(main())
 * [list_unified_secretsmanager_instructions](docs/sdks/secretsmanager/README.md#list_unified_secretsmanager_instructions) - List secrets manager setup instructions
 * [list_unified_secretsmanager_secrets](docs/sdks/secretsmanager/README.md#list_unified_secretsmanager_secrets) - List secrets in a secrets manager
 * [list_unified_secretsmanagers](docs/sdks/secretsmanager/README.md#list_unified_secretsmanagers) - List secrets managers
+* [patch_unified_secretsmanager](docs/sdks/secretsmanager/README.md#patch_unified_secretsmanager) - Update secrets manager
 * [remove_unified_secretsmanager](docs/sdks/secretsmanager/README.md#remove_unified_secretsmanager) - Remove secrets manager
+* [update_unified_secretsmanager](docs/sdks/secretsmanager/README.md#update_unified_secretsmanager) - Update secrets manager
 
 ### [Segment](docs/sdks/segment/README.md)
 
@@ -2776,7 +2789,9 @@ asyncio.run(main())
 * [create_compute_snapshot](docs/sdks/snapshot/README.md#create_compute_snapshot) - Create a snapshot
 * [get_compute_snapshot](docs/sdks/snapshot/README.md#get_compute_snapshot) - Retrieve a snapshot
 * [list_compute_snapshots](docs/sdks/snapshot/README.md#list_compute_snapshots) - List all snapshots
+* [patch_compute_snapshot](docs/sdks/snapshot/README.md#patch_compute_snapshot) - Update a snapshot
 * [remove_compute_snapshot](docs/sdks/snapshot/README.md#remove_compute_snapshot) - Remove a snapshot
+* [update_compute_snapshot](docs/sdks/snapshot/README.md#update_compute_snapshot) - Update a snapshot
 
 ### [Social](docs/sdks/social/README.md)
 
@@ -2902,6 +2917,9 @@ asyncio.run(main())
 * [get_hris_taxonomy](docs/sdks/taxonomy/README.md#get_hris_taxonomy) - Retrieve a taxonomy
 * [list_crm_taxonomies](docs/sdks/taxonomy/README.md#list_crm_taxonomies) - List all taxonomies
 * [list_hris_taxonomies](docs/sdks/taxonomy/README.md#list_hris_taxonomies) - List all taxonomies
+* [patch_hris_taxonomy](docs/sdks/taxonomy/README.md#patch_hris_taxonomy) - Update a taxonomy
+* [remove_hris_taxonomy](docs/sdks/taxonomy/README.md#remove_hris_taxonomy) - Remove a taxonomy
+* [update_hris_taxonomy](docs/sdks/taxonomy/README.md#update_hris_taxonomy) - Update a taxonomy
 
 ### [Taxrate](docs/sdks/taxrate/README.md)
 
@@ -3067,6 +3085,7 @@ asyncio.run(main())
 * [list_unified_webhooks](docs/sdks/unified/README.md#list_unified_webhooks) - Returns all registered webhooks
 * [list_unified_workspaceintegrations](docs/sdks/unified/README.md#list_unified_workspaceintegrations) - List workspace integrations
 * [patch_unified_connection](docs/sdks/unified/README.md#patch_unified_connection) - Update connection
+* [patch_unified_secretsmanager](docs/sdks/unified/README.md#patch_unified_secretsmanager) - Update secrets manager
 * [patch_unified_webhook](docs/sdks/unified/README.md#patch_unified_webhook) - Update webhook subscription
 * [patch_unified_webhook_resume](docs/sdks/unified/README.md#patch_unified_webhook_resume) - Resume an unhealthy webhook subscription
 * [patch_unified_webhook_trigger](docs/sdks/unified/README.md#patch_unified_webhook_trigger) - Trigger webhook
@@ -3077,6 +3096,7 @@ asyncio.run(main())
 * [remove_unified_webhook](docs/sdks/unified/README.md#remove_unified_webhook) - Remove webhook subscription
 * [remove_unified_workspaceintegration](docs/sdks/unified/README.md#remove_unified_workspaceintegration) - Remove workspace integration
 * [update_unified_connection](docs/sdks/unified/README.md#update_unified_connection) - Update connection
+* [update_unified_secretsmanager](docs/sdks/unified/README.md#update_unified_secretsmanager) - Update secrets manager
 * [update_unified_webhook](docs/sdks/unified/README.md#update_unified_webhook) - Update webhook subscription
 * [update_unified_webhook_resume](docs/sdks/unified/README.md#update_unified_webhook_resume) - Resume an unhealthy webhook subscription
 * [update_unified_webhook_trigger](docs/sdks/unified/README.md#update_unified_webhook_trigger) - Trigger webhook
@@ -3237,7 +3257,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "7ece6c9b-e3c0-4525-9100-b32542f47b14",
+            "id": "df1bea93-664a-4d46-b35a-e13d1abfcc69",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3250,7 +3270,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-13T06:26:06.313Z"),
+            "updated_at": parse_datetime("2023-08-13T12:23:46.273Z"),
         },
         "connection_id": "<id>",
     },
@@ -3284,7 +3304,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "7ece6c9b-e3c0-4525-9100-b32542f47b14",
+            "id": "df1bea93-664a-4d46-b35a-e13d1abfcc69",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3297,7 +3317,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-13T06:26:06.313Z"),
+            "updated_at": parse_datetime("2023-08-13T12:23:46.273Z"),
         },
         "connection_id": "<id>",
     })
@@ -3345,7 +3365,7 @@ with UnifiedTo(
                 "currency": "CAD",
                 "customer_defined_code": "6170",
                 "description": "Voluptatibus valde spoliatio.",
-                "id": "7ece6c9b-e3c0-4525-9100-b32542f47b14",
+                "id": "df1bea93-664a-4d46-b35a-e13d1abfcc69",
                 "is_payable": False,
                 "metadata": [],
                 "name": "Auto Loan Account",
@@ -3358,7 +3378,7 @@ with UnifiedTo(
                     },
                 ],
                 "type": shared.Type.ACCOUNTS_RECEIVABLE,
-                "updated_at": parse_datetime("2023-08-13T06:26:06.313Z"),
+                "updated_at": parse_datetime("2023-08-13T12:23:46.273Z"),
             },
             "connection_id": "<id>",
         })
@@ -3436,7 +3456,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "7ece6c9b-e3c0-4525-9100-b32542f47b14",
+            "id": "df1bea93-664a-4d46-b35a-e13d1abfcc69",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3449,7 +3469,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-13T06:26:06.313Z"),
+            "updated_at": parse_datetime("2023-08-13T12:23:46.273Z"),
         },
         "connection_id": "<id>",
     })
@@ -3484,7 +3504,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "7ece6c9b-e3c0-4525-9100-b32542f47b14",
+            "id": "df1bea93-664a-4d46-b35a-e13d1abfcc69",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3497,7 +3517,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-13T06:26:06.313Z"),
+            "updated_at": parse_datetime("2023-08-13T12:23:46.273Z"),
         },
         "connection_id": "<id>",
     })
@@ -3640,7 +3660,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "7ece6c9b-e3c0-4525-9100-b32542f47b14",
+            "id": "df1bea93-664a-4d46-b35a-e13d1abfcc69",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3653,7 +3673,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-13T06:26:06.313Z"),
+            "updated_at": parse_datetime("2023-08-13T12:23:46.273Z"),
         },
         "connection_id": "<id>",
     })

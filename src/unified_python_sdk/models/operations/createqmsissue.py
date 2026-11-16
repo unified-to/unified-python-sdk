@@ -54,7 +54,7 @@ class CreateQmsIssueQueryParamFields(str, Enum):
 
 class CreateQmsIssueRequestTypedDict(TypedDict):
     qms_issue: shared_qmsissue.QmsIssueTypedDict
-    r"""A nonconformance, complaint, audit finding or problem report"""
+    r"""A nonconformance, complaint, audit finding or other quality issue"""
     connection_id: str
     r"""ID of the connection"""
     fields: NotRequired[List[CreateQmsIssueQueryParamFields]]
@@ -68,7 +68,7 @@ class CreateQmsIssueRequest(BaseModel):
         shared_qmsissue.QmsIssue,
         FieldMetadata(request=RequestMetadata(media_type="application/json")),
     ]
-    r"""A nonconformance, complaint, audit finding or problem report"""
+    r"""A nonconformance, complaint, audit finding or other quality issue"""
 
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))

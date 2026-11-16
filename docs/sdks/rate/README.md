@@ -28,7 +28,7 @@ with UnifiedTo(
     res = unified_to.rate.create_shipping_rate(request={
         "shipping_rate": {
             "currency": "USD",
-            "id": "8d100b30-7943-4105-9cdf-da43ed62069d",
+            "id": "8b6d25d6-60fe-4a38-8a18-c4bad5d805e0",
             "metadata": [],
             "rates": [
                 {

@@ -19,8 +19,6 @@ from unified_python_sdk.types.basemodel import current_filtered_dump
 
 
 class QmsAuditStatus(str, Enum, metaclass=utils.OpenEnumMeta):
-    r"""Normalized status of a quality record"""
-
     OPEN = "OPEN"
     IN_PROGRESS = "IN_PROGRESS"
     IN_REVIEW = "IN_REVIEW"
@@ -68,7 +66,6 @@ class QmsAuditTypedDict(TypedDict):
     start_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     status: NotRequired[QmsAuditStatus]
-    r"""Normalized status of a quality record"""
     supplier_name: NotRequired[str]
     type: NotRequired[QmsAuditType]
     updated_at: NotRequired[datetime]
@@ -128,7 +125,6 @@ class QmsAudit(BaseModel):
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     status: Optional[QmsAuditStatus] = None
-    r"""Normalized status of a quality record"""
 
     supplier_name: Optional[str] = None
 

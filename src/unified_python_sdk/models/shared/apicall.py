@@ -4,7 +4,7 @@ from __future__ import annotations
 from datetime import datetime
 from enum import Enum
 from pydantic import field_serializer, model_serializer
-from typing import Optional
+from typing import List, Optional
 from typing_extensions import NotRequired, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
@@ -51,6 +51,8 @@ class APICallTypedDict(TypedDict):
     r"""Unique identifier for this API call"""
     ip_address: NotRequired[str]
     is_billable: NotRequired[bool]
+    query_params: NotRequired[List[str]]
+    r"""Names of the query-string parameters sent with this API call (eg. updated_gte, offset). Values are not stored."""
     size: NotRequired[float]
     r"""The size of the response"""
     unified_response_time: NotRequired[float]
@@ -100,6 +102,9 @@ class APICall(BaseModel):
 
     is_billable: Optional[bool] = None
 
+    query_params: Optional[List[str]] = None
+    r"""Names of the query-string parameters sent with this API call (eg. updated_gte, offset). Values are not stored."""
+
     size: Optional[float] = None
     r"""The size of the response"""
 
@@ -137,6 +142,7 @@ class APICall(BaseModel):
                 "id",
                 "ip_address",
                 "is_billable",
+                "query_params",
                 "size",
                 "unified_response_time",
                 "user_agent",

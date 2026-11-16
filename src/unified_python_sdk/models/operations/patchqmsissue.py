@@ -54,7 +54,7 @@ class PatchQmsIssueQueryParamFields(str, Enum):
 
 class PatchQmsIssueRequestTypedDict(TypedDict):
     qms_issue: shared_qmsissue.QmsIssueTypedDict
-    r"""A nonconformance, complaint, audit finding or problem report"""
+    r"""A nonconformance, complaint, audit finding or other quality issue"""
     connection_id: str
     r"""ID of the connection"""
     id: str
@@ -70,7 +70,7 @@ class PatchQmsIssueRequest(BaseModel):
         shared_qmsissue.QmsIssue,
         FieldMetadata(request=RequestMetadata(media_type="application/json")),
     ]
-    r"""A nonconformance, complaint, audit finding or problem report"""
+    r"""A nonconformance, complaint, audit finding or other quality issue"""
 
     connection_id: Annotated[
         str, FieldMetadata(path=PathParamMetadata(style="simple", explode=False))

@@ -13,6 +13,7 @@
 * [patch_commerce_reservation](#patch_commerce_reservation) - Update a reservation
 * [patch_property_reservation](#patch_property_reservation) - Update a reservation
 * [remove_commerce_reservation](#remove_commerce_reservation) - Remove a reservation
+* [remove_property_reservation](#remove_property_reservation) - Remove a reservation
 * [update_commerce_reservation](#update_commerce_reservation) - Update a reservation
 * [update_property_reservation](#update_property_reservation) - Update a reservation
 
@@ -42,13 +43,13 @@ with UnifiedTo(
             "guest_email": "julien.bartoletti@icloud.com",
             "guest_name": "Julien Bartoletti",
             "guest_phone": "(728) 596-2620",
-            "id": "0ae5bdac-f2fe-426c-8ac9-63e365f98d9d",
+            "id": "47743fdc-1410-4271-8233-c33f3ad121fc",
             "metadata": [],
             "notes": "Adsum textilis ipsum despecto.",
             "size": 10.0,
             "start_at": parse_datetime("2021-12-18T00:40:25.125Z"),
             "status": shared.CommerceReservationStatus.PENDING,
-            "updated_at": parse_datetime("2023-01-09T08:02:29.597Z"),
+            "updated_at": parse_datetime("2023-01-09T13:08:23.542Z"),
             "url": "https://expensive-gift.org",
         },
         "connection_id": "<id>",
@@ -110,7 +111,7 @@ with UnifiedTo(
             "guest_email": "anya.parisian@hotmail.com",
             "guest_name": "Anya Parisian",
             "guests": 6.0,
-            "id": "dfb81dad-4a22-4ca6-98a5-e0450a4dfef2",
+            "id": "e89012a2-d3d1-4c7e-9ec1-9dca4d732818",
             "line_items": [
                 {
                     "amount": 1980.0,
@@ -147,7 +148,7 @@ with UnifiedTo(
             "start_at": parse_datetime("2022-09-25T17:17:08.838Z"),
             "status": shared.PropertyReservationStatus.PENDING,
             "total_amount": 2181.6,
-            "updated_at": parse_datetime("2022-11-18T02:30:28.701Z"),
+            "updated_at": parse_datetime("2022-11-18T04:55:53.352Z"),
             "web_url": "https://antique-tennis.biz/",
         },
         "connection_id": "<id>",
@@ -389,13 +390,13 @@ with UnifiedTo(
             "guest_email": "julien.bartoletti@icloud.com",
             "guest_name": "Julien Bartoletti",
             "guest_phone": "(728) 596-2620",
-            "id": "ba8c45c7-8af0-4e40-ad1e-8bad8c19407b",
+            "id": "818fe706-1d0c-4df2-ab00-a12cdffb898d",
             "metadata": [],
             "notes": "Adsum textilis ipsum despecto.",
             "size": 10.0,
             "start_at": parse_datetime("2021-12-18T00:40:25.125Z"),
             "status": shared.CommerceReservationStatus.PENDING,
-            "updated_at": parse_datetime("2023-01-09T08:02:29.600Z"),
+            "updated_at": parse_datetime("2023-01-09T13:08:23.546Z"),
             "url": "https://expensive-gift.org",
         },
         "connection_id": "<id>",
@@ -458,7 +459,7 @@ with UnifiedTo(
             "guest_email": "anya.parisian@hotmail.com",
             "guest_name": "Anya Parisian",
             "guests": 6.0,
-            "id": "a98b0b65-f58f-4b0b-b3df-30baa41d0b58",
+            "id": "7cf7282e-ec88-4d87-a2b6-f8f35e029ff3",
             "line_items": [
                 {
                     "amount": 1980.0,
@@ -495,7 +496,7 @@ with UnifiedTo(
             "start_at": parse_datetime("2022-09-25T17:17:08.838Z"),
             "status": shared.PropertyReservationStatus.PENDING,
             "total_amount": 2181.6,
-            "updated_at": parse_datetime("2022-11-18T02:30:28.704Z"),
+            "updated_at": parse_datetime("2022-11-18T04:55:53.354Z"),
             "web_url": "https://antique-tennis.biz/",
         },
         "connection_id": "<id>",
@@ -573,6 +574,53 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## remove_property_reservation
+
+Deletes the PropertyReservation identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removePropertyReservation" method="delete" path="/property/{connection_id}/reservation/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.reservation.remove_property_reservation(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                  | [operations.RemovePropertyReservationRequest](../../models/operations/removepropertyreservationrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `retries`                                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                           | :heavy_minus_sign:                                                                                         | Configuration to override the default retry behavior of the client.                                        |
+
+### Response
+
+**[operations.RemovePropertyReservationResponse](../../models/operations/removepropertyreservationresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## update_commerce_reservation
 
 Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields to change in the request body.
@@ -599,13 +647,13 @@ with UnifiedTo(
             "guest_email": "julien.bartoletti@icloud.com",
             "guest_name": "Julien Bartoletti",
             "guest_phone": "(728) 596-2620",
-            "id": "ba8c45c7-8af0-4e40-ad1e-8bad8c19407b",
+            "id": "818fe706-1d0c-4df2-ab00-a12cdffb898d",
             "metadata": [],
             "notes": "Adsum textilis ipsum despecto.",
             "size": 10.0,
             "start_at": parse_datetime("2021-12-18T00:40:25.125Z"),
             "status": shared.CommerceReservationStatus.PENDING,
-            "updated_at": parse_datetime("2023-01-09T08:02:29.600Z"),
+            "updated_at": parse_datetime("2023-01-09T13:08:23.546Z"),
             "url": "https://expensive-gift.org",
         },
         "connection_id": "<id>",
@@ -668,7 +716,7 @@ with UnifiedTo(
             "guest_email": "anya.parisian@hotmail.com",
             "guest_name": "Anya Parisian",
             "guests": 6.0,
-            "id": "a98b0b65-f58f-4b0b-b3df-30baa41d0b58",
+            "id": "7cf7282e-ec88-4d87-a2b6-f8f35e029ff3",
             "line_items": [
                 {
                     "amount": 1980.0,
@@ -705,7 +753,7 @@ with UnifiedTo(
             "start_at": parse_datetime("2022-09-25T17:17:08.838Z"),
             "status": shared.PropertyReservationStatus.PENDING,
             "total_amount": 2181.6,
-            "updated_at": parse_datetime("2022-11-18T02:30:28.704Z"),
+            "updated_at": parse_datetime("2022-11-18T04:55:53.354Z"),
             "web_url": "https://antique-tennis.biz/",
         },
         "connection_id": "<id>",

@@ -8,6 +8,9 @@
 * [get_hris_taxonomy](#get_hris_taxonomy) - Retrieve a taxonomy
 * [list_crm_taxonomies](#list_crm_taxonomies) - List all taxonomies
 * [list_hris_taxonomies](#list_hris_taxonomies) - List all taxonomies
+* [patch_hris_taxonomy](#patch_hris_taxonomy) - Update a taxonomy
+* [remove_hris_taxonomy](#remove_hris_taxonomy) - Remove a taxonomy
+* [update_hris_taxonomy](#update_hris_taxonomy) - Update a taxonomy
 
 ## create_hris_taxonomy
 
@@ -37,13 +40,13 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-06-23T02:10:00.789Z"),
             "description": "Uterque vespillo adnuo ea commodo turbo suscipio condico.",
             "domain": "Health",
-            "id": "848a53e0-909a-4c58-886e-15e3efd396c2",
+            "id": "994da848-bc0f-42c3-8f15-873674ec929e",
             "is_active": False,
             "metadata": [],
             "name": "International Functionality Architect",
             "subcategory": "Marble",
             "type": shared.HrisTaxonomyType.KNOWLEDGE,
-            "updated_at": parse_datetime("2023-06-03T16:44:19.525Z"),
+            "updated_at": parse_datetime("2023-06-03T21:47:07.538Z"),
             "url": "https://fixed-membership.biz/",
         },
         "connection_id": "<id>",
@@ -205,6 +208,183 @@ with UnifiedTo(
 ### Response
 
 **[operations.ListHrisTaxonomiesResponse](../../models/operations/listhristaxonomiesresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## patch_hris_taxonomy
+
+Updates the HrisTaxonomy identified by `id`. Provide the unified HrisTaxonomy fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchHrisTaxonomy" method="patch" path="/hris/{connection_id}/taxonomy/{id}" example="hris_taxonomy" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.taxonomy.patch_hris_taxonomy(request={
+        "hris_taxonomy": {
+            "alternative_names": [
+                "Facilitator",
+                "National",
+            ],
+            "created_at": parse_datetime("2022-06-23T02:10:00.789Z"),
+            "description": "Uterque vespillo adnuo ea commodo turbo suscipio condico.",
+            "domain": "Health",
+            "id": "3caa2881-a29a-4a41-ae2b-1c0d75ecaf62",
+            "is_active": False,
+            "metadata": [],
+            "name": "International Functionality Architect",
+            "subcategory": "Marble",
+            "type": shared.HrisTaxonomyType.KNOWLEDGE,
+            "updated_at": parse_datetime("2023-06-03T21:47:07.541Z"),
+            "url": "https://fixed-membership.biz/",
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.hris_taxonomy is not None
+
+    # Handle response
+    print(res.hris_taxonomy)
+
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.PatchHrisTaxonomyRequest](../../models/operations/patchhristaxonomyrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+
+### Response
+
+**[operations.PatchHrisTaxonomyResponse](../../models/operations/patchhristaxonomyresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## remove_hris_taxonomy
+
+Deletes the HrisTaxonomy identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeHrisTaxonomy" method="delete" path="/hris/{connection_id}/taxonomy/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.taxonomy.remove_hris_taxonomy(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.RemoveHrisTaxonomyRequest](../../models/operations/removehristaxonomyrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+
+### Response
+
+**[operations.RemoveHrisTaxonomyResponse](../../models/operations/removehristaxonomyresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## update_hris_taxonomy
+
+Updates the HrisTaxonomy identified by `id`. Provide the unified HrisTaxonomy fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="updateHrisTaxonomy" method="put" path="/hris/{connection_id}/taxonomy/{id}" example="hris_taxonomy" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.taxonomy.update_hris_taxonomy(request={
+        "hris_taxonomy": {
+            "alternative_names": [
+                "Facilitator",
+                "National",
+            ],
+            "created_at": parse_datetime("2022-06-23T02:10:00.789Z"),
+            "description": "Uterque vespillo adnuo ea commodo turbo suscipio condico.",
+            "domain": "Health",
+            "id": "3caa2881-a29a-4a41-ae2b-1c0d75ecaf62",
+            "is_active": False,
+            "metadata": [],
+            "name": "International Functionality Architect",
+            "subcategory": "Marble",
+            "type": shared.HrisTaxonomyType.KNOWLEDGE,
+            "updated_at": parse_datetime("2023-06-03T21:47:07.541Z"),
+            "url": "https://fixed-membership.biz/",
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.hris_taxonomy is not None
+
+    # Handle response
+    print(res.hris_taxonomy)
+
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.UpdateHrisTaxonomyRequest](../../models/operations/updatehristaxonomyrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+
+### Response
+
+**[operations.UpdateHrisTaxonomyResponse](../../models/operations/updatehristaxonomyresponse.md)**
 
 ### Errors
 

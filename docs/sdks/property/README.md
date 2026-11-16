@@ -31,7 +31,9 @@
 * [patch_property_reservation](#patch_property_reservation) - Update a reservation
 * [patch_property_review](#patch_property_review) - Update a review
 * [remove_analytics_property](#remove_analytics_property) - Remove a property
+* [remove_property_guest](#remove_property_guest) - Remove a guest
 * [remove_property_listing](#remove_property_listing) - Remove a listing
+* [remove_property_reservation](#remove_property_reservation) - Remove a reservation
 * [update_analytics_property](#update_analytics_property) - Update a property
 * [update_property_guest](#update_property_guest) - Update a guest
 * [update_property_listing](#update_property_listing) - Update a listing
@@ -61,10 +63,10 @@ with UnifiedTo(
         "analytics_property": {
             "created_at": parse_datetime("2021-09-05T19:04:58.430Z"),
             "currency": "USD",
-            "id": "34d763a6-b6ec-4617-9724-e1e231bf48e6",
+            "id": "d754a4a9-4d6f-4ce9-a4ac-51ac889a06cb",
             "name": "Daniel, Goldner and Dickinson",
             "timezone": "UTC",
-            "updated_at": parse_datetime("2021-09-14T23:20:48.579Z"),
+            "updated_at": parse_datetime("2021-09-14T23:27:37.178Z"),
         },
         "connection_id": "<id>",
     })
@@ -116,13 +118,13 @@ with UnifiedTo(
         "property_conversation": {
             "created_at": parse_datetime("2022-06-20T00:02:46.530Z"),
             "guest_name": "Evie Okuneva",
-            "id": "36cbc459-ccca-49bf-a101-e819330763a2",
+            "id": "66f1e34c-5f7f-4455-86f0-cd6f61bda5a1",
             "is_unread": False,
             "messages": [
                 {
                     "attachments": [],
-                    "created_at": parse_datetime("2025-05-02T20:08:20.603Z"),
-                    "id": "63314b9a-805f-400f-a27b-093e8e3ef66d",
+                    "created_at": parse_datetime("2025-05-03T11:24:38.548Z"),
+                    "id": "e87f5e00-7a9e-4ba7-8274-c5bd1e631353",
                     "is_automatic": False,
                     "message": "Vinitor caterva amor sophismata admitto colo tempore aufero torrens.",
                     "sender_name": "Evie Okuneva",
@@ -130,8 +132,8 @@ with UnifiedTo(
                 },
                 {
                     "attachments": [],
-                    "created_at": parse_datetime("2026-05-19T21:52:15.080Z"),
-                    "id": "59bc0160-b2ee-4643-b5e2-35e1bd82a41d",
+                    "created_at": parse_datetime("2026-05-20T18:42:39.597Z"),
+                    "id": "818b4caa-4213-4f6b-a4d3-1b3779664363",
                     "message": "Aequitas torqueo curiositas cimentarius repellendus auditor degero ademptio adnuo.",
                     "sender_name": "Ms. Patti Lynch",
                     "sender_type": shared.SenderType.HOST,
@@ -139,7 +141,7 @@ with UnifiedTo(
             ],
             "metadata": [],
             "source": "Airbnb",
-            "updated_at": parse_datetime("2026-05-19T21:52:15.080Z"),
+            "updated_at": parse_datetime("2026-05-20T18:42:39.597Z"),
         },
         "connection_id": "<id>",
     })
@@ -206,7 +208,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Melissa",
-            "id": "cf679ce4-933a-459d-8146-0eee0e727552",
+            "id": "1e2e474d-2090-467c-9651-9ca5e94baaf9",
             "image_url": "https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/36.jpg",
             "language": "es",
             "last_name": "Green",
@@ -220,7 +222,7 @@ with UnifiedTo(
                     "type": shared.PropertyTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2025-07-15T08:50:24.226Z"),
+            "updated_at": parse_datetime("2025-07-16T02:07:30.212Z"),
         },
         "connection_id": "<id>",
     })
@@ -301,7 +303,7 @@ with UnifiedTo(
             "currency": "USD",
             "description": "Cuius deputo cruentus demoror censura caveo sponte statim vespillo cursim. Arbitro barba summopere. Curto vulticulus comparo surgo vociferor carmen deputo defluo.",
             "house_rules": "No smoking. No parties or events.",
-            "id": "90b2a335-bbef-45b2-96e3-8951af5b9433",
+            "id": "681f975d-1730-4872-a7cc-a555dad88f9e",
             "image_urls": [
                 "https://loremflickr.com/23/1328?lock=5798241296161663",
                 "https://loremflickr.com/12/1312?lock=6354590363728966",
@@ -318,7 +320,7 @@ with UnifiedTo(
             "start_price_amount": 470.0,
             "timezone": "America/Los_Angeles",
             "type": shared.PropertyListingType.ROOM,
-            "updated_at": parse_datetime("2026-09-22T12:01:43.024Z"),
+            "updated_at": parse_datetime("2026-09-23T10:53:30.436Z"),
             "web_url": "https://tight-pronoun.info/",
         },
         "connection_id": "<id>",
@@ -374,9 +376,9 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-12-18T19:14:11.415Z"),
             "currency": "USD",
             "deposit_amount": 594.54,
-            "end_at": parse_datetime("2026-11-29"),
+            "end_at": parse_datetime("2026-11-30"),
             "guests": 2.0,
-            "id": "dc2c3456-3a9b-4afc-81e7-803fa671e536",
+            "id": "66d5c9bd-04fe-4d43-807a-4413c685821d",
             "line_items": [
                 {
                     "amount": 1665.0,
@@ -398,7 +400,7 @@ with UnifiedTo(
                     "type": shared.PropertyLineitemType.TAX,
                 },
             ],
-            "start_at": parse_datetime("2026-11-20"),
+            "start_at": parse_datetime("2026-11-21"),
             "total_amount": 1981.8,
         },
         "connection_id": "<id>",
@@ -460,7 +462,7 @@ with UnifiedTo(
             "guest_email": "anya.parisian@hotmail.com",
             "guest_name": "Anya Parisian",
             "guests": 6.0,
-            "id": "dfb81dad-4a22-4ca6-98a5-e0450a4dfef2",
+            "id": "e89012a2-d3d1-4c7e-9ec1-9dca4d732818",
             "line_items": [
                 {
                     "amount": 1980.0,
@@ -497,7 +499,7 @@ with UnifiedTo(
             "start_at": parse_datetime("2022-09-25T17:17:08.838Z"),
             "status": shared.PropertyReservationStatus.PENDING,
             "total_amount": 2181.6,
-            "updated_at": parse_datetime("2022-11-18T02:30:28.701Z"),
+            "updated_at": parse_datetime("2022-11-18T04:55:53.352Z"),
             "web_url": "https://antique-tennis.biz/",
         },
         "connection_id": "<id>",
@@ -1247,10 +1249,10 @@ with UnifiedTo(
         "analytics_property": {
             "created_at": parse_datetime("2021-09-05T19:04:58.430Z"),
             "currency": "USD",
-            "id": "d32c6de5-3e3d-407e-a3e2-dd5afe4c74f5",
+            "id": "4394bdce-b534-4909-b0d2-93749d403078",
             "name": "Daniel, Goldner and Dickinson",
             "timezone": "UTC",
-            "updated_at": parse_datetime("2021-09-14T23:20:48.579Z"),
+            "updated_at": parse_datetime("2021-09-14T23:27:37.178Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1318,7 +1320,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Melissa",
-            "id": "a7caf512-046a-466d-bc59-297578ba9ac9",
+            "id": "2d7dd474-557f-4ff1-8806-59d7f54c5b55",
             "image_url": "https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/36.jpg",
             "language": "es",
             "last_name": "Green",
@@ -1332,7 +1334,7 @@ with UnifiedTo(
                     "type": shared.PropertyTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2025-07-15T08:50:24.242Z"),
+            "updated_at": parse_datetime("2025-07-16T02:07:30.230Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1414,7 +1416,7 @@ with UnifiedTo(
             "currency": "USD",
             "description": "Cuius deputo cruentus demoror censura caveo sponte statim vespillo cursim. Arbitro barba summopere. Curto vulticulus comparo surgo vociferor carmen deputo defluo.",
             "house_rules": "No smoking. No parties or events.",
-            "id": "90f32c45-1154-461c-a37f-8ee5a33f9b9a",
+            "id": "8f3eb99b-cd0b-47a7-9da1-497f21c94188",
             "image_urls": [
                 "https://loremflickr.com/23/1328?lock=5798241296161663",
                 "https://loremflickr.com/12/1312?lock=6354590363728966",
@@ -1431,7 +1433,7 @@ with UnifiedTo(
             "start_price_amount": 470.0,
             "timezone": "America/Los_Angeles",
             "type": shared.PropertyListingType.ROOM,
-            "updated_at": parse_datetime("2026-09-22T12:01:43.056Z"),
+            "updated_at": parse_datetime("2026-09-23T10:53:30.469Z"),
             "web_url": "https://tight-pronoun.info/",
         },
         "connection_id": "<id>",
@@ -1494,7 +1496,7 @@ with UnifiedTo(
             "guest_email": "anya.parisian@hotmail.com",
             "guest_name": "Anya Parisian",
             "guests": 6.0,
-            "id": "a98b0b65-f58f-4b0b-b3df-30baa41d0b58",
+            "id": "7cf7282e-ec88-4d87-a2b6-f8f35e029ff3",
             "line_items": [
                 {
                     "amount": 1980.0,
@@ -1531,7 +1533,7 @@ with UnifiedTo(
             "start_at": parse_datetime("2022-09-25T17:17:08.838Z"),
             "status": shared.PropertyReservationStatus.PENDING,
             "total_amount": 2181.6,
-            "updated_at": parse_datetime("2022-11-18T02:30:28.704Z"),
+            "updated_at": parse_datetime("2022-11-18T04:55:53.354Z"),
             "web_url": "https://antique-tennis.biz/",
         },
         "connection_id": "<id>",
@@ -1615,13 +1617,13 @@ with UnifiedTo(
             ],
             "content": "Delectus conscendo communis custodia statim. Tutis adsuesco attonbitus comitatus auditor ea tergo nostrum deleo. Comprehendo tertius summopere vaco apparatus incidunt tabula pauci confido colo.",
             "created_at": parse_datetime("2022-10-17T11:17:07.682Z"),
-            "id": "80d78eae-9f23-4a37-ab1a-d9be2d714a78",
+            "id": "123bf61c-20d2-46c5-812a-7ee129d31f02",
             "is_public": True,
             "metadata": [],
             "private_feedback": "Tripudio neque communis.",
             "rating": 3.0,
             "source": "Airbnb",
-            "updated_at": parse_datetime("2026-03-03T15:44:12.203Z"),
+            "updated_at": parse_datetime("2026-03-04T11:09:04.435Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1698,6 +1700,53 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## remove_property_guest
+
+Deletes the PropertyGuest identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removePropertyGuest" method="delete" path="/property/{connection_id}/guest/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.property.remove_property_guest(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.RemovePropertyGuestRequest](../../models/operations/removepropertyguestrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+
+### Response
+
+**[operations.RemovePropertyGuestResponse](../../models/operations/removepropertyguestresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## remove_property_listing
 
 Deletes the PropertyListing identified by `id`.
@@ -1745,6 +1794,53 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## remove_property_reservation
+
+Deletes the PropertyReservation identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removePropertyReservation" method="delete" path="/property/{connection_id}/reservation/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.property.remove_property_reservation(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                  | [operations.RemovePropertyReservationRequest](../../models/operations/removepropertyreservationrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `retries`                                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                           | :heavy_minus_sign:                                                                                         | Configuration to override the default retry behavior of the client.                                        |
+
+### Response
+
+**[operations.RemovePropertyReservationResponse](../../models/operations/removepropertyreservationresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## update_analytics_property
 
 Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to change in the request body.
@@ -1768,10 +1864,10 @@ with UnifiedTo(
         "analytics_property": {
             "created_at": parse_datetime("2021-09-05T19:04:58.430Z"),
             "currency": "USD",
-            "id": "d32c6de5-3e3d-407e-a3e2-dd5afe4c74f5",
+            "id": "4394bdce-b534-4909-b0d2-93749d403078",
             "name": "Daniel, Goldner and Dickinson",
             "timezone": "UTC",
-            "updated_at": parse_datetime("2021-09-14T23:20:48.579Z"),
+            "updated_at": parse_datetime("2021-09-14T23:27:37.178Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1839,7 +1935,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Melissa",
-            "id": "a7caf512-046a-466d-bc59-297578ba9ac9",
+            "id": "2d7dd474-557f-4ff1-8806-59d7f54c5b55",
             "image_url": "https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/36.jpg",
             "language": "es",
             "last_name": "Green",
@@ -1853,7 +1949,7 @@ with UnifiedTo(
                     "type": shared.PropertyTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2025-07-15T08:50:24.242Z"),
+            "updated_at": parse_datetime("2025-07-16T02:07:30.230Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1935,7 +2031,7 @@ with UnifiedTo(
             "currency": "USD",
             "description": "Cuius deputo cruentus demoror censura caveo sponte statim vespillo cursim. Arbitro barba summopere. Curto vulticulus comparo surgo vociferor carmen deputo defluo.",
             "house_rules": "No smoking. No parties or events.",
-            "id": "90f32c45-1154-461c-a37f-8ee5a33f9b9a",
+            "id": "8f3eb99b-cd0b-47a7-9da1-497f21c94188",
             "image_urls": [
                 "https://loremflickr.com/23/1328?lock=5798241296161663",
                 "https://loremflickr.com/12/1312?lock=6354590363728966",
@@ -1952,7 +2048,7 @@ with UnifiedTo(
             "start_price_amount": 470.0,
             "timezone": "America/Los_Angeles",
             "type": shared.PropertyListingType.ROOM,
-            "updated_at": parse_datetime("2026-09-22T12:01:43.056Z"),
+            "updated_at": parse_datetime("2026-09-23T10:53:30.469Z"),
             "web_url": "https://tight-pronoun.info/",
         },
         "connection_id": "<id>",
@@ -2015,7 +2111,7 @@ with UnifiedTo(
             "guest_email": "anya.parisian@hotmail.com",
             "guest_name": "Anya Parisian",
             "guests": 6.0,
-            "id": "a98b0b65-f58f-4b0b-b3df-30baa41d0b58",
+            "id": "7cf7282e-ec88-4d87-a2b6-f8f35e029ff3",
             "line_items": [
                 {
                     "amount": 1980.0,
@@ -2052,7 +2148,7 @@ with UnifiedTo(
             "start_at": parse_datetime("2022-09-25T17:17:08.838Z"),
             "status": shared.PropertyReservationStatus.PENDING,
             "total_amount": 2181.6,
-            "updated_at": parse_datetime("2022-11-18T02:30:28.704Z"),
+            "updated_at": parse_datetime("2022-11-18T04:55:53.354Z"),
             "web_url": "https://antique-tennis.biz/",
         },
         "connection_id": "<id>",
@@ -2136,13 +2232,13 @@ with UnifiedTo(
             ],
             "content": "Delectus conscendo communis custodia statim. Tutis adsuesco attonbitus comitatus auditor ea tergo nostrum deleo. Comprehendo tertius summopere vaco apparatus incidunt tabula pauci confido colo.",
             "created_at": parse_datetime("2022-10-17T11:17:07.682Z"),
-            "id": "80d78eae-9f23-4a37-ab1a-d9be2d714a78",
+            "id": "123bf61c-20d2-46c5-812a-7ee129d31f02",
             "is_public": True,
             "metadata": [],
             "private_feedback": "Tripudio neque communis.",
             "rating": 3.0,
             "source": "Airbnb",
-            "updated_at": parse_datetime("2026-03-03T15:44:12.203Z"),
+            "updated_at": parse_datetime("2026-03-04T11:09:04.435Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

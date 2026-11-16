@@ -20,8 +20,6 @@ from unified_python_sdk.types.basemodel import current_filtered_dump
 
 
 class Disposition(str, Enum, metaclass=utils.OpenEnumMeta):
-    r"""What to do with the nonconforming material"""
-
     USE_AS_IS = "USE_AS_IS"
     REWORK = "REWORK"
     REPAIR = "REPAIR"
@@ -38,8 +36,6 @@ class Severity(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class QmsIssueSource(str, Enum, metaclass=utils.OpenEnumMeta):
-    r"""Where a quality issue was found"""
-
     INTERNAL = "INTERNAL"
     SUPPLIER = "SUPPLIER"
     CUSTOMER = "CUSTOMER"
@@ -48,8 +44,6 @@ class QmsIssueSource(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class QmsIssueStatus(str, Enum, metaclass=utils.OpenEnumMeta):
-    r"""Normalized status of a quality record"""
-
     OPEN = "OPEN"
     IN_PROGRESS = "IN_PROGRESS"
     IN_REVIEW = "IN_REVIEW"
@@ -66,7 +60,7 @@ class QmsIssueType(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class QmsIssueTypedDict(TypedDict):
-    r"""A nonconformance, complaint, audit finding or problem report"""
+    r"""A nonconformance, complaint, audit finding or other quality issue"""
 
     action_ids: NotRequired[List[str]]
     r"""Linked QmsAction IDs"""
@@ -79,7 +73,6 @@ class QmsIssueTypedDict(TypedDict):
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     description: NotRequired[str]
     disposition: NotRequired[Disposition]
-    r"""What to do with the nonconforming material"""
     due_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     file_ids: NotRequired[List[str]]
@@ -103,9 +96,7 @@ class QmsIssueTypedDict(TypedDict):
     r"""Who raised the issue (reference to HrisEmployee)"""
     severity: NotRequired[Severity]
     source: NotRequired[QmsIssueSource]
-    r"""Where a quality issue was found"""
     status: NotRequired[QmsIssueStatus]
-    r"""Normalized status of a quality record"""
     supplier_name: NotRequired[str]
     type: NotRequired[QmsIssueType]
     updated_at: NotRequired[datetime]
@@ -117,7 +108,7 @@ class QmsIssueTypedDict(TypedDict):
 
 
 class QmsIssue(BaseModel):
-    r"""A nonconformance, complaint, audit finding or problem report"""
+    r"""A nonconformance, complaint, audit finding or other quality issue"""
 
     action_ids: Optional[List[str]] = None
     r"""Linked QmsAction IDs"""
@@ -136,7 +127,6 @@ class QmsIssue(BaseModel):
     description: Optional[str] = None
 
     disposition: Optional[Disposition] = None
-    r"""What to do with the nonconforming material"""
 
     due_at: Optional[datetime] = None
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
@@ -174,10 +164,8 @@ class QmsIssue(BaseModel):
     severity: Optional[Severity] = None
 
     source: Optional[QmsIssueSource] = None
-    r"""Where a quality issue was found"""
 
     status: Optional[QmsIssueStatus] = None
-    r"""Normalized status of a quality record"""
 
     supplier_name: Optional[str] = None
 

@@ -8,6 +8,7 @@
 * [get_property_guest](#get_property_guest) - Retrieve a guest
 * [list_property_guests](#list_property_guests) - List all guests
 * [patch_property_guest](#patch_property_guest) - Update a guest
+* [remove_property_guest](#remove_property_guest) - Remove a guest
 * [update_property_guest](#update_property_guest) - Update a guest
 
 ## create_property_guest
@@ -48,7 +49,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Melissa",
-            "id": "cf679ce4-933a-459d-8146-0eee0e727552",
+            "id": "1e2e474d-2090-467c-9651-9ca5e94baaf9",
             "image_url": "https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/36.jpg",
             "language": "es",
             "last_name": "Green",
@@ -62,7 +63,7 @@ with UnifiedTo(
                     "type": shared.PropertyTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2025-07-15T08:50:24.226Z"),
+            "updated_at": parse_datetime("2025-07-16T02:07:30.212Z"),
         },
         "connection_id": "<id>",
     })
@@ -222,7 +223,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Melissa",
-            "id": "a7caf512-046a-466d-bc59-297578ba9ac9",
+            "id": "2d7dd474-557f-4ff1-8806-59d7f54c5b55",
             "image_url": "https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/36.jpg",
             "language": "es",
             "last_name": "Green",
@@ -236,7 +237,7 @@ with UnifiedTo(
                     "type": shared.PropertyTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2025-07-15T08:50:24.242Z"),
+            "updated_at": parse_datetime("2025-07-16T02:07:30.230Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -259,6 +260,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.PatchPropertyGuestResponse](../../models/operations/patchpropertyguestresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## remove_property_guest
+
+Deletes the PropertyGuest identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removePropertyGuest" method="delete" path="/property/{connection_id}/guest/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.guest.remove_property_guest(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.RemovePropertyGuestRequest](../../models/operations/removepropertyguestrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+
+### Response
+
+**[operations.RemovePropertyGuestResponse](../../models/operations/removepropertyguestresponse.md)**
 
 ### Errors
 
@@ -304,7 +352,7 @@ with UnifiedTo(
                 },
             ],
             "first_name": "Melissa",
-            "id": "a7caf512-046a-466d-bc59-297578ba9ac9",
+            "id": "2d7dd474-557f-4ff1-8806-59d7f54c5b55",
             "image_url": "https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/36.jpg",
             "language": "es",
             "last_name": "Green",
@@ -318,7 +366,7 @@ with UnifiedTo(
                     "type": shared.PropertyTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2025-07-15T08:50:24.242Z"),
+            "updated_at": parse_datetime("2025-07-16T02:07:30.230Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

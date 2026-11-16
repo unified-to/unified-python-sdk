@@ -23,6 +23,7 @@
 * [patch_plm_document](#patch_plm_document) - Update a document
 * [patch_plm_part](#patch_plm_part) - Update a part
 * [remove_plm_bomline](#remove_plm_bomline) - Remove a bomline
+* [remove_plm_part](#remove_plm_part) - Remove a part
 * [update_plm_bomline](#update_plm_bomline) - Update a bomline
 * [update_plm_change](#update_plm_change) - Update a change
 * [update_plm_document](#update_plm_document) - Update a document
@@ -51,11 +52,11 @@ with UnifiedTo(
         "plm_bomline": {
             "created_at": parse_datetime("2022-04-02T07:09:29.598Z"),
             "effective_at": parse_datetime("2022-04-02T07:09:29.598Z"),
-            "id": "58a7f030-54a2-43f5-bfae-81c07df3fe72",
+            "id": "978f5b3c-f20f-4ce5-b503-f62e1749e961",
             "quantity": 7.0,
             "reference_designators": [],
             "unit_of_measure": "EA",
-            "updated_at": parse_datetime("2023-04-20T04:58:23.492Z"),
+            "updated_at": parse_datetime("2023-04-20T10:17:37.093Z"),
         },
         "connection_id": "<id>",
     })
@@ -108,14 +109,14 @@ with UnifiedTo(
             "affected_items": [],
             "created_at": parse_datetime("2021-08-02T05:58:32.287Z"),
             "description": "Vorago spiculum avaritia adipiscor callide.",
-            "id": "fe9bf871-8ba5-415e-9e25-afbb275db26c",
+            "id": "c4dc961d-9659-4e54-bbed-dd1e4910037c",
             "metadata": [],
             "name": "Update goodwill",
             "number": "ECO-6591",
             "priority": "Medium",
             "status": shared.PlmChangeStatus.IN_REVIEW,
             "type": shared.PlmChangeType.ORDER,
-            "updated_at": parse_datetime("2026-09-28T10:17:49.447Z"),
+            "updated_at": parse_datetime("2026-09-29T09:10:10.619Z"),
             "url": "https://warmhearted-fraudster.biz/",
         },
         "connection_id": "<id>",
@@ -168,9 +169,9 @@ with UnifiedTo(
         "plm_document": {
             "created_at": parse_datetime("2020-10-16T01:44:30.293Z"),
             "file_ids": [],
-            "id": "db35655e-a5a0-4bd3-85ab-32116af6d98e",
+            "id": "5d2600e6-4066-4a8c-896e-5865e31f3c5d",
             "lifecycle_state": "Under Review",
-            "master_identifier": "e281fdf3-6c2f-49c3-bc72-0d4d7f00c1d7",
+            "master_identifier": "0783dd05-855b-45e9-9318-8471e9803552",
             "metadata": [],
             "name": "Procedure taxicab",
             "number": "DOC-086886",
@@ -178,7 +179,7 @@ with UnifiedTo(
             "revision": "C",
             "status": shared.PlmDocumentStatus.IN_REVIEW,
             "type": shared.PlmDocumentType.PROCEDURE,
-            "updated_at": parse_datetime("2026-09-09T03:35:49.830Z"),
+            "updated_at": parse_datetime("2026-09-10T02:20:30.065Z"),
             "url": "https://uncommon-guide.info/",
         },
         "connection_id": "<id>",
@@ -233,10 +234,10 @@ with UnifiedTo(
             "description": "Pectus tero ulterius aestivus talis tero ullam cruciamentum.",
             "document_ids": [],
             "file_ids": [],
-            "id": "60b7efd1-3c86-434c-b4ae-ae7ce4b0ce35",
+            "id": "5fd45e3c-4a77-4ace-8d9d-e1e91f54bc9a",
             "is_assembly": False,
             "lifecycle_state": "Design",
-            "master_identifier": "36adf09d-eb88-42ca-a467-b3d80b9bdcba",
+            "master_identifier": "124a759f-5d74-4b7d-92c0-090f1e40e953",
             "metadata": [],
             "name": "grumpy PCB",
             "number": "PRT-009154",
@@ -246,7 +247,7 @@ with UnifiedTo(
             "status": shared.PlmPartStatus.IN_WORK,
             "type": shared.PlmPartType.SOFTWARE,
             "unit_of_measure": "EA",
-            "updated_at": parse_datetime("2021-04-12T16:48:43.652Z"),
+            "updated_at": parse_datetime("2021-04-12T22:59:23.166Z"),
             "url": "https://inborn-independence.info",
         },
         "connection_id": "<id>",
@@ -764,11 +765,11 @@ with UnifiedTo(
         "plm_bomline": {
             "created_at": parse_datetime("2022-04-02T07:09:29.598Z"),
             "effective_at": parse_datetime("2022-04-02T07:09:29.598Z"),
-            "id": "6a795fae-fc54-40be-847c-e77530ffc00d",
+            "id": "52696eac-3f03-4637-b652-0f72e71c02e6",
             "quantity": 7.0,
             "reference_designators": [],
             "unit_of_measure": "EA",
-            "updated_at": parse_datetime("2023-04-20T04:58:23.493Z"),
+            "updated_at": parse_datetime("2023-04-20T10:17:37.095Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -822,14 +823,14 @@ with UnifiedTo(
             "affected_items": [],
             "created_at": parse_datetime("2021-08-02T05:58:32.287Z"),
             "description": "Vorago spiculum avaritia adipiscor callide.",
-            "id": "c2b30204-c7f7-4147-9ff7-840cb8ac72bd",
+            "id": "4cdf50fc-a7ff-4554-80cb-4303a3851934",
             "metadata": [],
             "name": "Update goodwill",
             "number": "ECO-6591",
             "priority": "Medium",
             "status": shared.PlmChangeStatus.IN_REVIEW,
             "type": shared.PlmChangeType.ORDER,
-            "updated_at": parse_datetime("2026-09-28T10:17:49.477Z"),
+            "updated_at": parse_datetime("2026-09-29T09:10:10.639Z"),
             "url": "https://warmhearted-fraudster.biz/",
         },
         "connection_id": "<id>",
@@ -883,9 +884,9 @@ with UnifiedTo(
         "plm_document": {
             "created_at": parse_datetime("2020-10-16T01:44:30.293Z"),
             "file_ids": [],
-            "id": "6c9e484e-03fa-49d7-9411-b980dc8d5ae7",
+            "id": "7cc1b85b-9762-4fa1-9e79-ea3b1d8dabe2",
             "lifecycle_state": "Under Review",
-            "master_identifier": "e5a41eed-eb4b-406f-a427-443b377d0c66",
+            "master_identifier": "e87f4a9c-c285-4b0b-877f-c8329f22dcca",
             "metadata": [],
             "name": "Procedure taxicab",
             "number": "DOC-086886",
@@ -893,7 +894,7 @@ with UnifiedTo(
             "revision": "C",
             "status": shared.PlmDocumentStatus.IN_REVIEW,
             "type": shared.PlmDocumentType.PROCEDURE,
-            "updated_at": parse_datetime("2026-09-09T03:35:49.847Z"),
+            "updated_at": parse_datetime("2026-09-10T02:20:30.082Z"),
             "url": "https://uncommon-guide.info/",
         },
         "connection_id": "<id>",
@@ -949,10 +950,10 @@ with UnifiedTo(
             "description": "Pectus tero ulterius aestivus talis tero ullam cruciamentum.",
             "document_ids": [],
             "file_ids": [],
-            "id": "551c9fef-abb9-4605-b384-1ffbbc140223",
+            "id": "9bc76715-50e1-46ac-af71-3a2d6eb32abc",
             "is_assembly": False,
             "lifecycle_state": "Design",
-            "master_identifier": "92bf2b9a-5949-4fb2-85ab-f10e84bfe2df",
+            "master_identifier": "46b87da6-e098-45d4-aa18-e68077fa14c2",
             "metadata": [],
             "name": "grumpy PCB",
             "number": "PRT-009154",
@@ -962,7 +963,7 @@ with UnifiedTo(
             "status": shared.PlmPartStatus.IN_WORK,
             "type": shared.PlmPartType.SOFTWARE,
             "unit_of_measure": "EA",
-            "updated_at": parse_datetime("2021-04-12T16:48:43.656Z"),
+            "updated_at": parse_datetime("2021-04-12T22:59:23.171Z"),
             "url": "https://inborn-independence.info",
         },
         "connection_id": "<id>",
@@ -1040,6 +1041,53 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## remove_plm_part
+
+Deletes the PlmPart identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removePlmPart" method="delete" path="/plm/{connection_id}/part/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.plm.remove_plm_part(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.RemovePlmPartRequest](../../models/operations/removeplmpartrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `retries`                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                   | :heavy_minus_sign:                                                                 | Configuration to override the default retry behavior of the client.                |
+
+### Response
+
+**[operations.RemovePlmPartResponse](../../models/operations/removeplmpartresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## update_plm_bomline
 
 Updates the PlmBomline identified by `id`. Provide the unified PlmBomline fields to change in the request body.
@@ -1063,11 +1111,11 @@ with UnifiedTo(
         "plm_bomline": {
             "created_at": parse_datetime("2022-04-02T07:09:29.598Z"),
             "effective_at": parse_datetime("2022-04-02T07:09:29.598Z"),
-            "id": "6a795fae-fc54-40be-847c-e77530ffc00d",
+            "id": "52696eac-3f03-4637-b652-0f72e71c02e6",
             "quantity": 7.0,
             "reference_designators": [],
             "unit_of_measure": "EA",
-            "updated_at": parse_datetime("2023-04-20T04:58:23.493Z"),
+            "updated_at": parse_datetime("2023-04-20T10:17:37.095Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1121,14 +1169,14 @@ with UnifiedTo(
             "affected_items": [],
             "created_at": parse_datetime("2021-08-02T05:58:32.287Z"),
             "description": "Vorago spiculum avaritia adipiscor callide.",
-            "id": "c2b30204-c7f7-4147-9ff7-840cb8ac72bd",
+            "id": "4cdf50fc-a7ff-4554-80cb-4303a3851934",
             "metadata": [],
             "name": "Update goodwill",
             "number": "ECO-6591",
             "priority": "Medium",
             "status": shared.PlmChangeStatus.IN_REVIEW,
             "type": shared.PlmChangeType.ORDER,
-            "updated_at": parse_datetime("2026-09-28T10:17:49.477Z"),
+            "updated_at": parse_datetime("2026-09-29T09:10:10.639Z"),
             "url": "https://warmhearted-fraudster.biz/",
         },
         "connection_id": "<id>",
@@ -1182,9 +1230,9 @@ with UnifiedTo(
         "plm_document": {
             "created_at": parse_datetime("2020-10-16T01:44:30.293Z"),
             "file_ids": [],
-            "id": "6c9e484e-03fa-49d7-9411-b980dc8d5ae7",
+            "id": "7cc1b85b-9762-4fa1-9e79-ea3b1d8dabe2",
             "lifecycle_state": "Under Review",
-            "master_identifier": "e5a41eed-eb4b-406f-a427-443b377d0c66",
+            "master_identifier": "e87f4a9c-c285-4b0b-877f-c8329f22dcca",
             "metadata": [],
             "name": "Procedure taxicab",
             "number": "DOC-086886",
@@ -1192,7 +1240,7 @@ with UnifiedTo(
             "revision": "C",
             "status": shared.PlmDocumentStatus.IN_REVIEW,
             "type": shared.PlmDocumentType.PROCEDURE,
-            "updated_at": parse_datetime("2026-09-09T03:35:49.847Z"),
+            "updated_at": parse_datetime("2026-09-10T02:20:30.082Z"),
             "url": "https://uncommon-guide.info/",
         },
         "connection_id": "<id>",
@@ -1248,10 +1296,10 @@ with UnifiedTo(
             "description": "Pectus tero ulterius aestivus talis tero ullam cruciamentum.",
             "document_ids": [],
             "file_ids": [],
-            "id": "551c9fef-abb9-4605-b384-1ffbbc140223",
+            "id": "9bc76715-50e1-46ac-af71-3a2d6eb32abc",
             "is_assembly": False,
             "lifecycle_state": "Design",
-            "master_identifier": "92bf2b9a-5949-4fb2-85ab-f10e84bfe2df",
+            "master_identifier": "46b87da6-e098-45d4-aa18-e68077fa14c2",
             "metadata": [],
             "name": "grumpy PCB",
             "number": "PRT-009154",
@@ -1261,7 +1309,7 @@ with UnifiedTo(
             "status": shared.PlmPartStatus.IN_WORK,
             "type": shared.PlmPartType.SOFTWARE,
             "unit_of_measure": "EA",
-            "updated_at": parse_datetime("2021-04-12T16:48:43.656Z"),
+            "updated_at": parse_datetime("2021-04-12T22:59:23.171Z"),
             "url": "https://inborn-independence.info",
         },
         "connection_id": "<id>",

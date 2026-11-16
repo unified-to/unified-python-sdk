@@ -20,8 +20,6 @@ from unified_python_sdk.types.basemodel import current_filtered_dump
 
 
 class QmsActionStatus(str, Enum, metaclass=utils.OpenEnumMeta):
-    r"""Normalized status of a quality record"""
-
     OPEN = "OPEN"
     IN_PROGRESS = "IN_PROGRESS"
     IN_REVIEW = "IN_REVIEW"
@@ -66,7 +64,6 @@ class QmsActionTypedDict(TypedDict):
     r"""Raw data from integration"""
     root_cause: NotRequired[str]
     status: NotRequired[QmsActionStatus]
-    r"""Normalized status of a quality record"""
     supplier_name: NotRequired[str]
     type: NotRequired[QmsActionType]
     updated_at: NotRequired[datetime]
@@ -125,7 +122,6 @@ class QmsAction(BaseModel):
     root_cause: Optional[str] = None
 
     status: Optional[QmsActionStatus] = None
-    r"""Normalized status of a quality record"""
 
     supplier_name: Optional[str] = None
 
