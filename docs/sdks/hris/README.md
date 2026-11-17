@@ -17,6 +17,7 @@
 * [create_hris_job](#create_hris_job) - Create a job
 * [create_hris_location](#create_hris_location) - Create a location
 * [create_hris_taxonomy](#create_hris_taxonomy) - Create a taxonomy
+* [create_hris_taxwithholding](#create_hris_taxwithholding) - Create a taxwithholding
 * [create_hris_timeoff](#create_hris_timeoff) - Create a timeoff
 * [create_hris_timeshift](#create_hris_timeshift) - Create a timeshift
 * [get_hris_attendance](#get_hris_attendance) - Retrieve an attendance
@@ -35,6 +36,7 @@
 * [get_hris_payroll](#get_hris_payroll) - Retrieve a payroll
 * [get_hris_payslip](#get_hris_payslip) - Retrieve a payslip
 * [get_hris_taxonomy](#get_hris_taxonomy) - Retrieve a taxonomy
+* [get_hris_taxwithholding](#get_hris_taxwithholding) - Retrieve a taxwithholding
 * [get_hris_timeoff](#get_hris_timeoff) - Retrieve a timeoff
 * [get_hris_timeshift](#get_hris_timeshift) - Retrieve a timeshift
 * [list_hris_attendances](#list_hris_attendances) - List all attendances
@@ -53,6 +55,7 @@
 * [list_hris_payrolls](#list_hris_payrolls) - List all payrolls
 * [list_hris_payslips](#list_hris_payslips) - List all payslips
 * [list_hris_taxonomies](#list_hris_taxonomies) - List all taxonomies
+* [list_hris_taxwithholdings](#list_hris_taxwithholdings) - List all taxwithholdings
 * [list_hris_timeoffs](#list_hris_timeoffs) - List all timeoffs
 * [list_hris_timeshifts](#list_hris_timeshifts) - List all timeshifts
 * [patch_hris_attendance](#patch_hris_attendance) - Update an attendance
@@ -68,6 +71,7 @@
 * [patch_hris_job](#patch_hris_job) - Update a job
 * [patch_hris_location](#patch_hris_location) - Update a location
 * [patch_hris_taxonomy](#patch_hris_taxonomy) - Update a taxonomy
+* [patch_hris_taxwithholding](#patch_hris_taxwithholding) - Update a taxwithholding
 * [patch_hris_timeoff](#patch_hris_timeoff) - Update a timeoff
 * [patch_hris_timeshift](#patch_hris_timeshift) - Update a timeshift
 * [remove_hris_attendance](#remove_hris_attendance) - Remove an attendance
@@ -83,6 +87,7 @@
 * [remove_hris_job](#remove_hris_job) - Remove a job
 * [remove_hris_location](#remove_hris_location) - Remove a location
 * [remove_hris_taxonomy](#remove_hris_taxonomy) - Remove a taxonomy
+* [remove_hris_taxwithholding](#remove_hris_taxwithholding) - Remove a taxwithholding
 * [remove_hris_timeoff](#remove_hris_timeoff) - Remove a timeoff
 * [remove_hris_timeshift](#remove_hris_timeshift) - Remove a timeshift
 * [update_hris_attendance](#update_hris_attendance) - Update an attendance
@@ -98,6 +103,7 @@
 * [update_hris_job](#update_hris_job) - Update a job
 * [update_hris_location](#update_hris_location) - Update a location
 * [update_hris_taxonomy](#update_hris_taxonomy) - Update a taxonomy
+* [update_hris_taxwithholding](#update_hris_taxwithholding) - Update a taxwithholding
 * [update_hris_timeoff](#update_hris_timeoff) - Update a timeoff
 * [update_hris_timeshift](#update_hris_timeshift) - Update a timeshift
 
@@ -130,32 +136,32 @@ with UnifiedTo(
                 "region": "Tennessee",
                 "region_code": "CA",
             },
-            "approved_at": parse_datetime("2021-09-20T03:11:44.712Z"),
+            "approved_at": parse_datetime("2021-09-20T03:40:21.093Z"),
             "breaks": [
                 {
                     "duration_minutes": 51.0,
-                    "end_at": parse_datetime("2024-02-27T03:17:49.750Z"),
-                    "id": "e3f5cca1-33d9-4148-9518-b2386b297e30",
+                    "end_at": parse_datetime("2024-02-27T14:18:00.760Z"),
+                    "id": "fd320c91-053f-41a3-b1b8-ed6427724ea7",
                     "is_paid": False,
                     "name": "Lunch",
-                    "start_at": parse_datetime("2023-11-10T01:40:16.359Z"),
+                    "start_at": parse_datetime("2023-11-10T11:23:03.479Z"),
                 },
             ],
             "created_at": parse_datetime("2021-08-10T19:43:18.452Z"),
             "currency": "EUR",
             "declared_tips_amount": 54.0,
             "employee_user_id": "<id>",
-            "end_at": parse_datetime("2024-05-06T20:28:01.154Z"),
+            "end_at": parse_datetime("2024-05-07T08:17:40.509Z"),
             "hourly_rate": 16.0,
             "hours": 10.0,
-            "id": "b3b03504-f863-4ee7-a32c-3ed801faf942",
+            "id": "1c7d2b6c-5051-43af-9e7d-e066aff0fbff",
             "job_name": "Human Accountability Administrator",
             "metadata": [],
             "non_cash_tips_amount": 167.0,
-            "start_at": parse_datetime("2021-11-12T07:16:58.874Z"),
+            "start_at": parse_datetime("2021-11-12T08:23:19.142Z"),
             "status": shared.HrisAttendanceStatus.OPEN,
             "timezone": "America/Atikokan",
-            "updated_at": parse_datetime("2022-01-22T02:24:36.007Z"),
+            "updated_at": parse_datetime("2022-01-22T04:21:10.670Z"),
         },
         "connection_id": "<id>",
     })
@@ -212,7 +218,7 @@ with UnifiedTo(
             "country_code": "US",
             "created_at": parse_datetime("2019-11-16T16:43:45.976Z"),
             "currency": "USD",
-            "id": "71772de1-fcc9-4c5d-a5b0-26dca9186545",
+            "id": "0dbe8378-9f55-487d-9afe-66af242cbc4d",
             "is_primary": True,
             "metadata": [],
             "name": "Granville Schumm - Checking",
@@ -220,7 +226,7 @@ with UnifiedTo(
             "routing_number": "448650724",
             "split_amount": 98.0,
             "split_type": shared.SplitType.PERCENTAGE,
-            "updated_at": parse_datetime("2025-07-22T09:05:18.433Z"),
+            "updated_at": parse_datetime("2025-07-23T03:32:55.981Z"),
         },
         "connection_id": "<id>",
     })
@@ -278,13 +284,13 @@ with UnifiedTo(
             "employer_contribution_max_amount": 179093.0,
             "employer_contribution_type": shared.EmployerContributionType.PERCENTAGE,
             "frequency": shared.HrisBenefitFrequency.MONTH,
-            "id": "374c5dc2-75ad-4545-8d9d-817ca71e08e6",
+            "id": "3123bdde-2da2-4e0e-a9e6-a594c5da8db9",
             "is_active": False,
             "metadata": [],
             "name": "Frozen Wooden Ball",
             "tax": shared.Tax.PRE_TAX,
             "type": shared.HrisBenefitType.OTHER,
-            "updated_at": parse_datetime("2023-04-01T04:34:21.407Z"),
+            "updated_at": parse_datetime("2023-04-01T14:29:23.104Z"),
         },
         "connection_id": "<id>",
     })
@@ -343,11 +349,11 @@ with UnifiedTo(
                 "region_code": "MO",
             },
             "created_at": parse_datetime("2021-05-02T22:27:38.970Z"),
-            "id": "50deb9cd-a1c8-4ffa-ae98-c4aa67e3c030",
+            "id": "d6e3df36-7c46-4762-b96d-fa63959b9e18",
             "legal_name": "Gottlieb Group LLC",
             "metadata": [],
             "name": "Gottlieb Group",
-            "updated_at": parse_datetime("2026-11-03T12:54:10.617Z"),
+            "updated_at": parse_datetime("2026-11-04T11:30:31.423Z"),
         },
         "connection_id": "<id>",
     })
@@ -404,14 +410,14 @@ with UnifiedTo(
             "employer_type": shared.EmployerType.PERCENTAGE,
             "frequency": shared.HrisDeductionFrequency.ONE_TIME,
             "garnishment_type": shared.GarnishmentType.CHILD_SUPPORT,
-            "id": "a8b9dd12-fb63-467e-86b6-8da1543caec9",
+            "id": "d87e0527-e242-4d03-8763-c185c4e84f3a",
             "is_active": True,
             "max_amount": 21794.0,
             "metadata": [],
             "notes": "Carmen desidero.",
-            "start_at": parse_datetime("2025-04-04T03:02:35.634Z"),
+            "start_at": parse_datetime("2025-04-04T20:21:39.102Z"),
             "type": shared.HrisDeductionType.FIXED,
-            "updated_at": parse_datetime("2024-04-07T07:06:40.561Z"),
+            "updated_at": parse_datetime("2024-04-07T21:06:17.379Z"),
         },
         "connection_id": "<id>",
     })
@@ -469,7 +475,7 @@ with UnifiedTo(
             "has_hd_encrypted": True,
             "has_password_manager": True,
             "has_screenlock": False,
-            "id": "22349424-b6e2-4929-b3f4-1004b01fdb21",
+            "id": "12261a08-c704-493d-84dc-a7247903da17",
             "is_missing": False,
             "manufacturer": "Hackett Inc",
             "metadata": [],
@@ -477,7 +483,7 @@ with UnifiedTo(
             "name": "august-laptop",
             "os": "transmitter",
             "os_version": "8.4.8",
-            "updated_at": parse_datetime("2023-06-22T16:56:07.531Z"),
+            "updated_at": parse_datetime("2023-06-23T05:31:30.829Z"),
             "version": "4.15.7",
         },
         "connection_id": "<id>",
@@ -531,10 +537,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-10-27T11:47:26.086Z"),
             "document_url": "https://sore-decision.biz/",
             "filename": "ridge_forager.xsl",
-            "id": "830c51fe-cb8c-439b-ae33-31e312cf15c8",
+            "id": "9967cd6c-8125-430f-9ede-1ce144870c61",
             "metadata": [],
             "type": shared.HrisDocumentType.POLICY,
-            "updated_at": parse_datetime("2025-10-30T21:45:06.055Z"),
+            "updated_at": parse_datetime("2025-10-31T14:38:33.384Z"),
         },
         "connection_id": "<id>",
     })
@@ -588,12 +594,12 @@ with UnifiedTo(
             "created_at": parse_datetime("2019-01-26T12:44:52.326Z"),
             "currency": "USD",
             "frequency": shared.HrisEarningFrequency.SEMIMONTHLY,
-            "id": "dc1ddb10-080c-46de-b6ab-80d5042a95ed",
+            "id": "19ce87bb-444b-4af0-a051-a61f5cb247cc",
             "metadata": [],
             "notes": "Deporto truculenter vinum beatae.",
-            "start_at": parse_datetime("2022-08-06T05:52:27.626Z"),
+            "start_at": parse_datetime("2022-08-06T16:08:59.660Z"),
             "status": shared.HrisEarningStatus.ENDED,
-            "updated_at": parse_datetime("2020-02-12T08:10:46.168Z"),
+            "updated_at": parse_datetime("2020-02-12T11:13:34.380Z"),
         },
         "connection_id": "<id>",
     })
@@ -679,7 +685,7 @@ with UnifiedTo(
             "gender": shared.HrisEmployeeGender.MALE,
             "has_mfa": True,
             "hired_at": parse_datetime("2019-09-16T15:08:53.262Z"),
-            "id": "4a2c7a2e-6f81-4c61-bc97-0040a1867a1a",
+            "id": "d70eb825-f7e1-45a9-bcf9-ec87631b25f0",
             "image_url": "https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg",
             "language_locale": "in",
             "last_name": "Prohaska",
@@ -691,7 +697,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.HrisMetadataFormat.TEXT,
-                    "id": "df309302-3f2b-49b6-8d34-c3721e94f7f3",
+                    "id": "719c3f36-ceb2-4251-ba2a-57df3458925d",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "tutis",
@@ -739,7 +745,7 @@ with UnifiedTo(
             "timeoff_days_used": 9.0,
             "timezone": "Europe/Ljubljana",
             "title": "District Branding Specialist",
-            "updated_at": parse_datetime("2020-07-22T06:04:17.882Z"),
+            "updated_at": parse_datetime("2020-07-22T08:45:44.502Z"),
         },
         "connection_id": "<id>",
     })
@@ -791,12 +797,12 @@ with UnifiedTo(
         "hris_group": {
             "created_at": parse_datetime("2023-11-01T13:13:40.714Z"),
             "description": "Absorbeo casso.",
-            "id": "665b34c6-6f82-41ab-b12d-2d64ba517255",
+            "id": "393bcd2b-12f3-47f2-81eb-9ff660dcc9da",
             "is_active": False,
             "metadata": [],
             "name": "Games",
             "type": shared.HrisGroupType.BRANCH,
-            "updated_at": parse_datetime("2026-06-13T08:18:34.119Z"),
+            "updated_at": parse_datetime("2026-06-14T03:52:01.288Z"),
         },
         "connection_id": "<id>",
     })
@@ -850,11 +856,11 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-10-28T01:13:19.491Z"),
             "description": "Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.",
             "employment_type": shared.HrisJobEmploymentType.FREELANCE,
-            "id": "acdb9677-c596-4cfe-a44f-def653ce69cb",
+            "id": "43d56389-f6e8-40af-adb8-bc5590f31aba",
             "is_active": False,
             "metadata": [],
             "name": "Internal Integration Specialist",
-            "updated_at": parse_datetime("2023-02-09T00:56:02.927Z"),
+            "updated_at": parse_datetime("2023-02-09T09:31:04.675Z"),
         },
         "connection_id": "<id>",
     })
@@ -916,7 +922,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-07-18T10:32:01.414Z"),
             "currency": "MNT",
             "description": "Commemoro acervus.",
-            "id": "52238525-3e2a-411d-9b98-7789a1167c6d",
+            "id": "200a07ae-8104-43e5-b1a1-407b7f668ed4",
             "is_active": False,
             "is_hq": True,
             "language_locale": "it",
@@ -937,7 +943,7 @@ with UnifiedTo(
                 },
             ],
             "timezone": "Asia/Jerusalem",
-            "updated_at": parse_datetime("2023-06-30T14:53:40.875Z"),
+            "updated_at": parse_datetime("2023-06-30T23:12:59.945Z"),
         },
         "connection_id": "<id>",
     })
@@ -994,13 +1000,13 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-06-23T02:10:00.789Z"),
             "description": "Uterque vespillo adnuo ea commodo turbo suscipio condico.",
             "domain": "Health",
-            "id": "994da848-bc0f-42c3-8f15-873674ec929e",
+            "id": "13527466-c66b-4795-943e-e45ae7d76388",
             "is_active": False,
             "metadata": [],
             "name": "International Functionality Architect",
             "subcategory": "Marble",
             "type": shared.HrisTaxonomyType.KNOWLEDGE,
-            "updated_at": parse_datetime("2023-06-03T21:47:07.538Z"),
+            "updated_at": parse_datetime("2023-06-04T02:40:49.758Z"),
             "url": "https://fixed-membership.biz/",
         },
         "connection_id": "<id>",
@@ -1030,6 +1036,71 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## create_hris_taxwithholding
+
+Creates a HrisTaxwithholding. Provide the unified HrisTaxwithholding fields in the request body; they are mapped to the provider's API. Returns the created HrisTaxwithholding.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="createHrisTaxwithholding" method="post" path="/hris/{connection_id}/taxwithholding" example="hris_taxwithholding" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.hris.create_hris_taxwithholding(request={
+        "hris_taxwithholding": {
+            "allowances": 1.0,
+            "country": "US",
+            "created_at": parse_datetime("2022-08-14T05:49:35.141Z"),
+            "effective_at": parse_datetime("2022-08-14T05:49:35.141Z"),
+            "extra_withholding_amount": 10.0,
+            "filing_status": shared.FilingStatus.QUALIFYING_SURVIVOR,
+            "form": shared.Form.STATE_FORM,
+            "id": "0753c1a7-975a-47be-a9bb-14529f2d5ec2",
+            "is_exempt": False,
+            "is_resident": True,
+            "jurisdiction": "OH",
+            "jurisdiction_type": shared.JurisdictionType.STATE,
+            "metadata": [],
+            "override_amount": 19.0,
+            "override_type": shared.OverrideType.FIXED_AMOUNT,
+            "updated_at": parse_datetime("2026-09-28T07:48:30.232Z"),
+        },
+        "connection_id": "<id>",
+    })
+
+    assert res.hris_taxwithholding is not None
+
+    # Handle response
+    print(res.hris_taxwithholding)
+
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [operations.CreateHrisTaxwithholdingRequest](../../models/operations/createhristaxwithholdingrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
+
+### Response
+
+**[operations.CreateHrisTaxwithholdingResponse](../../models/operations/createhristaxwithholdingresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## create_hris_timeoff
 
 Creates a HrisTimeoff. Provide the unified HrisTimeoff fields in the request body; they are mapped to the provider's API. Returns the created HrisTimeoff.
@@ -1051,7 +1122,7 @@ with UnifiedTo(
 
     res = unified_to.hris.create_hris_timeoff(request={
         "hris_timeoff": {
-            "approved_at": parse_datetime("2022-02-25T08:31:08.160Z"),
+            "approved_at": parse_datetime("2022-02-25T10:14:41.329Z"),
             "attachments": [
                 {
                     "content_type": "application/pdf",
@@ -1065,16 +1136,16 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-10-06T18:00:20.615Z"),
             "duration": 4.0,
             "duration_type": shared.DurationType.DAY,
-            "end_at": parse_datetime("2025-01-14T09:18:49.606Z"),
-            "id": "00e11cdc-ca22-4d78-b86e-f998c2332fa3",
+            "end_at": parse_datetime("2025-01-14T23:53:10.431Z"),
+            "id": "2b952274-d0fa-4417-a93e-4f7e856f02d8",
             "is_paid": True,
             "metadata": [],
             "original_type": "acerbitas ut",
             "reason": "verto",
-            "start_at": parse_datetime("2023-09-14T16:14:52.517Z"),
+            "start_at": parse_datetime("2023-09-15T00:52:34.115Z"),
             "status": shared.HrisTimeoffStatus.DENIED,
             "type": shared.HrisTimeoffType.IN_LIEU,
-            "updated_at": parse_datetime("2022-07-16T18:23:06.118Z"),
+            "updated_at": parse_datetime("2022-07-16T21:50:03.961Z"),
             "user_id": "<id>",
         },
         "connection_id": "<id>",
@@ -1125,7 +1196,7 @@ with UnifiedTo(
 
     res = unified_to.hris.create_hris_timeshift(request={
         "hris_timeshift": {
-            "approved_at": parse_datetime("2022-07-28T22:06:10.340Z"),
+            "approved_at": parse_datetime("2022-07-29T07:35:02.038Z"),
             "compensation": [
                 {
                     "amount": 76761.0,
@@ -1137,13 +1208,13 @@ with UnifiedTo(
             ],
             "created_at": parse_datetime("2019-07-01T23:53:15.738Z"),
             "employee_user_id": "<id>",
-            "end_at": parse_datetime("2026-10-22T20:12:53.060Z"),
+            "end_at": parse_datetime("2026-10-23T18:45:23.945Z"),
             "hours": 6.0,
-            "id": "8a44c681-5115-4c05-a77a-74bde7033318",
+            "id": "f7d2f4aa-d80f-4fad-ac4c-4ad75aff357f",
             "is_approved": False,
             "metadata": [],
-            "start_at": parse_datetime("2023-07-27T08:59:44.953Z"),
-            "updated_at": parse_datetime("2021-07-09T00:56:01.786Z"),
+            "start_at": parse_datetime("2023-07-27T21:32:43.952Z"),
+            "updated_at": parse_datetime("2021-07-09T07:09:54.866Z"),
         },
         "connection_id": "<id>",
     })
@@ -1917,6 +1988,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.GetHrisTaxonomyResponse](../../models/operations/gethristaxonomyresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_hris_taxwithholding
+
+Retrieves a single HrisTaxwithholding by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getHrisTaxwithholding" method="get" path="/hris/{connection_id}/taxwithholding/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.hris.get_hris_taxwithholding(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.hris_taxwithholding is not None
+
+    # Handle response
+    print(res.hris_taxwithholding)
+
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.GetHrisTaxwithholdingRequest](../../models/operations/gethristaxwithholdingrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+
+### Response
+
+**[operations.GetHrisTaxwithholdingResponse](../../models/operations/gethristaxwithholdingresponse.md)**
 
 ### Errors
 
@@ -2754,6 +2872,52 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## list_hris_taxwithholdings
+
+Returns a list of HrisTaxwithholdings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listHrisTaxwithholdings" method="get" path="/hris/{connection_id}/taxwithholding" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.hris.list_hris_taxwithholdings(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.hris_taxwithholdings is not None
+
+    # Handle response
+    print(res.hris_taxwithholdings)
+
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.ListHrisTaxwithholdingsRequest](../../models/operations/listhristaxwithholdingsrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+
+### Response
+
+**[operations.ListHrisTaxwithholdingsResponse](../../models/operations/listhristaxwithholdingsresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## list_hris_timeoffs
 
 Returns a list of HrisTimeoffs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -2875,32 +3039,32 @@ with UnifiedTo(
                 "region": "Tennessee",
                 "region_code": "CA",
             },
-            "approved_at": parse_datetime("2021-09-20T03:11:44.713Z"),
+            "approved_at": parse_datetime("2021-09-20T03:40:21.093Z"),
             "breaks": [
                 {
                     "duration_minutes": 51.0,
-                    "end_at": parse_datetime("2024-02-27T03:17:49.764Z"),
-                    "id": "11b7f288-5eaf-4600-982e-e22fd6c51a87",
+                    "end_at": parse_datetime("2024-02-27T14:18:00.769Z"),
+                    "id": "6cc85b23-f97d-4fc0-a3d3-7b008ab2af6c",
                     "is_paid": False,
                     "name": "Lunch",
-                    "start_at": parse_datetime("2023-11-10T01:40:16.371Z"),
+                    "start_at": parse_datetime("2023-11-10T11:23:03.486Z"),
                 },
             ],
             "created_at": parse_datetime("2021-08-10T19:43:18.452Z"),
             "currency": "EUR",
             "declared_tips_amount": 54.0,
             "employee_user_id": "<id>",
-            "end_at": parse_datetime("2024-05-06T20:28:01.169Z"),
+            "end_at": parse_datetime("2024-05-07T08:17:40.518Z"),
             "hourly_rate": 16.0,
             "hours": 10.0,
-            "id": "155d4b16-c2fc-4d03-a797-9f6fda901bd0",
+            "id": "f79b4272-8ebc-467e-8817-b0a81ad647c9",
             "job_name": "Human Accountability Administrator",
             "metadata": [],
             "non_cash_tips_amount": 167.0,
-            "start_at": parse_datetime("2021-11-12T07:16:58.876Z"),
+            "start_at": parse_datetime("2021-11-12T08:23:19.143Z"),
             "status": shared.HrisAttendanceStatus.OPEN,
             "timezone": "America/Atikokan",
-            "updated_at": parse_datetime("2022-01-22T02:24:36.010Z"),
+            "updated_at": parse_datetime("2022-01-22T04:21:10.672Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2958,7 +3122,7 @@ with UnifiedTo(
             "country_code": "US",
             "created_at": parse_datetime("2019-11-16T16:43:45.976Z"),
             "currency": "USD",
-            "id": "db73f46a-1c46-4e39-af4a-45705fe4bad2",
+            "id": "02741a77-3501-4e88-928c-703b3984441c",
             "is_primary": True,
             "metadata": [],
             "name": "Granville Schumm - Checking",
@@ -2966,7 +3130,7 @@ with UnifiedTo(
             "routing_number": "448650724",
             "split_amount": 98.0,
             "split_type": shared.SplitType.PERCENTAGE,
-            "updated_at": parse_datetime("2025-07-22T09:05:18.447Z"),
+            "updated_at": parse_datetime("2025-07-23T03:32:55.995Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -3025,13 +3189,13 @@ with UnifiedTo(
             "employer_contribution_max_amount": 179093.0,
             "employer_contribution_type": shared.EmployerContributionType.PERCENTAGE,
             "frequency": shared.HrisBenefitFrequency.MONTH,
-            "id": "6f67903f-81d1-4daa-9129-ffcc71f39143",
+            "id": "6eaa5ab5-f199-43bf-839b-66cbf05b994d",
             "is_active": False,
             "metadata": [],
             "name": "Frozen Wooden Ball",
             "tax": shared.Tax.PRE_TAX,
             "type": shared.HrisBenefitType.OTHER,
-            "updated_at": parse_datetime("2023-04-01T04:34:21.415Z"),
+            "updated_at": parse_datetime("2023-04-01T14:29:23.113Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -3091,11 +3255,11 @@ with UnifiedTo(
                 "region_code": "MO",
             },
             "created_at": parse_datetime("2021-05-02T22:27:38.970Z"),
-            "id": "7380664e-a08b-4daf-8cbf-da047c161d80",
+            "id": "f0368d47-7363-441c-8588-fb1b5e558749",
             "legal_name": "Gottlieb Group LLC",
             "metadata": [],
             "name": "Gottlieb Group",
-            "updated_at": parse_datetime("2026-11-03T12:54:10.633Z"),
+            "updated_at": parse_datetime("2026-11-04T11:30:31.443Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -3153,14 +3317,14 @@ with UnifiedTo(
             "employer_type": shared.EmployerType.PERCENTAGE,
             "frequency": shared.HrisDeductionFrequency.ONE_TIME,
             "garnishment_type": shared.GarnishmentType.CHILD_SUPPORT,
-            "id": "01218889-a485-477f-b274-0abc7c64af2c",
+            "id": "aadd1a65-4f2b-4b10-813a-33f1b7858232",
             "is_active": True,
             "max_amount": 21794.0,
             "metadata": [],
             "notes": "Carmen desidero.",
-            "start_at": parse_datetime("2025-04-04T03:02:35.647Z"),
+            "start_at": parse_datetime("2025-04-04T20:21:39.120Z"),
             "type": shared.HrisDeductionType.FIXED,
-            "updated_at": parse_datetime("2024-04-07T07:06:40.572Z"),
+            "updated_at": parse_datetime("2024-04-07T21:06:17.393Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -3219,7 +3383,7 @@ with UnifiedTo(
             "has_hd_encrypted": True,
             "has_password_manager": True,
             "has_screenlock": False,
-            "id": "2d84f65e-63cf-4e71-89bc-6ececfae28a0",
+            "id": "449d1288-cceb-4444-b1af-c7a38a0296ad",
             "is_missing": False,
             "manufacturer": "Hackett Inc",
             "metadata": [],
@@ -3227,7 +3391,7 @@ with UnifiedTo(
             "name": "august-laptop",
             "os": "transmitter",
             "os_version": "8.4.8",
-            "updated_at": parse_datetime("2023-06-22T16:56:07.540Z"),
+            "updated_at": parse_datetime("2023-06-23T05:31:30.842Z"),
             "version": "4.15.7",
         },
         "connection_id": "<id>",
@@ -3282,10 +3446,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-10-27T11:47:26.086Z"),
             "document_url": "https://sore-decision.biz/",
             "filename": "ridge_forager.xsl",
-            "id": "abed8b83-d568-4fac-80ef-a0808fb01942",
+            "id": "eaf95d13-9e97-4e0d-a595-3de961edb22d",
             "metadata": [],
             "type": shared.HrisDocumentType.POLICY,
-            "updated_at": parse_datetime("2025-10-30T21:45:06.060Z"),
+            "updated_at": parse_datetime("2025-10-31T14:38:33.394Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -3340,12 +3504,12 @@ with UnifiedTo(
             "created_at": parse_datetime("2019-01-26T12:44:52.326Z"),
             "currency": "USD",
             "frequency": shared.HrisEarningFrequency.SEMIMONTHLY,
-            "id": "acd57537-ec8a-485b-887a-59ee12b46667",
+            "id": "c1a95382-3a1d-4600-99f8-683ca1a206a0",
             "metadata": [],
             "notes": "Deporto truculenter vinum beatae.",
-            "start_at": parse_datetime("2022-08-06T05:52:27.633Z"),
+            "start_at": parse_datetime("2022-08-06T16:08:59.668Z"),
             "status": shared.HrisEarningStatus.ENDED,
-            "updated_at": parse_datetime("2020-02-12T08:10:46.170Z"),
+            "updated_at": parse_datetime("2020-02-12T11:13:34.382Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -3432,7 +3596,7 @@ with UnifiedTo(
             "gender": shared.HrisEmployeeGender.MALE,
             "has_mfa": True,
             "hired_at": parse_datetime("2019-09-16T15:08:53.262Z"),
-            "id": "fcdba9d4-87d2-4fd3-b0fc-100bf3de0e84",
+            "id": "a3451fd7-c916-47a2-83f2-30370ceb5124",
             "image_url": "https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg",
             "language_locale": "in",
             "last_name": "Prohaska",
@@ -3444,7 +3608,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.HrisMetadataFormat.TEXT,
-                    "id": "4cbe8ab7-89c2-4e64-8a72-994157e294c4",
+                    "id": "e572769d-5427-4fab-a8ee-40d4ac8c616e",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "tutis",
@@ -3492,7 +3656,7 @@ with UnifiedTo(
             "timeoff_days_used": 9.0,
             "timezone": "Europe/Ljubljana",
             "title": "District Branding Specialist",
-            "updated_at": parse_datetime("2020-07-22T06:04:17.890Z"),
+            "updated_at": parse_datetime("2020-07-22T08:45:44.512Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -3545,12 +3709,12 @@ with UnifiedTo(
         "hris_group": {
             "created_at": parse_datetime("2023-11-01T13:13:40.714Z"),
             "description": "Absorbeo casso.",
-            "id": "19f2bd5a-97fe-4749-b308-3ea1be56a138",
+            "id": "f4f41b1d-b72a-4722-9593-9d415a81fa8b",
             "is_active": False,
             "metadata": [],
             "name": "Games",
             "type": shared.HrisGroupType.BRANCH,
-            "updated_at": parse_datetime("2026-06-13T08:18:34.133Z"),
+            "updated_at": parse_datetime("2026-06-14T03:52:01.298Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -3605,11 +3769,11 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-10-28T01:13:19.491Z"),
             "description": "Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.",
             "employment_type": shared.HrisJobEmploymentType.FREELANCE,
-            "id": "81cc7512-6c29-4b24-a538-3ae29eff52da",
+            "id": "9e336f5a-3285-4b74-babd-27e8c3f1aa82",
             "is_active": False,
             "metadata": [],
             "name": "Internal Integration Specialist",
-            "updated_at": parse_datetime("2023-02-09T00:56:02.979Z"),
+            "updated_at": parse_datetime("2023-02-09T09:31:04.716Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -3672,7 +3836,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-07-18T10:32:01.414Z"),
             "currency": "MNT",
             "description": "Commemoro acervus.",
-            "id": "3ed0c0bb-a686-4323-ac29-c866855f8412",
+            "id": "170bdd46-ade9-4374-bdf6-a605bb86b13e",
             "is_active": False,
             "is_hq": True,
             "language_locale": "it",
@@ -3693,7 +3857,7 @@ with UnifiedTo(
                 },
             ],
             "timezone": "Asia/Jerusalem",
-            "updated_at": parse_datetime("2023-06-30T14:53:40.883Z"),
+            "updated_at": parse_datetime("2023-06-30T23:12:59.950Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -3751,13 +3915,13 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-06-23T02:10:00.789Z"),
             "description": "Uterque vespillo adnuo ea commodo turbo suscipio condico.",
             "domain": "Health",
-            "id": "3caa2881-a29a-4a41-ae2b-1c0d75ecaf62",
+            "id": "ec08eaf9-60f9-4b0b-8a21-a54aad7e06f1",
             "is_active": False,
             "metadata": [],
             "name": "International Functionality Architect",
             "subcategory": "Marble",
             "type": shared.HrisTaxonomyType.KNOWLEDGE,
-            "updated_at": parse_datetime("2023-06-03T21:47:07.541Z"),
+            "updated_at": parse_datetime("2023-06-04T02:40:49.761Z"),
             "url": "https://fixed-membership.biz/",
         },
         "connection_id": "<id>",
@@ -3788,6 +3952,72 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## patch_hris_taxwithholding
+
+Updates the HrisTaxwithholding identified by `id`. Provide the unified HrisTaxwithholding fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="patchHrisTaxwithholding" method="patch" path="/hris/{connection_id}/taxwithholding/{id}" example="hris_taxwithholding" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.hris.patch_hris_taxwithholding(request={
+        "hris_taxwithholding": {
+            "allowances": 1.0,
+            "country": "US",
+            "created_at": parse_datetime("2022-08-14T05:49:35.141Z"),
+            "effective_at": parse_datetime("2022-08-14T05:49:35.141Z"),
+            "extra_withholding_amount": 10.0,
+            "filing_status": shared.FilingStatus.QUALIFYING_SURVIVOR,
+            "form": shared.Form.STATE_FORM,
+            "id": "75d164df-d876-417d-a386-0fc50fa3903d",
+            "is_exempt": False,
+            "is_resident": True,
+            "jurisdiction": "OH",
+            "jurisdiction_type": shared.JurisdictionType.STATE,
+            "metadata": [],
+            "override_amount": 19.0,
+            "override_type": shared.OverrideType.FIXED_AMOUNT,
+            "updated_at": parse_datetime("2026-09-28T07:48:30.248Z"),
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.hris_taxwithholding is not None
+
+    # Handle response
+    print(res.hris_taxwithholding)
+
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.PatchHrisTaxwithholdingRequest](../../models/operations/patchhristaxwithholdingrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `retries`                                                                                              | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                       | :heavy_minus_sign:                                                                                     | Configuration to override the default retry behavior of the client.                                    |
+
+### Response
+
+**[operations.PatchHrisTaxwithholdingResponse](../../models/operations/patchhristaxwithholdingresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## patch_hris_timeoff
 
 Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the request body.
@@ -3809,7 +4039,7 @@ with UnifiedTo(
 
     res = unified_to.hris.patch_hris_timeoff(request={
         "hris_timeoff": {
-            "approved_at": parse_datetime("2022-02-25T08:31:08.161Z"),
+            "approved_at": parse_datetime("2022-02-25T10:14:41.330Z"),
             "attachments": [
                 {
                     "content_type": "application/pdf",
@@ -3823,16 +4053,16 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-10-06T18:00:20.615Z"),
             "duration": 4.0,
             "duration_type": shared.DurationType.DAY,
-            "end_at": parse_datetime("2025-01-14T09:18:49.619Z"),
-            "id": "436f803c-b8dd-44c7-9f26-0137536ca4a8",
+            "end_at": parse_datetime("2025-01-14T23:53:10.441Z"),
+            "id": "79db2e48-becd-433d-9d5a-481300be97dd",
             "is_paid": True,
             "metadata": [],
             "original_type": "acerbitas ut",
             "reason": "verto",
-            "start_at": parse_datetime("2023-09-14T16:14:52.525Z"),
+            "start_at": parse_datetime("2023-09-15T00:52:34.121Z"),
             "status": shared.HrisTimeoffStatus.DENIED,
             "type": shared.HrisTimeoffType.IN_LIEU,
-            "updated_at": parse_datetime("2022-07-16T18:23:06.121Z"),
+            "updated_at": parse_datetime("2022-07-16T21:50:03.963Z"),
             "user_id": "<id>",
         },
         "connection_id": "<id>",
@@ -3884,7 +4114,7 @@ with UnifiedTo(
 
     res = unified_to.hris.patch_hris_timeshift(request={
         "hris_timeshift": {
-            "approved_at": parse_datetime("2022-07-28T22:06:10.349Z"),
+            "approved_at": parse_datetime("2022-07-29T07:35:02.047Z"),
             "compensation": [
                 {
                     "amount": 76761.0,
@@ -3896,13 +4126,13 @@ with UnifiedTo(
             ],
             "created_at": parse_datetime("2019-07-01T23:53:15.738Z"),
             "employee_user_id": "<id>",
-            "end_at": parse_datetime("2026-10-22T20:12:53.080Z"),
+            "end_at": parse_datetime("2026-10-23T18:45:23.965Z"),
             "hours": 6.0,
-            "id": "05a75330-6012-4165-bcfe-058b9e7e1fa2",
+            "id": "d67b2174-b5d7-44f7-8483-1d5a0ca16b5e",
             "is_approved": False,
             "metadata": [],
-            "start_at": parse_datetime("2023-07-27T08:59:44.965Z"),
-            "updated_at": parse_datetime("2021-07-09T00:56:01.791Z"),
+            "start_at": parse_datetime("2023-07-27T21:32:43.964Z"),
+            "updated_at": parse_datetime("2021-07-09T07:09:54.872Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -4543,6 +4773,53 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## remove_hris_taxwithholding
+
+Deletes the HrisTaxwithholding identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="removeHrisTaxwithholding" method="delete" path="/hris/{connection_id}/taxwithholding/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.hris.remove_hris_taxwithholding(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res is not None
+
+    # Handle response
+    print(res)
+
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [operations.RemoveHrisTaxwithholdingRequest](../../models/operations/removehristaxwithholdingrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
+
+### Response
+
+**[operations.RemoveHrisTaxwithholdingResponse](../../models/operations/removehristaxwithholdingresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## remove_hris_timeoff
 
 Deletes the HrisTimeoff identified by `id`.
@@ -4666,32 +4943,32 @@ with UnifiedTo(
                 "region": "Tennessee",
                 "region_code": "CA",
             },
-            "approved_at": parse_datetime("2021-09-20T03:11:44.713Z"),
+            "approved_at": parse_datetime("2021-09-20T03:40:21.093Z"),
             "breaks": [
                 {
                     "duration_minutes": 51.0,
-                    "end_at": parse_datetime("2024-02-27T03:17:49.764Z"),
-                    "id": "11b7f288-5eaf-4600-982e-e22fd6c51a87",
+                    "end_at": parse_datetime("2024-02-27T14:18:00.769Z"),
+                    "id": "6cc85b23-f97d-4fc0-a3d3-7b008ab2af6c",
                     "is_paid": False,
                     "name": "Lunch",
-                    "start_at": parse_datetime("2023-11-10T01:40:16.371Z"),
+                    "start_at": parse_datetime("2023-11-10T11:23:03.486Z"),
                 },
             ],
             "created_at": parse_datetime("2021-08-10T19:43:18.452Z"),
             "currency": "EUR",
             "declared_tips_amount": 54.0,
             "employee_user_id": "<id>",
-            "end_at": parse_datetime("2024-05-06T20:28:01.169Z"),
+            "end_at": parse_datetime("2024-05-07T08:17:40.518Z"),
             "hourly_rate": 16.0,
             "hours": 10.0,
-            "id": "155d4b16-c2fc-4d03-a797-9f6fda901bd0",
+            "id": "f79b4272-8ebc-467e-8817-b0a81ad647c9",
             "job_name": "Human Accountability Administrator",
             "metadata": [],
             "non_cash_tips_amount": 167.0,
-            "start_at": parse_datetime("2021-11-12T07:16:58.876Z"),
+            "start_at": parse_datetime("2021-11-12T08:23:19.143Z"),
             "status": shared.HrisAttendanceStatus.OPEN,
             "timezone": "America/Atikokan",
-            "updated_at": parse_datetime("2022-01-22T02:24:36.010Z"),
+            "updated_at": parse_datetime("2022-01-22T04:21:10.672Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -4749,7 +5026,7 @@ with UnifiedTo(
             "country_code": "US",
             "created_at": parse_datetime("2019-11-16T16:43:45.976Z"),
             "currency": "USD",
-            "id": "db73f46a-1c46-4e39-af4a-45705fe4bad2",
+            "id": "02741a77-3501-4e88-928c-703b3984441c",
             "is_primary": True,
             "metadata": [],
             "name": "Granville Schumm - Checking",
@@ -4757,7 +5034,7 @@ with UnifiedTo(
             "routing_number": "448650724",
             "split_amount": 98.0,
             "split_type": shared.SplitType.PERCENTAGE,
-            "updated_at": parse_datetime("2025-07-22T09:05:18.447Z"),
+            "updated_at": parse_datetime("2025-07-23T03:32:55.995Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -4816,13 +5093,13 @@ with UnifiedTo(
             "employer_contribution_max_amount": 179093.0,
             "employer_contribution_type": shared.EmployerContributionType.PERCENTAGE,
             "frequency": shared.HrisBenefitFrequency.MONTH,
-            "id": "6f67903f-81d1-4daa-9129-ffcc71f39143",
+            "id": "6eaa5ab5-f199-43bf-839b-66cbf05b994d",
             "is_active": False,
             "metadata": [],
             "name": "Frozen Wooden Ball",
             "tax": shared.Tax.PRE_TAX,
             "type": shared.HrisBenefitType.OTHER,
-            "updated_at": parse_datetime("2023-04-01T04:34:21.415Z"),
+            "updated_at": parse_datetime("2023-04-01T14:29:23.113Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -4882,11 +5159,11 @@ with UnifiedTo(
                 "region_code": "MO",
             },
             "created_at": parse_datetime("2021-05-02T22:27:38.970Z"),
-            "id": "7380664e-a08b-4daf-8cbf-da047c161d80",
+            "id": "f0368d47-7363-441c-8588-fb1b5e558749",
             "legal_name": "Gottlieb Group LLC",
             "metadata": [],
             "name": "Gottlieb Group",
-            "updated_at": parse_datetime("2026-11-03T12:54:10.633Z"),
+            "updated_at": parse_datetime("2026-11-04T11:30:31.443Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -4944,14 +5221,14 @@ with UnifiedTo(
             "employer_type": shared.EmployerType.PERCENTAGE,
             "frequency": shared.HrisDeductionFrequency.ONE_TIME,
             "garnishment_type": shared.GarnishmentType.CHILD_SUPPORT,
-            "id": "01218889-a485-477f-b274-0abc7c64af2c",
+            "id": "aadd1a65-4f2b-4b10-813a-33f1b7858232",
             "is_active": True,
             "max_amount": 21794.0,
             "metadata": [],
             "notes": "Carmen desidero.",
-            "start_at": parse_datetime("2025-04-04T03:02:35.647Z"),
+            "start_at": parse_datetime("2025-04-04T20:21:39.120Z"),
             "type": shared.HrisDeductionType.FIXED,
-            "updated_at": parse_datetime("2024-04-07T07:06:40.572Z"),
+            "updated_at": parse_datetime("2024-04-07T21:06:17.393Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -5010,7 +5287,7 @@ with UnifiedTo(
             "has_hd_encrypted": True,
             "has_password_manager": True,
             "has_screenlock": False,
-            "id": "2d84f65e-63cf-4e71-89bc-6ececfae28a0",
+            "id": "449d1288-cceb-4444-b1af-c7a38a0296ad",
             "is_missing": False,
             "manufacturer": "Hackett Inc",
             "metadata": [],
@@ -5018,7 +5295,7 @@ with UnifiedTo(
             "name": "august-laptop",
             "os": "transmitter",
             "os_version": "8.4.8",
-            "updated_at": parse_datetime("2023-06-22T16:56:07.540Z"),
+            "updated_at": parse_datetime("2023-06-23T05:31:30.842Z"),
             "version": "4.15.7",
         },
         "connection_id": "<id>",
@@ -5073,10 +5350,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-10-27T11:47:26.086Z"),
             "document_url": "https://sore-decision.biz/",
             "filename": "ridge_forager.xsl",
-            "id": "abed8b83-d568-4fac-80ef-a0808fb01942",
+            "id": "eaf95d13-9e97-4e0d-a595-3de961edb22d",
             "metadata": [],
             "type": shared.HrisDocumentType.POLICY,
-            "updated_at": parse_datetime("2025-10-30T21:45:06.060Z"),
+            "updated_at": parse_datetime("2025-10-31T14:38:33.394Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -5131,12 +5408,12 @@ with UnifiedTo(
             "created_at": parse_datetime("2019-01-26T12:44:52.326Z"),
             "currency": "USD",
             "frequency": shared.HrisEarningFrequency.SEMIMONTHLY,
-            "id": "acd57537-ec8a-485b-887a-59ee12b46667",
+            "id": "c1a95382-3a1d-4600-99f8-683ca1a206a0",
             "metadata": [],
             "notes": "Deporto truculenter vinum beatae.",
-            "start_at": parse_datetime("2022-08-06T05:52:27.633Z"),
+            "start_at": parse_datetime("2022-08-06T16:08:59.668Z"),
             "status": shared.HrisEarningStatus.ENDED,
-            "updated_at": parse_datetime("2020-02-12T08:10:46.170Z"),
+            "updated_at": parse_datetime("2020-02-12T11:13:34.382Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -5223,7 +5500,7 @@ with UnifiedTo(
             "gender": shared.HrisEmployeeGender.MALE,
             "has_mfa": True,
             "hired_at": parse_datetime("2019-09-16T15:08:53.262Z"),
-            "id": "fcdba9d4-87d2-4fd3-b0fc-100bf3de0e84",
+            "id": "a3451fd7-c916-47a2-83f2-30370ceb5124",
             "image_url": "https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg",
             "language_locale": "in",
             "last_name": "Prohaska",
@@ -5235,7 +5512,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.HrisMetadataFormat.TEXT,
-                    "id": "4cbe8ab7-89c2-4e64-8a72-994157e294c4",
+                    "id": "e572769d-5427-4fab-a8ee-40d4ac8c616e",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "tutis",
@@ -5283,7 +5560,7 @@ with UnifiedTo(
             "timeoff_days_used": 9.0,
             "timezone": "Europe/Ljubljana",
             "title": "District Branding Specialist",
-            "updated_at": parse_datetime("2020-07-22T06:04:17.890Z"),
+            "updated_at": parse_datetime("2020-07-22T08:45:44.512Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -5336,12 +5613,12 @@ with UnifiedTo(
         "hris_group": {
             "created_at": parse_datetime("2023-11-01T13:13:40.714Z"),
             "description": "Absorbeo casso.",
-            "id": "19f2bd5a-97fe-4749-b308-3ea1be56a138",
+            "id": "f4f41b1d-b72a-4722-9593-9d415a81fa8b",
             "is_active": False,
             "metadata": [],
             "name": "Games",
             "type": shared.HrisGroupType.BRANCH,
-            "updated_at": parse_datetime("2026-06-13T08:18:34.133Z"),
+            "updated_at": parse_datetime("2026-06-14T03:52:01.298Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -5396,11 +5673,11 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-10-28T01:13:19.491Z"),
             "description": "Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.",
             "employment_type": shared.HrisJobEmploymentType.FREELANCE,
-            "id": "81cc7512-6c29-4b24-a538-3ae29eff52da",
+            "id": "9e336f5a-3285-4b74-babd-27e8c3f1aa82",
             "is_active": False,
             "metadata": [],
             "name": "Internal Integration Specialist",
-            "updated_at": parse_datetime("2023-02-09T00:56:02.979Z"),
+            "updated_at": parse_datetime("2023-02-09T09:31:04.716Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -5463,7 +5740,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-07-18T10:32:01.414Z"),
             "currency": "MNT",
             "description": "Commemoro acervus.",
-            "id": "3ed0c0bb-a686-4323-ac29-c866855f8412",
+            "id": "170bdd46-ade9-4374-bdf6-a605bb86b13e",
             "is_active": False,
             "is_hq": True,
             "language_locale": "it",
@@ -5484,7 +5761,7 @@ with UnifiedTo(
                 },
             ],
             "timezone": "Asia/Jerusalem",
-            "updated_at": parse_datetime("2023-06-30T14:53:40.883Z"),
+            "updated_at": parse_datetime("2023-06-30T23:12:59.950Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -5542,13 +5819,13 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-06-23T02:10:00.789Z"),
             "description": "Uterque vespillo adnuo ea commodo turbo suscipio condico.",
             "domain": "Health",
-            "id": "3caa2881-a29a-4a41-ae2b-1c0d75ecaf62",
+            "id": "ec08eaf9-60f9-4b0b-8a21-a54aad7e06f1",
             "is_active": False,
             "metadata": [],
             "name": "International Functionality Architect",
             "subcategory": "Marble",
             "type": shared.HrisTaxonomyType.KNOWLEDGE,
-            "updated_at": parse_datetime("2023-06-03T21:47:07.541Z"),
+            "updated_at": parse_datetime("2023-06-04T02:40:49.761Z"),
             "url": "https://fixed-membership.biz/",
         },
         "connection_id": "<id>",
@@ -5579,6 +5856,72 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## update_hris_taxwithholding
+
+Updates the HrisTaxwithholding identified by `id`. Provide the unified HrisTaxwithholding fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="updateHrisTaxwithholding" method="put" path="/hris/{connection_id}/taxwithholding/{id}" example="hris_taxwithholding" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.hris.update_hris_taxwithholding(request={
+        "hris_taxwithholding": {
+            "allowances": 1.0,
+            "country": "US",
+            "created_at": parse_datetime("2022-08-14T05:49:35.141Z"),
+            "effective_at": parse_datetime("2022-08-14T05:49:35.141Z"),
+            "extra_withholding_amount": 10.0,
+            "filing_status": shared.FilingStatus.QUALIFYING_SURVIVOR,
+            "form": shared.Form.STATE_FORM,
+            "id": "75d164df-d876-417d-a386-0fc50fa3903d",
+            "is_exempt": False,
+            "is_resident": True,
+            "jurisdiction": "OH",
+            "jurisdiction_type": shared.JurisdictionType.STATE,
+            "metadata": [],
+            "override_amount": 19.0,
+            "override_type": shared.OverrideType.FIXED_AMOUNT,
+            "updated_at": parse_datetime("2026-09-28T07:48:30.248Z"),
+        },
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.hris_taxwithholding is not None
+
+    # Handle response
+    print(res.hris_taxwithholding)
+
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [operations.UpdateHrisTaxwithholdingRequest](../../models/operations/updatehristaxwithholdingrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `retries`                                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                         | :heavy_minus_sign:                                                                                       | Configuration to override the default retry behavior of the client.                                      |
+
+### Response
+
+**[operations.UpdateHrisTaxwithholdingResponse](../../models/operations/updatehristaxwithholdingresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## update_hris_timeoff
 
 Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the request body.
@@ -5600,7 +5943,7 @@ with UnifiedTo(
 
     res = unified_to.hris.update_hris_timeoff(request={
         "hris_timeoff": {
-            "approved_at": parse_datetime("2022-02-25T08:31:08.161Z"),
+            "approved_at": parse_datetime("2022-02-25T10:14:41.330Z"),
             "attachments": [
                 {
                     "content_type": "application/pdf",
@@ -5614,16 +5957,16 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-10-06T18:00:20.615Z"),
             "duration": 4.0,
             "duration_type": shared.DurationType.DAY,
-            "end_at": parse_datetime("2025-01-14T09:18:49.619Z"),
-            "id": "436f803c-b8dd-44c7-9f26-0137536ca4a8",
+            "end_at": parse_datetime("2025-01-14T23:53:10.441Z"),
+            "id": "79db2e48-becd-433d-9d5a-481300be97dd",
             "is_paid": True,
             "metadata": [],
             "original_type": "acerbitas ut",
             "reason": "verto",
-            "start_at": parse_datetime("2023-09-14T16:14:52.525Z"),
+            "start_at": parse_datetime("2023-09-15T00:52:34.121Z"),
             "status": shared.HrisTimeoffStatus.DENIED,
             "type": shared.HrisTimeoffType.IN_LIEU,
-            "updated_at": parse_datetime("2022-07-16T18:23:06.121Z"),
+            "updated_at": parse_datetime("2022-07-16T21:50:03.963Z"),
             "user_id": "<id>",
         },
         "connection_id": "<id>",
@@ -5675,7 +6018,7 @@ with UnifiedTo(
 
     res = unified_to.hris.update_hris_timeshift(request={
         "hris_timeshift": {
-            "approved_at": parse_datetime("2022-07-28T22:06:10.349Z"),
+            "approved_at": parse_datetime("2022-07-29T07:35:02.047Z"),
             "compensation": [
                 {
                     "amount": 76761.0,
@@ -5687,13 +6030,13 @@ with UnifiedTo(
             ],
             "created_at": parse_datetime("2019-07-01T23:53:15.738Z"),
             "employee_user_id": "<id>",
-            "end_at": parse_datetime("2026-10-22T20:12:53.080Z"),
+            "end_at": parse_datetime("2026-10-23T18:45:23.965Z"),
             "hours": 6.0,
-            "id": "05a75330-6012-4165-bcfe-058b9e7e1fa2",
+            "id": "d67b2174-b5d7-44f7-8483-1d5a0ca16b5e",
             "is_approved": False,
             "metadata": [],
-            "start_at": parse_datetime("2023-07-27T08:59:44.965Z"),
-            "updated_at": parse_datetime("2021-07-09T00:56:01.791Z"),
+            "start_at": parse_datetime("2023-07-27T21:32:43.964Z"),
+            "updated_at": parse_datetime("2021-07-09T07:09:54.872Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

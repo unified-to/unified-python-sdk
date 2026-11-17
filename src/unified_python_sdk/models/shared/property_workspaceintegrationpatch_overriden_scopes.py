@@ -304,6 +304,8 @@ class PropertyWorkspaceIntegrationPatchOverridenScopesTypedDict(TypedDict):
     hris_payslip_write: NotRequired[str]
     hris_taxonomy_read: NotRequired[str]
     hris_taxonomy_write: NotRequired[str]
+    hris_taxwithholding_read: NotRequired[str]
+    hris_taxwithholding_write: NotRequired[str]
     hris_timeoff_read: NotRequired[str]
     hris_timeoff_write: NotRequired[str]
     hris_timeshift_read: NotRequired[str]
@@ -1052,6 +1054,10 @@ class PropertyWorkspaceIntegrationPatchOverridenScopes(BaseModel):
 
     hris_taxonomy_write: Optional[str] = None
 
+    hris_taxwithholding_read: Optional[str] = None
+
+    hris_taxwithholding_write: Optional[str] = None
+
     hris_timeoff_read: Optional[str] = None
 
     hris_timeoff_write: Optional[str] = None
@@ -1679,6 +1685,8 @@ class PropertyWorkspaceIntegrationPatchOverridenScopes(BaseModel):
                 "hris_payslip_write",
                 "hris_taxonomy_read",
                 "hris_taxonomy_write",
+                "hris_taxwithholding_read",
+                "hris_taxwithholding_write",
                 "hris_timeoff_read",
                 "hris_timeoff_write",
                 "hris_timeshift_read",

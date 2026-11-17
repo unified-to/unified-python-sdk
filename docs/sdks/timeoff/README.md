@@ -32,7 +32,7 @@ with UnifiedTo(
 
     res = unified_to.timeoff.create_hris_timeoff(request={
         "hris_timeoff": {
-            "approved_at": parse_datetime("2022-02-25T08:31:08.160Z"),
+            "approved_at": parse_datetime("2022-02-25T10:14:41.329Z"),
             "attachments": [
                 {
                     "content_type": "application/pdf",
@@ -46,16 +46,16 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-10-06T18:00:20.615Z"),
             "duration": 4.0,
             "duration_type": shared.DurationType.DAY,
-            "end_at": parse_datetime("2025-01-14T09:18:49.606Z"),
-            "id": "00e11cdc-ca22-4d78-b86e-f998c2332fa3",
+            "end_at": parse_datetime("2025-01-14T23:53:10.431Z"),
+            "id": "2b952274-d0fa-4417-a93e-4f7e856f02d8",
             "is_paid": True,
             "metadata": [],
             "original_type": "acerbitas ut",
             "reason": "verto",
-            "start_at": parse_datetime("2023-09-14T16:14:52.517Z"),
+            "start_at": parse_datetime("2023-09-15T00:52:34.115Z"),
             "status": shared.HrisTimeoffStatus.DENIED,
             "type": shared.HrisTimeoffType.IN_LIEU,
-            "updated_at": parse_datetime("2022-07-16T18:23:06.118Z"),
+            "updated_at": parse_datetime("2022-07-16T21:50:03.961Z"),
             "user_id": "<id>",
         },
         "connection_id": "<id>",
@@ -199,7 +199,7 @@ with UnifiedTo(
 
     res = unified_to.timeoff.patch_hris_timeoff(request={
         "hris_timeoff": {
-            "approved_at": parse_datetime("2022-02-25T08:31:08.161Z"),
+            "approved_at": parse_datetime("2022-02-25T10:14:41.330Z"),
             "attachments": [
                 {
                     "content_type": "application/pdf",
@@ -213,16 +213,16 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-10-06T18:00:20.615Z"),
             "duration": 4.0,
             "duration_type": shared.DurationType.DAY,
-            "end_at": parse_datetime("2025-01-14T09:18:49.619Z"),
-            "id": "436f803c-b8dd-44c7-9f26-0137536ca4a8",
+            "end_at": parse_datetime("2025-01-14T23:53:10.441Z"),
+            "id": "79db2e48-becd-433d-9d5a-481300be97dd",
             "is_paid": True,
             "metadata": [],
             "original_type": "acerbitas ut",
             "reason": "verto",
-            "start_at": parse_datetime("2023-09-14T16:14:52.525Z"),
+            "start_at": parse_datetime("2023-09-15T00:52:34.121Z"),
             "status": shared.HrisTimeoffStatus.DENIED,
             "type": shared.HrisTimeoffType.IN_LIEU,
-            "updated_at": parse_datetime("2022-07-16T18:23:06.121Z"),
+            "updated_at": parse_datetime("2022-07-16T21:50:03.963Z"),
             "user_id": "<id>",
         },
         "connection_id": "<id>",
@@ -321,7 +321,7 @@ with UnifiedTo(
 
     res = unified_to.timeoff.update_hris_timeoff(request={
         "hris_timeoff": {
-            "approved_at": parse_datetime("2022-02-25T08:31:08.161Z"),
+            "approved_at": parse_datetime("2022-02-25T10:14:41.330Z"),
             "attachments": [
                 {
                     "content_type": "application/pdf",
@@ -335,16 +335,16 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-10-06T18:00:20.615Z"),
             "duration": 4.0,
             "duration_type": shared.DurationType.DAY,
-            "end_at": parse_datetime("2025-01-14T09:18:49.619Z"),
-            "id": "436f803c-b8dd-44c7-9f26-0137536ca4a8",
+            "end_at": parse_datetime("2025-01-14T23:53:10.441Z"),
+            "id": "79db2e48-becd-433d-9d5a-481300be97dd",
             "is_paid": True,
             "metadata": [],
             "original_type": "acerbitas ut",
             "reason": "verto",
-            "start_at": parse_datetime("2023-09-14T16:14:52.525Z"),
+            "start_at": parse_datetime("2023-09-15T00:52:34.121Z"),
             "status": shared.HrisTimeoffStatus.DENIED,
             "type": shared.HrisTimeoffType.IN_LIEU,
-            "updated_at": parse_datetime("2022-07-16T18:23:06.121Z"),
+            "updated_at": parse_datetime("2022-07-16T21:50:03.963Z"),
             "user_id": "<id>",
         },
         "connection_id": "<id>",

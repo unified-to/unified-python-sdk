@@ -33,13 +33,13 @@ with UnifiedTo(
     res = unified_to.snapshot.create_compute_snapshot(request={
         "compute_snapshot": {
             "created_at": parse_datetime("2021-09-24T14:40:06.110Z"),
-            "id": "8051edc7-5e22-4bb3-922d-c18ed28f7bba",
+            "id": "09f7cd77-8447-45bb-8b79-e4f1df99bc99",
             "metadata": [],
             "name": "snap-alius",
             "size_mb": 169984.0,
             "status": shared.ComputeSnapshotStatus.DELETING,
             "type": shared.ComputeSnapshotType.DISK,
-            "updated_at": parse_datetime("2026-04-23T00:58:54.499Z"),
+            "updated_at": parse_datetime("2026-04-23T21:13:17.628Z"),
         },
         "connection_id": "<id>",
     })
@@ -183,13 +183,13 @@ with UnifiedTo(
     res = unified_to.snapshot.patch_compute_snapshot(request={
         "compute_snapshot": {
             "created_at": parse_datetime("2021-09-24T14:40:06.110Z"),
-            "id": "61f1ee1a-e728-466c-ac34-d1ac62844197",
+            "id": "8accf939-3ab3-41fc-8808-599ee31062d7",
             "metadata": [],
             "name": "snap-alius",
             "size_mb": 169984.0,
             "status": shared.ComputeSnapshotStatus.DELETING,
             "type": shared.ComputeSnapshotType.DISK,
-            "updated_at": parse_datetime("2026-04-23T00:58:54.506Z"),
+            "updated_at": parse_datetime("2026-04-23T21:13:17.652Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -288,13 +288,13 @@ with UnifiedTo(
     res = unified_to.snapshot.update_compute_snapshot(request={
         "compute_snapshot": {
             "created_at": parse_datetime("2021-09-24T14:40:06.110Z"),
-            "id": "61f1ee1a-e728-466c-ac34-d1ac62844197",
+            "id": "8accf939-3ab3-41fc-8808-599ee31062d7",
             "metadata": [],
             "name": "snap-alius",
             "size_mb": 169984.0,
             "status": shared.ComputeSnapshotStatus.DELETING,
             "type": shared.ComputeSnapshotType.DISK,
-            "updated_at": parse_datetime("2026-04-23T00:58:54.506Z"),
+            "updated_at": parse_datetime("2026-04-23T21:13:17.652Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

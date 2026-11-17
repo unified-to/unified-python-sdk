@@ -131,7 +131,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "df1bea93-664a-4d46-b35a-e13d1abfcc69",
+            "id": "9dd86d16-2a49-4cfc-a37e-f981252d6bb6",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -144,7 +144,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-13T12:23:46.273Z"),
+            "updated_at": parse_datetime("2023-08-13T18:10:41.552Z"),
         },
         "connection_id": "<id>",
     })
@@ -181,7 +181,7 @@ async def main():
                 "currency": "CAD",
                 "customer_defined_code": "6170",
                 "description": "Voluptatibus valde spoliatio.",
-                "id": "df1bea93-664a-4d46-b35a-e13d1abfcc69",
+                "id": "9dd86d16-2a49-4cfc-a37e-f981252d6bb6",
                 "is_payable": False,
                 "metadata": [],
                 "name": "Auto Loan Account",
@@ -194,7 +194,7 @@ async def main():
                     },
                 ],
                 "type": shared.Type.ACCOUNTS_RECEIVABLE,
-                "updated_at": parse_datetime("2023-08-13T12:23:46.273Z"),
+                "updated_at": parse_datetime("2023-08-13T18:10:41.552Z"),
             },
             "connection_id": "<id>",
         })
@@ -1620,6 +1620,7 @@ asyncio.run(main())
 * [create_hris_job](docs/sdks/hris/README.md#create_hris_job) - Create a job
 * [create_hris_location](docs/sdks/hris/README.md#create_hris_location) - Create a location
 * [create_hris_taxonomy](docs/sdks/hris/README.md#create_hris_taxonomy) - Create a taxonomy
+* [create_hris_taxwithholding](docs/sdks/hris/README.md#create_hris_taxwithholding) - Create a taxwithholding
 * [create_hris_timeoff](docs/sdks/hris/README.md#create_hris_timeoff) - Create a timeoff
 * [create_hris_timeshift](docs/sdks/hris/README.md#create_hris_timeshift) - Create a timeshift
 * [get_hris_attendance](docs/sdks/hris/README.md#get_hris_attendance) - Retrieve an attendance
@@ -1638,6 +1639,7 @@ asyncio.run(main())
 * [get_hris_payroll](docs/sdks/hris/README.md#get_hris_payroll) - Retrieve a payroll
 * [get_hris_payslip](docs/sdks/hris/README.md#get_hris_payslip) - Retrieve a payslip
 * [get_hris_taxonomy](docs/sdks/hris/README.md#get_hris_taxonomy) - Retrieve a taxonomy
+* [get_hris_taxwithholding](docs/sdks/hris/README.md#get_hris_taxwithholding) - Retrieve a taxwithholding
 * [get_hris_timeoff](docs/sdks/hris/README.md#get_hris_timeoff) - Retrieve a timeoff
 * [get_hris_timeshift](docs/sdks/hris/README.md#get_hris_timeshift) - Retrieve a timeshift
 * [list_hris_attendances](docs/sdks/hris/README.md#list_hris_attendances) - List all attendances
@@ -1656,6 +1658,7 @@ asyncio.run(main())
 * [list_hris_payrolls](docs/sdks/hris/README.md#list_hris_payrolls) - List all payrolls
 * [list_hris_payslips](docs/sdks/hris/README.md#list_hris_payslips) - List all payslips
 * [list_hris_taxonomies](docs/sdks/hris/README.md#list_hris_taxonomies) - List all taxonomies
+* [list_hris_taxwithholdings](docs/sdks/hris/README.md#list_hris_taxwithholdings) - List all taxwithholdings
 * [list_hris_timeoffs](docs/sdks/hris/README.md#list_hris_timeoffs) - List all timeoffs
 * [list_hris_timeshifts](docs/sdks/hris/README.md#list_hris_timeshifts) - List all timeshifts
 * [patch_hris_attendance](docs/sdks/hris/README.md#patch_hris_attendance) - Update an attendance
@@ -1671,6 +1674,7 @@ asyncio.run(main())
 * [patch_hris_job](docs/sdks/hris/README.md#patch_hris_job) - Update a job
 * [patch_hris_location](docs/sdks/hris/README.md#patch_hris_location) - Update a location
 * [patch_hris_taxonomy](docs/sdks/hris/README.md#patch_hris_taxonomy) - Update a taxonomy
+* [patch_hris_taxwithholding](docs/sdks/hris/README.md#patch_hris_taxwithholding) - Update a taxwithholding
 * [patch_hris_timeoff](docs/sdks/hris/README.md#patch_hris_timeoff) - Update a timeoff
 * [patch_hris_timeshift](docs/sdks/hris/README.md#patch_hris_timeshift) - Update a timeshift
 * [remove_hris_attendance](docs/sdks/hris/README.md#remove_hris_attendance) - Remove an attendance
@@ -1686,6 +1690,7 @@ asyncio.run(main())
 * [remove_hris_job](docs/sdks/hris/README.md#remove_hris_job) - Remove a job
 * [remove_hris_location](docs/sdks/hris/README.md#remove_hris_location) - Remove a location
 * [remove_hris_taxonomy](docs/sdks/hris/README.md#remove_hris_taxonomy) - Remove a taxonomy
+* [remove_hris_taxwithholding](docs/sdks/hris/README.md#remove_hris_taxwithholding) - Remove a taxwithholding
 * [remove_hris_timeoff](docs/sdks/hris/README.md#remove_hris_timeoff) - Remove a timeoff
 * [remove_hris_timeshift](docs/sdks/hris/README.md#remove_hris_timeshift) - Remove a timeshift
 * [update_hris_attendance](docs/sdks/hris/README.md#update_hris_attendance) - Update an attendance
@@ -1701,6 +1706,7 @@ asyncio.run(main())
 * [update_hris_job](docs/sdks/hris/README.md#update_hris_job) - Update a job
 * [update_hris_location](docs/sdks/hris/README.md#update_hris_location) - Update a location
 * [update_hris_taxonomy](docs/sdks/hris/README.md#update_hris_taxonomy) - Update a taxonomy
+* [update_hris_taxwithholding](docs/sdks/hris/README.md#update_hris_taxwithholding) - Update a taxwithholding
 * [update_hris_timeoff](docs/sdks/hris/README.md#update_hris_timeoff) - Update a timeoff
 * [update_hris_timeshift](docs/sdks/hris/README.md#update_hris_timeshift) - Update a timeshift
 
@@ -2930,6 +2936,15 @@ asyncio.run(main())
 * [remove_accounting_taxrate](docs/sdks/taxrate/README.md#remove_accounting_taxrate) - Remove a taxrate
 * [update_accounting_taxrate](docs/sdks/taxrate/README.md#update_accounting_taxrate) - Update a taxrate
 
+### [Taxwithholding](docs/sdks/taxwithholding/README.md)
+
+* [create_hris_taxwithholding](docs/sdks/taxwithholding/README.md#create_hris_taxwithholding) - Create a taxwithholding
+* [get_hris_taxwithholding](docs/sdks/taxwithholding/README.md#get_hris_taxwithholding) - Retrieve a taxwithholding
+* [list_hris_taxwithholdings](docs/sdks/taxwithholding/README.md#list_hris_taxwithholdings) - List all taxwithholdings
+* [patch_hris_taxwithholding](docs/sdks/taxwithholding/README.md#patch_hris_taxwithholding) - Update a taxwithholding
+* [remove_hris_taxwithholding](docs/sdks/taxwithholding/README.md#remove_hris_taxwithholding) - Remove a taxwithholding
+* [update_hris_taxwithholding](docs/sdks/taxwithholding/README.md#update_hris_taxwithholding) - Update a taxwithholding
+
 ### [Template](docs/sdks/template/README.md)
 
 * [create_compute_template](docs/sdks/template/README.md#create_compute_template) - Create a template
@@ -3257,7 +3272,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "df1bea93-664a-4d46-b35a-e13d1abfcc69",
+            "id": "9dd86d16-2a49-4cfc-a37e-f981252d6bb6",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3270,7 +3285,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-13T12:23:46.273Z"),
+            "updated_at": parse_datetime("2023-08-13T18:10:41.552Z"),
         },
         "connection_id": "<id>",
     },
@@ -3304,7 +3319,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "df1bea93-664a-4d46-b35a-e13d1abfcc69",
+            "id": "9dd86d16-2a49-4cfc-a37e-f981252d6bb6",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3317,7 +3332,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-13T12:23:46.273Z"),
+            "updated_at": parse_datetime("2023-08-13T18:10:41.552Z"),
         },
         "connection_id": "<id>",
     })
@@ -3365,7 +3380,7 @@ with UnifiedTo(
                 "currency": "CAD",
                 "customer_defined_code": "6170",
                 "description": "Voluptatibus valde spoliatio.",
-                "id": "df1bea93-664a-4d46-b35a-e13d1abfcc69",
+                "id": "9dd86d16-2a49-4cfc-a37e-f981252d6bb6",
                 "is_payable": False,
                 "metadata": [],
                 "name": "Auto Loan Account",
@@ -3378,7 +3393,7 @@ with UnifiedTo(
                     },
                 ],
                 "type": shared.Type.ACCOUNTS_RECEIVABLE,
-                "updated_at": parse_datetime("2023-08-13T12:23:46.273Z"),
+                "updated_at": parse_datetime("2023-08-13T18:10:41.552Z"),
             },
             "connection_id": "<id>",
         })
@@ -3456,7 +3471,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "df1bea93-664a-4d46-b35a-e13d1abfcc69",
+            "id": "9dd86d16-2a49-4cfc-a37e-f981252d6bb6",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3469,7 +3484,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-13T12:23:46.273Z"),
+            "updated_at": parse_datetime("2023-08-13T18:10:41.552Z"),
         },
         "connection_id": "<id>",
     })
@@ -3504,7 +3519,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "df1bea93-664a-4d46-b35a-e13d1abfcc69",
+            "id": "9dd86d16-2a49-4cfc-a37e-f981252d6bb6",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3517,7 +3532,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-13T12:23:46.273Z"),
+            "updated_at": parse_datetime("2023-08-13T18:10:41.552Z"),
         },
         "connection_id": "<id>",
     })
@@ -3660,7 +3675,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Voluptatibus valde spoliatio.",
-            "id": "df1bea93-664a-4d46-b35a-e13d1abfcc69",
+            "id": "9dd86d16-2a49-4cfc-a37e-f981252d6bb6",
             "is_payable": False,
             "metadata": [],
             "name": "Auto Loan Account",
@@ -3673,7 +3688,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-13T12:23:46.273Z"),
+            "updated_at": parse_datetime("2023-08-13T18:10:41.552Z"),
         },
         "connection_id": "<id>",
     })

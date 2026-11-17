@@ -33,17 +33,17 @@ with UnifiedTo(
     res = unified_to.application.create_ats_application(request={
         "ats_application": {
             "answers": [],
-            "applied_at": parse_datetime("2025-10-16T15:47:08.372Z"),
+            "applied_at": parse_datetime("2025-10-17T06:32:35.620Z"),
             "created_at": parse_datetime("2023-10-17T07:19:48.787Z"),
-            "hired_at": parse_datetime("2026-06-03T23:20:38.090Z"),
-            "id": "c60ea63c-3123-4d9b-810c-c30ad2fff1ee",
+            "hired_at": parse_datetime("2026-06-04T18:45:18.894Z"),
+            "id": "8ac56b79-7cfc-41f7-86c8-ca5345c83ba7",
             "metadata": [
                 {
                     "extra_data": {
 
                     },
                     "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "3d021213-153c-4594-a7bb-59bd4e951848",
+                    "id": "976ca313-3b80-4df1-a0fe-be017ddac795",
                     "namespace": "application",
                     "slug": "stella",
                     "value": "Caput.",
@@ -52,12 +52,12 @@ with UnifiedTo(
             "offers": [],
             "original_status": "vomica",
             "original_substatus": "allatus",
-            "rejected_at": parse_datetime("2026-11-06T08:07:33.707Z"),
+            "rejected_at": parse_datetime("2026-11-07T06:40:36.130Z"),
             "rejected_reason": "Cometes amplitudo videlicet talio.",
             "source": "credo",
             "status": shared.AtsApplicationStatus.REVIEWING,
             "summary": "Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.",
-            "updated_at": parse_datetime("2026-11-13T08:14:57.466Z"),
+            "updated_at": parse_datetime("2026-11-14T06:56:29.457Z"),
         },
         "connection_id": "<id>",
     })
@@ -201,17 +201,17 @@ with UnifiedTo(
     res = unified_to.application.patch_ats_application(request={
         "ats_application": {
             "answers": [],
-            "applied_at": parse_datetime("2025-10-16T15:47:08.391Z"),
+            "applied_at": parse_datetime("2025-10-17T06:32:35.631Z"),
             "created_at": parse_datetime("2023-10-17T07:19:48.787Z"),
-            "hired_at": parse_datetime("2026-06-03T23:20:38.115Z"),
-            "id": "19a00be0-9f65-499b-96c8-7df0b133da38",
+            "hired_at": parse_datetime("2026-06-04T18:45:18.909Z"),
+            "id": "b0d32b54-4740-47b6-98d2-cc3d9dec7be8",
             "metadata": [
                 {
                     "extra_data": {
 
                     },
                     "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "146e4e2d-6c2d-410e-9a46-671f7613dd92",
+                    "id": "489aab0c-15ef-471b-bb19-b22d526b87c8",
                     "namespace": "application",
                     "slug": "stella",
                     "value": "Caput.",
@@ -220,12 +220,12 @@ with UnifiedTo(
             "offers": [],
             "original_status": "vomica",
             "original_substatus": "allatus",
-            "rejected_at": parse_datetime("2026-11-06T08:07:33.735Z"),
+            "rejected_at": parse_datetime("2026-11-07T06:40:36.147Z"),
             "rejected_reason": "Cometes amplitudo videlicet talio.",
             "source": "credo",
             "status": shared.AtsApplicationStatus.REVIEWING,
             "summary": "Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.",
-            "updated_at": parse_datetime("2026-11-13T08:14:57.495Z"),
+            "updated_at": parse_datetime("2026-11-14T06:56:29.474Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -324,17 +324,17 @@ with UnifiedTo(
     res = unified_to.application.update_ats_application(request={
         "ats_application": {
             "answers": [],
-            "applied_at": parse_datetime("2025-10-16T15:47:08.391Z"),
+            "applied_at": parse_datetime("2025-10-17T06:32:35.631Z"),
             "created_at": parse_datetime("2023-10-17T07:19:48.787Z"),
-            "hired_at": parse_datetime("2026-06-03T23:20:38.115Z"),
-            "id": "19a00be0-9f65-499b-96c8-7df0b133da38",
+            "hired_at": parse_datetime("2026-06-04T18:45:18.909Z"),
+            "id": "b0d32b54-4740-47b6-98d2-cc3d9dec7be8",
             "metadata": [
                 {
                     "extra_data": {
 
                     },
                     "format_": shared.AtsMetadataFormat.TEXT,
-                    "id": "146e4e2d-6c2d-410e-9a46-671f7613dd92",
+                    "id": "489aab0c-15ef-471b-bb19-b22d526b87c8",
                     "namespace": "application",
                     "slug": "stella",
                     "value": "Caput.",
@@ -343,12 +343,12 @@ with UnifiedTo(
             "offers": [],
             "original_status": "vomica",
             "original_substatus": "allatus",
-            "rejected_at": parse_datetime("2026-11-06T08:07:33.735Z"),
+            "rejected_at": parse_datetime("2026-11-07T06:40:36.147Z"),
             "rejected_reason": "Cometes amplitudo videlicet talio.",
             "source": "credo",
             "status": shared.AtsApplicationStatus.REVIEWING,
             "summary": "Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.",
-            "updated_at": parse_datetime("2026-11-13T08:14:57.495Z"),
+            "updated_at": parse_datetime("2026-11-14T06:56:29.474Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

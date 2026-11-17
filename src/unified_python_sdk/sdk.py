@@ -225,6 +225,7 @@ if TYPE_CHECKING:
     from unified_python_sdk.task import Task
     from unified_python_sdk.taxonomy import Taxonomy
     from unified_python_sdk.taxrate import Taxrate
+    from unified_python_sdk.taxwithholding import Taxwithholding
     from unified_python_sdk.template import Template
     from unified_python_sdk.ticket import Ticket
     from unified_python_sdk.ticketing import Ticketing
@@ -398,6 +399,7 @@ class UnifiedTo(BaseSDK):
     paycode: "Paycode"
     payroll: "Payroll"
     payslip: "Payslip"
+    taxwithholding: "Taxwithholding"
     timeoff: "Timeoff"
     timeshift: "Timeshift"
     kms: "Kms"
@@ -635,6 +637,7 @@ class UnifiedTo(BaseSDK):
         "paycode": ("unified_python_sdk.paycode", "Paycode"),
         "payroll": ("unified_python_sdk.payroll", "Payroll"),
         "payslip": ("unified_python_sdk.payslip", "Payslip"),
+        "taxwithholding": ("unified_python_sdk.taxwithholding", "Taxwithholding"),
         "timeoff": ("unified_python_sdk.timeoff", "Timeoff"),
         "timeshift": ("unified_python_sdk.timeshift", "Timeshift"),
         "kms": ("unified_python_sdk.kms", "Kms"),

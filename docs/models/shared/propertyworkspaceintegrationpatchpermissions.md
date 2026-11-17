@@ -188,6 +188,8 @@ value = PropertyWorkspaceIntegrationPatchPermissions.ACCOUNTING_ACCOUNT_READ
 | `HRIS_PAYCODE_WRITE`                   | hris_paycode_write                     |
 | `HRIS_EARNING_READ`                    | hris_earning_read                      |
 | `HRIS_EARNING_WRITE`                   | hris_earning_write                     |
+| `HRIS_TAXWITHHOLDING_READ`             | hris_taxwithholding_read               |
+| `HRIS_TAXWITHHOLDING_WRITE`            | hris_taxwithholding_write              |
 | `UC_CALL_READ`                         | uc_call_read                           |
 | `UC_CALL_WRITE`                        | uc_call_write                          |
 | `UC_CONTACT_READ`                      | uc_contact_read                        |
