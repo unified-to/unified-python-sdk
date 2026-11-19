@@ -33,11 +33,11 @@ with UnifiedTo(
     res = unified_to.branch.create_repo_branch(request={
         "repo_branch": {
             "created_at": parse_datetime("2019-02-24T09:33:48.540Z"),
-            "id": "017e80e9-8edd-498c-b57a-f7736a4ced24",
+            "id": "f4e9e5d5-164d-4f8b-8fd7-746432e6b6ce",
             "metadata": [],
             "name": "transmitter-calculate",
             "repo_id": "<id>",
-            "updated_at": parse_datetime("2020-01-10T12:19:58.379Z"),
+            "updated_at": parse_datetime("2020-01-10T14:58:35.343Z"),
         },
         "connection_id": "<id>",
     })
@@ -181,11 +181,11 @@ with UnifiedTo(
     res = unified_to.branch.patch_repo_branch(request={
         "repo_branch": {
             "created_at": parse_datetime("2019-02-24T09:33:48.540Z"),
-            "id": "1c9e0e6c-c074-4f82-9b7b-3ad389650fd6",
+            "id": "dfd22dc3-b96b-41fe-96e8-b77e242334f1",
             "metadata": [],
             "name": "transmitter-calculate",
             "repo_id": "<id>",
-            "updated_at": parse_datetime("2020-01-10T12:19:58.380Z"),
+            "updated_at": parse_datetime("2020-01-10T14:58:35.344Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -284,11 +284,11 @@ with UnifiedTo(
     res = unified_to.branch.update_repo_branch(request={
         "repo_branch": {
             "created_at": parse_datetime("2019-02-24T09:33:48.540Z"),
-            "id": "1c9e0e6c-c074-4f82-9b7b-3ad389650fd6",
+            "id": "dfd22dc3-b96b-41fe-96e8-b77e242334f1",
             "metadata": [],
             "name": "transmitter-calculate",
             "repo_id": "<id>",
-            "updated_at": parse_datetime("2020-01-10T12:19:58.380Z"),
+            "updated_at": parse_datetime("2020-01-10T14:58:35.344Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
