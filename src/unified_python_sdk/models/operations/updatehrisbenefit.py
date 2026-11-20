@@ -38,6 +38,9 @@ class UpdateHrisBenefitQueryParamFields(str, Enum):
     EMPLOYER_CONTRIBUTION_MAX_AMOUNT = "employer_contribution_max_amount"
     COVERAGE_LEVEL = "coverage_level"
     CURRENCY = "currency"
+    CODE = "code"
+    RETIREMENT_PLAN_TYPE = "retirement_plan_type"
+    EMPLOYER_CONTRIBUTION_CATEGORY = "employer_contribution_category"
     METADATA = "metadata"
     RAW = "raw"
 

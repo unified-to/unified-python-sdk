@@ -1142,11 +1142,13 @@ if TYPE_CHECKING:
     )
     from .hrisbenefit import (
         CoverageLevel,
+        EmployerContributionCategory,
         EmployerContributionType,
         HrisBenefit,
         HrisBenefitFrequency,
         HrisBenefitType,
         HrisBenefitTypedDict,
+        RetirementPlanType,
         Tax,
     )
     from .hriscompany import HrisCompany, HrisCompanyTypedDict
@@ -1176,6 +1178,7 @@ if TYPE_CHECKING:
     from .hrisemail import HrisEmail, HrisEmailType, HrisEmailTypedDict
     from .hrisemployee import (
         EmploymentStatus,
+        EmploymentStatusReason,
         FlsaStatus,
         HrisEmployee,
         HrisEmployeeEmploymentType,
@@ -3995,9 +3998,11 @@ __all__ = [
     "DurationType",
     "DutiesPaidBy",
     "EffectiveStatus",
+    "EmployerContributionCategory",
     "EmployerContributionType",
     "EmployerType",
     "EmploymentStatus",
+    "EmploymentStatusReason",
     "EmploymentType",
     "EncondingFormat",
     "EnrichCompany",
@@ -5391,6 +5396,7 @@ __all__ = [
     "ResourceType",
     "ResponseStatus",
     "Result",
+    "RetirementPlanType",
     "ReturnType",
     "Role",
     "Saml",
@@ -6805,11 +6811,13 @@ _dynamic_imports: dict[str, str] = {
     "HrisBankaccountTypedDict": ".hrisbankaccount",
     "SplitType": ".hrisbankaccount",
     "CoverageLevel": ".hrisbenefit",
+    "EmployerContributionCategory": ".hrisbenefit",
     "EmployerContributionType": ".hrisbenefit",
     "HrisBenefit": ".hrisbenefit",
     "HrisBenefitFrequency": ".hrisbenefit",
     "HrisBenefitType": ".hrisbenefit",
     "HrisBenefitTypedDict": ".hrisbenefit",
+    "RetirementPlanType": ".hrisbenefit",
     "Tax": ".hrisbenefit",
     "HrisCompany": ".hriscompany",
     "HrisCompanyTypedDict": ".hriscompany",
@@ -6837,6 +6845,7 @@ _dynamic_imports: dict[str, str] = {
     "HrisEmailType": ".hrisemail",
     "HrisEmailTypedDict": ".hrisemail",
     "EmploymentStatus": ".hrisemployee",
+    "EmploymentStatusReason": ".hrisemployee",
     "FlsaStatus": ".hrisemployee",
     "HrisEmployee": ".hrisemployee",
     "HrisEmployeeEmploymentType": ".hrisemployee",

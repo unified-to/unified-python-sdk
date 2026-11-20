@@ -35,3 +35,9 @@ value = HrisBenefitType.RETIREMENT
 | `COMMUTER`                  | COMMUTER                    |
 | `DEPENDENT_CARE`            | DEPENDENT_CARE              |
 | `PENSION`                   | PENSION                     |
+| `RETIREMENT_CATCHUP`        | RETIREMENT_CATCHUP          |
+| `RETIREMENT_ROTH_CATCHUP`   | RETIREMENT_ROTH_CATCHUP     |
+| `RETIREMENT_AFTER_TAX`      | RETIREMENT_AFTER_TAX        |
+| `COLLEGE_SAVINGS`           | COLLEGE_SAVINGS             |
+| `EARNED_WAGE_ACCESS`        | EARNED_WAGE_ACCESS          |
+| `UNION_DUES`                | UNION_DUES                  |

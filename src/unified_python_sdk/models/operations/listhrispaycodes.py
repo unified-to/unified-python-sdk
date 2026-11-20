@@ -34,6 +34,7 @@ class ListHrisPaycodesQueryParamFields(str, Enum):
     IS_PRE_TAX = "is_pre_tax"
     IS_EMPLOYER = "is_employer"
     IS_ACTIVE = "is_active"
+    IS_RETIREMENT_ELIGIBLE = "is_retirement_eligible"
     METADATA = "metadata"
     RAW = "raw"
 

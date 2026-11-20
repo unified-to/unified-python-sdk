@@ -32,5 +32,6 @@ value = CreateHrisDeductionQueryParamFields.ID
 | `MAX_AMOUNT`       | max_amount         |
 | `PAYCODE_ID`       | paycode_id         |
 | `GARNISHMENT_TYPE` | garnishment_type   |
+| `LOAN_IDENTIFIER`  | loan_identifier    |
 | `METADATA`         | metadata           |
 | `RAW`              | raw                |

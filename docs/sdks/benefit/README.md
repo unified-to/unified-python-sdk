@@ -32,6 +32,7 @@ with UnifiedTo(
 
     res = unified_to.benefit.create_hris_benefit(request={
         "hris_benefit": {
+            "code": "E7P1FZ",
             "coverage_level": shared.CoverageLevel.EMPLOYEE_SPOUSE,
             "created_at": parse_datetime("2020-06-11T01:24:05.654Z"),
             "currency": "GBP",
@@ -40,13 +41,13 @@ with UnifiedTo(
             "employer_contribution_max_amount": 179093.0,
             "employer_contribution_type": shared.EmployerContributionType.PERCENTAGE,
             "frequency": shared.HrisBenefitFrequency.MONTH,
-            "id": "e9e5d68d-0a49-48a9-bf61-425021b47dc4",
+            "id": "2ce82406-99eb-4c43-b4ec-7f2c651cca09",
             "is_active": False,
             "metadata": [],
             "name": "Frozen Wooden Ball",
             "tax": shared.Tax.PRE_TAX,
-            "type": shared.HrisBenefitType.OTHER,
-            "updated_at": parse_datetime("2023-04-02T11:53:16.929Z"),
+            "type": shared.HrisBenefitType.EMPLOYER_TAX_CONTRIBUTION,
+            "updated_at": parse_datetime("2025-07-18T08:01:58.580Z"),
         },
         "connection_id": "<id>",
     })
@@ -189,6 +190,7 @@ with UnifiedTo(
 
     res = unified_to.benefit.patch_hris_benefit(request={
         "hris_benefit": {
+            "code": "E7P1FZ",
             "coverage_level": shared.CoverageLevel.EMPLOYEE_SPOUSE,
             "created_at": parse_datetime("2020-06-11T01:24:05.654Z"),
             "currency": "GBP",
@@ -197,13 +199,13 @@ with UnifiedTo(
             "employer_contribution_max_amount": 179093.0,
             "employer_contribution_type": shared.EmployerContributionType.PERCENTAGE,
             "frequency": shared.HrisBenefitFrequency.MONTH,
-            "id": "1dd31e91-d376-4ff9-b408-f0df6e91ce88",
+            "id": "d89c503e-2c9b-4665-b63f-16bb1c054a1e",
             "is_active": False,
             "metadata": [],
             "name": "Frozen Wooden Ball",
             "tax": shared.Tax.PRE_TAX,
-            "type": shared.HrisBenefitType.OTHER,
-            "updated_at": parse_datetime("2023-04-02T11:53:16.937Z"),
+            "type": shared.HrisBenefitType.EMPLOYER_TAX_CONTRIBUTION,
+            "updated_at": parse_datetime("2025-07-18T08:01:58.589Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -301,6 +303,7 @@ with UnifiedTo(
 
     res = unified_to.benefit.update_hris_benefit(request={
         "hris_benefit": {
+            "code": "E7P1FZ",
             "coverage_level": shared.CoverageLevel.EMPLOYEE_SPOUSE,
             "created_at": parse_datetime("2020-06-11T01:24:05.654Z"),
             "currency": "GBP",
@@ -309,13 +312,13 @@ with UnifiedTo(
             "employer_contribution_max_amount": 179093.0,
             "employer_contribution_type": shared.EmployerContributionType.PERCENTAGE,
             "frequency": shared.HrisBenefitFrequency.MONTH,
-            "id": "1dd31e91-d376-4ff9-b408-f0df6e91ce88",
+            "id": "d89c503e-2c9b-4665-b63f-16bb1c054a1e",
             "is_active": False,
             "metadata": [],
             "name": "Frozen Wooden Ball",
             "tax": shared.Tax.PRE_TAX,
-            "type": shared.HrisBenefitType.OTHER,
-            "updated_at": parse_datetime("2023-04-02T11:53:16.937Z"),
+            "type": shared.HrisBenefitType.EMPLOYER_TAX_CONTRIBUTION,
+            "updated_at": parse_datetime("2025-07-18T08:01:58.589Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

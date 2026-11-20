@@ -38,5 +38,6 @@ value = ListHrisPayslipsQueryParamFields.ID
 | `EMPLOYER_CONTRIBUTION_AMOUNT` | employer_contribution_amount   |
 | `GROSS_YTD_AMOUNT`             | gross_ytd_amount               |
 | `NET_YTD_AMOUNT`               | net_ytd_amount                 |
+| `YTD_HOURS`                    | ytd_hours                      |
 | `METADATA`                     | metadata                       |
 | `RAW`                          | raw                            |

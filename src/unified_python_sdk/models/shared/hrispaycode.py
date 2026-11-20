@@ -61,6 +61,15 @@ class DetailType(str, Enum, metaclass=utils.OpenEnumMeta):
     EMPLOYER_CONTRIBUTION = "EMPLOYER_CONTRIBUTION"
     PENSION = "PENSION"
     EARNING_CASH_IN_LIEU = "EARNING_CASH_IN_LIEU"
+    PRETAX_DEDUCTION_RETIREMENT_CATCHUP = "PRETAX_DEDUCTION_RETIREMENT_CATCHUP"
+    POSTTAX_RETIREMENT_ROTH_CATCHUP = "POSTTAX_RETIREMENT_ROTH_CATCHUP"
+    POSTTAX_RETIREMENT_AFTER_TAX = "POSTTAX_RETIREMENT_AFTER_TAX"
+    EMPLOYER_CONTRIBUTION_RETIREMENT = "EMPLOYER_CONTRIBUTION_RETIREMENT"
+    EMPLOYER_CONTRIBUTION_HSA = "EMPLOYER_CONTRIBUTION_HSA"
+    EMPLOYER_CONTRIBUTION_FSA = "EMPLOYER_CONTRIBUTION_FSA"
+    POSTTAX_DEDUCTION_COLLEGE_SAVINGS = "POSTTAX_DEDUCTION_COLLEGE_SAVINGS"
+    POSTTAX_DEDUCTION_UNION_DUES = "POSTTAX_DEDUCTION_UNION_DUES"
+    POSTTAX_DEDUCTION_EWA_REPAYMENT = "POSTTAX_DEDUCTION_EWA_REPAYMENT"
 
 
 class HrisPaycodeType(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -85,6 +94,8 @@ class HrisPaycodeTypedDict(TypedDict):
     is_active: NotRequired[bool]
     is_employer: NotRequired[bool]
     is_pre_tax: NotRequired[bool]
+    is_retirement_eligible: NotRequired[bool]
+    r"""true when earnings under this code count as retirement-plan compensation"""
     metadata: NotRequired[List[HrisMetadataTypedDict]]
     name: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
@@ -115,6 +126,9 @@ class HrisPaycode(BaseModel):
     is_employer: Optional[bool] = None
 
     is_pre_tax: Optional[bool] = None
+
+    is_retirement_eligible: Optional[bool] = None
+    r"""true when earnings under this code count as retirement-plan compensation"""
 
     metadata: Optional[List[HrisMetadata]] = None
 
@@ -161,6 +175,7 @@ class HrisPaycode(BaseModel):
                 "is_active",
                 "is_employer",
                 "is_pre_tax",
+                "is_retirement_eligible",
                 "metadata",
                 "name",
                 "raw",

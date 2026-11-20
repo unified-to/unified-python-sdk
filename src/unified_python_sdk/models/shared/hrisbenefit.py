@@ -28,6 +28,18 @@ class CoverageLevel(str, Enum, metaclass=utils.OpenEnumMeta):
     OTHER = "OTHER"
 
 
+class EmployerContributionCategory(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""kind of employer retirement contribution (eg. MATCH, SAFE_HARBOR_MATCH, PROFIT_SHARING)"""
+
+    MATCH = "MATCH"
+    SAFE_HARBOR_MATCH = "SAFE_HARBOR_MATCH"
+    SAFE_HARBOR_NONELECTIVE = "SAFE_HARBOR_NONELECTIVE"
+    QACA_MATCH = "QACA_MATCH"
+    NONELECTIVE = "NONELECTIVE"
+    PROFIT_SHARING = "PROFIT_SHARING"
+    OTHER = "OTHER"
+
+
 class EmployerContributionType(str, Enum, metaclass=utils.OpenEnumMeta):
     PERCENTAGE = "PERCENTAGE"
     FIXED = "FIXED"
@@ -45,6 +57,19 @@ class HrisBenefitFrequency(str, Enum, metaclass=utils.OpenEnumMeta):
     WEEK = "WEEK"
     BIWEEKLY = "BIWEEKLY"
     SEMIMONTHLY = "SEMIMONTHLY"
+
+
+class RetirementPlanType(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""the retirement plan this benefit belongs to (for RETIREMENT* types)"""
+
+    PLAN_401_K = "PLAN_401K"
+    PLAN_403_B = "PLAN_403B"
+    PLAN_457_B = "PLAN_457B"
+    SIMPLE_IRA = "SIMPLE_IRA"
+    SEP_IRA = "SEP_IRA"
+    NQDC = "NQDC"
+    PENSION = "PENSION"
+    OTHER = "OTHER"
 
 
 class Tax(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -78,11 +103,19 @@ class HrisBenefitType(str, Enum, metaclass=utils.OpenEnumMeta):
     COMMUTER = "COMMUTER"
     DEPENDENT_CARE = "DEPENDENT_CARE"
     PENSION = "PENSION"
+    RETIREMENT_CATCHUP = "RETIREMENT_CATCHUP"
+    RETIREMENT_ROTH_CATCHUP = "RETIREMENT_ROTH_CATCHUP"
+    RETIREMENT_AFTER_TAX = "RETIREMENT_AFTER_TAX"
+    COLLEGE_SAVINGS = "COLLEGE_SAVINGS"
+    EARNED_WAGE_ACCESS = "EARNED_WAGE_ACCESS"
+    UNION_DUES = "UNION_DUES"
 
 
 class HrisBenefitTypedDict(TypedDict):
     r"""Company-wide benefit plans available to employees."""
 
+    code: NotRequired[str]
+    r"""the payroll system's code for this benefit plan"""
     company_id: NotRequired[str]
     r"""(reference to HrisCompany)"""
     coverage_level: NotRequired[CoverageLevel]
@@ -93,6 +126,8 @@ class HrisBenefitTypedDict(TypedDict):
     r"""e.g. \"Company 401(k) retirement plan\" """
     employer_contribution_amount: NotRequired[float]
     r"""percentage or money"""
+    employer_contribution_category: NotRequired[EmployerContributionCategory]
+    r"""kind of employer retirement contribution (eg. MATCH, SAFE_HARBOR_MATCH, PROFIT_SHARING)"""
     employer_contribution_max_amount: NotRequired[float]
     r"""always money"""
     employer_contribution_type: NotRequired[EmployerContributionType]
@@ -104,6 +139,8 @@ class HrisBenefitTypedDict(TypedDict):
     name: NotRequired[str]
     r"""e.g. \"401(k) Plan\" """
     raw: NotRequired[Dict[str, Any]]
+    retirement_plan_type: NotRequired[RetirementPlanType]
+    r"""the retirement plan this benefit belongs to (for RETIREMENT* types)"""
     tax: NotRequired[Tax]
     r"""Tax describes the tax treatment of the benefit"""
     type: NotRequired[HrisBenefitType]
@@ -113,6 +150,9 @@ class HrisBenefitTypedDict(TypedDict):
 
 class HrisBenefit(BaseModel):
     r"""Company-wide benefit plans available to employees."""
+
+    code: Optional[str] = None
+    r"""the payroll system's code for this benefit plan"""
 
     company_id: Optional[str] = None
     r"""(reference to HrisCompany)"""
@@ -129,6 +169,9 @@ class HrisBenefit(BaseModel):
 
     employer_contribution_amount: Optional[float] = None
     r"""percentage or money"""
+
+    employer_contribution_category: Optional[EmployerContributionCategory] = None
+    r"""kind of employer retirement contribution (eg. MATCH, SAFE_HARBOR_MATCH, PROFIT_SHARING)"""
 
     employer_contribution_max_amount: Optional[float] = None
     r"""always money"""
@@ -149,6 +192,9 @@ class HrisBenefit(BaseModel):
 
     raw: Optional[Dict[str, Any]] = None
 
+    retirement_plan_type: Optional[RetirementPlanType] = None
+    r"""the retirement plan this benefit belongs to (for RETIREMENT* types)"""
+
     tax: Optional[Tax] = None
     r"""Tax describes the tax treatment of the benefit"""
 
@@ -162,6 +208,15 @@ class HrisBenefit(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.CoverageLevel(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("employer_contribution_category")
+    def serialize_employer_contribution_category(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.EmployerContributionCategory(value)
             except ValueError:
                 return value
         return value
@@ -180,6 +235,15 @@ class HrisBenefit(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.HrisBenefitFrequency(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("retirement_plan_type")
+    def serialize_retirement_plan_type(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.RetirementPlanType(value)
             except ValueError:
                 return value
         return value
@@ -209,12 +273,14 @@ class HrisBenefit(BaseModel):
     def serialize_model(self, handler):
         optional_fields = set(
             [
+                "code",
                 "company_id",
                 "coverage_level",
                 "created_at",
                 "currency",
                 "description",
                 "employer_contribution_amount",
+                "employer_contribution_category",
                 "employer_contribution_max_amount",
                 "employer_contribution_type",
                 "frequency",
@@ -223,6 +289,7 @@ class HrisBenefit(BaseModel):
                 "metadata",
                 "name",
                 "raw",
+                "retirement_plan_type",
                 "tax",
                 "type",
                 "updated_at",

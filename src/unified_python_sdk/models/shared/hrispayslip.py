@@ -83,6 +83,8 @@ class HrisPayslipTypedDict(TypedDict):
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
     r"""the employee (reference to HrisEmployee)"""
+    ytd_hours: NotRequired[float]
+    r"""year-to-date hours paid as of this payslip"""
 
 
 class HrisPayslip(BaseModel):
@@ -157,6 +159,9 @@ class HrisPayslip(BaseModel):
     user_id: Optional[str] = None
     r"""the employee (reference to HrisEmployee)"""
 
+    ytd_hours: Optional[float] = None
+    r"""year-to-date hours paid as of this payslip"""
+
     @field_serializer("payment_type")
     def serialize_payment_type(self, value):
         if isinstance(value, str):
@@ -209,6 +214,7 @@ class HrisPayslip(BaseModel):
                 "type",
                 "updated_at",
                 "user_id",
+                "ytd_hours",
             ]
         )
         exclude_none = current_exclude_none()

@@ -66,6 +66,12 @@ class ListHrisEmployeesQueryParamFields(str, Enum):
     TIMEOFF_DAYS_USED = "timeoff_days_used"
     FLSA_STATUS = "flsa_status"
     PAY_FREQUENCY = "pay_frequency"
+    REHIRED_AT = "rehired_at"
+    SERVICE_STARTED_AT = "service_started_at"
+    SENIORITY_STARTED_AT = "seniority_started_at"
+    LEAVE_START_AT = "leave_start_at"
+    LEAVE_END_AT = "leave_end_at"
+    EMPLOYMENT_STATUS_REASON = "employment_status_reason"
     RAW = "raw"
 
 

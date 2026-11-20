@@ -57,6 +57,15 @@ class HrisPayslipDetailType(str, Enum, metaclass=utils.OpenEnumMeta):
     EMPLOYER_CONTRIBUTION = "EMPLOYER_CONTRIBUTION"
     PENSION = "PENSION"
     EARNING_CASH_IN_LIEU = "EARNING_CASH_IN_LIEU"
+    PRETAX_DEDUCTION_RETIREMENT_CATCHUP = "PRETAX_DEDUCTION_RETIREMENT_CATCHUP"
+    POSTTAX_RETIREMENT_ROTH_CATCHUP = "POSTTAX_RETIREMENT_ROTH_CATCHUP"
+    POSTTAX_RETIREMENT_AFTER_TAX = "POSTTAX_RETIREMENT_AFTER_TAX"
+    EMPLOYER_CONTRIBUTION_RETIREMENT = "EMPLOYER_CONTRIBUTION_RETIREMENT"
+    EMPLOYER_CONTRIBUTION_HSA = "EMPLOYER_CONTRIBUTION_HSA"
+    EMPLOYER_CONTRIBUTION_FSA = "EMPLOYER_CONTRIBUTION_FSA"
+    POSTTAX_DEDUCTION_COLLEGE_SAVINGS = "POSTTAX_DEDUCTION_COLLEGE_SAVINGS"
+    POSTTAX_DEDUCTION_UNION_DUES = "POSTTAX_DEDUCTION_UNION_DUES"
+    POSTTAX_DEDUCTION_EWA_REPAYMENT = "POSTTAX_DEDUCTION_EWA_REPAYMENT"
 
 
 class HrisPayslipDetailTypedDict(TypedDict):
@@ -70,6 +79,10 @@ class HrisPayslipDetailTypedDict(TypedDict):
     is_employer: NotRequired[bool]
     r"""true when this line is paid by the employer (employer tax or contribution)"""
     is_pre_tax: NotRequired[bool]
+    is_retirement_eligible: NotRequired[bool]
+    r"""true when this line counts as retirement-plan compensation"""
+    loan_identifier: NotRequired[str]
+    r"""the payroll system's identifier for the retirement-plan loan this line repays"""
     name: NotRequired[str]
     original_type: NotRequired[str]
     r"""integration pay-code label before normalization"""
@@ -80,6 +93,8 @@ class HrisPayslipDetailTypedDict(TypedDict):
     type: NotRequired[HrisPayslipDetailType]
     ytd_amount: NotRequired[float]
     r"""year-to-date amount for this line"""
+    ytd_hours: NotRequired[float]
+    r"""year-to-date hours for this line"""
 
 
 class HrisPayslipDetail(BaseModel):
@@ -102,6 +117,12 @@ class HrisPayslipDetail(BaseModel):
 
     is_pre_tax: Optional[bool] = None
 
+    is_retirement_eligible: Optional[bool] = None
+    r"""true when this line counts as retirement-plan compensation"""
+
+    loan_identifier: Optional[str] = None
+    r"""the payroll system's identifier for the retirement-plan loan this line repays"""
+
     name: Optional[str] = None
 
     original_type: Optional[str] = None
@@ -117,6 +138,9 @@ class HrisPayslipDetail(BaseModel):
 
     ytd_amount: Optional[float] = None
     r"""year-to-date amount for this line"""
+
+    ytd_hours: Optional[float] = None
+    r"""year-to-date hours for this line"""
 
     @field_serializer("type")
     def serialize_type(self, value):
@@ -142,12 +166,15 @@ class HrisPayslipDetail(BaseModel):
                 "hours",
                 "is_employer",
                 "is_pre_tax",
+                "is_retirement_eligible",
+                "loan_identifier",
                 "name",
                 "original_type",
                 "paycode_id",
                 "rate_amount",
                 "type",
                 "ytd_amount",
+                "ytd_hours",
             ]
         )
         exclude_none = current_exclude_none()

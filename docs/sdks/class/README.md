@@ -34,7 +34,7 @@ with UnifiedTo(
         "lms_class": {
             "created_at": parse_datetime("2020-02-20T14:48:51.845Z"),
             "description": "Anser sperno decerno.",
-            "id": "30dbce76-b427-4e0e-9be5-a0e9534e7330",
+            "id": "60620a5f-6500-4e8d-9ebd-cbedcfdb68e2",
             "instructors": [],
             "languages": [
                 "in",
@@ -56,7 +56,7 @@ with UnifiedTo(
             "metadata": [],
             "name": "virtus",
             "students": [],
-            "updated_at": parse_datetime("2025-08-27T14:59:15.847Z"),
+            "updated_at": parse_datetime("2025-08-28T10:21:04.115Z"),
         },
         "connection_id": "<id>",
     })
@@ -201,7 +201,7 @@ with UnifiedTo(
         "lms_class": {
             "created_at": parse_datetime("2020-02-20T14:48:51.845Z"),
             "description": "Anser sperno decerno.",
-            "id": "553c5e9b-6b55-45a2-8b99-32ee2c80e216",
+            "id": "2f9a93d8-a384-49f4-8120-096715a895de",
             "instructors": [],
             "languages": [
                 "in",
@@ -223,7 +223,7 @@ with UnifiedTo(
             "metadata": [],
             "name": "virtus",
             "students": [],
-            "updated_at": parse_datetime("2025-08-27T14:59:15.869Z"),
+            "updated_at": parse_datetime("2025-08-28T10:21:04.125Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -323,7 +323,7 @@ with UnifiedTo(
         "lms_class": {
             "created_at": parse_datetime("2020-02-20T14:48:51.845Z"),
             "description": "Anser sperno decerno.",
-            "id": "553c5e9b-6b55-45a2-8b99-32ee2c80e216",
+            "id": "2f9a93d8-a384-49f4-8120-096715a895de",
             "instructors": [],
             "languages": [
                 "in",
@@ -345,7 +345,7 @@ with UnifiedTo(
             "metadata": [],
             "name": "virtus",
             "students": [],
-            "updated_at": parse_datetime("2025-08-27T14:59:15.869Z"),
+            "updated_at": parse_datetime("2025-08-28T10:21:04.125Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

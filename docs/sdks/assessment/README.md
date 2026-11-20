@@ -36,9 +36,9 @@ with UnifiedTo(
 
     res = unified_to.assessment.create_assessment_order(request={
         "assessment_order": {
-            "connection_id": "<id>",
+            "connection_id": "",
             "created_at": parse_datetime("2021-09-18T10:33:57.803Z"),
-            "id": "f2ee33a8-a014-46b1-adbf-6027a1e2c672",
+            "id": "8c0488f2-5e28-4897-87eb-9363bc66b36b",
             "metadata": [],
             "parameters": [],
             "profile_addresses": [],
@@ -65,7 +65,7 @@ with UnifiedTo(
             "response_url": "https://rowdy-fisherman.biz/",
             "status": shared.AssessmentOrderStatus.REJECTED,
             "target_url": "https://cautious-turret.info",
-            "updated_at": parse_datetime("2023-02-02T13:46:58.870Z"),
+            "updated_at": parse_datetime("2023-02-02T20:04:49.709Z"),
             "workspace_id": "<id>",
         },
         "connection_id": "<id>",
@@ -123,7 +123,7 @@ with UnifiedTo(
             "description": "Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.",
             "has_redirect_url": True,
             "has_target_url": False,
-            "id": "7158cddb-f5da-4ea6-8716-e7846b3fdf4d",
+            "id": "389a611f-0dc0-4dd6-8852-6a71e328eddd",
             "info_url": "https://ugly-instance.biz/",
             "integration_types": [
                 "viridis",
@@ -138,7 +138,7 @@ with UnifiedTo(
                 "clamo",
             ],
             "type": shared.AssessmentPackageType.VIDEO_INTERVIEW,
-            "updated_at": parse_datetime("2023-10-01T16:12:35.417Z"),
+            "updated_at": parse_datetime("2023-10-01T21:20:35.358Z"),
         },
         "connection_id": "<id>",
     })
@@ -328,9 +328,9 @@ with UnifiedTo(
 
     res = unified_to.assessment.patch_assessment_order(request={
         "assessment_order": {
-            "connection_id": "<id>",
+            "connection_id": "",
             "created_at": parse_datetime("2021-09-18T10:33:57.803Z"),
-            "id": "d42050be-bd64-4080-afb1-d75a3c52a50b",
+            "id": "86aeac10-d1b3-40e3-8432-6c5ae22490d4",
             "metadata": [],
             "parameters": [],
             "profile_addresses": [],
@@ -357,7 +357,7 @@ with UnifiedTo(
             "response_url": "https://rowdy-fisherman.biz/",
             "status": shared.AssessmentOrderStatus.REJECTED,
             "target_url": "https://cautious-turret.info",
-            "updated_at": parse_datetime("2023-02-02T13:46:58.881Z"),
+            "updated_at": parse_datetime("2023-02-02T20:04:49.715Z"),
             "workspace_id": "<id>",
         },
         "connection_id": "<id>",
@@ -416,7 +416,7 @@ with UnifiedTo(
             "description": "Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.",
             "has_redirect_url": True,
             "has_target_url": False,
-            "id": "47edb1d2-3453-416a-b5e5-ecafa934d7e6",
+            "id": "f0cb4d04-76d3-4f7c-9c0c-4a8a628c2747",
             "info_url": "https://ugly-instance.biz/",
             "integration_types": [
                 "viridis",
@@ -431,7 +431,7 @@ with UnifiedTo(
                 "clamo",
             ],
             "type": shared.AssessmentPackageType.VIDEO_INTERVIEW,
-            "updated_at": parse_datetime("2023-10-01T16:12:35.422Z"),
+            "updated_at": parse_datetime("2023-10-01T21:20:35.362Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -529,9 +529,9 @@ with UnifiedTo(
 
     res = unified_to.assessment.update_assessment_order(request={
         "assessment_order": {
-            "connection_id": "<id>",
+            "connection_id": "",
             "created_at": parse_datetime("2021-09-18T10:33:57.803Z"),
-            "id": "d42050be-bd64-4080-afb1-d75a3c52a50b",
+            "id": "86aeac10-d1b3-40e3-8432-6c5ae22490d4",
             "metadata": [],
             "parameters": [],
             "profile_addresses": [],
@@ -558,7 +558,7 @@ with UnifiedTo(
             "response_url": "https://rowdy-fisherman.biz/",
             "status": shared.AssessmentOrderStatus.REJECTED,
             "target_url": "https://cautious-turret.info",
-            "updated_at": parse_datetime("2023-02-02T13:46:58.881Z"),
+            "updated_at": parse_datetime("2023-02-02T20:04:49.715Z"),
             "workspace_id": "<id>",
         },
         "connection_id": "<id>",
@@ -617,7 +617,7 @@ with UnifiedTo(
             "description": "Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.",
             "has_redirect_url": True,
             "has_target_url": False,
-            "id": "47edb1d2-3453-416a-b5e5-ecafa934d7e6",
+            "id": "f0cb4d04-76d3-4f7c-9c0c-4a8a628c2747",
             "info_url": "https://ugly-instance.biz/",
             "integration_types": [
                 "viridis",
@@ -632,7 +632,7 @@ with UnifiedTo(
                 "clamo",
             ],
             "type": shared.AssessmentPackageType.VIDEO_INTERVIEW,
-            "updated_at": parse_datetime("2023-10-01T16:12:35.422Z"),
+            "updated_at": parse_datetime("2023-10-01T21:20:35.362Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

@@ -88,6 +88,8 @@ class HrisDeductionTypedDict(TypedDict):
     r"""set when this deduction is a court-ordered garnishment"""
     id: NotRequired[str]
     is_active: NotRequired[bool]
+    loan_identifier: NotRequired[str]
+    r"""the payroll system's identifier for the retirement-plan loan this deduction repays"""
     max_amount: NotRequired[float]
     r"""annual maximum employee amount (always money)"""
     metadata: NotRequired[List[HrisMetadataTypedDict]]
@@ -138,6 +140,9 @@ class HrisDeduction(BaseModel):
     id: Optional[str] = None
 
     is_active: Optional[bool] = None
+
+    loan_identifier: Optional[str] = None
+    r"""the payroll system's identifier for the retirement-plan loan this deduction repays"""
 
     max_amount: Optional[float] = None
     r"""annual maximum employee amount (always money)"""
@@ -226,6 +231,7 @@ class HrisDeduction(BaseModel):
                 "garnishment_type",
                 "id",
                 "is_active",
+                "loan_identifier",
                 "max_amount",
                 "metadata",
                 "notes",

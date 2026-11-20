@@ -37,6 +37,17 @@ class EmploymentStatus(str, Enum, metaclass=utils.OpenEnumMeta):
     INACTIVE = "INACTIVE"
 
 
+class EmploymentStatusReason(str, Enum, metaclass=utils.OpenEnumMeta):
+    r"""why the employee is not actively working (eg. LEAVE, TERMINATED, RETIRED)"""
+
+    LEAVE = "LEAVE"
+    TERMINATED = "TERMINATED"
+    RETIRED = "RETIRED"
+    DECEASED = "DECEASED"
+    DISABLED = "DISABLED"
+    OTHER = "OTHER"
+
+
 class HrisEmployeeEmploymentType(str, Enum, metaclass=utils.OpenEnumMeta):
     FULL_TIME = "FULL_TIME"
     PART_TIME = "PART_TIME"
@@ -103,6 +114,8 @@ class HrisEmployeeTypedDict(TypedDict):
     r"""the company's ID for this employee"""
     employee_roles: NotRequired[List[PropertyHrisEmployeeEmployeeRoles]]
     employment_status: NotRequired[EmploymentStatus]
+    employment_status_reason: NotRequired[EmploymentStatusReason]
+    r"""why the employee is not actively working (eg. LEAVE, TERMINATED, RETIRED)"""
     employment_type: NotRequired[HrisEmployeeEmploymentType]
     first_name: NotRequired[str]
     r"""The employee's first (given) name"""
@@ -123,6 +136,10 @@ class HrisEmployeeTypedDict(TypedDict):
     language_locale: NotRequired[str]
     last_name: NotRequired[str]
     r"""The employee's last (family) name"""
+    leave_end_at: NotRequired[datetime]
+    r"""expected or actual end of the current leave of absence (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    leave_start_at: NotRequired[datetime]
+    r"""start of the current leave of absence (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     locations: NotRequired[List[HrisLocationTypedDict]]
     manager_id: NotRequired[str]
     marital_status: NotRequired[HrisEmployeeMaritalStatus]
@@ -133,10 +150,16 @@ class HrisEmployeeTypedDict(TypedDict):
     r"""how often the employee is paid (eg. BIWEEKLY)"""
     pronouns: NotRequired[str]
     raw: NotRequired[Dict[str, Any]]
+    rehired_at: NotRequired[datetime]
+    r"""most recent rehire date (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     relationships: NotRequired[List[HrisEmployeerelationshipTypedDict]]
     r"""the employee's personal relationships (eg. emergency contacts, spouse, dependants, ...)"""
     salutation: NotRequired[str]
     r"""Mr. Mrs. Ms."""
+    seniority_started_at: NotRequired[datetime]
+    r"""seniority date (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+    service_started_at: NotRequired[datetime]
+    r"""adjusted service date used for benefits eligibility and vesting (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     ssn_sin: NotRequired[str]
     storage_quota_allocated: NotRequired[float]
     storage_quota_available: NotRequired[float]
@@ -183,6 +206,9 @@ class HrisEmployee(BaseModel):
 
     employment_status: Optional[EmploymentStatus] = None
 
+    employment_status_reason: Optional[EmploymentStatusReason] = None
+    r"""why the employee is not actively working (eg. LEAVE, TERMINATED, RETIRED)"""
+
     employment_type: Optional[HrisEmployeeEmploymentType] = None
 
     first_name: Optional[str] = None
@@ -215,6 +241,12 @@ class HrisEmployee(BaseModel):
     last_name: Optional[str] = None
     r"""The employee's last (family) name"""
 
+    leave_end_at: Optional[datetime] = None
+    r"""expected or actual end of the current leave of absence (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+
+    leave_start_at: Optional[datetime] = None
+    r"""start of the current leave of absence (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+
     locations: Optional[List[HrisLocation]] = None
 
     manager_id: Optional[str] = None
@@ -233,11 +265,20 @@ class HrisEmployee(BaseModel):
 
     raw: Optional[Dict[str, Any]] = None
 
+    rehired_at: Optional[datetime] = None
+    r"""most recent rehire date (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+
     relationships: Optional[List[HrisEmployeerelationship]] = None
     r"""the employee's personal relationships (eg. emergency contacts, spouse, dependants, ...)"""
 
     salutation: Optional[str] = None
     r"""Mr. Mrs. Ms."""
+
+    seniority_started_at: Optional[datetime] = None
+    r"""seniority date (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
+
+    service_started_at: Optional[datetime] = None
+    r"""adjusted service date used for benefits eligibility and vesting (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
     ssn_sin: Optional[str] = None
 
@@ -272,6 +313,15 @@ class HrisEmployee(BaseModel):
         if isinstance(value, str):
             try:
                 return shared.EmploymentStatus(value)
+            except ValueError:
+                return value
+        return value
+
+    @field_serializer("employment_status_reason")
+    def serialize_employment_status_reason(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.EmploymentStatusReason(value)
             except ValueError:
                 return value
         return value
@@ -339,6 +389,7 @@ class HrisEmployee(BaseModel):
                 "employee_number",
                 "employee_roles",
                 "employment_status",
+                "employment_status_reason",
                 "employment_type",
                 "first_name",
                 "flsa_status",
@@ -351,6 +402,8 @@ class HrisEmployee(BaseModel):
                 "job_id",
                 "language_locale",
                 "last_name",
+                "leave_end_at",
+                "leave_start_at",
                 "locations",
                 "manager_id",
                 "marital_status",
@@ -359,8 +412,11 @@ class HrisEmployee(BaseModel):
                 "pay_frequency",
                 "pronouns",
                 "raw",
+                "rehired_at",
                 "relationships",
                 "salutation",
+                "seniority_started_at",
+                "service_started_at",
                 "ssn_sin",
                 "storage_quota_allocated",
                 "storage_quota_available",

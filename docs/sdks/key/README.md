@@ -33,11 +33,11 @@ with UnifiedTo(
     res = unified_to.key.create_compute_key(request={
         "compute_key": {
             "created_at": parse_datetime("2023-08-19T14:31:46.492Z"),
-            "id": "17e73278-a0a0-4f0d-a6ef-ebc5be268807",
+            "id": "6d0b0135-52aa-433f-9d4d-e4a33d595a76",
             "metadata": [],
             "name": "nienow-secret",
             "type": shared.ComputeKeyType.SECRET,
-            "updated_at": parse_datetime("2024-10-17T08:22:56.284Z"),
+            "updated_at": parse_datetime("2024-10-17T16:51:00.259Z"),
         },
         "connection_id": "<id>",
     })
@@ -181,11 +181,11 @@ with UnifiedTo(
     res = unified_to.key.patch_compute_key(request={
         "compute_key": {
             "created_at": parse_datetime("2023-08-19T14:31:46.492Z"),
-            "id": "bbdb8f3b-ddf9-43aa-881e-9477a8420d89",
+            "id": "2f487000-12de-430c-a3eb-ed88899d64f8",
             "metadata": [],
             "name": "nienow-secret",
             "type": shared.ComputeKeyType.SECRET,
-            "updated_at": parse_datetime("2024-10-17T08:22:56.289Z"),
+            "updated_at": parse_datetime("2024-10-17T16:51:00.262Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -284,11 +284,11 @@ with UnifiedTo(
     res = unified_to.key.update_compute_key(request={
         "compute_key": {
             "created_at": parse_datetime("2023-08-19T14:31:46.492Z"),
-            "id": "bbdb8f3b-ddf9-43aa-881e-9477a8420d89",
+            "id": "2f487000-12de-430c-a3eb-ed88899d64f8",
             "metadata": [],
             "name": "nienow-secret",
             "type": shared.ComputeKeyType.SECRET,
-            "updated_at": parse_datetime("2024-10-17T08:22:56.289Z"),
+            "updated_at": parse_datetime("2024-10-17T16:51:00.262Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
