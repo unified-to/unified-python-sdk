@@ -217,6 +217,20 @@ class PropertyWorkspaceIntegrationOverridenScopesTypedDict(TypedDict):
     datastore_record_write: NotRequired[str]
     datastore_table_read: NotRequired[str]
     datastore_table_write: NotRequired[str]
+    dms_appointment_read: NotRequired[str]
+    dms_appointment_write: NotRequired[str]
+    dms_opcode_read: NotRequired[str]
+    dms_opcode_write: NotRequired[str]
+    dms_part_read: NotRequired[str]
+    dms_part_write: NotRequired[str]
+    dms_partsale_read: NotRequired[str]
+    dms_partsale_write: NotRequired[str]
+    dms_repairorder_read: NotRequired[str]
+    dms_repairorder_write: NotRequired[str]
+    dms_vehicle_read: NotRequired[str]
+    dms_vehicle_write: NotRequired[str]
+    dms_vehiclesale_read: NotRequired[str]
+    dms_vehiclesale_write: NotRequired[str]
     enrich_company_read: NotRequired[str]
     enrich_person_read: NotRequired[str]
     forms_form_read: NotRequired[str]
@@ -379,6 +393,16 @@ class PropertyWorkspaceIntegrationOverridenScopesTypedDict(TypedDict):
     plm_document_write: NotRequired[str]
     plm_part_read: NotRequired[str]
     plm_part_write: NotRequired[str]
+    printing_file_read: NotRequired[str]
+    printing_file_write: NotRequired[str]
+    printing_order_read: NotRequired[str]
+    printing_order_write: NotRequired[str]
+    printing_product_read: NotRequired[str]
+    printing_product_write: NotRequired[str]
+    printing_quote_read: NotRequired[str]
+    printing_quote_write: NotRequired[str]
+    printing_template_read: NotRequired[str]
+    printing_template_write: NotRequired[str]
     property_availability_read: NotRequired[str]
     property_conversation_read: NotRequired[str]
     property_conversation_write: NotRequired[str]
@@ -880,6 +904,34 @@ class PropertyWorkspaceIntegrationOverridenScopes(BaseModel):
 
     datastore_table_write: Optional[str] = None
 
+    dms_appointment_read: Optional[str] = None
+
+    dms_appointment_write: Optional[str] = None
+
+    dms_opcode_read: Optional[str] = None
+
+    dms_opcode_write: Optional[str] = None
+
+    dms_part_read: Optional[str] = None
+
+    dms_part_write: Optional[str] = None
+
+    dms_partsale_read: Optional[str] = None
+
+    dms_partsale_write: Optional[str] = None
+
+    dms_repairorder_read: Optional[str] = None
+
+    dms_repairorder_write: Optional[str] = None
+
+    dms_vehicle_read: Optional[str] = None
+
+    dms_vehicle_write: Optional[str] = None
+
+    dms_vehiclesale_read: Optional[str] = None
+
+    dms_vehiclesale_write: Optional[str] = None
+
     enrich_company_read: Optional[str] = None
 
     enrich_person_read: Optional[str] = None
@@ -1203,6 +1255,26 @@ class PropertyWorkspaceIntegrationOverridenScopes(BaseModel):
     plm_part_read: Optional[str] = None
 
     plm_part_write: Optional[str] = None
+
+    printing_file_read: Optional[str] = None
+
+    printing_file_write: Optional[str] = None
+
+    printing_order_read: Optional[str] = None
+
+    printing_order_write: Optional[str] = None
+
+    printing_product_read: Optional[str] = None
+
+    printing_product_write: Optional[str] = None
+
+    printing_quote_read: Optional[str] = None
+
+    printing_quote_write: Optional[str] = None
+
+    printing_template_read: Optional[str] = None
+
+    printing_template_write: Optional[str] = None
 
     property_availability_read: Optional[str] = None
 
@@ -1598,6 +1670,20 @@ class PropertyWorkspaceIntegrationOverridenScopes(BaseModel):
                 "datastore_record_write",
                 "datastore_table_read",
                 "datastore_table_write",
+                "dms_appointment_read",
+                "dms_appointment_write",
+                "dms_opcode_read",
+                "dms_opcode_write",
+                "dms_part_read",
+                "dms_part_write",
+                "dms_partsale_read",
+                "dms_partsale_write",
+                "dms_repairorder_read",
+                "dms_repairorder_write",
+                "dms_vehicle_read",
+                "dms_vehicle_write",
+                "dms_vehiclesale_read",
+                "dms_vehiclesale_write",
                 "enrich_company_read",
                 "enrich_person_read",
                 "forms_form_read",
@@ -1760,6 +1846,16 @@ class PropertyWorkspaceIntegrationOverridenScopes(BaseModel):
                 "plm_document_write",
                 "plm_part_read",
                 "plm_part_write",
+                "printing_file_read",
+                "printing_file_write",
+                "printing_order_read",
+                "printing_order_write",
+                "printing_product_read",
+                "printing_product_write",
+                "printing_quote_read",
+                "printing_quote_write",
+                "printing_template_read",
+                "printing_template_write",
                 "property_availability_read",
                 "property_conversation_read",
                 "property_conversation_write",

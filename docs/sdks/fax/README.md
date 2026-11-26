@@ -30,18 +30,18 @@ with UnifiedTo(
 
     res = unified_to.fax.create_uc_fax(request={
         "uc_fax": {
-            "cost_amount": 1.2207,
+            "cost_amount": 1.8536,
             "created_at": parse_datetime("2022-10-25T13:37:51.431Z"),
             "currency": "USD",
-            "from_telephone": "+13605107540",
-            "id": "68400756-11f7-415a-a1f9-150d32a1650f",
-            "media_url": "https://doting-jump.biz",
+            "from_telephone": "+15108540908",
+            "id": "2e13c7ac-bfdc-412a-8b29-02f1bebb12ef",
+            "media_url": "https://pitiful-stranger.net/",
             "metadata": [],
-            "pages": 20.0,
+            "pages": 10.0,
             "status": shared.UcFaxStatus.DELIVERED,
-            "to_telephone": "+19083998866",
+            "to_telephone": "+13999866972",
             "type": shared.UcFaxType.INBOUND,
-            "updated_at": parse_datetime("2023-04-17T07:11:03.359Z"),
+            "updated_at": parse_datetime("2023-04-17T23:52:59.787Z"),
         },
         "connection_id": "<id>",
     })

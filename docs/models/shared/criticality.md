@@ -1,6 +1,6 @@
 # Criticality
 
-Potential severity of future reactions
+low | high | unable-to-assess
 
 ## Example Usage
 
@@ -17,7 +17,6 @@ value = Criticality.LOW
 
 | Name               | Value              |
 | ------------------ | ------------------ |
-| `LOW`              | LOW                |
-| `HIGH`             | HIGH               |
-| `UNABLE_TO_ASSESS` | UNABLE_TO_ASSESS   |
-| `OTHER`            | OTHER              |
+| `LOW`              | low                |
+| `HIGH`             | high               |
+| `UNABLE_TO_ASSESS` | unable-to-assess   |

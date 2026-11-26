@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 from .atscompensation import AtsCompensation, AtsCompensationTypedDict
+from .atsfee import AtsFee, AtsFeeTypedDict
 from datetime import datetime
 from enum import Enum
 from pydantic import field_serializer, model_serializer
@@ -36,6 +37,8 @@ class AtsOfferTypedDict(TypedDict):
     r"""user id of the recruiter who created the offer (reference to HrisEmployee)"""
     employee_user_id: NotRequired[str]
     r"""newly hired employee id (reference to HrisEmployee)"""
+    fees: NotRequired[List[AtsFeeTypedDict]]
+    r"""The placement fee earned on this hire"""
     id: NotRequired[str]
     rejected_at: NotRequired[datetime]
     r"""date the offer was rejected (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
@@ -63,6 +66,9 @@ class AtsOffer(BaseModel):
 
     employee_user_id: Optional[str] = None
     r"""newly hired employee id (reference to HrisEmployee)"""
+
+    fees: Optional[List[AtsFee]] = None
+    r"""The placement fee earned on this hire"""
 
     id: Optional[str] = None
 
@@ -101,6 +107,7 @@ class AtsOffer(BaseModel):
                 "created_at",
                 "creator_user_id",
                 "employee_user_id",
+                "fees",
                 "id",
                 "rejected_at",
                 "sent_at",

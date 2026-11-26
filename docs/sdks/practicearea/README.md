@@ -32,13 +32,13 @@ with UnifiedTo(
 
     res = unified_to.practicearea.create_legal_practicearea(request={
         "legal_practicearea": {
-            "code": "QCA",
+            "code": "TLV",
             "created_at": parse_datetime("2023-01-28T21:00:26.264Z"),
-            "id": "c3573e53-3f8c-43ed-9b30-63eb2af33d93",
+            "id": "6e80e2a8-e98e-4b30-af94-295f90f3fcc3",
             "metadata": [],
-            "name": "witty Law",
+            "name": "advanced Law",
             "type": shared.LegalPracticeareaType.EDUCATION,
-            "updated_at": parse_datetime("2025-09-17T11:15:54.864Z"),
+            "updated_at": parse_datetime("2025-09-21T14:07:42.972Z"),
         },
         "connection_id": "<id>",
     })
@@ -181,13 +181,13 @@ with UnifiedTo(
 
     res = unified_to.practicearea.patch_legal_practicearea(request={
         "legal_practicearea": {
-            "code": "QCA",
+            "code": "TLV",
             "created_at": parse_datetime("2023-01-28T21:00:26.264Z"),
-            "id": "3ec06762-473f-4abd-b5fb-1c180387d415",
+            "id": "8efcf265-64b5-4bb7-bc00-fa8eae79f4b1",
             "metadata": [],
-            "name": "witty Law",
+            "name": "advanced Law",
             "type": shared.LegalPracticeareaType.EDUCATION,
-            "updated_at": parse_datetime("2025-09-17T11:15:54.873Z"),
+            "updated_at": parse_datetime("2025-09-21T14:07:42.982Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -285,13 +285,13 @@ with UnifiedTo(
 
     res = unified_to.practicearea.update_legal_practicearea(request={
         "legal_practicearea": {
-            "code": "QCA",
+            "code": "TLV",
             "created_at": parse_datetime("2023-01-28T21:00:26.264Z"),
-            "id": "3ec06762-473f-4abd-b5fb-1c180387d415",
+            "id": "8efcf265-64b5-4bb7-bc00-fa8eae79f4b1",
             "metadata": [],
-            "name": "witty Law",
+            "name": "advanced Law",
             "type": shared.LegalPracticeareaType.EDUCATION,
-            "updated_at": parse_datetime("2025-09-17T11:15:54.873Z"),
+            "updated_at": parse_datetime("2025-09-21T14:07:42.982Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

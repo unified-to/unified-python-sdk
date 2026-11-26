@@ -34,23 +34,23 @@ with UnifiedTo(
 
     res = unified_to.scorecard.create_ats_scorecard(request={
         "ats_scorecard": {
-            "comment": "Maiores enim.",
+            "comment": "Aliquam.",
             "created_at": parse_datetime("2022-02-20T17:09:45.498Z"),
-            "id": "95c350a5-d9de-46ad-a749-7cc8b743ade7",
+            "id": "ec942085-8f88-4f52-9049-78fb3f9ae674",
             "metadata": [],
             "questions": [
                 {
-                    "description": "Sulum textor eveniet facere vita.",
-                    "text": "Aliquam.",
+                    "description": "Pecto vulpes libero vomer comburo.",
+                    "text": "Desidero modi tamdiu auxilium defessus adimpleo clementia tero.",
                 },
                 {
-                    "answer": "Decretum.",
-                    "description": "Conatus cicuta doloremque statua bonus.",
-                    "text": "Pecto vulpes libero vomer comburo.",
+                    "answer": "Conatus cicuta doloremque statua bonus.",
+                    "description": "Aduro viscus celebrer.",
+                    "text": "Decretum.",
                 },
             ],
             "recommendation": shared.Recommendation.STRONG_YES,
-            "updated_at": parse_datetime("2023-06-13T20:14:43.850Z"),
+            "updated_at": parse_datetime("2023-06-15T11:39:27.949Z"),
         },
         "connection_id": "<id>",
     })
@@ -286,23 +286,23 @@ with UnifiedTo(
 
     res = unified_to.scorecard.patch_ats_scorecard(request={
         "ats_scorecard": {
-            "comment": "Maiores enim.",
+            "comment": "Aliquam.",
             "created_at": parse_datetime("2022-02-20T17:09:45.498Z"),
-            "id": "94e6b0ed-f85e-411a-89fd-824d9040e1ed",
+            "id": "4e4c2a4e-6a58-45eb-8e47-b9cbc56fd736",
             "metadata": [],
             "questions": [
                 {
-                    "description": "Sulum textor eveniet facere vita.",
-                    "text": "Aliquam.",
+                    "description": "Pecto vulpes libero vomer comburo.",
+                    "text": "Desidero modi tamdiu auxilium defessus adimpleo clementia tero.",
                 },
                 {
-                    "answer": "Decretum.",
-                    "description": "Conatus cicuta doloremque statua bonus.",
-                    "text": "Pecto vulpes libero vomer comburo.",
+                    "answer": "Conatus cicuta doloremque statua bonus.",
+                    "description": "Aduro viscus celebrer.",
+                    "text": "Decretum.",
                 },
             ],
             "recommendation": shared.Recommendation.STRONG_YES,
-            "updated_at": parse_datetime("2023-06-13T20:14:43.853Z"),
+            "updated_at": parse_datetime("2023-06-15T11:39:27.951Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -400,23 +400,23 @@ with UnifiedTo(
 
     res = unified_to.scorecard.update_ats_scorecard(request={
         "ats_scorecard": {
-            "comment": "Maiores enim.",
+            "comment": "Aliquam.",
             "created_at": parse_datetime("2022-02-20T17:09:45.498Z"),
-            "id": "94e6b0ed-f85e-411a-89fd-824d9040e1ed",
+            "id": "4e4c2a4e-6a58-45eb-8e47-b9cbc56fd736",
             "metadata": [],
             "questions": [
                 {
-                    "description": "Sulum textor eveniet facere vita.",
-                    "text": "Aliquam.",
+                    "description": "Pecto vulpes libero vomer comburo.",
+                    "text": "Desidero modi tamdiu auxilium defessus adimpleo clementia tero.",
                 },
                 {
-                    "answer": "Decretum.",
-                    "description": "Conatus cicuta doloremque statua bonus.",
-                    "text": "Pecto vulpes libero vomer comburo.",
+                    "answer": "Conatus cicuta doloremque statua bonus.",
+                    "description": "Aduro viscus celebrer.",
+                    "text": "Decretum.",
                 },
             ],
             "recommendation": shared.Recommendation.STRONG_YES,
-            "updated_at": parse_datetime("2023-06-13T20:14:43.853Z"),
+            "updated_at": parse_datetime("2023-06-15T11:39:27.951Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

@@ -34,25 +34,25 @@ with UnifiedTo(
 
     res = unified_to.member.create_martech_member(request={
         "marketing_member": {
-            "company": "Miller - Franecki",
+            "company": "Abernathy - Carter",
             "created_at": parse_datetime("2022-04-15T15:32:38.496Z"),
             "emails": [
                 {
-                    "email": "jude.leffler@hotmail.com",
+                    "email": "jeremy.franecki@hotmail.com",
                     "type": shared.MarketingEmailType.HOME,
                 },
             ],
-            "first_name": "Jude",
-            "id": "bfbcad3c-8432-4e5d-ba64-0bd03fdc922e",
-            "last_name": "Leffler",
+            "first_name": "Jeremy",
+            "id": "c61f81b3-39a3-4859-863e-65393718483d",
+            "last_name": "Franecki",
             "metadata": [],
-            "name": "Jude Leffler",
+            "name": "Jeremy Franecki",
             "status": shared.MarketingMemberStatus.UNSUBSCRIBED,
             "tags": [
-                "adnuo",
-                "verumtamen",
+                "deleniti",
+                "subvenio",
             ],
-            "updated_at": parse_datetime("2025-07-30T06:58:18.853Z"),
+            "updated_at": parse_datetime("2025-08-03T13:12:17.034Z"),
         },
         "connection_id": "<id>",
     })
@@ -288,25 +288,25 @@ with UnifiedTo(
 
     res = unified_to.member.patch_martech_member(request={
         "marketing_member": {
-            "company": "Miller - Franecki",
+            "company": "Abernathy - Carter",
             "created_at": parse_datetime("2022-04-15T15:32:38.496Z"),
             "emails": [
                 {
-                    "email": "jude.leffler@hotmail.com",
+                    "email": "jeremy.franecki@hotmail.com",
                     "type": shared.MarketingEmailType.HOME,
                 },
             ],
-            "first_name": "Jude",
-            "id": "a9788865-99ab-4c07-b66b-3956553b5260",
-            "last_name": "Leffler",
+            "first_name": "Jeremy",
+            "id": "fc9c66b0-a07a-46e6-ada1-4fef2af15598",
+            "last_name": "Franecki",
             "metadata": [],
-            "name": "Jude Leffler",
+            "name": "Jeremy Franecki",
             "status": shared.MarketingMemberStatus.UNSUBSCRIBED,
             "tags": [
-                "adnuo",
-                "verumtamen",
+                "deleniti",
+                "subvenio",
             ],
-            "updated_at": parse_datetime("2025-07-30T06:58:18.864Z"),
+            "updated_at": parse_datetime("2025-08-03T13:12:17.042Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -404,25 +404,25 @@ with UnifiedTo(
 
     res = unified_to.member.update_martech_member(request={
         "marketing_member": {
-            "company": "Miller - Franecki",
+            "company": "Abernathy - Carter",
             "created_at": parse_datetime("2022-04-15T15:32:38.496Z"),
             "emails": [
                 {
-                    "email": "jude.leffler@hotmail.com",
+                    "email": "jeremy.franecki@hotmail.com",
                     "type": shared.MarketingEmailType.HOME,
                 },
             ],
-            "first_name": "Jude",
-            "id": "a9788865-99ab-4c07-b66b-3956553b5260",
-            "last_name": "Leffler",
+            "first_name": "Jeremy",
+            "id": "fc9c66b0-a07a-46e6-ada1-4fef2af15598",
+            "last_name": "Franecki",
             "metadata": [],
-            "name": "Jude Leffler",
+            "name": "Jeremy Franecki",
             "status": shared.MarketingMemberStatus.UNSUBSCRIBED,
             "tags": [
-                "adnuo",
-                "verumtamen",
+                "deleniti",
+                "subvenio",
             ],
-            "updated_at": parse_datetime("2025-07-30T06:58:18.864Z"),
+            "updated_at": parse_datetime("2025-08-03T13:12:17.042Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

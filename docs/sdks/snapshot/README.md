@@ -33,13 +33,13 @@ with UnifiedTo(
     res = unified_to.snapshot.create_compute_snapshot(request={
         "compute_snapshot": {
             "created_at": parse_datetime("2021-09-24T14:40:06.110Z"),
-            "id": "c16b9213-76ff-4429-a32a-83fb3bcdcf75",
+            "id": "21b4a63f-6ddb-4e64-9ba3-6a14d8c50fc2",
             "metadata": [],
-            "name": "snap-alius",
+            "name": "snap-cito",
             "size_mb": 169984.0,
             "status": shared.ComputeSnapshotStatus.DELETING,
             "type": shared.ComputeSnapshotType.DISK,
-            "updated_at": parse_datetime("2026-04-26T13:57:25.398Z"),
+            "updated_at": parse_datetime("2026-05-01T21:05:20.187Z"),
         },
         "connection_id": "<id>",
     })
@@ -183,13 +183,13 @@ with UnifiedTo(
     res = unified_to.snapshot.patch_compute_snapshot(request={
         "compute_snapshot": {
             "created_at": parse_datetime("2021-09-24T14:40:06.110Z"),
-            "id": "6d81a8b7-375c-4533-9275-60ed792b3d3c",
+            "id": "d1de898a-b54f-4c35-a138-8b169a77626b",
             "metadata": [],
-            "name": "snap-alius",
+            "name": "snap-cito",
             "size_mb": 169984.0,
             "status": shared.ComputeSnapshotStatus.DELETING,
             "type": shared.ComputeSnapshotType.DISK,
-            "updated_at": parse_datetime("2026-04-26T13:57:25.404Z"),
+            "updated_at": parse_datetime("2026-05-01T21:05:20.198Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -288,13 +288,13 @@ with UnifiedTo(
     res = unified_to.snapshot.update_compute_snapshot(request={
         "compute_snapshot": {
             "created_at": parse_datetime("2021-09-24T14:40:06.110Z"),
-            "id": "6d81a8b7-375c-4533-9275-60ed792b3d3c",
+            "id": "d1de898a-b54f-4c35-a138-8b169a77626b",
             "metadata": [],
-            "name": "snap-alius",
+            "name": "snap-cito",
             "size_mb": 169984.0,
             "status": shared.ComputeSnapshotStatus.DELETING,
             "type": shared.ComputeSnapshotType.DISK,
-            "updated_at": parse_datetime("2026-04-26T13:57:25.404Z"),
+            "updated_at": parse_datetime("2026-05-01T21:05:20.198Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

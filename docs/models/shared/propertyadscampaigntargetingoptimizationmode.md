@@ -1,0 +1,21 @@
+# PropertyAdsCampaignTargetingOptimizationMode
+
+Google: bid_only falsetrue
+
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import PropertyAdsCampaignTargetingOptimizationMode
+
+value = PropertyAdsCampaignTargetingOptimizationMode.TARGETING
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
+
+## Values
+
+| Name          | Value         |
+| ------------- | ------------- |
+| `TARGETING`   | TARGETING     |
+| `OBSERVATION` | OBSERVATION   |

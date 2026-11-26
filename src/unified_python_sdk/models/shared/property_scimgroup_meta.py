@@ -17,7 +17,7 @@ from unified_python_sdk.types import (
 from unified_python_sdk.types.basemodel import current_filtered_dump
 
 
-class ResourceType(str, Enum, metaclass=utils.OpenEnumMeta):
+class PropertyScimGroupMetaResourceType(str, Enum, metaclass=utils.OpenEnumMeta):
     USER = "User"
     GROUP = "Group"
 
@@ -26,7 +26,7 @@ class PropertyScimGroupMetaTypedDict(TypedDict):
     created: NotRequired[str]
     last_modified: NotRequired[str]
     location: NotRequired[str]
-    resource_type: NotRequired[ResourceType]
+    resource_type: NotRequired[PropertyScimGroupMetaResourceType]
     version: NotRequired[str]
 
 
@@ -38,7 +38,8 @@ class PropertyScimGroupMeta(BaseModel):
     location: Optional[str] = None
 
     resource_type: Annotated[
-        Optional[ResourceType], pydantic.Field(alias="resourceType")
+        Optional[PropertyScimGroupMetaResourceType],
+        pydantic.Field(alias="resourceType"),
     ] = None
 
     version: Optional[str] = None
@@ -47,7 +48,7 @@ class PropertyScimGroupMeta(BaseModel):
     def serialize_resource_type(self, value):
         if isinstance(value, str):
             try:
-                return shared.ResourceType(value)
+                return shared.PropertyScimGroupMetaResourceType(value)
             except ValueError:
                 return value
         return value

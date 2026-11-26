@@ -5,7 +5,9 @@
 ### Available Operations
 
 * [create_healthcare_observation](#create_healthcare_observation) - Create an observation
+* [get_fhir_observation](#get_fhir_observation) - Read a Observation
 * [get_healthcare_observation](#get_healthcare_observation) - Retrieve an observation
+* [list_fhir_observations](#list_fhir_observations) - Search Observation resources
 * [list_healthcare_observations](#list_healthcare_observations) - List all observations
 
 ## create_healthcare_observation
@@ -61,15 +63,15 @@ with UnifiedTo(
                 },
             ],
             "created_at": parse_datetime("2022-12-06T21:34:04.293Z"),
-            "id": "b563683b-e288-4b30-8662-e8d50c4d844a",
+            "id": "a6583e2b-74d5-4ad6-83dc-3f2a82d8fad2",
             "interpretation": shared.Interpretation.CRITICAL_HIGH,
-            "issued_at": parse_datetime("2025-05-30T05:47:56.765Z"),
+            "issued_at": parse_datetime("2025-06-02T23:22:16.931Z"),
             "metadata": [],
             "name": "Blood pressure panel",
-            "observed_at": parse_datetime("2025-02-05T14:40:06.236Z"),
+            "observed_at": parse_datetime("2025-02-08T20:59:54.124Z"),
             "status": shared.HealthcareObservationStatus.CORRECTED,
             "type": shared.HealthcareObservationType.VITAL_SIGNS,
-            "updated_at": parse_datetime("2026-04-18T19:00:22.343Z"),
+            "updated_at": parse_datetime("2026-04-23T20:35:22.904Z"),
         },
         "connection_id": "<id>",
     })
@@ -91,6 +93,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.CreateHealthcareObservationResponse](../../models/operations/createhealthcareobservationresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_fhir_observation
+
+Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getFhirObservation" method="get" path="/fhir/{connection_id}/Observation/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.observation.get_fhir_observation(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.fhir_observation is not None
+
+    # Handle response
+    print(res.fhir_observation)
+
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.GetFhirObservationRequest](../../models/operations/getfhirobservationrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+
+### Response
+
+**[operations.GetFhirObservationResponse](../../models/operations/getfhirobservationresponse.md)**
 
 ### Errors
 
@@ -138,6 +187,52 @@ with UnifiedTo(
 ### Response
 
 **[operations.GetHealthcareObservationResponse](../../models/operations/gethealthcareobservationresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## list_fhir_observations
+
+Returns a searchset Bundle; follow its next link for more pages. Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listFhirObservations" method="get" path="/fhir/{connection_id}/Observation" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.observation.list_fhir_observations(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.fhir_bundle is not None
+
+    # Handle response
+    print(res.fhir_bundle)
+
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.ListFhirObservationsRequest](../../models/operations/listfhirobservationsrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `retries`                                                                                        | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                 | :heavy_minus_sign:                                                                               | Configuration to override the default retry behavior of the client.                              |
+
+### Response
+
+**[operations.ListFhirObservationsResponse](../../models/operations/listfhirobservationsresponse.md)**
 
 ### Errors
 

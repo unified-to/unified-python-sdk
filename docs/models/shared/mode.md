@@ -1,13 +1,13 @@
 # Mode
 
-Google: bid_only falsetrue
+server
 
 ## Example Usage
 
 ```python
 from unified_python_sdk.models.shared import Mode
 
-value = Mode.TARGETING
+value = Mode.SERVER
 
 # Open enum: unrecognized values are captured as UnrecognizedStr
 ```
@@ -15,7 +15,6 @@ value = Mode.TARGETING
 
 ## Values
 
-| Name          | Value         |
-| ------------- | ------------- |
-| `TARGETING`   | TARGETING     |
-| `OBSERVATION` | OBSERVATION   |
+| Name     | Value    |
+| -------- | -------- |
+| `SERVER` | server   |

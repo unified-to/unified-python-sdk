@@ -1,0 +1,21 @@
+# PropertyFhirAllergyIntoleranceCategory
+
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import PropertyFhirAllergyIntoleranceCategory
+
+value = PropertyFhirAllergyIntoleranceCategory.FOOD
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
+
+## Values
+
+| Name          | Value         |
+| ------------- | ------------- |
+| `FOOD`        | food          |
+| `MEDICATION`  | medication    |
+| `ENVIRONMENT` | environment   |
+| `BIOLOGIC`    | biologic      |

@@ -3,6 +3,7 @@
 from __future__ import annotations
 from .atsaddress import AtsAddress, AtsAddressTypedDict
 from .atscompensation import AtsCompensation, AtsCompensationTypedDict
+from .atsfee import AtsFee, AtsFeeTypedDict
 from .atsgroup import AtsGroup, AtsGroupTypedDict
 from .atsjobopening import AtsJobOpening, AtsJobOpeningTypedDict
 from .atsjobposting import AtsJobPosting, AtsJobPostingTypedDict
@@ -57,6 +58,8 @@ class AtsJobTypedDict(TypedDict):
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     description: NotRequired[str]
     employment_type: NotRequired[EmploymentType]
+    fees: NotRequired[List[AtsFeeTypedDict]]
+    r"""The placement fee agreed with the client for this job"""
     groups: NotRequired[List[AtsGroupTypedDict]]
     r"""The departments/divisions/teams that this job belongs to"""
     hiring_manager_ids: NotRequired[List[str]]
@@ -108,6 +111,9 @@ class AtsJob(BaseModel):
     description: Optional[str] = None
 
     employment_type: Optional[EmploymentType] = None
+
+    fees: Optional[List[AtsFee]] = None
+    r"""The placement fee agreed with the client for this job"""
 
     groups: Optional[List[AtsGroup]] = None
     r"""The departments/divisions/teams that this job belongs to"""
@@ -196,6 +202,7 @@ class AtsJob(BaseModel):
                 "created_at",
                 "description",
                 "employment_type",
+                "fees",
                 "groups",
                 "hiring_manager_ids",
                 "hiring_managers",

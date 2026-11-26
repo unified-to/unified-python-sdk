@@ -50,6 +50,8 @@ class CrmDealTypedDict(TypedDict):
     r"""The last date that this deal object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
     r"""(reference to HrisEmployee)"""
+    vehicle_ids: NotRequired[List[str]]
+    r"""DMS Vehicles this deal is for"""
     won_reason: NotRequired[str]
 
 
@@ -107,6 +109,9 @@ class CrmDeal(BaseModel):
     user_id: Optional[str] = None
     r"""(reference to HrisEmployee)"""
 
+    vehicle_ids: Optional[List[str]] = None
+    r"""DMS Vehicles this deal is for"""
+
     won_reason: Optional[str] = None
 
     @model_serializer(mode="wrap")
@@ -136,6 +141,7 @@ class CrmDeal(BaseModel):
                 "tags",
                 "updated_at",
                 "user_id",
+                "vehicle_ids",
                 "won_reason",
             ]
         )

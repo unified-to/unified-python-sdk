@@ -1,0 +1,10 @@
+# FhirBundleEntry
+
+
+## Fields
+
+| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `full_url`                                                                                             | *Optional[str]*                                                                                        | :heavy_minus_sign:                                                                                     | URI for resource (Absolute URL)                                                                        |
+| `resource`                                                                                             | [Optional[shared.Resource]](../../models/shared/resource.md)                                           | :heavy_minus_sign:                                                                                     | A resource of the searched type                                                                        |
+| `search`                                                                                               | [Optional[shared.PropertyFhirBundleEntrySearch]](../../models/shared/propertyfhirbundleentrysearch.md) | :heavy_minus_sign:                                                                                     | Search related information                                                                             |

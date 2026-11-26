@@ -263,3 +263,15 @@ value = WebhookObjectType.ACCOUNTING_ACCOUNT
 | `QMS_ACTION`                     | qms_action                       |
 | `QMS_INSPECTION`                 | qms_inspection                   |
 | `QMS_AUDIT`                      | qms_audit                        |
+| `DMS_VEHICLE`                    | dms_vehicle                      |
+| `DMS_VEHICLESALE`                | dms_vehiclesale                  |
+| `DMS_REPAIRORDER`                | dms_repairorder                  |
+| `DMS_APPOINTMENT`                | dms_appointment                  |
+| `DMS_PART`                       | dms_part                         |
+| `DMS_PARTSALE`                   | dms_partsale                     |
+| `DMS_OPCODE`                     | dms_opcode                       |
+| `PRINTING_PRODUCT`               | printing_product                 |
+| `PRINTING_TEMPLATE`              | printing_template                |
+| `PRINTING_FILE`                  | printing_file                    |
+| `PRINTING_QUOTE`                 | printing_quote                   |
+| `PRINTING_ORDER`                 | printing_order                   |

@@ -1,0 +1,8 @@
+# FhirImmunizationPerformer
+
+
+## Fields
+
+| Field                                                                                                          | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `actor`                                                                                                        | [shared.PropertyFhirImmunizationPerformerActor](../../models/shared/propertyfhirimmunizationperformeractor.md) | :heavy_check_mark:                                                                                             | Individual or organization who was performing                                                                  |

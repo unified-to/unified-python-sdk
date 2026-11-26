@@ -16,7 +16,9 @@ from unified_python_sdk.types import (
 from unified_python_sdk.types.basemodel import current_filtered_dump
 
 
-class Mode(str, Enum, metaclass=utils.OpenEnumMeta):
+class PropertyAdsCampaignTargetingOptimizationMode(
+    str, Enum, metaclass=utils.OpenEnumMeta
+):
     r"""Google: bid_only falsetrue"""
 
     TARGETING = "TARGETING"
@@ -28,7 +30,7 @@ class PropertyAdsCampaignTargetingOptimizationTypedDict(TypedDict):
 
     advantage_audience: NotRequired[bool]
     advantage_placements: NotRequired[bool]
-    mode: NotRequired[Mode]
+    mode: NotRequired[PropertyAdsCampaignTargetingOptimizationMode]
     r"""Google: bid_only falsetrue"""
     targeting_optimization_expansion_all: NotRequired[bool]
 
@@ -40,7 +42,7 @@ class PropertyAdsCampaignTargetingOptimization(BaseModel):
 
     advantage_placements: Optional[bool] = None
 
-    mode: Optional[Mode] = None
+    mode: Optional[PropertyAdsCampaignTargetingOptimizationMode] = None
     r"""Google: bid_only falsetrue"""
 
     targeting_optimization_expansion_all: Optional[bool] = None
@@ -49,7 +51,7 @@ class PropertyAdsCampaignTargetingOptimization(BaseModel):
     def serialize_mode(self, value):
         if isinstance(value, str):
             try:
-                return shared.Mode(value)
+                return shared.PropertyAdsCampaignTargetingOptimizationMode(value)
             except ValueError:
                 return value
         return value

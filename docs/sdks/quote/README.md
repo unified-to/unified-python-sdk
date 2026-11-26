@@ -5,6 +5,7 @@
 ### Available Operations
 
 * [create_accounting_quote](#create_accounting_quote) - Create a quote
+* [create_printing_quote](#create_printing_quote) - Create a quote
 * [create_property_quote](#create_property_quote) - Create a quote
 * [get_accounting_quote](#get_accounting_quote) - Retrieve a quote
 * [list_accounting_quotes](#list_accounting_quotes) - List all quotes
@@ -59,6 +60,127 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## create_printing_quote
+
+Creates a PrintingQuote. Provide the unified PrintingQuote fields in the request body; they are mapped to the provider's API. Returns the created PrintingQuote.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="createPrintingQuote" method="post" path="/printing/{connection_id}/quote" example="printing_quote" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+from unified_python_sdk.utils import parse_datetime
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.quote.create_printing_quote(request={
+        "printing_quote": {
+            "created_at": parse_datetime("2019-01-02T03:42:06.944Z"),
+            "currency": "USD",
+            "discount_amount": 0.0,
+            "id": "c0ca1481-d794-43b1-a1f3-80d0a7364419",
+            "lineitems": [
+                {
+                    "files": [
+                        {
+                            "placement": "default",
+                            "url": "https://picsum.photos/seed/0Y5Bjnoiwx/3057/3113",
+                        },
+                    ],
+                    "id": "1",
+                    "name": "Practical Wooden Salad",
+                    "quantity": 2.0,
+                    "retail_price_amount": 50.83,
+                    "unit_price_amount": 21.72,
+                },
+                {
+                    "files": [
+                        {
+                            "placement": "default",
+                            "url": "https://picsum.photos/seed/rcPUF/2295/1801",
+                        },
+                    ],
+                    "id": "2",
+                    "name": "Handmade Gold Car",
+                    "quantity": 4.0,
+                    "retail_price_amount": 35.47,
+                    "sku": "I79GIBCK",
+                    "unit_price_amount": 17.64,
+                },
+            ],
+            "metadata": [],
+            "shipping_address": {
+                "address1": "4290 Garden Street",
+                "address2": "Suite 874",
+                "city": "Cartwrightshire",
+                "company_name": "Kris and Sons",
+                "country": "United States",
+                "country_code": "US",
+                "email": "jada73@hotmail.com",
+                "name": "Heaven Crist",
+                "postal_code": "92871",
+                "region": "North Carolina",
+                "region_code": "KY",
+                "telephone": "653.412.8900 x9387",
+            },
+            "shipping_amount": 4.69,
+            "shipping_method": "STANDARD",
+            "shipping_options": [
+                {
+                    "amount": 4.69,
+                    "code": "STANDARD",
+                    "currency": "USD",
+                    "max_delivery_days": 5.0,
+                    "min_delivery_days": 3.0,
+                    "name": "Flat Rate (3-5 business days after fulfillment)",
+                },
+                {
+                    "amount": 12.99,
+                    "code": "EXPRESS",
+                    "currency": "USD",
+                    "max_delivery_days": 3.0,
+                    "min_delivery_days": 1.0,
+                    "name": "Express (1-3 business days after fulfillment)",
+                },
+            ],
+            "subtotal_amount": 114.0,
+            "tax_amount": 9.12,
+            "total_amount": 127.81,
+            "updated_at": parse_datetime("2019-01-02T03:42:06.944Z"),
+        },
+        "connection_id": "<id>",
+    })
+
+    assert res.printing_quote is not None
+
+    # Handle response
+    print(res.printing_quote)
+
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.CreatePrintingQuoteRequest](../../models/operations/createprintingquoterequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+
+### Response
+
+**[operations.CreatePrintingQuoteResponse](../../models/operations/createprintingquoteresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## create_property_quote
 
 Creates a PropertyQuote. Provide the unified PropertyQuote fields in the request body; they are mapped to the provider's API. Returns the created PropertyQuote.
@@ -85,9 +207,9 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-12-18T19:14:11.415Z"),
             "currency": "USD",
             "deposit_amount": 594.54,
-            "end_at": parse_datetime("2026-12-04"),
+            "end_at": parse_datetime("2026-12-10"),
             "guests": 2.0,
-            "id": "bcdd518a-5481-4177-9250-0ec7d62602fa",
+            "id": "79bad845-f909-47ac-8337-dd74eb519111",
             "line_items": [
                 {
                     "amount": 1665.0,
@@ -109,7 +231,7 @@ with UnifiedTo(
                     "type": shared.PropertyLineitemType.TAX,
                 },
             ],
-            "start_at": parse_datetime("2026-11-25"),
+            "start_at": parse_datetime("2026-12-01"),
             "total_amount": 1981.8,
         },
         "connection_id": "<id>",

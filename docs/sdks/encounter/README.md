@@ -4,8 +4,57 @@
 
 ### Available Operations
 
+* [get_fhir_encounter](#get_fhir_encounter) - Read a Encounter
 * [get_healthcare_encounter](#get_healthcare_encounter) - Retrieve an encounter
+* [list_fhir_encounters](#list_fhir_encounters) - Search Encounter resources
 * [list_healthcare_encounters](#list_healthcare_encounters) - List all encounters
+
+## get_fhir_encounter
+
+Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getFhirEncounter" method="get" path="/fhir/{connection_id}/Encounter/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.encounter.get_fhir_encounter(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.fhir_encounter is not None
+
+    # Handle response
+    print(res.fhir_encounter)
+
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.GetFhirEncounterRequest](../../models/operations/getfhirencounterrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+
+### Response
+
+**[operations.GetFhirEncounterResponse](../../models/operations/getfhirencounterresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
 
 ## get_healthcare_encounter
 
@@ -47,6 +96,52 @@ with UnifiedTo(
 ### Response
 
 **[operations.GetHealthcareEncounterResponse](../../models/operations/gethealthcareencounterresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## list_fhir_encounters
+
+Returns a searchset Bundle; follow its next link for more pages. Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listFhirEncounters" method="get" path="/fhir/{connection_id}/Encounter" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.encounter.list_fhir_encounters(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.fhir_bundle is not None
+
+    # Handle response
+    print(res.fhir_bundle)
+
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `request`                                                                                    | [operations.ListFhirEncountersRequest](../../models/operations/listfhirencountersrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `retries`                                                                                    | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                             | :heavy_minus_sign:                                                                           | Configuration to override the default retry behavior of the client.                          |
+
+### Response
+
+**[operations.ListFhirEncountersResponse](../../models/operations/listfhirencountersresponse.md)**
 
 ### Errors
 

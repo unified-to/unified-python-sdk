@@ -41,12 +41,12 @@ with UnifiedTo(
     res = unified_to.category.create_accounting_category(request={
         "accounting_category": {
             "created_at": parse_datetime("2023-05-30T12:29:04.257Z"),
-            "description": "Textus ab thymum labore basium.",
-            "id": "7db5c926-62d6-41f9-9105-d7462403440c",
+            "description": "Labore basium corrumpo crinis ars subito pecto.",
+            "id": "d3eec0b9-fcdb-4d47-a61c-7a1c7783d46b",
             "is_active": False,
             "metadata": [],
-            "name": "Beauty",
-            "updated_at": parse_datetime("2025-10-01T17:07:58.909Z"),
+            "name": "Automotive",
+            "updated_at": parse_datetime("2025-10-05T17:22:55.933Z"),
         },
         "connection_id": "<id>",
     })
@@ -97,12 +97,12 @@ with UnifiedTo(
     res = unified_to.category.create_ticketing_category(request={
         "ticketing_category": {
             "created_at": parse_datetime("2019-10-19T22:02:51.067Z"),
-            "description": "Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.",
-            "id": "223c2efe-9c49-47d3-bac0-701f189003e2",
+            "description": "Carpo depulso torqueo coniecto curtus. Nam optio tendo utroque. Tumultus delectus arbitro amplus. Coerceo clam comprehendo vulnero triduana deprimo cruciamentum talio virtus. Substantia cogito deleo derelinquo traho.",
+            "id": "469d8fa9-51c6-4a11-873c-7ce915f6bcc8",
             "is_active": True,
             "metadata": [],
-            "name": "amicitia",
-            "updated_at": parse_datetime("2026-02-09T17:38:52.326Z"),
+            "name": "tempus",
+            "updated_at": parse_datetime("2026-02-15T00:53:05.593Z"),
         },
         "connection_id": "<id>",
     })
@@ -432,12 +432,12 @@ with UnifiedTo(
     res = unified_to.category.patch_accounting_category(request={
         "accounting_category": {
             "created_at": parse_datetime("2023-05-30T12:29:04.257Z"),
-            "description": "Textus ab thymum labore basium.",
-            "id": "663c00bc-d7b2-450a-af6a-10c0b30547f1",
+            "description": "Labore basium corrumpo crinis ars subito pecto.",
+            "id": "8ad31ec9-616a-430a-82f4-2b8248db6e4e",
             "is_active": False,
             "metadata": [],
-            "name": "Beauty",
-            "updated_at": parse_datetime("2025-10-01T17:07:58.924Z"),
+            "name": "Automotive",
+            "updated_at": parse_datetime("2025-10-05T17:22:55.941Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -489,12 +489,12 @@ with UnifiedTo(
     res = unified_to.category.patch_ticketing_category(request={
         "ticketing_category": {
             "created_at": parse_datetime("2019-10-19T22:02:51.067Z"),
-            "description": "Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.",
-            "id": "c9762c57-d64b-4128-bfe8-69b7720f6851",
+            "description": "Carpo depulso torqueo coniecto curtus. Nam optio tendo utroque. Tumultus delectus arbitro amplus. Coerceo clam comprehendo vulnero triduana deprimo cruciamentum talio virtus. Substantia cogito deleo derelinquo traho.",
+            "id": "8f2f7a27-70d2-4309-907c-6ac72a8d00ad",
             "is_active": True,
             "metadata": [],
-            "name": "amicitia",
-            "updated_at": parse_datetime("2026-02-09T17:38:52.334Z"),
+            "name": "tempus",
+            "updated_at": parse_datetime("2026-02-15T00:53:05.599Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -640,12 +640,12 @@ with UnifiedTo(
     res = unified_to.category.update_accounting_category(request={
         "accounting_category": {
             "created_at": parse_datetime("2023-05-30T12:29:04.257Z"),
-            "description": "Textus ab thymum labore basium.",
-            "id": "663c00bc-d7b2-450a-af6a-10c0b30547f1",
+            "description": "Labore basium corrumpo crinis ars subito pecto.",
+            "id": "8ad31ec9-616a-430a-82f4-2b8248db6e4e",
             "is_active": False,
             "metadata": [],
-            "name": "Beauty",
-            "updated_at": parse_datetime("2025-10-01T17:07:58.924Z"),
+            "name": "Automotive",
+            "updated_at": parse_datetime("2025-10-05T17:22:55.941Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -697,12 +697,12 @@ with UnifiedTo(
     res = unified_to.category.update_ticketing_category(request={
         "ticketing_category": {
             "created_at": parse_datetime("2019-10-19T22:02:51.067Z"),
-            "description": "Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.",
-            "id": "c9762c57-d64b-4128-bfe8-69b7720f6851",
+            "description": "Carpo depulso torqueo coniecto curtus. Nam optio tendo utroque. Tumultus delectus arbitro amplus. Coerceo clam comprehendo vulnero triduana deprimo cruciamentum talio virtus. Substantia cogito deleo derelinquo traho.",
+            "id": "8f2f7a27-70d2-4309-907c-6ac72a8d00ad",
             "is_active": True,
             "metadata": [],
-            "name": "amicitia",
-            "updated_at": parse_datetime("2026-02-09T17:38:52.334Z"),
+            "name": "tempus",
+            "updated_at": parse_datetime("2026-02-15T00:53:05.599Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

@@ -37,6 +37,9 @@ class GetPaymentLinkQueryParamFields(str, Enum):
     SUCCESS_URL = "success_url"
     METADATA = "metadata"
     RAW = "raw"
+    CONTACT_NAME = "contact_name"
+    CONTACT_EMAIL = "contact_email"
+    CONTACT_PHONE = "contact_phone"
 
 
 class GetPaymentLinkRequestTypedDict(TypedDict):

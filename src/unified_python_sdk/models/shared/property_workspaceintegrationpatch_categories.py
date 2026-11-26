@@ -49,3 +49,6 @@ class PropertyWorkspaceIntegrationPatchCategories(
     PROPERTY = "property"
     PLM = "plm"
     QMS = "qms"
+    DMS = "dms"
+    FHIR = "fhir"
+    PRINTING = "printing"

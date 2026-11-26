@@ -53,6 +53,8 @@ class CrmLeadTypedDict(TypedDict):
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     user_id: NotRequired[str]
     r"""(reference to HrisEmployee)"""
+    vehicle_ids: NotRequired[List[str]]
+    r"""DMS Vehicles the lead is interested in"""
 
 
 class CrmLead(BaseModel):
@@ -108,6 +110,9 @@ class CrmLead(BaseModel):
     user_id: Optional[str] = None
     r"""(reference to HrisEmployee)"""
 
+    vehicle_ids: Optional[List[str]] = None
+    r"""DMS Vehicles the lead is interested in"""
+
     @model_serializer(mode="wrap")
     def _serialize_model_with_info(self, handler, info):
         return serialize_with_info(self.serialize_model, handler, info)
@@ -136,6 +141,7 @@ class CrmLead(BaseModel):
                 "title",
                 "updated_at",
                 "user_id",
+                "vehicle_ids",
             ]
         )
         exclude_none = current_exclude_none()

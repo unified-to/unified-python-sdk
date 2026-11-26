@@ -33,12 +33,12 @@ with UnifiedTo(
     res = unified_to.agent.create_genai_agent(request={
         "genai_agent": {
             "created_at": parse_datetime("2020-12-18T02:23:33.723Z"),
-            "description": "Assentator tero sequi.",
-            "id": "3a664b4b-89f1-4fe6-9bc4-e92f4bc02682",
-            "instructions": "Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.",
+            "description": "Sperno despecto.",
+            "id": "d291a0bc-e6b6-4b22-ac5b-cdcb95f5636e",
+            "instructions": "Addo vita ver auctus corrumpo substantia conscendo auctus. Astrum sulum aufero bis stella sumptus non.",
             "is_active": False,
-            "name": "daughter with",
-            "updated_at": parse_datetime("2025-11-09T05:36:09.562Z"),
+            "name": "testimonial suddenly",
+            "updated_at": parse_datetime("2025-11-14T03:39:19.695Z"),
         },
         "connection_id": "<id>",
     })
@@ -182,12 +182,12 @@ with UnifiedTo(
     res = unified_to.agent.patch_genai_agent(request={
         "genai_agent": {
             "created_at": parse_datetime("2020-12-18T02:23:33.723Z"),
-            "description": "Assentator tero sequi.",
-            "id": "d79d036c-8681-41ef-b182-b8aa2148a45c",
-            "instructions": "Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.",
+            "description": "Sperno despecto.",
+            "id": "3e36559a-d979-42c3-9b9e-648f1aa534e8",
+            "instructions": "Addo vita ver auctus corrumpo substantia conscendo auctus. Astrum sulum aufero bis stella sumptus non.",
             "is_active": False,
-            "name": "daughter with",
-            "updated_at": parse_datetime("2025-11-09T05:36:09.575Z"),
+            "name": "testimonial suddenly",
+            "updated_at": parse_datetime("2025-11-14T03:39:19.700Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -286,12 +286,12 @@ with UnifiedTo(
     res = unified_to.agent.update_genai_agent(request={
         "genai_agent": {
             "created_at": parse_datetime("2020-12-18T02:23:33.723Z"),
-            "description": "Assentator tero sequi.",
-            "id": "d79d036c-8681-41ef-b182-b8aa2148a45c",
-            "instructions": "Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.",
+            "description": "Sperno despecto.",
+            "id": "3e36559a-d979-42c3-9b9e-648f1aa534e8",
+            "instructions": "Addo vita ver auctus corrumpo substantia conscendo auctus. Astrum sulum aufero bis stella sumptus non.",
             "is_active": False,
-            "name": "daughter with",
-            "updated_at": parse_datetime("2025-11-09T05:36:09.575Z"),
+            "name": "testimonial suddenly",
+            "updated_at": parse_datetime("2025-11-14T03:39:19.700Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

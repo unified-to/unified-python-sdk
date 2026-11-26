@@ -6,6 +6,7 @@
 
 * [create_metadata_metadata](#create_metadata_metadata) - Create a metadata
 * [get_metadata_metadata](#get_metadata_metadata) - Retrieve a metadata
+* [list_fhir_metadatas](#list_fhir_metadatas) - Get the CapabilityStatement
 * [list_metadata_metadatas](#list_metadata_metadatas) - List all metadatas
 * [patch_metadata_metadata](#patch_metadata_metadata) - Update a metadata
 * [remove_metadata_metadata](#remove_metadata_metadata) - Remove a metadata
@@ -34,17 +35,17 @@ with UnifiedTo(
         "metadata_metadata": {
             "created_at": parse_datetime("2021-03-25T03:02:17.656Z"),
             "format_": shared.MetadataMetadataFormat.PRICE,
-            "id": "036ffc0a-a5c0-4277-9e47-84740d79b4d9",
+            "id": "c153b1cc-b8e9-447d-a214-d4c41b384040",
             "is_required": False,
-            "name": "autem",
-            "object_type": "healthcare_patient",
+            "name": "tollo",
+            "object_type": "healthcare_document",
             "objects": {
 
             },
             "options": [],
-            "original_format": "advoco",
-            "slug": "arbustum",
-            "updated_at": parse_datetime("2025-04-12T10:40:29.282Z"),
+            "original_format": "deputo",
+            "slug": "acidus",
+            "updated_at": parse_datetime("2025-04-16T16:59:01.954Z"),
         },
         "connection_id": "<id>",
     })
@@ -113,6 +114,52 @@ with UnifiedTo(
 ### Response
 
 **[operations.GetMetadataMetadataResponse](../../models/operations/getmetadatametadataresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## list_fhir_metadatas
+
+The resources, interactions and search parameters this connection's integration supports. Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listFhirMetadatas" method="get" path="/fhir/{connection_id}/metadata" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.metadata.list_fhir_metadatas(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.fhir_capability_statement is not None
+
+    # Handle response
+    print(res.fhir_capability_statement)
+
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `request`                                                                                  | [operations.ListFhirMetadatasRequest](../../models/operations/listfhirmetadatasrequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+| `retries`                                                                                  | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                           | :heavy_minus_sign:                                                                         | Configuration to override the default retry behavior of the client.                        |
+
+### Response
+
+**[operations.ListFhirMetadatasResponse](../../models/operations/listfhirmetadatasresponse.md)**
 
 ### Errors
 
@@ -189,17 +236,17 @@ with UnifiedTo(
         "metadata_metadata": {
             "created_at": parse_datetime("2021-03-25T03:02:17.656Z"),
             "format_": shared.MetadataMetadataFormat.PRICE,
-            "id": "7e4d4863-17a7-4540-b803-1752a0b797b7",
+            "id": "99f9ab13-11c4-4432-8ea8-0f8a5f8e858c",
             "is_required": False,
-            "name": "autem",
-            "object_type": "healthcare_patient",
+            "name": "tollo",
+            "object_type": "healthcare_document",
             "objects": {
 
             },
             "options": [],
-            "original_format": "advoco",
-            "slug": "arbustum",
-            "updated_at": parse_datetime("2025-04-12T10:40:29.286Z"),
+            "original_format": "deputo",
+            "slug": "acidus",
+            "updated_at": parse_datetime("2025-04-16T16:59:01.960Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -299,17 +346,17 @@ with UnifiedTo(
         "metadata_metadata": {
             "created_at": parse_datetime("2021-03-25T03:02:17.656Z"),
             "format_": shared.MetadataMetadataFormat.PRICE,
-            "id": "7e4d4863-17a7-4540-b803-1752a0b797b7",
+            "id": "99f9ab13-11c4-4432-8ea8-0f8a5f8e858c",
             "is_required": False,
-            "name": "autem",
-            "object_type": "healthcare_patient",
+            "name": "tollo",
+            "object_type": "healthcare_document",
             "objects": {
 
             },
             "options": [],
-            "original_format": "advoco",
-            "slug": "arbustum",
-            "updated_at": parse_datetime("2025-04-12T10:40:29.286Z"),
+            "original_format": "deputo",
+            "slug": "acidus",
+            "updated_at": parse_datetime("2025-04-16T16:59:01.960Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

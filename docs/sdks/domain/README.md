@@ -33,12 +33,12 @@ with UnifiedTo(
     res = unified_to.domain.create_compute_domain(request={
         "compute_domain": {
             "created_at": parse_datetime("2019-11-22T16:38:26.009Z"),
-            "id": "3cdff451-ac27-4143-bb96-6b1329428d00",
+            "id": "a2506cfd-0855-4509-9ffd-283e4739dde3",
             "is_primary": False,
             "metadata": [],
-            "name": "mysterious-republican.usable-section.info",
+            "name": "steel-hovercraft.humiliating-lender.com",
             "status": shared.ComputeDomainStatus.PENDING,
-            "updated_at": parse_datetime("2023-11-20T18:24:07.231Z"),
+            "updated_at": parse_datetime("2023-11-24T04:00:54.241Z"),
         },
         "connection_id": "<id>",
     })
@@ -182,12 +182,12 @@ with UnifiedTo(
     res = unified_to.domain.patch_compute_domain(request={
         "compute_domain": {
             "created_at": parse_datetime("2019-11-22T16:38:26.009Z"),
-            "id": "a46d6cc9-1732-4233-8502-bb1f0a1648bf",
+            "id": "e78aa062-ca04-48f2-b441-968602cd36a9",
             "is_primary": False,
             "metadata": [],
-            "name": "mysterious-republican.usable-section.info",
+            "name": "steel-hovercraft.humiliating-lender.com",
             "status": shared.ComputeDomainStatus.PENDING,
-            "updated_at": parse_datetime("2023-11-20T18:24:07.234Z"),
+            "updated_at": parse_datetime("2023-11-24T04:00:54.248Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -286,12 +286,12 @@ with UnifiedTo(
     res = unified_to.domain.update_compute_domain(request={
         "compute_domain": {
             "created_at": parse_datetime("2019-11-22T16:38:26.009Z"),
-            "id": "a46d6cc9-1732-4233-8502-bb1f0a1648bf",
+            "id": "e78aa062-ca04-48f2-b441-968602cd36a9",
             "is_primary": False,
             "metadata": [],
-            "name": "mysterious-republican.usable-section.info",
+            "name": "steel-hovercraft.humiliating-lender.com",
             "status": shared.ComputeDomainStatus.PENDING,
-            "updated_at": parse_datetime("2023-11-20T18:24:07.234Z"),
+            "updated_at": parse_datetime("2023-11-24T04:00:54.248Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

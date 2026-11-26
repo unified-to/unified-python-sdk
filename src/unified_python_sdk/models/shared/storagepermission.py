@@ -19,6 +19,8 @@ class StoragePermissionTypedDict(TypedDict):
     group_id: NotRequired[str]
     r"""(reference to HrisGroup)"""
     is_hidden: NotRequired[bool]
+    is_organization: NotRequired[bool]
+    r"""Shared with everyone in the owner's organization/domain/enterprise (e.g. Google Drive domain, Box company or Microsoft organization sharing links)"""
     is_public: NotRequired[bool]
     user_id: NotRequired[str]
     r"""(reference to HrisEmployee)"""
@@ -32,6 +34,9 @@ class StoragePermission(BaseModel):
 
     is_hidden: Optional[bool] = None
 
+    is_organization: Optional[bool] = None
+    r"""Shared with everyone in the owner's organization/domain/enterprise (e.g. Google Drive domain, Box company or Microsoft organization sharing links)"""
+
     is_public: Optional[bool] = None
 
     user_id: Optional[str] = None
@@ -42,7 +47,9 @@ class StoragePermission(BaseModel):
         return serialize_with_info(self.serialize_model, handler, info)
 
     def serialize_model(self, handler):
-        optional_fields = set(["group_id", "is_hidden", "is_public", "user_id"])
+        optional_fields = set(
+            ["group_id", "is_hidden", "is_organization", "is_public", "user_id"]
+        )
         exclude_none = current_exclude_none()
         skip_filtered = exclude_none is False or current_filtered_dump()
         serialized = handler(self)

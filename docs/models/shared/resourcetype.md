@@ -1,11 +1,13 @@
 # ResourceType
 
+Always AllergyIntolerance
+
 ## Example Usage
 
 ```python
 from unified_python_sdk.models.shared import ResourceType
 
-value = ResourceType.USER
+value = ResourceType.PATIENT
 
 # Open enum: unrecognized values are captured as UnrecognizedStr
 ```
@@ -13,7 +15,17 @@ value = ResourceType.USER
 
 ## Values
 
-| Name    | Value   |
-| ------- | ------- |
-| `USER`  | User    |
-| `GROUP` | Group   |
+| Name                   | Value                  |
+| ---------------------- | ---------------------- |
+| `PATIENT`              | Patient                |
+| `PRACTITIONER`         | Practitioner           |
+| `ENCOUNTER`            | Encounter              |
+| `OBSERVATION`          | Observation            |
+| `CONDITION`            | Condition              |
+| `ALLERGY_INTOLERANCE`  | AllergyIntolerance     |
+| `MEDICATION_REQUEST`   | MedicationRequest      |
+| `IMMUNIZATION`         | Immunization           |
+| `BUNDLE`               | Bundle                 |
+| `OPERATION_OUTCOME`    | OperationOutcome       |
+| `CAPABILITY_STATEMENT` | CapabilityStatement    |
+| `DIAGNOSTIC_REPORT`    | DiagnosticReport       |

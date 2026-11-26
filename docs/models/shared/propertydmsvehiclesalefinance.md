@@ -1,0 +1,18 @@
+# PropertyDmsVehiclesaleFinance
+
+Finance or lease terms
+
+
+## Fields
+
+| Field                                                                        | Type                                                                         | Required                                                                     | Description                                                                  |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `financed_amount`                                                            | *Optional[float]*                                                            | :heavy_minus_sign:                                                           | Amount financed                                                              |
+| `first_payment_at`                                                           | [date](https://docs.python.org/3/library/datetime.html#date-objects)         | :heavy_minus_sign:                                                           | First payment due date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)              |
+| `interest_rate`                                                              | *Optional[float]*                                                            | :heavy_minus_sign:                                                           | APR, as a percentage                                                         |
+| `lender_name`                                                                | *Optional[str]*                                                              | :heavy_minus_sign:                                                           | Bank or finance company                                                      |
+| `money_factor`                                                               | *Optional[float]*                                                            | :heavy_minus_sign:                                                           | Lease money factor                                                           |
+| `payment_amount`                                                             | *Optional[float]*                                                            | :heavy_minus_sign:                                                           | Regular payment amount                                                       |
+| `payment_frequency`                                                          | [Optional[shared.PaymentFrequency]](../../models/shared/paymentfrequency.md) | :heavy_minus_sign:                                                           | N/A                                                                          |
+| `residual_amount`                                                            | *Optional[float]*                                                            | :heavy_minus_sign:                                                           | Lease residual or guaranteed future value                                    |
+| `term_months`                                                                | *Optional[float]*                                                            | :heavy_minus_sign:                                                           | N/A                                                                          |

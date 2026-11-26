@@ -6,8 +6,10 @@
 
 * [create_compute_template](#create_compute_template) - Create a template
 * [get_compute_template](#get_compute_template) - Retrieve a template
+* [get_printing_template](#get_printing_template) - Retrieve a template
 * [get_signing_template](#get_signing_template) - Retrieve a template
 * [list_compute_templates](#list_compute_templates) - List all templates
+* [list_printing_templates](#list_printing_templates) - List all templates
 * [list_signing_templates](#list_signing_templates) - List all templates
 * [patch_compute_template](#patch_compute_template) - Update a template
 * [remove_compute_template](#remove_compute_template) - Remove a template
@@ -40,18 +42,18 @@ with UnifiedTo(
             "dockerfile": "FROM ubuntu:24.04\nRUN apt-get update",
             "gpu_count": 2.0,
             "gpu_model": shared.ComputeTemplateGpuModel.NVIDIA_GH200,
-            "id": "e7c2e3a2-6309-4ca6-abde-88a7908ddfe6",
-            "image": "perfumed-molasses/cohibeo:5.2",
+            "id": "fb3f3548-75f1-48f2-a6f6-6afd9111d80f",
+            "image": "jaunty-tarragon/demum:5.2",
             "is_public": False,
-            "last_used_at": parse_datetime("2026-04-18T02:32:30.779Z"),
+            "last_used_at": parse_datetime("2026-04-23T02:50:02.087Z"),
             "memory_mb": 8192.0,
             "metadata": [],
-            "name": "multi-byte-card",
+            "name": "online-matrix",
             "ports": [
                 8080.0,
             ],
             "status": shared.ComputeTemplateStatus.OTHER,
-            "updated_at": parse_datetime("2025-02-28T22:59:06.215Z"),
+            "updated_at": parse_datetime("2025-03-04T04:03:34.504Z"),
         },
         "connection_id": "<id>",
     })
@@ -120,6 +122,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.GetComputeTemplateResponse](../../models/operations/getcomputetemplateresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_printing_template
+
+Retrieves a single PrintingTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getPrintingTemplate" method="get" path="/printing/{connection_id}/template/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.template.get_printing_template(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.printing_template is not None
+
+    # Handle response
+    print(res.printing_template)
+
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `request`                                                                                      | [operations.GetPrintingTemplateRequest](../../models/operations/getprintingtemplaterequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `retries`                                                                                      | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                               | :heavy_minus_sign:                                                                             | Configuration to override the default retry behavior of the client.                            |
+
+### Response
+
+**[operations.GetPrintingTemplateResponse](../../models/operations/getprintingtemplateresponse.md)**
 
 ### Errors
 
@@ -220,6 +269,52 @@ with UnifiedTo(
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4XX, 5XX        | \*/\*           |
 
+## list_printing_templates
+
+Returns a list of PrintingTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listPrintingTemplates" method="get" path="/printing/{connection_id}/template" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.template.list_printing_templates(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.printing_templates is not None
+
+    # Handle response
+    print(res.printing_templates)
+
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.ListPrintingTemplatesRequest](../../models/operations/listprintingtemplatesrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `retries`                                                                                          | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                                   | :heavy_minus_sign:                                                                                 | Configuration to override the default retry behavior of the client.                                |
+
+### Response
+
+**[operations.ListPrintingTemplatesResponse](../../models/operations/listprintingtemplatesresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
 ## list_signing_templates
 
 Returns a list of SigningTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -293,18 +388,18 @@ with UnifiedTo(
             "dockerfile": "FROM ubuntu:24.04\nRUN apt-get update",
             "gpu_count": 2.0,
             "gpu_model": shared.ComputeTemplateGpuModel.NVIDIA_GH200,
-            "id": "24ef6e71-2d25-4a46-baa8-fc1d5d1f34f9",
-            "image": "perfumed-molasses/cohibeo:5.2",
+            "id": "ed3fcdd5-af02-4c39-a002-189e7122956a",
+            "image": "jaunty-tarragon/demum:5.2",
             "is_public": False,
-            "last_used_at": parse_datetime("2026-04-18T02:32:30.790Z"),
+            "last_used_at": parse_datetime("2026-04-23T02:50:02.104Z"),
             "memory_mb": 8192.0,
             "metadata": [],
-            "name": "multi-byte-card",
+            "name": "online-matrix",
             "ports": [
                 8080.0,
             ],
             "status": shared.ComputeTemplateStatus.OTHER,
-            "updated_at": parse_datetime("2025-02-28T22:59:06.222Z"),
+            "updated_at": parse_datetime("2025-03-04T04:03:34.515Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -408,18 +503,18 @@ with UnifiedTo(
             "dockerfile": "FROM ubuntu:24.04\nRUN apt-get update",
             "gpu_count": 2.0,
             "gpu_model": shared.ComputeTemplateGpuModel.NVIDIA_GH200,
-            "id": "24ef6e71-2d25-4a46-baa8-fc1d5d1f34f9",
-            "image": "perfumed-molasses/cohibeo:5.2",
+            "id": "ed3fcdd5-af02-4c39-a002-189e7122956a",
+            "image": "jaunty-tarragon/demum:5.2",
             "is_public": False,
-            "last_used_at": parse_datetime("2026-04-18T02:32:30.790Z"),
+            "last_used_at": parse_datetime("2026-04-23T02:50:02.104Z"),
             "memory_mb": 8192.0,
             "metadata": [],
-            "name": "multi-byte-card",
+            "name": "online-matrix",
             "ports": [
                 8080.0,
             ],
             "status": shared.ComputeTemplateStatus.OTHER,
-            "updated_at": parse_datetime("2025-02-28T22:59:06.222Z"),
+            "updated_at": parse_datetime("2025-03-04T04:03:34.515Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

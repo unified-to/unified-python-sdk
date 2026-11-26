@@ -25,7 +25,7 @@ from unified_python_sdk.utils import (
 class CreateGenaiEmbeddingQueryParamFields(str, Enum):
     MODEL_ID = "model_id"
     CONTENT = "content"
-    ENCONDING_FORMAT = "enconding_format"
+    ENCODING_FORMAT = "encoding_format"
     TYPE = "type"
     DIMENSION = "dimension"
     MAX_TOKENS = "max_tokens"

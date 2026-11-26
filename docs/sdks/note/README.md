@@ -33,10 +33,10 @@ with UnifiedTo(
     res = unified_to.note.create_ticketing_note(request={
         "ticketing_note": {
             "created_at": parse_datetime("2019-07-23T15:05:03.241Z"),
-            "description": "Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.",
-            "id": "189f3d4e-ec1e-46df-a9f4-47575d30a3c4",
+            "description": "Vitiosus recusandae tristis.",
+            "id": "30dc7126-2087-4a78-bb00-162b9c6e0921",
             "metadata": [],
-            "updated_at": parse_datetime("2024-10-20T18:06:26.426Z"),
+            "updated_at": parse_datetime("2024-10-25T00:23:49.913Z"),
         },
         "connection_id": "<id>",
     })
@@ -180,10 +180,10 @@ with UnifiedTo(
     res = unified_to.note.patch_ticketing_note(request={
         "ticketing_note": {
             "created_at": parse_datetime("2019-07-23T15:05:03.241Z"),
-            "description": "Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.",
-            "id": "358290c3-775e-458a-b0d0-6b8acb342bd3",
+            "description": "Vitiosus recusandae tristis.",
+            "id": "a9a638fa-09d9-4846-a298-6a27a2520233",
             "metadata": [],
-            "updated_at": parse_datetime("2024-10-20T18:06:26.432Z"),
+            "updated_at": parse_datetime("2024-10-25T00:23:49.918Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -282,10 +282,10 @@ with UnifiedTo(
     res = unified_to.note.update_ticketing_note(request={
         "ticketing_note": {
             "created_at": parse_datetime("2019-07-23T15:05:03.241Z"),
-            "description": "Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.",
-            "id": "358290c3-775e-458a-b0d0-6b8acb342bd3",
+            "description": "Vitiosus recusandae tristis.",
+            "id": "a9a638fa-09d9-4846-a298-6a27a2520233",
             "metadata": [],
-            "updated_at": parse_datetime("2024-10-20T18:06:26.432Z"),
+            "updated_at": parse_datetime("2024-10-25T00:23:49.918Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

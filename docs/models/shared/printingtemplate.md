@@ -1,0 +1,20 @@
+# PrintingTemplate
+
+A saved design template: a blank product with artwork placed on it
+
+
+## Fields
+
+| Field                                                                      | Type                                                                       | Required                                                                   | Description                                                                |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `created_at`                                                               | [date](https://docs.python.org/3/library/datetime.html#date-objects)       | :heavy_minus_sign:                                                         | (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)                                   |
+| `description`                                                              | *Optional[str]*                                                            | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `id`                                                                       | *Optional[str]*                                                            | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `metadata`                                                                 | List[[shared.PrintingMetadata](../../models/shared/printingmetadata.md)]   | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `name`                                                                     | *Optional[str]*                                                            | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `placements`                                                               | List[[shared.PrintingPlacement](../../models/shared/printingplacement.md)] | :heavy_minus_sign:                                                         | Print areas used by this template                                          |
+| `preview_url`                                                              | *Optional[str]*                                                            | :heavy_minus_sign:                                                         | Mockup or preview image URL                                                |
+| `product_id`                                                               | *Optional[str]*                                                            | :heavy_minus_sign:                                                         | The PrintingProduct ID of the blank product                                |
+| `raw`                                                                      | Dict[str, *Any*]                                                           | :heavy_minus_sign:                                                         | Raw data from integration                                                  |
+| `updated_at`                                                               | [date](https://docs.python.org/3/library/datetime.html#date-objects)       | :heavy_minus_sign:                                                         | (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)                                   |
+| `variant_identifiers`                                                      | List[*str*]                                                                | :heavy_minus_sign:                                                         | Identifiers of the product variants this template is available for         |

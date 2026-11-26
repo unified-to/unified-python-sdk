@@ -5,7 +5,9 @@
 ### Available Operations
 
 * [create_healthcare_patient](#create_healthcare_patient) - Create a patient
+* [get_fhir_patient](#get_fhir_patient) - Read a Patient
 * [get_healthcare_patient](#get_healthcare_patient) - Retrieve a patient
+* [list_fhir_patients](#list_fhir_patients) - Search Patient resources
 * [list_healthcare_patients](#list_healthcare_patients) - List all patients
 * [patch_healthcare_patient](#patch_healthcare_patient) - Update a patient
 * [update_healthcare_patient](#update_healthcare_patient) - Update a patient
@@ -32,21 +34,21 @@ with UnifiedTo(
     res = unified_to.patient.create_healthcare_patient(request={
         "healthcare_patient": {
             "address": {
-                "address1": "162 Kirlin Mall",
-                "city": "Dickinsonborough",
+                "address1": "3645 Leonardo Place",
+                "city": "Estelleland",
                 "country": "US",
-                "postal_code": "54031",
-                "region": "Nebraska",
+                "postal_code": "99263-6004",
+                "region": "New Jersey",
             },
-            "birthdate": "2025-03-14",
+            "birthdate": "1941-12-25",
             "contacts": [
                 {
                     "emails": [],
-                    "name": "Antonia Lebsack",
+                    "name": "Ambrose Welch",
                     "relationship": "Spouse",
                     "telephones": [
                         {
-                            "telephone": "(695) 328-7029 x4412",
+                            "telephone": "323.524.3947 x89014",
                             "type": shared.HealthcareTelephoneType.MOBILE,
                         },
                     ],
@@ -55,33 +57,33 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-06-05T21:08:04.917Z"),
             "emails": [
                 {
-                    "email": "alejandrin.parker@icloud.com",
+                    "email": "monroe.bauch@icloud.com",
                     "type": shared.HealthcareEmailType.HOME,
                 },
             ],
-            "first_name": "Alejandrin",
+            "first_name": "Monroe",
             "gender": shared.HealthcarePatientGender.FEMALE,
-            "id": "03bcbcae-6e34-4aa0-944c-dd87a640c367",
+            "id": "dff6a86b-b0b3-45a0-9d2e-a048ad9a8c9c",
             "identifiers": [
                 {
                     "type": shared.HealthcareIdentifierType.MRN,
-                    "value": "57992636",
+                    "value": "51559512",
                 },
             ],
             "is_active": True,
             "is_deceased": False,
             "language": "zh",
-            "last_name": "Parker",
+            "last_name": "Bauch",
             "metadata": [],
-            "name": "Alejandrin Parker",
+            "name": "Monroe Bauch",
             "practitioner_ids": [],
             "telephones": [
                 {
-                    "telephone": "1-219-555-9023 x08295",
+                    "telephone": "1-555-902-3082 x9590",
                     "type": shared.HealthcareTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2026-07-21T00:07:07.283Z"),
+            "updated_at": parse_datetime("2026-07-26T14:14:55.162Z"),
         },
         "connection_id": "<id>",
     })
@@ -103,6 +105,53 @@ with UnifiedTo(
 ### Response
 
 **[operations.CreateHealthcarePatientResponse](../../models/operations/createhealthcarepatientresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## get_fhir_patient
+
+Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="getFhirPatient" method="get" path="/fhir/{connection_id}/Patient/{id}" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.patient.get_fhir_patient(request={
+        "connection_id": "<id>",
+        "id": "<id>",
+    })
+
+    assert res.fhir_patient is not None
+
+    # Handle response
+    print(res.fhir_patient)
+
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.GetFhirPatientRequest](../../models/operations/getfhirpatientrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `retries`                                                                            | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                     | :heavy_minus_sign:                                                                   | Configuration to override the default retry behavior of the client.                  |
+
+### Response
+
+**[operations.GetFhirPatientResponse](../../models/operations/getfhirpatientresponse.md)**
 
 ### Errors
 
@@ -150,6 +199,52 @@ with UnifiedTo(
 ### Response
 
 **[operations.GetHealthcarePatientResponse](../../models/operations/gethealthcarepatientresponse.md)**
+
+### Errors
+
+| Error Type      | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 4XX, 5XX        | \*/\*           |
+
+## list_fhir_patients
+
+Returns a searchset Bundle; follow its next link for more pages. Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+
+### Example Usage
+
+<!-- UsageSnippet language="python" operationID="listFhirPatients" method="get" path="/fhir/{connection_id}/Patient" -->
+```python
+from unified_python_sdk import UnifiedTo
+from unified_python_sdk.models import shared
+
+
+with UnifiedTo(
+    security=shared.Security(
+        jwt="<YOUR_API_KEY_HERE>",
+    ),
+) as unified_to:
+
+    res = unified_to.patient.list_fhir_patients(request={
+        "connection_id": "<id>",
+    })
+
+    assert res.fhir_bundle is not None
+
+    # Handle response
+    print(res.fhir_bundle)
+
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `request`                                                                                | [operations.ListFhirPatientsRequest](../../models/operations/listfhirpatientsrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `retries`                                                                                | [Optional[utils.RetryConfig]](../../models/utils/retryconfig.md)                         | :heavy_minus_sign:                                                                       | Configuration to override the default retry behavior of the client.                      |
+
+### Response
+
+**[operations.ListFhirPatientsResponse](../../models/operations/listfhirpatientsresponse.md)**
 
 ### Errors
 
@@ -225,21 +320,21 @@ with UnifiedTo(
     res = unified_to.patient.patch_healthcare_patient(request={
         "healthcare_patient": {
             "address": {
-                "address1": "162 Kirlin Mall",
-                "city": "Dickinsonborough",
+                "address1": "3645 Leonardo Place",
+                "city": "Estelleland",
                 "country": "US",
-                "postal_code": "54031",
-                "region": "Nebraska",
+                "postal_code": "99263-6004",
+                "region": "New Jersey",
             },
-            "birthdate": "2025-03-14",
+            "birthdate": "1941-12-25",
             "contacts": [
                 {
                     "emails": [],
-                    "name": "Antonia Lebsack",
+                    "name": "Ambrose Welch",
                     "relationship": "Spouse",
                     "telephones": [
                         {
-                            "telephone": "(695) 328-7029 x4412",
+                            "telephone": "323.524.3947 x89014",
                             "type": shared.HealthcareTelephoneType.MOBILE,
                         },
                     ],
@@ -248,33 +343,33 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-06-05T21:08:04.917Z"),
             "emails": [
                 {
-                    "email": "alejandrin.parker@icloud.com",
+                    "email": "monroe.bauch@icloud.com",
                     "type": shared.HealthcareEmailType.HOME,
                 },
             ],
-            "first_name": "Alejandrin",
+            "first_name": "Monroe",
             "gender": shared.HealthcarePatientGender.FEMALE,
-            "id": "394b4f44-9a7a-4b72-9dc1-0150eaa57e53",
+            "id": "6165f303-7a38-47b9-a8fd-20b049ab394d",
             "identifiers": [
                 {
                     "type": shared.HealthcareIdentifierType.MRN,
-                    "value": "57992636",
+                    "value": "51559512",
                 },
             ],
             "is_active": True,
             "is_deceased": False,
             "language": "zh",
-            "last_name": "Parker",
+            "last_name": "Bauch",
             "metadata": [],
-            "name": "Alejandrin Parker",
+            "name": "Monroe Bauch",
             "practitioner_ids": [],
             "telephones": [
                 {
-                    "telephone": "1-219-555-9023 x08295",
+                    "telephone": "1-555-902-3082 x9590",
                     "type": shared.HealthcareTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2026-07-21T00:07:07.314Z"),
+            "updated_at": parse_datetime("2026-07-26T14:14:55.203Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -326,21 +421,21 @@ with UnifiedTo(
     res = unified_to.patient.update_healthcare_patient(request={
         "healthcare_patient": {
             "address": {
-                "address1": "162 Kirlin Mall",
-                "city": "Dickinsonborough",
+                "address1": "3645 Leonardo Place",
+                "city": "Estelleland",
                 "country": "US",
-                "postal_code": "54031",
-                "region": "Nebraska",
+                "postal_code": "99263-6004",
+                "region": "New Jersey",
             },
-            "birthdate": "2025-03-14",
+            "birthdate": "1941-12-25",
             "contacts": [
                 {
                     "emails": [],
-                    "name": "Antonia Lebsack",
+                    "name": "Ambrose Welch",
                     "relationship": "Spouse",
                     "telephones": [
                         {
-                            "telephone": "(695) 328-7029 x4412",
+                            "telephone": "323.524.3947 x89014",
                             "type": shared.HealthcareTelephoneType.MOBILE,
                         },
                     ],
@@ -349,33 +444,33 @@ with UnifiedTo(
             "created_at": parse_datetime("2021-06-05T21:08:04.917Z"),
             "emails": [
                 {
-                    "email": "alejandrin.parker@icloud.com",
+                    "email": "monroe.bauch@icloud.com",
                     "type": shared.HealthcareEmailType.HOME,
                 },
             ],
-            "first_name": "Alejandrin",
+            "first_name": "Monroe",
             "gender": shared.HealthcarePatientGender.FEMALE,
-            "id": "394b4f44-9a7a-4b72-9dc1-0150eaa57e53",
+            "id": "6165f303-7a38-47b9-a8fd-20b049ab394d",
             "identifiers": [
                 {
                     "type": shared.HealthcareIdentifierType.MRN,
-                    "value": "57992636",
+                    "value": "51559512",
                 },
             ],
             "is_active": True,
             "is_deceased": False,
             "language": "zh",
-            "last_name": "Parker",
+            "last_name": "Bauch",
             "metadata": [],
-            "name": "Alejandrin Parker",
+            "name": "Monroe Bauch",
             "practitioner_ids": [],
             "telephones": [
                 {
-                    "telephone": "1-219-555-9023 x08295",
+                    "telephone": "1-555-902-3082 x9590",
                     "type": shared.HealthcareTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2026-07-21T00:07:07.314Z"),
+            "updated_at": parse_datetime("2026-07-26T14:14:55.203Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

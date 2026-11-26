@@ -43,6 +43,7 @@ class UpdateCrmLeadQueryParamFields(str, Enum):
     TITLE = "title"
     LINK_URLS = "link_urls"
     METADATA = "metadata"
+    VEHICLE_IDS = "vehicle_ids"
     RAW = "raw"
 
 

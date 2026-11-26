@@ -17,7 +17,7 @@ from unified_python_sdk.types import (
 from unified_python_sdk.types.basemodel import current_filtered_dump
 
 
-class EncondingFormat(str, Enum, metaclass=utils.OpenEnumMeta):
+class EncodingFormat(str, Enum, metaclass=utils.OpenEnumMeta):
     FLOAT = "FLOAT"
     UINT8 = "UINT8"
     INT8 = "INT8"
@@ -33,7 +33,7 @@ class GenaiEmbeddingTypedDict(TypedDict):
     r"""256, 512, 1024, and 1536"""
     embeddings: NotRequired[str]
     r"""JSON string based off of the format"""
-    enconding_format: NotRequired[EncondingFormat]
+    encoding_format: NotRequired[EncodingFormat]
     id: NotRequired[str]
     max_tokens: NotRequired[float]
     model_id: NotRequired[str]
@@ -53,7 +53,7 @@ class GenaiEmbedding(BaseModel):
     embeddings: Optional[str] = None
     r"""JSON string based off of the format"""
 
-    enconding_format: Optional[EncondingFormat] = None
+    encoding_format: Optional[EncodingFormat] = None
 
     id: Optional[str] = None
 
@@ -68,11 +68,11 @@ class GenaiEmbedding(BaseModel):
     type: Optional[str] = None
     r"""'SEARCH_DOC' | 'SEARCH_QUERY' | 'CLUSTERING' | 'CLASSIFICATION';"""
 
-    @field_serializer("enconding_format")
-    def serialize_enconding_format(self, value):
+    @field_serializer("encoding_format")
+    def serialize_encoding_format(self, value):
         if isinstance(value, str):
             try:
-                return shared.EncondingFormat(value)
+                return shared.EncodingFormat(value)
             except ValueError:
                 return value
         return value
@@ -87,7 +87,7 @@ class GenaiEmbedding(BaseModel):
                 "content",
                 "dimension",
                 "embeddings",
-                "enconding_format",
+                "encoding_format",
                 "id",
                 "max_tokens",
                 "model_id",

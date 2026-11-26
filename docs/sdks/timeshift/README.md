@@ -32,25 +32,25 @@ with UnifiedTo(
 
     res = unified_to.timeshift.create_hris_timeshift(request={
         "hris_timeshift": {
-            "approved_at": parse_datetime("2022-07-30T13:54:30.161Z"),
+            "approved_at": parse_datetime("2022-08-02T01:27:41.168Z"),
             "compensation": [
                 {
                     "amount": 76761.0,
                     "currency": "GBP",
                     "frequency": shared.HrisCompensationFrequency.SEMIMONTHLY,
-                    "notes": "Vehemens annus adficio.",
+                    "notes": "Suasoria.",
                     "type": shared.HrisCompensationType.COMMISSION,
                 },
             ],
             "created_at": parse_datetime("2019-07-01T23:53:15.738Z"),
             "employee_user_id": "<id>",
-            "end_at": parse_datetime("2026-10-26T18:51:20.032Z"),
+            "end_at": parse_datetime("2026-11-01T16:26:52.074Z"),
             "hours": 6.0,
-            "id": "b0b94181-597d-405f-9af3-32f479e373ba",
+            "id": "3515cc9f-2ff6-4ba5-96c3-067ce1075fff",
             "is_approved": False,
             "metadata": [],
-            "start_at": parse_datetime("2023-07-29T13:41:06.185Z"),
-            "updated_at": parse_datetime("2021-07-10T03:05:45.685Z"),
+            "start_at": parse_datetime("2023-08-01T20:30:48.467Z"),
+            "updated_at": parse_datetime("2021-07-11T18:14:14.310Z"),
         },
         "connection_id": "<id>",
     })
@@ -193,25 +193,25 @@ with UnifiedTo(
 
     res = unified_to.timeshift.patch_hris_timeshift(request={
         "hris_timeshift": {
-            "approved_at": parse_datetime("2022-07-30T13:54:30.166Z"),
+            "approved_at": parse_datetime("2022-08-02T01:27:41.173Z"),
             "compensation": [
                 {
                     "amount": 76761.0,
                     "currency": "GBP",
                     "frequency": shared.HrisCompensationFrequency.SEMIMONTHLY,
-                    "notes": "Vehemens annus adficio.",
+                    "notes": "Suasoria.",
                     "type": shared.HrisCompensationType.COMMISSION,
                 },
             ],
             "created_at": parse_datetime("2019-07-01T23:53:15.738Z"),
             "employee_user_id": "<id>",
-            "end_at": parse_datetime("2026-10-26T18:51:20.042Z"),
+            "end_at": parse_datetime("2026-11-01T16:26:52.088Z"),
             "hours": 6.0,
-            "id": "240bca73-daa1-49d3-950b-ac51022ea6cb",
+            "id": "f9a6632c-7107-4609-a03c-857735be2ba1",
             "is_approved": False,
             "metadata": [],
-            "start_at": parse_datetime("2023-07-29T13:41:06.191Z"),
-            "updated_at": parse_datetime("2021-07-10T03:05:45.687Z"),
+            "start_at": parse_datetime("2023-08-01T20:30:48.474Z"),
+            "updated_at": parse_datetime("2021-07-11T18:14:14.314Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -309,25 +309,25 @@ with UnifiedTo(
 
     res = unified_to.timeshift.update_hris_timeshift(request={
         "hris_timeshift": {
-            "approved_at": parse_datetime("2022-07-30T13:54:30.166Z"),
+            "approved_at": parse_datetime("2022-08-02T01:27:41.173Z"),
             "compensation": [
                 {
                     "amount": 76761.0,
                     "currency": "GBP",
                     "frequency": shared.HrisCompensationFrequency.SEMIMONTHLY,
-                    "notes": "Vehemens annus adficio.",
+                    "notes": "Suasoria.",
                     "type": shared.HrisCompensationType.COMMISSION,
                 },
             ],
             "created_at": parse_datetime("2019-07-01T23:53:15.738Z"),
             "employee_user_id": "<id>",
-            "end_at": parse_datetime("2026-10-26T18:51:20.042Z"),
+            "end_at": parse_datetime("2026-11-01T16:26:52.088Z"),
             "hours": 6.0,
-            "id": "240bca73-daa1-49d3-950b-ac51022ea6cb",
+            "id": "f9a6632c-7107-4609-a03c-857735be2ba1",
             "is_approved": False,
             "metadata": [],
-            "start_at": parse_datetime("2023-07-29T13:41:06.191Z"),
-            "updated_at": parse_datetime("2021-07-10T03:05:45.687Z"),
+            "start_at": parse_datetime("2023-08-01T20:30:48.474Z"),
+            "updated_at": parse_datetime("2021-07-11T18:14:14.314Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

@@ -1,0 +1,23 @@
+# PrintingFileStatus
+
+Processing status of the file
+
+## Example Usage
+
+```python
+from unified_python_sdk.models.shared import PrintingFileStatus
+
+value = PrintingFileStatus.PENDING
+
+# Open enum: unrecognized values are captured as UnrecognizedStr
+```
+
+
+## Values
+
+| Name      | Value     |
+| --------- | --------- |
+| `PENDING` | PENDING   |
+| `READY`   | READY     |
+| `FAILED`  | FAILED    |
+| `OTHER`   | OTHER     |

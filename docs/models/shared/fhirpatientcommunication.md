@@ -1,0 +1,9 @@
+# FhirPatientCommunication
+
+
+## Fields
+
+| Field                                                                                                              | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `language`                                                                                                         | [shared.PropertyFhirPatientCommunicationLanguage](../../models/shared/propertyfhirpatientcommunicationlanguage.md) | :heavy_check_mark:                                                                                                 | The language which can be used to communicate with the patient (BCP 47)                                            |
+| `preferred`                                                                                                        | *Optional[bool]*                                                                                                   | :heavy_minus_sign:                                                                                                 | Language preference indicator                                                                                      |

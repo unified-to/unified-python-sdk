@@ -5,7 +5,7 @@ from .property_integrationsupport_webhook_events import (
     PropertyIntegrationSupportWebhookEvents,
     PropertyIntegrationSupportWebhookEventsTypedDict,
 )
-from .virtual_webhook_benefit_id import (
+from .virtual_webhook_bankfeedaccount_id import (
     FromWebhook,
     ListAccountID,
     ListAdID,
@@ -118,6 +118,7 @@ from .virtual_webhook_benefit_id import (
     ListUpdatedGte,
     ListUserID,
     ListUserMentionedID,
+    ListVehicleID,
     ListVisitorID,
     NativeWebhookCalendarID,
     NativeWebhookCarrierID,
@@ -155,7 +156,6 @@ from .virtual_webhook_benefit_id import (
     VirtualWebhookApproverUserID,
     VirtualWebhookAssignedUserID,
     VirtualWebhookBankfeedaccountID,
-    VirtualWebhookBenefitID,
 )
 from enum import Enum
 from pydantic import field_serializer, model_serializer
@@ -170,6 +170,12 @@ from unified_python_sdk.types import (
     serialize_with_info,
 )
 from unified_python_sdk.types.basemodel import current_filtered_dump
+
+
+class VirtualWebhookBenefitID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
 
 
 class VirtualWebhookBillID(str, Enum, metaclass=utils.OpenEnumMeta):
@@ -598,6 +604,12 @@ class VirtualWebhookUserMentionedID(str, Enum, metaclass=utils.OpenEnumMeta):
     NOT_SUPPORTED = "not-supported"
 
 
+class VirtualWebhookVehicleID(str, Enum, metaclass=utils.OpenEnumMeta):
+    SUPPORTED_REQUIRED = "supported-required"
+    SUPPORTED = "supported"
+    NOT_SUPPORTED = "not-supported"
+
+
 class VirtualWebhookVisitorID(str, Enum, metaclass=utils.OpenEnumMeta):
     SUPPORTED_REQUIRED = "supported-required"
     SUPPORTED = "supported"
@@ -720,6 +732,7 @@ class IntegrationSupportTypedDict(TypedDict):
     list_updated_gte: NotRequired[ListUpdatedGte]
     list_user_id: NotRequired[ListUserID]
     list_user_mentioned_id: NotRequired[ListUserMentionedID]
+    list_vehicle_id: NotRequired[ListVehicleID]
     list_visitor_id: NotRequired[ListVisitorID]
     methods: NotRequired[Dict[str, bool]]
     native_webhook_calendar_id: NotRequired[NativeWebhookCalendarID]
@@ -832,6 +845,7 @@ class IntegrationSupportTypedDict(TypedDict):
     virtual_webhook_updated_gte: NotRequired[VirtualWebhookUpdatedGte]
     virtual_webhook_user_id: NotRequired[VirtualWebhookUserID]
     virtual_webhook_user_mentioned_id: NotRequired[VirtualWebhookUserMentionedID]
+    virtual_webhook_vehicle_id: NotRequired[VirtualWebhookVehicleID]
     virtual_webhook_visitor_id: NotRequired[VirtualWebhookVisitorID]
     webhook_events: NotRequired[PropertyIntegrationSupportWebhookEventsTypedDict]
 
@@ -1066,6 +1080,8 @@ class IntegrationSupport(BaseModel):
 
     list_user_mentioned_id: Optional[ListUserMentionedID] = None
 
+    list_vehicle_id: Optional[ListVehicleID] = None
+
     list_visitor_id: Optional[ListVisitorID] = None
 
     methods: Optional[Dict[str, bool]] = None
@@ -1289,6 +1305,8 @@ class IntegrationSupport(BaseModel):
     virtual_webhook_user_id: Optional[VirtualWebhookUserID] = None
 
     virtual_webhook_user_mentioned_id: Optional[VirtualWebhookUserMentionedID] = None
+
+    virtual_webhook_vehicle_id: Optional[VirtualWebhookVehicleID] = None
 
     virtual_webhook_visitor_id: Optional[VirtualWebhookVisitorID] = None
 
@@ -2302,6 +2320,15 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
+    @field_serializer("list_vehicle_id")
+    def serialize_list_vehicle_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.ListVehicleID(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("list_visitor_id")
     def serialize_list_visitor_id(self, value):
         if isinstance(value, str):
@@ -3283,6 +3310,15 @@ class IntegrationSupport(BaseModel):
                 return value
         return value
 
+    @field_serializer("virtual_webhook_vehicle_id")
+    def serialize_virtual_webhook_vehicle_id(self, value):
+        if isinstance(value, str):
+            try:
+                return shared.VirtualWebhookVehicleID(value)
+            except ValueError:
+                return value
+        return value
+
     @field_serializer("virtual_webhook_visitor_id")
     def serialize_virtual_webhook_visitor_id(self, value):
         if isinstance(value, str):
@@ -3412,6 +3448,7 @@ class IntegrationSupport(BaseModel):
                 "list_updated_gte",
                 "list_user_id",
                 "list_user_mentioned_id",
+                "list_vehicle_id",
                 "list_visitor_id",
                 "methods",
                 "native_webhook_calendar_id",
@@ -3524,6 +3561,7 @@ class IntegrationSupport(BaseModel):
                 "virtual_webhook_updated_gte",
                 "virtual_webhook_user_id",
                 "virtual_webhook_user_mentioned_id",
+                "virtual_webhook_vehicle_id",
                 "virtual_webhook_visitor_id",
                 "webhook_events",
             ]

@@ -18,8 +18,14 @@ from unified_python_sdk.types.basemodel import current_filtered_dump
 
 class PaymentLinkTypedDict(TypedDict):
     amount: NotRequired[float]
+    contact_email: NotRequired[str]
+    r"""payer's email"""
     contact_id: NotRequired[str]
     r"""ID of the AccountingContact (reference to AccountingContact)"""
+    contact_name: NotRequired[str]
+    r"""payer's name, for providers that take payer details on the link rather than a contact_id"""
+    contact_phone: NotRequired[str]
+    r"""payer's phone"""
     created_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     currency: NotRequired[str]
@@ -42,8 +48,17 @@ class PaymentLinkTypedDict(TypedDict):
 class PaymentLink(BaseModel):
     amount: Optional[float] = None
 
+    contact_email: Optional[str] = None
+    r"""payer's email"""
+
     contact_id: Optional[str] = None
     r"""ID of the AccountingContact (reference to AccountingContact)"""
+
+    contact_name: Optional[str] = None
+    r"""payer's name, for providers that take payer details on the link rather than a contact_id"""
+
+    contact_phone: Optional[str] = None
+    r"""payer's phone"""
 
     created_at: Optional[datetime] = None
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
@@ -83,7 +98,10 @@ class PaymentLink(BaseModel):
         optional_fields = set(
             [
                 "amount",
+                "contact_email",
                 "contact_id",
+                "contact_name",
+                "contact_phone",
                 "created_at",
                 "currency",
                 "description",

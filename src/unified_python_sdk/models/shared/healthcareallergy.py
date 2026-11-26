@@ -19,7 +19,7 @@ from unified_python_sdk.types import (
 from unified_python_sdk.types.basemodel import current_filtered_dump
 
 
-class Criticality(str, Enum, metaclass=utils.OpenEnumMeta):
+class HealthcareAllergyCriticality(str, Enum, metaclass=utils.OpenEnumMeta):
     r"""Potential severity of future reactions"""
 
     LOW = "LOW"
@@ -52,7 +52,7 @@ class HealthcareAllergyTypedDict(TypedDict):
     r"""Codings for the substance (e.g. RxNorm, SNOMED CT)"""
     created_at: NotRequired[datetime]
     r"""When the allergy record was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
-    criticality: NotRequired[Criticality]
+    criticality: NotRequired[HealthcareAllergyCriticality]
     r"""Potential severity of future reactions"""
     encounter_id: NotRequired[str]
     r"""The encounter in which the allergy was recorded"""
@@ -91,7 +91,7 @@ class HealthcareAllergy(BaseModel):
     created_at: Optional[datetime] = None
     r"""When the allergy record was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
-    criticality: Optional[Criticality] = None
+    criticality: Optional[HealthcareAllergyCriticality] = None
     r"""Potential severity of future reactions"""
 
     encounter_id: Optional[str] = None
@@ -140,7 +140,7 @@ class HealthcareAllergy(BaseModel):
     def serialize_criticality(self, value):
         if isinstance(value, str):
             try:
-                return shared.Criticality(value)
+                return shared.HealthcareAllergyCriticality(value)
             except ValueError:
                 return value
         return value
