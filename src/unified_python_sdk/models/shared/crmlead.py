@@ -9,9 +9,10 @@ from .property_crmlead_address import (
     PropertyCrmLeadAddressTypedDict,
 )
 from datetime import datetime
+import pydantic
 from pydantic import model_serializer
 from typing import Any, Dict, List, Optional
-from typing_extensions import NotRequired, TypedDict
+from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk.types import (
     BaseModel,
     UNSET_SENTINEL,
@@ -22,6 +23,8 @@ from unified_python_sdk.types.basemodel import current_filtered_dump
 
 
 class CrmLeadTypedDict(TypedDict):
+    unified_person_ids: NotRequired[List[str]]
+    r"""Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields"""
     address: NotRequired[PropertyCrmLeadAddressTypedDict]
     company_id: NotRequired[str]
     r"""(reference to CrmCompany)"""
@@ -58,6 +61,11 @@ class CrmLeadTypedDict(TypedDict):
 
 
 class CrmLead(BaseModel):
+    unified_person_ids: Annotated[
+        Optional[List[str]], pydantic.Field(alias="__unified_person_ids")
+    ] = None
+    r"""Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields"""
+
     address: Optional[PropertyCrmLeadAddress] = None
 
     company_id: Optional[str] = None
@@ -120,6 +128,7 @@ class CrmLead(BaseModel):
     def serialize_model(self, handler):
         optional_fields = set(
             [
+                "__unified_person_ids",
                 "address",
                 "company_id",
                 "company_name",
@@ -160,3 +169,9 @@ class CrmLead(BaseModel):
                     m[k] = val
 
         return m
+
+
+try:
+    CrmLead.model_rebuild()
+except NameError:
+    pass

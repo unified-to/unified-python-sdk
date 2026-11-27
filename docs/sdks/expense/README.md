@@ -41,13 +41,13 @@ with UnifiedTo(
             "attachments": [
                 {
                     "download_url": "https://avaricious-larva.biz",
-                    "id": "f8141f3a-0e52-4de1-9dde-b8460b2fb1a6",
+                    "id": "f0040944-dda9-42a1-88d6-a877836f4d36",
                     "mime_type": "application/pdf",
                     "name": "receipt-9696.pdf",
                 },
                 {
                     "download_url": "https://precious-comparison.net/",
-                    "id": "8c51bc71-9ba2-49c7-877e-9303778a40d2",
+                    "id": "99325aa6-763b-4ef5-a28a-b02a1f2fda00",
                     "mime_type": "application/pdf",
                     "name": "receipt-9696-1.pdf",
                 },
@@ -56,10 +56,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-06-11T03:39:37.305Z"),
             "currency": "GBP",
             "external_number": "EXP-38303",
-            "id": "fa5df863-b3fc-4b8d-a009-cf395602f8f3",
+            "id": "7d786aa8-2527-4088-9e76-bfe4f86b25a7",
             "lineitems": [
                 {
-                    "id": "0ac7f165-780a-419d-9caa-822afd83bc04",
+                    "id": "48e626d3-0316-4f0f-99b3-74e8c229a025",
                     "item_name": "Client dinner",
                     "tax_amount": 0.0,
                     "total_amount": 364.74,
@@ -67,7 +67,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "992c7a5d-0f45-435f-852e-c6257ee49870",
+                    "id": "687c5e1f-094f-4b00-a2d4-035f23fd1552",
                     "item_name": "Client dinner",
                     "tax_amount": 0.0,
                     "total_amount": 258.35,
@@ -75,7 +75,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "098da77a-0919-473c-a063-586411a52d06",
+                    "id": "43e1535e-9f8a-465a-a1e1-31be51f7702c",
                     "item_name": "Conference ticket",
                     "notes": "Sint spiculum carcer ago charisma.",
                     "tax_amount": 0.0,
@@ -84,7 +84,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "78fbc5b1-9153-4630-9a26-8e08c033abc6",
+                    "id": "94488e72-f429-4738-9f1f-a8354f368b78",
                     "item_name": "Hotel",
                     "tax_amount": 0.0,
                     "total_amount": 157.04,
@@ -92,7 +92,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "1a63199c-3e62-4559-8c00-dbf3d2889cd3",
+                    "id": "7f4e15df-438b-49e1-9655-ea3b1254584b",
                     "item_name": "Hotel",
                     "tax_amount": 0.0,
                     "total_amount": 164.02,
@@ -108,7 +108,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "total_amount": 972.29,
             "type": shared.AccountingExpenseType.COMPANY,
-            "updated_at": parse_datetime("2020-09-03T14:10:13.306Z"),
+            "updated_at": parse_datetime("2020-09-03T15:06:08.546Z"),
         },
         "connection_id": "<id>",
     })
@@ -162,7 +162,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-11-08T00:41:42.356Z"),
             "currency": "GBP",
             "description": "Nihil sono villa voluptate cohibeo quas volo succurro.",
-            "id": "3f981a2f-2a1b-443a-bcad-734b4b605a1a",
+            "id": "1aa98cb5-5a96-4eda-ad74-b9bebf6f7b88",
             "incurred_at": parse_datetime("2020-11-08T00:41:42.356Z"),
             "is_billed": False,
             "metadata": [],
@@ -170,7 +170,7 @@ with UnifiedTo(
             "quantity": 3.0,
             "total_amount": 300.0,
             "type": shared.LegalExpenseType.OTHER,
-            "updated_at": parse_datetime("2024-04-20T11:15:23.658Z"),
+            "updated_at": parse_datetime("2024-04-21T02:06:04.082Z"),
         },
         "connection_id": "<id>",
     })
@@ -409,13 +409,13 @@ with UnifiedTo(
             "attachments": [
                 {
                     "download_url": "https://avaricious-larva.biz",
-                    "id": "067a3bd8-18f0-496f-9a59-79dddde95791",
+                    "id": "c8a75d0f-6e91-4f27-88b1-cd70333b10ea",
                     "mime_type": "application/pdf",
                     "name": "receipt-9696.pdf",
                 },
                 {
                     "download_url": "https://precious-comparison.net/",
-                    "id": "533dca54-cd52-4954-8c89-51124fbb2e23",
+                    "id": "62423dcb-aaa9-4850-ba55-8a006489469a",
                     "mime_type": "application/pdf",
                     "name": "receipt-9696-1.pdf",
                 },
@@ -424,10 +424,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-06-11T03:39:37.305Z"),
             "currency": "GBP",
             "external_number": "EXP-38303",
-            "id": "8c83a8de-1415-422b-8205-bb8b12ffed5e",
+            "id": "97f12d24-56d9-4dee-bec2-4e7f6e6ab617",
             "lineitems": [
                 {
-                    "id": "0d2d1961-5880-472e-9d2b-30c9cb823283",
+                    "id": "b2f2428f-1131-4ff7-9a09-0e7e72a2a03e",
                     "item_name": "Client dinner",
                     "tax_amount": 0.0,
                     "total_amount": 364.74,
@@ -435,7 +435,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "9e01d4e6-b05a-40e0-9685-688d0d02d289",
+                    "id": "2c26762d-a1d6-414a-9420-b4850ce0d5b9",
                     "item_name": "Client dinner",
                     "tax_amount": 0.0,
                     "total_amount": 258.35,
@@ -443,7 +443,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "55f7e715-00be-40f2-b35b-eb924ef23f08",
+                    "id": "6f9418f4-5b56-44a7-ab40-a15e081770d9",
                     "item_name": "Conference ticket",
                     "notes": "Sint spiculum carcer ago charisma.",
                     "tax_amount": 0.0,
@@ -452,7 +452,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "a5fa92d2-7aee-4af3-b220-c7c437c7d631",
+                    "id": "c0ebbc7d-4338-49b6-a022-faeacdf72c2c",
                     "item_name": "Hotel",
                     "tax_amount": 0.0,
                     "total_amount": 157.04,
@@ -460,7 +460,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "c6a6fd37-746a-4dab-abc3-e04ccb3e1fc1",
+                    "id": "a545d9a5-67f1-4067-b43f-12bfdeafd955",
                     "item_name": "Hotel",
                     "tax_amount": 0.0,
                     "total_amount": 164.02,
@@ -476,7 +476,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "total_amount": 972.29,
             "type": shared.AccountingExpenseType.COMPANY,
-            "updated_at": parse_datetime("2020-09-03T14:10:13.308Z"),
+            "updated_at": parse_datetime("2020-09-03T15:06:08.547Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -531,7 +531,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-11-08T00:41:42.356Z"),
             "currency": "GBP",
             "description": "Nihil sono villa voluptate cohibeo quas volo succurro.",
-            "id": "fadf78d6-db44-4db1-b9ed-c24916f6ac77",
+            "id": "933b36fa-85f3-4e1a-9a28-e7ca6a68258a",
             "incurred_at": parse_datetime("2020-11-08T00:41:42.356Z"),
             "is_billed": False,
             "metadata": [],
@@ -539,7 +539,7 @@ with UnifiedTo(
             "quantity": 3.0,
             "total_amount": 300.0,
             "type": shared.LegalExpenseType.OTHER,
-            "updated_at": parse_datetime("2024-04-20T11:15:23.666Z"),
+            "updated_at": parse_datetime("2024-04-21T02:06:04.088Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -687,13 +687,13 @@ with UnifiedTo(
             "attachments": [
                 {
                     "download_url": "https://avaricious-larva.biz",
-                    "id": "067a3bd8-18f0-496f-9a59-79dddde95791",
+                    "id": "c8a75d0f-6e91-4f27-88b1-cd70333b10ea",
                     "mime_type": "application/pdf",
                     "name": "receipt-9696.pdf",
                 },
                 {
                     "download_url": "https://precious-comparison.net/",
-                    "id": "533dca54-cd52-4954-8c89-51124fbb2e23",
+                    "id": "62423dcb-aaa9-4850-ba55-8a006489469a",
                     "mime_type": "application/pdf",
                     "name": "receipt-9696-1.pdf",
                 },
@@ -702,10 +702,10 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-06-11T03:39:37.305Z"),
             "currency": "GBP",
             "external_number": "EXP-38303",
-            "id": "8c83a8de-1415-422b-8205-bb8b12ffed5e",
+            "id": "97f12d24-56d9-4dee-bec2-4e7f6e6ab617",
             "lineitems": [
                 {
-                    "id": "0d2d1961-5880-472e-9d2b-30c9cb823283",
+                    "id": "b2f2428f-1131-4ff7-9a09-0e7e72a2a03e",
                     "item_name": "Client dinner",
                     "tax_amount": 0.0,
                     "total_amount": 364.74,
@@ -713,7 +713,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "9e01d4e6-b05a-40e0-9685-688d0d02d289",
+                    "id": "2c26762d-a1d6-414a-9420-b4850ce0d5b9",
                     "item_name": "Client dinner",
                     "tax_amount": 0.0,
                     "total_amount": 258.35,
@@ -721,7 +721,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "55f7e715-00be-40f2-b35b-eb924ef23f08",
+                    "id": "6f9418f4-5b56-44a7-ab40-a15e081770d9",
                     "item_name": "Conference ticket",
                     "notes": "Sint spiculum carcer ago charisma.",
                     "tax_amount": 0.0,
@@ -730,7 +730,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "a5fa92d2-7aee-4af3-b220-c7c437c7d631",
+                    "id": "c0ebbc7d-4338-49b6-a022-faeacdf72c2c",
                     "item_name": "Hotel",
                     "tax_amount": 0.0,
                     "total_amount": 157.04,
@@ -738,7 +738,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "c6a6fd37-746a-4dab-abc3-e04ccb3e1fc1",
+                    "id": "a545d9a5-67f1-4067-b43f-12bfdeafd955",
                     "item_name": "Hotel",
                     "tax_amount": 0.0,
                     "total_amount": 164.02,
@@ -754,7 +754,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "total_amount": 972.29,
             "type": shared.AccountingExpenseType.COMPANY,
-            "updated_at": parse_datetime("2020-09-03T14:10:13.308Z"),
+            "updated_at": parse_datetime("2020-09-03T15:06:08.547Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -809,7 +809,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-11-08T00:41:42.356Z"),
             "currency": "GBP",
             "description": "Nihil sono villa voluptate cohibeo quas volo succurro.",
-            "id": "fadf78d6-db44-4db1-b9ed-c24916f6ac77",
+            "id": "933b36fa-85f3-4e1a-9a28-e7ca6a68258a",
             "incurred_at": parse_datetime("2020-11-08T00:41:42.356Z"),
             "is_billed": False,
             "metadata": [],
@@ -817,7 +817,7 @@ with UnifiedTo(
             "quantity": 3.0,
             "total_amount": 300.0,
             "type": shared.LegalExpenseType.OTHER,
-            "updated_at": parse_datetime("2024-04-20T11:15:23.666Z"),
+            "updated_at": parse_datetime("2024-04-21T02:06:04.088Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

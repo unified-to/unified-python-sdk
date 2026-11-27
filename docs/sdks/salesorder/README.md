@@ -32,6 +32,7 @@ with UnifiedTo(
 
     res = unified_to.salesorder.create_accounting_salesorder(request={
         "accounting_salesorder": {
+            "balance_amount": 0.0,
             "billing_address": {
                 "address1": "1487 Valley Road",
                 "address2": "Apt. 287",
@@ -42,13 +43,13 @@ with UnifiedTo(
                 "region_code": "MT",
             },
             "category_ids": [],
-            "closed_at": parse_datetime("2023-04-03T11:25:04.300Z"),
+            "closed_at": parse_datetime("2023-04-03T17:53:23.660Z"),
             "created_at": parse_datetime("2022-01-17T16:11:50.310Z"),
             "currency": "USD",
             "discount_amount": 0.0,
             "fees": [],
             "fulfillment_type": shared.FulfillmentType.OTHER,
-            "id": "a9aa8630-2592-4102-84c1-cb36b590cd60",
+            "id": "c785f48c-0704-4698-902a-523e10bce00f",
             "lineitems": [],
             "metadata": [],
             "order_number": "832663",
@@ -71,7 +72,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "tip_amount": 0.0,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2023-04-03T11:25:04.300Z"),
+            "updated_at": parse_datetime("2023-04-03T17:53:23.660Z"),
         },
         "connection_id": "<id>",
     })
@@ -214,6 +215,7 @@ with UnifiedTo(
 
     res = unified_to.salesorder.patch_accounting_salesorder(request={
         "accounting_salesorder": {
+            "balance_amount": 0.0,
             "billing_address": {
                 "address1": "1487 Valley Road",
                 "address2": "Apt. 287",
@@ -224,13 +226,13 @@ with UnifiedTo(
                 "region_code": "MT",
             },
             "category_ids": [],
-            "closed_at": parse_datetime("2023-04-03T11:25:04.312Z"),
+            "closed_at": parse_datetime("2023-04-03T17:53:23.674Z"),
             "created_at": parse_datetime("2022-01-17T16:11:50.310Z"),
             "currency": "USD",
             "discount_amount": 0.0,
             "fees": [],
             "fulfillment_type": shared.FulfillmentType.OTHER,
-            "id": "2896e6ac-ae6a-42be-bd18-ec65ada6d811",
+            "id": "20178406-727d-49c2-9c19-9b89a8046538",
             "lineitems": [],
             "metadata": [],
             "order_number": "832663",
@@ -253,7 +255,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "tip_amount": 0.0,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2023-04-03T11:25:04.312Z"),
+            "updated_at": parse_datetime("2023-04-03T17:53:23.674Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -351,6 +353,7 @@ with UnifiedTo(
 
     res = unified_to.salesorder.update_accounting_salesorder(request={
         "accounting_salesorder": {
+            "balance_amount": 0.0,
             "billing_address": {
                 "address1": "1487 Valley Road",
                 "address2": "Apt. 287",
@@ -361,13 +364,13 @@ with UnifiedTo(
                 "region_code": "MT",
             },
             "category_ids": [],
-            "closed_at": parse_datetime("2023-04-03T11:25:04.312Z"),
+            "closed_at": parse_datetime("2023-04-03T17:53:23.674Z"),
             "created_at": parse_datetime("2022-01-17T16:11:50.310Z"),
             "currency": "USD",
             "discount_amount": 0.0,
             "fees": [],
             "fulfillment_type": shared.FulfillmentType.OTHER,
-            "id": "2896e6ac-ae6a-42be-bd18-ec65ada6d811",
+            "id": "20178406-727d-49c2-9c19-9b89a8046538",
             "lineitems": [],
             "metadata": [],
             "order_number": "832663",
@@ -390,7 +393,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "tip_amount": 0.0,
             "total_amount": 0.0,
-            "updated_at": parse_datetime("2023-04-03T11:25:04.312Z"),
+            "updated_at": parse_datetime("2023-04-03T17:53:23.674Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

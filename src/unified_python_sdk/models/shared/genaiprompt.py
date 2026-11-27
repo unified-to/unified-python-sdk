@@ -19,6 +19,10 @@ from unified_python_sdk.types.basemodel import current_filtered_dump
 class GenaiPromptTypedDict(TypedDict):
     answers: NotRequired[List[GenaiAnswerTypedDict]]
     r"""One answer per question, matched by id."""
+    has_thread: NotRequired[bool]
+    r"""Ask the LLM API to keep this conversation so that a later prompt can continue it with parent_id (eg. Anthropic message threads, which are kept for about 5 minutes)."""
+    id: NotRequired[str]
+    r"""The id of this prompt, returned by the LLM API. Send it as parent_id on the next prompt to continue the conversation."""
     max_tokens: NotRequired[float]
     r"""a float between 0-1"""
     mcp_authorization_token: NotRequired[str]
@@ -30,6 +34,8 @@ class GenaiPromptTypedDict(TypedDict):
     r"""The conversation to send to the model, in order; each message has a role and its content"""
     model_id: NotRequired[str]
     r"""The ID of the model to use (a GenaiModel ID)"""
+    parent_id: NotRequired[str]
+    r"""The id of the previous prompt (genai_prompt) that this prompt continues. When set, messages holds only the new messages; the LLM API keeps the earlier ones (eg. Anthropic message threads, OpenAI previous_response_id). If the LLM API no longer has that prompt, send the full conversation again without parent_id."""
     questions: NotRequired[List[GenaiQuestionTypedDict]]
     r"""Typed questions to evaluate against the messages (for decision models such as TypeSafe Jev)."""
     raw: NotRequired[Dict[str, Any]]
@@ -44,6 +50,12 @@ class GenaiPromptTypedDict(TypedDict):
 class GenaiPrompt(BaseModel):
     answers: Optional[List[GenaiAnswer]] = None
     r"""One answer per question, matched by id."""
+
+    has_thread: Optional[bool] = None
+    r"""Ask the LLM API to keep this conversation so that a later prompt can continue it with parent_id (eg. Anthropic message threads, which are kept for about 5 minutes)."""
+
+    id: Optional[str] = None
+    r"""The id of this prompt, returned by the LLM API. Send it as parent_id on the next prompt to continue the conversation."""
 
     max_tokens: Optional[float] = None
     r"""a float between 0-1"""
@@ -61,6 +73,9 @@ class GenaiPrompt(BaseModel):
 
     model_id: Optional[str] = None
     r"""The ID of the model to use (a GenaiModel ID)"""
+
+    parent_id: Optional[str] = None
+    r"""The id of the previous prompt (genai_prompt) that this prompt continues. When set, messages holds only the new messages; the LLM API keeps the earlier ones (eg. Anthropic message threads, OpenAI previous_response_id). If the LLM API no longer has that prompt, send the full conversation again without parent_id."""
 
     questions: Optional[List[GenaiQuestion]] = None
     r"""Typed questions to evaluate against the messages (for decision models such as TypeSafe Jev)."""
@@ -85,12 +100,15 @@ class GenaiPrompt(BaseModel):
         optional_fields = set(
             [
                 "answers",
+                "has_thread",
+                "id",
                 "max_tokens",
                 "mcp_authorization_token",
                 "mcp_deferred_tools",
                 "mcp_url",
                 "messages",
                 "model_id",
+                "parent_id",
                 "questions",
                 "raw",
                 "responses",

@@ -22,9 +22,10 @@ from .property_accountingcontact_shipping_address import (
 )
 from datetime import datetime
 from enum import Enum
+import pydantic
 from pydantic import field_serializer, model_serializer
 from typing import Any, Dict, List, Optional
-from typing_extensions import NotRequired, TypedDict
+from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
 from unified_python_sdk.types import (
@@ -65,6 +66,8 @@ class TaxExemption(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class AccountingContactTypedDict(TypedDict):
+    unified_person_ids: NotRequired[List[str]]
+    r"""Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields"""
     associated_contacts: NotRequired[List[AccountingAssociatedContactTypedDict]]
     balance_amount: NotRequired[float]
     r"""Outstanding AR/AP balance for this contact"""
@@ -105,6 +108,11 @@ class AccountingContactTypedDict(TypedDict):
 
 
 class AccountingContact(BaseModel):
+    unified_person_ids: Annotated[
+        Optional[List[str]], pydantic.Field(alias="__unified_person_ids")
+    ] = None
+    r"""Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields"""
+
     associated_contacts: Optional[List[AccountingAssociatedContact]] = None
 
     balance_amount: Optional[float] = None
@@ -196,6 +204,7 @@ class AccountingContact(BaseModel):
     def serialize_model(self, handler):
         optional_fields = set(
             [
+                "__unified_person_ids",
                 "associated_contacts",
                 "balance_amount",
                 "billing_address",
@@ -243,3 +252,9 @@ class AccountingContact(BaseModel):
                     m[k] = val
 
         return m
+
+
+try:
+    AccountingContact.model_rebuild()
+except NameError:
+    pass

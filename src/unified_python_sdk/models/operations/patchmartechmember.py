@@ -36,6 +36,7 @@ class PatchMartechMemberQueryParamFields(str, Enum):
     STATUS = "status"
     METADATA = "metadata"
     RAW = "raw"
+    UNIFIED_PERSON_IDS = "__unified_person_ids"
 
 
 class PatchMartechMemberRequestTypedDict(TypedDict):

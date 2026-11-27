@@ -9,9 +9,10 @@ from .property_crmcontact_address import (
     PropertyCrmContactAddressTypedDict,
 )
 from datetime import datetime
+import pydantic
 from pydantic import model_serializer
 from typing import Any, Dict, List, Optional
-from typing_extensions import NotRequired, TypedDict
+from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk.types import (
     BaseModel,
     UNSET_SENTINEL,
@@ -24,6 +25,8 @@ from unified_python_sdk.types.basemodel import current_filtered_dump
 class CrmContactTypedDict(TypedDict):
     r"""A contact represents a person that optionally is associated with a deal and/or a company"""
 
+    unified_person_ids: NotRequired[List[str]]
+    r"""Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields"""
     address: NotRequired[PropertyCrmContactAddressTypedDict]
     company: NotRequired[str]
     r"""The company/organization name  of the contact"""
@@ -62,6 +65,11 @@ class CrmContactTypedDict(TypedDict):
 
 class CrmContact(BaseModel):
     r"""A contact represents a person that optionally is associated with a deal and/or a company"""
+
+    unified_person_ids: Annotated[
+        Optional[List[str]], pydantic.Field(alias="__unified_person_ids")
+    ] = None
+    r"""Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields"""
 
     address: Optional[PropertyCrmContactAddress] = None
 
@@ -123,6 +131,7 @@ class CrmContact(BaseModel):
     def serialize_model(self, handler):
         optional_fields = set(
             [
+                "__unified_person_ids",
                 "address",
                 "company",
                 "company_ids",
@@ -160,3 +169,9 @@ class CrmContact(BaseModel):
                     m[k] = val
 
         return m
+
+
+try:
+    CrmContact.model_rebuild()
+except NameError:
+    pass

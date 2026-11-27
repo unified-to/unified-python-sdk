@@ -34,6 +34,7 @@ class GetLmsStudentQueryParamFields(str, Enum):
     IMAGE_URL = "image_url"
     METADATA = "metadata"
     RAW = "raw"
+    UNIFIED_PERSON_IDS = "__unified_person_ids"
 
 
 class GetLmsStudentRequestTypedDict(TypedDict):

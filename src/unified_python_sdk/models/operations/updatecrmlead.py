@@ -45,6 +45,7 @@ class UpdateCrmLeadQueryParamFields(str, Enum):
     METADATA = "metadata"
     VEHICLE_IDS = "vehicle_ids"
     RAW = "raw"
+    UNIFIED_PERSON_IDS = "__unified_person_ids"
 
 
 class UpdateCrmLeadRequestTypedDict(TypedDict):

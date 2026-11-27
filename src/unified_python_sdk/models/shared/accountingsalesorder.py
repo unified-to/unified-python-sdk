@@ -61,6 +61,8 @@ class AccountingSalesorderStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 class AccountingSalesorderTypedDict(TypedDict):
     account_id: NotRequired[str]
     r"""(reference to AccountingAccount)"""
+    balance_amount: NotRequired[float]
+    r"""amount still owed on the order (total_amount - paid_amount)"""
     billing_address: NotRequired[PropertyAccountingSalesorderBillingAddressTypedDict]
     category_ids: NotRequired[List[str]]
     closed_at: NotRequired[datetime]
@@ -114,6 +116,9 @@ class AccountingSalesorderTypedDict(TypedDict):
 class AccountingSalesorder(BaseModel):
     account_id: Optional[str] = None
     r"""(reference to AccountingAccount)"""
+
+    balance_amount: Optional[float] = None
+    r"""amount still owed on the order (total_amount - paid_amount)"""
 
     billing_address: Optional[PropertyAccountingSalesorderBillingAddress] = None
 
@@ -223,6 +228,7 @@ class AccountingSalesorder(BaseModel):
         optional_fields = set(
             [
                 "account_id",
+                "balance_amount",
                 "billing_address",
                 "category_ids",
                 "closed_at",

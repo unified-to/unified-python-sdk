@@ -42,6 +42,7 @@ class CreateCrmContactQueryParamFields(str, Enum):
     DEPARTMENT = "department"
     IMAGE_URL = "image_url"
     RAW = "raw"
+    UNIFIED_PERSON_IDS = "__unified_person_ids"
 
 
 class CreateCrmContactRequestTypedDict(TypedDict):

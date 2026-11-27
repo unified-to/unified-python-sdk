@@ -34,9 +34,9 @@ with UnifiedTo(
         "ticketing_note": {
             "created_at": parse_datetime("2019-07-23T15:05:03.241Z"),
             "description": "Vitiosus recusandae tristis.",
-            "id": "30dc7126-2087-4a78-bb00-162b9c6e0921",
+            "id": "1f720139-149e-40cd-a142-ba70a35be505",
             "metadata": [],
-            "updated_at": parse_datetime("2024-10-25T00:23:49.913Z"),
+            "updated_at": parse_datetime("2024-10-25T19:02:14.440Z"),
         },
         "connection_id": "<id>",
     })
@@ -181,9 +181,9 @@ with UnifiedTo(
         "ticketing_note": {
             "created_at": parse_datetime("2019-07-23T15:05:03.241Z"),
             "description": "Vitiosus recusandae tristis.",
-            "id": "a9a638fa-09d9-4846-a298-6a27a2520233",
+            "id": "158a766f-da7d-4bc2-9a6c-acab6e146207",
             "metadata": [],
-            "updated_at": parse_datetime("2024-10-25T00:23:49.918Z"),
+            "updated_at": parse_datetime("2024-10-25T19:02:14.446Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -283,9 +283,9 @@ with UnifiedTo(
         "ticketing_note": {
             "created_at": parse_datetime("2019-07-23T15:05:03.241Z"),
             "description": "Vitiosus recusandae tristis.",
-            "id": "a9a638fa-09d9-4846-a298-6a27a2520233",
+            "id": "158a766f-da7d-4bc2-9a6c-acab6e146207",
             "metadata": [],
-            "updated_at": parse_datetime("2024-10-25T00:23:49.918Z"),
+            "updated_at": parse_datetime("2024-10-25T19:02:14.446Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

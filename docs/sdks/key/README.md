@@ -33,11 +33,11 @@ with UnifiedTo(
     res = unified_to.key.create_compute_key(request={
         "compute_key": {
             "created_at": parse_datetime("2023-08-19T14:31:46.492Z"),
-            "id": "2d1825a2-72ea-414d-834d-17dfab042554",
+            "id": "8aa58075-4c48-4a64-9d5b-8aff7445a12b",
             "metadata": [],
             "name": "huels-secret",
             "type": shared.ComputeKeyType.SECRET,
-            "updated_at": parse_datetime("2024-10-19T19:57:27.995Z"),
+            "updated_at": parse_datetime("2024-10-20T05:16:15.651Z"),
         },
         "connection_id": "<id>",
     })
@@ -181,11 +181,11 @@ with UnifiedTo(
     res = unified_to.key.patch_compute_key(request={
         "compute_key": {
             "created_at": parse_datetime("2023-08-19T14:31:46.492Z"),
-            "id": "1495e344-ad38-4a26-b6c9-3f7913db260e",
+            "id": "cebb31b8-4949-4657-a43c-0c555dcbb306",
             "metadata": [],
             "name": "huels-secret",
             "type": shared.ComputeKeyType.SECRET,
-            "updated_at": parse_datetime("2024-10-19T19:57:28.001Z"),
+            "updated_at": parse_datetime("2024-10-20T05:16:15.655Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -284,11 +284,11 @@ with UnifiedTo(
     res = unified_to.key.update_compute_key(request={
         "compute_key": {
             "created_at": parse_datetime("2023-08-19T14:31:46.492Z"),
-            "id": "1495e344-ad38-4a26-b6c9-3f7913db260e",
+            "id": "cebb31b8-4949-4657-a43c-0c555dcbb306",
             "metadata": [],
             "name": "huels-secret",
             "type": shared.ComputeKeyType.SECRET,
-            "updated_at": parse_datetime("2024-10-19T19:57:28.001Z"),
+            "updated_at": parse_datetime("2024-10-20T05:16:15.655Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

@@ -34,6 +34,7 @@ class GetUcContactQueryParamFields(str, Enum):
     TELEPHONES = "telephones"
     METADATA = "metadata"
     RAW = "raw"
+    UNIFIED_PERSON_IDS = "__unified_person_ids"
 
 
 class GetUcContactRequestTypedDict(TypedDict):

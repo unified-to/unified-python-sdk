@@ -31,15 +31,15 @@ with UnifiedTo(
 
     res = unified_to.call.create_uc_call(request={
         "uc_call": {
-            "answer_at": parse_datetime("2025-06-03T19:12:45.478Z"),
+            "answer_at": parse_datetime("2025-06-04T10:32:20.538Z"),
             "contacts": [],
-            "conversation_identifier": "529b1de6-deb4-4af8-ae25-5eba44819594",
+            "conversation_identifier": "460c041a-3bb6-428d-a040-c94ef1334e17",
             "cost_amount": 2.7016,
             "created_at": parse_datetime("2023-04-22T19:05:34.882Z"),
             "currency": "USD",
             "duration_seconds": 2132.0,
-            "end_at": parse_datetime("2024-06-10T09:59:23.364Z"),
-            "id": "529b1de6-deb4-4af8-ae25-5eba44819594",
+            "end_at": parse_datetime("2024-06-10T18:12:37.897Z"),
+            "id": "460c041a-3bb6-428d-a040-c94ef1334e17",
             "is_private": False,
             "metadata": [
                 {
@@ -47,20 +47,20 @@ with UnifiedTo(
 
                     },
                     "format_": shared.UcMetadataFormat.PRICE,
-                    "id": "a99c963e-47be-4d02-aa75-2721e15498c9",
+                    "id": "df93c84b-216f-4858-a168-d97ee7f340c7",
                     "namespace": "custom",
                     "slug": "custom_field",
                     "value": "voluptatem",
                 },
             ],
-            "start_at": parse_datetime("2023-12-24T03:12:49.716Z"),
+            "start_at": parse_datetime("2023-12-24T08:04:41.323Z"),
             "status": shared.UcCallStatus.IN_PROGRESS,
             "telephone": {
                 "telephone": "(507) 787-3877",
                 "type": shared.PropertyUcCallTelephoneType.MOBILE,
             },
             "type": shared.UcCallType.INBOUND,
-            "updated_at": parse_datetime("2023-08-06T05:51:27.207Z"),
+            "updated_at": parse_datetime("2023-08-06T07:56:53.845Z"),
             "user_phone": "1-894-431-7163 x39343",
         },
         "connection_id": "<id>",
@@ -204,15 +204,15 @@ with UnifiedTo(
 
     res = unified_to.call.patch_uc_call(request={
         "uc_call": {
-            "answer_at": parse_datetime("2025-06-03T19:12:45.495Z"),
+            "answer_at": parse_datetime("2025-06-04T10:32:20.555Z"),
             "contacts": [],
-            "conversation_identifier": "a13f63d6-851f-4643-9210-3d64723bb645",
+            "conversation_identifier": "4fddaaf3-0112-471f-8075-fde589bb3992",
             "cost_amount": 2.7016,
             "created_at": parse_datetime("2023-04-22T19:05:34.882Z"),
             "currency": "USD",
             "duration_seconds": 2132.0,
-            "end_at": parse_datetime("2024-06-10T09:59:23.373Z"),
-            "id": "a13f63d6-851f-4643-9210-3d64723bb645",
+            "end_at": parse_datetime("2024-06-10T18:12:37.906Z"),
+            "id": "4fddaaf3-0112-471f-8075-fde589bb3992",
             "is_private": False,
             "metadata": [
                 {
@@ -220,20 +220,20 @@ with UnifiedTo(
 
                     },
                     "format_": shared.UcMetadataFormat.PRICE,
-                    "id": "2225cec5-23f5-44a5-bc6f-235c59cac729",
+                    "id": "7c7d1a99-130b-4746-b2ac-df56cb22d5e2",
                     "namespace": "custom",
                     "slug": "custom_field",
                     "value": "voluptatem",
                 },
             ],
-            "start_at": parse_datetime("2023-12-24T03:12:49.722Z"),
+            "start_at": parse_datetime("2023-12-24T08:04:41.328Z"),
             "status": shared.UcCallStatus.IN_PROGRESS,
             "telephone": {
                 "telephone": "(507) 787-3877",
                 "type": shared.PropertyUcCallTelephoneType.MOBILE,
             },
             "type": shared.UcCallType.INBOUND,
-            "updated_at": parse_datetime("2023-08-06T05:51:27.210Z"),
+            "updated_at": parse_datetime("2023-08-06T07:56:53.847Z"),
             "user_phone": "1-894-431-7163 x39343",
         },
         "connection_id": "<id>",
@@ -285,15 +285,15 @@ with UnifiedTo(
 
     res = unified_to.call.update_uc_call(request={
         "uc_call": {
-            "answer_at": parse_datetime("2025-06-03T19:12:45.495Z"),
+            "answer_at": parse_datetime("2025-06-04T10:32:20.555Z"),
             "contacts": [],
-            "conversation_identifier": "a13f63d6-851f-4643-9210-3d64723bb645",
+            "conversation_identifier": "4fddaaf3-0112-471f-8075-fde589bb3992",
             "cost_amount": 2.7016,
             "created_at": parse_datetime("2023-04-22T19:05:34.882Z"),
             "currency": "USD",
             "duration_seconds": 2132.0,
-            "end_at": parse_datetime("2024-06-10T09:59:23.373Z"),
-            "id": "a13f63d6-851f-4643-9210-3d64723bb645",
+            "end_at": parse_datetime("2024-06-10T18:12:37.906Z"),
+            "id": "4fddaaf3-0112-471f-8075-fde589bb3992",
             "is_private": False,
             "metadata": [
                 {
@@ -301,20 +301,20 @@ with UnifiedTo(
 
                     },
                     "format_": shared.UcMetadataFormat.PRICE,
-                    "id": "2225cec5-23f5-44a5-bc6f-235c59cac729",
+                    "id": "7c7d1a99-130b-4746-b2ac-df56cb22d5e2",
                     "namespace": "custom",
                     "slug": "custom_field",
                     "value": "voluptatem",
                 },
             ],
-            "start_at": parse_datetime("2023-12-24T03:12:49.722Z"),
+            "start_at": parse_datetime("2023-12-24T08:04:41.328Z"),
             "status": shared.UcCallStatus.IN_PROGRESS,
             "telephone": {
                 "telephone": "(507) 787-3877",
                 "type": shared.PropertyUcCallTelephoneType.MOBILE,
             },
             "type": shared.UcCallType.INBOUND,
-            "updated_at": parse_datetime("2023-08-06T05:51:27.210Z"),
+            "updated_at": parse_datetime("2023-08-06T07:56:53.847Z"),
             "user_phone": "1-894-431-7163 x39343",
         },
         "connection_id": "<id>",

@@ -59,6 +59,7 @@ class UpdateAccountingSalesorderQueryParamFields(str, Enum):
     PAYMENTS = "payments"
     TABLE_ID = "table_id"
     PAID_AMOUNT = "paid_amount"
+    BALANCE_AMOUNT = "balance_amount"
     RAW = "raw"
 
 

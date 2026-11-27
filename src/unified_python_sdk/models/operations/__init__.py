@@ -3056,6 +3056,12 @@ if TYPE_CHECKING:
         GetUnifiedIssueResponse,
         GetUnifiedIssueResponseTypedDict,
     )
+    from .getunifiedperson import (
+        GetUnifiedPersonRequest,
+        GetUnifiedPersonRequestTypedDict,
+        GetUnifiedPersonResponse,
+        GetUnifiedPersonResponseTypedDict,
+    )
     from .getunifiedsecretsmanager import (
         GetUnifiedSecretsmanagerRequest,
         GetUnifiedSecretsmanagerRequestTypedDict,
@@ -4914,6 +4920,12 @@ if TYPE_CHECKING:
         ListUnifiedNotificationsRequestTypedDict,
         ListUnifiedNotificationsResponse,
         ListUnifiedNotificationsResponseTypedDict,
+    )
+    from .listunifiedpeople import (
+        ListUnifiedPeopleRequest,
+        ListUnifiedPeopleRequestTypedDict,
+        ListUnifiedPeopleResponse,
+        ListUnifiedPeopleResponseTypedDict,
     )
     from .listunifiedsecretsmanagerinstructions import (
         ListUnifiedSecretsmanagerInstructionsResponse,
@@ -7128,6 +7140,12 @@ if TYPE_CHECKING:
         RemoveUnifiedEnvironmentRequestTypedDict,
         RemoveUnifiedEnvironmentResponse,
         RemoveUnifiedEnvironmentResponseTypedDict,
+    )
+    from .removeunifiedperson import (
+        RemoveUnifiedPersonRequest,
+        RemoveUnifiedPersonRequestTypedDict,
+        RemoveUnifiedPersonResponse,
+        RemoveUnifiedPersonResponseTypedDict,
     )
     from .removeunifiedsecretsmanager import (
         RemoveUnifiedSecretsmanagerRequest,
@@ -10559,6 +10577,10 @@ __all__ = [
     "GetUnifiedIssueRequestTypedDict",
     "GetUnifiedIssueResponse",
     "GetUnifiedIssueResponseTypedDict",
+    "GetUnifiedPersonRequest",
+    "GetUnifiedPersonRequestTypedDict",
+    "GetUnifiedPersonResponse",
+    "GetUnifiedPersonResponseTypedDict",
     "GetUnifiedSecretsmanagerRequest",
     "GetUnifiedSecretsmanagerRequestTypedDict",
     "GetUnifiedSecretsmanagerResponse",
@@ -11878,6 +11900,10 @@ __all__ = [
     "ListUnifiedNotificationsRequestTypedDict",
     "ListUnifiedNotificationsResponse",
     "ListUnifiedNotificationsResponseTypedDict",
+    "ListUnifiedPeopleRequest",
+    "ListUnifiedPeopleRequestTypedDict",
+    "ListUnifiedPeopleResponse",
+    "ListUnifiedPeopleResponseTypedDict",
     "ListUnifiedSecretsmanagerInstructionsResponse",
     "ListUnifiedSecretsmanagerInstructionsResponseTypedDict",
     "ListUnifiedSecretsmanagerSecretsRequest",
@@ -13412,6 +13438,10 @@ __all__ = [
     "RemoveUnifiedEnvironmentRequestTypedDict",
     "RemoveUnifiedEnvironmentResponse",
     "RemoveUnifiedEnvironmentResponseTypedDict",
+    "RemoveUnifiedPersonRequest",
+    "RemoveUnifiedPersonRequestTypedDict",
+    "RemoveUnifiedPersonResponse",
+    "RemoveUnifiedPersonResponseTypedDict",
     "RemoveUnifiedSecretsmanagerRequest",
     "RemoveUnifiedSecretsmanagerRequestTypedDict",
     "RemoveUnifiedSecretsmanagerResponse",
@@ -16479,6 +16509,10 @@ _dynamic_imports: dict[str, str] = {
     "GetUnifiedIssueRequestTypedDict": ".getunifiedissue",
     "GetUnifiedIssueResponse": ".getunifiedissue",
     "GetUnifiedIssueResponseTypedDict": ".getunifiedissue",
+    "GetUnifiedPersonRequest": ".getunifiedperson",
+    "GetUnifiedPersonRequestTypedDict": ".getunifiedperson",
+    "GetUnifiedPersonResponse": ".getunifiedperson",
+    "GetUnifiedPersonResponseTypedDict": ".getunifiedperson",
     "GetUnifiedSecretsmanagerRequest": ".getunifiedsecretsmanager",
     "GetUnifiedSecretsmanagerRequestTypedDict": ".getunifiedsecretsmanager",
     "GetUnifiedSecretsmanagerResponse": ".getunifiedsecretsmanager",
@@ -17800,6 +17834,10 @@ _dynamic_imports: dict[str, str] = {
     "ListUnifiedNotificationsRequestTypedDict": ".listunifiednotifications",
     "ListUnifiedNotificationsResponse": ".listunifiednotifications",
     "ListUnifiedNotificationsResponseTypedDict": ".listunifiednotifications",
+    "ListUnifiedPeopleRequest": ".listunifiedpeople",
+    "ListUnifiedPeopleRequestTypedDict": ".listunifiedpeople",
+    "ListUnifiedPeopleResponse": ".listunifiedpeople",
+    "ListUnifiedPeopleResponseTypedDict": ".listunifiedpeople",
     "ListUnifiedSecretsmanagerInstructionsResponse": ".listunifiedsecretsmanagerinstructions",
     "ListUnifiedSecretsmanagerInstructionsResponseTypedDict": ".listunifiedsecretsmanagerinstructions",
     "ListUnifiedSecretsmanagersRequest": ".listunifiedsecretsmanagers",
@@ -19332,6 +19370,10 @@ _dynamic_imports: dict[str, str] = {
     "RemoveUnifiedEnvironmentRequestTypedDict": ".removeunifiedenvironment",
     "RemoveUnifiedEnvironmentResponse": ".removeunifiedenvironment",
     "RemoveUnifiedEnvironmentResponseTypedDict": ".removeunifiedenvironment",
+    "RemoveUnifiedPersonRequest": ".removeunifiedperson",
+    "RemoveUnifiedPersonRequestTypedDict": ".removeunifiedperson",
+    "RemoveUnifiedPersonResponse": ".removeunifiedperson",
+    "RemoveUnifiedPersonResponseTypedDict": ".removeunifiedperson",
     "RemoveUnifiedSecretsmanagerRequest": ".removeunifiedsecretsmanager",
     "RemoveUnifiedSecretsmanagerRequestTypedDict": ".removeunifiedsecretsmanager",
     "RemoveUnifiedSecretsmanagerResponse": ".removeunifiedsecretsmanager",

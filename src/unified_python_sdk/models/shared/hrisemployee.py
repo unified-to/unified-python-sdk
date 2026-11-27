@@ -18,9 +18,10 @@ from .property_hrisemployee_address import (
 from .property_hrisemployee_employee_roles import PropertyHrisEmployeeEmployeeRoles
 from datetime import datetime
 from enum import Enum
+import pydantic
 from pydantic import field_serializer, model_serializer
 from typing import Any, Dict, List, Optional
-from typing_extensions import NotRequired, TypedDict
+from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
 from unified_python_sdk.types import (
@@ -98,6 +99,8 @@ class PayFrequency(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class HrisEmployeeTypedDict(TypedDict):
+    unified_person_ids: NotRequired[List[str]]
+    r"""Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields"""
     address: NotRequired[PropertyHrisEmployeeAddressTypedDict]
     bio: NotRequired[str]
     company_id: NotRequired[str]
@@ -179,6 +182,11 @@ class HrisEmployeeTypedDict(TypedDict):
 
 
 class HrisEmployee(BaseModel):
+    unified_person_ids: Annotated[
+        Optional[List[str]], pydantic.Field(alias="__unified_person_ids")
+    ] = None
+    r"""Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields"""
+
     address: Optional[PropertyHrisEmployeeAddress] = None
 
     bio: Optional[str] = None
@@ -378,6 +386,7 @@ class HrisEmployee(BaseModel):
     def serialize_model(self, handler):
         optional_fields = set(
             [
+                "__unified_person_ids",
                 "address",
                 "bio",
                 "company_id",
@@ -447,3 +456,9 @@ class HrisEmployee(BaseModel):
                     m[k] = val
 
         return m
+
+
+try:
+    HrisEmployee.model_rebuild()
+except NameError:
+    pass

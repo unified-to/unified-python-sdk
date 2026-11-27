@@ -12,9 +12,10 @@ from .property_healthcarepractitioner_address import (
 )
 from datetime import datetime
 from enum import Enum
+import pydantic
 from pydantic import field_serializer, model_serializer
 from typing import Any, Dict, List, Optional
-from typing_extensions import NotRequired, TypedDict
+from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
 from unified_python_sdk.types import (
@@ -36,6 +37,8 @@ class HealthcarePractitionerGender(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class HealthcarePractitionerTypedDict(TypedDict):
+    unified_person_ids: NotRequired[List[str]]
+    r"""Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields"""
     address: NotRequired[PropertyHealthcarePractitionerAddressTypedDict]
     r"""Work address of the practitioner"""
     created_at: NotRequired[datetime]
@@ -79,6 +82,11 @@ class HealthcarePractitionerTypedDict(TypedDict):
 
 
 class HealthcarePractitioner(BaseModel):
+    unified_person_ids: Annotated[
+        Optional[List[str]], pydantic.Field(alias="__unified_person_ids")
+    ] = None
+    r"""Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields"""
+
     address: Optional[PropertyHealthcarePractitionerAddress] = None
     r"""Work address of the practitioner"""
 
@@ -155,6 +163,7 @@ class HealthcarePractitioner(BaseModel):
     def serialize_model(self, handler):
         optional_fields = set(
             [
+                "__unified_person_ids",
                 "address",
                 "created_at",
                 "emails",
@@ -193,3 +202,9 @@ class HealthcarePractitioner(BaseModel):
                     m[k] = val
 
         return m
+
+
+try:
+    HealthcarePractitioner.model_rebuild()
+except NameError:
+    pass

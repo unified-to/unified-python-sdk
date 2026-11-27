@@ -54,6 +54,7 @@ class CreateAccountingContactQueryParamFields(str, Enum):
     NOTES = "notes"
     METADATA = "metadata"
     RAW = "raw"
+    UNIFIED_PERSON_IDS = "__unified_person_ids"
 
 
 class CreateAccountingContactRequestTypedDict(TypedDict):

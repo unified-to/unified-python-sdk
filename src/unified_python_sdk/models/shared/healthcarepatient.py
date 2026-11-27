@@ -16,9 +16,10 @@ from .property_healthcarepatient_address import (
 )
 from datetime import datetime
 from enum import Enum
+import pydantic
 from pydantic import field_serializer, model_serializer
 from typing import Any, Dict, List, Optional
-from typing_extensions import NotRequired, TypedDict
+from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
 from unified_python_sdk.types import (
@@ -54,6 +55,8 @@ class MaritalStatus(str, Enum, metaclass=utils.OpenEnumMeta):
 
 
 class HealthcarePatientTypedDict(TypedDict):
+    unified_person_ids: NotRequired[List[str]]
+    r"""Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields"""
     address: NotRequired[PropertyHealthcarePatientAddressTypedDict]
     r"""Home address of the patient"""
     birthdate: NotRequired[str]
@@ -103,6 +106,11 @@ class HealthcarePatientTypedDict(TypedDict):
 
 
 class HealthcarePatient(BaseModel):
+    unified_person_ids: Annotated[
+        Optional[List[str]], pydantic.Field(alias="__unified_person_ids")
+    ] = None
+    r"""Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields"""
+
     address: Optional[PropertyHealthcarePatientAddress] = None
     r"""Home address of the patient"""
 
@@ -197,6 +205,7 @@ class HealthcarePatient(BaseModel):
     def serialize_model(self, handler):
         optional_fields = set(
             [
+                "__unified_person_ids",
                 "address",
                 "birthdate",
                 "contacts",
@@ -238,3 +247,9 @@ class HealthcarePatient(BaseModel):
                     m[k] = val
 
         return m
+
+
+try:
+    HealthcarePatient.model_rebuild()
+except NameError:
+    pass

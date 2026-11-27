@@ -13,9 +13,10 @@ from .property_enrichperson_address import (
 )
 from datetime import datetime
 from enum import Enum
+import pydantic
 from pydantic import field_serializer, model_serializer
 from typing import Any, Dict, List, Optional
-from typing_extensions import NotRequired, TypedDict
+from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk import utils
 from unified_python_sdk.models import shared
 from unified_python_sdk.types import (
@@ -37,6 +38,8 @@ class EnrichPersonGender(str, Enum, metaclass=utils.OpenEnumMeta):
 class EnrichPersonTypedDict(TypedDict):
     r"""A person object from an enrichment integration"""
 
+    unified_person_ids: NotRequired[List[str]]
+    r"""Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields"""
     address: NotRequired[PropertyEnrichPersonAddressTypedDict]
     r"""The address of the person"""
     bio: NotRequired[str]
@@ -90,6 +93,11 @@ class EnrichPersonTypedDict(TypedDict):
 
 class EnrichPerson(BaseModel):
     r"""A person object from an enrichment integration"""
+
+    unified_person_ids: Annotated[
+        Optional[List[str]], pydantic.Field(alias="__unified_person_ids")
+    ] = None
+    r"""Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields"""
 
     address: Optional[PropertyEnrichPersonAddress] = None
     r"""The address of the person"""
@@ -182,6 +190,7 @@ class EnrichPerson(BaseModel):
     def serialize_model(self, handler):
         optional_fields = set(
             [
+                "__unified_person_ids",
                 "address",
                 "bio",
                 "birthdate",
@@ -226,3 +235,9 @@ class EnrichPerson(BaseModel):
                     m[k] = val
 
         return m
+
+
+try:
+    EnrichPerson.model_rebuild()
+except NameError:
+    pass

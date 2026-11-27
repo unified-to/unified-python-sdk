@@ -131,7 +131,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Comedo vilitas harum cupiditate animus quo iste.",
-            "id": "163a68aa-dffa-47cd-8735-bba178c623d5",
+            "id": "b577962a-e75c-499f-bac0-98e67860a31b",
             "is_payable": False,
             "metadata": [],
             "name": "Savings Account",
@@ -144,7 +144,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-16T00:59:24.548Z"),
+            "updated_at": parse_datetime("2023-08-16T07:36:30.450Z"),
         },
         "connection_id": "<id>",
     })
@@ -181,7 +181,7 @@ async def main():
                 "currency": "CAD",
                 "customer_defined_code": "6170",
                 "description": "Comedo vilitas harum cupiditate animus quo iste.",
-                "id": "163a68aa-dffa-47cd-8735-bba178c623d5",
+                "id": "b577962a-e75c-499f-bac0-98e67860a31b",
                 "is_payable": False,
                 "metadata": [],
                 "name": "Savings Account",
@@ -194,7 +194,7 @@ async def main():
                     },
                 ],
                 "type": shared.Type.ACCOUNTS_RECEIVABLE,
-                "updated_at": parse_datetime("2023-08-16T00:59:24.548Z"),
+                "updated_at": parse_datetime("2023-08-16T07:36:30.450Z"),
             },
             "connection_id": "<id>",
         })
@@ -2414,7 +2414,10 @@ asyncio.run(main())
 
 ### [Person](docs/sdks/person/README.md)
 
+* [get_unified_person](docs/sdks/person/README.md#get_unified_person) - Retrieve a person by ID
 * [list_enrich_people](docs/sdks/person/README.md#list_enrich_people) - Retrieve enrichment information for a person
+* [list_unified_people](docs/sdks/person/README.md#list_unified_people) - Search for persons by email addresses
+* [remove_unified_person](docs/sdks/person/README.md#remove_unified_person) - Erase email addresses from the unified persons
 
 ### [Pipeline](docs/sdks/pipeline/README.md)
 
@@ -3242,6 +3245,7 @@ asyncio.run(main())
 * [get_unified_connection](docs/sdks/unified/README.md#get_unified_connection) - Retrieve connection
 * [get_unified_integration_auth](docs/sdks/unified/README.md#get_unified_integration_auth) - Authorize or re-authorize a connection
 * [get_unified_issue](docs/sdks/unified/README.md#get_unified_issue) - Retrieve support issue
+* [get_unified_person](docs/sdks/unified/README.md#get_unified_person) - Retrieve a person by ID
 * [get_unified_secretsmanager](docs/sdks/unified/README.md#get_unified_secretsmanager) - Retrieve secrets manager
 * [get_unified_webhook](docs/sdks/unified/README.md#get_unified_webhook) - Retrieve webhook by its ID
 * [get_unified_workspaceintegration](docs/sdks/unified/README.md#get_unified_workspaceintegration) - Retrieve workspace integration
@@ -3252,6 +3256,7 @@ asyncio.run(main())
 * [list_unified_integrations](docs/sdks/unified/README.md#list_unified_integrations) - Returns all integrations
 * [list_unified_issues](docs/sdks/unified/README.md#list_unified_issues) - List support issues
 * [list_unified_notifications](docs/sdks/unified/README.md#list_unified_notifications) - List event notifications
+* [list_unified_people](docs/sdks/unified/README.md#list_unified_people) - Search for persons by email addresses
 * [list_unified_secretsmanager_instructions](docs/sdks/unified/README.md#list_unified_secretsmanager_instructions) - List secrets manager setup instructions
 * [list_unified_secretsmanager_secrets](docs/sdks/unified/README.md#list_unified_secretsmanager_secrets) - List secrets in a secrets manager
 * [list_unified_secretsmanagers](docs/sdks/unified/README.md#list_unified_secretsmanagers) - List secrets managers
@@ -3265,6 +3270,7 @@ asyncio.run(main())
 * [patch_unified_workspaceintegration](docs/sdks/unified/README.md#patch_unified_workspaceintegration) - Update workspace integration
 * [remove_unified_connection](docs/sdks/unified/README.md#remove_unified_connection) - Remove connection
 * [remove_unified_environment](docs/sdks/unified/README.md#remove_unified_environment) - Remove an environment
+* [remove_unified_person](docs/sdks/unified/README.md#remove_unified_person) - Erase email addresses from the unified persons
 * [remove_unified_secretsmanager](docs/sdks/unified/README.md#remove_unified_secretsmanager) - Remove secrets manager
 * [remove_unified_webhook](docs/sdks/unified/README.md#remove_unified_webhook) - Remove webhook subscription
 * [remove_unified_workspaceintegration](docs/sdks/unified/README.md#remove_unified_workspaceintegration) - Remove workspace integration
@@ -3446,7 +3452,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Comedo vilitas harum cupiditate animus quo iste.",
-            "id": "163a68aa-dffa-47cd-8735-bba178c623d5",
+            "id": "b577962a-e75c-499f-bac0-98e67860a31b",
             "is_payable": False,
             "metadata": [],
             "name": "Savings Account",
@@ -3459,7 +3465,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-16T00:59:24.548Z"),
+            "updated_at": parse_datetime("2023-08-16T07:36:30.450Z"),
         },
         "connection_id": "<id>",
     },
@@ -3493,7 +3499,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Comedo vilitas harum cupiditate animus quo iste.",
-            "id": "163a68aa-dffa-47cd-8735-bba178c623d5",
+            "id": "b577962a-e75c-499f-bac0-98e67860a31b",
             "is_payable": False,
             "metadata": [],
             "name": "Savings Account",
@@ -3506,7 +3512,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-16T00:59:24.548Z"),
+            "updated_at": parse_datetime("2023-08-16T07:36:30.450Z"),
         },
         "connection_id": "<id>",
     })
@@ -3554,7 +3560,7 @@ with UnifiedTo(
                 "currency": "CAD",
                 "customer_defined_code": "6170",
                 "description": "Comedo vilitas harum cupiditate animus quo iste.",
-                "id": "163a68aa-dffa-47cd-8735-bba178c623d5",
+                "id": "b577962a-e75c-499f-bac0-98e67860a31b",
                 "is_payable": False,
                 "metadata": [],
                 "name": "Savings Account",
@@ -3567,7 +3573,7 @@ with UnifiedTo(
                     },
                 ],
                 "type": shared.Type.ACCOUNTS_RECEIVABLE,
-                "updated_at": parse_datetime("2023-08-16T00:59:24.548Z"),
+                "updated_at": parse_datetime("2023-08-16T07:36:30.450Z"),
             },
             "connection_id": "<id>",
         })
@@ -3645,7 +3651,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Comedo vilitas harum cupiditate animus quo iste.",
-            "id": "163a68aa-dffa-47cd-8735-bba178c623d5",
+            "id": "b577962a-e75c-499f-bac0-98e67860a31b",
             "is_payable": False,
             "metadata": [],
             "name": "Savings Account",
@@ -3658,7 +3664,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-16T00:59:24.548Z"),
+            "updated_at": parse_datetime("2023-08-16T07:36:30.450Z"),
         },
         "connection_id": "<id>",
     })
@@ -3693,7 +3699,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Comedo vilitas harum cupiditate animus quo iste.",
-            "id": "163a68aa-dffa-47cd-8735-bba178c623d5",
+            "id": "b577962a-e75c-499f-bac0-98e67860a31b",
             "is_payable": False,
             "metadata": [],
             "name": "Savings Account",
@@ -3706,7 +3712,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-16T00:59:24.548Z"),
+            "updated_at": parse_datetime("2023-08-16T07:36:30.450Z"),
         },
         "connection_id": "<id>",
     })
@@ -3849,7 +3855,7 @@ with UnifiedTo(
             "currency": "CAD",
             "customer_defined_code": "6170",
             "description": "Comedo vilitas harum cupiditate animus quo iste.",
-            "id": "163a68aa-dffa-47cd-8735-bba178c623d5",
+            "id": "b577962a-e75c-499f-bac0-98e67860a31b",
             "is_payable": False,
             "metadata": [],
             "name": "Savings Account",
@@ -3862,7 +3868,7 @@ with UnifiedTo(
                 },
             ],
             "type": shared.Type.ACCOUNTS_RECEIVABLE,
-            "updated_at": parse_datetime("2023-08-16T00:59:24.548Z"),
+            "updated_at": parse_datetime("2023-08-16T07:36:30.450Z"),
         },
         "connection_id": "<id>",
     })

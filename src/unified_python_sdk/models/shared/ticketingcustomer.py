@@ -5,9 +5,10 @@ from .ticketingemail import TicketingEmail, TicketingEmailTypedDict
 from .ticketingmetadata import TicketingMetadata, TicketingMetadataTypedDict
 from .ticketingtelephone import TicketingTelephone, TicketingTelephoneTypedDict
 from datetime import datetime
+import pydantic
 from pydantic import model_serializer
 from typing import Any, Dict, List, Optional
-from typing_extensions import NotRequired, TypedDict
+from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk.types import (
     BaseModel,
     UNSET_SENTINEL,
@@ -18,6 +19,8 @@ from unified_python_sdk.types.basemodel import current_filtered_dump
 
 
 class TicketingCustomerTypedDict(TypedDict):
+    unified_person_ids: NotRequired[List[str]]
+    r"""Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields"""
     created_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     emails: NotRequired[List[TicketingEmailTypedDict]]
@@ -32,6 +35,11 @@ class TicketingCustomerTypedDict(TypedDict):
 
 
 class TicketingCustomer(BaseModel):
+    unified_person_ids: Annotated[
+        Optional[List[str]], pydantic.Field(alias="__unified_person_ids")
+    ] = None
+    r"""Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields"""
+
     created_at: Optional[datetime] = None
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
@@ -59,6 +67,7 @@ class TicketingCustomer(BaseModel):
     def serialize_model(self, handler):
         optional_fields = set(
             [
+                "__unified_person_ids",
                 "created_at",
                 "emails",
                 "id",
@@ -86,3 +95,9 @@ class TicketingCustomer(BaseModel):
                     m[k] = val
 
         return m
+
+
+try:
+    TicketingCustomer.model_rebuild()
+except NameError:
+    pass

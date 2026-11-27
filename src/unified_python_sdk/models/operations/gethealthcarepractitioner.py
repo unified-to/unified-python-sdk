@@ -44,6 +44,7 @@ class GetHealthcarePractitionerQueryParamFields(str, Enum):
     IS_ACTIVE = "is_active"
     METADATA = "metadata"
     RAW = "raw"
+    UNIFIED_PERSON_IDS = "__unified_person_ids"
 
 
 class GetHealthcarePractitionerRequestTypedDict(TypedDict):

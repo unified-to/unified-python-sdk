@@ -74,6 +74,7 @@ class PatchHrisEmployeeQueryParamFields(str, Enum):
     LEAVE_END_AT = "leave_end_at"
     EMPLOYMENT_STATUS_REASON = "employment_status_reason"
     RAW = "raw"
+    UNIFIED_PERSON_IDS = "__unified_person_ids"
 
 
 class PatchHrisEmployeeRequestTypedDict(TypedDict):

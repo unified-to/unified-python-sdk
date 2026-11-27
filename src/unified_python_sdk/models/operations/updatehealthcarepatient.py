@@ -48,6 +48,7 @@ class UpdateHealthcarePatientQueryParamFields(str, Enum):
     CONTACTS = "contacts"
     METADATA = "metadata"
     RAW = "raw"
+    UNIFIED_PERSON_IDS = "__unified_person_ids"
 
 
 class UpdateHealthcarePatientRequestTypedDict(TypedDict):

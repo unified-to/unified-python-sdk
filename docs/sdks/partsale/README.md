@@ -36,10 +36,10 @@ with UnifiedTo(
             "currency": "USD",
             "discount_amount": 0.0,
             "freight_amount": 0.0,
-            "id": "8c8fcfa6-dca2-491c-9275-b6a5936d328a",
+            "id": "3ab4e703-0ac9-4604-ad3a-805c3f5f9c24",
             "lines": [
                 {
-                    "id": "3675b135-1418-494c-bbb8-9b768f22c5cd",
+                    "id": "2c511f11-8e5b-4999-919c-3de7cca28cae",
                     "pay_type": shared.DmsPartlinePayType.CUSTOMER,
                     "quantity": 5.0,
                     "quantity_ordered": 5.0,
@@ -47,7 +47,7 @@ with UnifiedTo(
                     "unit_price_amount": 98.29,
                 },
                 {
-                    "id": "99850d2e-ecde-4846-bc73-e9e1b93c4214",
+                    "id": "8b91c82f-6dc4-4047-bb88-995bfd66340d",
                     "pay_type": shared.DmsPartlinePayType.CUSTOMER,
                     "quantity": 2.0,
                     "quantity_ordered": 2.0,
@@ -55,7 +55,7 @@ with UnifiedTo(
                     "unit_price_amount": 120.45,
                 },
                 {
-                    "id": "49f90062-4f84-478b-a7c0-a8caa949741a",
+                    "id": "7f0ff54b-fb03-4f2b-aea4-480c598fa9c6",
                     "pay_type": shared.DmsPartlinePayType.CUSTOMER,
                     "quantity": 3.0,
                     "quantity_ordered": 3.0,
@@ -71,7 +71,7 @@ with UnifiedTo(
             "tax_amount": 68.73,
             "total_amount": 1050.62,
             "type": shared.DmsPartsaleType.SALE,
-            "updated_at": parse_datetime("2026-04-17T16:03:18.260Z"),
+            "updated_at": parse_datetime("2026-04-18T13:34:58.702Z"),
         },
         "connection_id": "<id>",
     })
@@ -219,10 +219,10 @@ with UnifiedTo(
             "currency": "USD",
             "discount_amount": 0.0,
             "freight_amount": 0.0,
-            "id": "c577212b-856c-4afa-b866-510023c35189",
+            "id": "80e2a6c4-4a59-4f2f-a84a-744b6cdd9e54",
             "lines": [
                 {
-                    "id": "95290c13-4f44-4bb9-92a2-e5dab8e5e43f",
+                    "id": "0f9f5bb6-4215-416f-ac99-8de0d19a2287",
                     "pay_type": shared.DmsPartlinePayType.CUSTOMER,
                     "quantity": 5.0,
                     "quantity_ordered": 5.0,
@@ -230,7 +230,7 @@ with UnifiedTo(
                     "unit_price_amount": 98.29,
                 },
                 {
-                    "id": "08f9368b-c157-4968-bdd5-4af302744207",
+                    "id": "d27ab4d3-e8c8-4201-a6e7-facc8ecd2009",
                     "pay_type": shared.DmsPartlinePayType.CUSTOMER,
                     "quantity": 2.0,
                     "quantity_ordered": 2.0,
@@ -238,7 +238,7 @@ with UnifiedTo(
                     "unit_price_amount": 120.45,
                 },
                 {
-                    "id": "8a489684-dbcc-4342-ab28-1caac8e76023",
+                    "id": "932bf4d7-1d06-4b7a-ba30-814a3be2be1e",
                     "pay_type": shared.DmsPartlinePayType.CUSTOMER,
                     "quantity": 3.0,
                     "quantity_ordered": 3.0,
@@ -254,7 +254,7 @@ with UnifiedTo(
             "tax_amount": 68.73,
             "total_amount": 1050.62,
             "type": shared.DmsPartsaleType.SALE,
-            "updated_at": parse_datetime("2026-04-17T16:03:18.289Z"),
+            "updated_at": parse_datetime("2026-04-18T13:34:58.730Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -310,10 +310,10 @@ with UnifiedTo(
             "currency": "USD",
             "discount_amount": 0.0,
             "freight_amount": 0.0,
-            "id": "c577212b-856c-4afa-b866-510023c35189",
+            "id": "80e2a6c4-4a59-4f2f-a84a-744b6cdd9e54",
             "lines": [
                 {
-                    "id": "95290c13-4f44-4bb9-92a2-e5dab8e5e43f",
+                    "id": "0f9f5bb6-4215-416f-ac99-8de0d19a2287",
                     "pay_type": shared.DmsPartlinePayType.CUSTOMER,
                     "quantity": 5.0,
                     "quantity_ordered": 5.0,
@@ -321,7 +321,7 @@ with UnifiedTo(
                     "unit_price_amount": 98.29,
                 },
                 {
-                    "id": "08f9368b-c157-4968-bdd5-4af302744207",
+                    "id": "d27ab4d3-e8c8-4201-a6e7-facc8ecd2009",
                     "pay_type": shared.DmsPartlinePayType.CUSTOMER,
                     "quantity": 2.0,
                     "quantity_ordered": 2.0,
@@ -329,7 +329,7 @@ with UnifiedTo(
                     "unit_price_amount": 120.45,
                 },
                 {
-                    "id": "8a489684-dbcc-4342-ab28-1caac8e76023",
+                    "id": "932bf4d7-1d06-4b7a-ba30-814a3be2be1e",
                     "pay_type": shared.DmsPartlinePayType.CUSTOMER,
                     "quantity": 3.0,
                     "quantity_ordered": 3.0,
@@ -345,7 +345,7 @@ with UnifiedTo(
             "tax_amount": 68.73,
             "total_amount": 1050.62,
             "type": shared.DmsPartsaleType.SALE,
-            "updated_at": parse_datetime("2026-04-17T16:03:18.289Z"),
+            "updated_at": parse_datetime("2026-04-18T13:34:58.730Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

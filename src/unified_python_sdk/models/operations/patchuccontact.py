@@ -35,6 +35,7 @@ class PatchUcContactQueryParamFields(str, Enum):
     TELEPHONES = "telephones"
     METADATA = "metadata"
     RAW = "raw"
+    UNIFIED_PERSON_IDS = "__unified_person_ids"
 
 
 class PatchUcContactRequestTypedDict(TypedDict):

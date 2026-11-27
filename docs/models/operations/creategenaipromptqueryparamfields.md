@@ -25,4 +25,7 @@ value = CreateGenaiPromptQueryParamFields.MODEL_ID
 | `QUESTIONS`               | questions                 |
 | `ANSWERS`                 | answers                   |
 | `SKILL_IDS`               | skill_ids                 |
+| `ID`                      | id                        |
+| `PARENT_ID`               | parent_id                 |
+| `HAS_THREAD`              | has_thread                |
 | `RAW`                     | raw                       |

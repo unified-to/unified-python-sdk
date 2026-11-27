@@ -5,9 +5,10 @@ from .lmsemail import LmsEmail, LmsEmailTypedDict
 from .lmsmetadata import LmsMetadata, LmsMetadataTypedDict
 from .lmstelephone import LmsTelephone, LmsTelephoneTypedDict
 from datetime import datetime
+import pydantic
 from pydantic import model_serializer
 from typing import Any, Dict, List, Optional
-from typing_extensions import NotRequired, TypedDict
+from typing_extensions import Annotated, NotRequired, TypedDict
 from unified_python_sdk.types import (
     BaseModel,
     UNSET_SENTINEL,
@@ -18,6 +19,8 @@ from unified_python_sdk.types.basemodel import current_filtered_dump
 
 
 class LmsInstructorTypedDict(TypedDict):
+    unified_person_ids: NotRequired[List[str]]
+    r"""Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields"""
     created_at: NotRequired[datetime]
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
     emails: NotRequired[List[LmsEmailTypedDict]]
@@ -35,6 +38,11 @@ class LmsInstructorTypedDict(TypedDict):
 
 
 class LmsInstructor(BaseModel):
+    unified_person_ids: Annotated[
+        Optional[List[str]], pydantic.Field(alias="__unified_person_ids")
+    ] = None
+    r"""Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields"""
+
     created_at: Optional[datetime] = None
     r"""(ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)"""
 
@@ -68,6 +76,7 @@ class LmsInstructor(BaseModel):
     def serialize_model(self, handler):
         optional_fields = set(
             [
+                "__unified_person_ids",
                 "created_at",
                 "emails",
                 "first_name",
@@ -98,3 +107,9 @@ class LmsInstructor(BaseModel):
                     m[k] = val
 
         return m
+
+
+try:
+    LmsInstructor.model_rebuild()
+except NameError:
+    pass

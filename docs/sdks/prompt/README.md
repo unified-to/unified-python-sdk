@@ -45,6 +45,8 @@ with UnifiedTo(
                     "value": "vilicus",
                 },
             ],
+            "has_thread": False,
+            "id": "lGiOgAB6MLc1sMVUZnBJtXQG",
             "max_tokens": 0.4677782787475735,
             "mcp_authorization_token": "45c837a2-ed2d-458f-b4bc-782f4a6b065b",
             "mcp_deferred_tools": [],

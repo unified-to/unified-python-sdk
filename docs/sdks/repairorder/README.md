@@ -32,23 +32,23 @@ with UnifiedTo(
     res = unified_to.repairorder.create_dms_repairorder(request={
         "dms_repairorder": {
             "balance_amount": 3193.86,
-            "completed_at": parse_datetime("2026-11-12T19:17:42.253Z"),
+            "completed_at": parse_datetime("2026-11-13T21:06:05.397Z"),
             "created_at": parse_datetime("2022-10-25T15:50:48.007Z"),
             "currency": "USD",
             "discount_amount": 0.0,
             "estimate_amount": 3264.0,
-            "id": "7fb2dd80-bcfa-4c94-8c60-b2d2b9a4343a",
+            "id": "dc719e46-db55-4160-946a-3f77af194de5",
             "jobs": [
                 {
                     "actual_hours": 3.6,
                     "cause": "Scheduled maintenance",
                     "complaint": "Due for service",
                     "correction": "Aufero cumque vicinus aptus assumenda quis aptus.",
-                    "id": "a3e10710-eaf3-42c0-a284-3b2bb7a069e7",
+                    "id": "adc18f6f-7a66-4082-b11d-77d199708403",
                     "labor_amount": 681.6,
                     "labors": [
                         {
-                            "id": "9dfd5a09-1f6c-421b-b16c-aed61a5c14e6",
+                            "id": "9cd64624-d6f6-4006-af05-04fb1e6163a8",
                             "pay_type": shared.DmsRepairorderLaborPayType.WARRANTY,
                             "rate_amount": 213.0,
                             "sold_hours": 3.2,
@@ -71,11 +71,11 @@ with UnifiedTo(
                     "cause": "Worn brake pads",
                     "complaint": "Vibration at highway speed",
                     "correction": "Somnus avaritia utroque vulnero ullam ancilla.",
-                    "id": "45a15ebd-8869-4c49-9e59-c8ab00015b01",
+                    "id": "7756a388-77a7-4150-aaba-ed8cc9ec6b3c",
                     "labor_amount": 446.4,
                     "labors": [
                         {
-                            "id": "d18cb9c4-81bd-4cd5-bf32-eff004254921",
+                            "id": "b45ae8ab-d54c-4120-8aac-0a43c6b6af86",
                             "pay_type": shared.DmsRepairorderLaborPayType.WARRANTY,
                             "rate_amount": 144.0,
                             "sold_hours": 3.1,
@@ -87,7 +87,7 @@ with UnifiedTo(
                     "number": "B",
                     "parts": [
                         {
-                            "id": "a9f379cc-9f18-4ac2-9723-7fda4061e45e",
+                            "id": "18c49469-b13a-44ec-ad67-54580ebe4a44",
                             "pay_type": shared.DmsPartlinePayType.WARRANTY,
                             "quantity": 4.0,
                             "quantity_ordered": 4.0,
@@ -95,7 +95,7 @@ with UnifiedTo(
                             "unit_price_amount": 222.61,
                         },
                         {
-                            "id": "884c9571-00e2-402a-9c24-6522d26444c3",
+                            "id": "5620085d-b50b-4943-a8fe-fda3ae0dfd7f",
                             "pay_type": shared.DmsPartlinePayType.WARRANTY,
                             "quantity": 2.0,
                             "quantity_ordered": 2.0,
@@ -115,11 +115,11 @@ with UnifiedTo(
                     "cause": "Scheduled maintenance",
                     "complaint": "Noise when braking",
                     "correction": "Degero theca natus.",
-                    "id": "e20d5136-0721-4308-84ca-8e748a8afbe4",
+                    "id": "ab68f656-72ed-4a62-8229-a91d2db58a8a",
                     "labor_amount": 232.4,
                     "labors": [
                         {
-                            "id": "18657ec3-723a-4418-9319-fdb6e7cfd8e9",
+                            "id": "4809d0fd-bf7e-4757-80c5-c56a00d26455",
                             "pay_type": shared.DmsRepairorderLaborPayType.CUSTOMER,
                             "rate_amount": 166.0,
                             "sold_hours": 1.4,
@@ -131,7 +131,7 @@ with UnifiedTo(
                     "number": "C",
                     "parts": [
                         {
-                            "id": "b26e6eaa-eadf-444f-b4be-3438e950d554",
+                            "id": "a59ab044-7d30-450d-a7e5-ebc11ca33c00",
                             "pay_type": shared.DmsPartlinePayType.CUSTOMER,
                             "quantity": 1.0,
                             "quantity_ordered": 1.0,
@@ -139,7 +139,7 @@ with UnifiedTo(
                             "unit_price_amount": 216.02,
                         },
                         {
-                            "id": "775ba6c5-dc39-4dfd-9c5e-f2139c2f652f",
+                            "id": "b16b8295-b596-4c55-8c76-d364ff00df0e",
                             "pay_type": shared.DmsPartlinePayType.CUSTOMER,
                             "quantity": 2.0,
                             "quantity_ordered": 2.0,
@@ -162,10 +162,10 @@ with UnifiedTo(
             "odometer_in": 7776.0,
             "odometer_out": 7776.0,
             "odometer_unit": shared.DmsRepairorderOdometerUnit.MILES,
-            "opened_at": parse_datetime("2025-02-07T19:13:16.323Z"),
+            "opened_at": parse_datetime("2025-02-08T09:48:33.256Z"),
             "parts_amount": 1680.8000000000002,
             "pay_type": shared.DmsRepairorderPayType.WARRANTY,
-            "promised_at": parse_datetime("2025-02-09T03:13:16.323Z"),
+            "promised_at": parse_datetime("2025-02-09T17:48:33.256Z"),
             "purchase_order_number": "182743",
             "status": shared.DmsRepairorderStatus.COMPLETED,
             "sublet_amount": 0.0,
@@ -192,7 +192,7 @@ with UnifiedTo(
                 },
             ],
             "transport_type": shared.DmsRepairorderTransportType.LOANER,
-            "updated_at": parse_datetime("2025-11-27T22:05:41.752Z"),
+            "updated_at": parse_datetime("2025-11-28T17:47:49.166Z"),
         },
         "connection_id": "<id>",
     })
@@ -336,23 +336,23 @@ with UnifiedTo(
     res = unified_to.repairorder.patch_dms_repairorder(request={
         "dms_repairorder": {
             "balance_amount": 3193.86,
-            "completed_at": parse_datetime("2026-11-12T19:17:42.307Z"),
+            "completed_at": parse_datetime("2026-11-13T21:06:05.448Z"),
             "created_at": parse_datetime("2022-10-25T15:50:48.007Z"),
             "currency": "USD",
             "discount_amount": 0.0,
             "estimate_amount": 3264.0,
-            "id": "205d65d6-f300-436e-a728-71ed9ac8cb5c",
+            "id": "8d67956e-05e3-4060-9554-8ae10272eaac",
             "jobs": [
                 {
                     "actual_hours": 3.6,
                     "cause": "Scheduled maintenance",
                     "complaint": "Due for service",
                     "correction": "Aufero cumque vicinus aptus assumenda quis aptus.",
-                    "id": "426874d7-2e52-4162-8b6c-8639c58d18b5",
+                    "id": "341cec2f-355f-4449-9d9b-7dcdb991d0c0",
                     "labor_amount": 681.6,
                     "labors": [
                         {
-                            "id": "e1009e6c-2d8d-446c-8269-bcc66c32cd67",
+                            "id": "8c7d6a5a-a065-416e-9101-a30648e6aaf4",
                             "pay_type": shared.DmsRepairorderLaborPayType.WARRANTY,
                             "rate_amount": 213.0,
                             "sold_hours": 3.2,
@@ -375,11 +375,11 @@ with UnifiedTo(
                     "cause": "Worn brake pads",
                     "complaint": "Vibration at highway speed",
                     "correction": "Somnus avaritia utroque vulnero ullam ancilla.",
-                    "id": "7a124d15-1bb6-491d-adc1-579be2c00466",
+                    "id": "91d64421-8d6e-413e-8786-f32fbd2c9c42",
                     "labor_amount": 446.4,
                     "labors": [
                         {
-                            "id": "bf400c19-1912-4255-b38c-bdc5cb87abf6",
+                            "id": "fe0da275-b721-4a6f-9c92-afc08267fa24",
                             "pay_type": shared.DmsRepairorderLaborPayType.WARRANTY,
                             "rate_amount": 144.0,
                             "sold_hours": 3.1,
@@ -391,7 +391,7 @@ with UnifiedTo(
                     "number": "B",
                     "parts": [
                         {
-                            "id": "5d8d7099-cdda-4146-b08c-46d84fba20a8",
+                            "id": "57047be4-d9a2-4a03-94bd-8631dfbee458",
                             "pay_type": shared.DmsPartlinePayType.WARRANTY,
                             "quantity": 4.0,
                             "quantity_ordered": 4.0,
@@ -399,7 +399,7 @@ with UnifiedTo(
                             "unit_price_amount": 222.61,
                         },
                         {
-                            "id": "9a7d805a-b9d9-4663-86e4-0e9b32dba051",
+                            "id": "a7bc1a47-80e4-452a-a93b-85fbf11d6c5f",
                             "pay_type": shared.DmsPartlinePayType.WARRANTY,
                             "quantity": 2.0,
                             "quantity_ordered": 2.0,
@@ -419,11 +419,11 @@ with UnifiedTo(
                     "cause": "Scheduled maintenance",
                     "complaint": "Noise when braking",
                     "correction": "Degero theca natus.",
-                    "id": "8fe8640a-c7a2-4ad5-86ef-a016db57c58a",
+                    "id": "ebd74b7b-1c48-4080-a29b-5b2cc98dd670",
                     "labor_amount": 232.4,
                     "labors": [
                         {
-                            "id": "1e1d8015-f3f9-4d90-bede-5f2b99783e47",
+                            "id": "b4e0b848-1f51-4597-bcdb-0012855eaf6c",
                             "pay_type": shared.DmsRepairorderLaborPayType.CUSTOMER,
                             "rate_amount": 166.0,
                             "sold_hours": 1.4,
@@ -435,7 +435,7 @@ with UnifiedTo(
                     "number": "C",
                     "parts": [
                         {
-                            "id": "9237d282-5b87-4e09-bb1f-363fc2a6296e",
+                            "id": "87eb884f-e1f5-4b37-b558-748a86b6d514",
                             "pay_type": shared.DmsPartlinePayType.CUSTOMER,
                             "quantity": 1.0,
                             "quantity_ordered": 1.0,
@@ -443,7 +443,7 @@ with UnifiedTo(
                             "unit_price_amount": 216.02,
                         },
                         {
-                            "id": "884766ed-b7f1-4902-9a06-1a0837b87653",
+                            "id": "4e2754af-f2b3-49d4-bc9f-ea6114e3f975",
                             "pay_type": shared.DmsPartlinePayType.CUSTOMER,
                             "quantity": 2.0,
                             "quantity_ordered": 2.0,
@@ -466,10 +466,10 @@ with UnifiedTo(
             "odometer_in": 7776.0,
             "odometer_out": 7776.0,
             "odometer_unit": shared.DmsRepairorderOdometerUnit.MILES,
-            "opened_at": parse_datetime("2025-02-07T19:13:16.353Z"),
+            "opened_at": parse_datetime("2025-02-08T09:48:33.286Z"),
             "parts_amount": 1680.8000000000002,
             "pay_type": shared.DmsRepairorderPayType.WARRANTY,
-            "promised_at": parse_datetime("2025-02-09T03:13:16.353Z"),
+            "promised_at": parse_datetime("2025-02-09T17:48:33.286Z"),
             "purchase_order_number": "182743",
             "status": shared.DmsRepairorderStatus.COMPLETED,
             "sublet_amount": 0.0,
@@ -496,7 +496,7 @@ with UnifiedTo(
                 },
             ],
             "transport_type": shared.DmsRepairorderTransportType.LOANER,
-            "updated_at": parse_datetime("2025-11-27T22:05:41.793Z"),
+            "updated_at": parse_datetime("2025-11-28T17:47:49.205Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -548,23 +548,23 @@ with UnifiedTo(
     res = unified_to.repairorder.update_dms_repairorder(request={
         "dms_repairorder": {
             "balance_amount": 3193.86,
-            "completed_at": parse_datetime("2026-11-12T19:17:42.307Z"),
+            "completed_at": parse_datetime("2026-11-13T21:06:05.448Z"),
             "created_at": parse_datetime("2022-10-25T15:50:48.007Z"),
             "currency": "USD",
             "discount_amount": 0.0,
             "estimate_amount": 3264.0,
-            "id": "205d65d6-f300-436e-a728-71ed9ac8cb5c",
+            "id": "8d67956e-05e3-4060-9554-8ae10272eaac",
             "jobs": [
                 {
                     "actual_hours": 3.6,
                     "cause": "Scheduled maintenance",
                     "complaint": "Due for service",
                     "correction": "Aufero cumque vicinus aptus assumenda quis aptus.",
-                    "id": "426874d7-2e52-4162-8b6c-8639c58d18b5",
+                    "id": "341cec2f-355f-4449-9d9b-7dcdb991d0c0",
                     "labor_amount": 681.6,
                     "labors": [
                         {
-                            "id": "e1009e6c-2d8d-446c-8269-bcc66c32cd67",
+                            "id": "8c7d6a5a-a065-416e-9101-a30648e6aaf4",
                             "pay_type": shared.DmsRepairorderLaborPayType.WARRANTY,
                             "rate_amount": 213.0,
                             "sold_hours": 3.2,
@@ -587,11 +587,11 @@ with UnifiedTo(
                     "cause": "Worn brake pads",
                     "complaint": "Vibration at highway speed",
                     "correction": "Somnus avaritia utroque vulnero ullam ancilla.",
-                    "id": "7a124d15-1bb6-491d-adc1-579be2c00466",
+                    "id": "91d64421-8d6e-413e-8786-f32fbd2c9c42",
                     "labor_amount": 446.4,
                     "labors": [
                         {
-                            "id": "bf400c19-1912-4255-b38c-bdc5cb87abf6",
+                            "id": "fe0da275-b721-4a6f-9c92-afc08267fa24",
                             "pay_type": shared.DmsRepairorderLaborPayType.WARRANTY,
                             "rate_amount": 144.0,
                             "sold_hours": 3.1,
@@ -603,7 +603,7 @@ with UnifiedTo(
                     "number": "B",
                     "parts": [
                         {
-                            "id": "5d8d7099-cdda-4146-b08c-46d84fba20a8",
+                            "id": "57047be4-d9a2-4a03-94bd-8631dfbee458",
                             "pay_type": shared.DmsPartlinePayType.WARRANTY,
                             "quantity": 4.0,
                             "quantity_ordered": 4.0,
@@ -611,7 +611,7 @@ with UnifiedTo(
                             "unit_price_amount": 222.61,
                         },
                         {
-                            "id": "9a7d805a-b9d9-4663-86e4-0e9b32dba051",
+                            "id": "a7bc1a47-80e4-452a-a93b-85fbf11d6c5f",
                             "pay_type": shared.DmsPartlinePayType.WARRANTY,
                             "quantity": 2.0,
                             "quantity_ordered": 2.0,
@@ -631,11 +631,11 @@ with UnifiedTo(
                     "cause": "Scheduled maintenance",
                     "complaint": "Noise when braking",
                     "correction": "Degero theca natus.",
-                    "id": "8fe8640a-c7a2-4ad5-86ef-a016db57c58a",
+                    "id": "ebd74b7b-1c48-4080-a29b-5b2cc98dd670",
                     "labor_amount": 232.4,
                     "labors": [
                         {
-                            "id": "1e1d8015-f3f9-4d90-bede-5f2b99783e47",
+                            "id": "b4e0b848-1f51-4597-bcdb-0012855eaf6c",
                             "pay_type": shared.DmsRepairorderLaborPayType.CUSTOMER,
                             "rate_amount": 166.0,
                             "sold_hours": 1.4,
@@ -647,7 +647,7 @@ with UnifiedTo(
                     "number": "C",
                     "parts": [
                         {
-                            "id": "9237d282-5b87-4e09-bb1f-363fc2a6296e",
+                            "id": "87eb884f-e1f5-4b37-b558-748a86b6d514",
                             "pay_type": shared.DmsPartlinePayType.CUSTOMER,
                             "quantity": 1.0,
                             "quantity_ordered": 1.0,
@@ -655,7 +655,7 @@ with UnifiedTo(
                             "unit_price_amount": 216.02,
                         },
                         {
-                            "id": "884766ed-b7f1-4902-9a06-1a0837b87653",
+                            "id": "4e2754af-f2b3-49d4-bc9f-ea6114e3f975",
                             "pay_type": shared.DmsPartlinePayType.CUSTOMER,
                             "quantity": 2.0,
                             "quantity_ordered": 2.0,
@@ -678,10 +678,10 @@ with UnifiedTo(
             "odometer_in": 7776.0,
             "odometer_out": 7776.0,
             "odometer_unit": shared.DmsRepairorderOdometerUnit.MILES,
-            "opened_at": parse_datetime("2025-02-07T19:13:16.353Z"),
+            "opened_at": parse_datetime("2025-02-08T09:48:33.286Z"),
             "parts_amount": 1680.8000000000002,
             "pay_type": shared.DmsRepairorderPayType.WARRANTY,
-            "promised_at": parse_datetime("2025-02-09T03:13:16.353Z"),
+            "promised_at": parse_datetime("2025-02-09T17:48:33.286Z"),
             "purchase_order_number": "182743",
             "status": shared.DmsRepairorderStatus.COMPLETED,
             "sublet_amount": 0.0,
@@ -708,7 +708,7 @@ with UnifiedTo(
                 },
             ],
             "transport_type": shared.DmsRepairorderTransportType.LOANER,
-            "updated_at": parse_datetime("2025-11-27T22:05:41.793Z"),
+            "updated_at": parse_datetime("2025-11-28T17:47:49.205Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

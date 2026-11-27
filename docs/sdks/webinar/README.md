@@ -34,10 +34,10 @@ with UnifiedTo(
         "calendar_webinar": {
             "conference": [],
             "created_at": parse_datetime("2022-07-06T11:45:14.631Z"),
-            "end_at": parse_datetime("2025-11-25T11:27:57.820Z"),
+            "end_at": parse_datetime("2025-11-26T07:34:03.844Z"),
             "has_polls": False,
             "has_recording": False,
-            "id": "e4d44f25-5141-42a8-adf9-418d3627e3be",
+            "id": "df0419b3-87c0-455b-b11b-b93dc34c4c4e",
             "is_auto_approve": False,
             "is_enabled": True,
             "is_webcast": False,
@@ -47,13 +47,13 @@ with UnifiedTo(
             "recurrence": [
                 {
                     "count": 10.0,
-                    "end_at": parse_datetime("2023-09-10T06:35:35.555Z"),
+                    "end_at": parse_datetime("2023-09-10T13:35:16.894Z"),
                     "excluded_dates": [
-                        "2025-03-06T20:52:07.124Z",
+                        "2025-03-07T12:41:24.049Z",
                     ],
                     "frequency": shared.CalendarEventRecurrenceFrequency.MONTHLY,
                     "included_dates": [
-                        "2024-05-13T11:02:09.004Z",
+                        "2024-05-13T22:01:40.981Z",
                     ],
                     "interval": 8.0,
                     "on_days": [
@@ -444,16 +444,16 @@ with UnifiedTo(
                 },
                 {
                     "count": 3.0,
-                    "end_at": parse_datetime("2022-10-02T15:39:50.370Z"),
+                    "end_at": parse_datetime("2022-10-02T17:05:43.893Z"),
                     "excluded_dates": [
-                        "2024-09-19T19:57:37.849Z",
-                        "2024-09-03T22:26:23.845Z",
+                        "2024-09-20T09:03:12.199Z",
+                        "2024-09-04T11:16:28.961Z",
                     ],
                     "frequency": shared.CalendarEventRecurrenceFrequency.DAILY,
                     "included_dates": [
-                        "2024-04-08T13:40:41.051Z",
-                        "2026-02-11T21:59:26.659Z",
-                        "2023-08-23T12:36:26.501Z",
+                        "2024-04-09T00:06:13.554Z",
+                        "2026-02-12T19:21:57.771Z",
+                        "2023-08-23T19:18:50.306Z",
                     ],
                     "interval": 1.0,
                     "on_days": [
@@ -597,16 +597,16 @@ with UnifiedTo(
                 },
                 {
                     "count": 8.0,
-                    "end_at": parse_datetime("2026-08-29T11:58:47.010Z"),
+                    "end_at": parse_datetime("2026-08-30T12:34:46.194Z"),
                     "excluded_dates": [
-                        "2023-06-26T13:32:26.288Z",
-                        "2023-06-15T08:20:49.210Z",
+                        "2023-06-26T19:18:22.003Z",
+                        "2023-06-15T13:55:49.275Z",
                     ],
                     "frequency": shared.CalendarEventRecurrenceFrequency.WEEKLY,
                     "included_dates": [
-                        "2024-04-16T18:58:23.246Z",
-                        "2023-08-29T11:13:55.144Z",
-                        "2024-10-15T14:36:44.050Z",
+                        "2024-04-17T05:31:56.283Z",
+                        "2023-08-29T18:02:06.327Z",
+                        "2024-10-16T04:07:25.192Z",
                     ],
                     "interval": 8.0,
                     "on_days": [
@@ -759,11 +759,11 @@ with UnifiedTo(
             "registrant_password": "0W7J6Dhk",
             "require_address": False,
             "require_job_title": False,
-            "start_at": parse_datetime("2025-05-24T04:12:56.811Z"),
+            "start_at": parse_datetime("2025-05-24T21:18:31.086Z"),
             "status": shared.CalendarWebinarStatus.TENTATIVE,
             "subject": "Ex cubo ancilla cresco textor.",
             "timezone": "Pacific/Pohnpei",
-            "updated_at": parse_datetime("2026-11-04T23:33:30.836Z"),
+            "updated_at": parse_datetime("2026-11-06T01:15:14.677Z"),
             "web_url": "https://nervous-perp.name/",
         },
         "connection_id": "<id>",
@@ -909,10 +909,10 @@ with UnifiedTo(
         "calendar_webinar": {
             "conference": [],
             "created_at": parse_datetime("2022-07-06T11:45:14.631Z"),
-            "end_at": parse_datetime("2025-11-25T11:27:57.860Z"),
+            "end_at": parse_datetime("2025-11-26T07:34:03.876Z"),
             "has_polls": False,
             "has_recording": False,
-            "id": "b67cdd7b-f23e-454a-9084-8af2d6f912ab",
+            "id": "be0c2a9a-e8a7-4b0c-8d0e-7bd66aff9421",
             "is_auto_approve": False,
             "is_enabled": True,
             "is_webcast": False,
@@ -922,13 +922,13 @@ with UnifiedTo(
             "recurrence": [
                 {
                     "count": 10.0,
-                    "end_at": parse_datetime("2023-09-10T06:35:35.569Z"),
+                    "end_at": parse_datetime("2023-09-10T13:35:16.905Z"),
                     "excluded_dates": [
-                        "2025-03-06T20:52:07.155Z",
+                        "2025-03-07T12:41:24.074Z",
                     ],
                     "frequency": shared.CalendarEventRecurrenceFrequency.MONTHLY,
                     "included_dates": [
-                        "2024-05-13T11:02:09.025Z",
+                        "2024-05-13T22:01:40.998Z",
                     ],
                     "interval": 8.0,
                     "on_days": [
@@ -1319,16 +1319,16 @@ with UnifiedTo(
                 },
                 {
                     "count": 3.0,
-                    "end_at": parse_datetime("2022-10-02T15:39:50.372Z"),
+                    "end_at": parse_datetime("2022-10-02T17:05:43.895Z"),
                     "excluded_dates": [
-                        "2024-09-19T19:57:37.875Z",
-                        "2024-09-03T22:26:23.871Z",
+                        "2024-09-20T09:03:12.220Z",
+                        "2024-09-04T11:16:28.982Z",
                     ],
                     "frequency": shared.CalendarEventRecurrenceFrequency.DAILY,
                     "included_dates": [
-                        "2024-04-08T13:40:41.071Z",
-                        "2026-02-11T21:59:26.700Z",
-                        "2023-08-23T12:36:26.515Z",
+                        "2024-04-09T00:06:13.570Z",
+                        "2026-02-12T19:21:57.805Z",
+                        "2023-08-23T19:18:50.317Z",
                     ],
                     "interval": 1.0,
                     "on_days": [
@@ -1472,16 +1472,16 @@ with UnifiedTo(
                 },
                 {
                     "count": 8.0,
-                    "end_at": parse_datetime("2026-08-29T11:58:47.059Z"),
+                    "end_at": parse_datetime("2026-08-30T12:34:46.232Z"),
                     "excluded_dates": [
-                        "2023-06-26T13:32:26.300Z",
-                        "2023-06-15T08:20:49.222Z",
+                        "2023-06-26T19:18:22.012Z",
+                        "2023-06-15T13:55:49.284Z",
                     ],
                     "frequency": shared.CalendarEventRecurrenceFrequency.WEEKLY,
                     "included_dates": [
-                        "2024-04-16T18:58:23.267Z",
-                        "2023-08-29T11:13:55.158Z",
-                        "2024-10-15T14:36:44.077Z",
+                        "2024-04-17T05:31:56.299Z",
+                        "2023-08-29T18:02:06.337Z",
+                        "2024-10-16T04:07:25.213Z",
                     ],
                     "interval": 8.0,
                     "on_days": [
@@ -1634,11 +1634,11 @@ with UnifiedTo(
             "registrant_password": "0W7J6Dhk",
             "require_address": False,
             "require_job_title": False,
-            "start_at": parse_datetime("2025-05-24T04:12:56.845Z"),
+            "start_at": parse_datetime("2025-05-24T21:18:31.113Z"),
             "status": shared.CalendarWebinarStatus.TENTATIVE,
             "subject": "Ex cubo ancilla cresco textor.",
             "timezone": "Pacific/Pohnpei",
-            "updated_at": parse_datetime("2026-11-04T23:33:30.887Z"),
+            "updated_at": parse_datetime("2026-11-06T01:15:14.717Z"),
             "web_url": "https://nervous-perp.name/",
         },
         "connection_id": "<id>",
@@ -1739,10 +1739,10 @@ with UnifiedTo(
         "calendar_webinar": {
             "conference": [],
             "created_at": parse_datetime("2022-07-06T11:45:14.631Z"),
-            "end_at": parse_datetime("2025-11-25T11:27:57.860Z"),
+            "end_at": parse_datetime("2025-11-26T07:34:03.876Z"),
             "has_polls": False,
             "has_recording": False,
-            "id": "b67cdd7b-f23e-454a-9084-8af2d6f912ab",
+            "id": "be0c2a9a-e8a7-4b0c-8d0e-7bd66aff9421",
             "is_auto_approve": False,
             "is_enabled": True,
             "is_webcast": False,
@@ -1752,13 +1752,13 @@ with UnifiedTo(
             "recurrence": [
                 {
                     "count": 10.0,
-                    "end_at": parse_datetime("2023-09-10T06:35:35.569Z"),
+                    "end_at": parse_datetime("2023-09-10T13:35:16.905Z"),
                     "excluded_dates": [
-                        "2025-03-06T20:52:07.155Z",
+                        "2025-03-07T12:41:24.074Z",
                     ],
                     "frequency": shared.CalendarEventRecurrenceFrequency.MONTHLY,
                     "included_dates": [
-                        "2024-05-13T11:02:09.025Z",
+                        "2024-05-13T22:01:40.998Z",
                     ],
                     "interval": 8.0,
                     "on_days": [
@@ -2149,16 +2149,16 @@ with UnifiedTo(
                 },
                 {
                     "count": 3.0,
-                    "end_at": parse_datetime("2022-10-02T15:39:50.372Z"),
+                    "end_at": parse_datetime("2022-10-02T17:05:43.895Z"),
                     "excluded_dates": [
-                        "2024-09-19T19:57:37.875Z",
-                        "2024-09-03T22:26:23.871Z",
+                        "2024-09-20T09:03:12.220Z",
+                        "2024-09-04T11:16:28.982Z",
                     ],
                     "frequency": shared.CalendarEventRecurrenceFrequency.DAILY,
                     "included_dates": [
-                        "2024-04-08T13:40:41.071Z",
-                        "2026-02-11T21:59:26.700Z",
-                        "2023-08-23T12:36:26.515Z",
+                        "2024-04-09T00:06:13.570Z",
+                        "2026-02-12T19:21:57.805Z",
+                        "2023-08-23T19:18:50.317Z",
                     ],
                     "interval": 1.0,
                     "on_days": [
@@ -2302,16 +2302,16 @@ with UnifiedTo(
                 },
                 {
                     "count": 8.0,
-                    "end_at": parse_datetime("2026-08-29T11:58:47.059Z"),
+                    "end_at": parse_datetime("2026-08-30T12:34:46.232Z"),
                     "excluded_dates": [
-                        "2023-06-26T13:32:26.300Z",
-                        "2023-06-15T08:20:49.222Z",
+                        "2023-06-26T19:18:22.012Z",
+                        "2023-06-15T13:55:49.284Z",
                     ],
                     "frequency": shared.CalendarEventRecurrenceFrequency.WEEKLY,
                     "included_dates": [
-                        "2024-04-16T18:58:23.267Z",
-                        "2023-08-29T11:13:55.158Z",
-                        "2024-10-15T14:36:44.077Z",
+                        "2024-04-17T05:31:56.299Z",
+                        "2023-08-29T18:02:06.337Z",
+                        "2024-10-16T04:07:25.213Z",
                     ],
                     "interval": 8.0,
                     "on_days": [
@@ -2464,11 +2464,11 @@ with UnifiedTo(
             "registrant_password": "0W7J6Dhk",
             "require_address": False,
             "require_job_title": False,
-            "start_at": parse_datetime("2025-05-24T04:12:56.845Z"),
+            "start_at": parse_datetime("2025-05-24T21:18:31.113Z"),
             "status": shared.CalendarWebinarStatus.TENTATIVE,
             "subject": "Ex cubo ancilla cresco textor.",
             "timezone": "Pacific/Pohnpei",
-            "updated_at": parse_datetime("2026-11-04T23:33:30.887Z"),
+            "updated_at": parse_datetime("2026-11-06T01:15:14.717Z"),
             "web_url": "https://nervous-perp.name/",
         },
         "connection_id": "<id>",

@@ -34,6 +34,7 @@ class PatchTicketingCustomerQueryParamFields(str, Enum):
     TAGS = "tags"
     METADATA = "metadata"
     RAW = "raw"
+    UNIFIED_PERSON_IDS = "__unified_person_ids"
 
 
 class PatchTicketingCustomerRequestTypedDict(TypedDict):

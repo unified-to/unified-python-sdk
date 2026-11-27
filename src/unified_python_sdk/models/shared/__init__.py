@@ -1874,6 +1874,7 @@ if TYPE_CHECKING:
         PerformanceReviewQuestionType,
         PerformanceReviewQuestionTypedDict,
     )
+    from .person import Person, PersonTypedDict
     from .plmaffecteditem import PlmAffectedItem, PlmAffectedItemTypedDict
     from .plmbomline import PlmBomline, PlmBomlineTypedDict
     from .plmcategory import PlmCategory, PlmCategoryType, PlmCategoryTypedDict
@@ -5490,6 +5491,8 @@ __all__ = [
     "PerformanceReviewType",
     "PerformanceReviewTypedDict",
     "Period",
+    "Person",
+    "PersonTypedDict",
     "PlatformMetadata",
     "PlatformMetadataTypedDict",
     "PlmAffectedItem",
@@ -8416,6 +8419,8 @@ _dynamic_imports: dict[str, str] = {
     "PerformanceReviewQuestion": ".performancereviewquestion",
     "PerformanceReviewQuestionType": ".performancereviewquestion",
     "PerformanceReviewQuestionTypedDict": ".performancereviewquestion",
+    "Person": ".person",
+    "PersonTypedDict": ".person",
     "PlmAffectedItem": ".plmaffecteditem",
     "PlmAffectedItemTypedDict": ".plmaffecteditem",
     "PlmBomline": ".plmbomline",
