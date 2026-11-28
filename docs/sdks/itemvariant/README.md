@@ -36,7 +36,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-01-20T13:49:12.968Z"),
             "description": "Our dog-friendly Bacon ensures pessimistic comfort for your pets",
             "height": 54.0,
-            "id": "40baffde-538e-4c46-a373-a617c821221a",
+            "id": "18d3fa96-face-4e58-935d-43dfdfe1664a",
             "is_active": True,
             "is_featured": False,
             "is_visible": False,
@@ -45,10 +45,10 @@ with UnifiedTo(
                 {
                     "alt": "Calcar delibero cursim summisse.",
                     "height": 961.0,
-                    "id": "06f5269a-3fc8-4411-bbf4-65203b6f9940",
+                    "id": "fb8bf78f-4fbf-4f24-84c2-4455d8d6cdb5",
                     "metadata": [
                         {
-                            "id": "a9564912-fb84-4401-bbef-26077f76d591",
+                            "id": "fb50730d-ca45-41af-a409-50b8be760704",
                             "slug": "illo",
                             "value": "quia",
                         },
@@ -65,7 +65,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CommerceMetadataFormat.TEXT,
-                    "id": "fa6c31a8-deaa-41fb-95b2-71acee059fb7",
+                    "id": "16ad37ea-00a5-4ac0-8ff2-bbb5101caa90",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "colligo",
@@ -74,7 +74,7 @@ with UnifiedTo(
             "name": "Table",
             "options": [
                 {
-                    "id": "8032ad84-c6d4-4a94-9b25-002e439dbef6",
+                    "id": "6b203636-bf27-420c-a476-88b5f1319f44",
                     "name": "Color",
                     "position": 1.0,
                     "values": [
@@ -82,7 +82,7 @@ with UnifiedTo(
                     ],
                 },
                 {
-                    "id": "3850ca63-d220-4662-b20c-cff575105ea3",
+                    "id": "3ee3d8f2-5502-4e17-a90a-8690dfece138",
                     "name": "Size",
                     "position": 2.0,
                     "values": [
@@ -105,7 +105,7 @@ with UnifiedTo(
                 "labore",
             ],
             "total_stock": 436.0,
-            "updated_at": parse_datetime("2026-04-10T21:39:53.605Z"),
+            "updated_at": parse_datetime("2026-04-11T18:10:30.734Z"),
             "weight": 46.0,
             "weight_unit": shared.CommerceItemvariantWeightUnit.OZ,
             "width": 40.0,
@@ -255,7 +255,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-01-20T13:49:12.968Z"),
             "description": "Our dog-friendly Bacon ensures pessimistic comfort for your pets",
             "height": 54.0,
-            "id": "e5bf4cf4-77b6-478e-9653-e5fb30284409",
+            "id": "3eae23ca-1a30-4b88-83cb-32b39048efac",
             "is_active": True,
             "is_featured": False,
             "is_visible": False,
@@ -264,10 +264,10 @@ with UnifiedTo(
                 {
                     "alt": "Calcar delibero cursim summisse.",
                     "height": 961.0,
-                    "id": "01b80f1d-2e93-4d8d-abe2-03c811fd0639",
+                    "id": "8b7bb0af-d255-42d3-ac1a-1909da2cf189",
                     "metadata": [
                         {
-                            "id": "7c8b705f-29e3-447d-81dc-f615e5254112",
+                            "id": "4cd20ae4-ea22-4a63-8db9-a1e3406b2722",
                             "slug": "illo",
                             "value": "quia",
                         },
@@ -284,7 +284,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CommerceMetadataFormat.TEXT,
-                    "id": "9cf1764a-e94b-4708-a414-2a70a60a54f2",
+                    "id": "20d4966b-8d3c-4d12-9124-f4397ee1030f",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "colligo",
@@ -293,7 +293,7 @@ with UnifiedTo(
             "name": "Table",
             "options": [
                 {
-                    "id": "521eeb4c-aad4-43fd-81ad-25bfcbe220cd",
+                    "id": "b17eb64c-752d-43e7-a763-029496a51c71",
                     "name": "Color",
                     "position": 1.0,
                     "values": [
@@ -301,7 +301,7 @@ with UnifiedTo(
                     ],
                 },
                 {
-                    "id": "b49befee-b1c4-4bbd-81be-ff697a83cd65",
+                    "id": "17583a94-c4cc-4167-bf65-acc8861f2a67",
                     "name": "Size",
                     "position": 2.0,
                     "values": [
@@ -324,7 +324,7 @@ with UnifiedTo(
                 "labore",
             ],
             "total_stock": 436.0,
-            "updated_at": parse_datetime("2026-04-10T21:39:53.626Z"),
+            "updated_at": parse_datetime("2026-04-11T18:10:30.767Z"),
             "weight": 46.0,
             "weight_unit": shared.CommerceItemvariantWeightUnit.OZ,
             "width": 40.0,
@@ -429,7 +429,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-01-20T13:49:12.968Z"),
             "description": "Our dog-friendly Bacon ensures pessimistic comfort for your pets",
             "height": 54.0,
-            "id": "e5bf4cf4-77b6-478e-9653-e5fb30284409",
+            "id": "3eae23ca-1a30-4b88-83cb-32b39048efac",
             "is_active": True,
             "is_featured": False,
             "is_visible": False,
@@ -438,10 +438,10 @@ with UnifiedTo(
                 {
                     "alt": "Calcar delibero cursim summisse.",
                     "height": 961.0,
-                    "id": "01b80f1d-2e93-4d8d-abe2-03c811fd0639",
+                    "id": "8b7bb0af-d255-42d3-ac1a-1909da2cf189",
                     "metadata": [
                         {
-                            "id": "7c8b705f-29e3-447d-81dc-f615e5254112",
+                            "id": "4cd20ae4-ea22-4a63-8db9-a1e3406b2722",
                             "slug": "illo",
                             "value": "quia",
                         },
@@ -458,7 +458,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CommerceMetadataFormat.TEXT,
-                    "id": "9cf1764a-e94b-4708-a414-2a70a60a54f2",
+                    "id": "20d4966b-8d3c-4d12-9124-f4397ee1030f",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "colligo",
@@ -467,7 +467,7 @@ with UnifiedTo(
             "name": "Table",
             "options": [
                 {
-                    "id": "521eeb4c-aad4-43fd-81ad-25bfcbe220cd",
+                    "id": "b17eb64c-752d-43e7-a763-029496a51c71",
                     "name": "Color",
                     "position": 1.0,
                     "values": [
@@ -475,7 +475,7 @@ with UnifiedTo(
                     ],
                 },
                 {
-                    "id": "b49befee-b1c4-4bbd-81be-ff697a83cd65",
+                    "id": "17583a94-c4cc-4167-bf65-acc8861f2a67",
                     "name": "Size",
                     "position": 2.0,
                     "values": [
@@ -498,7 +498,7 @@ with UnifiedTo(
                 "labore",
             ],
             "total_stock": 436.0,
-            "updated_at": parse_datetime("2026-04-10T21:39:53.626Z"),
+            "updated_at": parse_datetime("2026-04-11T18:10:30.767Z"),
             "weight": 46.0,
             "weight_unit": shared.CommerceItemvariantWeightUnit.OZ,
             "width": 40.0,

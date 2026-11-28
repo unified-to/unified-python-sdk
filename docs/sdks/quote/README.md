@@ -84,7 +84,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2019-01-02T03:42:06.944Z"),
             "currency": "USD",
             "discount_amount": 0.0,
-            "id": "93ef03f5-a801-4ddf-a541-a7786a1058ed",
+            "id": "158ddbb7-a154-496f-90e7-a3232983f47c",
             "lineitems": [
                 {
                     "files": [
@@ -207,9 +207,9 @@ with UnifiedTo(
             "created_at": parse_datetime("2020-12-18T19:14:11.415Z"),
             "currency": "USD",
             "deposit_amount": 594.54,
-            "end_at": parse_datetime("2026-12-11"),
+            "end_at": parse_datetime("2026-12-12"),
             "guests": 2.0,
-            "id": "f47105fe-9f56-4cf5-bddd-9d5518704fc8",
+            "id": "1e571cd6-a86e-48ac-b272-92d9db495ad8",
             "line_items": [
                 {
                     "amount": 1665.0,
@@ -231,7 +231,7 @@ with UnifiedTo(
                     "type": shared.PropertyLineitemType.TAX,
                 },
             ],
-            "start_at": parse_datetime("2026-12-02"),
+            "start_at": parse_datetime("2026-12-03"),
             "total_amount": 1981.8,
         },
         "connection_id": "<id>",

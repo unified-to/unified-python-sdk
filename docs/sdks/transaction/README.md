@@ -33,12 +33,12 @@ with UnifiedTo(
     res = unified_to.transaction.create_accounting_transaction(request={
         "accounting_transaction": {
             "created_at": parse_datetime("2019-09-25T11:40:42.574Z"),
-            "id": "045d5de9-70f3-463d-a202-a99abda44fc2",
+            "id": "14cc97e3-4960-4646-804f-c0fb247a8e5b",
             "lineitems": [
                 {
                     "category_ids": [],
                     "description": "The Wilma Car is the latest in a series of beneficial products from Fritsch Group",
-                    "id": "61a9041b-e3d3-48d4-87f3-d84c905b19e3",
+                    "id": "7d4cfcc7-f508-4172-8f97-e60471777738",
                     "name": "Table",
                     "total_amount": 10184.0,
                     "unit_amount": 536.0,
@@ -50,7 +50,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "total_amount": 10184.0,
             "transaction_at": parse_datetime("2019-09-25T11:40:42.574Z"),
-            "updated_at": parse_datetime("2019-10-14T12:36:03.607Z"),
+            "updated_at": parse_datetime("2019-10-14T12:46:20.363Z"),
         },
         "connection_id": "<id>",
     })
@@ -194,12 +194,12 @@ with UnifiedTo(
     res = unified_to.transaction.patch_accounting_transaction(request={
         "accounting_transaction": {
             "created_at": parse_datetime("2019-09-25T11:40:42.574Z"),
-            "id": "61b49aaa-8cce-4c34-b158-c06d1dabe75d",
+            "id": "7bf33a1d-e948-4a34-b4cf-8e6840d90c43",
             "lineitems": [
                 {
                     "category_ids": [],
                     "description": "The Wilma Car is the latest in a series of beneficial products from Fritsch Group",
-                    "id": "ac9626bb-2ca2-4a95-bb16-a998ec69440d",
+                    "id": "62faed55-37df-426d-a95e-2124e63705e3",
                     "name": "Table",
                     "total_amount": 10184.0,
                     "unit_amount": 536.0,
@@ -211,7 +211,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "total_amount": 10184.0,
             "transaction_at": parse_datetime("2019-09-25T11:40:42.574Z"),
-            "updated_at": parse_datetime("2019-10-14T12:36:03.607Z"),
+            "updated_at": parse_datetime("2019-10-14T12:46:20.363Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -310,12 +310,12 @@ with UnifiedTo(
     res = unified_to.transaction.update_accounting_transaction(request={
         "accounting_transaction": {
             "created_at": parse_datetime("2019-09-25T11:40:42.574Z"),
-            "id": "61b49aaa-8cce-4c34-b158-c06d1dabe75d",
+            "id": "7bf33a1d-e948-4a34-b4cf-8e6840d90c43",
             "lineitems": [
                 {
                     "category_ids": [],
                     "description": "The Wilma Car is the latest in a series of beneficial products from Fritsch Group",
-                    "id": "ac9626bb-2ca2-4a95-bb16-a998ec69440d",
+                    "id": "62faed55-37df-426d-a95e-2124e63705e3",
                     "name": "Table",
                     "total_amount": 10184.0,
                     "unit_amount": 536.0,
@@ -327,7 +327,7 @@ with UnifiedTo(
             "tax_amount": 0.0,
             "total_amount": 10184.0,
             "transaction_at": parse_datetime("2019-09-25T11:40:42.574Z"),
-            "updated_at": parse_datetime("2019-10-14T12:36:03.607Z"),
+            "updated_at": parse_datetime("2019-10-14T12:46:20.363Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

@@ -81,7 +81,7 @@ with UnifiedTo(
         "commerce_collection": {
             "created_at": parse_datetime("2023-07-14T00:42:54.742Z"),
             "description": "Ward - Hudson's most advanced Computer technology increases graceful capabilities",
-            "id": "a8f610bb-f1f0-473e-b4d9-c4db965c8cb3",
+            "id": "794b2fda-9647-4ec3-b380-0a574697c740",
             "is_active": True,
             "is_featured": False,
             "is_visible": False,
@@ -90,10 +90,10 @@ with UnifiedTo(
                 {
                     "alt": "Armarium amiculum amet defendo.",
                     "height": 759.0,
-                    "id": "b750b2d0-5085-4de7-bf6d-8723b987a8ef",
+                    "id": "bbe2665f-da3f-4166-8514-1696b9d66374",
                     "metadata": [
                         {
-                            "id": "01ac308d-2bba-4b34-833c-fbbe1a5a16b8",
+                            "id": "ce1236a2-b5fc-4350-9097-5e054e36d8ee",
                             "slug": "cernuus",
                             "value": "torrens",
                         },
@@ -106,7 +106,7 @@ with UnifiedTo(
             ],
             "metadata": [
                 {
-                    "id": "f1ff8373-8406-4182-aa9d-6984c0b25feb",
+                    "id": "cf479b95-30f8-4d7e-bad9-ba716aaaddbe",
                     "slug": "velit",
                     "value": "aureus",
                 },
@@ -120,7 +120,7 @@ with UnifiedTo(
                 "comparo",
             ],
             "type": shared.CommerceCollectionType.COLLECTION,
-            "updated_at": parse_datetime("2025-04-02T23:01:28.068Z"),
+            "updated_at": parse_datetime("2025-04-03T11:03:29.415Z"),
         },
         "connection_id": "<id>",
     })
@@ -171,9 +171,9 @@ with UnifiedTo(
     res = unified_to.commerce.create_commerce_inventory(request={
         "commerce_inventory": {
             "available": 337.0,
-            "id": "8cfe10ad-4647-4a6e-872d-344f7b4510d5",
+            "id": "020e49f6-7faa-4666-9b73-a8919f8789a6",
             "metadata": [],
-            "updated_at": parse_datetime("2025-12-20T05:55:51.372Z"),
+            "updated_at": parse_datetime("2025-12-21T00:55:27.015Z"),
         },
         "connection_id": "<id>",
     })
@@ -228,7 +228,7 @@ with UnifiedTo(
             "description": "Abeo surculus custodia ventus solio.",
             "duration": 104.0,
             "global_code": "978-0-85270-680-0",
-            "id": "c10349ff-0290-4a2b-8807-5d559c4febb3",
+            "id": "3429677e-7b05-4786-9bac-ef6f59b6f6b7",
             "is_active": False,
             "is_featured": False,
             "is_taxable": True,
@@ -237,10 +237,10 @@ with UnifiedTo(
                 {
                     "alt": "Eveniet acies.",
                     "height": 876.0,
-                    "id": "9de69b8f-bcaf-445a-b03f-f18e16852ac2",
+                    "id": "56f386e2-98dc-434b-b1ad-9e1488b53bed",
                     "metadata": [
                         {
-                            "id": "707220be-232a-434f-89bd-35ba731bd4f6",
+                            "id": "76cc78fc-661c-4c74-bd3a-7b84f26c8dcf",
                             "slug": "candidus",
                             "value": "doloremque",
                         },
@@ -253,10 +253,10 @@ with UnifiedTo(
                 {
                     "alt": "Comedo.",
                     "height": 651.0,
-                    "id": "331c48bf-6634-4d4b-a1e7-31d9b51ed8fe",
+                    "id": "bae11f2c-3b1d-416b-b851-21e8879e57ed",
                     "metadata": [
                         {
-                            "id": "d1abec9c-8303-4570-851d-e874dfbcd37a",
+                            "id": "b727375f-08f5-4a84-aa5f-f84c61a5b371",
                             "slug": "bis",
                             "value": "somniculosus",
                         },
@@ -273,7 +273,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CommerceMetadataFormat.TEXT,
-                    "id": "9f2f2e7e-2a5e-4610-99c4-d9703d84647d",
+                    "id": "81f6216f-e4f4-4eb6-9406-81169f1c51a8",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "abstergo",
@@ -296,7 +296,7 @@ with UnifiedTo(
             ],
             "total_stock": 682.0,
             "type": "SERVICE",
-            "updated_at": parse_datetime("2022-05-03T18:43:31.441Z"),
+            "updated_at": parse_datetime("2022-05-04T03:48:52.616Z"),
             "vendor_name": "Rohan - Pouros",
             "weight": 37.0,
             "weight_unit": shared.WeightUnit.OZ,
@@ -353,7 +353,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-01-20T13:49:12.968Z"),
             "description": "Our dog-friendly Bacon ensures pessimistic comfort for your pets",
             "height": 54.0,
-            "id": "40baffde-538e-4c46-a373-a617c821221a",
+            "id": "18d3fa96-face-4e58-935d-43dfdfe1664a",
             "is_active": True,
             "is_featured": False,
             "is_visible": False,
@@ -362,10 +362,10 @@ with UnifiedTo(
                 {
                     "alt": "Calcar delibero cursim summisse.",
                     "height": 961.0,
-                    "id": "06f5269a-3fc8-4411-bbf4-65203b6f9940",
+                    "id": "fb8bf78f-4fbf-4f24-84c2-4455d8d6cdb5",
                     "metadata": [
                         {
-                            "id": "a9564912-fb84-4401-bbef-26077f76d591",
+                            "id": "fb50730d-ca45-41af-a409-50b8be760704",
                             "slug": "illo",
                             "value": "quia",
                         },
@@ -382,7 +382,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CommerceMetadataFormat.TEXT,
-                    "id": "fa6c31a8-deaa-41fb-95b2-71acee059fb7",
+                    "id": "16ad37ea-00a5-4ac0-8ff2-bbb5101caa90",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "colligo",
@@ -391,7 +391,7 @@ with UnifiedTo(
             "name": "Table",
             "options": [
                 {
-                    "id": "8032ad84-c6d4-4a94-9b25-002e439dbef6",
+                    "id": "6b203636-bf27-420c-a476-88b5f1319f44",
                     "name": "Color",
                     "position": 1.0,
                     "values": [
@@ -399,7 +399,7 @@ with UnifiedTo(
                     ],
                 },
                 {
-                    "id": "3850ca63-d220-4662-b20c-cff575105ea3",
+                    "id": "3ee3d8f2-5502-4e17-a90a-8690dfece138",
                     "name": "Size",
                     "position": 2.0,
                     "values": [
@@ -422,7 +422,7 @@ with UnifiedTo(
                 "labore",
             ],
             "total_stock": 436.0,
-            "updated_at": parse_datetime("2026-04-10T21:39:53.605Z"),
+            "updated_at": parse_datetime("2026-04-11T18:10:30.734Z"),
             "weight": 46.0,
             "weight_unit": shared.CommerceItemvariantWeightUnit.OZ,
             "width": 40.0,
@@ -487,7 +487,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-12-29T04:15:21.195Z"),
             "currency": "WST",
             "description": "Vulgaris cruciamentum hic numquam tutamen.",
-            "id": "fe99e339-aba7-4dc6-bbf3-0b6f96d2c68a",
+            "id": "20781776-7985-4139-83a7-943e17ebd584",
             "image_url": "https://picsum.photos/seed/3ZlSMHUYq/1895/67",
             "is_active": False,
             "language_locale": "cibus",
@@ -498,10 +498,10 @@ with UnifiedTo(
                 {
                     "alt": "Amoveo cinis demulceo tutamen.",
                     "height": 283.0,
-                    "id": "c27183ba-5bd3-40a7-97a1-0fc2f0a4a419",
+                    "id": "2f3194d9-fe79-4065-8285-2197c5727ed0",
                     "metadata": [
                         {
-                            "id": "17e67153-5024-4b57-b201-933e0b8da961",
+                            "id": "1fd60c7b-69a4-47c2-b924-52c5f6733ecd",
                             "slug": "taedium",
                             "value": "censura",
                         },
@@ -527,7 +527,7 @@ with UnifiedTo(
                     "type": shared.CommerceTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2024-05-03T11:33:01.189Z"),
+            "updated_at": parse_datetime("2024-05-03T19:39:20.366Z"),
             "web_url": "https://formal-declaration.info/",
         },
         "connection_id": "<id>",
@@ -583,13 +583,13 @@ with UnifiedTo(
             "guest_email": "alford.schiller@icloud.com",
             "guest_name": "Alford Schiller",
             "guest_phone": "(849) 626-2062",
-            "id": "e1b6dbe8-a059-47ee-a4f2-5bf5f81a9890",
+            "id": "e9638fdb-2927-4cbe-b027-36b5d1a4ce9c",
             "metadata": [],
             "notes": "Despecto stultus calculus.",
             "size": 10.0,
             "start_at": parse_datetime("2021-12-18T00:40:25.125Z"),
             "status": shared.CommerceReservationStatus.PENDING,
-            "updated_at": parse_datetime("2023-01-11T22:37:26.573Z"),
+            "updated_at": parse_datetime("2023-01-12T03:44:56.013Z"),
             "url": "https://wee-tuba.biz/",
         },
         "connection_id": "<id>",
@@ -648,7 +648,7 @@ with UnifiedTo(
             "content": "Vix taedium thymum adipiscor amicitia.",
             "created_at": parse_datetime("2019-12-12T18:10:22.988Z"),
             "helpful_votes": 66.0,
-            "id": "88800a80-9c20-4910-97b1-00876ef1ac71",
+            "id": "b1d556b4-9b74-4eb2-a17d-c9431d478ca2",
             "is_featured": False,
             "is_public": True,
             "is_verified": False,
@@ -656,10 +656,10 @@ with UnifiedTo(
                 {
                     "alt": "Teneo.",
                     "height": 749.0,
-                    "id": "0c7701d1-2d02-4849-9ba9-8083960424a3",
+                    "id": "36641fea-f271-47b7-96ce-d983e980730b",
                     "metadata": [
                         {
-                            "id": "bd6e6fc7-bcbe-4cc6-9cc1-9b8feef277a2",
+                            "id": "eb8184d7-eb9c-4675-b216-b41e2d22a3e5",
                             "slug": "numquam",
                             "value": "bos",
                         },
@@ -672,10 +672,10 @@ with UnifiedTo(
                 {
                     "alt": "Ratione vulticulus arbitro ultio pauci.",
                     "height": 957.0,
-                    "id": "8d34a1dd-37fc-43cd-918f-cbad0a0ca2f2",
+                    "id": "7eed467d-d728-4c77-9595-efd1662d63c5",
                     "metadata": [
                         {
-                            "id": "ef8ad55e-3ca4-4e93-af79-900e0913c661",
+                            "id": "e9bed246-c5a7-410d-9a2e-ab9c764bd5a9",
                             "slug": "timidus",
                             "value": "sol",
                         },
@@ -691,7 +691,7 @@ with UnifiedTo(
             "status": shared.CommerceReviewStatus.APPROVED,
             "title": "Auxilium.",
             "unhelpful_votes": 88.0,
-            "updated_at": parse_datetime("2025-09-21T02:25:34.634Z"),
+            "updated_at": parse_datetime("2025-09-21T21:59:32.313Z"),
             "url": "https://whispered-hawk.name",
             "verified_purchase": True,
         },
@@ -746,11 +746,11 @@ with UnifiedTo(
             "collections": [],
             "created_at": parse_datetime("2021-12-12T06:19:55.421Z"),
             "description": "Solus speciosus caveo aegrus.",
-            "id": "5b551508-02a7-45db-a271-673d71178146",
+            "id": "648f9bfe-e09c-40f4-b59b-2e57a7d7b685",
             "is_active": False,
             "metadata": [],
             "slug": "dapifer-utroque-denuncio",
-            "updated_at": parse_datetime("2025-02-20T20:37:57.753Z"),
+            "updated_at": parse_datetime("2025-02-21T11:49:10.127Z"),
         },
         "connection_id": "<id>",
     })
@@ -1778,7 +1778,7 @@ with UnifiedTo(
         "commerce_collection": {
             "created_at": parse_datetime("2023-07-14T00:42:54.742Z"),
             "description": "Ward - Hudson's most advanced Computer technology increases graceful capabilities",
-            "id": "dbec1513-eb73-47ae-9306-2ed6eb62bcde",
+            "id": "a30bdaea-13ce-4ba1-a083-b5afa5703550",
             "is_active": True,
             "is_featured": False,
             "is_visible": False,
@@ -1787,10 +1787,10 @@ with UnifiedTo(
                 {
                     "alt": "Armarium amiculum amet defendo.",
                     "height": 759.0,
-                    "id": "635db6e9-1002-4ec3-850a-7ac872a4863f",
+                    "id": "e24004e8-7a0a-4f83-84a4-fc7e518bd726",
                     "metadata": [
                         {
-                            "id": "0ebeb929-2c8d-4446-844b-d3312e3f948b",
+                            "id": "2b48b752-3063-465f-b698-671d0834d44d",
                             "slug": "cernuus",
                             "value": "torrens",
                         },
@@ -1803,7 +1803,7 @@ with UnifiedTo(
             ],
             "metadata": [
                 {
-                    "id": "ec3ca9b4-b424-458c-ac22-57440f45a52e",
+                    "id": "1feefe2e-ea2a-4c06-858d-f1ff7a237759",
                     "slug": "velit",
                     "value": "aureus",
                 },
@@ -1817,7 +1817,7 @@ with UnifiedTo(
                 "comparo",
             ],
             "type": shared.CommerceCollectionType.COLLECTION,
-            "updated_at": parse_datetime("2025-04-02T23:01:28.077Z"),
+            "updated_at": parse_datetime("2025-04-03T11:03:29.432Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1869,9 +1869,9 @@ with UnifiedTo(
     res = unified_to.commerce.patch_commerce_inventory(request={
         "commerce_inventory": {
             "available": 337.0,
-            "id": "00ff582a-1836-497a-99d7-ce3007e0e963",
+            "id": "5b4e43af-0ce8-4c6d-953a-25929725cbdd",
             "metadata": [],
-            "updated_at": parse_datetime("2025-12-20T05:55:51.389Z"),
+            "updated_at": parse_datetime("2025-12-21T00:55:27.025Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1927,7 +1927,7 @@ with UnifiedTo(
             "description": "Abeo surculus custodia ventus solio.",
             "duration": 104.0,
             "global_code": "978-0-85270-680-0",
-            "id": "9b0f7e3b-e8f4-4487-a914-08fb0a86d5ce",
+            "id": "86163823-b418-43f5-a8bc-d88049a01557",
             "is_active": False,
             "is_featured": False,
             "is_taxable": True,
@@ -1936,10 +1936,10 @@ with UnifiedTo(
                 {
                     "alt": "Eveniet acies.",
                     "height": 876.0,
-                    "id": "530446a0-cde5-4ac3-b426-5ea50e2ed0f1",
+                    "id": "0fc62cdf-0603-4b34-955e-48988057adb2",
                     "metadata": [
                         {
-                            "id": "01103fe7-686c-47f5-9afe-1c72ca5e9448",
+                            "id": "0536c10d-cd72-41c4-8935-75ae0529ab90",
                             "slug": "candidus",
                             "value": "doloremque",
                         },
@@ -1952,10 +1952,10 @@ with UnifiedTo(
                 {
                     "alt": "Comedo.",
                     "height": 651.0,
-                    "id": "2a3b7564-c68e-485f-abe8-6f37447c236b",
+                    "id": "0aa139ef-ffe3-45a9-80b1-e55cdf5c124b",
                     "metadata": [
                         {
-                            "id": "738af270-814f-46e1-87e2-f07b01374e2c",
+                            "id": "9e9c2343-7c3d-4d90-b0eb-7c138c64ade0",
                             "slug": "bis",
                             "value": "somniculosus",
                         },
@@ -1972,7 +1972,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CommerceMetadataFormat.TEXT,
-                    "id": "0d7f5523-9951-40e1-a268-120cbb4ce31c",
+                    "id": "1457e44b-630f-4a93-b3e3-6f908dcbda5c",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "abstergo",
@@ -1995,7 +1995,7 @@ with UnifiedTo(
             ],
             "total_stock": 682.0,
             "type": "SERVICE",
-            "updated_at": parse_datetime("2022-05-03T18:43:31.456Z"),
+            "updated_at": parse_datetime("2022-05-04T03:48:52.631Z"),
             "vendor_name": "Rohan - Pouros",
             "weight": 37.0,
             "weight_unit": shared.WeightUnit.OZ,
@@ -2053,7 +2053,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-01-20T13:49:12.968Z"),
             "description": "Our dog-friendly Bacon ensures pessimistic comfort for your pets",
             "height": 54.0,
-            "id": "e5bf4cf4-77b6-478e-9653-e5fb30284409",
+            "id": "3eae23ca-1a30-4b88-83cb-32b39048efac",
             "is_active": True,
             "is_featured": False,
             "is_visible": False,
@@ -2062,10 +2062,10 @@ with UnifiedTo(
                 {
                     "alt": "Calcar delibero cursim summisse.",
                     "height": 961.0,
-                    "id": "01b80f1d-2e93-4d8d-abe2-03c811fd0639",
+                    "id": "8b7bb0af-d255-42d3-ac1a-1909da2cf189",
                     "metadata": [
                         {
-                            "id": "7c8b705f-29e3-447d-81dc-f615e5254112",
+                            "id": "4cd20ae4-ea22-4a63-8db9-a1e3406b2722",
                             "slug": "illo",
                             "value": "quia",
                         },
@@ -2082,7 +2082,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CommerceMetadataFormat.TEXT,
-                    "id": "9cf1764a-e94b-4708-a414-2a70a60a54f2",
+                    "id": "20d4966b-8d3c-4d12-9124-f4397ee1030f",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "colligo",
@@ -2091,7 +2091,7 @@ with UnifiedTo(
             "name": "Table",
             "options": [
                 {
-                    "id": "521eeb4c-aad4-43fd-81ad-25bfcbe220cd",
+                    "id": "b17eb64c-752d-43e7-a763-029496a51c71",
                     "name": "Color",
                     "position": 1.0,
                     "values": [
@@ -2099,7 +2099,7 @@ with UnifiedTo(
                     ],
                 },
                 {
-                    "id": "b49befee-b1c4-4bbd-81be-ff697a83cd65",
+                    "id": "17583a94-c4cc-4167-bf65-acc8861f2a67",
                     "name": "Size",
                     "position": 2.0,
                     "values": [
@@ -2122,7 +2122,7 @@ with UnifiedTo(
                 "labore",
             ],
             "total_stock": 436.0,
-            "updated_at": parse_datetime("2026-04-10T21:39:53.626Z"),
+            "updated_at": parse_datetime("2026-04-11T18:10:30.767Z"),
             "weight": 46.0,
             "weight_unit": shared.CommerceItemvariantWeightUnit.OZ,
             "width": 40.0,
@@ -2188,7 +2188,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-12-29T04:15:21.195Z"),
             "currency": "WST",
             "description": "Vulgaris cruciamentum hic numquam tutamen.",
-            "id": "86b89e0d-eea3-4cce-9cf8-138030c0174b",
+            "id": "094e19f9-2de0-4074-aaa4-e38f785009db",
             "image_url": "https://picsum.photos/seed/3ZlSMHUYq/1895/67",
             "is_active": False,
             "language_locale": "cibus",
@@ -2199,10 +2199,10 @@ with UnifiedTo(
                 {
                     "alt": "Amoveo cinis demulceo tutamen.",
                     "height": 283.0,
-                    "id": "b2b2f20e-e72b-4a32-a706-1a2645782e95",
+                    "id": "9838acac-2eb7-4e7d-ad13-83febdecc489",
                     "metadata": [
                         {
-                            "id": "dadc620e-cc54-4b6b-8ff1-8f270d78258a",
+                            "id": "053a7bc8-4b2a-47ef-af66-a23682892efe",
                             "slug": "taedium",
                             "value": "censura",
                         },
@@ -2228,7 +2228,7 @@ with UnifiedTo(
                     "type": shared.CommerceTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2024-05-03T11:33:01.197Z"),
+            "updated_at": parse_datetime("2024-05-03T19:39:20.384Z"),
             "web_url": "https://formal-declaration.info/",
         },
         "connection_id": "<id>",
@@ -2285,13 +2285,13 @@ with UnifiedTo(
             "guest_email": "alford.schiller@icloud.com",
             "guest_name": "Alford Schiller",
             "guest_phone": "(849) 626-2062",
-            "id": "b9fd1510-4deb-4d5d-bafa-9740a0353eb7",
+            "id": "ec08d4bb-db56-4646-a602-eb4c69c7cdef",
             "metadata": [],
             "notes": "Despecto stultus calculus.",
             "size": 10.0,
             "start_at": parse_datetime("2021-12-18T00:40:25.125Z"),
             "status": shared.CommerceReservationStatus.PENDING,
-            "updated_at": parse_datetime("2023-01-11T22:37:26.575Z"),
+            "updated_at": parse_datetime("2023-01-12T03:44:56.017Z"),
             "url": "https://wee-tuba.biz/",
         },
         "connection_id": "<id>",
@@ -2351,7 +2351,7 @@ with UnifiedTo(
             "content": "Vix taedium thymum adipiscor amicitia.",
             "created_at": parse_datetime("2019-12-12T18:10:22.988Z"),
             "helpful_votes": 66.0,
-            "id": "8b1f1626-0e69-43ab-86ac-c9ba86bf0962",
+            "id": "67bf1a80-c4bb-4c8c-b829-d555a79eb710",
             "is_featured": False,
             "is_public": True,
             "is_verified": False,
@@ -2359,10 +2359,10 @@ with UnifiedTo(
                 {
                     "alt": "Teneo.",
                     "height": 749.0,
-                    "id": "7919835c-f2cd-407d-aba3-a31029379b48",
+                    "id": "028e0a1a-1269-4024-8ace-69d2cad1bc23",
                     "metadata": [
                         {
-                            "id": "b77ef784-b379-4307-b263-5f2507d332f5",
+                            "id": "889ffb4c-0faf-4571-8e77-34e5ec8e1c9c",
                             "slug": "numquam",
                             "value": "bos",
                         },
@@ -2375,10 +2375,10 @@ with UnifiedTo(
                 {
                     "alt": "Ratione vulticulus arbitro ultio pauci.",
                     "height": 957.0,
-                    "id": "fa8378ce-f8f7-48df-8822-9a685fb41d22",
+                    "id": "d6dd1202-9328-4ae5-b47a-93a6ac90c7fd",
                     "metadata": [
                         {
-                            "id": "c5150362-ce7b-49a9-a5f7-e256357a7b69",
+                            "id": "44d2f025-b755-4f86-8d31-6b75cf1bea68",
                             "slug": "timidus",
                             "value": "sol",
                         },
@@ -2394,7 +2394,7 @@ with UnifiedTo(
             "status": shared.CommerceReviewStatus.APPROVED,
             "title": "Auxilium.",
             "unhelpful_votes": 88.0,
-            "updated_at": parse_datetime("2025-09-21T02:25:34.673Z"),
+            "updated_at": parse_datetime("2025-09-21T21:59:32.347Z"),
             "url": "https://whispered-hawk.name",
             "verified_purchase": True,
         },
@@ -2450,11 +2450,11 @@ with UnifiedTo(
             "collections": [],
             "created_at": parse_datetime("2021-12-12T06:19:55.421Z"),
             "description": "Solus speciosus caveo aegrus.",
-            "id": "6a0f5933-9456-4a38-a277-809204a34243",
+            "id": "c4060278-7b48-40b7-ac0d-1e93e473ce3b",
             "is_active": False,
             "metadata": [],
             "slug": "dapifer-utroque-denuncio",
-            "updated_at": parse_datetime("2025-02-20T20:37:57.761Z"),
+            "updated_at": parse_datetime("2025-02-21T11:49:10.137Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2883,7 +2883,7 @@ with UnifiedTo(
         "commerce_collection": {
             "created_at": parse_datetime("2023-07-14T00:42:54.742Z"),
             "description": "Ward - Hudson's most advanced Computer technology increases graceful capabilities",
-            "id": "dbec1513-eb73-47ae-9306-2ed6eb62bcde",
+            "id": "a30bdaea-13ce-4ba1-a083-b5afa5703550",
             "is_active": True,
             "is_featured": False,
             "is_visible": False,
@@ -2892,10 +2892,10 @@ with UnifiedTo(
                 {
                     "alt": "Armarium amiculum amet defendo.",
                     "height": 759.0,
-                    "id": "635db6e9-1002-4ec3-850a-7ac872a4863f",
+                    "id": "e24004e8-7a0a-4f83-84a4-fc7e518bd726",
                     "metadata": [
                         {
-                            "id": "0ebeb929-2c8d-4446-844b-d3312e3f948b",
+                            "id": "2b48b752-3063-465f-b698-671d0834d44d",
                             "slug": "cernuus",
                             "value": "torrens",
                         },
@@ -2908,7 +2908,7 @@ with UnifiedTo(
             ],
             "metadata": [
                 {
-                    "id": "ec3ca9b4-b424-458c-ac22-57440f45a52e",
+                    "id": "1feefe2e-ea2a-4c06-858d-f1ff7a237759",
                     "slug": "velit",
                     "value": "aureus",
                 },
@@ -2922,7 +2922,7 @@ with UnifiedTo(
                 "comparo",
             ],
             "type": shared.CommerceCollectionType.COLLECTION,
-            "updated_at": parse_datetime("2025-04-02T23:01:28.077Z"),
+            "updated_at": parse_datetime("2025-04-03T11:03:29.432Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -2974,9 +2974,9 @@ with UnifiedTo(
     res = unified_to.commerce.update_commerce_inventory(request={
         "commerce_inventory": {
             "available": 337.0,
-            "id": "00ff582a-1836-497a-99d7-ce3007e0e963",
+            "id": "5b4e43af-0ce8-4c6d-953a-25929725cbdd",
             "metadata": [],
-            "updated_at": parse_datetime("2025-12-20T05:55:51.389Z"),
+            "updated_at": parse_datetime("2025-12-21T00:55:27.025Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -3032,7 +3032,7 @@ with UnifiedTo(
             "description": "Abeo surculus custodia ventus solio.",
             "duration": 104.0,
             "global_code": "978-0-85270-680-0",
-            "id": "9b0f7e3b-e8f4-4487-a914-08fb0a86d5ce",
+            "id": "86163823-b418-43f5-a8bc-d88049a01557",
             "is_active": False,
             "is_featured": False,
             "is_taxable": True,
@@ -3041,10 +3041,10 @@ with UnifiedTo(
                 {
                     "alt": "Eveniet acies.",
                     "height": 876.0,
-                    "id": "530446a0-cde5-4ac3-b426-5ea50e2ed0f1",
+                    "id": "0fc62cdf-0603-4b34-955e-48988057adb2",
                     "metadata": [
                         {
-                            "id": "01103fe7-686c-47f5-9afe-1c72ca5e9448",
+                            "id": "0536c10d-cd72-41c4-8935-75ae0529ab90",
                             "slug": "candidus",
                             "value": "doloremque",
                         },
@@ -3057,10 +3057,10 @@ with UnifiedTo(
                 {
                     "alt": "Comedo.",
                     "height": 651.0,
-                    "id": "2a3b7564-c68e-485f-abe8-6f37447c236b",
+                    "id": "0aa139ef-ffe3-45a9-80b1-e55cdf5c124b",
                     "metadata": [
                         {
-                            "id": "738af270-814f-46e1-87e2-f07b01374e2c",
+                            "id": "9e9c2343-7c3d-4d90-b0eb-7c138c64ade0",
                             "slug": "bis",
                             "value": "somniculosus",
                         },
@@ -3077,7 +3077,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CommerceMetadataFormat.TEXT,
-                    "id": "0d7f5523-9951-40e1-a268-120cbb4ce31c",
+                    "id": "1457e44b-630f-4a93-b3e3-6f908dcbda5c",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "abstergo",
@@ -3100,7 +3100,7 @@ with UnifiedTo(
             ],
             "total_stock": 682.0,
             "type": "SERVICE",
-            "updated_at": parse_datetime("2022-05-03T18:43:31.456Z"),
+            "updated_at": parse_datetime("2022-05-04T03:48:52.631Z"),
             "vendor_name": "Rohan - Pouros",
             "weight": 37.0,
             "weight_unit": shared.WeightUnit.OZ,
@@ -3158,7 +3158,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-01-20T13:49:12.968Z"),
             "description": "Our dog-friendly Bacon ensures pessimistic comfort for your pets",
             "height": 54.0,
-            "id": "e5bf4cf4-77b6-478e-9653-e5fb30284409",
+            "id": "3eae23ca-1a30-4b88-83cb-32b39048efac",
             "is_active": True,
             "is_featured": False,
             "is_visible": False,
@@ -3167,10 +3167,10 @@ with UnifiedTo(
                 {
                     "alt": "Calcar delibero cursim summisse.",
                     "height": 961.0,
-                    "id": "01b80f1d-2e93-4d8d-abe2-03c811fd0639",
+                    "id": "8b7bb0af-d255-42d3-ac1a-1909da2cf189",
                     "metadata": [
                         {
-                            "id": "7c8b705f-29e3-447d-81dc-f615e5254112",
+                            "id": "4cd20ae4-ea22-4a63-8db9-a1e3406b2722",
                             "slug": "illo",
                             "value": "quia",
                         },
@@ -3187,7 +3187,7 @@ with UnifiedTo(
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CommerceMetadataFormat.TEXT,
-                    "id": "9cf1764a-e94b-4708-a414-2a70a60a54f2",
+                    "id": "20d4966b-8d3c-4d12-9124-f4397ee1030f",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "colligo",
@@ -3196,7 +3196,7 @@ with UnifiedTo(
             "name": "Table",
             "options": [
                 {
-                    "id": "521eeb4c-aad4-43fd-81ad-25bfcbe220cd",
+                    "id": "b17eb64c-752d-43e7-a763-029496a51c71",
                     "name": "Color",
                     "position": 1.0,
                     "values": [
@@ -3204,7 +3204,7 @@ with UnifiedTo(
                     ],
                 },
                 {
-                    "id": "b49befee-b1c4-4bbd-81be-ff697a83cd65",
+                    "id": "17583a94-c4cc-4167-bf65-acc8861f2a67",
                     "name": "Size",
                     "position": 2.0,
                     "values": [
@@ -3227,7 +3227,7 @@ with UnifiedTo(
                 "labore",
             ],
             "total_stock": 436.0,
-            "updated_at": parse_datetime("2026-04-10T21:39:53.626Z"),
+            "updated_at": parse_datetime("2026-04-11T18:10:30.767Z"),
             "weight": 46.0,
             "weight_unit": shared.CommerceItemvariantWeightUnit.OZ,
             "width": 40.0,
@@ -3293,7 +3293,7 @@ with UnifiedTo(
             "created_at": parse_datetime("2022-12-29T04:15:21.195Z"),
             "currency": "WST",
             "description": "Vulgaris cruciamentum hic numquam tutamen.",
-            "id": "86b89e0d-eea3-4cce-9cf8-138030c0174b",
+            "id": "094e19f9-2de0-4074-aaa4-e38f785009db",
             "image_url": "https://picsum.photos/seed/3ZlSMHUYq/1895/67",
             "is_active": False,
             "language_locale": "cibus",
@@ -3304,10 +3304,10 @@ with UnifiedTo(
                 {
                     "alt": "Amoveo cinis demulceo tutamen.",
                     "height": 283.0,
-                    "id": "b2b2f20e-e72b-4a32-a706-1a2645782e95",
+                    "id": "9838acac-2eb7-4e7d-ad13-83febdecc489",
                     "metadata": [
                         {
-                            "id": "dadc620e-cc54-4b6b-8ff1-8f270d78258a",
+                            "id": "053a7bc8-4b2a-47ef-af66-a23682892efe",
                             "slug": "taedium",
                             "value": "censura",
                         },
@@ -3333,7 +3333,7 @@ with UnifiedTo(
                     "type": shared.CommerceTelephoneType.MOBILE,
                 },
             ],
-            "updated_at": parse_datetime("2024-05-03T11:33:01.197Z"),
+            "updated_at": parse_datetime("2024-05-03T19:39:20.384Z"),
             "web_url": "https://formal-declaration.info/",
         },
         "connection_id": "<id>",
@@ -3390,13 +3390,13 @@ with UnifiedTo(
             "guest_email": "alford.schiller@icloud.com",
             "guest_name": "Alford Schiller",
             "guest_phone": "(849) 626-2062",
-            "id": "b9fd1510-4deb-4d5d-bafa-9740a0353eb7",
+            "id": "ec08d4bb-db56-4646-a602-eb4c69c7cdef",
             "metadata": [],
             "notes": "Despecto stultus calculus.",
             "size": 10.0,
             "start_at": parse_datetime("2021-12-18T00:40:25.125Z"),
             "status": shared.CommerceReservationStatus.PENDING,
-            "updated_at": parse_datetime("2023-01-11T22:37:26.575Z"),
+            "updated_at": parse_datetime("2023-01-12T03:44:56.017Z"),
             "url": "https://wee-tuba.biz/",
         },
         "connection_id": "<id>",
@@ -3456,7 +3456,7 @@ with UnifiedTo(
             "content": "Vix taedium thymum adipiscor amicitia.",
             "created_at": parse_datetime("2019-12-12T18:10:22.988Z"),
             "helpful_votes": 66.0,
-            "id": "8b1f1626-0e69-43ab-86ac-c9ba86bf0962",
+            "id": "67bf1a80-c4bb-4c8c-b829-d555a79eb710",
             "is_featured": False,
             "is_public": True,
             "is_verified": False,
@@ -3464,10 +3464,10 @@ with UnifiedTo(
                 {
                     "alt": "Teneo.",
                     "height": 749.0,
-                    "id": "7919835c-f2cd-407d-aba3-a31029379b48",
+                    "id": "028e0a1a-1269-4024-8ace-69d2cad1bc23",
                     "metadata": [
                         {
-                            "id": "b77ef784-b379-4307-b263-5f2507d332f5",
+                            "id": "889ffb4c-0faf-4571-8e77-34e5ec8e1c9c",
                             "slug": "numquam",
                             "value": "bos",
                         },
@@ -3480,10 +3480,10 @@ with UnifiedTo(
                 {
                     "alt": "Ratione vulticulus arbitro ultio pauci.",
                     "height": 957.0,
-                    "id": "fa8378ce-f8f7-48df-8822-9a685fb41d22",
+                    "id": "d6dd1202-9328-4ae5-b47a-93a6ac90c7fd",
                     "metadata": [
                         {
-                            "id": "c5150362-ce7b-49a9-a5f7-e256357a7b69",
+                            "id": "44d2f025-b755-4f86-8d31-6b75cf1bea68",
                             "slug": "timidus",
                             "value": "sol",
                         },
@@ -3499,7 +3499,7 @@ with UnifiedTo(
             "status": shared.CommerceReviewStatus.APPROVED,
             "title": "Auxilium.",
             "unhelpful_votes": 88.0,
-            "updated_at": parse_datetime("2025-09-21T02:25:34.673Z"),
+            "updated_at": parse_datetime("2025-09-21T21:59:32.347Z"),
             "url": "https://whispered-hawk.name",
             "verified_purchase": True,
         },
@@ -3555,11 +3555,11 @@ with UnifiedTo(
             "collections": [],
             "created_at": parse_datetime("2021-12-12T06:19:55.421Z"),
             "description": "Solus speciosus caveo aegrus.",
-            "id": "6a0f5933-9456-4a38-a277-809204a34243",
+            "id": "c4060278-7b48-40b7-ac0d-1e93e473ce3b",
             "is_active": False,
             "metadata": [],
             "slug": "dapifer-utroque-denuncio",
-            "updated_at": parse_datetime("2025-02-20T20:37:57.761Z"),
+            "updated_at": parse_datetime("2025-02-21T11:49:10.137Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

@@ -59,11 +59,11 @@ with UnifiedTo(
         "genai_agent": {
             "created_at": parse_datetime("2020-12-18T02:23:33.723Z"),
             "description": "Sperno despecto.",
-            "id": "48e40528-7f49-4ae5-9cfa-aed9a22de86f",
+            "id": "02a0d128-84e3-42ba-9078-312572cfca6d",
             "instructions": "Addo vita ver auctus corrumpo substantia conscendo auctus. Astrum sulum aufero bis stella sumptus non.",
             "is_active": False,
             "name": "testimonial suddenly",
-            "updated_at": parse_datetime("2025-11-15T01:10:05.323Z"),
+            "updated_at": parse_datetime("2025-11-15T20:38:43.731Z"),
         },
         "connection_id": "<id>",
     })
@@ -120,7 +120,7 @@ with UnifiedTo(
             "dimension": 423.0,
             "embeddings": "Venia tutis cernuus viscus officiis utilis porro utique.",
             "encoding_format": shared.EncodingFormat.FLOAT,
-            "id": "83971ea1-61a8-4994-adab-9130b02e47bc",
+            "id": "808af6b5-a7e7-4258-aaa3-3bef2a9130a3",
             "max_tokens": 223.0,
             "tokens_used": 836.0,
             "type": "classification",
@@ -175,7 +175,7 @@ with UnifiedTo(
         "genai_memory": {
             "content": "Spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis.",
             "created_at": parse_datetime("2021-10-22T04:14:41.668Z"),
-            "id": "a08c6d12-a316-4dbf-8ee4-fbf0f5a60659",
+            "id": "00847e58-c148-4653-ac01-98cf4f0c0548",
             "metadata": [
                 {
                     "extra_data": {
@@ -190,7 +190,7 @@ with UnifiedTo(
             ],
             "name": "tabella.md",
             "type": shared.GenaiMemoryType.MEMORY,
-            "updated_at": parse_datetime("2023-05-07T01:42:36.033Z"),
+            "updated_at": parse_datetime("2023-05-07T08:49:26.622Z"),
             "user_identifier": "70613433-847d-4db6-a8ea-96a2d7513dad",
         },
         "connection_id": "<id>",
@@ -243,10 +243,10 @@ with UnifiedTo(
         "genai_organization": {
             "created_at": parse_datetime("2020-10-27T16:03:47.122Z"),
             "description": "Subito teneo arbor.",
-            "id": "86e73b9b-0092-4245-b30f-aae46ba4fa81",
+            "id": "f8842152-3d4c-4142-950e-6997750fc4f7",
             "is_active": False,
             "name": "yum yuck",
-            "updated_at": parse_datetime("2023-02-09T08:36:24.054Z"),
+            "updated_at": parse_datetime("2023-02-09T17:27:51.198Z"),
         },
         "connection_id": "<id>",
     })
@@ -418,10 +418,10 @@ with UnifiedTo(
 
     res = unified_to.genai.create_genai_task(request={
         "genai_task": {
-            "completed_at": parse_datetime("2025-10-31T19:02:36.381Z"),
+            "completed_at": parse_datetime("2025-11-01T14:28:03.779Z"),
             "created_at": parse_datetime("2020-10-25T20:19:33.247Z"),
             "files_changed": 19.0,
-            "id": "6446b5e0-4dba-4fbe-bf45-bb6c4c9697d7",
+            "id": "4dfde77e-1045-4fff-83e7-0bc6dd8ef8e9",
             "instructions": "Angustus cubo cupio abundans admoveo sumptus.",
             "lines_added": 244.0,
             "lines_deleted": 118.0,
@@ -436,12 +436,12 @@ with UnifiedTo(
             "pullrequest_url": "https://github.com/felicity.rowe61/eek-save/pull/383",
             "repo_url": "https://github.com/felicity.rowe61/eek-save",
             "source_branch_identifier": "main",
-            "started_at": parse_datetime("2024-06-12T12:28:21.617Z"),
+            "started_at": parse_datetime("2024-06-13T02:31:43.993Z"),
             "status": shared.GenaiTaskStatus.BLOCKED,
             "summary": "Tenus via tamisium denego teres adsidue cura crur. Coma defungo magnam delicate confero amaritudo varius.",
             "target_branch_identifier": "agent/eek-save",
             "tokens_used": 2165.0,
-            "updated_at": parse_datetime("2023-03-12T18:13:29.950Z"),
+            "updated_at": parse_datetime("2023-03-13T03:25:39.115Z"),
             "web_url": "https://monstrous-honesty.net",
         },
         "connection_id": "<id>",
@@ -1052,11 +1052,11 @@ with UnifiedTo(
         "genai_agent": {
             "created_at": parse_datetime("2020-12-18T02:23:33.723Z"),
             "description": "Sperno despecto.",
-            "id": "4374daf3-297b-4a77-8a9b-a43c06e51656",
+            "id": "67d88593-a869-419e-8a2e-25310cc88b2d",
             "instructions": "Addo vita ver auctus corrumpo substantia conscendo auctus. Astrum sulum aufero bis stella sumptus non.",
             "is_active": False,
             "name": "testimonial suddenly",
-            "updated_at": parse_datetime("2025-11-15T01:10:05.329Z"),
+            "updated_at": parse_datetime("2025-11-15T20:38:43.738Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1109,7 +1109,7 @@ with UnifiedTo(
         "genai_memory": {
             "content": "Spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis.",
             "created_at": parse_datetime("2021-10-22T04:14:41.668Z"),
-            "id": "b114e371-eb11-41e2-96a2-187df5d625b5",
+            "id": "5692cb03-46a7-4678-a28d-7f60bc5df5f5",
             "metadata": [
                 {
                     "extra_data": {
@@ -1124,7 +1124,7 @@ with UnifiedTo(
             ],
             "name": "tabella.md",
             "type": shared.GenaiMemoryType.MEMORY,
-            "updated_at": parse_datetime("2023-05-07T01:42:36.036Z"),
+            "updated_at": parse_datetime("2023-05-07T08:49:26.626Z"),
             "user_identifier": "70613433-847d-4db6-a8ea-96a2d7513dad",
         },
         "connection_id": "<id>",
@@ -1178,10 +1178,10 @@ with UnifiedTo(
         "genai_organization": {
             "created_at": parse_datetime("2020-10-27T16:03:47.122Z"),
             "description": "Subito teneo arbor.",
-            "id": "681bec1e-512d-410f-a901-ac7febef96cf",
+            "id": "f4975855-7d54-49b5-95b4-18e0ebee1791",
             "is_active": False,
             "name": "yum yuck",
-            "updated_at": parse_datetime("2023-02-09T08:36:24.055Z"),
+            "updated_at": parse_datetime("2023-02-09T17:27:51.200Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1232,10 +1232,10 @@ with UnifiedTo(
 
     res = unified_to.genai.patch_genai_task(request={
         "genai_task": {
-            "completed_at": parse_datetime("2025-10-31T19:02:36.393Z"),
+            "completed_at": parse_datetime("2025-11-01T14:28:03.795Z"),
             "created_at": parse_datetime("2020-10-25T20:19:33.247Z"),
             "files_changed": 19.0,
-            "id": "e767ab44-850d-4953-ae66-7f58704d0dc1",
+            "id": "d7626b7b-f0cf-4133-9553-34b468ca5544",
             "instructions": "Angustus cubo cupio abundans admoveo sumptus.",
             "lines_added": 244.0,
             "lines_deleted": 118.0,
@@ -1250,12 +1250,12 @@ with UnifiedTo(
             "pullrequest_url": "https://github.com/felicity.rowe61/eek-save/pull/383",
             "repo_url": "https://github.com/felicity.rowe61/eek-save",
             "source_branch_identifier": "main",
-            "started_at": parse_datetime("2024-06-12T12:28:21.626Z"),
+            "started_at": parse_datetime("2024-06-13T02:31:44.004Z"),
             "status": shared.GenaiTaskStatus.BLOCKED,
             "summary": "Tenus via tamisium denego teres adsidue cura crur. Coma defungo magnam delicate confero amaritudo varius.",
             "target_branch_identifier": "agent/eek-save",
             "tokens_used": 2165.0,
-            "updated_at": parse_datetime("2023-03-12T18:13:29.956Z"),
+            "updated_at": parse_datetime("2023-03-13T03:25:39.123Z"),
             "web_url": "https://monstrous-honesty.net",
         },
         "connection_id": "<id>",
@@ -1544,11 +1544,11 @@ with UnifiedTo(
         "genai_agent": {
             "created_at": parse_datetime("2020-12-18T02:23:33.723Z"),
             "description": "Sperno despecto.",
-            "id": "4374daf3-297b-4a77-8a9b-a43c06e51656",
+            "id": "67d88593-a869-419e-8a2e-25310cc88b2d",
             "instructions": "Addo vita ver auctus corrumpo substantia conscendo auctus. Astrum sulum aufero bis stella sumptus non.",
             "is_active": False,
             "name": "testimonial suddenly",
-            "updated_at": parse_datetime("2025-11-15T01:10:05.329Z"),
+            "updated_at": parse_datetime("2025-11-15T20:38:43.738Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1601,7 +1601,7 @@ with UnifiedTo(
         "genai_memory": {
             "content": "Spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis.",
             "created_at": parse_datetime("2021-10-22T04:14:41.668Z"),
-            "id": "b114e371-eb11-41e2-96a2-187df5d625b5",
+            "id": "5692cb03-46a7-4678-a28d-7f60bc5df5f5",
             "metadata": [
                 {
                     "extra_data": {
@@ -1616,7 +1616,7 @@ with UnifiedTo(
             ],
             "name": "tabella.md",
             "type": shared.GenaiMemoryType.MEMORY,
-            "updated_at": parse_datetime("2023-05-07T01:42:36.036Z"),
+            "updated_at": parse_datetime("2023-05-07T08:49:26.626Z"),
             "user_identifier": "70613433-847d-4db6-a8ea-96a2d7513dad",
         },
         "connection_id": "<id>",
@@ -1670,10 +1670,10 @@ with UnifiedTo(
         "genai_organization": {
             "created_at": parse_datetime("2020-10-27T16:03:47.122Z"),
             "description": "Subito teneo arbor.",
-            "id": "681bec1e-512d-410f-a901-ac7febef96cf",
+            "id": "f4975855-7d54-49b5-95b4-18e0ebee1791",
             "is_active": False,
             "name": "yum yuck",
-            "updated_at": parse_datetime("2023-02-09T08:36:24.055Z"),
+            "updated_at": parse_datetime("2023-02-09T17:27:51.200Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -1724,10 +1724,10 @@ with UnifiedTo(
 
     res = unified_to.genai.update_genai_task(request={
         "genai_task": {
-            "completed_at": parse_datetime("2025-10-31T19:02:36.393Z"),
+            "completed_at": parse_datetime("2025-11-01T14:28:03.795Z"),
             "created_at": parse_datetime("2020-10-25T20:19:33.247Z"),
             "files_changed": 19.0,
-            "id": "e767ab44-850d-4953-ae66-7f58704d0dc1",
+            "id": "d7626b7b-f0cf-4133-9553-34b468ca5544",
             "instructions": "Angustus cubo cupio abundans admoveo sumptus.",
             "lines_added": 244.0,
             "lines_deleted": 118.0,
@@ -1742,12 +1742,12 @@ with UnifiedTo(
             "pullrequest_url": "https://github.com/felicity.rowe61/eek-save/pull/383",
             "repo_url": "https://github.com/felicity.rowe61/eek-save",
             "source_branch_identifier": "main",
-            "started_at": parse_datetime("2024-06-12T12:28:21.626Z"),
+            "started_at": parse_datetime("2024-06-13T02:31:44.004Z"),
             "status": shared.GenaiTaskStatus.BLOCKED,
             "summary": "Tenus via tamisium denego teres adsidue cura crur. Coma defungo magnam delicate confero amaritudo varius.",
             "target_branch_identifier": "agent/eek-save",
             "tokens_used": 2165.0,
-            "updated_at": parse_datetime("2023-03-12T18:13:29.956Z"),
+            "updated_at": parse_datetime("2023-03-13T03:25:39.123Z"),
             "web_url": "https://monstrous-honesty.net",
         },
         "connection_id": "<id>",

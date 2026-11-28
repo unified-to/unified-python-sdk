@@ -33,12 +33,12 @@ with UnifiedTo(
     res = unified_to.domain.create_compute_domain(request={
         "compute_domain": {
             "created_at": parse_datetime("2019-11-22T16:38:26.009Z"),
-            "id": "7a041248-ac08-4830-a9c5-e221e5c18d20",
+            "id": "eccd1560-3ca6-48c1-8670-05f362b53034",
             "is_primary": False,
             "metadata": [],
             "name": "steel-hovercraft.humiliating-lender.com",
             "status": shared.ComputeDomainStatus.PENDING,
-            "updated_at": parse_datetime("2023-11-24T18:53:13.992Z"),
+            "updated_at": parse_datetime("2023-11-25T08:21:09.287Z"),
         },
         "connection_id": "<id>",
     })
@@ -182,12 +182,12 @@ with UnifiedTo(
     res = unified_to.domain.patch_compute_domain(request={
         "compute_domain": {
             "created_at": parse_datetime("2019-11-22T16:38:26.009Z"),
-            "id": "046de425-431a-46ba-91b9-069b6abe5fa2",
+            "id": "af4a2a38-4346-48e2-8fdf-42b9068e180f",
             "is_primary": False,
             "metadata": [],
             "name": "steel-hovercraft.humiliating-lender.com",
             "status": shared.ComputeDomainStatus.PENDING,
-            "updated_at": parse_datetime("2023-11-24T18:53:13.998Z"),
+            "updated_at": parse_datetime("2023-11-25T08:21:09.293Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -286,12 +286,12 @@ with UnifiedTo(
     res = unified_to.domain.update_compute_domain(request={
         "compute_domain": {
             "created_at": parse_datetime("2019-11-22T16:38:26.009Z"),
-            "id": "046de425-431a-46ba-91b9-069b6abe5fa2",
+            "id": "af4a2a38-4346-48e2-8fdf-42b9068e180f",
             "is_primary": False,
             "metadata": [],
             "name": "steel-hovercraft.humiliating-lender.com",
             "status": shared.ComputeDomainStatus.PENDING,
-            "updated_at": parse_datetime("2023-11-24T18:53:13.998Z"),
+            "updated_at": parse_datetime("2023-11-25T08:21:09.293Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

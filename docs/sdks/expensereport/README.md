@@ -32,16 +32,16 @@ with UnifiedTo(
 
     res = unified_to.expensereport.create_accounting_expensereport(request={
         "accounting_expensereport": {
-            "approved_at": parse_datetime("2021-04-24T15:17:37.456Z"),
+            "approved_at": parse_datetime("2021-04-24T18:34:38.581Z"),
             "attachments": [],
             "category_ids": [],
             "created_at": parse_datetime("2020-05-29T02:04:59.078Z"),
             "currency": "GBP",
             "external_number": "ER-31240",
-            "id": "33f286dd-5f7d-4398-89a3-ec2f67b9f9f7",
+            "id": "408f8c22-e663-4e54-8cb3-2c40645f11f5",
             "lineitems": [
                 {
-                    "id": "c7eb4341-e0a2-49b7-a561-dd62991ae82b",
+                    "id": "126bf163-9f8e-49de-95c6-b79a8f106a58",
                     "item_name": "Conference ticket",
                     "tax_amount": 0.0,
                     "total_amount": 39.9,
@@ -49,7 +49,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "35a27690-acc1-4bac-8ec0-27e75af48c6b",
+                    "id": "1d3b5dab-ca52-442c-bda1-5cc8b8a7767d",
                     "item_name": "Flight",
                     "notes": "Aliquam soluta omnis dolor.",
                     "tax_amount": 0.0,
@@ -58,7 +58,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "084d3744-0e63-4f87-b1a4-a29b8770311b",
+                    "id": "7d2d5f5f-9872-42d9-a9fc-ef01d18be9b2",
                     "item_name": "Client dinner",
                     "notes": "Altus caveo capio.",
                     "tax_amount": 0.0,
@@ -67,7 +67,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "1793c6ad-305e-487e-ac07-aa2ca33e39cd",
+                    "id": "8bda020a-2abb-41d3-8630-155219529e07",
                     "item_name": "Flight",
                     "tax_amount": 0.0,
                     "total_amount": 445.27,
@@ -79,11 +79,11 @@ with UnifiedTo(
             "name": "Jamil Christiansen - October expenses",
             "posted_at": parse_datetime("2020-05-29T02:04:59.078Z"),
             "reimbursed_amount": 908.46,
-            "reimbursed_at": parse_datetime("2021-04-24T15:17:37.456Z"),
+            "reimbursed_at": parse_datetime("2021-04-24T18:34:38.581Z"),
             "status": shared.AccountingExpensereportStatus.PAID,
             "tax_amount": 0.0,
             "total_amount": 908.46,
-            "updated_at": parse_datetime("2021-04-24T15:17:37.456Z"),
+            "updated_at": parse_datetime("2021-04-24T18:34:38.581Z"),
         },
         "connection_id": "<id>",
     })
@@ -226,16 +226,16 @@ with UnifiedTo(
 
     res = unified_to.expensereport.patch_accounting_expensereport(request={
         "accounting_expensereport": {
-            "approved_at": parse_datetime("2021-04-24T15:17:37.459Z"),
+            "approved_at": parse_datetime("2021-04-24T18:34:38.585Z"),
             "attachments": [],
             "category_ids": [],
             "created_at": parse_datetime("2020-05-29T02:04:59.078Z"),
             "currency": "GBP",
             "external_number": "ER-31240",
-            "id": "1a7c558c-5a32-40c1-b743-2d3ac91cb98b",
+            "id": "051bc30a-d0cc-413c-af2d-f279989a0ea9",
             "lineitems": [
                 {
-                    "id": "eef32d4d-2d3f-470d-8557-20a0fb2f97df",
+                    "id": "a8b2de14-2c9b-4457-93cf-386a0a8ede8f",
                     "item_name": "Conference ticket",
                     "tax_amount": 0.0,
                     "total_amount": 39.9,
@@ -243,7 +243,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "54b5b249-e6ce-4ee8-93d4-d53f34c24e7d",
+                    "id": "9f86f5c9-6ba5-4812-9e8e-56784863f77d",
                     "item_name": "Flight",
                     "notes": "Aliquam soluta omnis dolor.",
                     "tax_amount": 0.0,
@@ -252,7 +252,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "dc6f73c5-db67-45fc-8a1d-49921c475125",
+                    "id": "23c19fc7-edac-4927-a73b-79ecc14e6b48",
                     "item_name": "Client dinner",
                     "notes": "Altus caveo capio.",
                     "tax_amount": 0.0,
@@ -261,7 +261,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "fd16a43c-d2d3-427c-aa3e-742c4e9724c4",
+                    "id": "d9f0779f-cdb9-4393-986b-ebd9678983f0",
                     "item_name": "Flight",
                     "tax_amount": 0.0,
                     "total_amount": 445.27,
@@ -273,11 +273,11 @@ with UnifiedTo(
             "name": "Jamil Christiansen - October expenses",
             "posted_at": parse_datetime("2020-05-29T02:04:59.078Z"),
             "reimbursed_amount": 908.46,
-            "reimbursed_at": parse_datetime("2021-04-24T15:17:37.459Z"),
+            "reimbursed_at": parse_datetime("2021-04-24T18:34:38.585Z"),
             "status": shared.AccountingExpensereportStatus.PAID,
             "tax_amount": 0.0,
             "total_amount": 908.46,
-            "updated_at": parse_datetime("2021-04-24T15:17:37.459Z"),
+            "updated_at": parse_datetime("2021-04-24T18:34:38.585Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -375,16 +375,16 @@ with UnifiedTo(
 
     res = unified_to.expensereport.update_accounting_expensereport(request={
         "accounting_expensereport": {
-            "approved_at": parse_datetime("2021-04-24T15:17:37.459Z"),
+            "approved_at": parse_datetime("2021-04-24T18:34:38.585Z"),
             "attachments": [],
             "category_ids": [],
             "created_at": parse_datetime("2020-05-29T02:04:59.078Z"),
             "currency": "GBP",
             "external_number": "ER-31240",
-            "id": "1a7c558c-5a32-40c1-b743-2d3ac91cb98b",
+            "id": "051bc30a-d0cc-413c-af2d-f279989a0ea9",
             "lineitems": [
                 {
-                    "id": "eef32d4d-2d3f-470d-8557-20a0fb2f97df",
+                    "id": "a8b2de14-2c9b-4457-93cf-386a0a8ede8f",
                     "item_name": "Conference ticket",
                     "tax_amount": 0.0,
                     "total_amount": 39.9,
@@ -392,7 +392,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "54b5b249-e6ce-4ee8-93d4-d53f34c24e7d",
+                    "id": "9f86f5c9-6ba5-4812-9e8e-56784863f77d",
                     "item_name": "Flight",
                     "notes": "Aliquam soluta omnis dolor.",
                     "tax_amount": 0.0,
@@ -401,7 +401,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "dc6f73c5-db67-45fc-8a1d-49921c475125",
+                    "id": "23c19fc7-edac-4927-a73b-79ecc14e6b48",
                     "item_name": "Client dinner",
                     "notes": "Altus caveo capio.",
                     "tax_amount": 0.0,
@@ -410,7 +410,7 @@ with UnifiedTo(
                     "unit_quantity": 1.0,
                 },
                 {
-                    "id": "fd16a43c-d2d3-427c-aa3e-742c4e9724c4",
+                    "id": "d9f0779f-cdb9-4393-986b-ebd9678983f0",
                     "item_name": "Flight",
                     "tax_amount": 0.0,
                     "total_amount": 445.27,
@@ -422,11 +422,11 @@ with UnifiedTo(
             "name": "Jamil Christiansen - October expenses",
             "posted_at": parse_datetime("2020-05-29T02:04:59.078Z"),
             "reimbursed_amount": 908.46,
-            "reimbursed_at": parse_datetime("2021-04-24T15:17:37.459Z"),
+            "reimbursed_at": parse_datetime("2021-04-24T18:34:38.585Z"),
             "status": shared.AccountingExpensereportStatus.PAID,
             "tax_amount": 0.0,
             "total_amount": 908.46,
-            "updated_at": parse_datetime("2021-04-24T15:17:37.459Z"),
+            "updated_at": parse_datetime("2021-04-24T18:34:38.585Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

@@ -33,19 +33,19 @@ with UnifiedTo(
     res = unified_to.deal.create_crm_deal(request={
         "crm_deal": {
             "amount": 98162.0,
-            "closed_at": parse_datetime("2024-03-18T02:30:13.158Z"),
-            "closing_at": parse_datetime("2025-09-24T18:50:05.675Z"),
+            "closed_at": parse_datetime("2024-03-18T07:23:39.111Z"),
+            "closing_at": parse_datetime("2025-09-25T10:16:34.577Z"),
             "created_at": parse_datetime("2023-07-04T12:48:48.470Z"),
             "currency": "USD",
             "description": "Trans tubineus adfectus cubo causa suus.",
-            "id": "69fbfff5-0335-446e-91cb-de8832357f3c",
+            "id": "c411f8a0-eb9e-43cb-a9c1-34586bfa402a",
             "metadata": [
                 {
                     "extra_data": {
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CrmMetadataFormat.TEXT,
-                    "id": "ceecca5f-dae6-47a2-b5b5-b579460a8988",
+                    "id": "4d0076f1-d415-4f0d-bf69-c59b88e7bb81",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "tandem",
@@ -58,7 +58,7 @@ with UnifiedTo(
                 "sol",
                 "odit",
             ],
-            "updated_at": parse_datetime("2024-10-26T04:36:05.457Z"),
+            "updated_at": parse_datetime("2024-10-26T13:42:31.959Z"),
             "won_reason": "Libero soleo cetera unus caterva.",
         },
         "connection_id": "<id>",
@@ -203,19 +203,19 @@ with UnifiedTo(
     res = unified_to.deal.patch_crm_deal(request={
         "crm_deal": {
             "amount": 98162.0,
-            "closed_at": parse_datetime("2024-03-18T02:30:13.161Z"),
-            "closing_at": parse_datetime("2025-09-24T18:50:05.683Z"),
+            "closed_at": parse_datetime("2024-03-18T07:23:39.116Z"),
+            "closing_at": parse_datetime("2025-09-25T10:16:34.592Z"),
             "created_at": parse_datetime("2023-07-04T12:48:48.470Z"),
             "currency": "USD",
             "description": "Trans tubineus adfectus cubo causa suus.",
-            "id": "384bf2e9-df86-46a1-aea3-db8dc96447c0",
+            "id": "5f6c75ec-cda7-4b37-a5ea-2252f2722856",
             "metadata": [
                 {
                     "extra_data": {
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CrmMetadataFormat.TEXT,
-                    "id": "48efde2d-31ee-43d5-8983-f3ab254b3e4d",
+                    "id": "101204ca-eb3d-46a0-b2f8-f45747508ab4",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "tandem",
@@ -228,7 +228,7 @@ with UnifiedTo(
                 "sol",
                 "odit",
             ],
-            "updated_at": parse_datetime("2024-10-26T04:36:05.462Z"),
+            "updated_at": parse_datetime("2024-10-26T13:42:31.968Z"),
             "won_reason": "Libero soleo cetera unus caterva.",
         },
         "connection_id": "<id>",
@@ -328,19 +328,19 @@ with UnifiedTo(
     res = unified_to.deal.update_crm_deal(request={
         "crm_deal": {
             "amount": 98162.0,
-            "closed_at": parse_datetime("2024-03-18T02:30:13.161Z"),
-            "closing_at": parse_datetime("2025-09-24T18:50:05.683Z"),
+            "closed_at": parse_datetime("2024-03-18T07:23:39.116Z"),
+            "closing_at": parse_datetime("2025-09-25T10:16:34.592Z"),
             "created_at": parse_datetime("2023-07-04T12:48:48.470Z"),
             "currency": "USD",
             "description": "Trans tubineus adfectus cubo causa suus.",
-            "id": "384bf2e9-df86-46a1-aea3-db8dc96447c0",
+            "id": "5f6c75ec-cda7-4b37-a5ea-2252f2722856",
             "metadata": [
                 {
                     "extra_data": {
                         "display_name": "Custom Property",
                     },
                     "format_": shared.CrmMetadataFormat.TEXT,
-                    "id": "48efde2d-31ee-43d5-8983-f3ab254b3e4d",
+                    "id": "101204ca-eb3d-46a0-b2f8-f45747508ab4",
                     "namespace": "custom",
                     "slug": "custom_property",
                     "value": "tandem",
@@ -353,7 +353,7 @@ with UnifiedTo(
                 "sol",
                 "odit",
             ],
-            "updated_at": parse_datetime("2024-10-26T04:36:05.462Z"),
+            "updated_at": parse_datetime("2024-10-26T13:42:31.968Z"),
             "won_reason": "Libero soleo cetera unus caterva.",
         },
         "connection_id": "<id>",

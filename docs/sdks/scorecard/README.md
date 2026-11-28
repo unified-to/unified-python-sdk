@@ -36,7 +36,7 @@ with UnifiedTo(
         "ats_scorecard": {
             "comment": "Aliquam.",
             "created_at": parse_datetime("2022-02-20T17:09:45.498Z"),
-            "id": "3e85d24b-861c-40eb-8eba-c06ef19f8e1d",
+            "id": "31e17f7b-4926-4f53-84b5-2baae9b27992",
             "metadata": [],
             "questions": [
                 {
@@ -50,7 +50,7 @@ with UnifiedTo(
                 },
             ],
             "recommendation": shared.Recommendation.STRONG_YES,
-            "updated_at": parse_datetime("2023-06-15T18:50:23.326Z"),
+            "updated_at": parse_datetime("2023-06-16T01:20:32.497Z"),
         },
         "connection_id": "<id>",
     })
@@ -288,7 +288,7 @@ with UnifiedTo(
         "ats_scorecard": {
             "comment": "Aliquam.",
             "created_at": parse_datetime("2022-02-20T17:09:45.498Z"),
-            "id": "60ba336d-e03f-4125-960c-ddbab78f5050",
+            "id": "5417c3ba-bab9-465c-b12d-04a29e51cb35",
             "metadata": [],
             "questions": [
                 {
@@ -302,7 +302,7 @@ with UnifiedTo(
                 },
             ],
             "recommendation": shared.Recommendation.STRONG_YES,
-            "updated_at": parse_datetime("2023-06-15T18:50:23.330Z"),
+            "updated_at": parse_datetime("2023-06-16T01:20:32.500Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -402,7 +402,7 @@ with UnifiedTo(
         "ats_scorecard": {
             "comment": "Aliquam.",
             "created_at": parse_datetime("2022-02-20T17:09:45.498Z"),
-            "id": "60ba336d-e03f-4125-960c-ddbab78f5050",
+            "id": "5417c3ba-bab9-465c-b12d-04a29e51cb35",
             "metadata": [],
             "questions": [
                 {
@@ -416,7 +416,7 @@ with UnifiedTo(
                 },
             ],
             "recommendation": shared.Recommendation.STRONG_YES,
-            "updated_at": parse_datetime("2023-06-15T18:50:23.330Z"),
+            "updated_at": parse_datetime("2023-06-16T01:20:32.500Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",

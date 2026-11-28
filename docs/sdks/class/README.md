@@ -34,7 +34,7 @@ with UnifiedTo(
         "lms_class": {
             "created_at": parse_datetime("2020-02-20T14:48:51.845Z"),
             "description": "Animus callide corpus.",
-            "id": "0b3f0581-1bce-46c8-be84-f012b41a09ac",
+            "id": "7d211aaa-8a3b-4d47-8365-89b82297fb88",
             "instructors": [],
             "languages": [
                 "in",
@@ -56,7 +56,7 @@ with UnifiedTo(
             "metadata": [],
             "name": "sperno",
             "students": [],
-            "updated_at": parse_datetime("2025-09-03T04:30:59.656Z"),
+            "updated_at": parse_datetime("2025-09-03T23:47:54.925Z"),
         },
         "connection_id": "<id>",
     })
@@ -201,7 +201,7 @@ with UnifiedTo(
         "lms_class": {
             "created_at": parse_datetime("2020-02-20T14:48:51.845Z"),
             "description": "Animus callide corpus.",
-            "id": "a96a8a1a-9c81-48c1-a864-d5eb0d05ca11",
+            "id": "f7f6528c-84af-4885-a670-6455aae25c32",
             "instructors": [],
             "languages": [
                 "in",
@@ -223,7 +223,7 @@ with UnifiedTo(
             "metadata": [],
             "name": "sperno",
             "students": [],
-            "updated_at": parse_datetime("2025-09-03T04:30:59.671Z"),
+            "updated_at": parse_datetime("2025-09-03T23:47:54.943Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
@@ -323,7 +323,7 @@ with UnifiedTo(
         "lms_class": {
             "created_at": parse_datetime("2020-02-20T14:48:51.845Z"),
             "description": "Animus callide corpus.",
-            "id": "a96a8a1a-9c81-48c1-a864-d5eb0d05ca11",
+            "id": "f7f6528c-84af-4885-a670-6455aae25c32",
             "instructors": [],
             "languages": [
                 "in",
@@ -345,7 +345,7 @@ with UnifiedTo(
             "metadata": [],
             "name": "sperno",
             "students": [],
-            "updated_at": parse_datetime("2025-09-03T04:30:59.671Z"),
+            "updated_at": parse_datetime("2025-09-03T23:47:54.943Z"),
         },
         "connection_id": "<id>",
         "id": "<id>",
